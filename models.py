@@ -360,6 +360,270 @@ class Omission:
 
 
 # ---------------------------------------------------------------------------
+# Narrative Fingerprints
+# ---------------------------------------------------------------------------
+# A NarrativeFingerprint codifies the structure of a narrative so Tributary
+# can search for earliest documented uses (L1+L4), detect paraphrases that
+# share meaning but not vocabulary (L2), categorize by rhetorical structure
+# (L3), and cluster by domain and inductively-discovered communities (L5).
+#
+# v1 populates L1 + L4 only. The L2 / L3 / L5 schemas exist here so the
+# storage format is stable from day one and later layers can be added
+# without migrating existing fingerprints.
+
+
+class FramePrimitive(str, Enum):
+    """L3 structural framing primitives — neutrally-phrased, domain-agnostic.
+    A fingerprint may carry multiple as an unordered tag set."""
+    ATTRIBUTION_OF_CAUSE = "attribution-of-cause"
+    ATTRIBUTION_OF_BLAME = "attribution-of-blame"
+    HARM_CLAIM = "harm-claim"
+    THREAT_CLAIM = "threat-claim"
+    SOLUTION_PRESCRIPTION = "solution-prescription"
+    IDENTITY_DEFENSE = "identity-defense"
+    PROCESS_VIOLATION = "process-violation"
+    VALUE_COMPARISON = "value-comparison"
+    HISTORICAL_ARC = "historical-arc"
+    REVELATION = "revelation"
+
+
+class Domain(str, Enum):
+    """L5 subject area — broad, mutually exclusive."""
+    ECONOMIC = "economic"
+    RACIAL_ETHNIC = "racial-ethnic"
+    IMMIGRATION = "immigration"
+    HEALTH = "health"
+    FOREIGN_POLICY = "foreign-policy"
+    CULTURAL = "cultural"
+    TECHNOLOGY = "technology"
+    ENVIRONMENT = "environment"
+    RELIGION = "religion"
+    GENDER_SEXUALITY = "gender-sexuality"
+    EDUCATION = "education"
+    CRIMINAL_JUSTICE = "criminal-justice"
+    MEDIA_META = "media-meta"
+    WELLNESS_LIFESTYLE = "wellness-lifestyle"
+    FINANCE_INVESTING = "finance-investing"
+    FANDOM_ENTERTAINMENT = "fandom-entertainment"
+    SCIENCE = "science"
+    OTHER = "other"
+
+
+class GenealogyStatus(str, Enum):
+    """Whether the narrative has one origin, several parallel origins, or is
+    too widespread/diffuse to pinpoint."""
+    SINGLE_ORIGIN = "single-origin"
+    MULTIPLE_INDEPENDENT = "multiple-independent"
+    DIFFUSE = "diffuse"
+    UNKNOWN = "unknown"
+
+
+@dataclass
+class Scope:
+    """User-configurable analysis scope. v1 fixes language to English."""
+    language: str = "en"
+    region: str = "US"                # "US", "EU", "global", country code, etc.
+    time_window_start: str = ""        # ISO date or "" for unbounded
+    time_window_end: str = ""
+
+    def to_dict(self):
+        return {
+            "language": self.language,
+            "region": self.region,
+            "time_window_start": self.time_window_start,
+            "time_window_end": self.time_window_end,
+        }
+
+
+@dataclass
+class LexicalLayer:
+    """L1 — what to search for. The keys that drive earliest-use search."""
+    canonical_phrase: str = ""
+    phrase_variants: list[str] = field(default_factory=list)
+    diagnostic_ngrams: list[str] = field(default_factory=list)
+    stopword_stripped_signature: str = ""
+
+    def to_dict(self):
+        return {
+            "canonical_phrase": self.canonical_phrase,
+            "phrase_variants": self.phrase_variants,
+            "diagnostic_ngrams": self.diagnostic_ngrams,
+            "stopword_stripped_signature": self.stopword_stripped_signature,
+        }
+
+
+@dataclass
+class ConceptualLayer:
+    """L2 — vocabulary-independent meaning. Schema only in v1."""
+    claim_predicate: str = ""
+    entities: dict = field(default_factory=dict)
+    causal_structure: str = ""
+
+    def to_dict(self):
+        return {
+            "claim_predicate": self.claim_predicate,
+            "entities": self.entities,
+            "causal_structure": self.causal_structure,
+        }
+
+
+@dataclass
+class RhetoricalLayer:
+    """L3 — structural rhetorical signature. Schema only in v1."""
+    frame_primitives: list[FramePrimitive] = field(default_factory=list)
+    valence: dict = field(default_factory=dict)
+    epistemic_stance: str = ""
+    register: str = ""
+
+    def to_dict(self):
+        return {
+            "frame_primitives": [p.value for p in self.frame_primitives],
+            "valence": self.valence,
+            "epistemic_stance": self.epistemic_stance,
+            "register": self.register,
+        }
+
+
+@dataclass
+class AttestedInstance:
+    """A single observed use of a narrative — one entry in the attestation log."""
+    instance_id: str = ""
+    date: str = ""
+    source_url: str = ""
+    source_title: str = ""
+    author: str = ""
+    lexical_form_seen: str = ""
+    exact_quote: str = ""
+    confidence: float = 0.0
+    evidence: str = ""
+
+    def __post_init__(self):
+        if not self.instance_id:
+            key = f"{self.source_url}|{self.date}|{self.exact_quote[:64]}"
+            self.instance_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+
+    def to_dict(self):
+        return {
+            "instance_id": self.instance_id,
+            "date": self.date,
+            "source_url": self.source_url,
+            "source_title": self.source_title,
+            "author": self.author,
+            "lexical_form_seen": self.lexical_form_seen,
+            "exact_quote": self.exact_quote,
+            "confidence": self.confidence,
+            "evidence": self.evidence,
+        }
+
+
+@dataclass
+class GenealogyLayer:
+    """L4 — when/where the narrative has been seen, and what predates what."""
+    status: GenealogyStatus = GenealogyStatus.UNKNOWN
+    first_attested_date: str = ""
+    first_attested_source: str = ""
+    attestation_confidence: float = 0.0
+    primary_origin_id: str = ""
+    parallel_origin_ids: list[str] = field(default_factory=list)
+    predecessor_fingerprint_ids: list[str] = field(default_factory=list)
+    successor_fingerprint_ids: list[str] = field(default_factory=list)
+    attestation_log: list[AttestedInstance] = field(default_factory=list)
+    adversarial_check_performed: bool = False
+    adversarial_notes: str = ""
+    earlier_candidates_rejected: list[dict] = field(default_factory=list)
+
+    def to_dict(self):
+        return {
+            "status": self.status.value,
+            "first_attested_date": self.first_attested_date,
+            "first_attested_source": self.first_attested_source,
+            "attestation_confidence": self.attestation_confidence,
+            "primary_origin_id": self.primary_origin_id,
+            "parallel_origin_ids": self.parallel_origin_ids,
+            "predecessor_fingerprint_ids": self.predecessor_fingerprint_ids,
+            "successor_fingerprint_ids": self.successor_fingerprint_ids,
+            "attestation_log": [a.to_dict() for a in self.attestation_log],
+            "adversarial_check_performed": self.adversarial_check_performed,
+            "adversarial_notes": self.adversarial_notes,
+            "earlier_candidates_rejected": self.earlier_candidates_rejected,
+        }
+
+
+@dataclass
+class TaxonomicLayer:
+    """L5 — taxonomic placement. Inductive tradition clusters and tropes
+    populate over time; only `domain` is enumerated up front."""
+    domain: Domain = Domain.OTHER
+    domain_confidence: float = 0.0
+    inductive_cluster_ids: list[str] = field(default_factory=list)
+    tropes: list[str] = field(default_factory=list)
+
+    def to_dict(self):
+        return {
+            "domain": self.domain.value,
+            "domain_confidence": self.domain_confidence,
+            "inductive_cluster_ids": self.inductive_cluster_ids,
+            "tropes": self.tropes,
+        }
+
+
+@dataclass
+class NarrativeFingerprint:
+    """Codified signature of a narrative — searchable, categorizable, dateable.
+
+    Identity is keyed on the lexical layer (canonical_phrase + diagnostic_ngrams)
+    so fingerprints for the same framing collapse to one entry regardless of
+    which surface variant triggered generation."""
+    fingerprint_id: str = ""
+    created_at: str = ""
+    last_updated: str = ""
+    taxonomy_version: str = "0.1"
+    scope: Scope = field(default_factory=Scope)
+
+    lexical: LexicalLayer = field(default_factory=LexicalLayer)
+    conceptual: ConceptualLayer = field(default_factory=ConceptualLayer)
+    rhetorical: RhetoricalLayer = field(default_factory=RhetoricalLayer)
+    genealogy: GenealogyLayer = field(default_factory=GenealogyLayer)
+    taxonomic: TaxonomicLayer = field(default_factory=TaxonomicLayer)
+
+    attribution: Attribution = None
+
+    def __post_init__(self):
+        if not self.fingerprint_id:
+            key = (
+                self.lexical.canonical_phrase.lower().strip()
+                + "|"
+                + "|".join(sorted(n.lower() for n in self.lexical.diagnostic_ngrams))
+            )
+            self.fingerprint_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+        now = datetime.now(timezone.utc).isoformat()
+        if not self.created_at:
+            self.created_at = now
+        if not self.last_updated:
+            self.last_updated = now
+        if self.attribution is None:
+            self.attribution = Attribution(source="ai")
+
+    def to_dict(self):
+        return {
+            "fingerprint_id": self.fingerprint_id,
+            "created_at": self.created_at,
+            "last_updated": self.last_updated,
+            "taxonomy_version": self.taxonomy_version,
+            "scope": self.scope.to_dict(),
+            "lexical": self.lexical.to_dict(),
+            "conceptual": self.conceptual.to_dict(),
+            "rhetorical": self.rhetorical.to_dict(),
+            "genealogy": self.genealogy.to_dict(),
+            "taxonomic": self.taxonomic.to_dict(),
+            "attribution": self.attribution.to_dict() if self.attribution else None,
+        }
+
+    def to_json(self, indent: int = 2) -> str:
+        return json.dumps(self.to_dict(), indent=indent, default=str)
+
+
+# ---------------------------------------------------------------------------
 # Contribution & Reputation
 # ---------------------------------------------------------------------------
 
