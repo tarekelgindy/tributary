@@ -1,0 +1,181 @@
+{
+  "claim_text": "the economy is rigged",
+  "neutral_phrasing": "The economic system contains structural advantages and disadvantages for different groups of people.",
+  "nodes": [
+    {
+      "node_id": "a85c7e0750",
+      "url": "https://link.springer.com/article/10.1186/s40008-017-0063-1",
+      "title": "Economic structures, institutions and economic performance | Journal of Economic Structures | Springer Nature Link",
+      "outlet": "link.springer.com",
+      "author": "Collin Constantine",
+      "published_date": "2017-02-10",
+      "tier": "originator",
+      "exact_phrasing": "economic structures determine the rate of structural learning, affect institutional performance, influence the distribution of income and establish the direction of political transitions, thereby, economic performance",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "d5aa568eb4"
+      ],
+      "on_main_thread": true,
+      "framings": {
+        "structural_institutionalism": 1.0,
+        "group_based_structural_disadvantage": 0.3
+      }
+    },
+    {
+      "node_id": "a1b0305a34",
+      "url": "https://link.springer.com/book/10.1007/978-3-031-08633-5",
+      "title": "Structural Inequality: Origins and Quests for Solutions in Old Worlds and New | Springer Nature Link",
+      "outlet": "link.springer.com",
+      "author": "Roger D. Norton",
+      "published_date": "2022",
+      "tier": "originator",
+      "exact_phrasing": "bedrock types of inequality whose origins are rooted in the history and culture of each country. These kinds of inequality strongly influence income distributions by strata",
+      "attribution_text": "",
+      "attributed_to": [
+        "Roger D. Norton"
+      ],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "d5aa568eb4"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_institutionalism": 0.6,
+        "historical_cultural_inequality": 1.0,
+        "group_based_structural_disadvantage": 0.6
+      }
+    },
+    {
+      "node_id": "d5aa568eb4",
+      "url": "https://sociology.institute/sociological-theories-concepts/understanding-social-stratification-difference-inequality/",
+      "title": "Understanding Social Stratification: Difference Versus Inequality \u2022 Sociology.Institute",
+      "outlet": "sociology.institute",
+      "author": "",
+      "published_date": "2026-01-03",
+      "tier": "secondary",
+      "exact_phrasing": "The economic system contains structural advantages and disadvantages for different groups of people.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "a85c7e0750",
+          "flow_type": "paraphrases",
+          "evidence": "The sociology.institute article synthesizes the concept that economic structures create differential outcomes for groups, which closely parallels the Springer 2017 article's framing of how economic structures affect income distribution and institutional performance, restated in simpler sociological language without attribution."
+        },
+        {
+          "id": "a1b0305a34",
+          "flow_type": "paraphrases",
+          "evidence": "The sociology.institute article's framing of structural advantages and disadvantages maps onto Norton's discussion of bedrock inequalities rooted in history and culture influencing income distributions by strata, distilled into a single generalized claim without attribution."
+        }
+      ],
+      "children": [],
+      "on_main_thread": true,
+      "framings": {
+        "neutral": 1.0,
+        "structural_institutionalism": 0.3,
+        "group_based_structural_disadvantage": 1.0
+      }
+    }
+  ],
+  "main_thread": [
+    "a85c7e0750",
+    "d5aa568eb4"
+  ],
+  "origins": [
+    "a85c7e0750",
+    "a1b0305a34"
+  ],
+  "traced_at": "2026-05-09T21:20:39.125252+00:00",
+  "depth": "standard",
+  "days_back": 30,
+  "cost_usd": 0.07222100000000001,
+  "framings": [
+    {
+      "framing_id": "neutral",
+      "label": "Neutral",
+      "framing_text": "The economic system contains structural advantages and disadvantages for different groups of people.",
+      "ideological_tradition": "factual baseline",
+      "characteristic_phrases": [],
+      "is_neutral": true,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "structural_institutionalism",
+      "label": "Structural-Institutional Determinism",
+      "framing_text": "Economic structures determine the rate of structural learning, affect institutional performance, influence the distribution of income and establish the direction of political transitions",
+      "ideological_tradition": "Institutional economics and political economy \u2014 emphasizes that macro-level economic structures shape outcomes for institutions, distributions, and political systems as a whole, rather than focusing on individual groups",
+      "characteristic_phrases": [
+        "economic structures determine",
+        "institutional performance",
+        "direction of political transitions",
+        "economic performance"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "historical_cultural_inequality",
+      "label": "Historically Rooted Stratification",
+      "framing_text": "Bedrock types of inequality whose origins are rooted in the history and culture of each country strongly influence income distributions by strata",
+      "ideological_tradition": "Historical-comparative sociology \u2014 frames inequality as deeply embedded in national history and culture, with persistent stratified hierarchies that shape income distribution across social strata over time",
+      "characteristic_phrases": [
+        "bedrock types of inequality",
+        "rooted in history and culture",
+        "income distributions by strata",
+        "origins"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "group_based_structural_disadvantage",
+      "label": "Group-Based Structural Advantage and Disadvantage",
+      "framing_text": "The economic system contains structural advantages and disadvantages for different groups of people",
+      "ideological_tradition": "Critical sociology and equity-focused social science \u2014 frames the economic system as containing built-in, systemic asymmetries that differentially benefit or harm identifiable social groups, implying a need for systemic analysis or reform",
+      "characteristic_phrases": [
+        "structural advantages",
+        "structural disadvantages",
+        "different groups of people",
+        "economic system"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "original_input",
+      "label": "As Submitted",
+      "framing_text": "the economy is rigged",
+      "ideological_tradition": "original input phrasing",
+      "characteristic_phrases": [],
+      "is_neutral": false,
+      "is_original_input": true
+    }
+  ],
+  "framing_mode": "discover-framings",
+  "stats": {
+    "total_nodes": 3,
+    "origins": 2,
+    "main_thread_length": 2,
+    "by_tier": {
+      "secondary": 1,
+      "originator": 2
+    },
+    "framings_count": 5,
+    "nodes_per_framing": {
+      "neutral": 2,
+      "structural_institutionalism": 2,
+      "historical_cultural_inequality": 1,
+      "group_based_structural_disadvantage": 2,
+      "original_input": 0
+    }
+  }
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "claim": "The border is wide open",
+    "label": "narrative",
+    "confidence": 0.55,
+    "chain_complete": false,
+    "summary": "Originated from Republican Party politicians and conservative media ecosystem (Fox News, GOP leadership) (Approximately 2021, intensifying after Biden's inauguration and early immigration policy reversals). GOP politicians (including Texas Gov. Greg Abbott, House Republicans, and Donald Trump) used 'open border' framing in speeches and social media \u2192 amplified by Fox News and right-wing media \u2192 picked up by mainstream news coverage of immigration debates \u2192 entered broader political discourse and fact-check cycles \u2192 Trump used it in 2026 State of the Union address, cementing it as standard Republican rhetorical framing. The 'wide open border' framing appears to have been popularized and systematized by Republican politicians and conservative media beginning around early 2021 as a direct political attack on Biden-era immigration policy reversals, though the 'open borders' attack phrase predates this cycle by years as a nativist talking point. Multiple fact-checkers and critics across the political spectrum (PolitiFact, NPR, Third Way, America's Voice, American Progress) have consistently labeled it a myth or exaggeration, noting that Border Patrol continued actively apprehending migrants throughout the period. The narrative spread through a classic partisan amplification loop \u2014 elected officials, conservative media, social media \u2014 and achieved mainstream entrenchment when Trump repeated it in his 2026 State of the Union. A definitive single originator cannot be identified from the available sources, lowering overall confidence.",
+    "primary_source": null,
+    "sources": [
+      {
+        "url": "https://www.politifact.com/article/2022/apr/26/greg-abbott-refers-bidens-open-border-policies-are/",
+        "title": "PolitiFact / Nusaiba Mizan",
+        "tier": "critic",
+        "confidence": 0.95,
+        "excerpt": "\"There's no such thing as an open border. We don't have an open border. That's absurd,\" Garrett said.",
+        "cites": null
+      },
+      {
+        "url": "https://www.washingtonpost.com/immigration/2024/02/11/trump-biden-immigration-border-compared/",
+        "title": "Washington Post (Nick Miroff, Maria Sacchetti, Sarah Frostenson)",
+        "tier": "critic",
+        "confidence": 0.55,
+        "excerpt": "Illegal border crossings soared to record levels under President Biden, averaging 2 million per year from 2021 to 2023.",
+        "cites": null
+      },
+      {
+        "url": "https://www.pbs.org/newshour/politics/fact-checking-the-trump-white-houses-claims-about-illegal-immigration-dropping-sharply",
+        "title": "PolitiFact / PBS NewsHour",
+        "tier": "critic",
+        "confidence": 0.72,
+        "excerpt": "Illegal immigration at the U.S. southern border has dropped since Trump entered the White House. But the White House's data use is misleading.",
+        "cites": "https://www.foxnews.com/"
+      },
+      {
+        "url": "https://www.thirdway.org/memo/the-real-problem-at-the-southern-border",
+        "title": "Third Way (Jeremy Odrich)",
+        "tier": "critic",
+        "confidence": 0.95,
+        "excerpt": "This memo will dispel the common misperception of an open southern border and identify the actual problem we need to solve to restore order at the border.",
+        "cites": null
+      },
+      {
+        "url": "https://www.pbs.org/newshour/politics/read-trumps-full-2026-state-of-the-union-address",
+        "title": "President Donald Trump",
+        "tier": "amplifier",
+        "confidence": 0.85,
+        "excerpt": "When I spoke in this chamber 12 months ago, I had just inherited a nation in crisis, with a stagnant economy, inflation at record levels, a wide-open border, horrendous recruitment for military and police, rampant crime at home and wars and chaos all over the world.",
+        "cites": null
+      },
+      {
+        "url": "https://www.ms.now/rachel-maddow-show/maddowblog/gop-weird-habit-debunking-open-borders-claims-rcna25349",
+        "title": "Steve Benen / MSNBC MaddowBlog",
+        "tier": "critic",
+        "confidence": 0.95,
+        "excerpt": "In one tweet, Lesko simultaneously told the public that the White House has adopted 'open border policies' and that the Biden administration successfully apprehended a billion migrants \u2014 which is to say, a million migrants \u2014 at the southern border since last fall. But both claims cannot be true. An administration can embrace an open border, or it can stop those trying to enter the country. But if an administration is doing the latter, it obviously isn't also doing the former.",
+        "cites": null
+      },
+      {
+        "url": "https://www.npr.org/2023/02/01/1153565559/border-house-republicans-hearing-jordan-mexico",
+        "title": "NPR / Joel Rose",
+        "tier": "critic",
+        "confidence": 0.85,
+        "excerpt": "There is no open border in El Paso,' Samaniego said, explaining that migrants there routinely turn themselves in to Border Patrol for processing in an orderly fashion.",
+        "cites": null
+      },
+      {
+        "url": "https://americasvoice.org/blog/debunking-the-nativist-open-border-narrative-a-short-resource-guide/",
+        "title": "America's Voice (authored by Zachary Mueller)",
+        "tier": "critic",
+        "confidence": 0.98,
+        "excerpt": "The border is NOT open. That fact has been reiterated repeatedly, including under oath, by Border Patrol and the Department of Homeland Security officials.",
+        "cites": "https://www.catoinsitute.org"
+      },
+      {
+        "url": "https://www.politifact.com/factchecks/2024/jul/24/republican-national-committee-republican/border-czar-kamala-harris-assigned-to-tackle-immig/",
+        "title": "PolitiFact / Maria Ramirez Uribe",
+        "tier": "critic",
+        "confidence": 0.72,
+        "excerpt": "We've repeatedly fact-checked claims about the number of people entering the U.S. illegally under Biden. The federal data tracks how many times officials encountered a person trying to cross the southern border, but it doesn't reflect the number of people let in.",
+        "cites": "https://x.com/GOP"
+      },
+      {
+        "url": "https://www.americanprogressaction.org/article/the-gops-myth-of-an-open-border/",
+        "title": "Center for American Progress Action / Debu Gandhi",
+        "tier": "critic",
+        "confidence": 0.95,
+        "excerpt": "This action \u2014 and similar ones orchestrated by other GOP governors \u2014 have also deliberately elevated the 'open border' narrative, which falsely represents that unlawful immigrants are waltzing into the U.S. through a porous southern border in droves.",
+        "cites": "https://www.nbcnews.com"
+      },
+      {
+        "url": "https://thehill.com/opinion/congress-blog/3857782-myth-vs-truth-dissecting-the-republican-narrative-about-the-border/",
+        "title": "Rep. Gerald E. Connolly (D-Va.)",
+        "tier": "critic",
+        "confidence": 0.95,
+        "excerpt": "MYTH: The Biden administration has implemented an 'open border' policy that has created chaos at our border with Mexico.",
+        "cites": null
+      }
+    ]
+  }
+]

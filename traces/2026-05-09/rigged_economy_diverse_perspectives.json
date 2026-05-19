@@ -1,0 +1,830 @@
+{
+  "claim_text": "the economy is rigged",
+  "neutral_phrasing": "The economy contains structural features that benefit some groups more than others.",
+  "nodes": [
+    {
+      "node_id": "a85c7e0750",
+      "url": "https://link.springer.com/article/10.1186/s40008-017-0063-1",
+      "title": "Economic structures, institutions and economic performance | Journal of Economic Structures | Springer Nature Link",
+      "outlet": "link.springer.com",
+      "author": "Collin Constantine",
+      "published_date": "2017-02-10",
+      "tier": "originator",
+      "exact_phrasing": "economic structures determine the rate of structural learning, affect institutional performance, influence the distribution of income and establish the direction of political transitions",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "7fe30d8dd7",
+        "2d93c2c415"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.7,
+        "structural_inequality_academic": 0.8,
+        "class_exploitation_left": 0.2,
+        "transaction_cost_institutional_economics": 0.6,
+        "k_shaped_recovery_technocratic": 0.3
+      }
+    },
+    {
+      "node_id": "bede0fdd8c",
+      "url": "https://en.wikipedia.org/wiki/Structural_inequality",
+      "title": "Structural inequality - Wikipedia",
+      "outlet": "en.wikipedia.org",
+      "author": "",
+      "published_date": null,
+      "tier": "originator",
+      "exact_phrasing": "Structural inequality occurs when the fabric of organizations, institutions, governments or social networks contains an embedded cultural, linguistic, economic, religious/belief, physical or identity based bias which provides advantages for some members and marginalizes or produces disadvantages for other members.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.95,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "8be06c4f8a",
+        "262e160ef0",
+        "1b10435c9f"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 1.0
+      }
+    },
+    {
+      "node_id": "8be06c4f8a",
+      "url": "https://www.perlego.com/knowledge/study-guides/what-is-structural-inequality",
+      "title": "Structural Inequality | Definition, Examples & Analysis",
+      "outlet": "perlego.com",
+      "author": "Georgie Williams",
+      "published_date": "2023-07-20",
+      "tier": "secondary",
+      "exact_phrasing": "Structural inequality is defined as a condition that arises out of attributing an unequal status to a category of people in relation to one or more categories of people, a relationship that is perpetuated and reinforced by a confluence of unequal relations in roles, functions, decision rights, and opportunities.",
+      "attribution_text": "In Inclusive States: Social Policy and Structural Inequalities",
+      "attributed_to": [
+        "Dani",
+        "de Haan"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "bede0fdd8c",
+          "flow_type": "amplifies",
+          "evidence": "Perlego study guide on structural inequality draws on the same academic concept of embedded institutional bias; cites 'Inclusive States' scholarship consistent with Wikipedia's sourcing tradition"
+        },
+        {
+          "id": "262e160ef0",
+          "flow_type": "amplifies",
+          "evidence": "Similar definitional framing to Penn's structural inequality page, likely drawing from same pool of sources"
+        }
+      ],
+      "children": [
+        "1b10435c9f"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 1.0
+      }
+    },
+    {
+      "node_id": "262e160ef0",
+      "url": "https://www.impact.upenn.edu/what-is-structural-inequality/",
+      "title": "What Is Structural Inequality? - Center for High Impact Philanthropy - University of Pennsylvania",
+      "outlet": "impact.upenn.edu",
+      "author": "",
+      "published_date": null,
+      "tier": "secondary",
+      "exact_phrasing": "Structural inequality describes disparities in wealth, resources, and other outcomes that result from discriminatory practices of institutions such as legal, educational, business, government, and health care systems. Structural inequalities result from power imbalances when one group has historically set the rules that intentionally or unintentionally exclude others from access to wealth and resources. Those in positions of economic and political power reap benefits and perpetuate systems that deny those benefits to others.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "bede0fdd8c",
+          "flow_type": "paraphrases",
+          "evidence": "Penn's definition of structural inequality closely mirrors Wikipedia's definition of structural inequality, restating the same concept of institutional bias producing differential outcomes"
+        }
+      ],
+      "children": [
+        "8be06c4f8a"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.4,
+        "structural_inequality_academic": 0.95,
+        "class_exploitation_left": 0.5
+      }
+    },
+    {
+      "node_id": "4f000e998b",
+      "url": "https://www.usbank.com/corporate-and-commercial-banking/insights/economy/macro/k-shaped-economy.html",
+      "title": "The K-Shaped Economy in 2026",
+      "outlet": "usbank.com",
+      "author": "",
+      "published_date": "2026-01-07",
+      "tier": "secondary",
+      "exact_phrasing": "A K-shaped economy describes an economic recovery where different groups or industries experience vastly different outcomes \u2013 some thrive and grow, while others struggle or decline. This term was intended to highlight the widening economic inequality during periods of recovery or downturn.",
+      "attribution_text": "According to a recent report by the U.S. Bank Economics Research Group, 'The K-economy in 2026: Same story, new amplifiers'",
+      "attributed_to": [
+        "U.S. Bank Economics Research Group"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "ed81702627",
+          "flow_type": "amplifies",
+          "evidence": "K-shaped economy framing extends the National Affairs discussion of massive economic shifts producing differential returns to different groups, now formalized into a named economic concept"
+        },
+        {
+          "id": "06a838b95d",
+          "flow_type": "amplifies",
+          "evidence": "Builds on the structural labor market change framing from equitablegrowth.org, applied to COVID-era recovery divergence"
+        }
+      ],
+      "children": [
+        "42c239e305"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 0.3,
+        "k_shaped_recovery_technocratic": 1.0
+      }
+    },
+    {
+      "node_id": "3de33e483e",
+      "url": "https://blogs.lse.ac.uk/inequalities/2025/02/11/the-wealth-of-the-new-trillionaire-class/",
+      "title": "",
+      "outlet": "blogs.lse.ac.uk",
+      "author": "Anjela Taneja and Harry Bignell",
+      "published_date": "2025-02-11",
+      "tier": "secondary",
+      "exact_phrasing": "The economy is skewed, as the super-rich profit at the expense of the rest. Their wealth is generally not earned on merit but rather they enjoy the fruits of all our labour. Much extreme wealth is the product of crony connections between the richest and governments. Monopolistic corporations can control markets, set the rules and terms of exchange with other companies and workers. Modern systems and structures continue to transfer wealth from the Global South to North.",
+      "attribution_text": "Oxfam's 2025 Davos report, with calculations and analysis from Oxfam",
+      "attributed_to": [
+        "Oxfam"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "67cfe6a60f",
+          "flow_type": "amplifies",
+          "evidence": "LSE blog explicitly attributes to Oxfam's 2025 Davos report, same source as equals.ink summary; amplifies the 'economy is skewed' framing from that report"
+        },
+        {
+          "id": "e6000861c6",
+          "flow_type": "amplifies",
+          "evidence": "Directly continues Oxfam's longstanding framing of crony wealth and skewed economic systems originating in the 2016 report"
+        }
+      ],
+      "children": [],
+      "on_main_thread": true,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.5,
+        "class_exploitation_left": 1.0,
+        "crony_capitalism_market": 0.8,
+        "transaction_cost_institutional_economics": 0.4,
+        "original_input": 0.9
+      }
+    },
+    {
+      "node_id": "67cfe6a60f",
+      "url": "https://www.equals.ink/p/davos-25-summary",
+      "title": "",
+      "outlet": "equals.ink",
+      "author": "Anjela Taneja and Harry Bignell",
+      "published_date": "2025-01-20",
+      "tier": "secondary",
+      "exact_phrasing": "The economy contains structural features that benefit some groups more than others \u2014 specifically described as 'unjust global economic systems, racial and gender hierarchies and other inequities baked into the global world order' and 'modern systems and structure that continue to transfer wealth from Global South to North'",
+      "attribution_text": "Oxfam's 2025 Davos report",
+      "attributed_to": [
+        "Oxfam"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "e6000861c6",
+          "flow_type": "cites",
+          "evidence": "Explicitly attributes to Oxfam's 2025 Davos report, which is the direct successor to Oxfam's 2016 'Economy for the 1%' report; the framing of unjust global systems and wealth transfer directly continues Oxfam's 2016 language"
+        }
+      ],
+      "children": [
+        "3de33e483e"
+      ],
+      "on_main_thread": true,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.6,
+        "class_exploitation_left": 1.0,
+        "original_input": 0.6
+      }
+    },
+    {
+      "node_id": "fbca8ca39b",
+      "url": "http://www.lee.senate.gov/public/index.cfm/anti-cronyism-and-free-market-agenda",
+      "title": "",
+      "outlet": "lee.senate.gov",
+      "author": "",
+      "published_date": null,
+      "tier": "primary",
+      "exact_phrasing": "Cronyist policies \u2014 from tax loopholes to regulatory advantages to direct subsidies \u2014 deliberately tilt the playing field to keep those very firms down... Policy privilege corrupts the free market by rewarding political connections over competitive excellence.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.75,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "5be178df26",
+        "342852b9f3"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "structural_inequality_academic": 0.3,
+        "crony_capitalism_market": 1.0,
+        "original_input": 0.6
+      }
+    },
+    {
+      "node_id": "4757a96a15",
+      "url": "https://en.wikipedia.org/wiki/Crony_capitalism",
+      "title": "",
+      "outlet": "en.wikipedia.org",
+      "author": "",
+      "published_date": null,
+      "tier": "originator",
+      "exact_phrasing": "Capitalism featuring undue alliances between business interests and politicians",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.7,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "cbc6400356"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.3,
+        "crony_capitalism_market": 1.0,
+        "transaction_cost_institutional_economics": 0.3
+      }
+    },
+    {
+      "node_id": "5be178df26",
+      "url": "https://www.breitbart.com/politics/2023/12/21/exclusive-report-washington-swamp-protects-the-rich-and-elite-shuns-the-poor/",
+      "title": "",
+      "outlet": "breitbart.com",
+      "author": "Matthew Boyle",
+      "published_date": "2023-12-21",
+      "tier": "secondary",
+      "exact_phrasing": "the economy/political system contains structural features that benefit the rich and elite while disadvantaging the poor and lower-income constituents, as evidenced by establishment members of Congress representing wealthier districts while non-establishment members represent lower-income districts",
+      "attribution_text": "Report titled 'Class Dismissed: Reframing Political Bias in Congress' compiled by GOP mega-lobbyist Sam Geduldig",
+      "attributed_to": [
+        "Sam Geduldig",
+        "Class Dismissed: Reframing Political Bias in Congress (report)"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "fbca8ca39b",
+          "flow_type": "amplifies",
+          "evidence": "Breitbart article echoes the 'tilted playing field' / crony policy framing, attributing structural benefits to elites and rich over poor, consistent with Senator Lee's anti-cronyism framing"
+        },
+        {
+          "id": "342852b9f3",
+          "flow_type": "amplifies",
+          "evidence": "Similar framing of business/elite interests using structural features to benefit themselves at expense of others"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.6,
+        "class_exploitation_left": 0.4,
+        "crony_capitalism_market": 0.7,
+        "transaction_cost_institutional_economics": 0.5,
+        "k_shaped_recovery_technocratic": 0.2,
+        "original_input": 0.8
+      }
+    },
+    {
+      "node_id": "ed81702627",
+      "url": "https://www.nationalaffairs.com/publications/detail/elites-and-the-economy",
+      "title": "",
+      "outlet": "nationalaffairs.com",
+      "author": "Donald Schneider",
+      "published_date": "2019-10-01",
+      "tier": "secondary",
+      "exact_phrasing": "The economy has undergone massive shifts over the last several decades... All of these factors have changed the nature of work and the returns to different skillsets in ways that policymakers didn't anticipate and that have wrought all sorts of other complications down the line.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.65,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "08d06c9b69",
+          "flow_type": "amplifies",
+          "evidence": "Discusses economy-wide structural shifts and differential returns to groups, consistent with North's institutional framework, without attribution"
+        },
+        {
+          "id": "06a838b95d",
+          "flow_type": "amplifies",
+          "evidence": "Extends the labor market structural change framing from equitablegrowth.org, discussing industrial shifts and skill-based returns"
+        }
+      ],
+      "children": [
+        "4f000e998b"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 0.3,
+        "k_shaped_recovery_technocratic": 0.9
+      }
+    },
+    {
+      "node_id": "cbc6400356",
+      "url": "https://www.econlib.org/following-their-leaders-the-preferences-of-elites/",
+      "title": "",
+      "outlet": "econlib.org",
+      "author": "Kevin Corcoran",
+      "published_date": "2023-05-17",
+      "tier": "secondary",
+      "exact_phrasing": "The value of resources is maximized for those who face low transaction costs \u2013 the steel mills and automobile producers \u2013 but not for those who face high transaction costs \u2013 the people who breath polluted air. This uneven distribution of transaction costs exists in political systems as well. Well connected political insiders face low transaction costs in bargaining with each other over public policy.",
+      "attribution_text": "Randall Holcombe's Following Their Leaders: Political Preferences and Public Policy",
+      "attributed_to": [
+        "Randall Holcombe"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "08d06c9b69",
+          "flow_type": "cites",
+          "evidence": "Econlib article explicitly discusses transaction costs and uneven distribution in political and economic systems, directly in the tradition of North's institutional economics; attributes to Holcombe who builds on this tradition"
+        },
+        {
+          "id": "4757a96a15",
+          "flow_type": "amplifies",
+          "evidence": "Discusses elite capture and uneven political transaction costs, consistent with crony capitalism framing"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.4,
+        "class_exploitation_left": 0.2,
+        "crony_capitalism_market": 0.6,
+        "transaction_cost_institutional_economics": 1.0
+      }
+    },
+    {
+      "node_id": "08d06c9b69",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/1993/north/lecture/",
+      "title": "",
+      "outlet": "nobelprize.org",
+      "author": "Douglass C. North",
+      "published_date": "1993-12-09",
+      "tier": "originator",
+      "exact_phrasing": "Institutions form the incentive structure of a society and the political and economic institutions, in consequence, are the underlying determinant of economic performance.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "ed81702627",
+        "cbc6400356",
+        "7fe30d8dd7",
+        "342852b9f3",
+        "06a838b95d",
+        "6e7e890dbd"
+      ],
+      "on_main_thread": true,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 0.3,
+        "transaction_cost_institutional_economics": 0.6
+      }
+    },
+    {
+      "node_id": "7fe30d8dd7",
+      "url": "https://tnsr.org/2022/12/chinas-brute-force-economics-waking-up-from-the-dream-of-a-level-playing-field/",
+      "title": "",
+      "outlet": "tnsr.org",
+      "author": "Liza Tobin",
+      "published_date": "2022-12-07",
+      "tier": "secondary",
+      "exact_phrasing": "the economy contains structural features that benefit some groups more than others, as evidenced by the claim that 'Cooperative trading relations require a common set of rules or expectations that ensure that economic competition occurs on a level playing field' and that Beijing's rejection of rule of law means 'normative commercial structures upon which modern trade depends are at the mercy of a powerful and ideologically motivated political party'",
+      "attribution_text": "The author argues this based on her analysis of China's state-led economic system and the Chinese Communist Party's control over the judiciary and commercial structures",
+      "attributed_to": [
+        "Liza Tobin"
+      ],
+      "confidence": 0.75,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "a85c7e0750",
+          "flow_type": "amplifies",
+          "evidence": "TNSR article applies structural economic analysis to China's state-led system, consistent with the Springer article's framework of economic structures shaping institutional performance and distribution"
+        },
+        {
+          "id": "08d06c9b69",
+          "flow_type": "amplifies",
+          "evidence": "The level-playing-field framing echoes North's institutional incentive structure argument"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 0.4,
+        "crony_capitalism_market": 0.7,
+        "transaction_cost_institutional_economics": 0.3,
+        "original_input": 0.5
+      }
+    },
+    {
+      "node_id": "342852b9f3",
+      "url": "https://www.imf.org/en/publications/fandd/issues/2020/06/political-economy-of-economic-policy-jeff-frieden",
+      "title": "",
+      "outlet": "imf.org",
+      "author": "Jeffry Frieden",
+      "published_date": "2020-06-01",
+      "tier": "secondary",
+      "exact_phrasing": "business interests have pressed for exceptions to benefit themselves, and for substantial subsidies\u2014bailouts\u2014to help them through difficult times",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.65,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "08d06c9b69",
+          "flow_type": "amplifies",
+          "evidence": "IMF article on political economy draws on the institutional economics tradition North represents, discussing how business interests leverage economic structures for gain"
+        },
+        {
+          "id": "fbca8ca39b",
+          "flow_type": "amplifies",
+          "evidence": "Echoes the crony capitalism / policy privilege framing without direct attribution"
+        }
+      ],
+      "children": [
+        "5be178df26"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.4,
+        "class_exploitation_left": 0.5,
+        "crony_capitalism_market": 0.8,
+        "transaction_cost_institutional_economics": 0.6
+      }
+    },
+    {
+      "node_id": "e6000861c6",
+      "url": "https://policy-practice.oxfam.org/resources/an-economy-for-the-1-how-privilege-and-power-in-the-economy-drive-extreme-inequ-592643/",
+      "title": "",
+      "outlet": "policy-practice.oxfam.org",
+      "author": "Hardoon, Deborah; Fuentes-Nieva, Ricardo; Ayele, Sophia",
+      "published_date": "2016-01-18",
+      "tier": "originator",
+      "exact_phrasing": "Power and privilege is being used to skew the economic system to increase the gap between the richest and the rest.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "3de33e483e",
+        "67cfe6a60f"
+      ],
+      "on_main_thread": true,
+      "framings": {
+        "neutral": 0.3,
+        "structural_inequality_academic": 0.4,
+        "class_exploitation_left": 0.8,
+        "crony_capitalism_market": 0.6,
+        "transaction_cost_institutional_economics": 0.2,
+        "original_input": 0.9
+      }
+    },
+    {
+      "node_id": "1b10435c9f",
+      "url": "https://lifestyle.sustainability-directory.com/term/uneven-resource-distribution/",
+      "title": "",
+      "outlet": "lifestyle.sustainability-directory.com",
+      "author": "",
+      "published_date": "2025-11-16",
+      "tier": "secondary",
+      "exact_phrasing": "the economy contains structural features that benefit some groups more than others, as evidenced by the statement that 'the benefits of consumption (the use of the final product) are enjoyed by one group, while the harms of production (pollution, resource depletion, social disruption) are borne by another'",
+      "attribution_text": "Environmental justice scholarship and the concept of 'consumption justice'",
+      "attributed_to": [
+        "Environmental justice scholarship"
+      ],
+      "confidence": 0.75,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "bede0fdd8c",
+          "flow_type": "amplifies",
+          "evidence": "Sustainability directory article restates the structural inequality concept using environmental justice framing, consistent with Wikipedia's structural inequality framework"
+        },
+        {
+          "id": "8be06c4f8a",
+          "flow_type": "amplifies",
+          "evidence": "Similar educational/definitional framing of structural features producing differential group outcomes"
+        }
+      ],
+      "children": [
+        "2d93c2c415"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.9,
+        "structural_inequality_academic": 0.7,
+        "class_exploitation_left": 0.6,
+        "crony_capitalism_market": 0.2,
+        "transaction_cost_institutional_economics": 0.3,
+        "k_shaped_recovery_technocratic": 0.2
+      }
+    },
+    {
+      "node_id": "2d93c2c415",
+      "url": "https://pollution.sustainability-directory.com/term/unequal-resource-distribution/",
+      "title": "",
+      "outlet": "pollution.sustainability-directory.com",
+      "author": "",
+      "published_date": "2025-12-14",
+      "tier": "secondary",
+      "exact_phrasing": "the unevenness is not merely a random occurrence but often the result of historical processes, economic structures, political power dynamics, and geographical circumstances interacting in complex ways",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "1b10435c9f",
+          "flow_type": "amplifies",
+          "evidence": "Sister site (pollution.sustainability-directory.com vs lifestyle.sustainability-directory.com) using nearly identical structural framing about historical processes and economic structures producing uneven distribution"
+        },
+        {
+          "id": "a85c7e0750",
+          "flow_type": "amplifies",
+          "evidence": "Language about economic structures, political power dynamics, and historical processes closely mirrors the Springer article's framework"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.6,
+        "structural_inequality_academic": 0.8,
+        "class_exploitation_left": 0.3,
+        "transaction_cost_institutional_economics": 0.4,
+        "k_shaped_recovery_technocratic": 0.3
+      }
+    },
+    {
+      "node_id": "42c239e305",
+      "url": "https://www.britannica.com/money/k-shaped-economy",
+      "title": "",
+      "outlet": "britannica.com",
+      "author": "Karl Montevirgen",
+      "published_date": null,
+      "tier": "secondary",
+      "exact_phrasing": "A K-shaped economy splits recovery from an economic downturn into two directions, one rising and the other falling... The split often reflects differences in job security, wage growth, and access to remote or high-demand work... rewarding a few while placing strain on the majority",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "4f000e998b",
+          "flow_type": "paraphrases",
+          "evidence": "Britannica's K-shaped economy definition covers the same concept as US Bank's K-shaped economy article; both describe divergent economic outcomes for different groups during recovery, likely drawing from the same post-2020 economic discourse"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.7,
+        "structural_inequality_academic": 0.5,
+        "class_exploitation_left": 0.4,
+        "k_shaped_recovery_technocratic": 0.9,
+        "original_input": 0.3
+      }
+    },
+    {
+      "node_id": "06a838b95d",
+      "url": "https://equitablegrowth.org/great-recession-aftermath-role-structural-changes-play/",
+      "title": "",
+      "outlet": "equitablegrowth.org",
+      "author": "Jesse Rothstein",
+      "published_date": "2015-07-06",
+      "tier": "secondary",
+      "exact_phrasing": "structural changes in the labor market, including long-term industrial and demographic shifts and policy changes that reduce the incentive to work",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.7,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "08d06c9b69",
+          "flow_type": "amplifies",
+          "evidence": "Builds on North's institutional economics framing of structural labor market changes affecting economic performance, without direct attribution but using similar structural-incentive language"
+        }
+      ],
+      "children": [
+        "4f000e998b",
+        "ed81702627"
+      ],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.7,
+        "structural_inequality_academic": 0.4,
+        "crony_capitalism_market": 0.3,
+        "transaction_cost_institutional_economics": 0.5,
+        "k_shaped_recovery_technocratic": 0.8
+      }
+    },
+    {
+      "node_id": "6e7e890dbd",
+      "url": "https://pressbooks.nvcc.edu/nolgeo210/chapter/economic-development-globalization/",
+      "title": "",
+      "outlet": "pressbooks.nvcc.edu",
+      "author": "",
+      "published_date": null,
+      "tier": "secondary",
+      "exact_phrasing": "the influence of structural features of the world economy",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.65,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "08d06c9b69",
+          "flow_type": "amplifies",
+          "evidence": "Pressbooks textbook reference to 'structural features of the world economy' in a globalization context is consistent with North's institutional economics tradition, used in educational settings without specific attribution"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false,
+      "framings": {
+        "neutral": 0.8,
+        "structural_inequality_academic": 0.6,
+        "transaction_cost_institutional_economics": 0.3
+      }
+    }
+  ],
+  "main_thread": [
+    "08d06c9b69",
+    "e6000861c6",
+    "67cfe6a60f",
+    "3de33e483e"
+  ],
+  "origins": [
+    "a85c7e0750",
+    "bede0fdd8c",
+    "fbca8ca39b",
+    "4757a96a15",
+    "08d06c9b69",
+    "e6000861c6"
+  ],
+  "traced_at": "2026-05-10T00:53:27.764181+00:00",
+  "depth": "standard",
+  "days_back": 30,
+  "cost_usd": 0.28552399999999994,
+  "framings": [
+    {
+      "framing_id": "neutral",
+      "label": "Neutral",
+      "framing_text": "The economy contains structural features that benefit some groups more than others.",
+      "ideological_tradition": "factual baseline",
+      "characteristic_phrases": [],
+      "is_neutral": true,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "structural_inequality_academic",
+      "label": "Structural Inequality as Systemic Bias",
+      "framing_text": "Structural inequality occurs when the fabric of organizations, institutions, governments or social networks contains an embedded cultural, linguistic, economic, religious/belief, physical or identity based bias which provides advantages for some members and marginalizes or produces disadvantages for others.",
+      "ideological_tradition": "Academic sociology and progressive institutionalism; views inequality as embedded in the design of social and political institutions, perpetuated across time through discriminatory practices and power imbalances.",
+      "characteristic_phrases": [
+        "embedded bias",
+        "perpetuated and reinforced",
+        "power imbalances",
+        "discriminatory practices of institutions",
+        "historical",
+        "marginalizes"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "class_exploitation_left",
+      "label": "Wealth Extraction and Elite Exploitation",
+      "framing_text": "The economy is skewed, as the super-rich profit at the expense of the rest. Their wealth is generally not earned on merit but rather they enjoy the fruits of all our labour. Unjust global economic systems and modern structures continue to transfer wealth from the many to the few.",
+      "ideological_tradition": "Left-progressive and socialist critique; frames economic inequality as the deliberate or systemic upward transfer of wealth from working people to elites, with global racial and gender hierarchies as compounding factors.",
+      "characteristic_phrases": [
+        "profit at the expense of",
+        "fruits of all our labour",
+        "transfer wealth",
+        "unjust global economic systems",
+        "racial and gender hierarchies",
+        "baked into the global world order"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "crony_capitalism_market",
+      "label": "Crony Capitalism Corrupting Free Markets",
+      "framing_text": "Cronyist policies \u2014 from tax loopholes to regulatory advantages to direct subsidies \u2014 deliberately tilt the playing field. Policy privilege corrupts the free market by rewarding political connections over competitive excellence. Capitalism featuring undue alliances between business interests and politicians.",
+      "ideological_tradition": "Free-market conservatism and libertarianism; locates the problem not in markets themselves but in government-business collusion that distorts competition and privileges insiders over ordinary participants.",
+      "characteristic_phrases": [
+        "tilt the playing field",
+        "policy privilege",
+        "cronyist policies",
+        "political connections over competitive excellence",
+        "undue alliances",
+        "regulatory advantages"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "transaction_cost_institutional_economics",
+      "label": "Uneven Transaction Costs and Political Capture",
+      "framing_text": "The value of resources is maximized for those who face low transaction costs, but not for those who face high transaction costs. This uneven distribution of transaction costs exists in political systems as well \u2014 well-organized groups gain systematic advantages over diffuse, less-organized ones.",
+      "ideological_tradition": "Institutional economics and public choice theory; uses a neutral analytical lens to explain how differential access to markets and political systems, rather than malice, produces structurally unequal outcomes.",
+      "characteristic_phrases": [
+        "transaction costs",
+        "uneven distribution",
+        "well-organized groups",
+        "political systems",
+        "maximized for those who"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "k_shaped_recovery_technocratic",
+      "label": "Divergent Economic Outcomes as Measurable Phenomenon",
+      "framing_text": "A K-shaped economy describes an economic recovery where different groups or industries experience vastly different outcomes \u2014 some thrive and grow, while others struggle or decline. Massive shifts over the last several decades have changed the nature of work and the returns to different skillsets in ways policymakers didn't anticipate.",
+      "ideological_tradition": "Technocratic centrism and policy analysis; treats unequal outcomes as an observable, measurable economic pattern driven by structural shifts, framing the issue as a policy challenge rather than a moral or political one.",
+      "characteristic_phrases": [
+        "K-shaped economy",
+        "vastly different outcomes",
+        "widening economic inequality",
+        "returns to different skillsets",
+        "policymakers didn't anticipate",
+        "massive shifts"
+      ],
+      "is_neutral": false,
+      "is_original_input": false
+    },
+    {
+      "framing_id": "original_input",
+      "label": "As Submitted",
+      "framing_text": "the economy is rigged",
+      "ideological_tradition": "original input phrasing",
+      "characteristic_phrases": [],
+      "is_neutral": false,
+      "is_original_input": true
+    }
+  ],
+  "framing_mode": "discover-framings",
+  "stats": {
+    "total_nodes": 21,
+    "origins": 6,
+    "main_thread_length": 4,
+    "by_tier": {
+      "originator": 5,
+      "primary": 1,
+      "secondary": 15
+    },
+    "framings_count": 7,
+    "nodes_per_framing": {
+      "neutral": 11,
+      "structural_inequality_academic": 11,
+      "class_exploitation_left": 6,
+      "crony_capitalism_market": 8,
+      "transaction_cost_institutional_economics": 6,
+      "k_shaped_recovery_technocratic": 4,
+      "original_input": 6
+    }
+  }
+}

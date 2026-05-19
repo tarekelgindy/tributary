@@ -1,0 +1,267 @@
+{
+  "claim_text": "The recent Hantavirus could spread to become a new pandemic",
+  "neutral_phrasing": "Cases of Hantavirus have been reported in recent times, and the virus has the potential to spread to human populations.",
+  "nodes": [
+    {
+      "node_id": "c05464c483",
+      "url": "https://www.cbsnews.com/news/hantavirus-cases-deadly-cruise-ship-outbreak/",
+      "title": "What we know about hantavirus cases tied to deadly cruise ship outbreak - CBS News",
+      "outlet": "cbsnews.com",
+      "author": "Emily Mae Czachor",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "Hantaviruses are a family of rare viruses usually passed to humans through contact with contaminated rodent waste or saliva. They often present with symptoms of pulmonary and respiratory distress that can be severe. The strain identified in the outbreak on the M/V Hondius cruise ship is called the Andes virus, which is the only known hantavirus strain to spread person to person.",
+      "attribution_text": "according to the U.S. Centers for Disease Control and Prevention",
+      "attributed_to": [
+        "U.S. Centers for Disease Control and Prevention"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "3afbdaf3cc",
+          "flow_type": "cites",
+          "evidence": "Explicitly attributes hantavirus definition and transmission information to 'U.S. Centers for Disease Control and Prevention'"
+        },
+        {
+          "id": "7c653540cf",
+          "flow_type": "amplifies",
+          "evidence": "Reports on the MV Hondius cruise ship outbreak that WHO's DON599 identified; outbreak framing originates with WHO notice"
+        }
+      ],
+      "children": [],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "2724b453bd",
+      "url": "https://www.cnn.com/2026/05/08/health/hantavirus-by-the-numbers",
+      "title": "What the numbers tell us about hantavirus | CNN",
+      "outlet": "cnn.com",
+      "author": "Jen Christensen",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "Health authorities across several countries are racing to trace and contain an outbreak of hantavirus after the World Health Organization said that five confirmed infections had been identified among people connected to the cruise ship MV Hondius. The virus is typically associated with rodents, but it may have passed from human to human aboard the vessel, according to WHO.",
+      "attribution_text": "according to WHO; the World Health Organization said",
+      "attributed_to": [
+        "World Health Organization",
+        "WHO"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "cites",
+          "evidence": "Explicitly attributes outbreak details to WHO: 'the World Health Organization said that five confirmed infections had been identified'; directly references WHO's outbreak notice DON599"
+        },
+        {
+          "id": "3afbdaf3cc",
+          "flow_type": "amplifies",
+          "evidence": "Background statistics and rodent-transmission framing consistent with CDC surveillance data"
+        }
+      ],
+      "children": [],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "9b60e3d145",
+      "url": "https://hantavirustracker.io/",
+      "title": "2026 Hantavirus Outbreak Tracker | Live map news timeline and WHO data",
+      "outlet": "hantavirustracker.io",
+      "author": "",
+      "published_date": null,
+      "tier": "secondary",
+      "exact_phrasing": "Hantaviruses are rodent-borne zoonotic viruses in the Hantaviridae family. Only some species are known to cause human disease.",
+      "attribution_text": "WHO and ECDC state that documented human to human transmission is limited to Andes virus in the Americas and is uncommon.",
+      "attributed_to": [
+        "WHO",
+        "ECDC"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "cites",
+          "evidence": "Explicitly attributes human-to-human transmission characterization to WHO; ECDC also cited, consistent with WHO's DON599 framing"
+        },
+        {
+          "id": "3afbdaf3cc",
+          "flow_type": "amplifies",
+          "evidence": "Tracker aggregates case data consistent with CDC surveillance records"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "7c653540cf",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "outlet": "who.int",
+      "author": "",
+      "published_date": "2026-05-04",
+      "tier": "originator",
+      "exact_phrasing": "Human hantavirus infection is primarily acquired through contact with the urine, faeces, or saliva of infected rodents. It is a rare but severe disease that can be deadly. Although uncommon, limited human to human transmission has been reported in previous outbreaks of Andes virus (a specific species of hantavirus).",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "c05464c483",
+        "2724b453bd",
+        "9b60e3d145",
+        "bb599a3022",
+        "b8192b695c"
+      ],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "3afbdaf3cc",
+      "url": "https://www.cdc.gov/hantavirus/data-research/cases/index.html",
+      "title": "Reported Cases of Hantavirus Disease | Hantavirus | CDC",
+      "outlet": "cdc.gov",
+      "author": "",
+      "published_date": "2026-04-23",
+      "tier": "primary",
+      "exact_phrasing": "As of the end of 2023, 890 cases of hantavirus disease were reported in the United States since surveillance began in 1993",
+      "attribution_text": "Reported through the Nationally Notifiable Disease Surveillance System (NNDSS); data collected by CDC's Viral Special Pathogens Branch",
+      "attributed_to": [
+        "CDC",
+        "NNDSS",
+        "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)"
+      ],
+      "confidence": 0.6,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "c05464c483",
+        "2724b453bd",
+        "9b60e3d145",
+        "bb599a3022",
+        "b8192b695c"
+      ],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "8326b84705",
+      "url": "https://en.wikipedia.org/wiki/Orthohantavirus",
+      "title": "Orthohantavirus - Wikipedia",
+      "outlet": "en.wikipedia.org",
+      "author": "",
+      "published_date": null,
+      "tier": "originator",
+      "exact_phrasing": "Orthohantavirus is a genus of viruses that includes all hantaviruses (family Hantaviridae) that cause disease in humans. Hantaviruses are naturally found primarily in rodents. In humans, however, hantaviruses cause two diseases: hemorrhagic fever with renal syndrome (HFRS) and hantavirus pulmonary syndrome (HPS).",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.7,
+      "is_origin": true,
+      "parents": [],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "d3694620ae",
+      "url": "https://en.wikipedia.org/wiki/1993_Four_Corners_hantavirus_outbreak",
+      "title": "1993 Four Corners hantavirus outbreak - Wikipedia",
+      "outlet": "en.wikipedia.org",
+      "author": "",
+      "published_date": null,
+      "tier": "originator",
+      "exact_phrasing": "An outbreak of hantavirus disease occurred in 1993 in the United States, primarily in the Four Corners region of Arizona, Colorado, and New Mexico. The outbreak in 1993 led to the discovery of hantaviruses from the Western Hemisphere that could cause disease and revealed the existence of a second disease caused by them: hantavirus pulmonary syndrome (HPS).",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": true,
+      "parents": [],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "bb599a3022",
+      "url": "https://www.health.harvard.edu/immune-and-infectious-diseases/hantavirus-explained-what-to-know-after-the-cruise-ship-outbreak",
+      "title": "Hantavirus explained: What to know after the cruise ship outbreak - Harvard Health",
+      "outlet": "health.harvard.edu",
+      "author": "Robert H. Shmerling, MD",
+      "published_date": "2026-05-06",
+      "tier": "secondary",
+      "exact_phrasing": "Mice and other rodents often carry the hantavirus. Humans can contract the disease when they come into contact with infected rodents or their saliva, urine, and droppings.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "amplifies",
+          "evidence": "Published shortly after WHO outbreak notice; references cruise ship outbreak context consistent with WHO's DON599; no direct attribution but timing and framing align with WHO report as trigger"
+        },
+        {
+          "id": "3afbdaf3cc",
+          "flow_type": "amplifies",
+          "evidence": "General hantavirus transmission information consistent with CDC surveillance framing; no explicit attribution but epidemiological background mirrors CDC language"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "b8192b695c",
+      "url": "https://www.snopes.com/fact-check/cruise-ship-hantavirus-rare/",
+      "title": "Did hantavirus spread between people before cruise ship outbreak? Tracing rare cases | Snopes.com",
+      "outlet": "snopes.com",
+      "author": "Laerke Christensen",
+      "published_date": "2026-05-07",
+      "tier": "secondary",
+      "exact_phrasing": "Researchers have known since at least 1996 that at least one hantavirus variant \u2014 the Andes virus \u2014 could spread from person to person.",
+      "attribution_text": "Researchers have known since at least 1996",
+      "attributed_to": [
+        "Paula J. Padula et al.",
+        "Researchers"
+      ],
+      "confidence": 0.85,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "cites",
+          "evidence": "Snopes fact-check references the cruise ship outbreak context and human-to-human transmission; the Andes virus person-to-person claim traces back to documented research cited alongside WHO outbreak framing"
+        },
+        {
+          "id": "3afbdaf3cc",
+          "flow_type": "amplifies",
+          "evidence": "References known hantavirus case history and surveillance data consistent with CDC records"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    }
+  ],
+  "main_thread": [
+    "3afbdaf3cc",
+    "7c653540cf",
+    "2724b453bd",
+    "c05464c483"
+  ],
+  "origins": [
+    "7c653540cf",
+    "3afbdaf3cc",
+    "8326b84705",
+    "d3694620ae"
+  ],
+  "traced_at": "2026-05-09T07:41:32.448872+00:00",
+  "depth": "standard",
+  "days_back": 30,
+  "cost_usd": 0.067248,
+  "stats": {
+    "total_nodes": 9,
+    "origins": 4,
+    "main_thread_length": 4,
+    "by_tier": {
+      "primary": 1,
+      "secondary": 5,
+      "originator": 3
+    }
+  }
+}

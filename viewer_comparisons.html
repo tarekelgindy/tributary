@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tributary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf8f3;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f1ea;
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-muted: #999;
+  --rule: #1a1a1a;
+  --rule-soft: #e2ddd2;
+
+  --c-shared: #2a5d4f;
+  --c-shared-bg: #e6efe8;
+  --c-unverified: #a07434;
+  --c-unverified-bg: #f4ead4;
+
+  --view-1: #c2410c;
+  --view-2: #1d4ed8;
+  --view-3: #166534;
+  --view-4: #7e22ce;
+  --view-5: #b91c1c;
+  --view-6: #0f766e;
+  --view-7: #a16207;
+  --view-8: #475569;
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+
+/* === Loader === */
+
+.loader {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--ink-muted);
+}
+
+.loader h1 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.loader p { margin-bottom: 24px; max-width: 420px; margin-left: auto; margin-right: auto; }
+
+.loader input[type="file"] {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 14px;
+  border: 1px dashed var(--rule-soft);
+  background: var(--bg-card);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === Top bar === */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.topbar .meta {
+  font-family: var(--mono);
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+/* === Headline block === */
+
+.headline-block {
+  margin-bottom: 32px;
+}
+
+.headline-block h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.headline-block .original {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.headline-block .original::before {
+  content: "Originally framed: ";
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-right: 4px;
+}
+
+/* === At-a-glance: facts panel full width, then views grid === */
+
+.glance {
+  margin-bottom: 24px;
+}
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.panel-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-label .num {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* === Shared facts panel — two columns when wide === */
+
+.facts-panel ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 24px;
+}
+
+@media (max-width: 720px) {
+  .facts-panel ul { grid-template-columns: 1fr; }
+}
+
+.facts-panel li {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 0;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.facts-panel li .dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 7px;
+}
+
+.facts-panel li.verified .dot { background: var(--c-shared); }
+.facts-panel li.unverified .dot { background: var(--c-unverified); }
+
+.facts-panel li .text { flex: 1; color: var(--ink); }
+
+.facts-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.facts-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.facts-legend .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.facts-legend .verified-dot { background: var(--c-shared); }
+.facts-legend .unverified-dot { background: var(--c-unverified); }
+
+/* === Overlap matrix: topics column + views column side by side === */
+
+.overlap-section {
+  margin-bottom: 28px;
+  padding: 18px 20px 16px;
+  background: linear-gradient(135deg, #fefefe 0%, #faf6ed 100%);
+  border: 1px solid var(--rule-soft);
+  border-radius: 6px;
+}
+
+.overlap-intro {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 2px 0 14px;
+  line-height: 1.45;
+  max-width: 720px;
+}
+
+/* Two-column main layout: topics left, views right */
+
+.overlap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 20px;
+}
+
+/* === Topics column (left) === */
+
+.overlap-topics-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overlap-topics-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overlap-section-header {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.shared-section .overlap-section-header { color: var(--c-shared); }
+.disputed-section .overlap-section-header { color: var(--accent-unverified); }
+
+.overlap-section-header .col-count {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.overlap-topic-box {
+  background: var(--bg-card);
+  border: 1.5px solid var(--rule-soft);
+  border-radius: 5px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color 0.18s, box-shadow 0.18s, border-color 0.18s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.overlap-topic-box.shared {
+  border-color: var(--c-shared);
+  border-width: 2px;
+}
+
+.overlap-topic-box.disputed {
+  border-style: dashed;
+  border-color: var(--ink-soft);
+}
+
+.overlap-topic-box:hover {
+  background: var(--bg-soft);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.overlap-topic-box.shared:hover {
+  border-color: var(--c-shared);
+  background: var(--c-shared-bg);
+  box-shadow: 0 4px 12px rgba(42, 93, 79, 0.18);
+}
+
+.overlap-topic-box.disputed:hover {
+  background: #fdf6e8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.overlap-topic-meta {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  text-align: right;
+}
+
+.overlap-topic-text {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.overlap-topic-summary {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 6px;
+  margin-top: 4px;
+}
+
+/* === Views column (right) === */
+
+.overlap-views-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: none;
+}
+
+.overlap-views-column .overlap-section-header {
+  color: var(--ink);
+}
+
+.overlap-view-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 11px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-left: 4px solid var(--view-color, var(--ink));
+  border-radius: 4px;
+  transition: background-color 0.18s, opacity 0.18s, box-shadow 0.18s;
+}
+
+.overlap-view-chip.engaged {
+  background: var(--view-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.overlap-view-chip.not-engaged {
+  opacity: 0.25;
+}
+
+.overlap-view-chip-name {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--view-color, var(--ink));
+}
+
+.overlap-view-chip-question {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.4;
+  /* No truncation — let questions wrap naturally so nothing is cut */
+}
+
+.overlap-view-chip-pushers {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  padding-top: 4px;
+}
+
+.overlap-view-chip-pushers .pusher-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 8px;
+  color: var(--ink-muted);
+  margin-right: 2px;
+}
+
+.overlap-view-chip.engaged .overlap-view-chip-pushers .pusher-label {
+  color: var(--view-color);
+}
+
+.overlap-position-line {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  min-height: 18px;
+  opacity: 0;
+  transition: opacity 0.18s;
+  border-top: 1px dotted var(--rule-soft);
+  padding-top: 5px;
+  margin-top: 2px;
+}
+
+.overlap-view-chip.engaged .overlap-position-line {
+  opacity: 1;
+}
+
+.overlap-hint {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-style: italic;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 14px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 800px) {
+  .overlap-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* === Views grid — larger cards, question prominent === */
+
+.views-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 14px;
+}
+
+.view-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-left: 4px solid var(--view-color, var(--ink));
+  border-radius: 5px;
+  padding: 20px 22px 18px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.view-card:hover {
+  border-color: var(--view-color, var(--ink));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.view-card.expanded {
+  background: var(--view-bg, var(--bg-soft));
+}
+
+.view-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.view-card-name {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--view-color, var(--ink));
+  flex: 1;
+}
+
+.view-card-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.view-card-question {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.view-card-claim {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.view-card.expanded .view-card-claim {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.view-card-sources {
+  font-size: 12px;
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding-top: 10px;
+  margin-top: 4px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.view-card-sources {
+  display: flex;
+}
+
+.view-card-sources a {
+  color: var(--view-color, var(--ink-soft));
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  padding-bottom: 1px;
+}
+
+.view-card-sources a:hover {
+  border-bottom-style: solid;
+}
+
+/* === Disagreement strip === */
+
+.disagree-strip {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.disagree-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 13px;
+  align-items: start;
+}
+
+.disagree-row:first-of-type { border-top: none; }
+
+.disagree-topic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.disagree-positions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.disagree-position {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  align-items: baseline;
+}
+
+.disagree-position .vname-mini {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+}
+
+.disagree-position .vpos-text {
+  flex: 1;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .disagree-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* === Provenance: collapsed accordion === */
+
+.provenance-section {
+  margin-top: 24px;
+}
+
+details.acc {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+details.acc summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+details.acc summary::-webkit-details-marker { display: none; }
+
+details.acc summary::after {
+  content: "+";
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--ink-muted);
+  transition: transform 0.2s;
+}
+
+details.acc[open] summary::after {
+  transform: rotate(45deg);
+}
+
+details.acc summary .preview {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-left: 12px;
+  flex: 1;
+}
+
+.acc-content {
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.acc-content > *:first-child { margin-top: 14px; }
+
+/* Mutations content */
+
+.mut-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 14px;
+}
+
+.mut-meta strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.mut-summary {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-soft);
+  padding: 10px 12px;
+  background: var(--bg-soft);
+  border-left: 2px solid var(--rule-soft);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.transition-row {
+  font-size: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.transition-route {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.transition-route .arrow { color: var(--ink); }
+
+.transition-changes {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 4px 10px;
+  font-size: 12px;
+}
+
+.transition-changes dt {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-top: 1px;
+}
+
+.transition-changes dd { color: var(--ink-soft); line-height: 1.4; }
+
+.transition-changes dt.kept { color: var(--c-shared); }
+.transition-changes dt.dropped { color: var(--c-unverified); }
+.transition-changes dt.added { color: var(--view-2); }
+.transition-changes dt.distorted { color: var(--view-1); }
+
+/* Omissions */
+
+.omission-group {
+  padding: 10px 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.omission-group:first-of-type { border-top: none; }
+
+.omission-group h4 {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.omission-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.omission-list li {
+  padding: 4px 0 4px 14px;
+  position: relative;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.omission-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--ink-muted);
+}
+
+/* === Stats footer === */
+
+.footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer .stats-row {
+  display: flex;
+  gap: 18px;
+}
+
+.footer .stat {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+}
+
+.footer .stat-num {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.footer .source-link a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Stagger entry */
+.headline-block, .glance, .disagree-strip, .provenance-section, .footer {
+  animation: fadeIn 0.4s ease-out backwards;
+}
+.glance { animation-delay: 0.05s; }
+.disagree-strip { animation-delay: 0.1s; }
+.provenance-section { animation-delay: 0.15s; }
+.footer { animation-delay: 0.2s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="app">
+  <div class="loader">
+    <h1>Tributary</h1>
+    <p>Where information comes from, and what others see when they look at the same event.</p>
+    <input type="file" id="file-input" accept=".json">
+  </div>
+</div>
+
+<script>
+const fileInput = document.getElementById('file-input');
+const app = document.getElementById('app');
+
+fileInput.addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    render(JSON.parse(text));
+  } catch (err) {
+    app.innerHTML = `<div class="loader"><p>Failed to load: ${err.message}</p></div>`;
+  }
+});
+
+const VIEW_COLORS = [
+  { color: 'var(--view-1)', bg: '#fde8d4' },
+  { color: 'var(--view-2)', bg: '#dde7fb' },
+  { color: 'var(--view-3)', bg: '#d8ebde' },
+  { color: 'var(--view-4)', bg: '#ecdcf6' },
+  { color: 'var(--view-5)', bg: '#fadcdc' },
+  { color: 'var(--view-6)', bg: '#d4ebe8' },
+  { color: 'var(--view-7)', bg: '#f5e7c4' },
+  { color: 'var(--view-8)', bg: '#dde2e8' },
+];
+
+function escape(s) {
+  if (s === null || s === undefined) return '';
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function fmtDate(s) {
+  if (!s) return '';
+  try {
+    const d = new Date(s);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  } catch { return s; }
+}
+
+function getDomain(url) {
+  if (!url) return '';
+  try { return new URL(url).hostname.replace(/^www\./, ''); }
+  catch { return url.slice(0, 30); }
+}
+
+function renderBubbles(views, disagreements, sharedFoundation) {
+  // Layout: View chips on top show name, question, and "pushed by" outlets.
+  // Topic boxes below show what's shared and what's disputed.
+  // Hover a topic → engaged views light up with their specific position.
+
+  const verified = sharedFoundation?.verified_facts || [];
+  const hasDisagreements = disagreements && disagreements.length > 0;
+  const hasShared = verified.length > 0;
+
+  if (!hasDisagreements && !hasShared) return '';
+  if (!views || views.length === 0) return '';
+
+  function viewIdxByName(name) {
+    return views.findIndex(v => (v.name || v.view_name || v.lens_name) === name);
+  }
+
+  // Extract top "pushers" (publisher domains) for each view
+  function pushersFor(view) {
+    const sources = view.sources || [];
+    const domainCounts = {};
+    sources.forEach(s => {
+      if (s.url) {
+        const d = getDomain(s.url);
+        if (d) domainCounts[d] = (domainCounts[d] || 0) + 1;
+      }
+    });
+    return Object.entries(domainCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3)
+      .map(([domain]) => domain);
+  }
+
+  // Build topic list
+  const topics = [];
+
+  if (hasShared) {
+    const sharedFactsList = verified.map(f => f.fact);
+    topics.push({
+      type: 'shared',
+      label: verified.length === 1
+        ? verified[0].fact
+        : `${verified.length} facts all views agree on`,
+      summary: verified.length === 1
+        ? null
+        : sharedFactsList.slice(0, 3).join(' · ') + (verified.length > 3 ? ' · …' : ''),
+      participating: views.map((_, i) => i),
+      positions: views.map((v, i) => ({
+        viewIdx: i,
+        position: 'Accepts as established fact',
+      })),
+    });
+  }
+
+  (disagreements || []).forEach(d => {
+    const posList = d.view_positions || [];
+    const positions = posList.map(p => ({
+      viewIdx: viewIdxByName(p.view),
+      position: p.position || '',
+    })).filter(p => p.viewIdx >= 0);
+
+    // Generate a "what's at stake" mini-summary by extracting the first
+    // ~2 distinct positions
+    const distinctPositions = [];
+    const seenWords = new Set();
+    for (const p of positions) {
+      const words = p.position.toLowerCase().split(/\W+/).slice(0, 6).join(' ');
+      if (!seenWords.has(words)) {
+        seenWords.add(words);
+        distinctPositions.push(p.position);
+        if (distinctPositions.length >= 2) break;
+      }
+    }
+    const summary = distinctPositions.length >= 2
+      ? `${views[positions[0].viewIdx].name || ''} sees one thing; ${views[positions[positions.length - 1].viewIdx].name || ''} sees another.`
+      : null;
+
+    topics.push({
+      type: 'disputed',
+      label: d.topic || '',
+      summary,
+      participating: positions.map(p => p.viewIdx),
+      positions,
+    });
+  });
+
+  if (topics.length === 0) return '';
+
+  // Stash topics data on window for the hover handler (avoids DOM encoding issues)
+  window.__overlapData = {};
+  topics.forEach((t, i) => {
+    window.__overlapData[i] = {
+      participating: t.participating,
+      positions: t.positions,
+    };
+  });
+
+  let html = `<div class="overlap-section">
+    <div class="panel-label">
+      <span>Where Views Overlap and Diverge</span>
+      <span class="num">${topics.length} topics · ${views.length} views</span>
+    </div>
+    <p class="overlap-intro">
+      Hover any topic on the left to see which views engage with it and what each says.
+    </p>`;
+
+  // Helper: render a topic box
+  function renderTopicBox(topic, idx) {
+    let s = `<div class="overlap-topic-box ${topic.type}" data-topic-idx="${idx}">
+      <div class="overlap-topic-meta">${topic.participating.length} of ${views.length} views</div>
+      <div class="overlap-topic-text">${escape(topic.label)}</div>`;
+    if (topic.summary) {
+      s += `<div class="overlap-topic-summary">${escape(topic.summary)}</div>`;
+    }
+    s += `</div>`;
+    return s;
+  }
+
+  const sharedTopics = topics.map((t, i) => ({ topic: t, idx: i })).filter(t => t.topic.type === 'shared');
+  const disputedTopics = topics.map((t, i) => ({ topic: t, idx: i })).filter(t => t.topic.type === 'disputed');
+
+  html += `<div class="overlap-grid">`;
+
+  // === Left column: topics (shared + disputed stacked) ===
+  html += `<div class="overlap-topics-column">`;
+
+  html += `<div class="overlap-topics-section shared-section">
+    <div class="overlap-section-header">
+      <span>Shared Ground</span>
+      <span class="col-count">${sharedTopics.length}</span>
+    </div>`;
+  if (sharedTopics.length === 0) {
+    html += `<div style="font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-muted); padding: 8px 2px;">No shared facts identified.</div>`;
+  } else {
+    sharedTopics.forEach(({ topic, idx }) => { html += renderTopicBox(topic, idx); });
+  }
+  html += `</div>`;
+
+  html += `<div class="overlap-topics-section disputed-section">
+    <div class="overlap-section-header">
+      <span>Where Views Diverge</span>
+      <span class="col-count">${disputedTopics.length}</span>
+    </div>`;
+  if (disputedTopics.length === 0) {
+    html += `<div style="font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-muted); padding: 8px 2px;">No major disagreements identified.</div>`;
+  } else {
+    disputedTopics.forEach(({ topic, idx }) => { html += renderTopicBox(topic, idx); });
+  }
+  html += `</div>`;
+
+  html += `</div>`;  // close topics column
+
+  // === Right column: views ===
+  html += `<div class="overlap-views-column">
+    <div class="overlap-section-header">
+      <span>The Different Views</span>
+      <span class="col-count">${views.length}</span>
+    </div>`;
+
+  views.forEach((v, i) => {
+    const c = VIEW_COLORS[i % VIEW_COLORS.length];
+    const name = v.name || v.view_name || v.lens_name || `View ${i + 1}`;
+    const question = v.question || '';
+    const pushers = pushersFor(v);
+
+    html += `<div class="overlap-view-chip"
+      data-view-idx="${i}"
+      style="--view-color: ${c.color}; --view-bg: ${c.bg};">
+      <div class="overlap-view-chip-name">${escape(name)}</div>
+      <div class="overlap-view-chip-question">${escape(question)}</div>`;
+
+    if (pushers.length > 0) {
+      html += `<div class="overlap-view-chip-pushers">
+        <span class="pusher-label">Pushed by</span>`;
+      pushers.forEach(d => {
+        html += `<span>${escape(d)}</span>`;
+      });
+      html += `</div>`;
+    }
+
+    html += `<div class="overlap-position-line" data-view-idx="${i}">&nbsp;</div>`;
+    html += `</div>`;
+  });
+
+  html += `</div>`;  // close views column
+
+  html += `</div>`;  // close grid
+
+  html += `</div>`;  // close section
+
+  return html;
+}
+
+function renderTraceback(data) {
+  const flows = data.flows || [];
+  const sources = data.sources || [];
+  const mutations = (data.mutations && data.mutations.transitions) || [];
+
+  if (sources.length < 2) return '';
+
+  function classify(s) {
+    const tier = (s.tier || '').toLowerCase();
+    if (tier === 'primary' || tier === 'originator') return 'primary';
+    if (tier === 'critic') return 'critic';
+    if (tier === 'amplifier' || tier === 'tertiary') return 'amplifier';
+    if (s.url && (s.url.includes('bsky.app') || s.url.includes('twitter.com') || s.url.includes('x.com'))) return 'social';
+    return 'secondary';
+  }
+
+  const tierOrder = ['primary', 'secondary', 'amplifier', 'critic', 'social'];
+  const tierLabels = {
+    primary: 'Primary source',
+    secondary: 'Reporting',
+    amplifier: 'Amplifiers',
+    critic: 'Critics',
+    social: 'Social media',
+  };
+
+  // Bucket sources by tier
+  const byTier = {};
+  tierOrder.forEach(t => byTier[t] = []);
+  sources.forEach((s, i) => {
+    const tier = classify(s);
+    byTier[tier].push({
+      ...s,
+      tier,
+      idx: i,
+      published: s.published_at || s.published_date || '',
+    });
+  });
+
+  // Drop empty tiers
+  const activeTiers = tierOrder.filter(t => byTier[t].length > 0);
+
+  if (activeTiers.length === 0) return '';
+
+  // Sort each tier by published date
+  activeTiers.forEach(t => {
+    byTier[t].sort((a, b) => (a.published || '').localeCompare(b.published || ''));
+  });
+
+  // Layout
+  const W = 940;
+  const tierRowHeight = 90;
+  const topMargin = 30;
+  const leftMargin = 130;
+  const rightMargin = 30;
+  const availableWidth = W - leftMargin - rightMargin;
+
+  const H = topMargin + activeTiers.length * tierRowHeight + 30;
+
+  // Position nodes within each tier — spread evenly across the full width
+  // Use chronological order if dates are available, otherwise distribute evenly
+  const nodePositions = {};
+  activeTiers.forEach((tier, tierIdx) => {
+    const tierY = topMargin + tierIdx * tierRowHeight + 30;
+    const tierNodes = byTier[tier];
+    const n = tierNodes.length;
+
+    // Compute x positions: spread evenly with proper margins between
+    tierNodes.forEach((node, i) => {
+      let x;
+      if (n === 1) {
+        x = leftMargin + availableWidth / 2;
+      } else {
+        // Spread evenly across full width with padding
+        const innerPadding = 20;
+        const innerWidth = availableWidth - 2 * innerPadding;
+        x = leftMargin + innerPadding + (i / (n - 1)) * innerWidth;
+      }
+      nodePositions[node.url] = { x, y: tierY, ...node };
+    });
+  });
+
+  // Calculate label positions to avoid overlap.
+  // For dense tiers, alternate label position above/below the node
+  function getLabelPlacement(node, tierNodes) {
+    const idx = tierNodes.findIndex(n => n.url === node.url);
+    const n = tierNodes.length;
+    // If many nodes, alternate above/below
+    if (n > 4) {
+      return idx % 2 === 0 ? 'above' : 'below';
+    }
+    return 'right';
+  }
+
+  let svg = `<svg class="traceback-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">`;
+
+  // Tier row labels and dividers
+  activeTiers.forEach((tier, tierIdx) => {
+    const tierY = topMargin + tierIdx * tierRowHeight + 30;
+    svg += `<text class="tb-tier-label" x="20" y="${tierY + 4}">
+      ${tierLabels[tier].toUpperCase()}
+    </text>`;
+    svg += `<text class="tb-tier-label" x="20" y="${tierY + 18}" style="font-weight: 400; font-size: 9px; opacity: 0.7;">
+      ${byTier[tier].length} ${byTier[tier].length === 1 ? 'source' : 'sources'}
+    </text>`;
+    svg += `<line class="tb-time-axis" x1="${leftMargin - 10}" y1="${tierY + tierRowHeight - 30}" x2="${W - rightMargin}" y2="${tierY + tierRowHeight - 30}" />`;
+  });
+
+  // Flows
+  flows.forEach(flow => {
+    const from = nodePositions[flow.from_source];
+    const to = nodePositions[flow.to_source];
+    if (!from || !to) return;
+
+    const flowType = flow.flow_type || 'related';
+
+    // Skip co_reports flows entirely — they create visual noise without showing real flow.
+    // Co-reporting is implicit when sources are in the same tier from the same primary.
+    if (flowType === 'co_reports') return;
+
+    const cls = `tb-flow ${flowType}`;
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    const cp1x = from.x;
+    const cp1y = from.y + dy * 0.5;
+    const cp2x = to.x;
+    const cp2y = to.y - dy * 0.5;
+
+    svg += `<path class="${cls}"
+      d="M ${from.x} ${from.y} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${to.x} ${to.y}"
+      data-flow-type="${flowType}">
+      <title>${flowType.replace(/_/g, ' ')}: ${escape(flow.evidence || '')}</title>
+    </path>`;
+  });
+
+  // Mutation markers
+  mutations.forEach((mut, mIdx) => {
+    const from = nodePositions[mut.from_source];
+    const to = nodePositions[mut.to_source];
+    if (!from || !to) return;
+    const mx = (from.x + to.x) / 2;
+    const my = (from.y + to.y) / 2;
+    svg += `<g class="mutation-group" data-mutation-idx="${mIdx}">
+      <circle class="tb-mutation-marker" cx="${mx}" cy="${my}" r="11" />
+      <text class="tb-mutation-icon" x="${mx}" y="${my}">M</text>
+    </g>`;
+  });
+
+  // Nodes
+  activeTiers.forEach(tier => {
+    const tierNodes = byTier[tier];
+    tierNodes.forEach((node) => {
+      const pos = nodePositions[node.url];
+      if (!pos) return;
+      const placement = getLabelPlacement(node, tierNodes);
+      const cls = `tb-node-circle ${tier}`;
+
+      svg += `<g class="tb-node-group" data-url="${escape(node.url)}">
+        <circle class="${cls}" cx="${pos.x}" cy="${pos.y}" r="8" />`;
+
+      const domain = getDomain(node.url);
+      if (placement === 'above') {
+        svg += `<text class="tb-node-domain" x="${pos.x}" y="${pos.y - 14}" text-anchor="middle">
+          ${escape(domain)}
+        </text>`;
+      } else if (placement === 'below') {
+        svg += `<text class="tb-node-domain" x="${pos.x}" y="${pos.y + 22}" text-anchor="middle">
+          ${escape(domain)}
+        </text>`;
+      } else {
+        svg += `<text class="tb-node-domain" x="${pos.x + 14}" y="${pos.y + 1}">
+          ${escape(domain)}
+        </text>`;
+      }
+      svg += `</g>`;
+    });
+  });
+
+  svg += `</svg>`;
+
+  // Compute meaningful flow count (excluding co_reports)
+  const meaningfulFlows = flows.filter(f => f.flow_type !== 'co_reports').length;
+
+  const legend = `<div class="tb-legend">
+    <span><span class="dot" style="background: var(--c-shared);"></span>Primary source</span>
+    <span><span class="dot" style="background: var(--ink-soft);"></span>Reporting</span>
+    <span><span class="dot" style="background: var(--view-2);"></span>Amplifier</span>
+    <span><span class="dot" style="background: var(--view-1);"></span>Critic</span>
+    <span><span class="dot" style="background: var(--view-4);"></span>Social</span>
+    <span style="margin-left: 8px;"><span style="color: var(--view-1); font-weight: 700;">M</span> = mutation occurred</span>
+  </div>`;
+
+  // Add a context note if there are no meaningful citation flows
+  let contextNote = '';
+  if (meaningfulFlows === 0) {
+    contextNote = `<p style="margin-top: 10px; font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--ink-muted); line-height: 1.5;">
+      Most sources here covered the same primary report independently rather than citing each other. This pattern — parallel reporting from a shared origin — is common when news breaks.
+    </p>`;
+  }
+
+  return `<div class="traceback-section">
+    <div class="panel-label">
+      <span>How This Information Traveled</span>
+      <span class="num">${sources.length} sources · ${meaningfulFlows} ${meaningfulFlows === 1 ? 'connection' : 'connections'} · ${mutations.length} ${mutations.length === 1 ? 'mutation' : 'mutations'}</span>
+    </div>
+    ${svg}
+    ${contextNote}
+    ${legend}
+  </div>`;
+}
+
+function render(data) {
+  const original = data.topic || '';
+  const neutral = data.neutral_statement || data.neutral_topic || original;
+  const eventId = data.event_id || '';
+  const created = data.created_at || data.last_updated || '';
+
+  const sf = data.shared_foundation || {};
+  const verified = sf.verified_facts || [];
+  const unverified = sf.unverified_facts || [];
+  const disagreements = sf.points_of_disagreement || [];
+
+  const views = data.views || [];
+  const mutations = data.mutations || {};
+  const transitions = mutations.transitions || [];
+  const overall = mutations.overall || {};
+  const omissions = data.omissions || data.omissions_by_view || [];
+  const primarySource = data.primary_source || {};
+  const stats = data.stats || {};
+
+  let html = `
+    <div class="topbar">
+      <span>Tributary Analysis</span>
+      <span class="meta">${eventId ? escape(eventId) + ' · ' : ''}${escape(fmtDate(created))}</span>
+    </div>
+
+    <div class="headline-block">
+      <h1>${escape(neutral)}</h1>
+      ${original && original !== neutral ? `<div class="original">"${escape(original)}"</div>` : ''}
+    </div>
+  `;
+
+  // === Glance grid: facts + views ===
+  html += `<div class="glance">`;
+
+  // Facts panel
+  if (verified.length || unverified.length) {
+    html += `<div class="panel facts-panel">
+      <div class="panel-label">
+        <span>Shared Foundation</span>
+        <span class="num">${verified.length} verified · ${unverified.length} reported</span>
+      </div>
+      <ul>`;
+
+    verified.forEach(f => {
+      html += `<li class="verified"><span class="dot"></span><span class="text">${escape(f.fact || '')}</span></li>`;
+    });
+    unverified.forEach(f => {
+      html += `<li class="unverified"><span class="dot"></span><span class="text">${escape(f.fact || '')}</span></li>`;
+    });
+
+    html += `</ul>
+      <div class="facts-legend">
+        <span><span class="dot verified-dot"></span>In primary source</span>
+        <span><span class="dot unverified-dot"></span>Agreed but unverified</span>
+      </div>
+    </div>`;
+  }
+
+  // === Bubble overlap visualization — show where views converge and diverge on topics ===
+  if (views.length >= 2) {
+    html += renderBubbles(views, disagreements, sf);
+  }
+
+  // === Provenance traceback — how the underlying claim traveled ===
+  if ((data.sources || []).length >= 2 && (data.flows || []).length > 0) {
+    html += renderTraceback(data);
+  }
+
+  // Views grid — all questions visible at once
+  if (views.length) {
+    html += `<div class="panel-label" style="padding: 0 4px;">
+      <span>Different Questions Being Asked</span>
+      <span class="num">${views.length} ${views.length === 1 ? 'view' : 'views'}</span>
+    </div>
+    <div class="views-grid">`;
+
+    views.forEach((v, i) => {
+      const c = VIEW_COLORS[i % VIEW_COLORS.length];
+      const name = v.name || v.view_name || v.lens_name || `View ${i+1}`;
+      const question = v.question || '';
+      const keyClaim = v.key_claim || v.description || '';
+      const sources = v.sources || [];
+
+      html += `<div class="view-card" data-view-idx="${i}"
+        style="--view-color: ${c.color}; --view-bg: ${c.bg};">
+        <div class="view-card-header">
+          <div class="view-card-name">${escape(name)}</div>
+          ${sources.length > 0 ? `<div class="view-card-count">${sources.length} src</div>` : ''}
+        </div>
+        ${question ? `<div class="view-card-question">${escape(question)}</div>` : ''}
+        ${keyClaim ? `<div class="view-card-claim">${escape(keyClaim)}</div>` : ''}`;
+
+      if (sources.length) {
+        html += `<div class="view-card-sources">`;
+        sources.slice(0, 8).forEach(s => {
+          if (s.url) {
+            html += `<a href="${escape(s.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${escape(getDomain(s.url))}</a>`;
+          }
+        });
+        if (sources.length > 8) html += `<span>+${sources.length - 8}</span>`;
+        html += `</div>`;
+      }
+
+      html += `</div>`;
+    });
+
+    html += `</div>`;
+  }
+
+  html += `</div>`;  // close glance
+
+  // === Provenance accordion (collapsed, optional) ===
+  if (transitions.length || omissions.length) {
+    html += `<div class="provenance-section">`;
+
+    if (transitions.length && overall) {
+      const summary = overall.summary || '';
+      const severity = overall.mutation_severity || '';
+      const pattern = overall.mutation_pattern || '';
+      const previewText = summary ? summary.slice(0, 80) + (summary.length > 80 ? '…' : '') : '';
+
+      html += `<details class="acc">
+        <summary>
+          <span>How the claim changed as it spread</span>
+          ${previewText ? `<span class="preview">${escape(previewText)}</span>` : ''}
+        </summary>
+        <div class="acc-content">
+          ${summary ? `<div class="mut-summary">"${escape(summary)}"</div>` : ''}
+          ${severity || pattern ? `<div class="mut-meta">
+            ${severity ? `<span>Severity: <strong>${escape(severity)}</strong></span>` : ''}
+            ${pattern ? `<span>Pattern: <strong>${escape(pattern)}</strong></span>` : ''}
+            <span>${transitions.length} transitions tracked</span>
+          </div>` : ''}`;
+
+      transitions.forEach(t => {
+        html += `<div class="transition-row">
+          <div class="transition-route">
+            ${escape(getDomain(t.from_source))}
+            <span class="arrow">→</span>
+            ${escape(getDomain(t.to_source))}
+          </div>
+          <dl class="transition-changes">`;
+        if (t.preserved) html += `<dt class="kept">Kept</dt><dd>${escape(t.preserved)}</dd>`;
+        if (t.dropped) html += `<dt class="dropped">Dropped</dt><dd>${escape(t.dropped)}</dd>`;
+        if (t.added) html += `<dt class="added">Added</dt><dd>${escape(t.added)}</dd>`;
+        if (t.distorted) html += `<dt class="distorted">Distorted</dt><dd>${escape(t.distorted)}</dd>`;
+        html += `</dl></div>`;
+      });
+
+      html += `</div></details>`;
+    }
+
+    if (omissions.length) {
+      const omissionsByView = {};
+      omissions.forEach(o => {
+        const v = o.view_name || 'Unknown';
+        if (!omissionsByView[v]) omissionsByView[v] = [];
+        omissionsByView[v].push(o);
+      });
+
+      const totalOmissions = omissions.length;
+
+      html += `<details class="acc">
+        <summary>
+          <span>What each view leaves out</span>
+          <span class="preview">${totalOmissions} omissions across ${Object.keys(omissionsByView).length} views</span>
+        </summary>
+        <div class="acc-content">`;
+
+      Object.entries(omissionsByView).forEach(([viewName, list]) => {
+        const viewIdx = views.findIndex(v => (v.name || v.view_name) === viewName);
+        const c = viewIdx >= 0 ? VIEW_COLORS[viewIdx % VIEW_COLORS.length] : null;
+        const colorStyle = c ? `style="color: ${c.color};"` : '';
+
+        html += `<div class="omission-group">
+          <h4 ${colorStyle}>${escape(viewName)} <span style="font-weight: 400; color: var(--ink-muted); text-transform: none; letter-spacing: 0;">(${list.length})</span></h4>
+          <ul class="omission-list">`;
+        list.slice(0, 6).forEach(o => {
+          if (o.what_is_missing) {
+            html += `<li>${escape(o.what_is_missing)}</li>`;
+          }
+        });
+        if (list.length > 6) html += `<li style="color: var(--ink-muted);">+${list.length - 6} more</li>`;
+        html += `</ul></div>`;
+      });
+
+      html += `</div></details>`;
+    }
+
+    html += `</div>`;
+  }
+
+  // === Footer ===
+  const sourceCount = stats.sources || (data.sources || []).length || 0;
+  const flowCount = stats.flows || (data.flows || []).length || 0;
+
+  html += `<div class="footer">
+    <div class="stats-row">
+      <span class="stat"><span class="stat-num">${views.length}</span> views</span>
+      <span class="stat"><span class="stat-num">${sourceCount}</span> sources</span>
+      <span class="stat"><span class="stat-num">${flowCount}</span> flows</span>
+      <span class="stat"><span class="stat-num">${transitions.length}</span> mutations</span>
+    </div>
+    ${primarySource && primarySource.url ? `<div class="source-link">
+      Primary: <a href="${escape(primarySource.url)}" target="_blank" rel="noopener">${escape(primarySource.title || getDomain(primarySource.url))}</a>
+    </div>` : ''}
+  </div>`;
+
+  app.innerHTML = html;
+
+  // Wire up view card click-to-expand
+  document.querySelectorAll('.view-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('expanded');
+    });
+  });
+
+  // === Overlap topic hover: highlight engaged views, show positions ===
+  // We store the topics data in a closure-side map to avoid DOM string-encoding bugs.
+  const overlapData = window.__overlapData || {};
+
+  const viewChips = document.querySelectorAll('.overlap-view-chip');
+  const topicBoxes = document.querySelectorAll('.overlap-topic-box');
+
+  function clearOverlapHighlight() {
+    viewChips.forEach(chip => {
+      chip.classList.remove('engaged', 'not-engaged');
+      const posLine = chip.querySelector('.overlap-position-line');
+      if (posLine) posLine.innerHTML = '&nbsp;';
+    });
+  }
+
+  function applyOverlapHighlight(topicIdx) {
+    const topic = overlapData[topicIdx];
+    if (!topic) return;
+    const participating = new Set(topic.participating);
+    const posByIdx = {};
+    (topic.positions || []).forEach(p => {
+      posByIdx[p.viewIdx] = p.position;
+    });
+
+    viewChips.forEach(chip => {
+      const idx = parseInt(chip.dataset.viewIdx);
+      const posLine = chip.querySelector('.overlap-position-line');
+      if (participating.has(idx)) {
+        chip.classList.add('engaged');
+        chip.classList.remove('not-engaged');
+        if (posLine) {
+          const text = posByIdx[idx] || '';
+          posLine.textContent = text ? `"${text}"` : '';
+        }
+      } else {
+        chip.classList.add('not-engaged');
+        chip.classList.remove('engaged');
+        if (posLine) posLine.innerHTML = '&nbsp;';
+      }
+    });
+  }
+
+  topicBoxes.forEach(box => {
+    const tIdx = parseInt(box.dataset.topicIdx);
+    box.addEventListener('mouseenter', () => applyOverlapHighlight(tIdx));
+    box.addEventListener('mouseleave', clearOverlapHighlight);
+  });
+
+  // === Traceback interactions ===
+  document.querySelectorAll('.tb-node-group').forEach(g => {
+    g.addEventListener('click', () => {
+      const url = g.dataset.url;
+      if (url) window.open(url, '_blank', 'noopener');
+    });
+  });
+}
+
+// Allow ?file=path to load directly via URL
+const params = new URLSearchParams(window.location.search);
+const fileParam = params.get('file');
+if (fileParam && /^[\w./\-]+$/.test(fileParam)) {
+  fetch(fileParam)
+    .then(r => r.json())
+    .then(render)
+    .catch(err => console.error('Failed to load file param:', err));
+}
+</script>
+
+</body>
+</html>

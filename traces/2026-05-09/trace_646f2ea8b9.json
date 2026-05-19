@@ -1,0 +1,703 @@
+{
+  "claim_text": "The recent Hantavirus could spread to become a new pandemic",
+  "neutral_phrasing": "Recent cases of Hantavirus infection have been identified, and health authorities are monitoring the virus for potential spread.",
+  "nodes": [
+    {
+      "node_id": "7b817a193e",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "outlet": "who.int",
+      "author": "",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "a cluster of passengers with severe respiratory illness aboard a cruise ship was reported to the World Health Organization (WHO)...six cases have been laboratory-confirmed as hantavirus infections...WHO assesses the risk to the global population posed by this event as low and will continue to monitor the epidemiological situation",
+      "attribution_text": "World Health Organization (WHO) received notification from the National IHR Focal Point of the United Kingdom; laboratory confirmation through virus specific polymerase chain reaction (PCR) or sequencing",
+      "attributed_to": [
+        "World Health Organization",
+        "National IHR Focal Point of the United Kingdom"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "paraphrases",
+          "evidence": "WHO DON600 is an explicit update to DON599, same outlet, same notification chain (UK IHR Focal Point), updated case counts and monitoring language"
+        },
+        {
+          "id": "cea984eb90",
+          "flow_type": "paraphrases",
+          "evidence": "Incorporates updated case totals announced in WHO Director-General May 7 briefing"
+        }
+      ],
+      "children": [
+        "48780a620a",
+        "2724b453bd",
+        "d2c95c9778",
+        "05877236a6",
+        "b1f26c1a0b",
+        "a9b7a65b94",
+        "31c52529bc",
+        "9adea4afdf",
+        "753bcb3be5"
+      ],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "cea984eb90",
+      "url": "https://www.who.int/news/item/07-05-2026-who-s-response-to-hantavirus-cases-linked-to-a-cruise-ship",
+      "title": "WHO\u2019s response to hantavirus cases linked to a cruise ship",
+      "outlet": "who.int",
+      "author": "WHO Media Team",
+      "published_date": "2026-05-07",
+      "tier": "secondary",
+      "exact_phrasing": "Eight cases have been reported so far, including three deaths. Five of the 8 cases have been confirmed as hantavirus. The hantavirus involved is the Andes virus, the only species known to be capable of limited transmission between humans, linked to close and prolonged contact.",
+      "attribution_text": "Dr Tedros Adhanom Ghebreyesus, WHO Director-General, briefed media today on a cluster of hantavirus cases linked to a cruise ship, the MV Hondius.",
+      "attributed_to": [
+        "Dr Tedros Adhanom Ghebreyesus",
+        "WHO"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "paraphrases",
+          "evidence": "WHO Director-General briefing explicitly updates the case count and details from DON599, citing the same cruise ship cluster and expanding confirmed/suspected numbers"
+        }
+      ],
+      "children": [
+        "7b817a193e",
+        "2724b453bd",
+        "763a7eb2b1",
+        "b1f26c1a0b",
+        "31c52529bc",
+        "09ea9868f7",
+        "8b40c4ba2a",
+        "22316164f1",
+        "fdfc9c6573"
+      ],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "48780a620a",
+      "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
+      "title": "Hantavirus: Current Situation | Hantavirus | CDC",
+      "outlet": "cdc.gov",
+      "author": "",
+      "published_date": "2026-05-08",
+      "tier": "primary",
+      "exact_phrasing": "CDC is responding to a deadly outbreak of Andes virus, a type of hantavirus, among passengers and crew of a cruise ship in the Atlantic Ocean",
+      "attribution_text": "CDC (Centers for Disease Control and Prevention) reporting on outbreak reported on May 2, 2026",
+      "attributed_to": [
+        "CDC",
+        "WHO"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "CDC situation summary explicitly cites WHO and references outbreak reported May 2, 2026 \u2014 aligns with WHO DON600 updated details published same day"
+        },
+        {
+          "id": "7c653540cf",
+          "flow_type": "cites",
+          "evidence": "CDC draws from WHO DON599 original notification chain"
+        }
+      ],
+      "children": [
+        "d2c95c9778",
+        "05877236a6"
+      ],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "3afbdaf3cc",
+      "url": "https://www.cdc.gov/hantavirus/data-research/cases/index.html",
+      "title": "Reported Cases of Hantavirus Disease | Hantavirus | CDC",
+      "outlet": "cdc.gov",
+      "author": "",
+      "published_date": "2026-04-23",
+      "tier": "primary",
+      "exact_phrasing": "As of the end of 2023, 890 cases of hantavirus disease were reported in the United States since surveillance began in 1993. These were all laboratory-confirmed cases and included HPS and non-pulmonary hantavirus infection.",
+      "attribution_text": "Data is reported through the Nationally Notifiable Disease Surveillance System (NNDSS) and collected by CDC's Viral Special Pathogens Branch",
+      "attributed_to": [
+        "CDC",
+        "National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+        "Nationally Notifiable Disease Surveillance System (NNDSS)"
+      ],
+      "confidence": 0.75,
+      "is_origin": true,
+      "parents": [],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "2724b453bd",
+      "url": "https://www.cnn.com/2026/05/08/health/hantavirus-by-the-numbers",
+      "title": "What the numbers tell us about hantavirus | CNN",
+      "outlet": "cnn.com",
+      "author": "Jen Christensen",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "Health authorities across several countries are racing to trace and contain an outbreak of hantavirus after the World Health Organization said that five confirmed infections had been identified among people connected to the cruise ship MV Hondius.",
+      "attribution_text": "the World Health Organization said that five confirmed infections had been identified",
+      "attributed_to": [
+        "World Health Organization",
+        "WHO"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "CNN explicitly attributes confirmed infection count to WHO, consistent with DON600 figures released same day"
+        },
+        {
+          "id": "cea984eb90",
+          "flow_type": "cites",
+          "evidence": "References WHO Director-General briefing details about MV Hondius"
+        }
+      ],
+      "children": [],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "d2c95c9778",
+      "url": "https://www.cdc.gov/han/php/notices/han00528.html",
+      "title": "2026 Multi-country Hantavirus Cluster Linked to Cruise Ship | HAN | CDC",
+      "outlet": "cdc.gov",
+      "author": "",
+      "published_date": "2026-05-08",
+      "tier": "primary",
+      "exact_phrasing": "The Centers for Disease Control and Prevention (CDC) is issuing this Health Alert Network (HAN) Health Advisory to inform clinicians and health departments about a new cluster of hantavirus disease cases caused by infection with Andes virus. As of May 8, 2026, WHO has reported eight cases (six confirmed and two suspected), including three deaths. Investigations are ongoing to assess exposure risk.",
+      "attribution_text": "The World Health Organization (WHO) was notified of a cluster on May 2, 2026, and WHO confirmed the outbreak details",
+      "attributed_to": [
+        "Centers for Disease Control and Prevention (CDC)",
+        "World Health Organization (WHO)"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "CDC HAN advisory explicitly cites WHO notification of May 2 and WHO's reported case counts as of May 8, matching DON600"
+        },
+        {
+          "id": "48780a620a",
+          "flow_type": "cites",
+          "evidence": "CDC HAN and CDC situation summary are coordinated primary-tier documents from the same agency published same day"
+        }
+      ],
+      "children": [],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "05877236a6",
+      "url": "https://abcnews.com/International/live-updates/hantavirus-live-updates-mv-hondius-canary-islands/?id=132746955",
+      "title": "Hantavirus live updates: Spanish authorities preparing for the arrival of M/V Hondius - ABC News",
+      "outlet": "abcnews.com",
+      "author": "Christopher Watson, Ivan Pereira, Jon Haworth, Mary Kekatos, Nadine El-Bawab",
+      "published_date": "2026-05-09",
+      "tier": "secondary",
+      "exact_phrasing": "Global health authorities are working to contain an outbreak of hantavirus aboard the MV Hondius cruise ship. The total number of confirmed cases associated with the outbreak is increasing, health officials said... Health officials in multiple states say they're monitoring some passengers who have returned to the U.S. after being aboard the ship for potential hantavirus infections.",
+      "attribution_text": "health officials said; Health officials in multiple states; World Health Organization is monitoring their health; CDC officials",
+      "attributed_to": [
+        "health officials",
+        "World Health Organization",
+        "CDC",
+        "health officials in multiple states"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "ABC News live updates cite WHO and CDC officials, reference increasing confirmed cases consistent with DON600 and CDC HAN timeline"
+        },
+        {
+          "id": "48780a620a",
+          "flow_type": "cites",
+          "evidence": "References CDC officials and state-level monitoring consistent with CDC situation summary"
+        }
+      ],
+      "children": [
+        "753bcb3be5"
+      ],
+      "on_main_thread": true
+    },
+    {
+      "node_id": "763a7eb2b1",
+      "url": "https://www.npr.org/2026/05/07/nx-s1-5814761/hantavirus-likely-not-the-next-covid",
+      "title": "Is hantavirus the next COVID? Is the U.S. response on point? An outbreak update",
+      "outlet": "npr.org",
+      "author": "Gabrielle Emanuel",
+      "published_date": "2026-05-07",
+      "tier": "secondary",
+      "exact_phrasing": "Public health authorities around the world are working to contain a hantavirus outbreak that started on a cruise ship in early April and has already claimed three lives.",
+      "attribution_text": "The article reports this as established fact about the ongoing outbreak, with details attributed to Dr. Jeanne Marrazzo (CEO of the Infectious Diseases Society of America) and Dr. Emily Abdoler (clinical associate professor at University of Michigan), as well as WHO officials.",
+      "attributed_to": [
+        "World Health Organization (WHO)",
+        "Dr. Jeanne Marrazzo",
+        "Dr. Emily Abdoler",
+        "Centers for Disease Control and Prevention",
+        "WHO Director-General Tedros Adhanom Ghebreyesus"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "cea984eb90",
+          "flow_type": "cites",
+          "evidence": "Cites WHO Director-General Tedros by name, references the same outbreak details reported in the WHO May 7 briefing; also draws on CDC"
+        },
+        {
+          "id": "7c653540cf",
+          "flow_type": "cites",
+          "evidence": "References WHO DON599-era details about the cruise ship outbreak origin"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "b1f26c1a0b",
+      "url": "https://globalnews.ca/news/11840706/new-suspected-hantavirus-cases-experts-working-on-guidance/",
+      "title": "New suspected hantavirus cases found as experts issue containment guidance - National | Globalnews.ca",
+      "outlet": "globalnews.ca",
+      "author": "Katie Scott",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "Two suspected cases of hantavirus were reported on Friday, with one in Spain and the other on the remote South Atlantic island of Tristan da Cunha, according to officials.",
+      "attribution_text": "according to officials",
+      "attributed_to": [
+        "Spanish Health Ministry",
+        "World Health Organization",
+        "British government official"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "Global News attributes new suspected cases to officials, consistent with WHO DON600 and downstream WHO/government communications on May 8"
+        },
+        {
+          "id": "cea984eb90",
+          "flow_type": "cites",
+          "evidence": "References WHO Director-General briefing context for the outbreak"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "a9b7a65b94",
+      "url": "https://www.ctvnews.ca/health/article/canadian-health-officials-give-update-on-hantavirus-live-updates-here/",
+      "title": "Hantavirus news Canada: World watches cruise ship passengers",
+      "outlet": "ctvnews.ca",
+      "author": "CTVNews.ca Staff",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "10 Canadians connected to hantavirus outbreak on cruise ship",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.6,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "amplifies",
+          "evidence": "CTV News live updates on Canadian connections to the outbreak, same news cycle as WHO DON600 and CDC HAN on May 8"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "31c52529bc",
+      "url": "https://www.nbcnews.com/health/health-news/flight-attendant-tests-negative-hantavirus-new-case-suspected-remote-i-rcna344191",
+      "title": "17 American passengers aboard hantavirus-hit cruise ship will quarantine in Nebraska",
+      "outlet": "nbcnews.com",
+      "author": "Erika Edwards, Aria Bendix, Patrick Smith, Alicia Victoria Lozano",
+      "published_date": "2026-05-08",
+      "tier": "secondary",
+      "exact_phrasing": "Six cases of the Andes hantavirus have been confirmed and two cases are probable, the World Health Organization said Friday. Two people with confirmed cases and one person with a probable case have died, it said, as countries around the world seek to trace and monitor passengers who left the Hondius at points along its voyage.",
+      "attribution_text": "the World Health Organization said Friday",
+      "attributed_to": [
+        "World Health Organization",
+        "WHO"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "NBC News explicitly attributes confirmed and probable case counts to WHO, consistent with DON600 figures"
+        },
+        {
+          "id": "cea984eb90",
+          "flow_type": "cites",
+          "evidence": "References three deaths and monitoring of Hondius passengers consistent with WHO May 7 briefing"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "09ea9868f7",
+      "url": "https://bsky.app/profile/briantylercohen.bsky.social/post/3mlbgtinaq52e",
+      "title": "@briantylercohen.bsky.social: Unearthed reports reveal that RFK Jr. fired every full-time ",
+      "outlet": "bsky.app",
+      "author": "briantylercohen.bsky.social",
+      "published_date": "2026-05-07T14:35:59.307Z",
+      "tier": "social",
+      "exact_phrasing": "Unearthed reports reveal that RFK Jr. fired every full-time CDC cruise ship sanitation inspector ahead of the Hantavirus cruise ship outbreak.\n\nwww.cbsnews.com/news/cdc-cru...",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "cea984eb90",
+          "flow_type": "amplifies",
+          "evidence": "Social post linking to CBS News about RFK Jr. firing CDC cruise ship inspectors, directly referencing the hantavirus cruise ship outbreak that was the subject of the WHO May 7 briefing"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "d494b23c1f",
+      "url": "https://bsky.app/profile/angrystaffer.bsky.social/post/3mla2sw2vus2r",
+      "title": "@angrystaffer.bsky.social: People are already peddling ivermectin for Hantavirus. \n\nThe",
+      "outlet": "bsky.app",
+      "author": "angrystaffer.bsky.social",
+      "published_date": "2026-05-07T01:28:15.240Z",
+      "tier": "social",
+      "exact_phrasing": "People are already peddling ivermectin for Hantavirus. \n\nThe same people had never heard of Hantavirus 3 days ago. \n\nWe live in the dumbest possible timeline.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "amplifies",
+          "evidence": "Social post referencing ivermectin peddling for hantavirus, appearing 3 days after WHO's initial DON599 report triggered public awareness; no direct attribution but timing matches news cycle"
+        }
+      ],
+      "children": [
+        "4dac7dfc9d",
+        "2ed4690321"
+      ],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "9adea4afdf",
+      "url": "https://bsky.app/profile/bullet1982.bsky.social/post/3mle7ksr3ys2d",
+      "title": "@bullet1982.bsky.social: Don't let the recent set backs in VA and TN convince you you",
+      "outlet": "bsky.app",
+      "author": "bullet1982.bsky.social",
+      "published_date": "2026-05-08T17:03:51.000Z",
+      "tier": "social",
+      "exact_phrasing": "Don't let the recent set backs in VA and TN convince you your vote doesn't count.\n\nRegister yourself and others.\n\nLearn your ballot.\n\nTake others to the polls.\n\nBecome a poll judge.\n\nDo it NOW.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7b817a193e",
+          "flow_type": "amplifies",
+          "evidence": "Social post about voting published during hantavirus news cycle on May 8 but content is unrelated to hantavirus claim; only tangentially in same timeframe"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "8b40c4ba2a",
+      "url": "https://bsky.app/profile/jerasikehorn.bsky.social/post/3mlckg7lcs22g",
+      "title": "@jerasikehorn.bsky.social: BREAKING: Trump on Hantavirus: \u201cIt's very much, we hope, und",
+      "outlet": "bsky.app",
+      "author": "jerasikehorn.bsky.social",
+      "published_date": "2026-05-08T01:12:48.353Z",
+      "tier": "social",
+      "exact_phrasing": "BREAKING: Trump on Hantavirus: \u201cIt's very much, we hope, under control. It should be fine\u201d\u2026\n\nSounds eerily familiar, doesn\u2019t it?!",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "cea984eb90",
+          "flow_type": "amplifies",
+          "evidence": "Social post reacting to Trump quote about hantavirus being 'under control', appearing after May 7 WHO briefing put hantavirus in news cycle"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "22316164f1",
+      "url": "https://bsky.app/profile/meidastouch.com/post/3mlb3ae4xb225",
+      "title": "@meidastouch.com: A A KLM Royal Dutch Airlines flight attendant has been hospi",
+      "outlet": "bsky.app",
+      "author": "meidastouch.com",
+      "published_date": "2026-05-07T11:08:25.933Z",
+      "tier": "social",
+      "exact_phrasing": "A A KLM Royal Dutch Airlines flight attendant has been hospitalized in the Netherlands with a suspected hantavirus infection after reportedly coming into contact with a woman who later died from the deadly Andes strain of the virus, per Dutch health authorities.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "cea984eb90",
+          "flow_type": "amplifies",
+          "evidence": "Social post about KLM flight attendant hospitalized with suspected hantavirus, published same day as WHO May 7 briefing and likely drawing from downstream news reports of the same event"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "4dac7dfc9d",
+      "url": "https://bsky.app/profile/covie93.bsky.social/post/3mlbfvq2vmc2n",
+      "title": "@covie93.bsky.social: Everybody stay calm, the top virologists, medical research s",
+      "outlet": "bsky.app",
+      "author": "covie93.bsky.social",
+      "published_date": "2026-05-07T14:19:20.506Z",
+      "tier": "social",
+      "exact_phrasing": "Everybody stay calm, the top virologists, medical research scientists, clinical researchers and clinical pharmacologists on Twitter have been working around the clock for two minutes and already discovered that Ivermectin cures the hantavirus.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "d494b23c1f",
+          "flow_type": "amplifies",
+          "evidence": "Satirical post about ivermectin and hantavirus, same theme as d494b23c1f, published shortly after on same day; reflects the same social media discourse"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "2ed4690321",
+      "url": "https://bsky.app/profile/forbes.com/post/3mlbwyib6c62t",
+      "title": "@forbes.com: Claims that ivermectin could be used to treat hantavirus hav",
+      "outlet": "bsky.app",
+      "author": "forbes.com",
+      "published_date": "2026-05-07T19:25:06Z",
+      "tier": "social",
+      "exact_phrasing": "Claims that ivermectin could be used to treat hantavirus have been greatly exaggerated. ",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "d494b23c1f",
+          "flow_type": "rebuts",
+          "evidence": "Forbes Bluesky post explicitly rebutting ivermectin claims for hantavirus, responding to the same social media discourse as d494b23c1f and 4dac7dfc9d"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "6e1a16dedb",
+      "url": "https://bsky.app/profile/meidastouch.com/post/3mlgnorw5p22s",
+      "title": "@meidastouch.com: Trump\u2019s recent appearances continue to raise serious questio",
+      "outlet": "bsky.app",
+      "author": "meidastouch.com",
+      "published_date": "2026-05-09T16:21:56.196Z",
+      "tier": "social",
+      "exact_phrasing": "Trump\u2019s recent appearances continue to raise serious questions.\n\nDifficulty walking in a straight line. Visible hand discoloration. Erratic speech. Missed basic putts despite spending all that time on the golf course.\n\nThe pattern is getting harder to ignore.",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "753bcb3be5",
+          "flow_type": "amplifies",
+          "evidence": "Social post published same day as Washington Post article, in the same news cycle; content is unrelated to hantavirus (Trump appearance) but published during hantavirus saturation period"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "8295c392a7",
+      "url": "https://bsky.app/profile/skellybeanz.art/post/3ml2zvs2ls22b",
+      "title": "@skellybeanz.art: Skelly meets his new neighbor... (based on recent Tomodachi ",
+      "outlet": "bsky.app",
+      "author": "skellybeanz.art",
+      "published_date": "2026-05-05T01:28:39.254Z",
+      "tier": "social",
+      "exact_phrasing": "Skelly meets his new neighbor... (based on recent Tomodachi events)",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "amplifies",
+          "evidence": "Published day after WHO DON599; references 'recent Tomodachi events' suggesting awareness of news cycle but content is tangential/creative, not directly about hantavirus claim"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "9bff3dd1ea",
+      "url": "https://bsky.app/profile/mhuyo.bsky.social/post/3ml4jyxkgvc2p",
+      "title": "@mhuyo.bsky.social: recent twitter experience (get me out please)",
+      "outlet": "bsky.app",
+      "author": "mhuyo.bsky.social",
+      "published_date": "2026-05-05T15:49:25.296Z",
+      "tier": "social",
+      "exact_phrasing": "recent twitter experience (get me out please)",
+      "attribution_text": "",
+      "attributed_to": [],
+      "confidence": 0.8,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "7c653540cf",
+          "flow_type": "amplifies",
+          "evidence": "Published after WHO report; references 'recent twitter experience' suggesting reaction to social media hantavirus discussion but content is not directly about the claim"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "753bcb3be5",
+      "url": "https://www.washingtonpost.com/world/2026/05/09/hantavirus-cruise-ship-hondius-spain/ed629c52-4b96-11f1-a119-857cd2bf4fd4_story.html",
+      "title": "WHO head seeks to reassure Tenerife residents ahead of arrival of hantavirus cruise ship - The Washington Post",
+      "outlet": "washingtonpost.com",
+      "author": "Iain Sullivan and Elena Becatoros",
+      "published_date": "2026-05-09",
+      "tier": "amplifier",
+      "exact_phrasing": "The head of the World Health Organization sought Saturday to reassure residents of the Spanish island where passengers of a hantavirus-stricken cruise ship are expected to be evacuated",
+      "attribution_text": "The head of the World Health Organization",
+      "attributed_to": [
+        "World Health Organization"
+      ],
+      "confidence": 0.75,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "05877236a6",
+          "flow_type": "amplifies",
+          "evidence": "Washington Post May 9 story references WHO head reassuring Spanish island residents about evacuating cruise ship passengers, building on the same evolving outbreak narrative"
+        },
+        {
+          "id": "7b817a193e",
+          "flow_type": "cites",
+          "evidence": "Attributes WHO monitoring and risk assessment language consistent with DON600"
+        }
+      ],
+      "children": [
+        "6e1a16dedb"
+      ],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "fdfc9c6573",
+      "url": "https://thehill.com/video/this-is-not-covid-world-health-organization-epidemiologist-on-cruise-ship-hantavirus-outbreak/11774972/",
+      "title": "'This is not COVID': World Health Organization epidemiologist on cruise ship hantavirus outbreak",
+      "outlet": "thehill.com",
+      "author": "World Health Organization",
+      "published_date": "2026-05-08",
+      "tier": "amplifier",
+      "exact_phrasing": "A cruise ship hit by a deadly outbreak of hantavirus received medical intervention this week while pausing offshore at Cape Verde... The World Health Organization (WHO), which is helping to coordinate a response to the infectious disease on and off the ship... Officials described the nature of the virus and actions being taken to provide care and safety for those onboard the vessel, as well as efforts to contain and track possible spread beyond those already diagnosed.",
+      "attribution_text": "The World Health Organization (WHO) called a briefing Thursday, May 7, where officials described actions being taken and efforts to contain and track possible spread",
+      "attributed_to": [
+        "World Health Organization",
+        "Tedros Adhanom Ghebreyesus",
+        "Maria Van Kerkhove"
+      ],
+      "confidence": 0.95,
+      "is_origin": false,
+      "parents": [
+        {
+          "id": "cea984eb90",
+          "flow_type": "cites",
+          "evidence": "The Hill explicitly cites WHO briefing of Thursday May 7, quoting Tedros and Maria Van Kerkhove, directly sourced from that WHO briefing event"
+        }
+      ],
+      "children": [],
+      "on_main_thread": false
+    },
+    {
+      "node_id": "7c653540cf",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "outlet": "who.int",
+      "author": "WHO",
+      "published_date": "2026-05-04",
+      "tier": "amplifier",
+      "exact_phrasing": "a cluster of passengers with severe respiratory illness aboard a cruise ship was reported to the World Health Organization... seven cases (two laboratory confirmed cases of hantavirus and five suspected cases) have been identified... WHO currently assesses the risk to the global population from this event as low and will continue to monitor the epidemiological situation and update the risk assessment",
+      "attribution_text": "WHO received notification from the National International Health Regulations (2005) (IHR) Focal Point of the United Kingdom; laboratory testing conducted in South Africa confirmed hantavirus infection",
+      "attributed_to": [
+        "World Health Organization (WHO)",
+        "National International Health Regulations Focal Point of the United Kingdom",
+        "South Africa laboratory"
+      ],
+      "confidence": 0.95,
+      "is_origin": true,
+      "parents": [],
+      "children": [
+        "7b817a193e",
+        "cea984eb90",
+        "48780a620a",
+        "763a7eb2b1",
+        "d494b23c1f",
+        "8295c392a7",
+        "9bff3dd1ea"
+      ],
+      "on_main_thread": true
+    }
+  ],
+  "main_thread": [
+    "7c653540cf",
+    "cea984eb90",
+    "7b817a193e",
+    "d2c95c9778",
+    "2724b453bd",
+    "05877236a6"
+  ],
+  "origins": [
+    "3afbdaf3cc",
+    "7c653540cf"
+  ],
+  "traced_at": "2026-05-09T20:58:08.609137+00:00",
+  "depth": "standard",
+  "days_back": 30,
+  "cost_usd": 0.112227,
+  "stats": {
+    "total_nodes": 24,
+    "origins": 2,
+    "main_thread_length": 6,
+    "by_tier": {
+      "primary": 3,
+      "social": 10,
+      "secondary": 8,
+      "amplifier": 3
+    }
+  }
+}

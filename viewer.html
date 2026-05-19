@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tributary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf8f3;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f1ea;
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-muted: #999;
+  --rule: #1a1a1a;
+  --rule-soft: #e2ddd2;
+
+  --c-shared: #2a5d4f;
+  --c-shared-bg: #e6efe8;
+  --c-unverified: #a07434;
+  --c-unverified-bg: #f4ead4;
+
+  --view-1: #c2410c;
+  --view-2: #1d4ed8;
+  --view-3: #166534;
+  --view-4: #7e22ce;
+  --view-5: #b91c1c;
+  --view-6: #0f766e;
+  --view-7: #a16207;
+  --view-8: #475569;
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+
+/* === Loader === */
+
+.loader {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--ink-muted);
+}
+
+.loader h1 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.loader p { margin-bottom: 24px; max-width: 420px; margin-left: auto; margin-right: auto; }
+
+.loader input[type="file"] {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 14px;
+  border: 1px dashed var(--rule-soft);
+  background: var(--bg-card);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === Top bar === */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.topbar .meta {
+  font-family: var(--mono);
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+/* === Headline block === */
+
+.headline-block {
+  margin-bottom: 32px;
+}
+
+.headline-block h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.headline-block .original {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.headline-block .original::before {
+  content: "Originally framed: ";
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-right: 4px;
+}
+
+/* === At-a-glance grid: facts + views side by side === */
+
+.glance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 720px) {
+  .glance { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  padding: 16px 18px;
+}
+
+.panel-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-label .num {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* === Shared facts panel === */
+
+.facts-panel ul {
+  list-style: none;
+}
+
+.facts-panel li {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 6px 0;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.facts-panel li .dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 7px;
+}
+
+.facts-panel li.verified .dot { background: var(--c-shared); }
+.facts-panel li.unverified .dot { background: var(--c-unverified); }
+
+.facts-panel li .text { flex: 1; color: var(--ink); }
+
+.facts-legend {
+  display: flex;
+  gap: 14px;
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.facts-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.facts-legend .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.facts-legend .verified-dot { background: var(--c-shared); }
+.facts-legend .unverified-dot { background: var(--c-unverified); }
+
+/* === Views panel — pill chips === */
+
+.views-panel .views-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.view-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--view-bg, var(--bg-soft));
+  color: var(--view-color, var(--ink));
+  border: 1px solid var(--view-color, var(--rule-soft));
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.view-chip:hover, .view-chip.active {
+  background: var(--view-color, var(--ink));
+  color: white;
+}
+
+.view-chip .chip-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.view-detail {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--bg-soft);
+  border-radius: 4px;
+  border-left: 3px solid var(--view-color, var(--ink));
+  display: none;
+}
+
+.view-detail.active { display: block; }
+
+.view-detail .vd-question {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.view-detail .vd-claim {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.view-detail .vd-sources {
+  font-size: 11px;
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.view-detail .vd-sources a {
+  color: var(--view-color, var(--ink-soft));
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  padding-bottom: 1px;
+}
+
+/* === Disagreement strip === */
+
+.disagree-strip {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.disagree-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 13px;
+  align-items: start;
+}
+
+.disagree-row:first-of-type { border-top: none; }
+
+.disagree-topic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.disagree-positions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.disagree-position {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  align-items: baseline;
+}
+
+.disagree-position .vname-mini {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+}
+
+.disagree-position .vpos-text {
+  flex: 1;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .disagree-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* === Provenance: collapsed accordion === */
+
+.provenance-section {
+  margin-top: 24px;
+}
+
+details.acc {
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+details.acc summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+details.acc summary::-webkit-details-marker { display: none; }
+
+details.acc summary::after {
+  content: "+";
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--ink-muted);
+  transition: transform 0.2s;
+}
+
+details.acc[open] summary::after {
+  transform: rotate(45deg);
+}
+
+details.acc summary .preview {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-left: 12px;
+  flex: 1;
+}
+
+.acc-content {
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.acc-content > *:first-child { margin-top: 14px; }
+
+/* Mutations content */
+
+.mut-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 14px;
+}
+
+.mut-meta strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.mut-summary {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-soft);
+  padding: 10px 12px;
+  background: var(--bg-soft);
+  border-left: 2px solid var(--rule-soft);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.transition-row {
+  font-size: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.transition-route {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.transition-route .arrow { color: var(--ink); }
+
+.transition-changes {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 4px 10px;
+  font-size: 12px;
+}
+
+.transition-changes dt {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-top: 1px;
+}
+
+.transition-changes dd { color: var(--ink-soft); line-height: 1.4; }
+
+.transition-changes dt.kept { color: var(--c-shared); }
+.transition-changes dt.dropped { color: var(--c-unverified); }
+.transition-changes dt.added { color: var(--view-2); }
+.transition-changes dt.distorted { color: var(--view-1); }
+
+/* Omissions */
+
+.omission-group {
+  padding: 10px 0;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.omission-group:first-of-type { border-top: none; }
+
+.omission-group h4 {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.omission-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.omission-list li {
+  padding: 4px 0 4px 14px;
+  position: relative;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.omission-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--ink-muted);
+}
+
+/* === Stats footer === */
+
+.footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer .stats-row {
+  display: flex;
+  gap: 18px;
+}
+
+.footer .stat {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+}
+
+.footer .stat-num {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.footer .source-link a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Stagger entry */
+.headline-block, .glance, .disagree-strip, .provenance-section, .footer {
+  animation: fadeIn 0.4s ease-out backwards;
+}
+.glance { animation-delay: 0.05s; }
+.disagree-strip { animation-delay: 0.1s; }
+.provenance-section { animation-delay: 0.15s; }
+.footer { animation-delay: 0.2s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="app">
+  <div class="loader">
+    <h1>Tributary</h1>
+    <p>Where information comes from, and what others see when they look at the same event.</p>
+    <input type="file" id="file-input" accept=".json">
+  </div>
+</div>
+
+<script>
+const fileInput = document.getElementById('file-input');
+const app = document.getElementById('app');
+
+fileInput.addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    render(JSON.parse(text));
+  } catch (err) {
+    app.innerHTML = `<div class="loader"><p>Failed to load: ${err.message}</p></div>`;
+  }
+});
+
+const VIEW_COLORS = [
+  { color: 'var(--view-1)', bg: '#fde8d4' },
+  { color: 'var(--view-2)', bg: '#dde7fb' },
+  { color: 'var(--view-3)', bg: '#d8ebde' },
+  { color: 'var(--view-4)', bg: '#ecdcf6' },
+  { color: 'var(--view-5)', bg: '#fadcdc' },
+  { color: 'var(--view-6)', bg: '#d4ebe8' },
+  { color: 'var(--view-7)', bg: '#f5e7c4' },
+  { color: 'var(--view-8)', bg: '#dde2e8' },
+];
+
+function escape(s) {
+  if (s === null || s === undefined) return '';
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function fmtDate(s) {
+  if (!s) return '';
+  try {
+    const d = new Date(s);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  } catch { return s; }
+}
+
+function getDomain(url) {
+  if (!url) return '';
+  try { return new URL(url).hostname.replace(/^www\./, ''); }
+  catch { return url.slice(0, 30); }
+}
+
+function render(data) {
+  const original = data.topic || '';
+  const neutral = data.neutral_statement || data.neutral_topic || original;
+  const eventId = data.event_id || '';
+  const created = data.created_at || data.last_updated || '';
+
+  const sf = data.shared_foundation || {};
+  const verified = sf.verified_facts || [];
+  const unverified = sf.unverified_facts || [];
+  const disagreements = sf.points_of_disagreement || [];
+
+  const views = data.views || [];
+  const mutations = data.mutations || {};
+  const transitions = mutations.transitions || [];
+  const overall = mutations.overall || {};
+  const omissions = data.omissions || data.omissions_by_view || [];
+  const primarySource = data.primary_source || {};
+  const stats = data.stats || {};
+
+  let html = `
+    <div class="topbar">
+      <span>Tributary Analysis</span>
+      <span class="meta">${eventId ? escape(eventId) + ' · ' : ''}${escape(fmtDate(created))}</span>
+    </div>
+
+    <div class="headline-block">
+      <h1>${escape(neutral)}</h1>
+      ${original && original !== neutral ? `<div class="original">"${escape(original)}"</div>` : ''}
+    </div>
+  `;
+
+  // === Glance grid: facts + views ===
+  html += `<div class="glance">`;
+
+  // Facts panel
+  if (verified.length || unverified.length) {
+    html += `<div class="panel facts-panel">
+      <div class="panel-label">
+        <span>Shared Foundation</span>
+        <span class="num">${verified.length} verified · ${unverified.length} reported</span>
+      </div>
+      <ul>`;
+
+    verified.forEach(f => {
+      html += `<li class="verified"><span class="dot"></span><span class="text">${escape(f.fact || '')}</span></li>`;
+    });
+    unverified.forEach(f => {
+      html += `<li class="unverified"><span class="dot"></span><span class="text">${escape(f.fact || '')}</span></li>`;
+    });
+
+    html += `</ul>
+      <div class="facts-legend">
+        <span><span class="dot verified-dot"></span>In primary source</span>
+        <span><span class="dot unverified-dot"></span>Agreed but unverified</span>
+      </div>
+    </div>`;
+  }
+
+  // Views panel — chips with click-to-expand detail
+  if (views.length) {
+    html += `<div class="panel views-panel">
+      <div class="panel-label">
+        <span>Different Questions Asked</span>
+        <span class="num">${views.length}</span>
+      </div>
+      <div class="views-chips">`;
+
+    views.forEach((v, i) => {
+      const c = VIEW_COLORS[i % VIEW_COLORS.length];
+      const name = v.name || v.view_name || v.lens_name || `View ${i+1}`;
+      const sourceCount = (v.sources || []).length;
+      html += `<button class="view-chip" data-view-idx="${i}"
+        style="--view-color: ${c.color}; --view-bg: ${c.bg};">
+        ${escape(name)}
+        ${sourceCount > 0 ? `<span class="chip-num">${sourceCount}</span>` : ''}
+      </button>`;
+    });
+
+    html += `</div>`;
+
+    // Detail panel (one shown at a time, hidden by default)
+    views.forEach((v, i) => {
+      const c = VIEW_COLORS[i % VIEW_COLORS.length];
+      const question = v.question || '';
+      const keyClaim = v.key_claim || v.description || '';
+      const sources = v.sources || [];
+
+      html += `<div class="view-detail" id="vd-${i}" style="--view-color: ${c.color};">
+        ${question ? `<div class="vd-question">"${escape(question)}"</div>` : ''}
+        ${keyClaim ? `<div class="vd-claim">${escape(keyClaim)}</div>` : ''}`;
+
+      if (sources.length) {
+        html += `<div class="vd-sources">`;
+        sources.slice(0, 8).forEach(s => {
+          if (s.url) {
+            html += `<a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(getDomain(s.url))}</a>`;
+          }
+        });
+        if (sources.length > 8) html += `<span>+${sources.length - 8}</span>`;
+        html += `</div>`;
+      }
+
+      html += `</div>`;
+    });
+
+    html += `</div>`;
+  }
+
+  html += `</div>`;  // close glance
+
+  // === Disagreements strip ===
+  if (disagreements.length) {
+    html += `<div class="disagree-strip">
+      <div class="panel-label" style="padding: 16px 18px 4px;">
+        <span>Where Views Diverge</span>
+        <span class="num">${disagreements.length}</span>
+      </div>`;
+
+    disagreements.forEach(d => {
+      html += `<div class="disagree-row">
+        <div class="disagree-topic">${escape(d.topic || '')}</div>
+        <div class="disagree-positions">`;
+      (d.view_positions || []).forEach(p => {
+        const viewIdx = views.findIndex(v => (v.name || v.view_name) === p.view);
+        const c = viewIdx >= 0 ? VIEW_COLORS[viewIdx % VIEW_COLORS.length] : null;
+        const style = c ? `style="background: ${c.bg}; color: ${c.color};"` : '';
+        html += `<div class="disagree-position">
+          <span class="vname-mini" ${style}>${escape(p.view || '')}</span>
+          <span class="vpos-text">${escape(p.position || '')}</span>
+        </div>`;
+      });
+      html += `</div></div>`;
+    });
+
+    html += `</div>`;
+  }
+
+  // === Provenance accordion (collapsed, optional) ===
+  if (transitions.length || omissions.length) {
+    html += `<div class="provenance-section">`;
+
+    if (transitions.length && overall) {
+      const summary = overall.summary || '';
+      const severity = overall.mutation_severity || '';
+      const pattern = overall.mutation_pattern || '';
+      const previewText = summary ? summary.slice(0, 80) + (summary.length > 80 ? '…' : '') : '';
+
+      html += `<details class="acc">
+        <summary>
+          <span>How the claim changed as it spread</span>
+          ${previewText ? `<span class="preview">${escape(previewText)}</span>` : ''}
+        </summary>
+        <div class="acc-content">
+          ${summary ? `<div class="mut-summary">"${escape(summary)}"</div>` : ''}
+          ${severity || pattern ? `<div class="mut-meta">
+            ${severity ? `<span>Severity: <strong>${escape(severity)}</strong></span>` : ''}
+            ${pattern ? `<span>Pattern: <strong>${escape(pattern)}</strong></span>` : ''}
+            <span>${transitions.length} transitions tracked</span>
+          </div>` : ''}`;
+
+      transitions.forEach(t => {
+        html += `<div class="transition-row">
+          <div class="transition-route">
+            ${escape(getDomain(t.from_source))}
+            <span class="arrow">→</span>
+            ${escape(getDomain(t.to_source))}
+          </div>
+          <dl class="transition-changes">`;
+        if (t.preserved) html += `<dt class="kept">Kept</dt><dd>${escape(t.preserved)}</dd>`;
+        if (t.dropped) html += `<dt class="dropped">Dropped</dt><dd>${escape(t.dropped)}</dd>`;
+        if (t.added) html += `<dt class="added">Added</dt><dd>${escape(t.added)}</dd>`;
+        if (t.distorted) html += `<dt class="distorted">Distorted</dt><dd>${escape(t.distorted)}</dd>`;
+        html += `</dl></div>`;
+      });
+
+      html += `</div></details>`;
+    }
+
+    if (omissions.length) {
+      const omissionsByView = {};
+      omissions.forEach(o => {
+        const v = o.view_name || 'Unknown';
+        if (!omissionsByView[v]) omissionsByView[v] = [];
+        omissionsByView[v].push(o);
+      });
+
+      const totalOmissions = omissions.length;
+
+      html += `<details class="acc">
+        <summary>
+          <span>What each view leaves out</span>
+          <span class="preview">${totalOmissions} omissions across ${Object.keys(omissionsByView).length} views</span>
+        </summary>
+        <div class="acc-content">`;
+
+      Object.entries(omissionsByView).forEach(([viewName, list]) => {
+        const viewIdx = views.findIndex(v => (v.name || v.view_name) === viewName);
+        const c = viewIdx >= 0 ? VIEW_COLORS[viewIdx % VIEW_COLORS.length] : null;
+        const colorStyle = c ? `style="color: ${c.color};"` : '';
+
+        html += `<div class="omission-group">
+          <h4 ${colorStyle}>${escape(viewName)} <span style="font-weight: 400; color: var(--ink-muted); text-transform: none; letter-spacing: 0;">(${list.length})</span></h4>
+          <ul class="omission-list">`;
+        list.slice(0, 6).forEach(o => {
+          if (o.what_is_missing) {
+            html += `<li>${escape(o.what_is_missing)}</li>`;
+          }
+        });
+        if (list.length > 6) html += `<li style="color: var(--ink-muted);">+${list.length - 6} more</li>`;
+        html += `</ul></div>`;
+      });
+
+      html += `</div></details>`;
+    }
+
+    html += `</div>`;
+  }
+
+  // === Footer ===
+  const sourceCount = stats.sources || (data.sources || []).length || 0;
+  const flowCount = stats.flows || (data.flows || []).length || 0;
+
+  html += `<div class="footer">
+    <div class="stats-row">
+      <span class="stat"><span class="stat-num">${views.length}</span> views</span>
+      <span class="stat"><span class="stat-num">${sourceCount}</span> sources</span>
+      <span class="stat"><span class="stat-num">${flowCount}</span> flows</span>
+      <span class="stat"><span class="stat-num">${transitions.length}</span> mutations</span>
+    </div>
+    ${primarySource && primarySource.url ? `<div class="source-link">
+      Primary: <a href="${escape(primarySource.url)}" target="_blank" rel="noopener">${escape(primarySource.title || getDomain(primarySource.url))}</a>
+    </div>` : ''}
+  </div>`;
+
+  app.innerHTML = html;
+
+  // Wire up view chip interactions
+  document.querySelectorAll('.view-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const idx = chip.dataset.viewIdx;
+      const wasActive = chip.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.view-chip').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.view-detail').forEach(d => d.classList.remove('active'));
+
+      // Open this one if it wasn't already
+      if (!wasActive) {
+        chip.classList.add('active');
+        document.getElementById(`vd-${idx}`).classList.add('active');
+      }
+    });
+  });
+}
+
+// Allow ?file=path to load directly via URL
+const params = new URLSearchParams(window.location.search);
+const fileParam = params.get('file');
+if (fileParam && /^[\w./\-]+$/.test(fileParam)) {
+  fetch(fileParam)
+    .then(r => r.json())
+    .then(render)
+    .catch(err => console.error('Failed to load file param:', err));
+}
+</script>
+
+</body>
+</html>
