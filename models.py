@@ -517,34 +517,61 @@ class AttestedInstance:
 
 
 @dataclass
-class GenealogyLayer:
-    """L4 — when/where the narrative has been seen, and what predates what."""
+class LineageRecord:
+    """One lineage's worth of dating, attestation, and adversarial verification.
+    GenealogyLayer carries two: lexical (where the phrasing comes from) and
+    conceptual (where the underlying structural claim comes from)."""
+    lineage_type: str = ""              # "lexical" or "conceptual"
     status: GenealogyStatus = GenealogyStatus.UNKNOWN
     first_attested_date: str = ""
     first_attested_source: str = ""
     attestation_confidence: float = 0.0
     primary_origin_id: str = ""
     parallel_origin_ids: list[str] = field(default_factory=list)
-    predecessor_fingerprint_ids: list[str] = field(default_factory=list)
-    successor_fingerprint_ids: list[str] = field(default_factory=list)
     attestation_log: list[AttestedInstance] = field(default_factory=list)
     adversarial_check_performed: bool = False
     adversarial_notes: str = ""
-    earlier_candidates_rejected: list[dict] = field(default_factory=list)
 
     def to_dict(self):
         return {
+            "lineage_type": self.lineage_type,
             "status": self.status.value,
             "first_attested_date": self.first_attested_date,
             "first_attested_source": self.first_attested_source,
             "attestation_confidence": self.attestation_confidence,
             "primary_origin_id": self.primary_origin_id,
             "parallel_origin_ids": self.parallel_origin_ids,
-            "predecessor_fingerprint_ids": self.predecessor_fingerprint_ids,
-            "successor_fingerprint_ids": self.successor_fingerprint_ids,
             "attestation_log": [a.to_dict() for a in self.attestation_log],
             "adversarial_check_performed": self.adversarial_check_performed,
             "adversarial_notes": self.adversarial_notes,
+        }
+
+
+@dataclass
+class GenealogyLayer:
+    """L4 — when/where the narrative has been seen, across two parallel lineages.
+
+    `lexical` traces the specific phrasing (where did "rigged economy" come
+    from?). `conceptual` traces the underlying structural claim (where did the
+    idea of structural worker disadvantage come from?). The two often answer
+    very different questions: a phrase may be 15 years old but its underlying
+    claim 200 years old."""
+    lexical: LineageRecord = field(
+        default_factory=lambda: LineageRecord(lineage_type="lexical")
+    )
+    conceptual: LineageRecord = field(
+        default_factory=lambda: LineageRecord(lineage_type="conceptual")
+    )
+    predecessor_fingerprint_ids: list[str] = field(default_factory=list)
+    successor_fingerprint_ids: list[str] = field(default_factory=list)
+    earlier_candidates_rejected: list[dict] = field(default_factory=list)
+
+    def to_dict(self):
+        return {
+            "lexical": self.lexical.to_dict(),
+            "conceptual": self.conceptual.to_dict(),
+            "predecessor_fingerprint_ids": self.predecessor_fingerprint_ids,
+            "successor_fingerprint_ids": self.successor_fingerprint_ids,
             "earlier_candidates_rejected": self.earlier_candidates_rejected,
         }
 

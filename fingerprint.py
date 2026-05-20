@@ -24,7 +24,9 @@ from __future__ import annotations
 import asyncio
 import json
 import re
-from datetime import date
+import sys
+import time
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -33,9 +35,11 @@ import anthropic
 from models import (
     Attribution,
     AttestedInstance,
+    ConceptualLayer,
     GenealogyLayer,
     GenealogyStatus,
     LexicalLayer,
+    LineageRecord,
     NarrativeFingerprint,
     Scope,
 )
@@ -104,6 +108,29 @@ EARLIEST_USE_SYSTEM = """\
 You are a research assistant finding the EARLIEST documented uses of a
 specific narrative framing online. This is not a relevance search — you want
 the oldest credible appearances, not today's most authoritative analysis.
+
+LEXICAL DISCIPLINE (critical):
+
+This is a LEXICAL search. Every instance you return MUST contain at least
+one of the diagnostic n-grams provided, or a very close lexical variant
+(same content words in similar order). Conceptual or thematic ancestors
+that argue the same underlying claim in DIFFERENT vocabulary belong in a
+separate conceptual lineage search, not here.
+
+DO NOT include:
+- Instances that articulate the same idea in completely different vocabulary
+  (e.g. Debs "minnows and whales", Adam Smith "tacit combinations", Marx
+  "surplus value") — these are conceptual ancestors, not lexical attestations
+- Entries derived only from Google Ngram or similar statistical surveys
+  with no specific primary source text quoted — these aren't real
+  attestations, just word-frequency signals
+- Articles or speeches that "imply" the framing but don't use it lexically
+- Modern commentary that retroactively paraphrases an older text with the
+  diagnostic n-grams (the older text didn't use them)
+
+The test: if a reader saw your `exact_quote`, would they directly read one
+of the diagnostic n-grams (or a clear lexical synonym) in it? If not, the
+instance does not belong in this search.
 
 Search strategy:
 - Use the diagnostic phrases provided, especially in archives and older content
@@ -179,6 +206,167 @@ Output ONLY the JSON object.
 """
 
 
+CONCEPTUAL_SYSTEM = """\
+You are extracting the conceptual structure of a narrative claim — its
+vocabulary-independent meaning. This will be used to find older texts that
+argue the same structural claim in completely different words.
+
+The claim may use specific contemporary rhetoric (gambling metaphors,
+recent buzzwords, partisan shorthand). Strip that rhetoric away and identify
+the underlying claim itself.
+
+Produce JSON ONLY:
+
+{
+  "claim_predicate": "neutral logical form, e.g. 'X causes Y' or 'X disadvantages Y' or 'X is responsible for Y'",
+  "entities": {
+    "agent": "the causal actor in this framing",
+    "patient": "who or what is affected",
+    "arena": "the domain or system in which this plays out",
+    "instrument": "by what means: rules, markets, policy, biology, technology, etc."
+  },
+  "causal_structure": "a single neutral sentence: actor + action + consequence"
+}
+
+Examples:
+
+CLAIM: "the economy is rigged against working people"
+{
+  "claim_predicate": "the economic system structurally disadvantages workers relative to owners of capital",
+  "entities": {
+    "agent": "owners of capital / political and economic elites",
+    "patient": "workers / the working class",
+    "arena": "the economic system",
+    "instrument": "the design of rules, ownership, taxation, and political influence"
+  },
+  "causal_structure": "the design of economic institutions systematically transfers value from labor to capital, resulting in worker disadvantage"
+}
+
+CLAIM: "seed oils cause inflammation and chronic disease"
+{
+  "claim_predicate": "industrial seed oils cause harm to consumers' health",
+  "entities": {
+    "agent": "industrial food producers using refined seed oils",
+    "patient": "regular consumers of processed food",
+    "arena": "human health and dietary practice",
+    "instrument": "the chemical properties of refined oils and their prevalence in the food supply"
+  },
+  "causal_structure": "industrial seed oils, through their chemical properties and prevalence in food, cause inflammation and chronic disease in regular consumers"
+}
+
+Output ONLY the JSON object.
+"""
+
+
+CONCEPTUAL_ANCESTORS_SYSTEM = """\
+You are tracing the INTELLECTUAL LINEAGE of a structural claim — the full
+chain of texts and figures across history that articulate the same
+underlying claim, in any vocabulary, from the earliest origin through to
+the present day.
+
+This is NOT a search for the specific phrasing — the user has the lexical
+search separately. You are finding everyone who articulates the SAME
+structural claim using vocabulary OTHER than the diagnostic n-grams,
+across any era.
+
+Cover the FULL chronological range. Modern contributors (last 20 years)
+are AS IMPORTANT as historical ancestors. The chain should NOT
+artificially terminate in the early or mid-20th century — do not stop
+the chain at the "classical" or "founding" texts.
+
+Include these source types:
+
+- Foundational philosophy and political economy
+- Movement texts (labor, populist, socialist, religious, civil-rights,
+  anti-colonial, etc.)
+- Academic work in any era, INCLUDING very recent scholarship
+  (last 20 years is expected, last 5 years is welcome)
+- Public intellectuals and social commentators — popular authors,
+  journalists, columnists, documentarians, podcasters, YouTube and
+  Substack commentators, public lecturers, whose works articulate the
+  structural claim in their own vocabulary
+- Political figures whose books, substantive speeches, or platforms
+  articulate the claim (NOT slogan-chanting — that belongs in the
+  lexical chain)
+- Documentaries, popular nonfiction, mass-audience media
+- Translations across languages and traditions
+
+Aim to include contributors from each major era where evidence exists:
+pre-1850, 1850–1900, 1900–1945, 1945–1980, 1980–2010, 2010–2016,
+2016–2021, and 2021–present. The finer-grained recent buckets matter
+because the structural claim is rapidly re-articulated by new
+commentators and academic figures within each US political-economic
+cycle; do not collapse them into a single recent era.
+
+Popularizers are critical — they are how academic claims become public
+discourse. Do not over-weight academic texts at the expense of widely-read
+commentators, journalists, documentarians, or podcasters.
+
+For each direct contributor, report:
+  date              ISO date
+  source_url        canonical URL
+  source_title      title of the work / talk / video / book / podcast
+  author            who produced it
+  lexical_form_seen the vocabulary they actually used (their own period-
+                    or domain-appropriate language — NOT the diagnostic
+                    n-grams)
+  exact_quote       verbatim quote (or translation), ≤ 300 chars
+  confidence        0.0–1.0
+  evidence          why this is a credible direct contributor — does it
+                    articulate the same structural claim in vocabulary
+                    that DIFFERS from the diagnostic n-grams?
+
+Distinctions:
+- DIRECT contributor: articulates the same structural claim, any era,
+  in vocabulary OTHER than the diagnostic n-grams
+- ADJACENT: related but a different claim — skip
+- LEXICAL: uses the diagnostic n-grams — skip (belongs in lexical chain)
+
+Return JSON:
+
+{
+  "contributors": [...],
+  "search_notes": "what eras and source types you covered; balance of academic vs. popularizer contributors; what you ruled out"
+}
+
+Sort by date ascending. Aim for 15–25 results across the full chronological
+range from earliest available text through to the present, with at least
+2–3 contributors from each of 2010–2016, 2016–2021, and 2021–present
+where evidence exists. Modern popularizers AND contemporary academic work
+are welcome and expected — DO NOT cap the chain at the early 20th century.
+
+Output ONLY the JSON object.
+"""
+
+
+CONCEPTUAL_ADVERSARIAL_SYSTEM = """\
+You are an adversarial verifier for the intellectual lineage of a claim.
+Someone has proposed that {proposed_date} is the earliest known articulation
+of a structural claim. Your job is to find earlier texts articulating the
+same structural claim in any vocabulary.
+
+Search older intellectual traditions, foundational philosophy and political
+economy, religious and ethical traditions, and pre-modern texts. The claim
+may have been articulated in very different words centuries earlier.
+
+For each pre-{proposed_date} direct ancestor you find, report the standard
+fields and explain in evidence why this articulates the SAME structural
+claim, not merely a related idea.
+
+Return JSON:
+
+{{
+  "earlier_ancestors": [...],
+  "verification_notes": "what traditions you checked, what you ruled out, any caveats"
+}}
+
+If nothing earlier is found, return an empty list and say so plainly. A
+clean negative result is valuable.
+
+Output ONLY the JSON object.
+"""
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -192,10 +380,43 @@ def _strip_json_fences(text: str) -> str:
         if lines and lines[-1].strip().startswith("```"):
             lines = lines[:-1]
         text = "\n".join(lines).strip()
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if match:
-        return match.group(0)
     return text
+
+
+def _extract_last_json_block(text: str) -> Optional[str]:
+    """Find the last balanced top-level {...} block, brace-counting through
+    string literals correctly. More robust than greedy regex when LLM output
+    interleaves prose, search reasoning, and a JSON payload."""
+    spans = []
+    depth = 0
+    start = -1
+    in_string = False
+    escape = False
+    for i, c in enumerate(text):
+        if in_string:
+            if escape:
+                escape = False
+            elif c == "\\":
+                escape = True
+            elif c == '"':
+                in_string = False
+            continue
+        if c == '"':
+            in_string = True
+        elif c == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif c == "}":
+            if depth > 0:
+                depth -= 1
+                if depth == 0 and start != -1:
+                    spans.append((start, i + 1))
+                    start = -1
+    if not spans:
+        return None
+    s, e = spans[-1]
+    return text[s:e]
 
 
 def _parse_json_safe(text: str) -> dict:
@@ -206,7 +427,14 @@ def _parse_json_safe(text: str) -> dict:
     try:
         return json.loads(_strip_json_fences(text))
     except json.JSONDecodeError:
-        return {}
+        pass
+    block = _extract_last_json_block(text)
+    if block:
+        try:
+            return json.loads(block)
+        except json.JSONDecodeError:
+            pass
+    return {}
 
 
 def _stopword_stripped(phrase: str) -> str:
@@ -250,24 +478,97 @@ def _response_text(response) -> str:
     return "".join(out)
 
 
-async def _create_with_retry(client, max_attempts: int = 5, **kwargs):
-    """Wrap messages.create with backoff on 429 (rate-limited) and 529 (overloaded).
-    Matches the retry posture used in agent.py."""
-    delays = [30, 60, 90, 120, 150]
+def _save_debug_response(call_name: str, raw_text: str,
+                         debug_dir: str = "fingerprints/debug") -> str:
+    """Persist a raw LLM response for diagnostic inspection when something
+    looks wrong (e.g. an L4 search returned zero instances). Returns the path
+    so the warning message can point the user to it."""
+    d = Path(debug_dir)
+    d.mkdir(parents=True, exist_ok=True)
+    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    path = d / f"{ts}_{call_name}.txt"
+    path.write_text(raw_text, encoding="utf-8")
+    return str(path)
+
+
+def _log_progress(msg: str) -> None:
+    """Emit a single progress line to stderr. Used so the user can see what
+    stage the pipeline is in during the ~2 minute web-search runs."""
+    print(f"[{msg}]", file=sys.stderr, flush=True)
+
+
+def _response_diagnostics(response) -> str:
+    """Compact diagnostic about a Messages API response — used for empty-
+    result warnings so we can tell *why* the model didn't produce text.
+
+    Distinguishes capacity-related truncation (`stop_reason=max_tokens`,
+    output_tokens at the cap) from genuine empty responses (output_tokens=0,
+    no text blocks) from server-tool stalls (only tool_use/tool_result
+    blocks with no following text)."""
+    stop_reason = getattr(response, "stop_reason", None)
+    usage = getattr(response, "usage", None)
+    out_tok = getattr(usage, "output_tokens", "?") if usage else "?"
+    in_tok = getattr(usage, "input_tokens", "?") if usage else "?"
+
+    block_counts: dict = {}
+    for block in (response.content or []):
+        t = getattr(block, "type", "unknown")
+        block_counts[t] = block_counts.get(t, 0) + 1
+    blocks_str = ", ".join(f"{t}:{c}" for t, c in sorted(block_counts.items())) or "none"
+
+    return (f"stop_reason={stop_reason}, output_tokens={out_tok}, "
+            f"input_tokens={in_tok}, blocks=[{blocks_str}]")
+
+
+async def _create_with_retry(client, max_attempts: int = 5,
+                             retry_on_empty_text: bool = False, **kwargs):
+    """Wrap messages.create with backoff on transient failures.
+
+    Always retries on 429 (rate-limited) and 529 (overloaded) with extended
+    backoff. If retry_on_empty_text=True, also retries (with shorter backoff)
+    when a successful response contains no text blocks — this catches the
+    'model emitted a preamble + tool_use but never returned to write the
+    final text' failure mode that occasionally hits Sonnet+web_search calls."""
+    status_delays = [30, 60, 90, 120, 150]
+    empty_delays = [5, 10, 15, 20, 30]
+    last_response = None
     for attempt in range(max_attempts):
         try:
-            return await client.messages.create(**kwargs)
+            response = await client.messages.create(**kwargs)
         except anthropic.APIStatusError as e:
             status = getattr(e, "status_code", None)
             if status not in (429, 529) or attempt == max_attempts - 1:
                 raise
-            wait = delays[min(attempt, len(delays) - 1)]
+            wait = status_delays[min(attempt, len(status_delays) - 1)]
             print(
                 f"[anthropic {status}; retrying in {wait}s "
                 f"({attempt + 1}/{max_attempts})]",
-                flush=True,
+                file=sys.stderr, flush=True,
             )
             await asyncio.sleep(wait)
+            continue
+
+        last_response = response
+        if retry_on_empty_text and attempt < max_attempts - 1:
+            text_content = "".join(
+                getattr(b, "text", "") for b in (response.content or [])
+                if getattr(b, "type", "") == "text"
+            )
+            if not text_content.strip():
+                wait = empty_delays[min(attempt, len(empty_delays) - 1)]
+                print(
+                    f"[anthropic returned no text content after tool use; "
+                    f"retrying in {wait}s ({attempt + 1}/{max_attempts})]",
+                    file=sys.stderr, flush=True,
+                )
+                await asyncio.sleep(wait)
+                continue
+
+        return response
+    # Exhausted retries on empty text: return the last (still-empty) response
+    # so callers can log diagnostics and fail gracefully rather than raising.
+    if last_response is not None:
+        return last_response
     raise RuntimeError("retry loop exited unexpectedly")
 
 
@@ -282,6 +583,8 @@ class FingerprintGenerator:
         self.client = client or anthropic.AsyncAnthropic()
 
     async def generate_lexical(self, claim_text: str, context: str = "") -> LexicalLayer:
+        _log_progress("L1 lexical extraction starting")
+        t0 = time.monotonic()
         user_content = f"CLAIM:\n{claim_text}"
         if context:
             user_content += f"\n\nCONTEXT (where the claim appeared):\n{context}"
@@ -300,6 +603,8 @@ class FingerprintGenerator:
         variants = [v.strip() for v in (data.get("phrase_variants") or []) if v and v.strip()]
         ngrams = [n.strip() for n in (data.get("diagnostic_ngrams") or []) if n and n.strip()]
 
+        _log_progress(f"L1 lexical done in {time.monotonic() - t0:.1f}s "
+                      f"({len(variants)} variants, {len(ngrams)} n-grams)")
         return LexicalLayer(
             canonical_phrase=canonical,
             phrase_variants=variants,
@@ -310,6 +615,8 @@ class FingerprintGenerator:
     async def search_earliest_uses(
         self, lexical: LexicalLayer, scope: Scope
     ) -> list[AttestedInstance]:
+        _log_progress("L4 lexical: earliest-use search starting (web_search)")
+        t0 = time.monotonic()
         user_content = (
             f"NARRATIVE FRAMING TO TRACE:\n"
             f"  Canonical: {lexical.canonical_phrase}\n"
@@ -323,25 +630,39 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=SONNET,
-            max_tokens=4096,
+            max_tokens=8192,
             tools=[{"type": "web_search_20250305", "name": "web_search"}],
             system=[{"type": "text", "text": EARLIEST_USE_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
         )
 
-        data = _parse_json_safe(_response_text(response))
+        raw_text = _response_text(response)
+        data = _parse_json_safe(raw_text)
         instances = []
         for raw in data.get("instances", []):
             inst = _instance_from_dict(raw)
             if inst is not None:
                 instances.append(inst)
         instances.sort(key=lambda a: a.date or "9999")
+        if not instances:
+            diag = _response_diagnostics(response)
+            debug_path = _save_debug_response("earliest_use", raw_text)
+            sys.stderr.write(
+                f"[warning: lexical earliest-use search returned 0 instances "
+                f"(text: {len(raw_text)} chars, json_parsed: {bool(data)}, "
+                f"{diag}, raw saved: {debug_path})]\n"
+            )
+        _log_progress(f"L4 lexical: earliest-use done in {time.monotonic() - t0:.1f}s "
+                      f"({len(instances)} candidates)")
         return instances
 
     async def adversarial_verify(
         self, lexical: LexicalLayer, proposed_date: str, scope: Scope
     ) -> tuple[list[AttestedInstance], str]:
+        _log_progress(f"L4 lexical: adversarial verify against {proposed_date} starting")
+        t0 = time.monotonic()
         system_text = ADVERSARIAL_SYSTEM.format(proposed_date=proposed_date)
 
         user_content = (
@@ -359,11 +680,12 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=SONNET,
-            max_tokens=2048,
+            max_tokens=4096,
             tools=[{"type": "web_search_20250305", "name": "web_search"}],
             system=[{"type": "text", "text": system_text,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
         )
 
         data = _parse_json_safe(_response_text(response))
@@ -376,36 +698,159 @@ class FingerprintGenerator:
             if inst.date and inst.date < proposed_date:
                 earlier.append(inst)
         earlier.sort(key=lambda a: a.date)
+        _log_progress(f"L4 lexical: adversarial done in {time.monotonic() - t0:.1f}s "
+                      f"({len(earlier)} earlier instances found)")
         return earlier, str(data.get("verification_notes", "")).strip()
 
-    async def generate_genealogy(
+    async def generate_conceptual(
+        self, claim_text: str, context: str = ""
+    ) -> ConceptualLayer:
+        """L2: extract vocabulary-independent meaning via Haiku."""
+        _log_progress("L2 conceptual extraction starting")
+        t0 = time.monotonic()
+        user_content = f"CLAIM:\n{claim_text}"
+        if context:
+            user_content += f"\n\nCONTEXT (where the claim appeared):\n{context}"
+
+        response = await _create_with_retry(
+            self.client,
+            model=HAIKU,
+            max_tokens=1024,
+            system=[{"type": "text", "text": CONCEPTUAL_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+        )
+
+        data = _parse_json_safe(_response_text(response))
+        entities = data.get("entities", {})
+        if not isinstance(entities, dict):
+            entities = {}
+        _log_progress(f"L2 conceptual done in {time.monotonic() - t0:.1f}s")
+        return ConceptualLayer(
+            claim_predicate=str(data.get("claim_predicate", "")).strip(),
+            entities={k: str(v).strip() for k, v in entities.items()},
+            causal_structure=str(data.get("causal_structure", "")).strip(),
+        )
+
+    async def search_conceptual_ancestors(
+        self, conceptual: ConceptualLayer, scope: Scope
+    ) -> list[AttestedInstance]:
+        """Find older texts arguing the same structural claim via Sonnet + web_search."""
+        _log_progress("L4 conceptual: ancestor search starting (web_search)")
+        t0 = time.monotonic()
+        user_content = (
+            f"STRUCTURAL CLAIM TO TRACE:\n"
+            f"  Predicate: {conceptual.claim_predicate}\n"
+            f"  Entities: {json.dumps(conceptual.entities)}\n"
+            f"  Causal structure: {conceptual.causal_structure}\n\n"
+            f"SCOPE: {_scope_clause(scope)}\n\n"
+            "Find direct intellectual ancestors of this claim. Cast a wide net "
+            "across philosophy, political economy, movement texts, and older "
+            "traditions. Look for texts that argue the SAME structural claim "
+            "in the vocabulary of their own time."
+        )
+
+        response = await _create_with_retry(
+            self.client,
+            model=SONNET,
+            max_tokens=16384,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
+        )
+
+        raw_text = _response_text(response)
+        data = _parse_json_safe(raw_text)
+        # "contributors" is the new field; "ancestors" is accepted for
+        # backward compatibility with earlier prompt versions.
+        items = data.get("contributors") or data.get("ancestors") or []
+        ancestors = []
+        for raw in items:
+            inst = _instance_from_dict(raw)
+            if inst is not None:
+                ancestors.append(inst)
+        ancestors.sort(key=lambda a: a.date or "9999")
+        if not ancestors:
+            diag = _response_diagnostics(response)
+            debug_path = _save_debug_response("conceptual_ancestors", raw_text)
+            sys.stderr.write(
+                f"[warning: conceptual ancestor search returned 0 instances "
+                f"(text: {len(raw_text)} chars, json_parsed: {bool(data)}, "
+                f"{diag}, raw saved: {debug_path})]\n"
+            )
+        _log_progress(f"L4 conceptual: ancestors done in {time.monotonic() - t0:.1f}s "
+                      f"({len(ancestors)} ancestors)")
+        return ancestors
+
+    async def adversarial_verify_conceptual(
+        self, conceptual: ConceptualLayer, proposed_date: str, scope: Scope
+    ) -> tuple[list[AttestedInstance], str]:
+        _log_progress(f"L4 conceptual: adversarial verify against {proposed_date} starting")
+        t0 = time.monotonic()
+        system_text = CONCEPTUAL_ADVERSARIAL_SYSTEM.format(proposed_date=proposed_date)
+
+        user_content = (
+            f"STRUCTURAL CLAIM:\n"
+            f"  Predicate: {conceptual.claim_predicate}\n"
+            f"  Entities: {json.dumps(conceptual.entities)}\n"
+            f"  Causal structure: {conceptual.causal_structure}\n\n"
+            f"PROPOSED EARLIEST DATE: {proposed_date}\n\n"
+            f"SCOPE: {_scope_clause(scope)}\n\n"
+            "Search older intellectual traditions for any earlier articulation "
+            "of this same structural claim. A clean negative result strengthens "
+            "the claim; say so plainly if you find nothing."
+        )
+
+        response = await _create_with_retry(
+            self.client,
+            model=SONNET,
+            max_tokens=4096,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            system=[{"type": "text", "text": system_text,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
+        )
+
+        data = _parse_json_safe(_response_text(response))
+        earlier = []
+        for raw in data.get("earlier_ancestors", []):
+            inst = _instance_from_dict(raw)
+            if inst is None:
+                continue
+            if inst.date and inst.date < proposed_date:
+                earlier.append(inst)
+        earlier.sort(key=lambda a: a.date)
+        _log_progress(f"L4 conceptual: adversarial done in {time.monotonic() - t0:.1f}s "
+                      f"({len(earlier)} earlier instances found)")
+        return earlier, str(data.get("verification_notes", "")).strip()
+
+    async def generate_lineage_lexical(
         self,
         lexical: LexicalLayer,
         scope: Scope,
         polygenesis_window_days: int = 7,
-    ) -> GenealogyLayer:
+    ) -> LineageRecord:
+        """L4 lexical lineage: where did the PHRASING come from?"""
         instances = await self.search_earliest_uses(lexical, scope)
-
         if not instances:
-            return GenealogyLayer(
+            return LineageRecord(
+                lineage_type="lexical",
                 status=GenealogyStatus.UNKNOWN,
-                adversarial_check_performed=False,
             )
 
         earliest = instances[0]
         earlier_instances, adv_notes = await self.adversarial_verify(
             lexical, earliest.date or "9999-12-31", scope
         )
-
         if earlier_instances:
-            # The adversarial pass found predecessors — they become the new
-            # earliest. Existing instances are preserved as later echoes.
             instances = earlier_instances + instances
             earliest = instances[0]
 
-        # Polygenesis: are there other instances within a small window of the
-        # earliest? That suggests parallel independent emergence rather than a
-        # single origin (e.g., reactions to a real-world event).
+        # Polygenesis applies to lexical lineage only — same phrase emerging
+        # in independent places within a short window of a real-world event.
         parallel = []
         try:
             earliest_d = date.fromisoformat(earliest.date)
@@ -414,8 +859,7 @@ class FingerprintGenerator:
                     continue
                 try:
                     d = date.fromisoformat(inst.date)
-                    delta_days = abs((d - earliest_d).days)
-                    if delta_days <= polygenesis_window_days:
+                    if abs((d - earliest_d).days) <= polygenesis_window_days:
                         parallel.append(inst)
                 except ValueError:
                     continue
@@ -432,7 +876,8 @@ class FingerprintGenerator:
             status = GenealogyStatus.SINGLE_ORIGIN
             parallel_ids = []
 
-        return GenealogyLayer(
+        return LineageRecord(
+            lineage_type="lexical",
             status=status,
             first_attested_date=earliest.date,
             first_attested_source=earliest.source_url,
@@ -444,18 +889,94 @@ class FingerprintGenerator:
             adversarial_notes=adv_notes,
         )
 
+    async def generate_lineage_conceptual(
+        self,
+        conceptual: ConceptualLayer,
+        scope: Scope,
+    ) -> LineageRecord:
+        """L4 conceptual lineage: where did the underlying CLAIM come from?"""
+        if not conceptual.claim_predicate:
+            return LineageRecord(
+                lineage_type="conceptual",
+                status=GenealogyStatus.UNKNOWN,
+            )
+
+        ancestors = await self.search_conceptual_ancestors(conceptual, scope)
+        if not ancestors:
+            return LineageRecord(
+                lineage_type="conceptual",
+                status=GenealogyStatus.UNKNOWN,
+            )
+
+        earliest = ancestors[0]
+        earlier_ancestors, adv_notes = await self.adversarial_verify_conceptual(
+            conceptual, earliest.date or "9999-12-31", scope
+        )
+        if earlier_ancestors:
+            ancestors = earlier_ancestors + ancestors
+            earliest = ancestors[0]
+
+        # Conceptual lineage skips polygenesis detection: structural claims
+        # evolve across decades and centuries, not days. A near-coincident
+        # second articulation does not imply independent emergence.
+        if earliest.confidence < 0.4:
+            status = GenealogyStatus.DIFFUSE
+        else:
+            status = GenealogyStatus.SINGLE_ORIGIN
+
+        return LineageRecord(
+            lineage_type="conceptual",
+            status=status,
+            first_attested_date=earliest.date,
+            first_attested_source=earliest.source_url,
+            attestation_confidence=earliest.confidence,
+            primary_origin_id=earliest.instance_id,
+            attestation_log=ancestors,
+            adversarial_check_performed=True,
+            adversarial_notes=adv_notes,
+        )
+
+    async def generate_genealogy(
+        self,
+        lexical: LexicalLayer,
+        conceptual: ConceptualLayer,
+        scope: Scope,
+        skip_conceptual: bool = False,
+    ) -> GenealogyLayer:
+        """Build both lexical and conceptual lineages in parallel."""
+        if skip_conceptual:
+            lex_record = await self.generate_lineage_lexical(lexical, scope)
+            con_record = LineageRecord(
+                lineage_type="conceptual",
+                status=GenealogyStatus.UNKNOWN,
+            )
+        else:
+            lex_record, con_record = await asyncio.gather(
+                self.generate_lineage_lexical(lexical, scope),
+                self.generate_lineage_conceptual(conceptual, scope),
+            )
+        return GenealogyLayer(lexical=lex_record, conceptual=con_record)
+
     async def generate_fingerprint(
         self,
         claim_text: str,
         scope: Optional[Scope] = None,
         context: str = "",
+        skip_conceptual: bool = False,
     ) -> NarrativeFingerprint:
         scope = scope or Scope()
-        lexical = await self.generate_lexical(claim_text, context=context)
-        genealogy = await self.generate_genealogy(lexical, scope)
+        # L1 + L2: both Haiku, run concurrently.
+        lexical, conceptual = await asyncio.gather(
+            self.generate_lexical(claim_text, context=context),
+            self.generate_conceptual(claim_text, context=context),
+        )
+        genealogy = await self.generate_genealogy(
+            lexical, conceptual, scope, skip_conceptual=skip_conceptual
+        )
         return NarrativeFingerprint(
             scope=scope,
             lexical=lexical,
+            conceptual=conceptual,
             genealogy=genealogy,
             attribution=Attribution(source="ai", model=SONNET),
         )
@@ -500,9 +1021,12 @@ class FingerprintStore:
             "canonical_phrase": fp.lexical.canonical_phrase,
             "diagnostic_ngrams": fp.lexical.diagnostic_ngrams,
             "stopword_stripped_signature": fp.lexical.stopword_stripped_signature,
-            "first_attested_date": fp.genealogy.first_attested_date,
-            "first_attested_source": fp.genealogy.first_attested_source,
-            "genealogy_status": fp.genealogy.status.value,
+            "lexical_first_attested_date": fp.genealogy.lexical.first_attested_date,
+            "lexical_first_attested_source": fp.genealogy.lexical.first_attested_source,
+            "lexical_status": fp.genealogy.lexical.status.value,
+            "conceptual_first_attested_date": fp.genealogy.conceptual.first_attested_date,
+            "conceptual_first_attested_source": fp.genealogy.conceptual.first_attested_source,
+            "conceptual_status": fp.genealogy.conceptual.status.value,
             "created_at": fp.created_at,
             "last_updated": fp.last_updated,
             "scope": fp.scope.to_dict(),
@@ -552,20 +1076,45 @@ async def _cli(args):
         print(json.dumps(lex.to_dict(), indent=2))
         return
 
-    fp = await gen.generate_fingerprint(
-        args.claim, scope=scope, context=args.context or ""
-    )
+    # Generate L1 first; this is cheap (one Haiku call). The lexical signature
+    # is the only thing dedup needs, so we can short-circuit before paying for
+    # L2 and L4 if the user re-runs without --force.
+    context = args.context or ""
+    lexical = await gen.generate_lexical(args.claim, context=context)
 
+    store = None
     if args.save:
         store = FingerprintStore(args.store_dir)
-        existing = store.find_matching(fp.lexical)
+        existing = store.find_matching(lexical)
         if existing and not args.force:
-            print(f"[matched existing fingerprint: {existing} — pass --force to write anyway]")
+            print(json.dumps(lexical.to_dict(), indent=2))
+            print(
+                f"[matched existing fingerprint: {existing} — "
+                f"L2 and L4 skipped to avoid cost. Pass --force to regenerate.]"
+            )
             return
-        fp_id = store.save(fp)
-        print(f"[saved fingerprint: {fp_id}]")
+
+    # No dedup hit (or --force): proceed with L2 + L4.
+    conceptual = await gen.generate_conceptual(args.claim, context=context)
+    genealogy = await gen.generate_genealogy(
+        lexical, conceptual, scope, skip_conceptual=args.no_conceptual
+    )
+    fp = NarrativeFingerprint(
+        scope=scope,
+        lexical=lexical,
+        conceptual=conceptual,
+        genealogy=genealogy,
+        attribution=Attribution(source="ai", model=SONNET),
+    )
 
     print(fp.to_json())
+
+    if store is not None:
+        try:
+            fp_id = store.save(fp)
+            print(f"[saved fingerprint: {fp_id}]")
+        except Exception as e:
+            print(f"[save failed: {type(e).__name__}: {e}]")
 
 
 def main():
@@ -582,7 +1131,9 @@ def main():
     parser.add_argument("--to-date", default="",
                         help="Time window end (ISO date)")
     parser.add_argument("--lexical-only", action="store_true",
-                        help="Generate only the L1 lexical layer (no web search)")
+                        help="Generate only the L1 lexical layer (no L2, no web search)")
+    parser.add_argument("--no-conceptual", action="store_true",
+                        help="Skip the L2 conceptual lineage pass (cheaper; matches v1 behavior)")
     parser.add_argument("--save", action="store_true",
                         help="Save the fingerprint to the store")
     parser.add_argument("--store-dir", default="fingerprints",
