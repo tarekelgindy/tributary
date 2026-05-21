@@ -537,7 +537,11 @@ class AttestedInstance:
 class LineageRecord:
     """One lineage's worth of dating, attestation, and adversarial verification.
     GenealogyLayer carries two: lexical (where the phrasing comes from) and
-    conceptual (where the underlying structural claim comes from)."""
+    conceptual (where the underlying structural claim comes from).
+
+    `mutations` records how the framing changed between significant
+    attested instances — populated as a post-processing step over the
+    attestation_log."""
     lineage_type: str = ""              # "lexical" or "conceptual"
     status: GenealogyStatus = GenealogyStatus.UNKNOWN
     first_attested_date: str = ""
@@ -548,6 +552,7 @@ class LineageRecord:
     attestation_log: list[AttestedInstance] = field(default_factory=list)
     adversarial_check_performed: bool = False
     adversarial_notes: str = ""
+    mutations: list[Mutation] = field(default_factory=list)
 
     def to_dict(self):
         return {
@@ -561,6 +566,7 @@ class LineageRecord:
             "attestation_log": [a.to_dict() for a in self.attestation_log],
             "adversarial_check_performed": self.adversarial_check_performed,
             "adversarial_notes": self.adversarial_notes,
+            "mutations": [m.to_dict() for m in self.mutations],
         }
 
 

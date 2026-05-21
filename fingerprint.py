@@ -43,6 +43,7 @@ from models import (
     GenealogyStatus,
     LexicalLayer,
     LineageRecord,
+    Mutation,
     NarrativeFingerprint,
     RhetoricalLayer,
     Scope,
@@ -541,6 +542,61 @@ CLAIM: "AI will replace most knowledge workers within a decade"
   "domain": "technology",
   "domain_confidence": 0.95,
   "tropes": ["replacement", "big-tech"]
+}
+
+Output ONLY the JSON object.
+"""
+
+
+MUTATION_SYSTEM = """\
+You are analyzing how a narrative claim mutates between two attested
+instances of its propagation. You will be given:
+  - The canonical claim being traced (in neutral logical form)
+  - An EARLIER instance (with author, date, exact quote)
+  - A LATER instance (with author, date, exact quote)
+
+Your job: identify what changed between them. Four fields:
+
+  preserved   What in the core claim/framing stayed intact across the
+              transition? Be concrete.
+  dropped     What nuance, qualification, attribution, or context did
+              the later instance lose? Often this is evidence, hedging,
+              specificity, or institutional grounding.
+  added       What new framing, vocabulary, audience-targeting, or
+              context appeared in the later instance?
+  distorted   What shifted in meaning, scope, or emphasis? Often
+              generalization, exaggeration, politicization, or
+              recontextualization.
+
+A field may be an empty string if there's nothing meaningful to report
+for that category — do not pad. Each non-empty field should be a single
+sentence (≤30 words) describing the SPECIFIC change, not a general
+characterization.
+
+Produce JSON ONLY:
+
+{
+  "preserved": "...",
+  "dropped": "...",
+  "added": "...",
+  "distorted": "..."
+}
+
+Example:
+
+CLAIM (neutral): the economic system structurally disadvantages workers relative to owners of capital
+
+EARLIER (1976-01-01, Bernie Sanders, Vermont gubernatorial debate):
+  "The richest one half of 1 percent of these people earn as much as the bottom 27 percent."
+
+LATER (2012-09-05, Elizabeth Warren, DNC Convention):
+  "People feel like the system is rigged against them. And here's the painful part: they're right. The system is rigged."
+
+{
+  "preserved": "the structural claim that the economic system disadvantages ordinary people",
+  "dropped": "the specific quantitative inequality statistics that anchored the earlier framing",
+  "added": "the audience-mirroring 'people feel like' device and the gambling-metaphor verb 'rigged'",
+  "distorted": "shift from descriptive wealth-distribution argument to emotive populist accusation"
 }
 
 Output ONLY the JSON object.
@@ -1237,14 +1293,105 @@ class FingerprintGenerator:
             adversarial_notes=adv_notes,
         )
 
+    async def _analyze_single_mutation(
+        self,
+        claim_predicate: str,
+        prev_inst: AttestedInstance,
+        curr_inst: AttestedInstance,
+    ) -> Optional[Mutation]:
+        """Analyze how the framing changed between two attested instances."""
+        user_content = (
+            f"CLAIM (neutral):\n{claim_predicate}\n\n"
+            f"EARLIER ({prev_inst.date}, {prev_inst.author}, "
+            f"{prev_inst.source_title}):\n"
+            f"  \"{prev_inst.exact_quote}\"\n\n"
+            f"LATER ({curr_inst.date}, {curr_inst.author}, "
+            f"{curr_inst.source_title}):\n"
+            f"  \"{curr_inst.exact_quote}\""
+        )
+
+        try:
+            response = await _create_with_retry(
+                self.client,
+                model=SONNET,
+                max_tokens=1024,
+                system=[{"type": "text", "text": MUTATION_SYSTEM,
+                         "cache_control": {"type": "ephemeral"}}],
+                messages=[{"role": "user", "content": user_content}],
+            )
+        except anthropic.APIStatusError:
+            return None
+
+        data = _parse_json_safe(_response_text(response))
+        if not data:
+            return None
+
+        return Mutation(
+            from_source=prev_inst.source_url,
+            to_source=curr_inst.source_url,
+            preserved=str(data.get("preserved", "")).strip(),
+            dropped=str(data.get("dropped", "")).strip(),
+            added=str(data.get("added", "")).strip(),
+            distorted=str(data.get("distorted", "")).strip(),
+            attribution=Attribution(source="ai", model=SONNET),
+        )
+
+    async def analyze_lineage_mutations(
+        self,
+        lineage: LineageRecord,
+        claim_predicate: str,
+    ) -> list[Mutation]:
+        """Identify the meaningful mutations across a lineage's chain.
+
+        Filters to significant amplifier roles only — mention/unknown
+        instances are typically echoes that don't mutate the framing in
+        meaningful ways. Adjacent significant instances in chronological
+        order are pair-analyzed in parallel."""
+        SIGNIFICANT = {
+            AmplifierRole.ORIGINATOR,
+            AmplifierRole.EARLY_AMPLIFIER,
+            AmplifierRole.MASS_AMPLIFIER,
+            AmplifierRole.INSTITUTIONAL_ADOPTION,
+            AmplifierRole.CRITIC,
+        }
+        significant = [
+            i for i in lineage.attestation_log
+            if i.amplifier_role in SIGNIFICANT and i.exact_quote and i.exact_quote.strip()
+        ]
+        if len(significant) < 2:
+            return []
+
+        # Defensive sort — chains should already be chronological
+        significant.sort(key=lambda a: a.date or "9999")
+
+        pairs = list(zip(significant[:-1], significant[1:]))
+        _log_progress(
+            f"L4 {lineage.lineage_type}: analyzing {len(pairs)} mutation transitions"
+        )
+        t0 = time.monotonic()
+
+        results = await asyncio.gather(*[
+            self._analyze_single_mutation(claim_predicate, prev, curr)
+            for prev, curr in pairs
+        ])
+        mutations = [m for m in results if m is not None]
+
+        _log_progress(
+            f"L4 {lineage.lineage_type}: mutations done in "
+            f"{time.monotonic() - t0:.1f}s ({len(mutations)} transitions analyzed)"
+        )
+        return mutations
+
     async def generate_genealogy(
         self,
         lexical: LexicalLayer,
         conceptual: ConceptualLayer,
         scope: Scope,
         skip_conceptual: bool = False,
+        skip_mutations: bool = False,
     ) -> GenealogyLayer:
-        """Build both lexical and conceptual lineages in parallel."""
+        """Build both lexical and conceptual lineages in parallel, then
+        post-process each with mutation analysis (unless skipped)."""
         if skip_conceptual:
             lex_record = await self.generate_lineage_lexical(lexical, scope)
             con_record = LineageRecord(
@@ -1256,6 +1403,19 @@ class FingerprintGenerator:
                 self.generate_lineage_lexical(lexical, scope),
                 self.generate_lineage_conceptual(conceptual, scope),
             )
+
+        # Mutation analysis post-pass: walks each chain's significant
+        # transitions in parallel. Uses the conceptual claim_predicate as
+        # the canonical reference because it's the vocabulary-independent
+        # statement of what's being traced.
+        if not skip_mutations:
+            lex_muts, con_muts = await asyncio.gather(
+                self.analyze_lineage_mutations(lex_record, conceptual.claim_predicate),
+                self.analyze_lineage_mutations(con_record, conceptual.claim_predicate),
+            )
+            lex_record.mutations = lex_muts
+            con_record.mutations = con_muts
+
         return GenealogyLayer(lexical=lex_record, conceptual=con_record)
 
     async def generate_fingerprint(
@@ -1264,6 +1424,7 @@ class FingerprintGenerator:
         scope: Optional[Scope] = None,
         context: str = "",
         skip_conceptual: bool = False,
+        skip_mutations: bool = False,
         lexical: Optional[LexicalLayer] = None,
     ) -> NarrativeFingerprint:
         scope = scope or Scope()
@@ -1283,7 +1444,9 @@ class FingerprintGenerator:
             self.generate_rhetorical(claim_text, lexical, conceptual, context=context),
             self.generate_taxonomic(claim_text, lexical, conceptual, context=context),
             self.generate_genealogy(
-                lexical, conceptual, scope, skip_conceptual=skip_conceptual
+                lexical, conceptual, scope,
+                skip_conceptual=skip_conceptual,
+                skip_mutations=skip_mutations,
             ),
         )
         return NarrativeFingerprint(
@@ -1416,6 +1579,7 @@ async def _cli(args):
         scope=scope,
         context=context,
         skip_conceptual=args.no_conceptual,
+        skip_mutations=args.no_mutations,
         lexical=lexical,
     )
 
@@ -1446,6 +1610,9 @@ def main():
                         help="Generate only the L1 lexical layer (no L2, no web search)")
     parser.add_argument("--no-conceptual", action="store_true",
                         help="Skip the L2 conceptual lineage pass (cheaper; matches v1 behavior)")
+    parser.add_argument("--no-mutations", action="store_true",
+                        help="Skip the mutation analysis post-pass over the lineages "
+                             "(saves ~$0.10–0.25 per fingerprint)")
     parser.add_argument("--save", action="store_true",
                         help="Save the fingerprint to the store")
     parser.add_argument("--store-dir", default="fingerprints",
