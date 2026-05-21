@@ -212,6 +212,54 @@ section { animation: fadein 0.2s; }
   padding: 1rem 1.2rem; font-size: 0.85rem;
   color: #444; white-space: pre-wrap; line-height: 1.6;
 }
+.collapse .body.normal-text { white-space: normal; }
+
+.mutation-card {
+  background: #fafaf7;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.7rem;
+}
+.mutation-head {
+  font-family: 'SF Mono', Menlo, monospace;
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ececec;
+}
+.mutation-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.mutation-arrow .arrow {
+  color: #aaa;
+  font-weight: bold;
+}
+.mutation-field {
+  display: flex;
+  gap: 0.7rem;
+  margin: 0.35rem 0;
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+.mutation-label {
+  flex-shrink: 0;
+  width: 5.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 0.15rem;
+}
+.mutation-field.preserved .mutation-label { color: #2e7d32; }
+.mutation-field.dropped   .mutation-label { color: #757575; }
+.mutation-field.added     .mutation-label { color: #1976d2; }
+.mutation-field.distorted .mutation-label { color: #c45719; }
+.mutation-field .mutation-text { color: #333; }
 
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
@@ -377,6 +425,58 @@ function instanceLine(i) {
   </div>`;
 }
 
+function truncate(s, max) {
+  s = String(s || '');
+  return s.length > max ? s.slice(0, max - 3) + '...' : s;
+}
+
+function renderMutationsBlock(label, mutations, instances) {
+  if (!mutations || mutations.length === 0) return '';
+
+  // Look up the from/to instances by URL so each card can show author + date
+  const byUrl = {};
+  (instances || []).forEach(i => { byUrl[i.source_url] = i; });
+
+  const cards = mutations.map(m => {
+    const from = byUrl[m.from_source] || {};
+    const to = byUrl[m.to_source] || {};
+    const fields = [];
+    if (m.preserved) fields.push(['preserved', 'Preserved', m.preserved]);
+    if (m.dropped) fields.push(['dropped', 'Dropped', m.dropped]);
+    if (m.added) fields.push(['added', 'Added', m.added]);
+    if (m.distorted) fields.push(['distorted', 'Distorted', m.distorted]);
+    return `
+      <div class="mutation-card">
+        <div class="mutation-head">
+          <div class="mutation-arrow">
+            <span>${escapeHtml(from.date || '?')} · ${escapeHtml(truncate(from.author, 48))}</span>
+            <span class="arrow">→</span>
+            <span>${escapeHtml(to.date || '?')} · ${escapeHtml(truncate(to.author, 48))}</span>
+          </div>
+        </div>
+        <div class="mutation-body">
+          ${fields.map(([cls, lbl, text]) => `
+            <div class="mutation-field ${cls}">
+              <span class="mutation-label">${lbl}</span>
+              <span class="mutation-text">${escapeHtml(text)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <details class="collapse">
+      <summary>${label} mutations (${mutations.length})</summary>
+      <div class="body normal-text">
+        <p style="color:#777; font-size:0.82rem; margin: 0 0 1rem;">How the framing changed across significant transitions in this lineage.</p>
+        ${cards}
+      </div>
+    </details>
+  `;
+}
+
 function renderOverview(fp) {
   const panel = document.querySelector('[data-panel=overview]');
   const lex = fp.genealogy?.lexical || {};
@@ -537,7 +637,7 @@ function renderLineages(fp) {
     <div class="timeline-block">
       <div class="timeline-header">
         <h2>Lexical Lineage</h2>
-        <div class="timeline-info">status: ${escapeHtml(lex.status || 'unknown')} · earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances</div>
+        <div class="timeline-info">status: ${escapeHtml(lex.status || 'unknown')} · earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances · ${(lex.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-lexical"></svg>
     </div>
@@ -545,13 +645,16 @@ function renderLineages(fp) {
     <div class="timeline-block">
       <div class="timeline-header">
         <h2>Conceptual Lineage</h2>
-        <div class="timeline-info">status: ${escapeHtml(con.status || 'unknown')} · earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances</div>
+        <div class="timeline-info">status: ${escapeHtml(con.status || 'unknown')} · earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances · ${(con.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-conceptual"></svg>
     </div>
 
     <p style="color:#777; font-size:0.85rem; margin: 0 0 1rem;">Click any dot to see the full instance details.</p>
     <div id="instance-detail"></div>
+
+    ${renderMutationsBlock('Lexical', lex.mutations, lexLog)}
+    ${renderMutationsBlock('Conceptual', con.mutations, conLog)}
 
     <details class="collapse">
       <summary>Lexical adversarial notes</summary>
