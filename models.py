@@ -418,6 +418,19 @@ class GenealogyStatus(str, Enum):
     UNKNOWN = "unknown"
 
 
+class AmplifierRole(str, Enum):
+    """The functional role an attested instance played in the narrative's
+    spread. Default is UNKNOWN so old fingerprints (which predate this field)
+    deserialize cleanly."""
+    UNKNOWN = "unknown"
+    ORIGINATOR = "originator"                  # earliest credible articulation
+    EARLY_AMPLIFIER = "early-amplifier"        # spread before mainstream uptake
+    MASS_AMPLIFIER = "mass-amplifier"           # drove broad public adoption
+    INSTITUTIONAL_ADOPTION = "institutional-adoption"  # adopted into party, govt, major outlet, official platform
+    CRITIC = "critic"                          # pushed back, fact-checked, or rebutted
+    MENTION = "mention"                        # used the framing without driving spread
+
+
 @dataclass
 class Scope:
     """User-configurable analysis scope. v1 fixes language to English."""
@@ -496,6 +509,8 @@ class AttestedInstance:
     exact_quote: str = ""
     confidence: float = 0.0
     evidence: str = ""
+    amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
+    role_evidence: str = ""             # short justification for the assigned role
 
     def __post_init__(self):
         if not self.instance_id:
@@ -513,6 +528,8 @@ class AttestedInstance:
             "exact_quote": self.exact_quote,
             "confidence": self.confidence,
             "evidence": self.evidence,
+            "amplifier_role": self.amplifier_role.value,
+            "role_evidence": self.role_evidence,
         }
 
 

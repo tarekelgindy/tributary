@@ -33,15 +33,20 @@ from typing import Optional
 import anthropic
 
 from models import (
+    AmplifierRole,
     Attribution,
     AttestedInstance,
     ConceptualLayer,
+    Domain,
+    FramePrimitive,
     GenealogyLayer,
     GenealogyStatus,
     LexicalLayer,
     LineageRecord,
     NarrativeFingerprint,
+    RhetoricalLayer,
     Scope,
+    TaxonomicLayer,
 )
 
 
@@ -151,13 +156,32 @@ For each instance you find, report:
   confidence        0.0–1.0 — your confidence in the date and attribution
   evidence          how you dated this; whether it is the originator or
                     an early echo
+  amplifier_role    one of: originator, early-amplifier, mass-amplifier,
+                    institutional-adoption, critic, mention.
+                    See role definitions below.
+  role_evidence     one-sentence justification for the assigned role
+
+Amplifier role definitions:
+  originator              earliest credible articulation of the framing
+  early-amplifier         spread the framing before mainstream uptake
+  mass-amplifier          drove broad public adoption (e.g. viral campaign,
+                          national TV speech, viral op-ed)
+  institutional-adoption  adopted into an official platform — party platform,
+                          government document, major newspaper editorial,
+                          flagship academic journal
+  critic                  pushed back, fact-checked, or rebutted the framing
+  mention                 used the framing in passing without driving spread
+
+Assign exactly one role per instance. Use evidence-based judgement, not
+inference from author identity alone.
 
 Return JSON of this shape:
 
 {
   "instances": [
     {"date": "...", "source_url": "...", "source_title": "...", "author": "...",
-     "lexical_form_seen": "...", "exact_quote": "...", "confidence": 0.0, "evidence": "..."}
+     "lexical_form_seen": "...", "exact_quote": "...", "confidence": 0.0,
+     "evidence": "...", "amplifier_role": "...", "role_evidence": "..."}
   ],
   "search_notes": "brief notes on what you searched, what archives you checked, where signal was weak"
 }
@@ -187,14 +211,26 @@ Search strategy:
 
 For each pre-{proposed_date} instance you find, report the same fields as a
 normal attestation (date, source_url, source_title, author, lexical_form_seen,
-exact_quote, confidence, evidence) and explicitly explain in `evidence` why
-you trust the date.
+exact_quote, confidence, evidence, amplifier_role, role_evidence) and
+explicitly explain in `evidence` why you trust the date. An earlier-found
+instance almost always gets amplifier_role="originator" (it predates what
+was thought to be the origin) — but use judgement.
+
+CRITICAL — STRUCTURED REPORTING:
+If you find an earlier instance, you MUST include it as a structured entry
+in the `earlier_instances` array. Do NOT merely mention it in
+`verification_notes` prose — that information will be lost. Every earlier
+instance gets a full structured entry with all the standard fields.
+
+`verification_notes` is for explaining WHAT YOU SEARCHED and WHAT YOU
+RULED OUT, not for narrating discoveries. Discoveries belong in
+`earlier_instances`.
 
 Return JSON:
 
 {{
   "earlier_instances": [...],
-  "verification_notes": "what you searched, what you tried that did not pan out, any caveats"
+  "verification_notes": "what you searched, what you ruled out, any caveats — NOT the place for discoveries"
 }}
 
 If no earlier instances are found, return an empty list and state plainly in
@@ -315,6 +351,17 @@ For each direct contributor, report:
   evidence          why this is a credible direct contributor — does it
                     articulate the same structural claim in vocabulary
                     that DIFFERS from the diagnostic n-grams?
+  amplifier_role    one of: originator, early-amplifier, mass-amplifier,
+                    institutional-adoption, critic, mention. Originator =
+                    the earliest-known articulation in this lineage;
+                    early-amplifier = wrote a follow-on building the
+                    intellectual tradition; mass-amplifier = popularized
+                    the claim to a broad audience (e.g. bestselling
+                    nonfiction, viral essay, documentary);
+                    institutional-adoption = official platform / major
+                    party / govt agency / flagship academic journal;
+                    critic = pushed back; mention = passing reference.
+  role_evidence     one-sentence justification for the assigned role
 
 Distinctions:
 - DIRECT contributor: articulates the same structural claim, any era,
@@ -325,7 +372,11 @@ Distinctions:
 Return JSON:
 
 {
-  "contributors": [...],
+  "contributors": [
+    {"date": "...", "source_url": "...", "source_title": "...", "author": "...",
+     "lexical_form_seen": "...", "exact_quote": "...", "confidence": 0.0,
+     "evidence": "...", "amplifier_role": "...", "role_evidence": "..."}
+  ],
   "search_notes": "what eras and source types you covered; balance of academic vs. popularizer contributors; what you ruled out"
 }
 
@@ -350,18 +401,147 @@ economy, religious and ethical traditions, and pre-modern texts. The claim
 may have been articulated in very different words centuries earlier.
 
 For each pre-{proposed_date} direct ancestor you find, report the standard
-fields and explain in evidence why this articulates the SAME structural
-claim, not merely a related idea.
+fields (date, source_url, source_title, author, lexical_form_seen,
+exact_quote, confidence, evidence, amplifier_role, role_evidence) and
+explain in evidence why this articulates the SAME structural claim, not
+merely a related idea. An earlier-found ancestor almost always gets
+amplifier_role="originator" — but use judgement.
+
+CRITICAL — STRUCTURED REPORTING:
+If you find an earlier ancestor, you MUST include it as a structured entry
+in the `earlier_ancestors` array. Do NOT merely mention it in
+`verification_notes` prose — that information will be lost. Every earlier
+ancestor gets a full structured entry with all the standard fields.
+
+`verification_notes` is for explaining WHAT TRADITIONS YOU CHECKED and
+WHAT YOU RULED OUT, not for narrating discoveries. Discoveries belong in
+`earlier_ancestors`.
 
 Return JSON:
 
 {{
   "earlier_ancestors": [...],
-  "verification_notes": "what traditions you checked, what you ruled out, any caveats"
+  "verification_notes": "what traditions you checked, what you ruled out, any caveats — NOT the place for discoveries"
 }}
 
 If nothing earlier is found, return an empty list and say so plainly. A
 clean negative result is valuable.
+
+Output ONLY the JSON object.
+"""
+
+
+RHETORICAL_SYSTEM = """\
+You are extracting the rhetorical structure of a narrative claim — how the
+argument is shaped, independent of its subject matter. The output is used
+to cluster narratives by argumentative structure across topics.
+
+Produce JSON ONLY:
+
+{
+  "frame_primitives": ["one or more from the list below"],
+  "valence": {
+    "villain": "who or what is positioned as the causal/blame target ('' if none)",
+    "victim": "who or what is positioned as harmed ('' if none)",
+    "hero": "who or what is positioned as the solution or champion ('' if none)"
+  },
+  "epistemic_stance": "one of: certain, questioning, mocking, accusatory, hopeful, alarmed",
+  "register": "one of: academic, populist, journalistic, partisan, casual, technical, religious, satirical"
+}
+
+Frame primitive reference (neutrally phrased, domain-agnostic):
+- attribution-of-cause     identifies what caused something
+- attribution-of-blame     assigns moral or political responsibility
+- harm-claim               asserts something is causing damage
+- threat-claim             warns of emerging danger
+- solution-prescription    prescribes what should be done
+- identity-defense         positions a group as under siege or worthy of protection
+- process-violation        claims rules or norms were broken
+- value-comparison         positions X as better/worse/different from Y
+- historical-arc           claims things were better before or are worsening/improving
+- revelation               positions the claim as hidden truth being uncovered
+
+Multiple primitives may apply. Tag all that fit; the test is whether
+removing one would lose part of what the claim is doing.
+
+Examples:
+
+CLAIM: "the economy is rigged against working people"
+{
+  "frame_primitives": ["attribution-of-blame", "harm-claim", "identity-defense"],
+  "valence": {
+    "villain": "owners of capital and political elites",
+    "victim": "working people / working class",
+    "hero": ""
+  },
+  "epistemic_stance": "certain",
+  "register": "populist"
+}
+
+CLAIM: "seed oils cause inflammation and chronic disease"
+{
+  "frame_primitives": ["attribution-of-cause", "harm-claim", "threat-claim"],
+  "valence": {
+    "villain": "industrial food producers / seed oils",
+    "victim": "consumers",
+    "hero": ""
+  },
+  "epistemic_stance": "certain",
+  "register": "casual"
+}
+
+Output ONLY the JSON object.
+"""
+
+
+TAXONOMIC_SYSTEM = """\
+You are classifying a narrative claim by subject domain and tagging the
+recognizable symbolic shorthands ("tropes") it invokes.
+
+Produce JSON ONLY:
+
+{
+  "domain": "one of: economic, racial-ethnic, immigration, health, foreign-policy, cultural, technology, environment, religion, gender-sexuality, education, criminal-justice, media-meta, wellness-lifestyle, finance-investing, fandom-entertainment, science, other",
+  "domain_confidence": 0.0-1.0,
+  "tropes": ["zero or more symbolic shorthands"]
+}
+
+Common tropes (examples — propose new ones if the claim uses something
+not on this list):
+  rigged-game, stolen-prosperity, elites-vs-people, replacement, invasion,
+  censorship-by-stealth, indoctrination, stolen-election, permanent-state,
+  cancel-culture, brain-rot, forever-war, big-pharma, big-tech, big-food,
+  groomer, DEI-hire, woke-mind-virus, climate-denier, misinformation,
+  disinformation, revealed-truth, hidden-cabal, deep-state, plandemic,
+  toxic-food, red-pill, blue-pill, fake-news, both-sides
+
+A trope is a specific, common, charged shorthand actually used in
+discourse — NOT a general descriptor. "Inequality" is not a trope;
+"rigged-game" is. "Health" is not a trope; "big-pharma" is. If the
+claim doesn't invoke recognizable tropes, return an empty array.
+
+Examples:
+
+CLAIM: "the economy is rigged against working people"
+{
+  "domain": "economic",
+  "domain_confidence": 0.98,
+  "tropes": ["rigged-game", "elites-vs-people", "stolen-prosperity"]
+}
+
+CLAIM: "seed oils cause inflammation and chronic disease"
+{
+  "domain": "wellness-lifestyle",
+  "domain_confidence": 0.92,
+  "tropes": ["toxic-food", "big-food"]
+}
+
+CLAIM: "AI will replace most knowledge workers within a decade"
+{
+  "domain": "technology",
+  "domain_confidence": 0.95,
+  "tropes": ["replacement", "big-tech"]
+}
 
 Output ONLY the JSON object.
 """
@@ -455,6 +635,11 @@ def _scope_clause(scope: Scope) -> str:
 
 def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
     try:
+        role_str = str(d.get("amplifier_role", "")).strip().lower()
+        try:
+            role = AmplifierRole(role_str) if role_str else AmplifierRole.UNKNOWN
+        except ValueError:
+            role = AmplifierRole.UNKNOWN
         return AttestedInstance(
             date=str(d.get("date", "")).strip(),
             source_url=str(d.get("source_url", "")).strip(),
@@ -464,6 +649,8 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
             exact_quote=str(d.get("exact_quote", "")).strip(),
             confidence=float(d.get("confidence", 0.5)),
             evidence=str(d.get("evidence", "")).strip(),
+            amplifier_role=role,
+            role_evidence=str(d.get("role_evidence", "")).strip(),
         )
     except (TypeError, ValueError):
         return None
@@ -732,6 +919,120 @@ class FingerprintGenerator:
             causal_structure=str(data.get("causal_structure", "")).strip(),
         )
 
+    async def generate_rhetorical(
+        self,
+        claim_text: str,
+        lexical: LexicalLayer,
+        conceptual: ConceptualLayer,
+        context: str = "",
+    ) -> RhetoricalLayer:
+        """L3: classify rhetorical structure via Haiku."""
+        _log_progress("L3 rhetorical extraction starting")
+        t0 = time.monotonic()
+
+        user_content = (
+            f"CLAIM:\n{claim_text}\n\n"
+            f"CONTEXT FROM EARLIER LAYERS:\n"
+            f"  Canonical framing: {lexical.canonical_phrase}\n"
+            f"  Underlying claim: {conceptual.claim_predicate}\n"
+            f"  Entities: {json.dumps(conceptual.entities)}\n"
+        )
+        if context:
+            user_content += f"\nORIGINAL CONTEXT:\n{context}\n"
+
+        response = await _create_with_retry(
+            self.client,
+            model=HAIKU,
+            max_tokens=1024,
+            system=[{"type": "text", "text": RHETORICAL_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+        )
+
+        data = _parse_json_safe(_response_text(response))
+
+        fp_strings = data.get("frame_primitives") or []
+        if not isinstance(fp_strings, list):
+            fp_strings = []
+        primitives = []
+        for s in fp_strings:
+            try:
+                primitives.append(FramePrimitive(str(s).strip().lower()))
+            except ValueError:
+                continue
+
+        valence = data.get("valence") or {}
+        if not isinstance(valence, dict):
+            valence = {}
+
+        _log_progress(f"L3 rhetorical done in {time.monotonic() - t0:.1f}s "
+                      f"({len(primitives)} primitives)")
+        return RhetoricalLayer(
+            frame_primitives=primitives,
+            valence={k: str(v).strip() for k, v in valence.items()},
+            epistemic_stance=str(data.get("epistemic_stance", "")).strip(),
+            register=str(data.get("register", "")).strip(),
+        )
+
+    async def generate_taxonomic(
+        self,
+        claim_text: str,
+        lexical: LexicalLayer,
+        conceptual: ConceptualLayer,
+        context: str = "",
+    ) -> TaxonomicLayer:
+        """L5: classify domain and tag tropes via Haiku.
+        inductive_cluster_ids is left empty — it requires cross-corpus
+        analysis over the FingerprintStore and is generated separately."""
+        _log_progress("L5 taxonomic classification starting")
+        t0 = time.monotonic()
+
+        user_content = (
+            f"CLAIM:\n{claim_text}\n\n"
+            f"CONTEXT FROM EARLIER LAYERS:\n"
+            f"  Canonical framing: {lexical.canonical_phrase}\n"
+            f"  Underlying claim: {conceptual.claim_predicate}\n"
+            f"  Entities: {json.dumps(conceptual.entities)}\n"
+        )
+        if context:
+            user_content += f"\nORIGINAL CONTEXT:\n{context}\n"
+
+        response = await _create_with_retry(
+            self.client,
+            model=HAIKU,
+            max_tokens=1024,
+            system=[{"type": "text", "text": TAXONOMIC_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+        )
+
+        data = _parse_json_safe(_response_text(response))
+
+        domain_str = str(data.get("domain", "")).strip().lower()
+        try:
+            domain = Domain(domain_str)
+        except ValueError:
+            domain = Domain.OTHER
+
+        try:
+            confidence = float(data.get("domain_confidence", 0.0))
+        except (TypeError, ValueError):
+            confidence = 0.0
+
+        tropes_raw = data.get("tropes") or []
+        if not isinstance(tropes_raw, list):
+            tropes_raw = []
+        tropes = [str(t).strip() for t in tropes_raw if t and str(t).strip()]
+
+        _log_progress(f"L5 taxonomic done in {time.monotonic() - t0:.1f}s "
+                      f"(domain={domain.value}, {len(tropes)} tropes)")
+        return TaxonomicLayer(
+            domain=domain,
+            domain_confidence=confidence,
+            inductive_cluster_ids=[],
+            tropes=tropes,
+        )
+
     async def search_conceptual_ancestors(
         self, conceptual: ConceptualLayer, scope: Scope
     ) -> list[AttestedInstance]:
@@ -963,20 +1264,34 @@ class FingerprintGenerator:
         scope: Optional[Scope] = None,
         context: str = "",
         skip_conceptual: bool = False,
+        lexical: Optional[LexicalLayer] = None,
     ) -> NarrativeFingerprint:
         scope = scope or Scope()
-        # L1 + L2: both Haiku, run concurrently.
-        lexical, conceptual = await asyncio.gather(
-            self.generate_lexical(claim_text, context=context),
-            self.generate_conceptual(claim_text, context=context),
-        )
-        genealogy = await self.generate_genealogy(
-            lexical, conceptual, scope, skip_conceptual=skip_conceptual
+        # Phase 1: L1 + L2 (Haiku, parallel) — needed as input to L3/L5.
+        # If the caller pre-generated L1 (e.g. for early dedup in the CLI),
+        # reuse it and only run L2 here.
+        if lexical is None:
+            lexical, conceptual = await asyncio.gather(
+                self.generate_lexical(claim_text, context=context),
+                self.generate_conceptual(claim_text, context=context),
+            )
+        else:
+            conceptual = await self.generate_conceptual(claim_text, context=context)
+        # Phase 2: L3 + L5 (Haiku, fast) and L4 (Sonnet + web_search, slow)
+        # all in parallel. L3/L5 finish in seconds while L4 grinds on.
+        rhetorical, taxonomic, genealogy = await asyncio.gather(
+            self.generate_rhetorical(claim_text, lexical, conceptual, context=context),
+            self.generate_taxonomic(claim_text, lexical, conceptual, context=context),
+            self.generate_genealogy(
+                lexical, conceptual, scope, skip_conceptual=skip_conceptual
+            ),
         )
         return NarrativeFingerprint(
             scope=scope,
             lexical=lexical,
             conceptual=conceptual,
+            rhetorical=rhetorical,
+            taxonomic=taxonomic,
             genealogy=genealogy,
             attribution=Attribution(source="ai", model=SONNET),
         )
@@ -1094,17 +1409,14 @@ async def _cli(args):
             )
             return
 
-    # No dedup hit (or --force): proceed with L2 + L4.
-    conceptual = await gen.generate_conceptual(args.claim, context=context)
-    genealogy = await gen.generate_genealogy(
-        lexical, conceptual, scope, skip_conceptual=args.no_conceptual
-    )
-    fp = NarrativeFingerprint(
+    # No dedup hit (or --force): run the full pipeline (L2 + L3 + L5 + L4),
+    # reusing the L1 we already generated to avoid a duplicate Haiku call.
+    fp = await gen.generate_fingerprint(
+        args.claim,
         scope=scope,
+        context=context,
+        skip_conceptual=args.no_conceptual,
         lexical=lexical,
-        conceptual=conceptual,
-        genealogy=genealogy,
-        attribution=Attribution(source="ai", model=SONNET),
     )
 
     print(fp.to_json())
