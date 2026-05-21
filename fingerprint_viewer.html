@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tributary Fingerprint Viewer</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fafaf7;
+  color: #222;
+  line-height: 1.5;
+}
+
+#drop-zone {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  transition: background-color 0.2s;
+}
+#drop-zone.dragover { background: #f0eee5; border-color: #888; }
+#drop-zone h1 { margin: 0 0 0.5rem; font-weight: 500; font-size: 2rem; }
+#drop-zone p { color: #666; margin: 0 0 1.5rem; max-width: 560px; }
+#drop-zone input[type=file] { display: none; }
+#drop-zone label {
+  cursor: pointer; padding: 0.6rem 1.4rem;
+  background: #444; color: white; border-radius: 4px;
+  font-size: 0.9rem;
+}
+#drop-zone label:hover { background: #222; }
+#error { color: #b00; margin-top: 1rem; min-height: 1.4rem; }
+
+header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+header h1 { margin: 0 0 0.4rem; font-size: 1.5rem; font-weight: 500; }
+#meta-bar { color: #777; font-size: 0.85rem; font-family: 'SF Mono', Menlo, monospace; }
+#meta-bar span { margin-right: 1.2rem; }
+#meta-bar strong { color: #555; font-weight: 500; }
+
+#tabs {
+  background: white;
+  padding: 0 2rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+#tabs button {
+  border: none;
+  background: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+#tabs button:hover { color: #222; }
+#tabs button.active { color: #222; border-bottom-color: #444; font-weight: 500; }
+
+main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+section { animation: fadein 0.2s; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+.card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+.card h2 {
+  margin: 0 0 0.6rem; font-size: 0.85rem;
+  font-weight: 500; color: #555;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.card p { margin: 0 0 0.6rem; }
+.card .title-line { font-weight: 500; }
+
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  margin: 0.15rem 0.3rem 0.15rem 0;
+  background: #efece4;
+  color: #333;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.pill.diagnostic { background: #f4ddc4; color: #6a3a06; font-weight: 500; }
+.pill.frame { background: #d8e2ee; color: #2a4669; }
+.pill.trope { background: #e6dcec; color: #4f2c5a; }
+.pill.domain { background: #d4e3d5; color: #1e4427; font-size: 1rem; padding: 0.3rem 0.9rem; }
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.entity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.entity-grid > div {
+  padding: 0.6rem 0.9rem;
+  background: #faf7ef;
+  border-radius: 4px;
+}
+.entity-grid .label {
+  font-size: 0.7rem; color: #888;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+.entity-grid .value { color: #222; }
+
+.role-legend {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  margin-bottom: 1.4rem; padding: 0.7rem 1rem;
+  background: white; border: 1px solid #e5e5e5; border-radius: 6px;
+  font-size: 0.82rem;
+}
+.role-legend div { display: flex; align-items: center; gap: 0.4rem; }
+.role-legend .dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; }
+
+.timeline-block { margin-bottom: 1.8rem; }
+.timeline-block .timeline-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 0.4rem; flex-wrap: wrap;
+}
+.timeline-block h2 {
+  margin: 0; font-size: 0.85rem; font-weight: 500;
+  color: #555; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.timeline-block .timeline-info { font-size: 0.82rem; color: #777; }
+.timeline-svg {
+  width: 100%; height: 90px;
+  background: white; border: 1px solid #e5e5e5; border-radius: 6px;
+}
+
+.detail-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid #888;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+}
+.detail-card.role-originator { border-left-color: #c0392b; }
+.detail-card.role-early-amplifier { border-left-color: #d68f1a; }
+.detail-card.role-mass-amplifier { border-left-color: #f0a500; }
+.detail-card.role-institutional-adoption { border-left-color: #2a6fa3; }
+.detail-card.role-critic { border-left-color: #6f3e8e; }
+.detail-card.role-mention { border-left-color: #888; }
+.detail-card .head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;
+}
+.detail-card .date {
+  font-family: 'SF Mono', Menlo, monospace;
+  color: #555; font-size: 0.9rem;
+}
+.detail-card .role-tag {
+  font-size: 0.72rem; padding: 0.15rem 0.6rem;
+  border-radius: 999px; background: #eee; color: #555;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.detail-card .role-tag.originator { background: #fad7d1; color: #832018; }
+.detail-card .role-tag.early-amplifier { background: #f7e0bb; color: #6a4308; }
+.detail-card .role-tag.mass-amplifier { background: #fae7b8; color: #6a4d06; }
+.detail-card .role-tag.institutional-adoption { background: #cfe0ee; color: #1b486f; }
+.detail-card .role-tag.critic { background: #e2d2ec; color: #4a275a; }
+.detail-card .role-tag.mention { background: #eaeaea; color: #444; }
+.detail-card .role-tag.unknown { background: #eaeaea; color: #666; }
+.detail-card .title-line { font-weight: 500; margin-bottom: 0.3rem; }
+.detail-card .author { color: #666; font-size: 0.9rem; margin-bottom: 0.6rem; }
+.detail-card .quote {
+  padding: 0.6rem 0.9rem; background: #faf7ef;
+  border-radius: 4px; font-style: italic; color: #333;
+  margin-bottom: 0.6rem;
+}
+.detail-card .field { font-size: 0.85rem; color: #555; margin-top: 0.5rem; }
+.detail-card .field .label {
+  font-weight: 500; color: #444;
+  text-transform: uppercase; font-size: 0.68rem;
+  letter-spacing: 0.06em; display: block; margin-bottom: 0.15rem;
+}
+.detail-card a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
+.detail-card a:hover { text-decoration: underline; }
+
+.collapse {
+  background: white; border: 1px solid #e5e5e5;
+  border-radius: 6px; margin-bottom: 1rem;
+}
+.collapse summary {
+  padding: 0.7rem 1.2rem; cursor: pointer;
+  font-weight: 500; font-size: 0.9rem; color: #444;
+}
+.collapse[open] summary { border-bottom: 1px solid #eee; }
+.collapse .body {
+  padding: 1rem 1.2rem; font-size: 0.85rem;
+  color: #444; white-space: pre-wrap; line-height: 1.6;
+}
+
+.empty { color: #999; font-style: italic; margin: 0; }
+code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
+
+circle.instance { cursor: pointer; transition: opacity 0.1s; }
+circle.instance:hover { opacity: 0.7; }
+.tick { fill: #aaa; font-size: 10px; font-family: 'SF Mono', Menlo, monospace; }
+.lineage-line { stroke: #ddd; stroke-width: 1; }
+</style>
+</head>
+<body>
+
+<div id="drop-zone">
+  <h1>Tributary Fingerprint Viewer</h1>
+  <p>Drag a fingerprint JSON file here, or click to browse. Self-contained — runs entirely in your browser, no data leaves your machine.</p>
+  <label for="file-input">Browse...</label>
+  <input type="file" id="file-input" accept="application/json,.json">
+  <div id="error"></div>
+</div>
+
+<div id="viewer" hidden>
+  <header>
+    <h1 id="claim-phrase"></h1>
+    <div id="meta-bar"></div>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="overview" class="active">Overview</button>
+    <button data-tab="lexical">L1 Lexical</button>
+    <button data-tab="conceptual">L2 Conceptual</button>
+    <button data-tab="rhetorical">L3 Rhetorical</button>
+    <button data-tab="lineages">L4 Lineages</button>
+    <button data-tab="taxonomic">L5 Taxonomic</button>
+  </nav>
+
+  <main>
+    <section data-panel="overview"></section>
+    <section data-panel="lexical" hidden></section>
+    <section data-panel="conceptual" hidden></section>
+    <section data-panel="rhetorical" hidden></section>
+    <section data-panel="lineages" hidden></section>
+    <section data-panel="taxonomic" hidden></section>
+  </main>
+</div>
+
+<script>
+const ROLE_COLORS = {
+  'originator':              '#c0392b',
+  'early-amplifier':         '#d68f1a',
+  'mass-amplifier':          '#f0a500',
+  'institutional-adoption':  '#2a6fa3',
+  'critic':                  '#6f3e8e',
+  'mention':                 '#888',
+  'unknown':                 '#bbb',
+};
+const ROLE_ORDER = ['originator','early-amplifier','mass-amplifier','institutional-adoption','critic','mention','unknown'];
+
+let currentFP = null;
+
+const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+const errorDiv = document.getElementById('error');
+const viewer = document.getElementById('viewer');
+
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) loadFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => { if (e.target.files.length) loadFile(e.target.files[0]); });
+
+function loadFile(file) {
+  errorDiv.textContent = '';
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const fp = JSON.parse(reader.result);
+      if (!fp.fingerprint_id || !fp.lexical) {
+        throw new Error('Not a recognizable fingerprint JSON — missing fingerprint_id or lexical layer');
+      }
+      render(fp);
+    } catch (e) {
+      errorDiv.textContent = 'Failed to load: ' + e.message;
+    }
+  };
+  reader.onerror = () => { errorDiv.textContent = 'File read error.'; };
+  reader.readAsText(file);
+}
+
+function render(fp) {
+  currentFP = fp;
+  dropZone.hidden = true;
+  viewer.hidden = false;
+
+  document.getElementById('claim-phrase').textContent =
+    fp.lexical.canonical_phrase || '(no canonical phrase)';
+
+  const meta = document.getElementById('meta-bar');
+  meta.innerHTML = '';
+  addMeta(meta, 'id', fp.fingerprint_id);
+  addMeta(meta, 'created', (fp.created_at || '').split('T')[0]);
+  const scope = fp.scope || {};
+  const window = (scope.time_window_start || '—') + ' to ' + (scope.time_window_end || 'present');
+  addMeta(meta, 'scope', `${scope.language || 'en'} · ${scope.region || 'global'} · ${window}`);
+  addMeta(meta, 'schema', fp.taxonomy_version || '?');
+
+  renderOverview(fp);
+  renderLexical(fp);
+  renderConceptual(fp);
+  renderRhetorical(fp);
+  renderLineages(fp);
+  renderTaxonomic(fp);
+
+  document.querySelectorAll('#tabs button').forEach(btn => {
+    btn.onclick = () => switchTab(btn.dataset.tab);
+  });
+  switchTab('overview');
+}
+
+function addMeta(parent, label, value) {
+  const span = document.createElement('span');
+  span.innerHTML = `<strong>${escapeHtml(label)}:</strong> ${escapeHtml(value || '')}`;
+  parent.appendChild(span);
+}
+
+function switchTab(name) {
+  document.querySelectorAll('#tabs button').forEach(b =>
+    b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('section[data-panel]').forEach(s =>
+    s.hidden = s.dataset.panel !== name);
+  // Redraw timelines on activation; SVG clientWidth is 0 while hidden, so
+  // we have to draw after the panel is visible.
+  if (name === 'lineages' && currentFP) {
+    const lex = currentFP.genealogy?.lexical?.attestation_log || [];
+    const con = currentFP.genealogy?.conceptual?.attestation_log || [];
+    requestAnimationFrame(() => {
+      drawTimeline('timeline-lexical', lex);
+      drawTimeline('timeline-conceptual', con);
+    });
+  }
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function instancesByRole(log) {
+  const grouped = {};
+  ROLE_ORDER.forEach(r => grouped[r] = []);
+  (log || []).forEach(i => {
+    const r = i.amplifier_role || 'unknown';
+    if (grouped[r]) grouped[r].push(i); else grouped.unknown.push(i);
+  });
+  return grouped;
+}
+
+function instanceLine(i) {
+  return `<div style="margin: 0.4rem 0; font-size: 0.92rem;">
+    <strong>${escapeHtml(i.date || '?')}</strong> · ${escapeHtml(i.author || '')} — ${escapeHtml(i.source_title || '')}
+  </div>`;
+}
+
+function renderOverview(fp) {
+  const panel = document.querySelector('[data-panel=overview]');
+  const lex = fp.genealogy?.lexical || {};
+  const con = fp.genealogy?.conceptual || {};
+  const lexLog = lex.attestation_log || [];
+  const conLog = con.attestation_log || [];
+  const lexByRole = instancesByRole(lexLog);
+  const conByRole = instancesByRole(conLog);
+
+  const lexOrig = lexByRole.originator[0] || lexLog[0];
+  const conOrig = conByRole.originator[0] || conLog[0];
+  const massAmps = lexByRole['mass-amplifier'].concat(conByRole['mass-amplifier']).slice(0, 5);
+  const institutional = lexByRole['institutional-adoption'].concat(conByRole['institutional-adoption']);
+  const critics = lexByRole.critic.concat(conByRole.critic);
+
+  panel.innerHTML = `
+    <div class="summary-grid">
+      <div class="card">
+        <h2>Phrase Origin</h2>
+        ${lexOrig ? `
+          <div class="title-line">${escapeHtml(lexOrig.date || '?')} · ${escapeHtml(lexOrig.author || '')}</div>
+          <p style="color:#666; font-size:0.9rem;">${escapeHtml(lexOrig.source_title || '')}</p>
+          ${lexOrig.exact_quote ? `<p class="quote" style="background:#faf7ef; padding:0.5rem 0.7rem; border-radius:4px; font-style:italic; color:#444;">"${escapeHtml(lexOrig.exact_quote.slice(0, 280))}"</p>` : ''}
+        ` : '<p class="empty">No lexical attestation found.</p>'}
+      </div>
+      <div class="card">
+        <h2>Conceptual Origin</h2>
+        ${conOrig ? `
+          <div class="title-line">${escapeHtml(conOrig.date || '?')} · ${escapeHtml(conOrig.author || '')}</div>
+          <p style="color:#666; font-size:0.9rem;">${escapeHtml(conOrig.source_title || '')}</p>
+          ${conOrig.exact_quote ? `<p class="quote" style="background:#faf7ef; padding:0.5rem 0.7rem; border-radius:4px; font-style:italic; color:#444;">"${escapeHtml(conOrig.exact_quote.slice(0, 280))}"</p>` : ''}
+        ` : '<p class="empty">No conceptual ancestor found.</p>'}
+      </div>
+    </div>
+
+    ${massAmps.length ? `<div class="card">
+      <h2>Mass Amplifiers</h2>
+      ${massAmps.map(instanceLine).join('')}
+    </div>` : ''}
+
+    ${institutional.length ? `<div class="card">
+      <h2>Institutional Adoption</h2>
+      ${institutional.map(instanceLine).join('')}
+    </div>` : ''}
+
+    ${critics.length ? `<div class="card">
+      <h2>Critics</h2>
+      ${critics.map(instanceLine).join('')}
+    </div>` : ''}
+
+    <div class="card">
+      <h2>Stats</h2>
+      <div class="entity-grid">
+        <div><div class="label">Lexical instances</div><div class="value">${lexLog.length}</div></div>
+        <div><div class="label">Conceptual contributors</div><div class="value">${conLog.length}</div></div>
+        <div><div class="label">Lexical status</div><div class="value">${escapeHtml(lex.status || 'unknown')}</div></div>
+        <div><div class="label">Conceptual status</div><div class="value">${escapeHtml(con.status || 'unknown')}</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLexical(fp) {
+  const panel = document.querySelector('[data-panel=lexical]');
+  const l = fp.lexical || {};
+  panel.innerHTML = `
+    <div class="card">
+      <h2>Canonical Phrase</h2>
+      <p style="font-size: 1.1rem;">${escapeHtml(l.canonical_phrase || '')}</p>
+    </div>
+    <div class="card">
+      <h2>Phrase Variants</h2>
+      ${(l.phrase_variants || []).map(v => `<span class="pill">${escapeHtml(v)}</span>`).join('') || '<p class="empty">None</p>'}
+    </div>
+    <div class="card">
+      <h2>Diagnostic N-grams</h2>
+      <p style="color:#666; font-size:0.85rem; margin-bottom:0.6rem;">The lexical fingerprints that drive earliest-use search.</p>
+      ${(l.diagnostic_ngrams || []).map(n => `<span class="pill diagnostic">${escapeHtml(n)}</span>`).join('') || '<p class="empty">None</p>'}
+    </div>
+    <div class="card">
+      <h2>Stopword-stripped Signature</h2>
+      <code>${escapeHtml(l.stopword_stripped_signature || '')}</code>
+    </div>
+  `;
+}
+
+function renderConceptual(fp) {
+  const panel = document.querySelector('[data-panel=conceptual]');
+  const c = fp.conceptual || {};
+  const ent = c.entities || {};
+  panel.innerHTML = `
+    <div class="card">
+      <h2>Claim Predicate</h2>
+      <p style="font-size: 1.05rem;">${escapeHtml(c.claim_predicate || '')}</p>
+    </div>
+    <div class="card">
+      <h2>Causal Structure</h2>
+      <p>${escapeHtml(c.causal_structure || '')}</p>
+    </div>
+    <div class="card">
+      <h2>Entities</h2>
+      ${Object.keys(ent).length ? `<div class="entity-grid">
+        ${Object.entries(ent).map(([k, v]) => `
+          <div>
+            <div class="label">${escapeHtml(k)}</div>
+            <div class="value">${escapeHtml(v)}</div>
+          </div>
+        `).join('')}
+      </div>` : '<p class="empty">None extracted</p>'}
+    </div>
+  `;
+}
+
+function renderRhetorical(fp) {
+  const panel = document.querySelector('[data-panel=rhetorical]');
+  const r = fp.rhetorical || {};
+  const v = r.valence || {};
+  const hasContent = (r.frame_primitives || []).length || v.villain || v.victim || v.hero
+                     || r.epistemic_stance || r.register;
+  panel.innerHTML = `
+    ${!hasContent ? '<div class="card"><p class="empty">L3 rhetorical layer was not generated for this fingerprint.</p></div>' : ''}
+    <div class="card">
+      <h2>Frame Primitives</h2>
+      ${(r.frame_primitives || []).map(p => `<span class="pill frame">${escapeHtml(p)}</span>`).join('') || '<p class="empty">None</p>'}
+    </div>
+    <div class="card">
+      <h2>Valence</h2>
+      <div class="entity-grid">
+        <div><div class="label">Villain</div><div class="value">${escapeHtml(v.villain || '—')}</div></div>
+        <div><div class="label">Victim</div><div class="value">${escapeHtml(v.victim || '—')}</div></div>
+        <div><div class="label">Hero</div><div class="value">${escapeHtml(v.hero || '—')}</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Tone</h2>
+      <div class="entity-grid">
+        <div><div class="label">Epistemic stance</div><div class="value">${escapeHtml(r.epistemic_stance || '—')}</div></div>
+        <div><div class="label">Register</div><div class="value">${escapeHtml(r.register || '—')}</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLineages(fp) {
+  const panel = document.querySelector('[data-panel=lineages]');
+  const lex = fp.genealogy?.lexical || {};
+  const con = fp.genealogy?.conceptual || {};
+  const lexLog = lex.attestation_log || [];
+  const conLog = con.attestation_log || [];
+
+  panel.innerHTML = `
+    <div class="role-legend">
+      ${ROLE_ORDER.map(role => `
+        <div><span class="dot" style="background:${ROLE_COLORS[role]};"></span> ${role}</div>
+      `).join('')}
+    </div>
+
+    <div class="timeline-block">
+      <div class="timeline-header">
+        <h2>Lexical Lineage</h2>
+        <div class="timeline-info">status: ${escapeHtml(lex.status || 'unknown')} · earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances</div>
+      </div>
+      <svg class="timeline-svg" id="timeline-lexical"></svg>
+    </div>
+
+    <div class="timeline-block">
+      <div class="timeline-header">
+        <h2>Conceptual Lineage</h2>
+        <div class="timeline-info">status: ${escapeHtml(con.status || 'unknown')} · earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances</div>
+      </div>
+      <svg class="timeline-svg" id="timeline-conceptual"></svg>
+    </div>
+
+    <p style="color:#777; font-size:0.85rem; margin: 0 0 1rem;">Click any dot to see the full instance details.</p>
+    <div id="instance-detail"></div>
+
+    <details class="collapse">
+      <summary>Lexical adversarial notes</summary>
+      <div class="body">${escapeHtml(lex.adversarial_notes || '(no adversarial notes recorded)')}</div>
+    </details>
+
+    <details class="collapse">
+      <summary>Conceptual adversarial notes</summary>
+      <div class="body">${escapeHtml(con.adversarial_notes || '(no adversarial notes recorded)')}</div>
+    </details>
+  `;
+}
+
+function drawTimeline(svgId, instances) {
+  const svg = document.getElementById(svgId);
+  if (!svg) return;
+  svg.innerHTML = '';
+  const ns = 'http://www.w3.org/2000/svg';
+  const width = svg.clientWidth || 800;
+  const height = 90;
+  const padding = 36;
+  const axisY = height / 2;
+
+  if (!instances.length) {
+    const text = document.createElementNS(ns, 'text');
+    text.setAttribute('x', '50%'); text.setAttribute('y', '50%');
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('fill', '#aaa');
+    text.setAttribute('font-size', '12');
+    text.textContent = 'No instances';
+    svg.appendChild(text);
+    return;
+  }
+
+  const datedInstances = instances
+    .map(i => ({ ...i, year: parseYear(i.date) }))
+    .filter(i => i.year != null);
+
+  if (datedInstances.length === 0) {
+    const text = document.createElementNS(ns, 'text');
+    text.setAttribute('x', '50%'); text.setAttribute('y', '50%');
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('fill', '#aaa');
+    text.setAttribute('font-size', '12');
+    text.textContent = 'No dated instances';
+    svg.appendChild(text);
+    return;
+  }
+
+  const years = datedInstances.map(i => i.year);
+  const minYear = Math.min(...years);
+  const maxYear = Math.max(...years);
+  const range = Math.max(1, maxYear - minYear);
+
+  // Axis line
+  const line = document.createElementNS(ns, 'line');
+  line.setAttribute('x1', padding); line.setAttribute('x2', width - padding);
+  line.setAttribute('y1', axisY); line.setAttribute('y2', axisY);
+  line.setAttribute('class', 'lineage-line');
+  svg.appendChild(line);
+
+  // Year ticks
+  const tickCount = 5;
+  for (let i = 0; i <= tickCount; i++) {
+    const x = padding + ((width - 2 * padding) * i / tickCount);
+    const year = Math.round(minYear + (range * i / tickCount));
+    const tick = document.createElementNS(ns, 'line');
+    tick.setAttribute('x1', x); tick.setAttribute('x2', x);
+    tick.setAttribute('y1', axisY - 4); tick.setAttribute('y2', axisY + 4);
+    tick.setAttribute('stroke', '#bbb');
+    svg.appendChild(tick);
+    const text = document.createElementNS(ns, 'text');
+    text.setAttribute('x', x); text.setAttribute('y', axisY + 24);
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('class', 'tick');
+    text.textContent = year;
+    svg.appendChild(text);
+  }
+
+  // Group dots by x position (within 8px) and stack vertically when overlapping
+  const bucketed = {};
+  datedInstances.forEach(inst => {
+    const x = padding + ((inst.year - minYear) / range) * (width - 2 * padding);
+    const key = Math.round(x / 8) * 8;
+    (bucketed[key] = bucketed[key] || []).push({ inst, x });
+  });
+
+  Object.values(bucketed).forEach(bucket => {
+    bucket.forEach(({ inst, x }, idx) => {
+      const verticalOffset = (idx - (bucket.length - 1) / 2) * 12;
+      const role = inst.amplifier_role || 'unknown';
+      const color = ROLE_COLORS[role] || ROLE_COLORS.unknown;
+      const circle = document.createElementNS(ns, 'circle');
+      circle.setAttribute('cx', x);
+      circle.setAttribute('cy', axisY - 18 + verticalOffset);
+      circle.setAttribute('r', 5);
+      circle.setAttribute('fill', color);
+      circle.setAttribute('stroke', 'white');
+      circle.setAttribute('stroke-width', 1.5);
+      circle.setAttribute('class', 'instance');
+      const tooltip = `${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}`;
+      const title = document.createElementNS(ns, 'title');
+      title.textContent = tooltip;
+      circle.appendChild(title);
+      circle.addEventListener('click', () => showDetail(inst));
+      svg.appendChild(circle);
+    });
+  });
+}
+
+function parseYear(dateStr) {
+  if (!dateStr) return null;
+  const m = String(dateStr).match(/^(\d{4})/);
+  return m ? parseInt(m[1], 10) : null;
+}
+
+function showDetail(inst) {
+  const role = inst.amplifier_role || 'unknown';
+  const detail = document.getElementById('instance-detail');
+  detail.innerHTML = `
+    <div class="detail-card role-${role}">
+      <div class="head">
+        <span class="date">${escapeHtml(inst.date || '?')}</span>
+        <span class="role-tag ${role}">${escapeHtml(role)}</span>
+      </div>
+      <div class="title-line">${escapeHtml(inst.source_title || '')}</div>
+      <div class="author">${escapeHtml(inst.author || '')}</div>
+      ${inst.exact_quote ? `<div class="quote">"${escapeHtml(inst.exact_quote)}"</div>` : ''}
+      ${inst.lexical_form_seen ? `<div class="field"><span class="label">Form seen</span>${escapeHtml(inst.lexical_form_seen)}</div>` : ''}
+      ${inst.evidence ? `<div class="field"><span class="label">Evidence</span>${escapeHtml(inst.evidence)}</div>` : ''}
+      ${inst.role_evidence ? `<div class="field"><span class="label">Role evidence</span>${escapeHtml(inst.role_evidence)}</div>` : ''}
+      ${inst.confidence != null ? `<div class="field"><span class="label">Confidence</span>${inst.confidence}</div>` : ''}
+      ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
+    </div>
+  `;
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderTaxonomic(fp) {
+  const panel = document.querySelector('[data-panel=taxonomic]');
+  const t = fp.taxonomic || {};
+  panel.innerHTML = `
+    <div class="card">
+      <h2>Domain</h2>
+      <span class="pill domain">${escapeHtml(t.domain || 'other')}</span>
+      <span style="color:#777; font-size:0.85rem; margin-left:0.6rem;">confidence: ${t.domain_confidence ?? 0}</span>
+    </div>
+    <div class="card">
+      <h2>Tropes</h2>
+      ${(t.tropes || []).map(tp => `<span class="pill trope">${escapeHtml(tp)}</span>`).join('') || '<p class="empty">None invoked</p>'}
+    </div>
+    <div class="card">
+      <h2>Inductive Cluster IDs</h2>
+      ${(t.inductive_cluster_ids || []).length
+        ? (t.inductive_cluster_ids || []).map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('')
+        : '<p class="empty">Not yet generated — cross-corpus clustering is a deferred feature.</p>'}
+    </div>
+  `;
+}
+
+</script>
+</body>
+</html>
