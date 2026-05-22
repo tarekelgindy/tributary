@@ -261,6 +261,19 @@ section { animation: fadein 0.2s; }
 .mutation-field.distorted .mutation-label { color: #c45719; }
 .mutation-field .mutation-text { color: #333; }
 
+.timeline-stats-card { margin-bottom: 1.8rem; }
+.timeline-stats-card h2 {
+  margin: 0 0 0.7rem; font-size: 0.85rem; font-weight: 500;
+  color: #555; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.stats-chart {
+  width: 100%; height: 110px;
+  background: #fafaf7; border: 1px solid #ececec; border-radius: 4px;
+  margin-top: 0.8rem;
+}
+.stats-chart text.tick { fill: #888; font-size: 10px; font-family: 'SF Mono', Menlo, monospace; }
+.stats-chart rect:hover { opacity: 0.75; }
+
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
 
@@ -397,9 +410,13 @@ function switchTab(name) {
   if (name === 'lineages' && currentFP) {
     const lex = currentFP.genealogy?.lexical?.attestation_log || [];
     const con = currentFP.genealogy?.conceptual?.attestation_log || [];
+    const lexStats = currentFP.genealogy?.lexical?.timeline_stats || {};
+    const conStats = currentFP.genealogy?.conceptual?.timeline_stats || {};
     requestAnimationFrame(() => {
       drawTimeline('timeline-lexical', lex);
       drawTimeline('timeline-conceptual', con);
+      drawStatsChart('stats-lexical', lexStats);
+      drawStatsChart('stats-conceptual', conStats);
     });
   }
 }
@@ -428,6 +445,111 @@ function instanceLine(i) {
 function truncate(s, max) {
   s = String(s || '');
   return s.length > max ? s.slice(0, max - 3) + '...' : s;
+}
+
+function fmtDaysHuman(d) {
+  if (d == null) return '—';
+  if (d < 730) return `${d.toLocaleString()} days`;
+  return `${d.toLocaleString()} days (${(d / 365).toFixed(1)} years)`;
+}
+
+function renderTimelineStats(label, stats, svgId) {
+  if (!stats || !stats.active_from) return '';
+  return `
+    <div class="card timeline-stats-card">
+      <h2>${escapeHtml(label)} Timeline Stats</h2>
+      <div class="entity-grid">
+        <div>
+          <div class="label">Active period</div>
+          <div class="value">${escapeHtml(stats.active_from)} → ${escapeHtml(stats.active_through)}</div>
+        </div>
+        <div>
+          <div class="label">Span</div>
+          <div class="value">${stats.years_active} yr (${stats.years_with_activity} active years)</div>
+        </div>
+        <div>
+          <div class="label">Peak year</div>
+          <div class="value">${escapeHtml(stats.peak_year || '—')} (${stats.peak_year_count || 0} instance${stats.peak_year_count === 1 ? '' : 's'})</div>
+        </div>
+        <div>
+          <div class="label">Originator → first mass-amplifier</div>
+          <div class="value">${fmtDaysHuman(stats.originator_to_mass_amplifier_days)}</div>
+        </div>
+        <div>
+          <div class="label">Originator → institutional adoption</div>
+          <div class="value">${fmtDaysHuman(stats.originator_to_institutional_adoption_days)}</div>
+        </div>
+        <div>
+          <div class="label">Days since latest</div>
+          <div class="value">${stats.days_since_latest != null ? stats.days_since_latest.toLocaleString() : '—'}</div>
+        </div>
+      </div>
+      <svg class="stats-chart" id="${svgId}"></svg>
+    </div>
+  `;
+}
+
+function drawStatsChart(svgId, stats) {
+  const svg = document.getElementById(svgId);
+  if (!svg || !stats || !stats.instances_per_year_by_role) return;
+  svg.innerHTML = '';
+
+  const ns = 'http://www.w3.org/2000/svg';
+  const width = svg.clientWidth || 800;
+  const height = 110;
+  const padding = 30;
+  const chartHeight = height - 28;       // leave room for x-axis labels
+
+  const yearKeys = Object.keys(stats.instances_per_year_by_role)
+    .map(Number).filter(y => !Number.isNaN(y));
+  if (yearKeys.length === 0) return;
+
+  yearKeys.sort((a, b) => a - b);
+  const minYear = yearKeys[0];
+  const maxYear = yearKeys[yearKeys.length - 1];
+  const range = Math.max(1, maxYear - minYear);
+  const maxCount = Math.max(...Object.values(stats.instances_per_year || {}));
+
+  // Bar width auto-scales — narrow bars for wide spans (e.g. 1377-2023),
+  // chunkier bars for compact ones (e.g. 1992-2018).
+  const barWidth = Math.max(2, (width - 2 * padding) / Math.max(range, 10));
+
+  Object.entries(stats.instances_per_year_by_role).forEach(([yearStr, byRole]) => {
+    const year = Number(yearStr);
+    if (Number.isNaN(year)) return;
+    const x = padding + ((year - minYear) / range) * (width - 2 * padding);
+    let stackedHeight = 0;
+    ROLE_ORDER.forEach(role => {
+      const count = byRole[role] || 0;
+      if (count === 0) return;
+      const segHeight = (count / maxCount) * chartHeight;
+      const rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', x - barWidth / 2);
+      rect.setAttribute('y', chartHeight - stackedHeight - segHeight);
+      rect.setAttribute('width', barWidth);
+      rect.setAttribute('height', segHeight);
+      rect.setAttribute('fill', ROLE_COLORS[role] || ROLE_COLORS.unknown);
+      const title = document.createElementNS(ns, 'title');
+      title.textContent = `${year} · ${role}: ${count}`;
+      rect.appendChild(title);
+      svg.appendChild(rect);
+      stackedHeight += segHeight;
+    });
+  });
+
+  // Axis ticks
+  const tickCount = 5;
+  for (let i = 0; i <= tickCount; i++) {
+    const x = padding + ((width - 2 * padding) * i / tickCount);
+    const year = Math.round(minYear + (range * i / tickCount));
+    const text = document.createElementNS(ns, 'text');
+    text.setAttribute('x', x);
+    text.setAttribute('y', chartHeight + 16);
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('class', 'tick');
+    text.textContent = year;
+    svg.appendChild(text);
+  }
 }
 
 function renderMutationsBlock(label, mutations, instances) {
@@ -641,6 +763,7 @@ function renderLineages(fp) {
       </div>
       <svg class="timeline-svg" id="timeline-lexical"></svg>
     </div>
+    ${renderTimelineStats('Lexical', lex.timeline_stats, 'stats-lexical')}
 
     <div class="timeline-block">
       <div class="timeline-header">
@@ -649,6 +772,7 @@ function renderLineages(fp) {
       </div>
       <svg class="timeline-svg" id="timeline-conceptual"></svg>
     </div>
+    ${renderTimelineStats('Conceptual', con.timeline_stats, 'stats-conceptual')}
 
     <p style="color:#777; font-size:0.85rem; margin: 0 0 1rem;">Click any dot to see the full instance details.</p>
     <div id="instance-detail"></div>
