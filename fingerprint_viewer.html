@@ -398,6 +398,25 @@ section { animation: fadein 0.2s; }
 }
 .evidence-card .ev-link a:hover { text-decoration: underline; }
 
+/* Verification badges — used on evidence cards, detail cards, and social posts */
+.verify-badge {
+  display: inline-block; padding: 0.1rem 0.5rem;
+  border-radius: 999px; font-size: 0.72rem; font-weight: 500;
+  margin-right: 0.3rem;
+}
+.verify-badge.verified            { background: #d4e8d6; color: #1e5128; }
+.verify-badge.unchecked           { background: #eaeaea; color: #666; }
+.verify-badge.url-error           { background: #fad7d1; color: #832018; }
+.verify-badge.fetch-error         { background: #fad7d1; color: #832018; }
+.verify-badge.quote-not-found     { background: #f9e5c0; color: #6a4308; }
+.archive-link {
+  display: inline-block; padding: 0.1rem 0.5rem;
+  background: #e6dcec; color: #4f2c5a;
+  border-radius: 999px; font-size: 0.72rem;
+  margin-right: 0.3rem; text-decoration: none;
+}
+.archive-link:hover { text-decoration: underline; }
+
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
 
@@ -574,6 +593,33 @@ function truncate(s, max) {
   return s.length > max ? s.slice(0, max - 3) + '...' : s;
 }
 
+function verifyBadge(item) {
+  // item is any object with verification fields (InformationSource,
+  // AttestedInstance, SocialAttestedInstance). Returns badge HTML or ''
+  // if the item predates the verification feature (status: 'unchecked'
+  // with no notes — likely an old fingerprint).
+  const status = item.verification_status || 'unchecked';
+  const notes = item.verification_notes || '';
+  if (status === 'unchecked' && !notes) return '';
+  const symbol = {
+    'verified': '✓ verified',
+    'unchecked': '↻ unchecked',
+    'url-error': '✗ URL error',
+    'fetch-error': '✗ fetch error',
+    'quote-not-found': '⚠ quote not found',
+  }[status] || status;
+  const tooltipParts = [status];
+  if (notes) tooltipParts.push(notes);
+  const tooltip = tooltipParts.join(' — ');
+  return `<span class="verify-badge ${escapeHtml(status)}" title="${escapeHtml(tooltip)}">${escapeHtml(symbol)}</span>`;
+}
+
+function archiveBadge(item) {
+  const archive = item.archive_url || '';
+  if (!archive) return '';
+  return `<a href="${escapeHtml(archive)}" target="_blank" rel="noopener" class="archive-link" title="Wayback snapshot">📦 archive</a>`;
+}
+
 function fmtDaysHuman(d) {
   if (d == null) return '—';
   if (d < 730) return `${d.toLocaleString()} days`;
@@ -651,6 +697,7 @@ function renderSocialSpread(lineage) {
         <div class="post-role">
           <span class="role-tag ${role}">${escapeHtml(role)}</span>
           ${p.role_evidence ? ` <span style="color:#666;">— ${escapeHtml(p.role_evidence)}</span>` : ''}
+          ${verifyBadge(p)}${archiveBadge(p)}
           ${p.post_url ? `<a href="${escapeHtml(p.post_url)}" target="_blank" rel="noopener" style="float:right;">↗ open</a>` : ''}
         </div>
       </div>
@@ -1106,6 +1153,7 @@ function showDetail(inst) {
       ${inst.evidence ? `<div class="field"><span class="label">Evidence</span>${escapeHtml(inst.evidence)}</div>` : ''}
       ${inst.role_evidence ? `<div class="field"><span class="label">Role evidence</span>${escapeHtml(inst.role_evidence)}</div>` : ''}
       ${inst.confidence != null ? `<div class="field"><span class="label">Confidence</span>${inst.confidence}</div>` : ''}
+      ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
     </div>
   `;
@@ -1192,6 +1240,7 @@ function renderEvidenceCard(s) {
       ${statusBadge}
       ${s.description ? `<div class="ev-description">${escapeHtml(s.description)}</div>` : ''}
       ${s.notes ? `<div class="ev-notes">${escapeHtml(s.notes)}</div>` : ''}
+      ${(verifyBadge(s) || archiveBadge(s)) ? `<div style="margin-bottom:0.4rem;">${verifyBadge(s)}${archiveBadge(s)}</div>` : ''}
       ${s.source_url ? `<div class="ev-link"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">↗ ${escapeHtml(s.source_url)}</a></div>` : ''}
     </div>
   `;
