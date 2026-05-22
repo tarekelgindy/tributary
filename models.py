@@ -557,6 +557,11 @@ class AttestedInstance:
     evidence: str = ""
     amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
     role_evidence: str = ""             # short justification for the assigned role
+    # Verification fields — populated by the post-generation URL+quote check
+    verified: bool = False
+    verification_status: str = "unchecked"  # unchecked / verified / url-error / fetch-error / quote-not-found
+    verification_notes: str = ""
+    archive_url: str = ""               # Wayback snapshot if the live URL is down
 
     def __post_init__(self):
         if not self.instance_id:
@@ -576,6 +581,10 @@ class AttestedInstance:
             "evidence": self.evidence,
             "amplifier_role": self.amplifier_role.value,
             "role_evidence": self.role_evidence,
+            "verified": self.verified,
+            "verification_status": self.verification_status,
+            "verification_notes": self.verification_notes,
+            "archive_url": self.archive_url,
         }
 
 
@@ -596,6 +605,11 @@ class SocialAttestedInstance:
     replies: int = 0
     amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
     role_evidence: str = ""
+    # Verification — URL existence only; post_text rarely scrapable from page
+    verified: bool = False
+    verification_status: str = "unchecked"
+    verification_notes: str = ""
+    archive_url: str = ""
 
     def __post_init__(self):
         if not self.instance_id:
@@ -616,6 +630,10 @@ class SocialAttestedInstance:
             "replies": self.replies,
             "amplifier_role": self.amplifier_role.value,
             "role_evidence": self.role_evidence,
+            "verified": self.verified,
+            "verification_status": self.verification_status,
+            "verification_notes": self.verification_notes,
+            "archive_url": self.archive_url,
         }
 
 
@@ -728,6 +746,11 @@ class InformationSource:
     status: SourceStatus = SourceStatus.CURRENT
     status_notes: str = ""           # only when status != current
     notes: str = ""                  # one-sentence justification of direction
+    # Verification — URL existence check; description is summary not quote
+    verified: bool = False
+    verification_status: str = "unchecked"
+    verification_notes: str = ""
+    archive_url: str = ""
 
     def __post_init__(self):
         if not self.source_id:
@@ -748,6 +771,10 @@ class InformationSource:
             "status": self.status.value,
             "status_notes": self.status_notes,
             "notes": self.notes,
+            "verified": self.verified,
+            "verification_status": self.verification_status,
+            "verification_notes": self.verification_notes,
+            "archive_url": self.archive_url,
         }
 
 

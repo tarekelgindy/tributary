@@ -31,6 +31,7 @@ from pathlib import Path
 from typing import Optional
 
 import anthropic
+import httpx
 
 from models import (
     AmplifierRole,
@@ -923,19 +924,39 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
         except ValueError:
             role = AmplifierRole.UNKNOWN
         return AttestedInstance(
-            date=str(d.get("date", "")).strip(),
-            source_url=str(d.get("source_url", "")).strip(),
-            source_title=str(d.get("source_title", "")).strip(),
-            author=str(d.get("author", "")).strip(),
-            lexical_form_seen=str(d.get("lexical_form_seen", "")).strip(),
-            exact_quote=str(d.get("exact_quote", "")).strip(),
+            date=_clean_text_field(d.get("date")),
+            source_url=_clean_text_field(d.get("source_url")),
+            source_title=_clean_text_field(d.get("source_title")),
+            author=_clean_text_field(d.get("author")),
+            lexical_form_seen=_clean_text_field(d.get("lexical_form_seen")),
+            exact_quote=_clean_text_field(d.get("exact_quote")),
             confidence=float(d.get("confidence", 0.5)),
-            evidence=str(d.get("evidence", "")).strip(),
+            evidence=_clean_text_field(d.get("evidence")),
             amplifier_role=role,
-            role_evidence=str(d.get("role_evidence", "")).strip(),
+            role_evidence=_clean_text_field(d.get("role_evidence")),
         )
     except (TypeError, ValueError):
         return None
+
+
+_EMPTY_SENTINELS = {"none", "n/a", "null", "nil", "not applicable", "not specified"}
+
+
+def _clean_text_field(value) -> str:
+    """Strip and treat 'None' / 'N/A' / 'null' / etc. as empty string.
+
+    Models sometimes fill optional text fields with the literal string 'None'
+    instead of leaving them empty. This normalizes those to true empty
+    strings so the viewer and downstream consumers don't display
+    placeholder text as if it were real content."""
+    if not value:
+        return ""
+    s = str(value).strip()
+    if not s:
+        return ""
+    if s.lower() in _EMPTY_SENTINELS:
+        return ""
+    return s
 
 
 def _information_source_from_dict(d: dict) -> InformationSource:
@@ -947,8 +968,8 @@ def _information_source_from_dict(d: dict) -> InformationSource:
         except ValueError:
             return default
     return InformationSource(
-        title=str(d.get("title", "")).strip(),
-        description=str(d.get("description", "")).strip(),
+        title=_clean_text_field(d.get("title")),
+        description=_clean_text_field(d.get("description")),
         direction=_safe_enum(d.get("direction"), SourceDirection,
                              SourceDirection.SHARED_CONTEXT),
         strength=_safe_enum(d.get("strength"), SourceStrength,
@@ -957,12 +978,12 @@ def _information_source_from_dict(d: dict) -> InformationSource:
                                 SourceVenue.OTHER),
         source_type=_safe_enum(d.get("source_type"), SourceType,
                                SourceType.SECONDARY),
-        source_url=str(d.get("source_url", "")).strip(),
-        date=str(d.get("date", "")).strip(),
+        source_url=_clean_text_field(d.get("source_url")),
+        date=_clean_text_field(d.get("date")),
         status=_safe_enum(d.get("status"), SourceStatus,
                           SourceStatus.CURRENT),
-        status_notes=str(d.get("status_notes", "")).strip(),
-        notes=str(d.get("notes", "")).strip(),
+        status_notes=_clean_text_field(d.get("status_notes")),
+        notes=_clean_text_field(d.get("notes")),
     )
 
 
@@ -992,6 +1013,177 @@ def _log_progress(msg: str) -> None:
     """Emit a single progress line to stderr. Used so the user can see what
     stage the pipeline is in during the ~2 minute web-search runs."""
     print(f"[{msg}]", file=sys.stderr, flush=True)
+
+
+# ---------------------------------------------------------------------------
+# Source verification (URL existence + quote-in-page + Wayback fallback)
+# ---------------------------------------------------------------------------
+
+_VERIFY_USER_AGENT = "TributaryFingerprintVerifier/0.1 (+https://github.com/tarekelgindy/tributary)"
+_VERIFY_TIMEOUT = 12.0
+
+
+async def _verify_url_exists(http: httpx.AsyncClient, url: str) -> tuple:
+    """HEAD-then-GET a URL, return (status_code or None, error_message)."""
+    if not url:
+        return None, "no url"
+    try:
+        resp = await http.head(url, follow_redirects=True, timeout=_VERIFY_TIMEOUT)
+        # Some servers reject HEAD (405) or return 5xx on HEAD but work on GET
+        if resp.status_code in (403, 405) or resp.status_code >= 500:
+            resp = await http.get(url, follow_redirects=True, timeout=_VERIFY_TIMEOUT)
+        return resp.status_code, ""
+    except httpx.TimeoutException:
+        return None, "timeout"
+    except (httpx.NetworkError, httpx.HTTPError) as e:
+        return None, f"{type(e).__name__}"
+    except Exception as e:
+        return None, f"{type(e).__name__}: {str(e)[:80]}"
+
+
+async def _verify_quote_at_url(
+    http: httpx.AsyncClient, url: str, quote: str
+) -> tuple:
+    """Check whether a fuzzy version of `quote` appears at `url`.
+    Returns (matched: bool, note: str)."""
+    if not url or not quote:
+        return False, "no url or quote"
+    quote = quote.strip()
+    if len(quote) < 12:
+        return False, "quote too short to verify"
+    try:
+        resp = await http.get(url, follow_redirects=True, timeout=_VERIFY_TIMEOUT)
+        if resp.status_code >= 400:
+            return False, f"HTTP {resp.status_code} fetching content"
+    except httpx.TimeoutException:
+        return False, "timeout fetching content"
+    except Exception as e:
+        return False, f"{type(e).__name__} fetching content"
+
+    # Strip HTML and normalize whitespace; lowercase for fuzzy match
+    text_only = re.sub(r"<[^>]+>", " ", resp.text)
+    text_norm = re.sub(r"\s+", " ", text_only.lower())
+
+    quote_words = re.findall(r"\w+", quote.lower())
+    if len(quote_words) < 4:
+        return False, "too few words to verify"
+
+    # Try several distinctive windows from the quote; if any appears in
+    # the page content, count as matched. This handles minor wording drift,
+    # boilerplate framing, paraphrase pull-quotes, etc.
+    window_size = min(6, max(3, len(quote_words) // 3))
+    step = max(1, window_size // 2)
+    for i in range(0, len(quote_words) - window_size + 1, step):
+        chunk = " ".join(quote_words[i:i + window_size])
+        if chunk in text_norm:
+            return True, "matched fuzzy quote chunk"
+    return False, "no fuzzy chunk of quote found in page"
+
+
+async def _find_wayback_snapshot(http: httpx.AsyncClient, url: str) -> str:
+    """Look up the closest Wayback Machine snapshot for `url`. Returns
+    the snapshot URL or empty string."""
+    if not url:
+        return ""
+    try:
+        api = "https://archive.org/wayback/available"
+        resp = await http.get(api, params={"url": url}, timeout=_VERIFY_TIMEOUT)
+        if resp.status_code != 200:
+            return ""
+        data = resp.json()
+        closest = (data.get("archived_snapshots") or {}).get("closest") or {}
+        if closest.get("available"):
+            return str(closest.get("url", ""))
+    except Exception:
+        pass
+    return ""
+
+
+async def _verify_information_source(http: httpx.AsyncClient, src) -> None:
+    """Verify an InformationSource's URL exists. Description is a summary,
+    not a quote, so we don't try to match it against page content."""
+    if not src.source_url:
+        src.verification_status = "unchecked"
+        src.verification_notes = "no URL to verify"
+        return
+    status, err = await _verify_url_exists(http, src.source_url)
+    if status is None:
+        archive = await _find_wayback_snapshot(http, src.source_url)
+        src.verified = False
+        src.verification_status = "fetch-error"
+        src.verification_notes = err
+        src.archive_url = archive
+        return
+    if status >= 400:
+        archive = await _find_wayback_snapshot(http, src.source_url)
+        src.verified = False
+        src.verification_status = "url-error"
+        src.verification_notes = f"HTTP {status}"
+        src.archive_url = archive
+        return
+    src.verified = True
+    src.verification_status = "verified"
+    src.verification_notes = f"URL reachable (HTTP {status})"
+
+
+async def _verify_attested(http: httpx.AsyncClient, inst, check_quote: bool) -> None:
+    """Verify an AttestedInstance's URL and (optionally) its exact_quote."""
+    if not inst.source_url:
+        inst.verification_status = "unchecked"
+        inst.verification_notes = "no URL to verify"
+        return
+    status, err = await _verify_url_exists(http, inst.source_url)
+    if status is None:
+        archive = await _find_wayback_snapshot(http, inst.source_url)
+        inst.verified = False
+        inst.verification_status = "fetch-error"
+        inst.verification_notes = err
+        inst.archive_url = archive
+        return
+    if status >= 400:
+        archive = await _find_wayback_snapshot(http, inst.source_url)
+        inst.verified = False
+        inst.verification_status = "url-error"
+        inst.verification_notes = f"HTTP {status}"
+        inst.archive_url = archive
+        return
+    if check_quote and inst.exact_quote:
+        matched, note = await _verify_quote_at_url(http, inst.source_url, inst.exact_quote)
+        if matched:
+            inst.verified = True
+            inst.verification_status = "verified"
+            inst.verification_notes = "URL + quote verified"
+        else:
+            inst.verified = False
+            inst.verification_status = "quote-not-found"
+            inst.verification_notes = note
+    else:
+        inst.verified = True
+        inst.verification_status = "verified"
+        inst.verification_notes = "URL reachable (quote not checked)"
+
+
+async def _verify_social(http: httpx.AsyncClient, post) -> None:
+    """Verify a social post URL exists. Post text is rarely directly
+    scrapable from the rendered page (JS rendering), so URL-only here."""
+    if not post.post_url:
+        post.verification_status = "unchecked"
+        post.verification_notes = "no URL to verify"
+        return
+    status, err = await _verify_url_exists(http, post.post_url)
+    if status is None:
+        post.verified = False
+        post.verification_status = "fetch-error"
+        post.verification_notes = err
+        return
+    if status >= 400:
+        post.verified = False
+        post.verification_status = "url-error"
+        post.verification_notes = f"HTTP {status}"
+        return
+    post.verified = True
+    post.verification_status = "verified"
+    post.verification_notes = f"URL reachable (HTTP {status})"
 
 
 def _parse_iso_date(s):
@@ -2036,6 +2228,57 @@ class FingerprintGenerator:
 
         return GenealogyLayer(lexical=lex_record, conceptual=con_record)
 
+    async def verify_fingerprint(
+        self, fp: NarrativeFingerprint
+    ) -> NarrativeFingerprint:
+        """Post-generation pass that checks URL existence and quote-in-page
+        for every cited source. Mutates and returns the same fingerprint.
+
+        - Evidence landscape: URL-only (descriptions are summaries, not quotes)
+        - Lexical attestation: URL + fuzzy quote match
+        - Conceptual attestation: URL-only (quotes are translations/paraphrases
+          of pre-modern texts; fuzzy match against modern transcriptions would
+          fail more often than not)
+        - Social spread: URL-only (post text rarely scrapable from rendered
+          page; auth-walled JS rendering)
+
+        On URL failure, attempts to find a Wayback Machine snapshot and
+        populates archive_url for graceful fallback in the viewer."""
+        _log_progress("Verification: starting URL + quote checks")
+        t0 = time.monotonic()
+
+        headers = {"User-Agent": _VERIFY_USER_AGENT}
+        async with httpx.AsyncClient(headers=headers, timeout=_VERIFY_TIMEOUT) as http:
+            tasks = []
+            for src in fp.evidence_landscape.sources:
+                tasks.append(_verify_information_source(http, src))
+            for inst in fp.genealogy.lexical.attestation_log:
+                tasks.append(_verify_attested(http, inst, check_quote=True))
+            for inst in fp.genealogy.conceptual.attestation_log:
+                tasks.append(_verify_attested(http, inst, check_quote=False))
+            for post in fp.genealogy.lexical.social_spread:
+                tasks.append(_verify_social(http, post))
+
+            if tasks:
+                await asyncio.gather(*tasks, return_exceptions=True)
+
+        # Aggregate stats for the progress log
+        ev_total = len(fp.evidence_landscape.sources)
+        ev_ok = sum(1 for s in fp.evidence_landscape.sources if s.verified)
+        lex_total = len(fp.genealogy.lexical.attestation_log)
+        lex_ok = sum(1 for i in fp.genealogy.lexical.attestation_log if i.verified)
+        con_total = len(fp.genealogy.conceptual.attestation_log)
+        con_ok = sum(1 for i in fp.genealogy.conceptual.attestation_log if i.verified)
+        soc_total = len(fp.genealogy.lexical.social_spread)
+        soc_ok = sum(1 for p in fp.genealogy.lexical.social_spread if p.verified)
+
+        _log_progress(
+            f"Verification done in {time.monotonic() - t0:.1f}s "
+            f"(evidence {ev_ok}/{ev_total}, lex {lex_ok}/{lex_total}, "
+            f"con {con_ok}/{con_total}, social {soc_ok}/{soc_total})"
+        )
+        return fp
+
     async def generate_fingerprint(
         self,
         claim_text: str,
@@ -2045,6 +2288,7 @@ class FingerprintGenerator:
         skip_mutations: bool = False,
         include_social: bool = False,
         skip_evidence: bool = False,
+        skip_verification: bool = False,
         lexical: Optional[LexicalLayer] = None,
     ) -> NarrativeFingerprint:
         scope = scope or Scope()
@@ -2084,7 +2328,7 @@ class FingerprintGenerator:
         genealogy = results[2]
         evidence = results[3] if not skip_evidence else EvidenceLandscape()
 
-        return NarrativeFingerprint(
+        fp = NarrativeFingerprint(
             scope=scope,
             lexical=lexical,
             conceptual=conceptual,
@@ -2094,6 +2338,13 @@ class FingerprintGenerator:
             evidence_landscape=evidence,
             attribution=Attribution(source="ai", model=SONNET),
         )
+
+        # Post-pass: URL existence + quote-in-page verification for every
+        # cited source. Pure HTTP, no API cost. Parallel-fetches all URLs.
+        if not skip_verification:
+            fp = await self.verify_fingerprint(fp)
+
+        return fp
 
 
 # ---------------------------------------------------------------------------
@@ -2218,6 +2469,7 @@ async def _cli(args):
         skip_mutations=args.no_mutations,
         include_social=args.social,
         skip_evidence=args.no_evidence,
+        skip_verification=args.no_verify,
         lexical=lexical,
     )
 
@@ -2260,6 +2512,11 @@ def main():
                         help="Skip the evidence-landscape generation (saves "
                              "~$0.15–0.25 per fingerprint). Default behavior includes "
                              "it as a core part of the output.")
+    parser.add_argument("--no-verify", action="store_true",
+                        help="Skip the post-generation URL + quote verification pass "
+                             "(URLs and quotes won't be checked against live pages; "
+                             "Wayback fallback won't be populated). Saves ~30s "
+                             "wallclock but no API cost.")
     parser.add_argument("--save", action="store_true",
                         help="Save the fingerprint to the store")
     parser.add_argument("--store-dir", default="fingerprints",
