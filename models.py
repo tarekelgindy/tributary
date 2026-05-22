@@ -431,6 +431,52 @@ class AmplifierRole(str, Enum):
     MENTION = "mention"                        # used the framing without driving spread
 
 
+class SourceDirection(str, Enum):
+    """How a piece of information relates to a claim in the evidence landscape."""
+    SUPPORTS = "supports"               # provides evidence backing the claim
+    DISPUTES = "disputes"               # provides evidence against the claim
+    REDIRECTS = "redirects"             # same starting material, different conclusion
+    SHARED_CONTEXT = "shared-context"   # accepted by all sides, relevant background
+
+
+class SourceStrength(str, Enum):
+    """How decisively a source bears on the claim."""
+    STRONG = "strong"        # compelling: large sample / robust methodology /
+                             # replicated / widely accepted
+    MODERATE = "moderate"    # decent evidence with caveats
+    WEAK = "weak"            # underpowered / contested methodology / anecdotal /
+                             # supports only a weaker version of the claim
+
+
+class SourceVenue(str, Enum):
+    """Where the source was published / who issued it."""
+    PEER_REVIEWED = "peer-reviewed"          # peer-reviewed scientific journal
+    INSTITUTIONAL = "institutional"          # govt agency, intergovernmental org, major NGO
+    NEWS_OUTLET = "news-outlet"              # mainstream journalism
+    OPINION_VENUE = "opinion-venue"          # editorial, op-ed, blog, Substack
+    AGGREGATOR = "aggregator"                # Wikipedia, encyclopedia, summary site
+    PREPRINT_SERVER = "preprint-server"      # arXiv, bioRxiv, SSRN — distinct from peer-reviewed
+    SELF_PUBLISHED = "self-published"        # personal blog, YouTube, podcast
+    OTHER = "other"
+
+
+class SourceType(str, Enum):
+    """How direct the source is — orthogonal to venue."""
+    PRIMARY = "primary"      # original research, raw data, official statement,
+                             # direct observation, original document
+    SECONDARY = "secondary"  # analysis, interpretation, review, journalism about events
+    TERTIARY = "tertiary"    # compilation of secondary sources, encyclopedia, textbook
+
+
+class SourceStatus(str, Enum):
+    """Issues with the source itself — flags retractions, supersessions, etc."""
+    CURRENT = "current"
+    RETRACTED = "retracted"
+    METHODOLOGY_DISPUTED = "methodology-disputed"
+    SUPERSEDED = "superseded"
+    CORRECTION_ISSUED = "correction-issued"
+
+
 @dataclass
 class Scope:
     """User-configurable analysis scope. v1 fixes language to English."""
@@ -534,6 +580,46 @@ class AttestedInstance:
 
 
 @dataclass
+class SocialAttestedInstance:
+    """A social-platform observation of a narrative — distinct from formal
+    AttestedInstance because platform context and engagement metrics matter
+    differently than citable sources. Lives on LineageRecord.social_spread."""
+    instance_id: str = ""
+    platform: str = ""               # "bluesky", "twitter", "reddit", etc.
+    post_url: str = ""
+    author_handle: str = ""
+    post_date: str = ""              # ISO timestamp
+    post_text: str = ""
+    matched_ngram: str = ""          # which diagnostic n-gram (or canonical phrase) matched
+    likes: int = 0
+    reposts: int = 0
+    replies: int = 0
+    amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
+    role_evidence: str = ""
+
+    def __post_init__(self):
+        if not self.instance_id:
+            key = f"{self.platform}|{self.post_url}|{self.post_date}"
+            self.instance_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+
+    def to_dict(self):
+        return {
+            "instance_id": self.instance_id,
+            "platform": self.platform,
+            "post_url": self.post_url,
+            "author_handle": self.author_handle,
+            "post_date": self.post_date,
+            "post_text": self.post_text,
+            "matched_ngram": self.matched_ngram,
+            "likes": self.likes,
+            "reposts": self.reposts,
+            "replies": self.replies,
+            "amplifier_role": self.amplifier_role.value,
+            "role_evidence": self.role_evidence,
+        }
+
+
+@dataclass
 class LineageRecord:
     """One lineage's worth of dating, attestation, and adversarial verification.
     GenealogyLayer carries two: lexical (where the phrasing comes from) and
@@ -554,6 +640,9 @@ class LineageRecord:
     adversarial_notes: str = ""
     mutations: list[Mutation] = field(default_factory=list)
     timeline_stats: dict = field(default_factory=dict)
+    social_spread: list[SocialAttestedInstance] = field(default_factory=list)
+    social_search_performed: bool = False
+    social_search_notes: str = ""
 
     def to_dict(self):
         return {
@@ -569,6 +658,9 @@ class LineageRecord:
             "adversarial_notes": self.adversarial_notes,
             "mutations": [m.to_dict() for m in self.mutations],
             "timeline_stats": self.timeline_stats,
+            "social_spread": [s.to_dict() for s in self.social_spread],
+            "social_search_performed": self.social_search_performed,
+            "social_search_notes": self.social_search_notes,
         }
 
 
@@ -620,6 +712,66 @@ class TaxonomicLayer:
 
 
 @dataclass
+class InformationSource:
+    """A single piece of information in the claim's epistemic landscape —
+    a study, dataset, document, or event tagged by how it relates to the
+    claim and by its quality characteristics."""
+    source_id: str = ""
+    title: str = ""
+    description: str = ""            # one-sentence summary
+    direction: SourceDirection = SourceDirection.SHARED_CONTEXT
+    strength: SourceStrength = SourceStrength.MODERATE
+    source_venue: SourceVenue = SourceVenue.OTHER
+    source_type: SourceType = SourceType.SECONDARY
+    source_url: str = ""
+    date: str = ""                   # ISO date if known
+    status: SourceStatus = SourceStatus.CURRENT
+    status_notes: str = ""           # only when status != current
+    notes: str = ""                  # one-sentence justification of direction
+
+    def __post_init__(self):
+        if not self.source_id:
+            key = f"{self.source_url}|{self.title}|{self.date}"
+            self.source_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+
+    def to_dict(self):
+        return {
+            "source_id": self.source_id,
+            "title": self.title,
+            "description": self.description,
+            "direction": self.direction.value,
+            "strength": self.strength.value,
+            "source_venue": self.source_venue.value,
+            "source_type": self.source_type.value,
+            "source_url": self.source_url,
+            "date": self.date,
+            "status": self.status.value,
+            "status_notes": self.status_notes,
+            "notes": self.notes,
+        }
+
+
+@dataclass
+class EvidenceLandscape:
+    """The information ecosystem around a claim — what supports, disputes,
+    redirects, or contextualizes it. Curated (not exhaustive), generated
+    via web search + classification. Takes no side on whether the claim
+    is true; surfaces the epistemic terrain so the reader can judge."""
+    sources: list[InformationSource] = field(default_factory=list)
+    summary: str = ""                # one-paragraph synthesis
+    search_notes: str = ""           # what was searched, what was under-covered
+    generated_at: str = ""
+
+    def to_dict(self):
+        return {
+            "sources": [s.to_dict() for s in self.sources],
+            "summary": self.summary,
+            "search_notes": self.search_notes,
+            "generated_at": self.generated_at,
+        }
+
+
+@dataclass
 class NarrativeFingerprint:
     """Codified signature of a narrative — searchable, categorizable, dateable.
 
@@ -637,6 +789,7 @@ class NarrativeFingerprint:
     rhetorical: RhetoricalLayer = field(default_factory=RhetoricalLayer)
     genealogy: GenealogyLayer = field(default_factory=GenealogyLayer)
     taxonomic: TaxonomicLayer = field(default_factory=TaxonomicLayer)
+    evidence_landscape: EvidenceLandscape = field(default_factory=EvidenceLandscape)
 
     attribution: Attribution = None
 
@@ -668,6 +821,7 @@ class NarrativeFingerprint:
             "rhetorical": self.rhetorical.to_dict(),
             "genealogy": self.genealogy.to_dict(),
             "taxonomic": self.taxonomic.to_dict(),
+            "evidence_landscape": self.evidence_landscape.to_dict(),
             "attribution": self.attribution.to_dict() if self.attribution else None,
         }
 

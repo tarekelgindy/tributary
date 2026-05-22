@@ -38,15 +38,23 @@ from models import (
     AttestedInstance,
     ConceptualLayer,
     Domain,
+    EvidenceLandscape,
     FramePrimitive,
     GenealogyLayer,
     GenealogyStatus,
+    InformationSource,
     LexicalLayer,
     LineageRecord,
     Mutation,
     NarrativeFingerprint,
     RhetoricalLayer,
     Scope,
+    SocialAttestedInstance,
+    SourceDirection,
+    SourceStatus,
+    SourceStrength,
+    SourceType,
+    SourceVenue,
     TaxonomicLayer,
 )
 
@@ -643,6 +651,184 @@ Output ONLY the JSON object.
 """
 
 
+SOCIAL_ROLE_SYSTEM = """\
+You are classifying social-media posts by their role in spreading a
+narrative on a single platform.
+
+You will receive:
+  - A narrative claim (the canonical framing being traced)
+  - A batch of posts mentioning or using the framing, each with index,
+    author handle, date, text, and engagement (likes, reposts)
+
+For each post, assign exactly one of these amplifier_role values:
+
+  mention            uses the framing in passing; most posts will be this
+  mass-amplifier     drove visible spread — high engagement, or a notable
+                     account that crystallized the framing
+  early-amplifier    posted earlier than most in the batch and contributed
+                     to spread before mainstream uptake
+  critic             explicitly disagrees with, rebuts, or mocks the framing
+  institutional-adoption  posted by a recognizable institution (news
+                          outlet, political org, government agency, brand)
+                          using the framing officially
+  originator         genuinely the originating use on this platform —
+                     RARE; only assign if confident
+
+Bias toward "mention." Use engagement as a SIGNAL but not the only one —
+post text matters more than counts for distinguishing critic from
+amplifier. Sarcastic, dismissive, or rebuttal posts about the framing
+are critic, not mention.
+
+Output ONLY JSON with one classification per input post:
+
+{
+  "classifications": [
+    {"idx": 0, "role": "mention", "role_evidence": "passing use of the phrase, no signal of intent to spread"},
+    {"idx": 1, "role": "mass-amplifier", "role_evidence": "47 reposts, account with large following, restates canonical framing as call-to-action"},
+    {"idx": 2, "role": "critic", "role_evidence": "post explicitly argues the framing is misleading and links a rebuttal"}
+  ]
+}
+
+The `idx` field MUST match the index from the input batch. Provide a
+classification for EVERY post in the batch.
+"""
+
+
+EVIDENCE_LANDSCAPE_SYSTEM = """\
+You are mapping the information landscape around a narrative claim.
+
+Goal: give the reader a curated list of 8-15 pieces of information they
+should know when evaluating this claim — supporting, disputing,
+suggesting alternative conclusions, or providing shared background. You
+do NOT take a side on whether the claim is true. You map the epistemic
+terrain so the reader can judge.
+
+DIRECTION TAGS:
+
+  supports          provides evidence backing the claim
+  disputes          provides evidence against the claim
+  redirects         addresses the same starting material but suggests a
+                    different conclusion — alternative causal hypothesis,
+                    alternative interpretation, different question
+  shared-context    accepted by all sides — common factual ground,
+                    background, definitional context. Often the most
+                    clarifying entries because they're uncontested.
+
+PER-SOURCE METADATA:
+
+  strength          strong / moderate / weak
+                      strong   = compelling: large sample, robust
+                                 methodology, replicated, or widely
+                                 accepted (for shared-context)
+                      moderate = decent evidence with caveats
+                      weak     = underpowered, contested methodology,
+                                 anecdotal, or supports/disputes only a
+                                 weaker version of the claim
+
+  source_venue      peer-reviewed / institutional / news-outlet /
+                    opinion-venue / aggregator / preprint-server /
+                    self-published / other
+                      peer-reviewed   = peer-reviewed scientific journal
+                      institutional   = govt agency, intergovernmental
+                                        org, major NGO
+                      news-outlet     = mainstream journalism
+                      opinion-venue   = editorial, op-ed, blog, Substack
+                      aggregator      = Wikipedia, encyclopedia
+                      preprint-server = arXiv, bioRxiv, SSRN, etc.
+                      self-published  = personal blog, YouTube, podcast
+                      other
+
+  source_type       primary / secondary / tertiary
+                      primary    = original research, raw data, official
+                                   statement, direct observation,
+                                   original document
+                      secondary  = analysis, interpretation, review,
+                                   journalism about events
+                      tertiary   = compilation of secondary sources,
+                                   encyclopedia, textbook
+
+  source_url        canonical URL when locatable
+
+  date              ISO date (YYYY-MM-DD); YYYY-01-01 if only year known
+
+  status            current / retracted / methodology-disputed /
+                    superseded / correction-issued.
+                    ALWAYS flag retractions, methodology disputes, and
+                    supersessions when known.
+
+  status_notes      one sentence if status != current
+                    (e.g. "retracted 2010 for data falsification and
+                    ethics violations")
+
+  notes             one sentence justifying the direction tag
+
+CRITICAL INSTRUCTIONS:
+
+- SOURCE TYPE PREFERENCE: when a primary source exists and is citable,
+  PREFER it over secondary coverage. If a news article references a
+  study, locate and cite the study itself. Cite the meta-analysis
+  rather than the journalism about the meta-analysis.
+
+- Flag venue/type mismatches in `notes` (e.g. "aggregator entry treats
+  this as primary but the underlying source is a secondary summary").
+
+- BALANCE DIRECTIONS where evidence exists in multiple directions. Do
+  not return 12 supports and 0 disputes if disputes exist in the
+  literature.
+
+- Include 2-4 shared-context entries when relevant — they're often the
+  most clarifying because they're the uncontested factual ground.
+
+- Prefer concrete citable items (specific studies, datasets, official
+  documents, dated events) over abstract concepts.
+
+- Target 8-15 sources total. Fewer is fine for claims with limited
+  literature; more is fine for rich evidence bases.
+
+ALSO PROVIDE:
+
+  summary           one paragraph (3-5 sentences) on the overall shape
+                    of the landscape. Example:
+                    "Strong institutional consensus disputes the claim,
+                    with four peer-reviewed meta-analyses. Supporting
+                    evidence is primarily a single retracted study
+                    (Wakefield 1998) and parental observation. The
+                    common ground is the rising autism prevalence data,
+                    which both sides explain differently — supporters
+                    point to vaccine schedule changes; mainstream
+                    medicine cites diagnostic criteria changes and
+                    genetic factors."
+
+  search_notes      1-2 sentences on what categories of evidence you
+                    searched and any you may have under-covered.
+
+OUTPUT FORMAT — JSON ONLY:
+
+{
+  "sources": [
+    {
+      "title": "Wakefield 1998 Lancet Study",
+      "description": "Case-series claiming a link between MMR and autism in 12 children",
+      "direction": "supports",
+      "strength": "weak",
+      "source_venue": "peer-reviewed",
+      "source_type": "primary",
+      "source_url": "https://...",
+      "date": "1998-02-28",
+      "status": "retracted",
+      "status_notes": "Retracted by The Lancet in 2010 for data falsification and ethics violations",
+      "notes": "Original supporting evidence cited by the claim; methodology and conclusions thoroughly discredited"
+    },
+    ...
+  ],
+  "summary": "...",
+  "search_notes": "..."
+}
+
+Output ONLY the JSON object.
+"""
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -752,6 +938,34 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
         return None
 
 
+def _information_source_from_dict(d: dict) -> InformationSource:
+    """Parse an InformationSource from a model-emitted dict, tolerating
+    invalid enum values by falling back to safe defaults."""
+    def _safe_enum(value, enum_cls, default):
+        try:
+            return enum_cls(str(value or "").strip())
+        except ValueError:
+            return default
+    return InformationSource(
+        title=str(d.get("title", "")).strip(),
+        description=str(d.get("description", "")).strip(),
+        direction=_safe_enum(d.get("direction"), SourceDirection,
+                             SourceDirection.SHARED_CONTEXT),
+        strength=_safe_enum(d.get("strength"), SourceStrength,
+                            SourceStrength.MODERATE),
+        source_venue=_safe_enum(d.get("source_venue"), SourceVenue,
+                                SourceVenue.OTHER),
+        source_type=_safe_enum(d.get("source_type"), SourceType,
+                               SourceType.SECONDARY),
+        source_url=str(d.get("source_url", "")).strip(),
+        date=str(d.get("date", "")).strip(),
+        status=_safe_enum(d.get("status"), SourceStatus,
+                          SourceStatus.CURRENT),
+        status_notes=str(d.get("status_notes", "")).strip(),
+        notes=str(d.get("notes", "")).strip(),
+    )
+
+
 def _response_text(response) -> str:
     """Concatenate all text blocks from a Messages API response."""
     out = []
@@ -800,6 +1014,26 @@ def _role_str(inst) -> str:
     if hasattr(r, "value"):
         return r.value
     return str(r)
+
+
+def _sample_social_posts(posts: list, target: int) -> list:
+    """Pick a representative subset of social posts: half top-engaged,
+    half spread evenly across time. Cheaper and simpler than the strategy
+    in social_search.py's _sample_representative, but adequate for
+    amplifier-role classification."""
+    if len(posts) <= target:
+        return posts
+    by_engagement = sorted(
+        posts, key=lambda p: (p.likes or 0) + (p.reposts or 0), reverse=True
+    )
+    half = max(1, target // 2)
+    top = by_engagement[:half]
+    selected_urls = {p.url for p in top}
+    remaining = [p for p in by_engagement[half:] if p.url not in selected_urls]
+    remaining.sort(key=lambda p: p.posted_at or "")
+    step = max(1, len(remaining) // max(1, target - half))
+    spread = remaining[::step][:target - half]
+    return top + spread
 
 
 def compute_timeline_stats(lineage: "LineageRecord") -> dict:
@@ -1513,6 +1747,243 @@ class FingerprintGenerator:
         )
         return mutations
 
+    async def search_social_spread(
+        self,
+        lexical: LexicalLayer,
+        scope: Scope,
+        target_sample_size: int = 40,
+    ) -> tuple[list[SocialAttestedInstance], str]:
+        """Search Bluesky for instances of the diagnostic n-grams, sample a
+        representative subset, classify each post's amplifier_role via Haiku,
+        and return as structured entries.
+
+        Gracefully returns ([], explanation) if Bluesky is unavailable
+        (missing creds, atproto not installed, API down, etc.) so the
+        pipeline never fails on social being absent."""
+        try:
+            from social_search import BlueskySearch
+        except ImportError as e:
+            return [], f"social_search module unavailable: {e}"
+
+        _log_progress("Social spread: starting Bluesky search")
+        t0 = time.monotonic()
+
+        bsky = BlueskySearch()
+        try:
+            # social_search.py prints status to stdout; redirect to stderr
+            # so it doesn't pollute the fingerprint JSON output channel.
+            import contextlib
+            with contextlib.redirect_stdout(sys.stderr):
+                await bsky.login()
+
+                queries: list[str] = []
+                if lexical.canonical_phrase:
+                    queries.append(f'"{lexical.canonical_phrase}"')
+                for n in (lexical.diagnostic_ngrams or []):
+                    if n and n not in queries:
+                        queries.append(n)
+                queries = queries[:6]   # cap to limit API load
+
+                since = scope.time_window_start or None
+                until = scope.time_window_end or None
+
+                all_posts: list = []
+                seen_urls: set[str] = set()
+                url_to_query: dict[str, str] = {}
+                for query in queries:
+                    for sort_mode in ("top", "latest"):
+                        posts = await bsky.search_posts(
+                            query=query,
+                            sort=sort_mode,
+                            since=since,
+                            until=until,
+                            limit=100,
+                        )
+                        for post in posts:
+                            if post.url not in seen_urls:
+                                seen_urls.add(post.url)
+                                url_to_query[post.url] = query
+                                all_posts.append(post)
+
+                await bsky.close()
+
+            if not all_posts:
+                notes = (
+                    f"Searched {len(queries)} queries on Bluesky "
+                    f"(canonical phrase + diagnostic n-grams). No matching "
+                    f"posts found within the requested time window."
+                )
+                _log_progress(f"Social spread done in {time.monotonic() - t0:.1f}s "
+                              f"(0 posts found)")
+                return [], notes
+
+            sample = (_sample_social_posts(all_posts, target_sample_size)
+                      if len(all_posts) > target_sample_size else all_posts)
+
+            instances: list[SocialAttestedInstance] = []
+            for p in sample:
+                instances.append(SocialAttestedInstance(
+                    platform=getattr(p, "platform", "bluesky"),
+                    post_url=p.url,
+                    author_handle=p.author,
+                    post_date=p.posted_at or "",
+                    post_text=p.text or "",
+                    matched_ngram=url_to_query.get(p.url, ""),
+                    likes=int(p.likes or 0),
+                    reposts=int(p.reposts or 0),
+                    replies=int(getattr(p, "replies", 0) or 0),
+                ))
+
+            if instances:
+                instances = await self._classify_social_roles(instances, lexical)
+
+            notes = (
+                f"Searched {len(queries)} queries on Bluesky "
+                f"(canonical phrase + diagnostic n-grams). Found "
+                f"{len(all_posts)} unique posts; sampled "
+                f"{len(sample)} for role classification."
+            )
+            _log_progress(
+                f"Social spread done in {time.monotonic() - t0:.1f}s "
+                f"({len(all_posts)} found, {len(instances)} classified)"
+            )
+            return instances, notes
+
+        except Exception as e:
+            try:
+                await bsky.close()
+            except Exception:
+                pass
+            msg = f"Social search skipped: {type(e).__name__}: {e}"
+            _log_progress(msg)
+            return [], msg
+
+    async def _classify_social_roles(
+        self,
+        instances: list[SocialAttestedInstance],
+        lexical: LexicalLayer,
+    ) -> list[SocialAttestedInstance]:
+        """One Haiku call classifies the whole batch. Cheap and avoids
+        per-post round-trips."""
+        posts_data = [
+            {
+                "idx": i,
+                "author": inst.author_handle,
+                "date": (inst.post_date or "")[:10],
+                "text": (inst.post_text or "")[:300],
+                "likes": inst.likes,
+                "reposts": inst.reposts,
+            }
+            for i, inst in enumerate(instances)
+        ]
+
+        user_content = (
+            f"NARRATIVE: {lexical.canonical_phrase}\n\n"
+            f"POSTS:\n{json.dumps(posts_data, indent=2)}"
+        )
+
+        response = await _create_with_retry(
+            self.client,
+            model=HAIKU,
+            max_tokens=4096,
+            system=[{"type": "text", "text": SOCIAL_ROLE_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+        )
+
+        data = _parse_json_safe(_response_text(response))
+        raw = data.get("classifications") or []
+        by_idx: dict = {}
+        for c in raw:
+            if isinstance(c, dict) and "idx" in c:
+                try:
+                    by_idx[int(c["idx"])] = c
+                except (TypeError, ValueError):
+                    continue
+
+        for i, inst in enumerate(instances):
+            c = by_idx.get(i, {})
+            role_str = str(c.get("role", "")).strip().lower()
+            try:
+                inst.amplifier_role = (
+                    AmplifierRole(role_str) if role_str else AmplifierRole.MENTION
+                )
+            except ValueError:
+                inst.amplifier_role = AmplifierRole.MENTION
+            inst.role_evidence = str(c.get("role_evidence", "")).strip()
+
+        return instances
+
+    async def generate_evidence_landscape(
+        self,
+        claim_text: str,
+        lexical: LexicalLayer,
+        conceptual: ConceptualLayer,
+        scope: Scope,
+    ) -> EvidenceLandscape:
+        """Map the information landscape around the claim via Sonnet +
+        web_search. Returns a curated list of 8-15 sources tagged by
+        direction (supports/disputes/redirects/shared-context) plus
+        venue / type / strength / status metadata."""
+        _log_progress("Evidence landscape: search starting (web_search)")
+        t0 = time.monotonic()
+
+        user_content = (
+            f"CLAIM:\n{claim_text}\n\n"
+            f"CANONICAL FRAMING:\n{lexical.canonical_phrase}\n\n"
+            f"NEUTRAL CLAIM (vocabulary-independent):\n"
+            f"{conceptual.claim_predicate}\n\n"
+            f"ENTITIES:\n{json.dumps(conceptual.entities, indent=2)}\n\n"
+            f"SCOPE: {_scope_clause(scope)}\n\n"
+            "Map the information landscape around this claim. Find 8-15 "
+            "concrete citable sources spanning supporting evidence, disputing "
+            "evidence, alternative interpretations, and shared common ground. "
+            "Prefer primary sources when available."
+        )
+
+        response = await _create_with_retry(
+            self.client,
+            model=SONNET,
+            max_tokens=8192,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            system=[{"type": "text", "text": EVIDENCE_LANDSCAPE_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
+        )
+
+        raw_text = _response_text(response)
+        data = _parse_json_safe(raw_text)
+
+        sources: list[InformationSource] = []
+        for raw in (data.get("sources") or []):
+            if not isinstance(raw, dict):
+                continue
+            sources.append(_information_source_from_dict(raw))
+
+        summary = str(data.get("summary", "")).strip()
+        search_notes = str(data.get("search_notes", "")).strip()
+
+        if not sources:
+            debug_path = _save_debug_response("evidence_landscape", raw_text)
+            diag = _response_diagnostics(response)
+            sys.stderr.write(
+                f"[warning: evidence landscape returned 0 sources "
+                f"(text: {len(raw_text)} chars, {diag}, raw saved: {debug_path})]\n"
+            )
+
+        _log_progress(
+            f"Evidence landscape done in {time.monotonic() - t0:.1f}s "
+            f"({len(sources)} sources, summary: {len(summary)} chars)"
+        )
+
+        return EvidenceLandscape(
+            sources=sources,
+            summary=summary,
+            search_notes=search_notes,
+            generated_at=datetime.now(timezone.utc).isoformat(),
+        )
+
     async def generate_genealogy(
         self,
         lexical: LexicalLayer,
@@ -1520,6 +1991,7 @@ class FingerprintGenerator:
         scope: Scope,
         skip_conceptual: bool = False,
         skip_mutations: bool = False,
+        include_social: bool = False,
     ) -> GenealogyLayer:
         """Build both lexical and conceptual lineages in parallel, then
         post-process each with mutation analysis (unless skipped)."""
@@ -1547,6 +2019,17 @@ class FingerprintGenerator:
             lex_record.mutations = lex_muts
             con_record.mutations = con_muts
 
+        # Social spread: lexical only, opt-in. Gracefully skipped if Bluesky
+        # creds missing or atproto unavailable — the call itself reports its
+        # own failure mode via social_search_notes.
+        if include_social:
+            social_posts, social_notes = await self.search_social_spread(
+                lexical, scope
+            )
+            lex_record.social_spread = social_posts
+            lex_record.social_search_performed = True
+            lex_record.social_search_notes = social_notes
+
         # Timeline stats: pure-Python post-process, always runs (free).
         lex_record.timeline_stats = compute_timeline_stats(lex_record)
         con_record.timeline_stats = compute_timeline_stats(con_record)
@@ -1560,12 +2043,14 @@ class FingerprintGenerator:
         context: str = "",
         skip_conceptual: bool = False,
         skip_mutations: bool = False,
+        include_social: bool = False,
+        skip_evidence: bool = False,
         lexical: Optional[LexicalLayer] = None,
     ) -> NarrativeFingerprint:
         scope = scope or Scope()
-        # Phase 1: L1 + L2 (Haiku, parallel) — needed as input to L3/L5.
-        # If the caller pre-generated L1 (e.g. for early dedup in the CLI),
-        # reuse it and only run L2 here.
+        # Phase 1: L1 + L2 (Haiku, parallel) — needed as input to L3/L5
+        # and the evidence landscape. If the caller pre-generated L1
+        # (e.g. for early dedup in the CLI), reuse it and only run L2.
         if lexical is None:
             lexical, conceptual = await asyncio.gather(
                 self.generate_lexical(claim_text, context=context),
@@ -1573,17 +2058,32 @@ class FingerprintGenerator:
             )
         else:
             conceptual = await self.generate_conceptual(claim_text, context=context)
-        # Phase 2: L3 + L5 (Haiku, fast) and L4 (Sonnet + web_search, slow)
-        # all in parallel. L3/L5 finish in seconds while L4 grinds on.
-        rhetorical, taxonomic, genealogy = await asyncio.gather(
+
+        # Phase 2: independent tasks run concurrently. L3/L5 are Haiku and
+        # finish in seconds; L4 lineages and evidence landscape are
+        # Sonnet+web_search and take longer. The whole phase wallclock is
+        # max(L3, L5, L4, evidence) which is essentially max(L4, evidence).
+        tasks = [
             self.generate_rhetorical(claim_text, lexical, conceptual, context=context),
             self.generate_taxonomic(claim_text, lexical, conceptual, context=context),
             self.generate_genealogy(
                 lexical, conceptual, scope,
                 skip_conceptual=skip_conceptual,
                 skip_mutations=skip_mutations,
+                include_social=include_social,
             ),
-        )
+        ]
+        if not skip_evidence:
+            tasks.append(self.generate_evidence_landscape(
+                claim_text, lexical, conceptual, scope,
+            ))
+        results = await asyncio.gather(*tasks)
+
+        rhetorical = results[0]
+        taxonomic = results[1]
+        genealogy = results[2]
+        evidence = results[3] if not skip_evidence else EvidenceLandscape()
+
         return NarrativeFingerprint(
             scope=scope,
             lexical=lexical,
@@ -1591,6 +2091,7 @@ class FingerprintGenerator:
             rhetorical=rhetorical,
             taxonomic=taxonomic,
             genealogy=genealogy,
+            evidence_landscape=evidence,
             attribution=Attribution(source="ai", model=SONNET),
         )
 
@@ -1715,6 +2216,8 @@ async def _cli(args):
         context=context,
         skip_conceptual=args.no_conceptual,
         skip_mutations=args.no_mutations,
+        include_social=args.social,
+        skip_evidence=args.no_evidence,
         lexical=lexical,
     )
 
@@ -1748,6 +2251,15 @@ def main():
     parser.add_argument("--no-mutations", action="store_true",
                         help="Skip the mutation analysis post-pass over the lineages "
                              "(saves ~$0.10–0.25 per fingerprint)")
+    parser.add_argument("--social", action="store_true",
+                        help="Search Bluesky for platform-native uses of the diagnostic "
+                             "n-grams and attach to the lexical lineage. Requires "
+                             "BLUESKY_HANDLE + BLUESKY_APP_PASSWORD in env; gracefully "
+                             "skipped if missing. Adds ~$0.01–0.05 per fingerprint.")
+    parser.add_argument("--no-evidence", action="store_true",
+                        help="Skip the evidence-landscape generation (saves "
+                             "~$0.15–0.25 per fingerprint). Default behavior includes "
+                             "it as a core part of the output.")
     parser.add_argument("--save", action="store_true",
                         help="Save the fingerprint to the store")
     parser.add_argument("--store-dir", default="fingerprints",
