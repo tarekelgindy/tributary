@@ -163,7 +163,12 @@ For each instance you find, report:
   role_evidence     one-sentence justification for the assigned role
 
 Amplifier role definitions:
-  originator              earliest credible articulation of the framing
+  originator              the chronologically earliest credible articulation
+                          of the framing in this chain — EXACTLY ONE INSTANCE
+                          may have this role, the oldest one. Subsequent
+                          instances that originate a new variant or
+                          re-articulate in new vocabulary are early-amplifiers
+                          or mass-amplifiers, NOT additional originators.
   early-amplifier         spread the framing before mainstream uptake
   mass-amplifier          drove broad public adoption (e.g. viral campaign,
                           national TV speech, viral op-ed)
@@ -174,7 +179,8 @@ Amplifier role definitions:
   mention                 used the framing in passing without driving spread
 
 Assign exactly one role per instance. Use evidence-based judgement, not
-inference from author identity alone.
+inference from author identity alone. Only the chronologically earliest
+instance in your returned chain may be tagged as originator.
 
 Return JSON of this shape:
 
@@ -234,10 +240,18 @@ Return JSON:
   "verification_notes": "what you searched, what you ruled out, any caveats — NOT the place for discoveries"
 }}
 
-If no earlier instances are found, return an empty list and state plainly in
-verification_notes that you searched and found nothing predating
-{proposed_date}. A clean negative result is valuable — it strengthens the
-origin claim.
+If no earlier instances are found, return an empty list AND populate
+verification_notes with a substantive audit trail describing what you
+actually searched. A clean negative result is valuable — but ONLY if
+documented. An empty earlier_instances list with an empty
+verification_notes field is useless to the reader.
+
+MANDATORY when earlier_instances is empty: verification_notes must
+explain (a) which n-grams or variants you searched for, (b) which
+specific older sources / traditions / time periods you checked, (c) any
+near-misses you considered and why you ruled them out, and (d) the
+limitations of the search (e.g. paywalled archives, undigitized text).
+At minimum 3-5 sentences.
 
 Output ONLY the JSON object.
 """
@@ -353,15 +367,30 @@ For each direct contributor, report:
                     articulate the same structural claim in vocabulary
                     that DIFFERS from the diagnostic n-grams?
   amplifier_role    one of: originator, early-amplifier, mass-amplifier,
-                    institutional-adoption, critic, mention. Originator =
-                    the earliest-known articulation in this lineage;
-                    early-amplifier = wrote a follow-on building the
-                    intellectual tradition; mass-amplifier = popularized
-                    the claim to a broad audience (e.g. bestselling
-                    nonfiction, viral essay, documentary);
-                    institutional-adoption = official platform / major
-                    party / govt agency / flagship academic journal;
-                    critic = pushed back; mention = passing reference.
+                    institutional-adoption, critic, mention.
+
+                    CRITICAL: ONLY ONE instance in the returned chain may
+                    be tagged "originator" — the chronologically earliest
+                    one. Subsequent foundational figures (Smith, Marx,
+                    etc.) who articulate the claim in their own
+                    vocabulary are early-amplifiers or mass-amplifiers,
+                    NOT additional originators. Do not assign "originator"
+                    to Marx's Capital if an older ancestor (e.g. Smith,
+                    Aristotle, Ibn Khaldun) is also in your chain.
+
+                    Role definitions:
+                      originator              = chronologically earliest;
+                                                exactly one
+                      early-amplifier         = built the intellectual
+                                                tradition
+                      mass-amplifier          = popularized to a broad
+                                                audience (bestseller,
+                                                viral essay, documentary)
+                      institutional-adoption  = official platform / major
+                                                party / govt / flagship
+                                                academic journal
+                      critic                  = pushed back
+                      mention                 = passing reference
   role_evidence     one-sentence justification for the assigned role
 
 Distinctions:
@@ -425,8 +454,19 @@ Return JSON:
   "verification_notes": "what traditions you checked, what you ruled out, any caveats — NOT the place for discoveries"
 }}
 
-If nothing earlier is found, return an empty list and say so plainly. A
-clean negative result is valuable.
+If nothing earlier is found, return an empty list AND populate
+verification_notes with a substantive audit trail describing what you
+actually searched. A clean negative result is valuable — but ONLY if
+documented. An empty earlier_ancestors list with an empty
+verification_notes field is useless to the reader.
+
+MANDATORY when earlier_ancestors is empty: verification_notes must
+explain (a) which intellectual traditions / philosophical schools /
+language traditions you checked, (b) which named earlier figures or
+texts you considered and why each was ruled out (e.g. "Plato Republic —
+addresses inequality but not the specific structural mechanism"), and
+(c) any limitations of the search (e.g. untranslated pre-modern texts,
+oral traditions). At minimum 4-6 sentences.
 
 Output ONLY the JSON object.
 """
@@ -738,6 +778,97 @@ def _log_progress(msg: str) -> None:
     """Emit a single progress line to stderr. Used so the user can see what
     stage the pipeline is in during the ~2 minute web-search runs."""
     print(f"[{msg}]", file=sys.stderr, flush=True)
+
+
+def _parse_iso_date(s):
+    """Parse the leading YYYY-MM-DD portion of an ISO date string into a
+    `date`, or return None if unparseable."""
+    if not s:
+        return None
+    try:
+        return date.fromisoformat(str(s)[:10])
+    except (ValueError, TypeError):
+        return None
+
+
+def _role_str(inst) -> str:
+    """Extract `amplifier_role` as a plain string, tolerant of both live
+    enum instances and string values that may appear after deserialization."""
+    r = getattr(inst, "amplifier_role", None)
+    if r is None:
+        return "unknown"
+    if hasattr(r, "value"):
+        return r.value
+    return str(r)
+
+
+def compute_timeline_stats(lineage: "LineageRecord") -> dict:
+    """Pure-Python time-series stats over a lineage's attestation_log.
+
+    Idempotent and free to run. Captures the active span, year-by-year
+    instance distribution (both flat and broken out by amplifier role),
+    peak year, and milestone latencies (originator -> first mass amplifier
+    / first institutional adoption / first critic). Empty dict if the
+    chain has no parseable dates."""
+    log = lineage.attestation_log or []
+    if not log:
+        return {}
+
+    dated = []
+    for inst in log:
+        d = _parse_iso_date(getattr(inst, "date", ""))
+        if d is not None:
+            dated.append((d, inst))
+    if not dated:
+        return {}
+
+    dated.sort(key=lambda x: x[0])
+    earliest_date, _ = dated[0]
+    latest_date, _ = dated[-1]
+
+    per_year: dict = {}
+    per_year_by_role: dict = {}
+    for d, inst in dated:
+        y = str(d.year)
+        per_year[y] = per_year.get(y, 0) + 1
+        role = _role_str(inst)
+        per_year_by_role.setdefault(y, {})
+        per_year_by_role[y][role] = per_year_by_role[y].get(role, 0) + 1
+
+    peak_year = max(per_year, key=per_year.get)
+    peak_year_count = per_year[peak_year]
+
+    def first_with_role(target: str):
+        for d, inst in dated:
+            if _role_str(inst) == target:
+                return d
+        return None
+
+    originator_d = first_with_role("originator")
+    first_mass_d = first_with_role("mass-amplifier")
+    first_inst_d = first_with_role("institutional-adoption")
+    first_critic_d = first_with_role("critic")
+
+    def days_between(a, b):
+        return (b - a).days if (a is not None and b is not None and b >= a) else None
+
+    today = datetime.now(timezone.utc).date()
+
+    return {
+        "active_from": earliest_date.isoformat(),
+        "active_through": latest_date.isoformat(),
+        "active_span_days": (latest_date - earliest_date).days,
+        "years_active": latest_date.year - earliest_date.year,
+        "years_with_activity": len(per_year),
+        "instances_per_year": per_year,
+        "instances_per_year_by_role": per_year_by_role,
+        "peak_year": peak_year,
+        "peak_year_count": peak_year_count,
+        "originator_to_mass_amplifier_days": days_between(originator_d, first_mass_d),
+        "originator_to_institutional_adoption_days": days_between(originator_d, first_inst_d),
+        "originator_to_critic_days": days_between(originator_d, first_critic_d),
+        "days_since_latest": (today - latest_date).days,
+    }
 
 
 def _response_diagnostics(response) -> str:
@@ -1415,6 +1546,10 @@ class FingerprintGenerator:
             )
             lex_record.mutations = lex_muts
             con_record.mutations = con_muts
+
+        # Timeline stats: pure-Python post-process, always runs (free).
+        lex_record.timeline_stats = compute_timeline_stats(lex_record)
+        con_record.timeline_stats = compute_timeline_stats(con_record)
 
         return GenealogyLayer(lexical=lex_record, conceptual=con_record)
 

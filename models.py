@@ -553,6 +553,7 @@ class LineageRecord:
     adversarial_check_performed: bool = False
     adversarial_notes: str = ""
     mutations: list[Mutation] = field(default_factory=list)
+    timeline_stats: dict = field(default_factory=dict)
 
     def to_dict(self):
         return {
@@ -567,6 +568,7 @@ class LineageRecord:
             "adversarial_check_performed": self.adversarial_check_performed,
             "adversarial_notes": self.adversarial_notes,
             "mutations": [m.to_dict() for m in self.mutations],
+            "timeline_stats": self.timeline_stats,
         }
 
 
