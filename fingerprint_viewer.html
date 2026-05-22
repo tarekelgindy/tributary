@@ -274,6 +274,130 @@ section { animation: fadein 0.2s; }
 .stats-chart text.tick { fill: #888; font-size: 10px; font-family: 'SF Mono', Menlo, monospace; }
 .stats-chart rect:hover { opacity: 0.75; }
 
+.social-card { margin-bottom: 1.8rem; }
+.social-summary {
+  display: flex; gap: 1.4rem; flex-wrap: wrap;
+  margin-bottom: 0.8rem; font-size: 0.85rem; color: #555;
+}
+.social-summary strong { color: #222; }
+.social-note {
+  font-size: 0.82rem; color: #777;
+  padding: 0.5rem 0.7rem; background: #faf7ef;
+  border-radius: 4px; margin-bottom: 0.8rem;
+}
+.social-post {
+  border: 1px solid #ececec;
+  border-left: 3px solid #888;
+  border-radius: 4px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+.social-post.role-originator { border-left-color: #c0392b; }
+.social-post.role-early-amplifier { border-left-color: #d68f1a; }
+.social-post.role-mass-amplifier { border-left-color: #f0a500; }
+.social-post.role-institutional-adoption { border-left-color: #2a6fa3; }
+.social-post.role-critic { border-left-color: #6f3e8e; }
+.social-post.role-mention { border-left-color: #888; }
+.social-post .post-head {
+  display: flex; gap: 0.6rem; align-items: baseline;
+  margin-bottom: 0.3rem; flex-wrap: wrap;
+}
+.social-post .post-author { font-weight: 500; color: #2a6fa3; font-family: 'SF Mono', Menlo, monospace; font-size: 0.82rem; }
+.social-post .post-date { color: #888; font-family: 'SF Mono', Menlo, monospace; font-size: 0.78rem; }
+.social-post .post-engagement { color: #888; font-size: 0.78rem; margin-left: auto; }
+.social-post .post-text { color: #333; line-height: 1.5; margin-bottom: 0.4rem; white-space: pre-wrap; word-break: break-word; }
+.social-post .post-role { font-size: 0.75rem; color: #555; padding-top: 0.4rem; border-top: 1px solid #f0f0f0; }
+.social-post .post-role .role-tag { padding: 0.1rem 0.5rem; border-radius: 999px; font-size: 0.72rem; }
+.social-post .post-role .role-tag.originator { background: #fad7d1; color: #832018; }
+.social-post .post-role .role-tag.early-amplifier { background: #f7e0bb; color: #6a4308; }
+.social-post .post-role .role-tag.mass-amplifier { background: #fae7b8; color: #6a4d06; }
+.social-post .post-role .role-tag.institutional-adoption { background: #cfe0ee; color: #1b486f; }
+.social-post .post-role .role-tag.critic { background: #e2d2ec; color: #4a275a; }
+.social-post .post-role .role-tag.mention { background: #eaeaea; color: #444; }
+.social-post .post-role .role-tag.unknown { background: #eaeaea; color: #666; }
+.social-post a { color: #2a6fa3; text-decoration: none; }
+.social-post a:hover { text-decoration: underline; }
+
+.evidence-summary {
+  background: white; border: 1px solid #e5e5e5; border-radius: 6px;
+  padding: 1rem 1.2rem; margin-bottom: 1.4rem;
+  font-size: 0.95rem; line-height: 1.55; color: #333;
+}
+.evidence-summary h2 {
+  margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 500;
+  color: #555; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+.evidence-column {
+  background: white; border: 1px solid #e5e5e5; border-radius: 6px;
+  padding: 1rem;
+}
+.evidence-column h2 {
+  margin: 0 0 0.6rem; font-size: 0.82rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding-bottom: 0.4rem; border-bottom: 1px solid #f0f0f0;
+}
+.evidence-column.supports h2 { color: #6a4d06; }
+.evidence-column.disputes h2 { color: #1b486f; }
+.evidence-column.redirects h2 { color: #4a275a; }
+.evidence-column.shared-context h2 { color: #1e4427; }
+
+.evidence-card {
+  background: #fafaf7;
+  border: 1px solid #ececec;
+  border-left: 3px solid #888;
+  border-radius: 4px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+}
+.evidence-card.dir-supports { border-left-color: #f0a500; }
+.evidence-card.dir-disputes { border-left-color: #2a6fa3; }
+.evidence-card.dir-redirects { border-left-color: #6f3e8e; }
+.evidence-card.dir-shared-context { border-left-color: #2e7d32; }
+
+.evidence-card .ev-title { font-weight: 500; margin-bottom: 0.35rem; color: #222; }
+.evidence-card .ev-badges {
+  display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.45rem;
+}
+.evidence-card .ev-badge {
+  font-size: 0.7rem; padding: 0.1rem 0.5rem;
+  border-radius: 999px; background: #eee; color: #555;
+}
+.evidence-card .ev-badge.venue-peer-reviewed { background: #cfe0ee; color: #1b486f; }
+.evidence-card .ev-badge.venue-institutional { background: #d4e3d5; color: #1e4427; }
+.evidence-card .ev-badge.venue-news-outlet { background: #efece4; color: #4d3d18; }
+.evidence-card .ev-badge.venue-opinion-venue { background: #e6dcec; color: #4f2c5a; }
+.evidence-card .ev-badge.venue-aggregator { background: #eaeaea; color: #444; }
+.evidence-card .ev-badge.venue-preprint-server { background: #d6e3ee; color: #1f3f5e; }
+.evidence-card .ev-badge.venue-self-published { background: #f0e1ea; color: #4f2a44; }
+.evidence-card .ev-badge.type-primary { background: #f7e0bb; color: #6a4308; font-weight: 600; }
+.evidence-card .ev-badge.type-secondary { background: #eaeaea; color: #555; }
+.evidence-card .ev-badge.type-tertiary { background: #f1eeea; color: #6a5a4a; }
+.evidence-card .ev-badge.strength-strong { background: #d7e8d8; color: #1e4427; font-weight: 600; }
+.evidence-card .ev-badge.strength-moderate { background: #ece8da; color: #4f4530; }
+.evidence-card .ev-badge.strength-weak { background: #efe6da; color: #6a4d2b; }
+.evidence-card .ev-badge.ev-date { background: #f5f5f0; color: #777; font-family: 'SF Mono', Menlo, monospace; }
+.evidence-card .ev-status-warning {
+  display: inline-block; padding: 0.15rem 0.55rem;
+  background: #f7d7d2; color: #832018;
+  border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.evidence-card .ev-description { color: #333; margin-bottom: 0.35rem; line-height: 1.45; }
+.evidence-card .ev-notes { font-size: 0.82rem; color: #666; margin-bottom: 0.4rem; font-style: italic; }
+.evidence-card .ev-link a {
+  color: #2a6fa3; text-decoration: none;
+  font-size: 0.82rem; word-break: break-all;
+}
+.evidence-card .ev-link a:hover { text-decoration: underline; }
+
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
 
@@ -305,6 +429,7 @@ circle.instance:hover { opacity: 0.7; }
     <button data-tab="conceptual">L2 Conceptual</button>
     <button data-tab="rhetorical">L3 Rhetorical</button>
     <button data-tab="lineages">L4 Lineages</button>
+    <button data-tab="evidence">Evidence</button>
     <button data-tab="taxonomic">L5 Taxonomic</button>
   </nav>
 
@@ -314,6 +439,7 @@ circle.instance:hover { opacity: 0.7; }
     <section data-panel="conceptual" hidden></section>
     <section data-panel="rhetorical" hidden></section>
     <section data-panel="lineages" hidden></section>
+    <section data-panel="evidence" hidden></section>
     <section data-panel="taxonomic" hidden></section>
   </main>
 </div>
@@ -386,6 +512,7 @@ function render(fp) {
   renderConceptual(fp);
   renderRhetorical(fp);
   renderLineages(fp);
+  renderEvidence(fp);
   renderTaxonomic(fp);
 
   document.querySelectorAll('#tabs button').forEach(btn => {
@@ -485,6 +612,73 @@ function renderTimelineStats(label, stats, svgId) {
         </div>
       </div>
       <svg class="stats-chart" id="${svgId}"></svg>
+    </div>
+  `;
+}
+
+function renderSocialSpread(lineage) {
+  if (!lineage.social_search_performed) return '';
+  const posts = lineage.social_spread || [];
+  const notes = lineage.social_search_notes || '';
+
+  // Compute simple aggregate stats for the header
+  const totalEngagement = posts.reduce(
+    (acc, p) => acc + (p.likes || 0) + (p.reposts || 0), 0
+  );
+  const uniqueAuthors = new Set(posts.map(p => p.author_handle)).size;
+  const roleCounts = {};
+  posts.forEach(p => {
+    const r = p.amplifier_role || 'unknown';
+    roleCounts[r] = (roleCounts[r] || 0) + 1;
+  });
+
+  // Sort posts: by engagement desc so most-impactful surface first
+  const sortedPosts = [...posts].sort(
+    (a, b) => ((b.likes || 0) + (b.reposts || 0)) - ((a.likes || 0) + (a.reposts || 0))
+  );
+
+  const postsHtml = sortedPosts.map(p => {
+    const role = p.amplifier_role || 'unknown';
+    const engagement = `${p.likes || 0} likes · ${p.reposts || 0} reposts${p.replies ? ` · ${p.replies} replies` : ''}`;
+    return `
+      <div class="social-post role-${role}">
+        <div class="post-head">
+          <span class="post-author">@${escapeHtml(p.author_handle || '?')}</span>
+          <span class="post-date">${escapeHtml((p.post_date || '').slice(0, 10))}</span>
+          <span class="post-engagement">${escapeHtml(engagement)}</span>
+        </div>
+        <div class="post-text">${escapeHtml(p.post_text || '')}</div>
+        <div class="post-role">
+          <span class="role-tag ${role}">${escapeHtml(role)}</span>
+          ${p.role_evidence ? ` <span style="color:#666;">— ${escapeHtml(p.role_evidence)}</span>` : ''}
+          ${p.post_url ? `<a href="${escapeHtml(p.post_url)}" target="_blank" rel="noopener" style="float:right;">↗ open</a>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const roleBreakdown = Object.entries(roleCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([r, c]) => `${r}: ${c}`).join(' · ');
+
+  return `
+    <div class="card social-card">
+      <h2>Social Spread (Bluesky)</h2>
+      ${notes ? `<div class="social-note">${escapeHtml(notes)}</div>` : ''}
+      ${posts.length === 0 ? `<p class="empty">No posts found.</p>` : `
+        <div class="social-summary">
+          <div><strong>${posts.length}</strong> posts</div>
+          <div><strong>${uniqueAuthors}</strong> unique authors</div>
+          <div><strong>${totalEngagement.toLocaleString()}</strong> total engagement</div>
+          <div style="color:#777;">${escapeHtml(roleBreakdown)}</div>
+        </div>
+        <details class="collapse" style="margin-top:0.5rem;">
+          <summary>Posts (sorted by engagement)</summary>
+          <div class="body normal-text">
+            ${postsHtml}
+          </div>
+        </details>
+      `}
     </div>
   `;
 }
@@ -764,6 +958,7 @@ function renderLineages(fp) {
       <svg class="timeline-svg" id="timeline-lexical"></svg>
     </div>
     ${renderTimelineStats('Lexical', lex.timeline_stats, 'stats-lexical')}
+    ${renderSocialSpread(lex)}
 
     <div class="timeline-block">
       <div class="timeline-header">
@@ -915,6 +1110,91 @@ function showDetail(inst) {
     </div>
   `;
   detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderEvidence(fp) {
+  const panel = document.querySelector('[data-panel=evidence]');
+  const ev = fp.evidence_landscape || {};
+  const sources = ev.sources || [];
+
+  if (sources.length === 0 && !ev.summary) {
+    panel.innerHTML = `
+      <div class="card">
+        <p class="empty">Evidence landscape was not generated for this fingerprint (use --no-evidence to skip; or this is an older fingerprint that predates the feature).</p>
+      </div>`;
+    return;
+  }
+
+  const byDirection = { supports: [], disputes: [], redirects: [], 'shared-context': [] };
+  sources.forEach(s => {
+    const d = s.direction || 'shared-context';
+    if (!byDirection[d]) byDirection[d] = [];
+    byDirection[d].push(s);
+  });
+
+  // Sort each direction by source_type (primary first) then strength
+  const strengthOrder = { strong: 0, moderate: 1, weak: 2, '': 3 };
+  const typeOrder = { primary: 0, secondary: 1, tertiary: 2, '': 3 };
+  Object.values(byDirection).forEach(arr => {
+    arr.sort((a, b) =>
+      (typeOrder[a.source_type] ?? 9) - (typeOrder[b.source_type] ?? 9) ||
+      (strengthOrder[a.strength] ?? 9) - (strengthOrder[b.strength] ?? 9)
+    );
+  });
+
+  const column = (dirKey, label) => {
+    const items = byDirection[dirKey] || [];
+    return `
+      <div class="evidence-column ${dirKey}">
+        <h2>${label} (${items.length})</h2>
+        ${items.length === 0
+          ? '<p class="empty">None identified.</p>'
+          : items.map(renderEvidenceCard).join('')}
+      </div>
+    `;
+  };
+
+  panel.innerHTML = `
+    ${ev.summary ? `<div class="evidence-summary">
+      <h2>Summary</h2>
+      ${escapeHtml(ev.summary)}
+    </div>` : ''}
+
+    <div class="evidence-grid">
+      ${column('supports', 'Supports')}
+      ${column('disputes', 'Disputes')}
+      ${column('redirects', 'Redirects')}
+      ${column('shared-context', 'Shared Context')}
+    </div>
+
+    ${ev.search_notes ? `<details class="collapse">
+      <summary>Search notes</summary>
+      <div class="body normal-text">${escapeHtml(ev.search_notes)}</div>
+    </details>` : ''}
+  `;
+}
+
+function renderEvidenceCard(s) {
+  const dir = s.direction || 'shared-context';
+  const showStrength = dir === 'supports' || dir === 'disputes';
+  const statusBadge = s.status && s.status !== 'current'
+    ? `<div class="ev-status-warning">⚠ ${escapeHtml(s.status.replace(/-/g, ' '))}${s.status_notes ? ': ' + escapeHtml(s.status_notes) : ''}</div>`
+    : '';
+  return `
+    <div class="evidence-card dir-${dir}">
+      <div class="ev-title">${escapeHtml(s.title || '(untitled)')}</div>
+      <div class="ev-badges">
+        ${s.source_venue ? `<span class="ev-badge venue-${s.source_venue}">${escapeHtml(s.source_venue)}</span>` : ''}
+        ${s.source_type ? `<span class="ev-badge type-${s.source_type}">${escapeHtml(s.source_type)}</span>` : ''}
+        ${showStrength && s.strength ? `<span class="ev-badge strength-${s.strength}">${escapeHtml(s.strength)}</span>` : ''}
+        ${s.date ? `<span class="ev-badge ev-date">${escapeHtml(s.date.slice(0, 10))}</span>` : ''}
+      </div>
+      ${statusBadge}
+      ${s.description ? `<div class="ev-description">${escapeHtml(s.description)}</div>` : ''}
+      ${s.notes ? `<div class="ev-notes">${escapeHtml(s.notes)}</div>` : ''}
+      ${s.source_url ? `<div class="ev-link"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">↗ ${escapeHtml(s.source_url)}</a></div>` : ''}
+    </div>
+  `;
 }
 
 function renderTaxonomic(fp) {
