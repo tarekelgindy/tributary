@@ -862,13 +862,15 @@ class NarrativeFingerprint:
 
 @dataclass
 class ExtractedClaim:
-    """A claim extracted from a piece of content, with why it was selected
-    and a back-reference to its fingerprint once traced."""
+    """A claim extracted from a piece of content, classified by type. Only
+    traceable claims (fact / study / narrative) get fingerprinted; opinions
+    and unverifiable statements are inventoried but not traced."""
     claim_text: str = ""
-    claim_type: str = ""        # fact / study / narrative
+    claim_type: str = ""        # fact / study / narrative / opinion / unverifiable
     significance: str = ""      # why this claim is significant in the piece
     context: str = ""           # where it sits in the source
-    fingerprint_id: str = ""    # populated once fingerprinted
+    traceable: bool = True      # True for fact/study/narrative; False otherwise
+    fingerprint_id: str = ""    # populated once fingerprinted (traceable only)
 
     def to_dict(self):
         return {
@@ -876,6 +878,7 @@ class ExtractedClaim:
             "claim_type": self.claim_type,
             "significance": self.significance,
             "context": self.context,
+            "traceable": self.traceable,
             "fingerprint_id": self.fingerprint_id,
         }
 
@@ -894,6 +897,7 @@ class SourceAnalysis:
     source_published_at: str = ""
     extracted_at: str = ""
     content_excerpt: str = ""   # first chunk of extracted text, for reference
+    breakdown: dict = field(default_factory=dict)  # content profile: counts/percentages by type
     claims: list[ExtractedClaim] = field(default_factory=list)
     fingerprints: list[NarrativeFingerprint] = field(default_factory=list)
 
@@ -917,6 +921,7 @@ class SourceAnalysis:
             "source_published_at": self.source_published_at,
             "extracted_at": self.extracted_at,
             "content_excerpt": self.content_excerpt,
+            "breakdown": self.breakdown,
             "claims": [c.to_dict() for c in self.claims],
             "fingerprints": [f.to_dict() for f in self.fingerprints],
         }

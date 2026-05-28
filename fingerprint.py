@@ -833,43 +833,57 @@ Output ONLY the JSON object.
 
 
 CLAIM_EXTRACTION_SYSTEM = """\
-You are extracting the most significant TRACEABLE claims from a piece of
-content (an article, blog post, podcast transcript, or social thread).
+You are auditing the claims in a piece of content (an article, blog post,
+podcast transcript, or social thread) — producing a complete inventory of
+its significant claims, each classified by type.
 
-A traceable claim is a factual assertion or narrative framing whose origin
-could be investigated — something with a checkable source or an
-identifiable framing. The test: "Could I trace where this came from?"
+Classify each significant claim with ONE of FIVE labels:
 
-INCLUDE:
-  fact        specific verifiable assertions (names, numbers, dates, events)
-  study       references to specific research, datasets, or findings
-  narrative   interpretive framings with a traceable origin (e.g. "the
-              economy is rigged", "X is the new Y", "the system is broken")
+  fact          specific verifiable assertion (names, numbers, dates, events)
+  study         reference to specific research, data, or findings
+  narrative     interpretive framing with a traceable origin (e.g. "the
+                economy is rigged", "X is the new Y", "the system is broken")
+  opinion       genuinely personal preference or value judgment ("I think
+                jazz is boring", "this policy is wrong")
+  unverifiable  sounds factual but too vague or subjective to trace
+                ("most people feel uneasy", "things are getting worse")
 
-EXCLUDE:
-  opinion        genuinely personal preference ("I think jazz is boring")
-  unverifiable   sounds factual but too vague to trace
+The first three (fact / study / narrative) are TRACEABLE — their origin
+can be investigated. The last two (opinion / unverifiable) are NOT
+traceable, but they are still part of what the content is made of and
+MUST be included in the inventory. Do not drop them — they tell the
+reader what kind of content this is (reporting vs. commentary vs. opinion).
 
-Select the {max_claims} MOST SIGNIFICANT claims — the ones most central to
-the piece's argument, or most consequential if widely believed. Rank by
-significance (most significant first). Do NOT pad: return fewer if the
-content has fewer significant traceable claims.
+Apply the traceability test for the fact/narrative boundary: "Could I find
+a primary source to confirm or deny this?" If yes and it's a discrete
+assertion → fact. If it's an interpretive framing with an identifiable
+origin → narrative. If it's a value judgment → opinion.
+
+Select the {max_claims} MOST SIGNIFICANT claims across ALL FIVE types —
+the ones most central to the piece. Rank by significance. Return a
+representative mix reflecting the actual content (an op-ed will be
+opinion/narrative-heavy; a news report will be fact-heavy).
 
 For each claim:
-  claim_text     a clean, self-contained statement of the claim. Rephrase
-                 for clarity if needed, but PRESERVE the meaning and any
-                 framing/spin. It should stand alone without the article.
-  claim_type     fact / study / narrative
-  significance   one sentence on why this claim matters in the piece
-  context        a short phrase locating it ("central thesis",
-                 "supporting statistic", "closing call to action")
+  claim_text     a clean, self-contained restatement. Preserve meaning and
+                 any framing/spin. Should stand alone without the article.
+  claim_type     fact / study / narrative / opinion / unverifiable
+  significance   one sentence on why it matters in the piece
+  context        a short phrase locating it ("central thesis", "supporting
+                 statistic", "aside", "closing appeal")
+
+ALSO provide a one-sentence characterization of the content's overall
+makeup — e.g. "predominantly narrative framing with limited factual
+grounding; reads as opinion-led commentary" or "fact-dense reporting with
+minimal interpretation."
 
 Output ONLY JSON:
 
 {
   "claims": [
     {"claim_text": "...", "claim_type": "...", "significance": "...", "context": "..."}
-  ]
+  ],
+  "characterization": "..."
 }
 """
 
@@ -984,6 +998,29 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
 
 
 _EMPTY_SENTINELS = {"none", "n/a", "null", "nil", "not applicable", "not specified"}
+
+
+def _compute_breakdown(claims: list, characterization: str = "") -> dict:
+    """Content profile over a list of ExtractedClaim: counts and percentages
+    by claim_type, plus a traceable count and the model's one-line
+    characterization. Pure-Python."""
+    counts: dict = {}
+    for c in claims:
+        t = getattr(c, "claim_type", None) or "unknown"
+        counts[t] = counts.get(t, 0) + 1
+    total = len(claims)
+    percentages = (
+        {t: round(100 * n / total, 1) for t, n in counts.items()}
+        if total else {}
+    )
+    traceable_count = sum(1 for c in claims if getattr(c, "traceable", False))
+    return {
+        "total": total,
+        "counts": counts,
+        "percentages": percentages,
+        "traceable_count": traceable_count,
+        "characterization": characterization,
+    }
 
 
 def _clean_text_field(value) -> str:
@@ -2399,9 +2436,11 @@ class FingerprintGenerator:
 
     async def extract_claims_from_content(
         self, content_text: str, max_claims: int = 5
-    ) -> list[ExtractedClaim]:
-        """Extract the most significant traceable claims from content via
-        a single Haiku call. Content is capped to control token cost."""
+    ) -> tuple[list[ExtractedClaim], str]:
+        """Inventory the significant claims in content, classified across the
+        full five-way scheme (fact/study/narrative/opinion/unverifiable).
+        One Haiku call; content capped to control cost. Returns
+        (claims, characterization)."""
         _log_progress(
             f"Claim extraction: parsing content ({len(content_text)} chars)"
         )
@@ -2425,14 +2464,21 @@ class FingerprintGenerator:
             text = _clean_text_field(raw.get("claim_text"))
             if not text:
                 continue
+            ctype = (_clean_text_field(raw.get("claim_type")) or "").lower()
+            traceable = ctype in ("fact", "study", "narrative")
             claims.append(ExtractedClaim(
                 claim_text=text,
-                claim_type=_clean_text_field(raw.get("claim_type")),
+                claim_type=ctype,
                 significance=_clean_text_field(raw.get("significance")),
                 context=_clean_text_field(raw.get("context")),
+                traceable=traceable,
             ))
-        _log_progress(f"Claim extraction done ({len(claims)} claims)")
-        return claims
+        characterization = _clean_text_field(data.get("characterization"))
+        n_trace = sum(1 for c in claims if c.traceable)
+        _log_progress(
+            f"Claim extraction done ({len(claims)} claims, {n_trace} traceable)"
+        )
+        return claims, characterization
 
     async def _fetch_content(self, url: str):
         """Fetch content from a URL via ingestors.ContentExtractor.
@@ -2504,16 +2550,22 @@ class FingerprintGenerator:
             _log_progress("No content extracted; nothing to analyze")
             return analysis
 
-        analysis.claims = await self.extract_claims_from_content(
+        claims, characterization = await self.extract_claims_from_content(
             content_text, max_claims=max_claims
         )
+        analysis.claims = claims
+        analysis.breakdown = _compute_breakdown(claims, characterization)
 
         if extract_only:
             return analysis
 
-        for i, claim in enumerate(analysis.claims):
+        # Only traceable claims (fact/study/narrative) get fingerprinted.
+        # Opinions and unverifiable statements stay in the inventory but
+        # incur no fingerprint cost.
+        traceable = [c for c in claims if c.traceable]
+        for i, claim in enumerate(traceable):
             _log_progress(
-                f"Fingerprinting claim {i + 1}/{len(analysis.claims)}: "
+                f"Fingerprinting traceable claim {i + 1}/{len(traceable)}: "
                 f"{claim.claim_text[:60]}"
             )
             fp = await self.generate_fingerprint(
