@@ -431,7 +431,34 @@ section { animation: fadein 0.2s; }
 .claim-type-badge.type-fact { background: #cfe0ee; color: #1b486f; }
 .claim-type-badge.type-study { background: #d4e3d5; color: #1e4427; }
 .claim-type-badge.type-narrative { background: #e6dcec; color: #4f2c5a; }
+.claim-type-badge.type-opinion { background: #f7e0bb; color: #6a4308; }
+.claim-type-badge.type-unverifiable { background: #eaeaea; color: #555; }
 .claim-context { color: #888; font-size: 0.82rem; }
+
+/* Content breakdown profile (article view) */
+.breakdown-card { margin-bottom: 1.4rem; }
+.breakdown-char { color: #444; font-style: italic; margin: 0 0 0.9rem; }
+.breakdown-row {
+  display: flex; align-items: center; gap: 0.7rem;
+  margin-bottom: 0.4rem; font-size: 0.85rem;
+}
+.breakdown-label {
+  width: 6.5rem; flex-shrink: 0; text-transform: capitalize; color: #555;
+}
+.breakdown-track {
+  flex: 1; height: 0.8rem; background: #efece4;
+  border-radius: 999px; overflow: hidden;
+}
+.breakdown-fill { display: block; height: 100%; }
+.breakdown-fill.type-fact { background: #2a6fa3; }
+.breakdown-fill.type-study { background: #2e7d32; }
+.breakdown-fill.type-narrative { background: #6f3e8e; }
+.breakdown-fill.type-opinion { background: #d68f1a; }
+.breakdown-fill.type-unverifiable { background: #aaa; }
+.breakdown-pct {
+  width: 6rem; flex-shrink: 0; text-align: right;
+  color: #777; font-family: 'SF Mono', Menlo, monospace; font-size: 0.8rem;
+}
 .claim-text { font-size: 1.05rem; color: #222; margin-bottom: 0.4rem; line-height: 1.5; }
 .claim-significance { color: #666; font-size: 0.88rem; margin-bottom: 0.5rem; }
 .claim-cta { color: #2a6fa3; font-size: 0.85rem; font-weight: 500; }
@@ -572,7 +599,12 @@ function renderArticle(analysis) {
 
   const claimsHtml = (analysis.claims || []).map((c, idx) => {
     const hasFp = !!fpById[c.fingerprint_id];
+    const traceable = c.traceable !== false && ['fact', 'study', 'narrative'].includes(c.claim_type);
     const ctype = c.claim_type || 'narrative';
+    let cta;
+    if (hasFp) cta = '<div class="claim-cta">View fingerprint →</div>';
+    else if (!traceable) cta = '<div class="claim-cta empty">(not traceable — opinions and unverifiable claims aren\'t fingerprinted)</div>';
+    else cta = '<div class="claim-cta empty">(traceable, but not fingerprinted — run without --extract-only)</div>';
     return `
       <div class="card claim-card ${hasFp ? 'clickable' : ''}" data-claim-idx="${idx}">
         <div class="claim-card-head">
@@ -581,9 +613,7 @@ function renderArticle(analysis) {
         </div>
         <div class="claim-text">${escapeHtml(c.claim_text || '')}</div>
         ${c.significance ? `<div class="claim-significance">${escapeHtml(c.significance)}</div>` : ''}
-        ${hasFp
-          ? '<div class="claim-cta">View fingerprint →</div>'
-          : '<div class="claim-cta empty">(not fingerprinted — run without --extract-only)</div>'}
+        ${cta}
       </div>
     `;
   }).join('');
@@ -592,8 +622,9 @@ function renderArticle(analysis) {
   main.innerHTML = `
     <div class="article-intro">
       ${analysis.source_url ? `<a href="${escapeHtml(analysis.source_url)}" target="_blank" rel="noopener">${escapeHtml(analysis.source_url)}</a>` : ''}
-      <p>${(analysis.claims || []).length} significant claims extracted${(analysis.fingerprints || []).length ? ` · ${analysis.fingerprints.length} fingerprinted` : ''}. Click a claim to trace where it comes from.</p>
+      <p>${(analysis.claims || []).length} significant claims extracted${(analysis.fingerprints || []).length ? ` · ${analysis.fingerprints.length} traceable claims fingerprinted` : ''}. Click a traceable claim to trace where it comes from.</p>
     </div>
+    ${renderBreakdown(analysis.breakdown)}
     ${analysis.content_excerpt ? `<details class="collapse"><summary>Source excerpt</summary><div class="body normal-text">${escapeHtml(analysis.content_excerpt)}…</div></details>` : ''}
     ${claimsHtml || '<p class="empty">No claims extracted.</p>'}
   `;
@@ -606,6 +637,41 @@ function renderArticle(analysis) {
       if (fp) openFingerprintFromArticle(fp);
     };
   });
+}
+
+function renderBreakdown(breakdown) {
+  if (!breakdown || !breakdown.total) return '';
+  // Order types by a stable convention: traceable first, then non-traceable
+  const order = ['fact', 'study', 'narrative', 'opinion', 'unverifiable'];
+  const counts = breakdown.counts || {};
+  const pcts = breakdown.percentages || {};
+  const present = order.filter(t => counts[t]);
+  // Include any unexpected types at the end
+  Object.keys(counts).forEach(t => { if (!present.includes(t)) present.push(t); });
+
+  const rows = present.map(t => {
+    const pct = pcts[t] != null ? pcts[t] : 0;
+    return `
+      <div class="breakdown-row">
+        <span class="breakdown-label">${escapeHtml(t)}</span>
+        <span class="breakdown-track"><span class="breakdown-fill type-${escapeHtml(t)}" style="width:${pct}%"></span></span>
+        <span class="breakdown-pct">${pct}% (${counts[t]})</span>
+      </div>
+    `;
+  }).join('');
+
+  const traceableNote = breakdown.traceable_count != null
+    ? ` · ${breakdown.traceable_count}/${breakdown.total} traceable`
+    : '';
+
+  return `
+    <div class="card breakdown-card">
+      <h2>Content Breakdown</h2>
+      ${breakdown.characterization ? `<p class="breakdown-char">${escapeHtml(breakdown.characterization)}</p>` : ''}
+      ${rows}
+      <p style="color:#999; font-size:0.78rem; margin:0.7rem 0 0;">${breakdown.total} claims classified${traceableNote}. This is a profile of the significant claims extracted, not an exhaustive census.</p>
+    </div>
+  `;
 }
 
 function openFingerprintFromArticle(fp) {
