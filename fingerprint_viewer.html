@@ -417,6 +417,32 @@ section { animation: fadein 0.2s; }
 }
 .archive-link:hover { text-decoration: underline; }
 
+/* Multi-claim source-analysis view */
+.article-intro { margin-bottom: 1.2rem; }
+.article-intro a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
+.article-intro p { color: #666; margin: 0.5rem 0 0; }
+.claim-card.clickable { cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+.claim-card.clickable:hover { border-color: #888; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+.claim-card-head { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.5rem; }
+.claim-type-badge {
+  font-size: 0.72rem; padding: 0.1rem 0.55rem; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.claim-type-badge.type-fact { background: #cfe0ee; color: #1b486f; }
+.claim-type-badge.type-study { background: #d4e3d5; color: #1e4427; }
+.claim-type-badge.type-narrative { background: #e6dcec; color: #4f2c5a; }
+.claim-context { color: #888; font-size: 0.82rem; }
+.claim-text { font-size: 1.05rem; color: #222; margin-bottom: 0.4rem; line-height: 1.5; }
+.claim-significance { color: #666; font-size: 0.88rem; margin-bottom: 0.5rem; }
+.claim-cta { color: #2a6fa3; font-size: 0.85rem; font-weight: 500; }
+.claim-cta.empty { color: #aaa; font-weight: normal; }
+#back-to-article {
+  margin: 0 0 0.9rem; padding: 0.4rem 0.9rem;
+  background: #444; color: white; border: none;
+  border-radius: 4px; cursor: pointer; font-size: 0.85rem;
+}
+#back-to-article:hover { background: #222; }
+
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
 
@@ -476,6 +502,7 @@ const ROLE_COLORS = {
 const ROLE_ORDER = ['originator','early-amplifier','mass-amplifier','institutional-adoption','critic','mention','unknown'];
 
 let currentFP = null;
+let currentArticle = null;   // set when viewing a multi-claim source analysis
 
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
@@ -496,17 +523,105 @@ function loadFile(file) {
   const reader = new FileReader();
   reader.onload = () => {
     try {
-      const fp = JSON.parse(reader.result);
-      if (!fp.fingerprint_id || !fp.lexical) {
-        throw new Error('Not a recognizable fingerprint JSON — missing fingerprint_id or lexical layer');
+      const data = JSON.parse(reader.result);
+      if (data.is_source_analysis) {
+        renderArticle(data);
+      } else if (data.fingerprint_id && data.lexical) {
+        currentArticle = null;
+        removeBackButton();
+        document.getElementById('tabs').style.display = '';
+        render(data);
+      } else {
+        throw new Error('Not a recognizable fingerprint or source-analysis JSON');
       }
-      render(fp);
     } catch (e) {
       errorDiv.textContent = 'Failed to load: ' + e.message;
     }
   };
   reader.onerror = () => { errorDiv.textContent = 'File read error.'; };
   reader.readAsText(file);
+}
+
+function removeBackButton() {
+  const b = document.getElementById('back-to-article');
+  if (b) b.remove();
+}
+
+function renderArticle(analysis) {
+  currentArticle = analysis;
+  dropZone.hidden = true;
+  viewer.hidden = false;
+  removeBackButton();
+
+  document.getElementById('claim-phrase').textContent =
+    analysis.source_title || analysis.source_url || '(source analysis)';
+
+  const meta = document.getElementById('meta-bar');
+  meta.innerHTML = '';
+  addMeta(meta, 'analysis', analysis.analysis_id);
+  if (analysis.source_platform) addMeta(meta, 'platform', analysis.source_platform);
+  if (analysis.source_author) addMeta(meta, 'author', analysis.source_author);
+  if (analysis.source_published_at) addMeta(meta, 'published', (analysis.source_published_at || '').split('T')[0]);
+  addMeta(meta, 'claims', String((analysis.claims || []).length));
+
+  // Hide the per-fingerprint tab nav at the article level
+  document.getElementById('tabs').style.display = 'none';
+
+  const fpById = {};
+  (analysis.fingerprints || []).forEach(f => { fpById[f.fingerprint_id] = f; });
+
+  const claimsHtml = (analysis.claims || []).map((c, idx) => {
+    const hasFp = !!fpById[c.fingerprint_id];
+    const ctype = c.claim_type || 'narrative';
+    return `
+      <div class="card claim-card ${hasFp ? 'clickable' : ''}" data-claim-idx="${idx}">
+        <div class="claim-card-head">
+          <span class="claim-type-badge type-${escapeHtml(ctype)}">${escapeHtml(ctype)}</span>
+          ${c.context ? `<span class="claim-context">${escapeHtml(c.context)}</span>` : ''}
+        </div>
+        <div class="claim-text">${escapeHtml(c.claim_text || '')}</div>
+        ${c.significance ? `<div class="claim-significance">${escapeHtml(c.significance)}</div>` : ''}
+        ${hasFp
+          ? '<div class="claim-cta">View fingerprint →</div>'
+          : '<div class="claim-cta empty">(not fingerprinted — run without --extract-only)</div>'}
+      </div>
+    `;
+  }).join('');
+
+  const main = document.querySelector('main');
+  main.innerHTML = `
+    <div class="article-intro">
+      ${analysis.source_url ? `<a href="${escapeHtml(analysis.source_url)}" target="_blank" rel="noopener">${escapeHtml(analysis.source_url)}</a>` : ''}
+      <p>${(analysis.claims || []).length} significant claims extracted${(analysis.fingerprints || []).length ? ` · ${analysis.fingerprints.length} fingerprinted` : ''}. Click a claim to trace where it comes from.</p>
+    </div>
+    ${analysis.content_excerpt ? `<details class="collapse"><summary>Source excerpt</summary><div class="body normal-text">${escapeHtml(analysis.content_excerpt)}…</div></details>` : ''}
+    ${claimsHtml || '<p class="empty">No claims extracted.</p>'}
+  `;
+
+  main.querySelectorAll('.claim-card.clickable').forEach(card => {
+    card.onclick = () => {
+      const idx = parseInt(card.dataset.claimIdx, 10);
+      const claim = analysis.claims[idx];
+      const fp = fpById[claim.fingerprint_id];
+      if (fp) openFingerprintFromArticle(fp);
+    };
+  });
+}
+
+function openFingerprintFromArticle(fp) {
+  document.getElementById('tabs').style.display = '';
+  render(fp);
+  // Inject a back button into the header so the user can return to the
+  // article's claim list.
+  removeBackButton();
+  const header = document.querySelector('header');
+  const back = document.createElement('button');
+  back.id = 'back-to-article';
+  back.textContent = '← Back to article';
+  back.onclick = () => {
+    if (currentArticle) renderArticle(currentArticle);
+  };
+  header.insertBefore(back, header.firstChild);
 }
 
 function render(fp) {
