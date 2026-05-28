@@ -1465,8 +1465,21 @@ async def _create_with_retry(client, max_attempts: int = 5,
 class FingerprintGenerator:
     """Generates NarrativeFingerprint objects via Claude."""
 
-    def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None):
+    def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None,
+                 max_searches: int = 10):
         self.client = client or anthropic.AsyncAnthropic()
+        # Cap on web searches per Sonnet+web_search call. The model tends to
+        # over-search (15-22 searches in one call observed), and each search
+        # carries a fee. Capping trades peripheral depth for lower cost,
+        # faster runs, and better run-to-run consistency. 0 or None = uncapped.
+        self.max_searches = max_searches
+
+    def _web_search_tool(self) -> dict:
+        """Build the web_search tool config, applying the search cap."""
+        tool = {"type": "web_search_20250305", "name": "web_search"}
+        if self.max_searches and self.max_searches > 0:
+            tool["max_uses"] = self.max_searches
+        return tool
 
     async def generate_lexical(self, claim_text: str, context: str = "") -> LexicalLayer:
         _log_progress("L1 lexical extraction starting")
@@ -1517,7 +1530,7 @@ class FingerprintGenerator:
             self.client,
             model=SONNET,
             max_tokens=8192,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=[self._web_search_tool()],
             system=[{"type": "text", "text": EARLIEST_USE_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
@@ -1567,7 +1580,7 @@ class FingerprintGenerator:
             self.client,
             model=SONNET,
             max_tokens=4096,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
@@ -1754,7 +1767,7 @@ class FingerprintGenerator:
             self.client,
             model=SONNET,
             max_tokens=16384,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=[self._web_search_tool()],
             system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
@@ -1807,7 +1820,7 @@ class FingerprintGenerator:
             self.client,
             model=SONNET,
             max_tokens=4096,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
@@ -2223,7 +2236,7 @@ class FingerprintGenerator:
             self.client,
             model=SONNET,
             max_tokens=8192,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=[self._web_search_tool()],
             system=[{"type": "text", "text": EVIDENCE_LANDSCAPE_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
@@ -2666,7 +2679,7 @@ class FingerprintStore:
 # ---------------------------------------------------------------------------
 
 async def _cli(args):
-    gen = FingerprintGenerator()
+    gen = FingerprintGenerator(max_searches=args.max_searches)
     scope = Scope(
         language="en",
         region=args.region,
@@ -2811,6 +2824,11 @@ def main():
                              "(URLs and quotes won't be checked against live pages; "
                              "Wayback fallback won't be populated). Saves ~30s "
                              "wallclock but no API cost.")
+    parser.add_argument("--max-searches", type=int, default=10,
+                        help="Cap web searches per Sonnet call (default 10). Lower = "
+                             "cheaper and faster with less peripheral depth and "
+                             "adversarial thoroughness; also improves run-to-run "
+                             "consistency. Set 0 to remove the cap.")
     parser.add_argument("--save", action="store_true",
                         help="Save the fingerprint to the store")
     parser.add_argument("--store-dir", default="fingerprints",
