@@ -857,6 +857,75 @@ class NarrativeFingerprint:
 
 
 # ---------------------------------------------------------------------------
+# Multi-claim source analysis
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ExtractedClaim:
+    """A claim extracted from a piece of content, with why it was selected
+    and a back-reference to its fingerprint once traced."""
+    claim_text: str = ""
+    claim_type: str = ""        # fact / study / narrative
+    significance: str = ""      # why this claim is significant in the piece
+    context: str = ""           # where it sits in the source
+    fingerprint_id: str = ""    # populated once fingerprinted
+
+    def to_dict(self):
+        return {
+            "claim_text": self.claim_text,
+            "claim_type": self.claim_type,
+            "significance": self.significance,
+            "context": self.context,
+            "fingerprint_id": self.fingerprint_id,
+        }
+
+
+@dataclass
+class SourceAnalysis:
+    """Multi-claim analysis of one piece of content (article, blog post,
+    podcast transcript, social thread). Extracts the significant traceable
+    claims and fingerprints each — so you can trace where the ideas in a
+    whole piece come from, not just one hand-typed claim."""
+    analysis_id: str = ""
+    source_url: str = ""
+    source_title: str = ""
+    source_platform: str = ""
+    source_author: str = ""
+    source_published_at: str = ""
+    extracted_at: str = ""
+    content_excerpt: str = ""   # first chunk of extracted text, for reference
+    claims: list[ExtractedClaim] = field(default_factory=list)
+    fingerprints: list[NarrativeFingerprint] = field(default_factory=list)
+
+    def __post_init__(self):
+        if not self.analysis_id:
+            key = f"{self.source_url}|{self.source_title}"
+            self.analysis_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+        if not self.extracted_at:
+            self.extracted_at = datetime.now(timezone.utc).isoformat()
+
+    def to_dict(self):
+        return {
+            # Marker so the viewer can tell an article analysis from a
+            # single fingerprint.
+            "is_source_analysis": True,
+            "analysis_id": self.analysis_id,
+            "source_url": self.source_url,
+            "source_title": self.source_title,
+            "source_platform": self.source_platform,
+            "source_author": self.source_author,
+            "source_published_at": self.source_published_at,
+            "extracted_at": self.extracted_at,
+            "content_excerpt": self.content_excerpt,
+            "claims": [c.to_dict() for c in self.claims],
+            "fingerprints": [f.to_dict() for f in self.fingerprints],
+        }
+
+    def to_json(self, indent: int = 2) -> str:
+        return json.dumps(self.to_dict(), indent=indent, default=str)
+
+
+# ---------------------------------------------------------------------------
 # Contribution & Reputation
 # ---------------------------------------------------------------------------
 

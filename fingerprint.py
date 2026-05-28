@@ -40,6 +40,7 @@ from models import (
     ConceptualLayer,
     Domain,
     EvidenceLandscape,
+    ExtractedClaim,
     FramePrimitive,
     GenealogyLayer,
     GenealogyStatus,
@@ -51,6 +52,7 @@ from models import (
     RhetoricalLayer,
     Scope,
     SocialAttestedInstance,
+    SourceAnalysis,
     SourceDirection,
     SourceStatus,
     SourceStrength,
@@ -827,6 +829,48 @@ OUTPUT FORMAT — JSON ONLY:
 }
 
 Output ONLY the JSON object.
+"""
+
+
+CLAIM_EXTRACTION_SYSTEM = """\
+You are extracting the most significant TRACEABLE claims from a piece of
+content (an article, blog post, podcast transcript, or social thread).
+
+A traceable claim is a factual assertion or narrative framing whose origin
+could be investigated — something with a checkable source or an
+identifiable framing. The test: "Could I trace where this came from?"
+
+INCLUDE:
+  fact        specific verifiable assertions (names, numbers, dates, events)
+  study       references to specific research, datasets, or findings
+  narrative   interpretive framings with a traceable origin (e.g. "the
+              economy is rigged", "X is the new Y", "the system is broken")
+
+EXCLUDE:
+  opinion        genuinely personal preference ("I think jazz is boring")
+  unverifiable   sounds factual but too vague to trace
+
+Select the {max_claims} MOST SIGNIFICANT claims — the ones most central to
+the piece's argument, or most consequential if widely believed. Rank by
+significance (most significant first). Do NOT pad: return fewer if the
+content has fewer significant traceable claims.
+
+For each claim:
+  claim_text     a clean, self-contained statement of the claim. Rephrase
+                 for clarity if needed, but PRESERVE the meaning and any
+                 framing/spin. It should stand alone without the article.
+  claim_type     fact / study / narrative
+  significance   one sentence on why this claim matters in the piece
+  context        a short phrase locating it ("central thesis",
+                 "supporting statistic", "closing call to action")
+
+Output ONLY JSON:
+
+{
+  "claims": [
+    {"claim_text": "...", "claim_type": "...", "significance": "...", "context": "..."}
+  ]
+}
 """
 
 
@@ -2351,6 +2395,143 @@ class FingerprintGenerator:
 
         return fp
 
+    # -- Multi-claim source analysis ----------------------------------
+
+    async def extract_claims_from_content(
+        self, content_text: str, max_claims: int = 5
+    ) -> list[ExtractedClaim]:
+        """Extract the most significant traceable claims from content via
+        a single Haiku call. Content is capped to control token cost."""
+        _log_progress(
+            f"Claim extraction: parsing content ({len(content_text)} chars)"
+        )
+        system_text = CLAIM_EXTRACTION_SYSTEM.replace("{max_claims}", str(max_claims))
+        excerpt = content_text[:12000]
+
+        response = await _create_with_retry(
+            self.client,
+            model=HAIKU,
+            max_tokens=2048,
+            system=[{"type": "text", "text": system_text,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": f"CONTENT:\n\n{excerpt}"}],
+        )
+
+        data = _parse_json_safe(_response_text(response))
+        claims: list[ExtractedClaim] = []
+        for raw in (data.get("claims") or [])[:max_claims]:
+            if not isinstance(raw, dict):
+                continue
+            text = _clean_text_field(raw.get("claim_text"))
+            if not text:
+                continue
+            claims.append(ExtractedClaim(
+                claim_text=text,
+                claim_type=_clean_text_field(raw.get("claim_type")),
+                significance=_clean_text_field(raw.get("significance")),
+                context=_clean_text_field(raw.get("context")),
+            ))
+        _log_progress(f"Claim extraction done ({len(claims)} claims)")
+        return claims
+
+    async def _fetch_content(self, url: str):
+        """Fetch content from a URL via ingestors.ContentExtractor.
+        Returns a ContentItem or None on failure. ContentExtractor prints
+        status to stdout, so we redirect it to stderr."""
+        import contextlib
+        try:
+            from ingestors import ContentExtractor
+        except ImportError as e:
+            _log_progress(f"Content fetch failed: ingestors unavailable ({e})")
+            return None
+
+        extractor = ContentExtractor()
+        try:
+            with contextlib.redirect_stdout(sys.stderr):
+                item = await extractor.extract(url)
+            return item
+        except Exception as e:
+            _log_progress(f"Content fetch failed: {type(e).__name__}: {e}")
+            return None
+        finally:
+            try:
+                with contextlib.redirect_stdout(sys.stderr):
+                    await extractor.close()
+            except Exception:
+                pass
+
+    async def analyze_source(
+        self,
+        url: Optional[str] = None,
+        text: Optional[str] = None,
+        scope: Optional[Scope] = None,
+        max_claims: int = 5,
+        extract_only: bool = False,
+        store=None,
+        **fingerprint_kwargs,
+    ) -> SourceAnalysis:
+        """Multi-claim analysis: extract significant claims from a URL or
+        raw text, then fingerprint each. Returns a SourceAnalysis. Claims
+        are fingerprinted sequentially (not parallel) to avoid overwhelming
+        the API — each fingerprint is already a heavy concurrent operation.
+
+        If extract_only is True, claims are extracted and listed but not
+        fingerprinted (cheap preview, one Haiku call)."""
+        scope = scope or Scope()
+
+        if url:
+            item = await self._fetch_content(url)
+            if item is None:
+                return SourceAnalysis(source_url=url, source_title="(fetch failed)")
+            content_text = item.text or ""
+            platform = getattr(item.platform, "value", str(item.platform))
+            analysis = SourceAnalysis(
+                source_url=url,
+                source_title=item.title or "",
+                source_platform=platform,
+                source_author=item.author or "",
+                source_published_at=item.published_at or "",
+                content_excerpt=content_text[:500],
+            )
+        else:
+            content_text = text or ""
+            analysis = SourceAnalysis(
+                source_title="(text input)",
+                content_excerpt=content_text[:500],
+            )
+
+        if not content_text.strip():
+            _log_progress("No content extracted; nothing to analyze")
+            return analysis
+
+        analysis.claims = await self.extract_claims_from_content(
+            content_text, max_claims=max_claims
+        )
+
+        if extract_only:
+            return analysis
+
+        for i, claim in enumerate(analysis.claims):
+            _log_progress(
+                f"Fingerprinting claim {i + 1}/{len(analysis.claims)}: "
+                f"{claim.claim_text[:60]}"
+            )
+            fp = await self.generate_fingerprint(
+                claim.claim_text,
+                scope=scope,
+                context=claim.context,
+                **fingerprint_kwargs,
+            )
+            claim.fingerprint_id = fp.fingerprint_id
+            analysis.fingerprints.append(fp)
+            if store is not None:
+                try:
+                    store.save(fp)
+                except Exception as e:
+                    _log_progress(f"Could not save fingerprint {fp.fingerprint_id}: {e}")
+
+        return analysis
+
 
 # ---------------------------------------------------------------------------
 # Storage
@@ -2441,6 +2622,48 @@ async def _cli(args):
         time_window_end=args.to_date or "",
     )
 
+    # ---- Multi-claim mode: --url / --file ----------------------------
+    if args.url or args.file:
+        text = None
+        if args.file:
+            try:
+                with open(args.file, "r", encoding="utf-8") as fh:
+                    text = fh.read()
+            except OSError as e:
+                print(f"[error reading {args.file}: {e}]", file=sys.stderr)
+                return
+
+        store = FingerprintStore(args.store_dir) if args.save else None
+        analysis = await gen.analyze_source(
+            url=args.url,
+            text=text,
+            scope=scope,
+            max_claims=args.max_claims,
+            extract_only=args.extract_only,
+            store=store,
+            skip_conceptual=args.no_conceptual,
+            skip_mutations=args.no_mutations,
+            include_social=args.social,
+            skip_evidence=args.no_evidence,
+            skip_verification=args.no_verify,
+        )
+
+        print(analysis.to_json())
+
+        if args.save and not args.extract_only:
+            from pathlib import Path
+            adir = Path(args.store_dir).parent / "analyses"
+            adir.mkdir(parents=True, exist_ok=True)
+            apath = adir / f"{analysis.analysis_id}.json"
+            apath.write_text(analysis.to_json(), encoding="utf-8")
+            print(f"[saved analysis: {apath} "
+                  f"({len(analysis.fingerprints)} fingerprints)]")
+        return
+
+    if not args.claim:
+        print("[error: provide a claim, or use --url / --file]", file=sys.stderr)
+        return
+
     if args.lexical_only:
         lex = await gen.generate_lexical(args.claim, context=args.context or "")
         print(json.dumps(lex.to_dict(), indent=2))
@@ -2493,7 +2716,21 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate a NarrativeFingerprint for a claim."
     )
-    parser.add_argument("claim", help="The claim or narrative to fingerprint")
+    parser.add_argument("claim", nargs="?", default=None,
+                        help="A single claim or narrative to fingerprint. "
+                             "Omit when using --url or --file.")
+    parser.add_argument("--url",
+                        help="Multi-claim mode: extract the significant claims from a "
+                             "URL (web article, Bluesky, YouTube, X) and fingerprint each.")
+    parser.add_argument("--file",
+                        help="Multi-claim mode: extract claims from a local text file "
+                             "(e.g. a pasted transcript) and fingerprint each.")
+    parser.add_argument("--max-claims", type=int, default=5,
+                        help="Max claims to extract in multi-claim mode (default 5). "
+                             "Each claim is a full fingerprint, so cost scales with this.")
+    parser.add_argument("--extract-only", action="store_true",
+                        help="Multi-claim mode: extract and list the claims only, without "
+                             "fingerprinting them (cheap preview — one Haiku call).")
     parser.add_argument("--context", help="Optional context where the claim appeared")
     parser.add_argument("--region", default="US",
                         help='Regional focus for scope (default: "US")')
