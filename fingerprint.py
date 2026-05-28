@@ -1328,7 +1328,12 @@ async def _create_with_retry(client, max_attempts: int = 5,
     backoff. If retry_on_empty_text=True, also retries (with shorter backoff)
     when a successful response contains no text blocks — this catches the
     'model emitted a preamble + tool_use but never returned to write the
-    final text' failure mode that occasionally hits Sonnet+web_search calls."""
+    final text' failure mode that occasionally hits Sonnet+web_search calls.
+
+    Defaults temperature to 0 for run-to-run consistency: the same claim
+    queried twice should produce as similar a fingerprint as the model and
+    web_search allow. Callers can still override by passing temperature."""
+    kwargs.setdefault("temperature", 0)
     status_delays = [30, 60, 90, 120, 150]
     empty_delays = [5, 10, 15, 20, 30]
     last_response = None
