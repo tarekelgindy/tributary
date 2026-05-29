@@ -1000,6 +1000,32 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
 _EMPTY_SENTINELS = {"none", "n/a", "null", "nil", "not applicable", "not specified"}
 
 
+def _estimate_fingerprint_cost(fingerprint_kwargs: dict) -> float:
+    """Rough per-fingerprint cost estimate (USD) from which layers are enabled.
+    Deliberately approximate — for a 'you're about to spend ~$X' heads-up."""
+    cost = 0.15  # lean base: L1/L2/L3/L5 (Haiku) + lexical lineage + verify
+    if not fingerprint_kwargs.get("skip_conceptual", True):
+        cost += 0.30
+    if not fingerprint_kwargs.get("skip_evidence", True):
+        cost += 0.20
+    if not fingerprint_kwargs.get("skip_mutations", True):
+        cost += 0.10
+    if fingerprint_kwargs.get("include_social", False):
+        cost += 0.03
+    return cost
+
+
+def _save_analysis(analysis, directory: str) -> str:
+    """Write a SourceAnalysis manifest to <directory>/<analysis_id>.json.
+    Called incrementally (after each claim) so a mid-run crash never loses
+    completed work. Returns the path."""
+    d = Path(directory)
+    d.mkdir(parents=True, exist_ok=True)
+    path = d / f"{analysis.analysis_id}.json"
+    path.write_text(analysis.to_json(), encoding="utf-8")
+    return str(path)
+
+
 def _compute_breakdown(claims: list, characterization: str = "") -> dict:
     """Content profile over a list of ExtractedClaim: counts and percentages
     by claim_type, plus a traceable count and the model's one-line
@@ -2280,8 +2306,8 @@ class FingerprintGenerator:
         lexical: LexicalLayer,
         conceptual: ConceptualLayer,
         scope: Scope,
-        skip_conceptual: bool = False,
-        skip_mutations: bool = False,
+        skip_conceptual: bool = True,
+        skip_mutations: bool = True,
         include_social: bool = False,
     ) -> GenealogyLayer:
         """Build both lexical and conceptual lineages in parallel, then
@@ -2383,10 +2409,14 @@ class FingerprintGenerator:
         claim_text: str,
         scope: Optional[Scope] = None,
         context: str = "",
-        skip_conceptual: bool = False,
-        skip_mutations: bool = False,
+        # Lean by default: the expensive layers (conceptual lineage, mutations,
+        # evidence landscape) are skipped unless explicitly enabled. A bare
+        # call does L1/L2/L3/L5 + lexical lineage + verification (~$0.15-0.25).
+        # Verification is free (HTTP only), so it stays on by default.
+        skip_conceptual: bool = True,
+        skip_mutations: bool = True,
         include_social: bool = False,
-        skip_evidence: bool = False,
+        skip_evidence: bool = True,
         skip_verification: bool = False,
         lexical: Optional[LexicalLayer] = None,
     ) -> NarrativeFingerprint:
@@ -2527,6 +2557,7 @@ class FingerprintGenerator:
         max_claims: int = 5,
         extract_only: bool = False,
         store=None,
+        analysis_dir: Optional[str] = None,
         **fingerprint_kwargs,
     ) -> SourceAnalysis:
         """Multi-claim analysis: extract significant claims from a URL or
@@ -2569,6 +2600,11 @@ class FingerprintGenerator:
         analysis.claims = claims
         analysis.breakdown = _compute_breakdown(claims, characterization)
 
+        # Persist the manifest right after extraction so an --extract-only
+        # preview is saved and a later crash still leaves the claim list.
+        if analysis_dir:
+            _save_analysis(analysis, analysis_dir)
+
         if extract_only:
             return analysis
 
@@ -2576,6 +2612,15 @@ class FingerprintGenerator:
         # Opinions and unverifiable statements stay in the inventory but
         # incur no fingerprint cost.
         traceable = [c for c in claims if c.traceable]
+
+        # Heads-up cost estimate before we start spending.
+        per = _estimate_fingerprint_cost(fingerprint_kwargs)
+        _log_progress(
+            f"About to fingerprint {len(traceable)} traceable claims at "
+            f"~${per:.2f} each — estimated ~${per * len(traceable):.2f} total. "
+            f"(Ctrl-C now to abort.)"
+        )
+
         for i, claim in enumerate(traceable):
             _log_progress(
                 f"Fingerprinting traceable claim {i + 1}/{len(traceable)}: "
@@ -2594,6 +2639,10 @@ class FingerprintGenerator:
                     store.save(fp)
                 except Exception as e:
                     _log_progress(f"Could not save fingerprint {fp.fingerprint_id}: {e}")
+            # Incremental manifest save after EACH claim — a crash (e.g.
+            # credit exhaustion) leaves all completed work on disk.
+            if analysis_dir:
+                _save_analysis(analysis, analysis_dir)
 
         return analysis
 
@@ -2687,6 +2736,12 @@ async def _cli(args):
         time_window_end=args.to_date or "",
     )
 
+    # Lean by default; expensive layers are opt-in. --full bundles them all.
+    full = args.full
+    skip_conceptual = not (full or args.conceptual)
+    skip_mutations = not (full or args.mutations)
+    skip_evidence = not (full or args.evidence)
+
     # ---- Multi-claim mode: --url / --file ----------------------------
     if args.url or args.file:
         text = None
@@ -2699,6 +2754,11 @@ async def _cli(args):
                 return
 
         store = FingerprintStore(args.store_dir) if args.save else None
+        analysis_dir = None
+        if args.save:
+            from pathlib import Path
+            analysis_dir = str(Path(args.store_dir).parent / "analyses")
+
         analysis = await gen.analyze_source(
             url=args.url,
             text=text,
@@ -2706,22 +2766,19 @@ async def _cli(args):
             max_claims=args.max_claims,
             extract_only=args.extract_only,
             store=store,
-            skip_conceptual=args.no_conceptual,
-            skip_mutations=args.no_mutations,
+            analysis_dir=analysis_dir,   # incremental manifest save after each claim
+            skip_conceptual=skip_conceptual,
+            skip_mutations=skip_mutations,
             include_social=args.social,
-            skip_evidence=args.no_evidence,
+            skip_evidence=skip_evidence,
             skip_verification=args.no_verify,
         )
 
         print(analysis.to_json())
 
-        if args.save and not args.extract_only:
-            from pathlib import Path
-            adir = Path(args.store_dir).parent / "analyses"
-            adir.mkdir(parents=True, exist_ok=True)
-            apath = adir / f"{analysis.analysis_id}.json"
-            apath.write_text(analysis.to_json(), encoding="utf-8")
-            print(f"[saved analysis: {apath} "
+        # The manifest was already saved incrementally inside analyze_source.
+        if analysis_dir:
+            print(f"[saved analysis: {analysis_dir}/{analysis.analysis_id}.json "
                   f"({len(analysis.fingerprints)} fingerprints)]")
         return
 
@@ -2752,16 +2809,16 @@ async def _cli(args):
             )
             return
 
-    # No dedup hit (or --force): run the full pipeline (L2 + L3 + L5 + L4),
-    # reusing the L1 we already generated to avoid a duplicate Haiku call.
+    # No dedup hit (or --force): run the pipeline (lean by default; opt-in
+    # layers per the flags), reusing the L1 we already generated.
     fp = await gen.generate_fingerprint(
         args.claim,
         scope=scope,
         context=context,
-        skip_conceptual=args.no_conceptual,
-        skip_mutations=args.no_mutations,
+        skip_conceptual=skip_conceptual,
+        skip_mutations=skip_mutations,
         include_social=args.social,
-        skip_evidence=args.no_evidence,
+        skip_evidence=skip_evidence,
         skip_verification=args.no_verify,
         lexical=lexical,
     )
@@ -2805,20 +2862,24 @@ def main():
                         help="Time window end (ISO date)")
     parser.add_argument("--lexical-only", action="store_true",
                         help="Generate only the L1 lexical layer (no L2, no web search)")
-    parser.add_argument("--no-conceptual", action="store_true",
-                        help="Skip the L2 conceptual lineage pass (cheaper; matches v1 behavior)")
-    parser.add_argument("--no-mutations", action="store_true",
-                        help="Skip the mutation analysis post-pass over the lineages "
-                             "(saves ~$0.10–0.25 per fingerprint)")
+    parser.add_argument("--full", action="store_true",
+                        help="Run the full deep pipeline: conceptual lineage + "
+                             "mutations + evidence landscape (~$0.75–1.00/claim). "
+                             "Default is LEAN — lexical lineage only (~$0.15–0.25).")
+    parser.add_argument("--conceptual", action="store_true",
+                        help="Add the L4 conceptual lineage pass (~+$0.30). "
+                             "Opt-in; included by --full.")
+    parser.add_argument("--evidence", action="store_true",
+                        help="Add the evidence-landscape generation (~+$0.20). "
+                             "Opt-in; included by --full.")
+    parser.add_argument("--mutations", action="store_true",
+                        help="Add the mutation-analysis post-pass over the lineages "
+                             "(~+$0.10). Opt-in; included by --full.")
     parser.add_argument("--social", action="store_true",
                         help="Search Bluesky for platform-native uses of the diagnostic "
                              "n-grams and attach to the lexical lineage. Requires "
                              "BLUESKY_HANDLE + BLUESKY_APP_PASSWORD in env; gracefully "
                              "skipped if missing. Adds ~$0.01–0.05 per fingerprint.")
-    parser.add_argument("--no-evidence", action="store_true",
-                        help="Skip the evidence-landscape generation (saves "
-                             "~$0.15–0.25 per fingerprint). Default behavior includes "
-                             "it as a core part of the output.")
     parser.add_argument("--no-verify", action="store_true",
                         help="Skip the post-generation URL + quote verification pass "
                              "(URLs and quotes won't be checked against live pages; "
