@@ -476,6 +476,28 @@ section { animation: fadein 0.2s; }
 .fr-trace.untraced { color: #aaa; font-size: 0.82rem; }
 .event-gap-card { border-left: 4px solid #d68f1a; }
 
+/* Coverage lean (AllSides cross-reference) */
+.coverage-card { margin-bottom: 1.6rem; border-left: 4px solid #5b6b7a; }
+.cov-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; }
+.cov-skew { font-weight: 600; color: #2d3a45; }
+.cov-skew.insufficient, .cov-skew.none { color: #8a6d1a; font-weight: 500; }
+.cov-skew.onesided { color: #9a4a17; }
+.cov-sub { color: #777; font-size: 0.82rem; }
+.cov-bar { display: flex; height: 26px; border-radius: 4px; overflow: hidden; margin: 0.7rem 0 0.3rem; background: #eee; }
+.cov-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; color: #fff; min-width: 0; }
+.cov-seg.left { background: #2c5fa8; }
+.cov-seg.lean-left { background: #6b95cf; }
+.cov-seg.center { background: #9aa3ab; }
+.cov-seg.lean-right { background: #cf8a6b; }
+.cov-seg.right { background: #b23b2e; }
+.cov-scale { display: flex; justify-content: space-between; color: #999; font-size: 0.7rem; margin-bottom: 0.7rem; }
+.cov-outlets { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0; }
+.cov-chip { font-size: 0.72rem; padding: 0.12rem 0.5rem; border-radius: 10px; border: 1px solid #ddd; color: #444; background: #fafafa; }
+.cov-chip .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.cov-note { color: #777; font-size: 0.8rem; margin-top: 0.5rem; }
+.cov-eco { color: #555; font-size: 0.8rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed #e3e3e3; }
+.cov-attrib { color: #999; font-size: 0.72rem; margin-top: 0.6rem; }
+
 /* Multi-claim source-analysis view */
 .article-intro { margin-bottom: 1.2rem; }
 .article-intro a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
@@ -719,6 +741,7 @@ function renderEventAnalysis(analysis) {
       <p>${(analysis.framings || []).length} narrative framings mapped across the ecosystem. The shared common ground is what all sides accept; each framing asks a different question.</p>
     </div>
     ${sharedHtml}
+    ${renderCoverageLean(analysis.coverage_lean)}
     <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings</h2>
     <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>
     ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
@@ -731,6 +754,68 @@ function renderEventAnalysis(analysis) {
       if (fp) openFingerprintFromEvent(fp);
     };
   });
+}
+
+function renderCoverageLean(cl) {
+  if (!cl || !cl.distribution) return '';
+  const order = ['left', 'lean-left', 'center', 'lean-right', 'right'];
+  const labels = { 'left': 'L', 'lean-left': 'LL', 'center': 'C', 'lean-right': 'LR', 'right': 'R' };
+  const dist = cl.distribution || {};
+  const n = cl.rated_outlets || 0;
+  const skew = cl.skew || '';
+  let skewClass = '';
+  if (skew.startsWith('insufficient')) skewClass = 'insufficient';
+  else if (skew.startsWith('no rated')) skewClass = 'none';
+  else if (skew.startsWith('one-sided')) skewClass = 'onesided';
+
+  // Stacked bar (only when we actually have rated outlets)
+  let bar = '';
+  if (n > 0) {
+    const segs = order.map(b => {
+      const c = dist[b] || 0;
+      if (!c) return '';
+      const w = (100 * c / n).toFixed(1);
+      return `<div class="cov-seg ${b}" style="flex:0 0 ${w}%" title="${b}: ${c}">${c}</div>`;
+    }).join('');
+    bar = `<div class="cov-bar">${segs}</div>
+      <div class="cov-scale"><span>← left</span><span>center</span><span>right →</span></div>`;
+  }
+
+  // Matched-outlet chips, left → right
+  const chips = (cl.matched || []).map(m =>
+    `<span class="cov-chip"><span class="dot cov-seg ${m.bucket}"></span>${escapeHtml(m.carrier || m.outlet || '')}</span>`
+  ).join('');
+
+  const gap = cl.coverage_gap || {};
+  const gapNote = gap.unrated_news_carriers
+    ? `<div class="cov-note">${gap.unrated_news_carriers} news ${gap.unrated_news_carriers === 1 ? 'carrier' : 'carriers'} not in the bias DB (coverage gap, not counted): ${
+        (gap.examples || []).map(g => escapeHtml(g.domain || g.carrier || '')).filter(Boolean).join(', ')}</div>`
+    : '';
+
+  const eco = cl.ecosystem || {};
+  const bt = eco.by_type || {};
+  const ecoNote = eco.n_framings ? `<div class="cov-eco"><strong>Who's contesting it:</strong>
+      news ${bt.news||0} · political ${bt.political||0} · institutional ${bt.institutional||0} · social ${bt.social||0}
+      &nbsp;—&nbsp; ${eco.vested_interest||0} vested-interest carriers across ${eco.framings_with_vested||0}/${eco.n_framings} framings.
+      <span class="cov-sub">(texture, not a polarization score — many stakeholders can mean a big event, not a charged one)</span></div>` : '';
+
+  const idxNote = (cl.lean_index !== null && cl.lean_index !== undefined && n > 0)
+    ? `lean index ${cl.lean_index} (−2 all-left … +2 all-right)` : '';
+
+  return `
+    <div class="card coverage-card">
+      <div class="cov-head">
+        <h2 style="margin:0;">Coverage Lean</h2>
+        <span class="cov-sub">${n} of ${n + (gap.unrated_news_carriers || 0)} news outlets rated${
+          cl.resolve_rate !== undefined ? ` · ${Math.round(cl.resolve_rate * 100)}% resolved` : ''}</span>
+      </div>
+      <div class="cov-skew ${skewClass}">${escapeHtml(skew)}${idxNote ? ` <span class="cov-sub" style="font-weight:400;">· ${idxNote}</span>` : ''}</div>
+      ${bar}
+      ${chips ? `<div class="cov-outlets">${chips}</div>` : ''}
+      ${gapNote}
+      ${ecoNote}
+      <div class="cov-attrib">Outlet bias ratings: AllSides${cl.as_of ? ` (${escapeHtml(cl.as_of)})` : ''} — aggregated by Tributary, which adjudicates nothing. This is the lean of the carriers we surfaced, a sample, not a census.</div>
+    </div>`;
 }
 
 function openFingerprintFromEvent(fp) {

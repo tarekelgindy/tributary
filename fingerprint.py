@@ -2989,6 +2989,9 @@ class EventAnalyzer:
         # Lean mode: fewer framings + fewer carriers each → much smaller output
         # tokens → cheaper. The framing search output dominates event cost.
         self.lean_framings = lean_framings
+        # Lazily-loaded source-bias DB for coverage-lean enrichment; None until
+        # first use, then a BiasDB or False (data absent → don't retry).
+        self._bias_db = None
 
     def _web_search_tool(self) -> dict:
         tool = {"type": "web_search_20250305", "name": "web_search"}
@@ -3102,7 +3105,9 @@ class EventAnalyzer:
                              "gap analysis were skipped)",
                 provenance=Provenance.ai(model=self.models["framings"]),
             )
-            return await self.verify_event(analysis) if verify else analysis
+            if verify:
+                analysis = await self.verify_event(analysis)
+            return self._attach_coverage_lean(analysis)
         shared, _omit = await asyncio.gather(
             self.extract_shared_foundation(event, framings),
             self.analyze_omissions(framings),
@@ -3113,7 +3118,28 @@ class EventAnalyzer:
             shared_foundation=shared, framings=framings, gap_analysis=gap_analysis,
             provenance=Provenance.ai(model=self.models["framings"]),
         )
-        return await self.verify_event(analysis) if verify else analysis
+        if verify:
+            analysis = await self.verify_event(analysis)
+        return self._attach_coverage_lean(analysis)
+
+    def _attach_coverage_lean(self, analysis: EventAnalysis) -> EventAnalysis:
+        """Cross-reference the carriers against the local source-bias DB and
+        attach the coverage-lean distribution. Free (no API) and best-effort:
+        if the bias data isn't present (gen_bias_data.py not run), it's quietly
+        skipped — the analysis is still complete without it."""
+        if not analysis.framings or self._bias_db is False:
+            return analysis
+        try:
+            from bias_db import BiasDB, coverage_lean
+            if self._bias_db is None:
+                db = BiasDB()
+                self._bias_db = db if db.meta else False
+            if self._bias_db is False:
+                return analysis
+            analysis.coverage_lean = coverage_lean(analysis.to_dict(), db=self._bias_db)
+        except Exception as e:  # noqa: BLE001 — enrichment must never fail the analysis
+            _log_progress(f"Event: coverage-lean skipped ({type(e).__name__}: {e})")
+        return analysis
 
     def _parse_framings(self, raw_list) -> list:
         framings = []

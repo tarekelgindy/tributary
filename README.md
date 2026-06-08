@@ -144,9 +144,14 @@ Ground News's signature feature is showing *how much* of a story's coverage is l
 python gen_bias_data.py                         # build the local AllSides snapshot (one-time, refreshable)
 python bias_db.py events/<id>.json              # coverage-lean for one analyzed event
 python bias_db.py --lookup nytimes.com          # what AllSides rates a single outlet
+python bias_db.py --backfill events/            # add coverage-lean to an existing corpus
 ```
 
 `bias_db.py` tags each **news** carrier's domain with its AllSides bias and aggregates into a distribution + a `lean_index` (−2 all-left … +2 all-right) + a plain skew label. The ratings are **AllSides'** — Tributary only looks them up and aggregates; nothing is invented. Outlets it can't resolve are reported as **coverage gaps**, never guessed.
+
+New event analyses **carry this automatically** (when the bias snapshot is present — otherwise it's quietly skipped), it's stored on the `EventAnalysis` (`coverage_lean`), and the **viewer renders it** as a left→right bar with the matched outlets, the coverage gaps, and an attribution line. Run `--backfill` to add it to events you analyzed before this existed.
+
+It also reports a **carrier-ecosystem** line — counts of news / political / institutional / social carriers and how many "vested-interest" actors span the framings. This is *texture on who's contesting the event*, **not** a polarization score: many institutional actors often just means a large multi-stakeholder event, not a charged one. Read it mainly as a *negative* signal (few vested interests → likely uncontested). A real adversarial-spread measure (vested actors on *opposing* framings) is a later enhancement.
 
 Honest limits, learned from validating on a real corpus:
 - **It's a US-political-story tool.** AllSides/MBFC are US-media databases, so international stories (whose carriers are Al Jazeera, Times of Israel, Anadolu…) resolve poorly. When too little coverage is rateable, it returns *"insufficient rated coverage to judge skew"* rather than faking a blindspot.

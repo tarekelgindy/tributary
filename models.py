@@ -1404,6 +1404,11 @@ class EventAnalysis:
     gap_analysis: str = ""           # what framings might still be missing
     # Optionally embeds the fingerprints of framings traced on demand
     fingerprints: list[NarrativeFingerprint] = field(default_factory=list)
+    # Coverage lean: the L/C/R distribution of the news carriers (cross-
+    # referenced against a source-bias DB) + carrier-ecosystem texture. A plain
+    # dict produced by bias_db.coverage_lean(); empty until enriched. The
+    # ratings are AllSides'/MBFC's (attributed inside), aggregated by Tributary.
+    coverage_lean: dict = field(default_factory=dict)
     # Shared contribution-ready substrate (1a/1b)
     provenance: Provenance = field(default_factory=Provenance)
     contributions: list[Contribution] = field(default_factory=list)
@@ -1429,6 +1434,7 @@ class EventAnalysis:
             "framings": [f.to_dict() for f in self.framings],
             "gap_analysis": self.gap_analysis,
             "fingerprints": [f.to_dict() for f in self.fingerprints],
+            "coverage_lean": self.coverage_lean,
             "provenance": self.provenance.to_dict(),
             "contributions": [c.to_dict() for c in self.contributions],
             "contributors": [c.to_dict() for c in self.contributors],

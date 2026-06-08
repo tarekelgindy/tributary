@@ -248,7 +248,19 @@ def coverage_lean(event: dict, db: BiasDB = None, news_only: bool = True) -> dic
     unresolved ones (the coverage gaps)."""
     db = db or BiasDB()
     seen = {}            # domain-or-name key -> (BiasRating | None, display, is_news)
-    for fr in event.get("framings", []):
+    eco = {t: 0 for t in ("news", "political", "social", "institutional", "academic", "other")}
+    framings = event.get("framings", [])
+    framings_with_vested = 0
+    for fr in framings:
+        fr_has_vested = False
+        for c in fr.get("carriers", []):
+            ct = (c.get("carrier_type") or "other").lower()
+            eco[ct if ct in eco else "other"] += 1
+            if ct in ("political", "institutional"):
+                fr_has_vested = True
+        if fr_has_vested:
+            framings_with_vested += 1
+    for fr in framings:
         for c in fr.get("carriers", []):
             ctype = (c.get("carrier_type") or "").lower()
             url = c.get("url", "")
@@ -311,6 +323,19 @@ def coverage_lean(event: dict, db: BiasDB = None, news_only: bool = True) -> dic
         },
         "non_news_carriers": len(nonnews),
         "matched": sorted(matched, key=lambda m: m["lean_num"]),
+        # Carrier ecosystem — texture on WHO is contesting the event, not a
+        # polarization score. Many vested-interest (political/institutional)
+        # carriers tracks event SCALE as much as contestedness (a big
+        # geopolitical story pulls in IGOs/militaries/NGOs regardless), so read
+        # it as a signal, not a verdict — strongest as a NEGATIVE one (few
+        # vested interests -> likely uncontested). A real adversarial-spread
+        # measure (vested actors on OPPOSING framings) is a later enhancement.
+        "ecosystem": {
+            "by_type": eco,
+            "vested_interest": eco["political"] + eco["institutional"],
+            "framings_with_vested": framings_with_vested,
+            "n_framings": len(framings),
+        },
         "source_note": db.meta.get("source_detail") or db.meta.get("source", ""),
         "as_of": db.meta.get("as_of", ""),
     }
@@ -362,13 +387,44 @@ def _print_report(rep: dict):
         print(f"  coverage gaps ({gap['unrated_news_carriers']} unrated news carriers): {ex}")
     if rep["non_news_carriers"]:
         print(f"  ({rep['non_news_carriers']} non-news carriers — political/social — excluded)")
+    eco = rep.get("ecosystem", {})
+    if eco:
+        bt = eco["by_type"]
+        print(f"  carrier ecosystem: news {bt['news']} / political {bt['political']} / "
+              f"institutional {bt['institutional']} / social {bt['social']}  "
+              f"(vested interest: {eco['vested_interest']}, across "
+              f"{eco['framings_with_vested']}/{eco['n_framings']} framings — texture, not a score)")
     print(f"  source: AllSides ({rep['as_of']}) — ratings are AllSides', aggregated by Tributary")
+
+
+def backfill(directory: str, db: BiasDB) -> tuple:
+    """Inject a `coverage_lean` block into every event JSON in a directory that
+    has framings. Lets an existing corpus gain the lean without re-analysis."""
+    done = skipped = 0
+    for path in sorted(Path(directory).glob("*.json")):
+        if path.name == "corpus_index.json":
+            continue
+        try:
+            ev = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            skipped += 1
+            continue
+        if not ev.get("framings"):
+            skipped += 1
+            continue
+        ev["coverage_lean"] = coverage_lean(ev, db=db)
+        path.write_text(json.dumps(ev, indent=2, ensure_ascii=False, default=str),
+                        encoding="utf-8")
+        done += 1
+    return done, skipped
 
 
 def main():
     p = argparse.ArgumentParser(description="Source-bias lookup + event coverage-lean.")
     p.add_argument("event_json", nargs="?", help="Path to an EventAnalysis JSON.")
     p.add_argument("--lookup", default="", help="Resolve a single domain or outlet name.")
+    p.add_argument("--backfill", default="",
+                   help="Inject coverage_lean into every event JSON in this directory.")
     p.add_argument("--include-nonnews", action="store_true",
                    help="Count political/social carriers too (default: news outlets only).")
     p.add_argument("--json", action="store_true", help="Emit the report as JSON.")
@@ -378,6 +434,12 @@ def main():
     if args.lookup:
         r = db.lookup(domain=args.lookup, name=args.lookup)
         print(json.dumps(r.to_dict() if r else {"result": "unrated (coverage gap)"}, indent=2))
+        return
+    if args.backfill:
+        done, skipped = backfill(args.backfill, db)
+        print(f"[backfill] added coverage_lean to {done} event JSONs "
+              f"({skipped} skipped — no framings). Source: AllSides {db.meta.get('as_of','')}.",
+              file=sys.stderr)
         return
     if not args.event_json:
         p.error("give an event JSON path, or --lookup <domain/name>")
