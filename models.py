@@ -1181,6 +1181,10 @@ class SourceAnalysis:
     breakdown: dict = field(default_factory=dict)  # content profile: counts/percentages by type
     claims: list[ExtractedClaim] = field(default_factory=list)
     fingerprints: list[NarrativeFingerprint] = field(default_factory=list)
+    # Shared contribution-ready substrate (1a/1b) — same as the fingerprint
+    provenance: Provenance = field(default_factory=Provenance)
+    contributions: list[Contribution] = field(default_factory=list)
+    contributors: list[Contributor] = field(default_factory=list)
 
     def __post_init__(self):
         if not self.analysis_id:
@@ -1205,6 +1209,218 @@ class SourceAnalysis:
             "breakdown": self.breakdown,
             "claims": [c.to_dict() for c in self.claims],
             "fingerprints": [f.to_dict() for f in self.fingerprints],
+            "provenance": self.provenance.to_dict(),
+            "contributions": [c.to_dict() for c in self.contributions],
+            "contributors": [c.to_dict() for c in self.contributors],
+        }
+
+    def to_json(self, indent: int = 2) -> str:
+        return json.dumps(self.to_dict(), indent=indent, default=str)
+
+
+# ---------------------------------------------------------------------------
+# Downstream: EventAnalysis — the narratives that form around an event
+# ---------------------------------------------------------------------------
+# The dual of the upstream NarrativeFingerprint. Given an event or statement,
+# establish the shared factual ground, then identify the distinct narrative
+# framings forming around it across the information ecosystem — and for each,
+# who creates / amplifies / criticizes it. Each framing's key_claim is itself
+# fingerprintable (link via fingerprint_id), so downstream FINDS the
+# narratives and upstream TRACES each. Provenance + contribution ready.
+
+@dataclass
+class SharedFact:
+    """A piece of factual common ground around an event — what (most) sides
+    accept. A contributable element: a human can confirm/dispute it."""
+    fact_id: str = ""
+    statement: str = ""
+    verified: bool = False           # corroborated against a primary source
+    source_url: str = ""
+    note: str = ""
+    provenance: Provenance = field(default_factory=Provenance)
+
+    def __post_init__(self):
+        if not self.fact_id:
+            self.fact_id = hashlib.sha256(
+                self.statement.lower().strip().encode()).hexdigest()[:12]
+
+    def to_dict(self):
+        return {
+            "fact_id": self.fact_id,
+            "statement": self.statement,
+            "verified": self.verified,
+            "source_url": self.source_url,
+            "note": self.note,
+            "provenance": self.provenance.to_dict(),
+        }
+
+
+@dataclass
+class SharedFoundation:
+    """The common ground beneath the competing framings — often the most
+    clarifying part, because it's what is NOT contested."""
+    verified_facts: list[SharedFact] = field(default_factory=list)
+    unverified_shared_claims: list[SharedFact] = field(default_factory=list)
+    points_of_disagreement: list[str] = field(default_factory=list)
+    summary: str = ""
+
+    def to_dict(self):
+        return {
+            "verified_facts": [f.to_dict() for f in self.verified_facts],
+            "unverified_shared_claims": [f.to_dict() for f in self.unverified_shared_claims],
+            "points_of_disagreement": self.points_of_disagreement,
+            "summary": self.summary,
+        }
+
+
+@dataclass
+class FramingCarrier:
+    """An actor (outlet, author, account, institution) that creates or
+    amplifies a framing, with its role. This is the 'who creates/amplifies'
+    of the mission — reuses the AmplifierRole vocabulary."""
+    carrier_id: str = ""
+    name: str = ""                   # outlet / author / handle
+    url: str = ""
+    carrier_type: str = ""           # news / social / political / institutional / academic / other
+    amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
+    excerpt: str = ""                # a representative headline / quote
+    date: str = ""
+    role_evidence: str = ""
+    # verification (URL existence) — wired in a later pass, same pattern as fingerprint
+    verified: bool = False
+    verification_status: str = "unchecked"
+    verification_notes: str = ""
+    archive_url: str = ""
+    provenance: Provenance = field(default_factory=Provenance)
+
+    def __post_init__(self):
+        if not self.carrier_id:
+            key = f"{self.url}|{self.name}|{self.excerpt[:48]}"
+            self.carrier_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+
+    def to_dict(self):
+        return {
+            "carrier_id": self.carrier_id,
+            "name": self.name,
+            "url": self.url,
+            "carrier_type": self.carrier_type,
+            "amplifier_role": self.amplifier_role.value,
+            "excerpt": self.excerpt,
+            "date": self.date,
+            "role_evidence": self.role_evidence,
+            "verified": self.verified,
+            "verification_status": self.verification_status,
+            "verification_notes": self.verification_notes,
+            "archive_url": self.archive_url,
+            "provenance": self.provenance.to_dict(),
+        }
+
+
+@dataclass
+class FramingOmission:
+    """Something a framing leaves out that another framing covers — the
+    mechanism by which echo chambers work."""
+    what_is_missing: str = ""
+    found_in_framing: str = ""       # which other framing surfaces it
+    impact: str = ""
+    omission_type: str = ""          # factual / perspective / context
+    provenance: Provenance = field(default_factory=Provenance)
+
+    def to_dict(self):
+        return {
+            "what_is_missing": self.what_is_missing,
+            "found_in_framing": self.found_in_framing,
+            "impact": self.impact,
+            "omission_type": self.omission_type,
+            "provenance": self.provenance.to_dict(),
+        }
+
+
+@dataclass
+class NarrativeFraming:
+    """One distinct narrative that forms around an event — a lens defined by
+    the QUESTION it asks, not just a political side. Its key_claim is
+    fingerprintable (link via fingerprint_id)."""
+    framing_id: str = ""
+    name: str = ""                   # "Accountability"
+    question: str = ""               # "Was this lawful? Who is responsible?"
+    key_claim: str = ""              # the narrative statement (this is what gets fingerprinted)
+    description: str = ""
+    emphasizes: str = ""
+    downplays: str = ""
+    tone: str = ""                   # register/valence: measured / populist / alarmed / accusatory / ...
+    sample_headlines: list[str] = field(default_factory=list)
+    carriers: list[FramingCarrier] = field(default_factory=list)
+    omissions: list[FramingOmission] = field(default_factory=list)
+    fingerprint_id: str = ""         # link to the upstream trace of this framing (populated on demand)
+    provenance: Provenance = field(default_factory=Provenance)
+
+    def __post_init__(self):
+        if not self.framing_id:
+            key = f"{self.name.lower().strip()}|{self.key_claim.lower().strip()}"
+            self.framing_id = hashlib.sha256(key.encode()).hexdigest()[:8]
+
+    def to_dict(self):
+        return {
+            "framing_id": self.framing_id,
+            "name": self.name,
+            "question": self.question,
+            "key_claim": self.key_claim,
+            "description": self.description,
+            "emphasizes": self.emphasizes,
+            "downplays": self.downplays,
+            "tone": self.tone,
+            "sample_headlines": self.sample_headlines,
+            "carriers": [c.to_dict() for c in self.carriers],
+            "omissions": [o.to_dict() for o in self.omissions],
+            "fingerprint_id": self.fingerprint_id,
+            "provenance": self.provenance.to_dict(),
+        }
+
+
+@dataclass
+class EventAnalysis:
+    """Downstream analysis of an event/statement: the shared factual ground
+    plus the distinct narrative framings forming around it and who carries
+    each. The dual of NarrativeFingerprint; framings link to fingerprints."""
+    analysis_id: str = ""
+    event: str = ""                  # neutral description of the event/statement
+    event_date: str = ""
+    source_urls: list[str] = field(default_factory=list)
+    created_at: str = ""
+    shared_foundation: SharedFoundation = field(default_factory=SharedFoundation)
+    framings: list[NarrativeFraming] = field(default_factory=list)
+    gap_analysis: str = ""           # what framings might still be missing
+    # Optionally embeds the fingerprints of framings traced on demand
+    fingerprints: list[NarrativeFingerprint] = field(default_factory=list)
+    # Shared contribution-ready substrate (1a/1b)
+    provenance: Provenance = field(default_factory=Provenance)
+    contributions: list[Contribution] = field(default_factory=list)
+    contributors: list[Contributor] = field(default_factory=list)
+
+    def __post_init__(self):
+        if not self.analysis_id:
+            self.analysis_id = hashlib.sha256(
+                self.event.lower().strip().encode()).hexdigest()[:12]
+        if not self.created_at:
+            self.created_at = datetime.now(timezone.utc).isoformat()
+
+    def to_dict(self):
+        return {
+            # Marker so the viewer can tell an event analysis from the others.
+            "is_event_analysis": True,
+            "analysis_id": self.analysis_id,
+            "event": self.event,
+            "event_date": self.event_date,
+            "source_urls": self.source_urls,
+            "created_at": self.created_at,
+            "shared_foundation": self.shared_foundation.to_dict(),
+            "framings": [f.to_dict() for f in self.framings],
+            "gap_analysis": self.gap_analysis,
+            "fingerprints": [f.to_dict() for f in self.fingerprints],
+            "provenance": self.provenance.to_dict(),
+            "contributions": [c.to_dict() for c in self.contributions],
+            "contributors": [c.to_dict() for c in self.contributors],
         }
 
     def to_json(self, indent: int = 2) -> str:
