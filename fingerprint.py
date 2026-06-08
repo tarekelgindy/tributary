@@ -1540,6 +1540,53 @@ async def _create_with_retry(client, max_attempts: int = 5,
 
 
 # ---------------------------------------------------------------------------
+# Batch API execution (50% off tokens, async up to 24h)
+# ---------------------------------------------------------------------------
+
+def run_message_batch(requests: list, poll_seconds: int = 20,
+                      max_wait_seconds: int = 24 * 3600, label: str = "batch") -> dict:
+    """Submit a list of {custom_id, params} Messages requests to the Anthropic
+    Message Batches API (~50% off tokens), poll to completion, and return
+    {custom_id: response_text or None}. Synchronous (mirrors the proven
+    batch_probe.py); call it off the event loop via run_in_executor.
+
+    web_search is supported in batch (confirmed by batch_probe.py). A single
+    item's dependent stages can't share a batch — this batches ONE stage
+    across many items, where the per-stage wait is amortized."""
+    client = anthropic.Anthropic()
+    batch = client.messages.batches.create(requests=requests)
+    _log_progress(f"{label}: submitted {len(requests)} requests "
+                  f"(batch {batch.id}); polling...")
+    waited = 0
+    while batch.processing_status != "ended":
+        if waited >= max_wait_seconds:
+            _log_progress(f"{label}: still processing after {waited//60} min; "
+                          f"giving up the wait (batch {batch.id} continues server-side)")
+            return {}
+        time.sleep(poll_seconds)
+        waited += poll_seconds
+        batch = client.messages.batches.retrieve(batch.id)
+        _log_progress(f"{label}: {batch.processing_status} ({waited}s)")
+
+    out = {}
+    for r in client.messages.batches.results(batch.id):
+        rtype = getattr(r.result, "type", None)
+        if rtype == "succeeded":
+            out[r.custom_id] = _response_text(r.result.message)
+        else:
+            err = getattr(r.result, "error", rtype)
+            _log_progress(f"{label}: request {r.custom_id} {rtype}: {err}")
+            out[r.custom_id] = None
+    return out
+
+
+async def run_message_batch_async(requests: list, **kwargs) -> dict:
+    """Await wrapper — runs the synchronous batch executor in a thread so it
+    doesn't block the event loop."""
+    return await asyncio.to_thread(run_message_batch, requests, **kwargs)
+
+
+# ---------------------------------------------------------------------------
 # Generator
 # ---------------------------------------------------------------------------
 
@@ -2878,28 +2925,29 @@ class EventAnalyzer:
         return (_clean_text_field(d.get("event")) or raw.strip(),
                 _clean_text_field(d.get("event_date")))
 
-    async def search_framings(self, event: str, scope: Scope) -> tuple:
-        """Find the distinct framings + carriers across the ecosystem."""
-        _log_progress("Event: framing search (step 2/5, web_search)")
-        t0 = time.monotonic()
+    def framings_request_params(self, event: str, scope: Scope) -> dict:
+        """The Messages-API params for the framing search, so the call can run
+        either live (search_framings) or batched (the Batch-API corpus path)."""
         user = (f"EVENT:\n{event}\n\nSCOPE: {_scope_clause(scope)}\n\n"
                 "Map the distinct narrative framings forming around this event "
                 "and who creates/amplifies each. Be balanced across the spectrum.")
-        resp = await _create_with_retry(
-            self.client, model=self.models["framings"], max_tokens=16384,
-            tools=[self._web_search_tool()],
-            system=[{"type": "text", "text": EVENT_FRAMINGS_SYSTEM,
-                     "cache_control": {"type": "ephemeral"}}],
-            messages=[{"role": "user", "content": user}],
-            retry_on_empty_text=True,
-        )
-        raw_text = _response_text(resp)
+        return {
+            "model": self.models["framings"],
+            "max_tokens": 16384,
+            "tools": [self._web_search_tool()],
+            "system": [{"type": "text", "text": EVENT_FRAMINGS_SYSTEM,
+                        "cache_control": {"type": "ephemeral"}}],
+            "messages": [{"role": "user", "content": user}],
+        }
+
+    def parse_framings_text(self, raw_text: str) -> tuple:
+        """Parse a framing-search response (live or batched) into framings +
+        notes, with the truncation-salvage fallback."""
         data = _parse_json_safe(raw_text)
         raw_framings = data.get("framings") or []
         # Salvage: tool-using models often wrap the JSON in a chatty preamble
         # and can hit the token cap mid-array. If the clean parse found
-        # nothing, recover the complete framing objects that DID finish
-        # before any truncation point.
+        # nothing, recover the complete framing objects that DID finish.
         if not raw_framings:
             raw_framings = _recover_json_array_objects(raw_text, "framings")
             if raw_framings:
@@ -2908,9 +2956,53 @@ class EventAnalyzer:
         framings = self._parse_framings(raw_framings)
         if not framings:
             _save_debug_response("event_framings", raw_text)
+        return framings, _clean_text_field(data.get("search_notes"))
+
+    async def search_framings(self, event: str, scope: Scope) -> tuple:
+        """Find the distinct framings + carriers across the ecosystem (live)."""
+        _log_progress("Event: framing search (step 2/5, web_search)")
+        t0 = time.monotonic()
+        resp = await _create_with_retry(
+            self.client, retry_on_empty_text=True,
+            **self.framings_request_params(event, scope),
+        )
+        framings, notes = self.parse_framings_text(_response_text(resp))
         _log_progress(f"Event: {len(framings)} framings found in "
                       f"{time.monotonic() - t0:.1f}s")
-        return framings, _clean_text_field(data.get("search_notes"))
+        return framings, notes
+
+    async def build_event_from_framings(
+        self, event: str, event_date: str, framings: list,
+        source_urls: Optional[list] = None, framings_only: bool = False,
+    ) -> EventAnalysis:
+        """Given already-found framings (e.g. from a batch), run the cheap
+        live Haiku steps (shared foundation / omissions / gaps) and assemble
+        the EventAnalysis. Shared by the live and batch paths."""
+        if not framings:
+            return EventAnalysis(
+                event=event, event_date=event_date, source_urls=source_urls or [],
+                framings=[],
+                gap_analysis="No narrative framings were identified for this event.",
+                provenance=Provenance.ai(model=self.models["framings"]),
+            )
+        if framings_only:
+            return EventAnalysis(
+                event=event, event_date=event_date, source_urls=source_urls or [],
+                framings=framings,
+                gap_analysis="(framings-only — shared foundation, omissions, and "
+                             "gap analysis were skipped)",
+                provenance=Provenance.ai(model=self.models["framings"]),
+            )
+        shared, _omit = await asyncio.gather(
+            self.extract_shared_foundation(event, framings),
+            self.analyze_omissions(framings),
+        )
+        gap_analysis = await self.detect_gaps(event, framings)
+        return EventAnalysis(
+            event=event, event_date=event_date, source_urls=source_urls or [],
+            shared_foundation=shared, framings=framings, gap_analysis=gap_analysis,
+            provenance=Provenance.ai(model=self.models["framings"]),
+        )
 
     def _parse_framings(self, raw_list) -> list:
         framings = []
@@ -3041,60 +3133,59 @@ class EventAnalyzer:
         event, event_date = await self.describe_event(raw)
         framings, notes = await self.search_framings(event, scope)
 
-        # If the framing search came back empty (e.g. an API empty-response,
-        # or a very recent event with thin coverage), don't burn three more
-        # calls producing nonsense on empty input — return a clear result.
+        # If the framing search came back empty (transient API empty-response,
+        # or a very recent/niche event), build_event_from_framings returns a
+        # clear empty result instead of burning the downstream calls.
         if not framings:
             _log_progress("Event: framing search returned no framings — "
                           "skipping shared-foundation / omissions / gap steps")
-            return EventAnalysis(
-                event=event,
-                event_date=event_date,
-                source_urls=source_urls or [],
-                framings=[],
-                gap_analysis=(
-                    "No narrative framings were identified for this event. "
-                    "This usually means the framing search returned no usable "
-                    "result (check fingerprints/debug/ for an event_framings "
-                    "file — often a transient API empty response, worth a "
-                    "re-run), or the event is too recent/niche to have distinct "
-                    "framings yet. "
-                    + (f"Search notes: {notes}" if notes else "")
-                ),
-                provenance=Provenance.ai(model=self.models["framings"]),
-            )
-
-        # Cheap preview: the framing search is the one valuable + expensive
-        # step. Stop here and skip the shared-foundation / omissions / gap
-        # calls (~$0.20 vs ~$0.50) — for eyeballing an event while iterating.
-        if framings_only:
-            _log_progress("Event: framings-only preview — skipping "
-                          "shared-foundation / omissions / gap steps")
-            return EventAnalysis(
-                event=event,
-                event_date=event_date,
-                source_urls=source_urls or [],
-                framings=framings,
-                gap_analysis="(framings-only preview — shared foundation, "
-                             "omissions, and gap analysis were skipped)",
-                provenance=Provenance.ai(model=self.models["framings"]),
-            )
-
-        # Shared foundation + omissions don't depend on each other → parallel.
-        shared, _omit = await asyncio.gather(
-            self.extract_shared_foundation(event, framings),
-            self.analyze_omissions(framings),
+        elif framings_only:
+            _log_progress("Event: framings-only — skipping shared-foundation "
+                          "/ omissions / gap steps")
+        return await self.build_event_from_framings(
+            event, event_date, framings,
+            source_urls=source_urls, framings_only=framings_only,
         )
-        gap_analysis = await self.detect_gaps(event, framings)
-        return EventAnalysis(
-            event=event,
-            event_date=event_date,
-            source_urls=source_urls or [],
-            shared_foundation=shared,
-            framings=framings,
-            gap_analysis=gap_analysis,
-            provenance=Provenance.ai(model=self.models["framings"]),
-        )
+
+    async def analyze_events_batch(
+        self,
+        raws: list,
+        scope: Optional[Scope] = None,
+        framings_only: bool = False,
+    ) -> list:
+        """Batch many events through the Batch API: the expensive framing
+        searches (the ~90% cost) go as ONE batch (~50% off tokens, async),
+        while the cheap Haiku stages (describe, foundation, omissions, gaps)
+        run live. Returns an EventAnalysis per input, order-aligned.
+
+        Also the engine behind a single --batch event (call with one raw)."""
+        scope = scope or Scope()
+        # Stage 1 (live Haiku): neutral descriptions.
+        descs = await asyncio.gather(*[self.describe_event(r) for r in raws])
+        events = [d[0] for d in descs]
+        dates = [d[1] for d in descs]
+
+        # Stage 2 (BATCH, web_search): all framing searches in one job.
+        requests = [
+            {"custom_id": f"fr-{i}",
+             "params": self.framings_request_params(events[i], scope)}
+            for i in range(len(events))
+        ]
+        _log_progress(f"Event batch: submitting {len(requests)} framing "
+                      "searches to the Batch API (~50% off, async)")
+        results = await run_message_batch_async(requests, label="framings")
+
+        # Stage 3 (live Haiku per event): foundation/omissions/gaps + assemble.
+        analyses = []
+        for i, ev in enumerate(events):
+            text = results.get(f"fr-{i}")
+            framings, _notes = self.parse_framings_text(text) if text else ([], "")
+            if not framings:
+                _log_progress(f"Event batch [{i+1}]: no framings "
+                              "(empty/failed batch item)")
+            analyses.append(await self.build_event_from_framings(
+                ev, dates[i], framings, framings_only=framings_only))
+        return analyses
 
 
 # ---------------------------------------------------------------------------
@@ -3214,11 +3305,21 @@ async def _cli(args):
 
         models = {k: args.event_model for k in EventAnalyzer.DEFAULT_MODELS} if args.event_model else None
         analyzer = EventAnalyzer(max_searches=args.max_searches, models=models)
-        analysis = await analyzer.analyze_event(
-            raw, scope=scope,
-            source_urls=[args.url] if args.url else [],
-            framings_only=args.framings_only,
-        )
+        if args.batch:
+            # Route the expensive framing search through the Batch API (~50%
+            # off, async — slower, for when you don't need it instantly).
+            print("[--batch: the framing search goes through the async Batch "
+                  "API; this can take minutes. Ctrl-C is safe.]", file=sys.stderr)
+            analyses = await analyzer.analyze_events_batch(
+                [raw], scope=scope, framings_only=args.framings_only)
+            analysis = analyses[0]
+            analysis.source_urls = [args.url] if args.url else []
+        else:
+            analysis = await analyzer.analyze_event(
+                raw, scope=scope,
+                source_urls=[args.url] if args.url else [],
+                framings_only=args.framings_only,
+            )
 
         # Decoupled framing→fingerprint: only trace framings on demand.
         if args.trace_framings and analysis.framings:
@@ -3379,6 +3480,10 @@ def main():
                         help="In --event mode, stop after the framing search and skip the "
                              "shared-foundation / omissions / gap steps (~$0.20 vs ~$0.50) "
                              "— a cheap preview for iterating on events.")
+    parser.add_argument("--batch", action="store_true",
+                        help="In --event mode, route the expensive framing search through "
+                             "the async Batch API (~50%% off tokens). Slower (minutes, no "
+                             "SLA) — use when you don't need the result instantly.")
     parser.add_argument("--context", help="Optional context where the claim appeared")
     parser.add_argument("--region", default="US",
                         help='Regional focus for scope (default: "US")')

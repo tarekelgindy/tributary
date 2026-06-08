@@ -82,14 +82,45 @@ async def run_corpus(args):
     if args.limit:
         todo = todo[:args.limit]
 
-    per = (0.20 if args.framings_only else 0.50) if mode == "events" else (
+    base = (0.20 if args.framings_only else 0.22) if mode == "events" else (
         0.90 if args.full else 0.20)
+    per = base * 0.55 if (args.batch and mode == "events") else base
     print(f"[corpus] {len(topics)} topics ({skipped} already done) → "
           f"processing {len(todo)} {mode} at ~${per:.2f} each "
-          f"≈ ${per * len(todo):.2f} total. Ctrl-C to abort.", file=sys.stderr)
+          f"≈ ${per * len(todo):.2f} total"
+          f"{' (Batch API ~50% off)' if (args.batch and mode == 'events') else ''}. "
+          f"Ctrl-C to abort.", file=sys.stderr)
 
     t0 = time.monotonic()
     ok = fail = 0
+
+    # ---- Batch path (events): one Batch-API job for all framing searches ----
+    if args.batch and mode == "events" and todo:
+        print("[corpus] --batch: submitting all framing searches as one async "
+              "Batch-API job (~50% off). This can take minutes to hours; "
+              "finished events are saved as they assemble.", file=sys.stderr)
+        try:
+            analyses = await analyzer.analyze_events_batch(
+                todo, scope=scope, framings_only=args.framings_only)
+        except Exception as e:  # noqa: BLE001
+            print(f"[corpus] batch failed: {type(e).__name__}: {e}\n"
+                  "  (Re-run without --batch to process sequentially.)", file=sys.stderr)
+            return
+        for topic, analysis in zip(todo, analyses):
+            if not analysis.framings:
+                fail += 1
+                continue
+            (out_dir / f"{analysis.analysis_id}.json").write_text(
+                analysis.to_json(), encoding="utf-8")
+            index[topic] = analysis.analysis_id
+            ok += 1
+        index_path.write_text(json.dumps(index, indent=2), encoding="utf-8")
+        dt = time.monotonic() - t0
+        print(f"\n[corpus] batch done in {dt/60:.1f} min — {ok} succeeded, "
+              f"{fail} failed/empty. Corpus now has {len(index)} events. "
+              f"Output in {out_dir}/", file=sys.stderr)
+        return
+
     for i, topic in enumerate(todo, 1):
         _log_progress(f"[{i}/{len(todo)}] {topic[:70]}")
         try:
@@ -144,6 +175,10 @@ def main():
     p.add_argument("--full", action="store_true",
                    help="Claims: run the full deep pipeline (conceptual+evidence+mutations). "
                         "Events: ignored (use without --framings-only for the full event pipeline).")
+    p.add_argument("--batch", action="store_true",
+                   help="Events: run all framing searches as one async Batch-API job "
+                        "(~50%% off tokens). Takes minutes to hours but ~halves the cost. "
+                        "Cheap Haiku steps still run live.")
     p.add_argument("--max-searches", type=int, default=6,
                    help="Cap web searches per call (default 6 for corpus economy).")
     p.add_argument("--event-model", default="",
