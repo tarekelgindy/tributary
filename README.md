@@ -1,514 +1,162 @@
-# Tributary Source Tracer
+# Tributary
 
-**Follow your feed to its source.**
+**See where information on the internet really comes from — and how it spreads.**
 
-Tributary traces where information comes from. Given any piece of content — a news article, a Bluesky post, a YouTube video — it identifies every factual claim and narrative framing, traces each one to its origin, finds competing perspectives on the same data, tracks how claims mutate as they spread, and reveals what each perspective leaves out.
+The internet has fractured into information ecosystems where people see the same events through completely different lenses, and increasingly can't tell where what they're reading actually originated. Tributary makes information flow transparent. It doesn't tell you what's true; it shows you the machinery behind what you read — where it came from, who amplified it, how it changed along the way, what evidence surrounds it, and what other framings exist — so you can judge for yourself.
+
+Tributary traces information in **two directions**:
+
+- **Upstream** — given a claim or narrative, where did it come from? Who coined the phrasing, who amplified it, how did it mutate, and where does the underlying *idea* trace back to? (a **NarrativeFingerprint**)
+- **Downstream** — given an event or statement, what narratives are forming around it, and who creates/amplifies each? What's the shared common ground everyone accepts? (an **EventAnalysis**)
+
+Every element it produces carries **provenance** — whether it's an AI assertion or human-verified — and the schema is built so human contributions can be layered in Wikipedia-style alongside the AI analysis.
 
 ---
 
-## Setup
-
-### 1. Create virtual environment
+## Quick start
 
 ```bash
-cd /mnt/c/Users/Tarek/Documents/tributary_tracer
-
-# Create venv (Python 3.12)
+# Setup (Python 3.12)
 python3.12 -m venv .venv
+source .venv/bin/activate           # WSL/Linux;  .venv\Scripts\Activate.ps1 on Windows PS
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY="sk-ant-..."   # console.anthropic.com → API Keys
 
-# Activate it
-source .venv/bin/activate          # Linux / WSL
-# .venv\Scripts\activate           # Windows CMD
-# .venv\Scripts\Activate.ps1       # Windows PowerShell
+# Upstream: trace where a narrative comes from (lean by default, ~$0.15–0.25)
+python fingerprint.py "the economy is rigged against working people" --save
+
+# Downstream: map the narratives forming around an event (~$0.40–0.70)
+python fingerprint.py --event "ICE agent killed Renee Good in Minneapolis" --save
+
+# See it: open fingerprint_viewer.html in a browser, drag a JSON onto it.
+# Try demo_event_analysis.json (synthetic, no API needed) to preview the event view.
 ```
 
-### 2. Install dependencies
-
+Optional extras:
 ```bash
-pip install anthropic httpx youtube-transcript-api atproto
-```
-
-Optional (for TikTok/Instagram video transcription):
-```bash
-pip install yt-dlp openai
-# Also requires ffmpeg installed on your system
-```
-
-### 3. Set API keys
-
-```bash
-# Required: Anthropic API key
-# Get one at: https://console.anthropic.com → API Keys → Create Key
-# Then add credits at: console.anthropic.com/settings/billing
-export ANTHROPIC_API_KEY="sk-ant-..."
-
-# Optional: Bluesky auth (for --social flag and social search)
-# Get app password: Bluesky → Settings → App Passwords → Create
-export BLUESKY_HANDLE="yourhandle.bsky.social"
+pip install yt-dlp openai           # TikTok/Instagram video transcription (+ ffmpeg)
+export BLUESKY_HANDLE="you.bsky.social"        # for --social spread analysis
 export BLUESKY_APP_PASSWORD="xxxx-xxxx-xxxx-xxxx"
 ```
 
-### 4. Verify it works
-
-```bash
-python demo.py --extract-only
-```
-
-### Resuming after a break
-
-Create a `.env` file (don't commit to git):
-
-```bash
-cat > .env << 'EOF'
-export ANTHROPIC_API_KEY="sk-ant-..."
-export BLUESKY_HANDLE="yourhandle.bsky.social"
-export BLUESKY_APP_PASSWORD="xxxx-xxxx-xxxx-xxxx"
-EOF
-
-echo ".env" >> .gitignore
-```
-
-Then each session:
-
-```bash
-cd /mnt/c/Users/Tarek/Documents/tributary_tracer
-source .venv/bin/activate
-source .env
-```
+Resuming after a break — put the exports in a `.env` (gitignored) and `source .env` each session.
 
 ---
 
-## Files
+## The two directions
 
-| File | Purpose |
-|------|---------|
-| `demo.py` | Main CLI — run all features from here |
-| `agent.py` | Core tracing engine — claim extraction, source tracing, narrative tracing, perspectives, mutations, omissions |
-| `search_anthropic.py` | Web search adapter using Claude's built-in search |
-| `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
-| `social_search.py` | Bluesky social media search with smart sampling and spread analysis |
-| `batch.py` | Batch processor — discovers trending topics and analyzes them |
-| `graph_store.py` | Neo4j graph storage for all provenance data (views, mutations, social amplifiers) |
-| `worker.py` | Background job queue and API endpoints (for future web service) |
-| `requirements.txt` | Python dependencies |
+### Upstream — `NarrativeFingerprint`
+
+Given a claim, Tributary builds a five-layer fingerprint:
+
+| Layer | What it captures |
+|-------|------------------|
+| **L1 Lexical** | the canonical phrasing, variants, and diagnostic n-grams (the *words*) |
+| **L2 Conceptual** | the vocabulary-independent underlying claim (the *idea*) |
+| **L3 Rhetorical** | framing primitives, villain/victim/hero, tone, register |
+| **L4 Genealogy** | **two lineages** — *lexical* (where the phrasing came from) and *conceptual* (where the idea came from), each dated, sourced, with amplifier roles, mutation tracking, timeline stats, and an adversarial "try to find something earlier" pass |
+| **L5 Taxonomic** | domain + tropes |
+
+Plus an **Evidence Landscape**: a curated map of sources that **support / dispute / redirect** the claim or provide **shared context**, each tagged by venue (peer-reviewed / institutional / news / …), primary-vs-secondary type, strength, and status (e.g. *retracted*). And every cited URL + quote is **verified** against the live page (with a Wayback fallback).
+
+The power is the two-lineage split: for "the economy is rigged," the *phrasing* is ~30 years old (Clinton/Warren/Sanders) while the *idea* traces back through Marx and Adam Smith to Aristotle — Tributary shows both at once.
+
+### Downstream — `EventAnalysis`
+
+Given an event, Tributary maps the **distinct narrative framings** forming around it — each defined by the *question* it asks, not a political side (e.g. for a shooting: Accountability / Use of Force / Human Cost / Political Fallout). For each framing it identifies the **carriers** (who creates/amplifies it, with roles), what it **emphasizes/downplays**, its **tone**, and what it **leaves out**. It also extracts the **shared common ground** — the facts all sides accept — which is often the most clarifying part. Each framing's `key_claim` is itself fingerprintable, so downstream *finds* the narratives and upstream *traces* each.
+
+### Multi-claim — `SourceAnalysis`
+
+Point Tributary at a whole article/transcript (`--url` / `--file`) and it audits the content — classifying every significant claim as fact / study / narrative / opinion / unverifiable, giving a content-makeup breakdown, and fingerprinting the traceable ones.
 
 ---
 
-## Features
+## Usage & cost control
 
-### 1. Extract & Classify Claims
-
-Reads content and labels every claim:
-
-| Label | Meaning | Traceable? |
-|-------|---------|-----------|
-| **Fact** | Specific, verifiable data with names/numbers/dates | → Primary data source |
-| **Study** | References specific research or datasets | → Research paper |
-| **Narrative** | Interpretive framing with a traceable origin | → Who coined this framing |
-| **Opinion** | Genuinely personal preference | Not traceable |
-| **Unverifiable** | Sounds factual but too vague to trace | Not traceable |
-
-Classification uses the **traceability test**: "Could I find a primary source to confirm or deny this?"
+The pipeline is **lean by default** — a bare run does L1/L2/L3/L5 + the lexical lineage + verification (~$0.15–0.25). The deeper, web-search-heavy layers are opt-in.
 
 ```bash
-# Sample article
-python demo.py --extract-only
+# Cheap preview of an article's claims (one Haiku call, ~$0.005)
+python fingerprint.py --url https://some-article.com --extract-only
 
-# From a URL (auto-detects platform: web, Bluesky, YouTube, X)
-python demo.py --url https://www.nytimes.com/some-article --extract-only
+# Lean single-claim trace (default)
+python fingerprint.py "a claim" --save
 
-# From a YouTube video (auto-transcribes)
-python demo.py --url https://www.youtube.com/watch?v=VIDEO_ID --extract-only
+# Add specific deep layers
+python fingerprint.py "a claim" --conceptual --evidence --mutations --save
+python fingerprint.py "a claim" --full --save          # all three deep layers
 
-# From a Bluesky user's recent posts
-python demo.py --bluesky-feed user.bsky.social --limit 20 --extract-only
+# Downstream event analysis (framings only; trace them on demand)
+python fingerprint.py --event "an event" --save
+python fingerprint.py --event "an event" --trace-framings --save   # also fingerprint each framing
 
-# From a file
-python demo.py --file article.txt --extract-only
+# Cost levers
+--max-searches 6     # cap web searches per call (the dominant cost); default 10
+--social             # add Bluesky spread (needs creds; gracefully skipped if absent)
+--no-verify          # skip URL/quote verification (saves wallclock, no API cost)
+--event-model haiku  # blanket model override for the event pipeline
 ```
 
-**Cost:** ~$0.001 per article (Haiku only)
+| Flag | Effect | Approx. added cost |
+|------|--------|--------------------|
+| *(default, lean)* | L1/L2/L3/L5 + lexical lineage + verify | ~$0.15–0.25 |
+| `--conceptual` | + the conceptual (idea) lineage | +$0.30 |
+| `--evidence` | + the evidence landscape | +$0.20 |
+| `--mutations` | + per-transition mutation analysis | +$0.10 |
+| `--full` | all three of the above | ~$0.75–1.00 total |
+| `--event` | downstream framing map | ~$0.40–0.70 |
+
+**Why cost matters and where it's going:** web-search fees (paid per search) dominate, and they're roughly model-independent — so the path to affordability is (1) cheaper generation (per-step model routing, external search, batch), and (2) **fingerprint once, match-and-serve many**: a given narrative is traced once and then served to many views as a near-free lookup. Sharing results costs nothing — the viewer is a static HTML file and fingerprints are just JSON.
 
 ---
 
-### 2. Trace Facts to Primary Sources
+## The viewer
 
-For claims labeled as facts, finds the original data source and builds a provenance chain.
-
-```bash
-python demo.py --claim "The US economy added 256,000 jobs in December 2024" --verbose
-python demo.py --claim "US unemployment fell to 4.1%" --verbose --json trace.json
-```
-
-**Cost:** ~$0.15-0.25 per claim
-
----
-
-### 3. Trace Narratives to Their Origin
-
-For claims labeled as narratives, finds who coined the framing, who amplified it, and who pushed back. Sources are classified as:
-
-- ★ **Originator** — coined or first prominently used the framing
-- ↗ **Amplifier** — repeated or spread the framing
-- ✗ **Critic** — pushed back on or fact-checked the framing
-
-```bash
-python demo.py --claim "The economy is rigged against working people" --verbose --json rigged.json
-python demo.py --claim "The 2026 World Cup is the new 1936 Olympics" --verbose
-```
-
-**Cost:** ~$0.20-0.40 per narrative
-
----
-
-### 4. Social Media Spread Analysis
-
-Searches Bluesky for how a narrative spreads among real users. Uses smart sampling (top engaged + time spread + author diversity) and classifies the spread pattern:
-
-- **Propagation** — spread from a source outward
-- **Convergence** — independent parallel emergence
-- **Mixed** — elements of both
-
-```bash
-# Standalone social search
-python social_search.py the economy is rigged
-
-# Integrated with tracing
-python demo.py --claim "The economy is rigged" --social --verbose
-
-# Longer lookback
-python demo.py --claim "The border is wide open" --social --days-back 90
-```
-
-**Requires:** `BLUESKY_HANDLE` and `BLUESKY_APP_PASSWORD` environment variables
-
-**Cost:** Free (Bluesky API) + ~$0.001 for spread analysis (Haiku)
-
----
-
-### 5. Same Data, Different Stories (Perspectives)
-
-Given any claim, finds the underlying factual data and searches for how different institutions and ideologies frame it differently. Uses a three-phase approach:
-
-1. **Broad search** — including deliberately adversarial queries to find opposing viewpoints
-2. **Gap detection** — identifies which analytical views are missing and searches specifically for them
-3. **Consolidation** — groups raw framings into 4-8 distinct analytical views
-
-Each view represents a different **question** being asked, not just a different political position.
-
-```bash
-# From a claim
-python demo.py --claim "ICE agent killed Renee Good" --perspectives --verbose
-
-# With social media grouped by lens
-python demo.py --claim "ICE agent killed Renee Good" --perspectives --social --verbose
-
-# From a URL — extracts the most significant claim and runs perspectives
-python demo.py --url https://some-article --perspectives --verbose
-
-# Export everything
-python demo.py --claim "..." --perspectives --social --verbose --json full.json
-```
-
-Input claims are automatically **neutrally rephrased** before analysis to avoid biasing the search results.
-
-**Cost:** ~$1-3 per analysis
-
----
-
-### 6. Mutation Tracking
-
-Traces how a claim **changes** as it passes through the information chain. For each transition between sources, identifies what was preserved, dropped, added, or distorted.
-
-Mutation patterns detected: simplification, exaggeration, politicization, decontextualization, sensationalization, mixed.
-
-Runs automatically in `--verbose` mode for claim tracing and perspectives analysis, and in all batch analyses.
-
-```bash
-# See mutations in a narrative trace
-python demo.py --claim "The economy is rigged" --verbose
-
-# See mutations across perspectives
-python demo.py --claim "ICE agent killed Renee Good" --perspectives --verbose
-```
-
-**Cost:** ~$0.15-0.30 per analysis (one Sonnet call)
-
----
-
-### 7. Missing Information Analysis
-
-Analyzes what each perspective view **omits** compared to the others — the mechanism by which echo chambers actually work. Each view gets a completeness score (0-100%).
-
-```bash
-python demo.py --claim "ICE agent killed Renee Good" --perspectives --verbose
-```
-
-Output shows per-view:
-- **Factual omissions** — specific data points left out
-- **Perspective omissions** — viewpoints not mentioned
-- **Context omissions** — qualifying information missing
-- **Completeness score** — how much of the full picture this view provides
-- **Bias direction** — pattern in what's systematically omitted
-
-Runs automatically in `--perspectives --verbose` mode and in batch analyses.
-
-**Cost:** ~$0.15-0.30 per view analyzed
-
----
-
-### 8. Bluesky Feed Analysis (Creator Profile)
-
-Analyzes a creator's recent posts to build an information profile: what mix of facts, narratives, and opinions they produce, and where their claims originate.
-
-```bash
-# Classification with creator profile
-python demo.py --bluesky-feed user.bsky.social --limit 20 --extract-only
-
-# Full trace with social spread
-python demo.py --bluesky-feed user.bsky.social --limit 10 --social --json feed.json
-```
-
-Accepts handles (`user.bsky.social`) or full URLs (`https://bsky.app/profile/user.bsky.social`).
-
-Shows a visual profile:
-```
-CREATOR PROFILE
-  Handle: @user.bsky.social
-  Posts analyzed: 20
-  Total claims: 34
-    narrative       ████████████░░░░░░░░ 59% (20)
-    fact            ████████░░░░░░░░░░░░ 26% (9)
-    opinion         ███░░░░░░░░░░░░░░░░░ 15% (5)
-```
-
----
-
-### 9. Multi-Platform Content Ingestion
-
-Auto-detects platform from URL:
-
-```bash
-python demo.py --url https://nytimes.com/article --verbose          # News article
-python demo.py --url https://bsky.app/profile/user/post/abc --verbose  # Bluesky
-python demo.py --url https://youtube.com/watch?v=ID --verbose        # YouTube
-python demo.py --url https://x.com/user/status/123 --verbose        # X/Twitter
-```
-
-TikTok/Instagram require additional setup (`pip install yt-dlp openai` + ffmpeg + `OPENAI_API_KEY`).
-
----
-
-### 10. Batch Processing (Trending Topics)
-
-Discovers trending topics, runs full analysis on each, and stores results for the web interface.
-
-```bash
-# Discover topics from Bluesky trending (default)
-python batch.py --discover-only
-
-# Discover from Google web search
-python batch.py --source web --discover-only
-
-# Filter by region
-python batch.py --region Minneapolis --discover-only
-python batch.py --region Europe --discover-only
-
-# Filter by category
-python batch.py --category politics --discover-only
-python batch.py --category technology --discover-only
-python batch.py --category health --region Europe --discover-only
-
-# Analyze all discovered topics
-python batch.py --social
-
-# Analyze fewer topics
-python batch.py --max-topics 3 --social
-
-# Analyze a specific topic
-python batch.py --topic "ICE agent killed Renee Good in Minneapolis" --social
-
-# Analyze topics from a file (one per line)
-python batch.py --topics my_topics.txt --social
-
-# Re-analyze even if already done today
-python batch.py --force
-
-# Custom output directory
-python batch.py --output-dir ./my_results
-```
-
-Available categories: `politics`, `economy`, `technology`, `world`, `science`, `social`, `legal`, `health`, `business`, `media`.
-
-Results are stored in `./results/YYYY-MM-DD/` with `index.json` and individual `topic_*.json` files. Discovery uses neutral rephrasing — both original and neutral versions are displayed.
-
-The batch pipeline for each topic runs: neutral rephrasing → claim extraction → source tracing → perspectives (with gap detection) → mutation tracking → missing info analysis → social spread (if `--social`).
-
----
-
-## Flag Reference
-
-### demo.py
-
-| Flag | Purpose |
-|------|---------|
-| `--claim "..."` | Trace a single claim |
-| `--url URL` | Extract and trace from any URL |
-| `--file PATH` | Extract and trace from a text file |
-| `--bluesky-feed HANDLE` | Analyze a Bluesky user's recent posts |
-| `--limit N` | Posts to fetch for `--bluesky-feed` (default: 10) |
-| `--extract-only` | Only classify claims, skip tracing (cheapest) |
-| `--perspectives` | Find competing framings (works with `--claim`, `--url`, `--file`) |
-| `--social` | Include Bluesky social spread analysis |
-| `--verbose` / `-v` | Show detailed sources, mutations, omissions |
-| `--days-back N` | Social search lookback in days (default: 30) |
-| `--json FILE` | Export results to JSON |
-
-### batch.py
-
-| Flag | Purpose |
-|------|---------|
-| `--discover-only` | Just show topics, don't analyze |
-| `--topic "..."` | Analyze a single specific topic |
-| `--topics FILE` | Analyze topics from a file (one per line) |
-| `--max-topics N` | Max topics to discover (default: 10) |
-| `--source bluesky\|web` | Discovery source (default: bluesky) |
-| `--region REGION` | Regional focus (e.g., "Minneapolis", "Europe") |
-| `--category CAT` | Filter by topic category |
-| `--social` | Include Bluesky social spread |
-| `--days-back N` | Social search lookback (default: 30) |
-| `--output-dir DIR` | Results directory (default: ./results) |
-| `--force` | Re-analyze topics already done today |
+`fingerprint_viewer.html` is a self-contained, dependency-free page. Open it in any browser and drag a JSON file onto it — it auto-detects whether it's a fingerprint, a source analysis, or an event analysis and renders the appropriate view. Nothing leaves your machine. Provenance badges show whether each element is AI-generated or human-verified; verification badges show which citations check out; the event view shows the common ground, framing cards, and carriers.
 
 ---
 
 ## Architecture
 
+Three top-level types, unified by one **provenance + contribution substrate**:
+
 ```
-Content (article, post, video, URL)
-    │
-    ▼
-┌─────────────────────────────┐
-│  Neutral Rephrasing (Haiku) │ ── Remove editorial bias
-└──────────┬──────────────────┘
-           │
-┌──────────┴──────────────────┐
-│  Claim Extraction (Haiku)   │ ── Fact / Narrative / Opinion / Study / Unverifiable
-└──────────┬──────────────────┘
-           │
-    ┌──────┴──────┐
-    ▼             ▼
-┌─────────┐  ┌──────────┐
-│  Facts  │  │Narratives│
-│ (Sonnet)│  │ (Sonnet) │
-│         │  │          │
-│ Primary │  │ Who      │
-│ data    │  │ coined   │
-│ source  │  │ this     │
-│         │  │ framing  │
-└────┬────┘  └────┬─────┘
-     │            │
-     ▼            ▼
-┌─────────────────────────────┐
-│  Perspectives               │ ── Same data, different framings
-│  Gap detection + 2nd pass   │ ── Multi-view consolidation
-└──────────┬──────────────────┘
-           │
-     ┌─────┼─────┐
-     ▼     ▼     ▼
-┌────────┐┌────────┐┌────────────┐
-│Mutation││Missing ││  Social    │
-│Tracking││Info    ││  Search    │
-│(Sonnet)││(Sonnet)││  (Bluesky) │
-│        ││        ││            │
-│How did ││What    ││ Spread by  │
-│claims  ││does    ││ view       │
-│change? ││each    ││ Amplifiers │
-│        ││view    ││            │
-│        ││omit?  ││            │
-└────────┘└────────┘└────────────┘
+                       ┌─────────────────────────────┐
+                       │   shared substrate (1a/1b)  │
+                       │   Provenance on every elem  │
+                       │   Contribution / Contributor│
+                       └─────────────────────────────┘
+                          ▲           ▲           ▲
+            ┌─────────────┘     ┌─────┘     └─────────────┐
+   NarrativeFingerprint    SourceAnalysis           EventAnalysis
+   (trace one narrative)   (an article →            (an event → the
+                            its claims)              framings around it)
+            │                     │                       │
+            └───── fingerprints ◄─┴──── framings link via fingerprint_id
 ```
+
+| File | Purpose |
+|------|---------|
+| `fingerprint.py` | The engine — `FingerprintGenerator` (upstream), `EventAnalyzer` (downstream), multi-claim mode, verification, the CLI |
+| `models.py` | All data types — the fingerprint layers, `EventAnalysis`/`NarrativeFraming`, `SourceAnalysis`, and the `Provenance`/`Contribution`/`Contributor` substrate |
+| `fingerprint_viewer.html` | Self-contained viewer for all three output types |
+| `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
+| `social_search.py` | Bluesky spread analysis (used by `--social`) |
+| `requirements.txt` | Dependencies |
+| `agent.py`, `demo.py`, `batch.py`, `viewer*.html` | **Legacy** — the original pipeline; being retired as the fingerprint model absorbs its remaining ideas |
+
+Outputs are saved under `fingerprints/`, `analyses/` (source analyses), and `events/` (event analyses) as JSON, with deduplication by lexical signature.
+
+### Provenance & human contributions
+
+Every element carries a `Provenance` (origin = ai/human, review status, model, and dormant `confirmations`/`disputes`/`revisions`). The contribution vocabulary (`Contribution`, `Contributor` with reputation-gated privileges) is defined and ready — so a Wikipedia-style human-contribution layer can be added later by building a service that *populates* these fields, with no schema migration. Today everything reads "AI-generated"; the honest signal that nothing is yet human-verified.
 
 ---
 
-## Cost Guide
+## Status
 
-| Operation | Model | Approx. Cost |
-|-----------|-------|-------------|
-| Classify claims in an article | Haiku | $0.001 |
-| Trace one factual claim | Sonnet + Haiku | $0.15-0.25 |
-| Trace one narrative | Sonnet + Haiku | $0.20-0.40 |
-| Perspectives analysis | Sonnet + Haiku | $1-3 |
-| Mutation tracking | Sonnet | $0.15-0.30 |
-| Missing info analysis (per view) | Sonnet | $0.15-0.30 |
-| Social search | Bluesky API + Haiku | $0.01 |
-| Full batch topic (all features) | All | $3-8 |
+**Working:** both directions end-to-end (upstream fingerprints, downstream event analyses), multi-claim article analysis, the evidence landscape, source verification, the unified provenance/contribution-ready schema, and the viewer.
 
-Costs decrease over time as the cache fills — identical claims return cached results instantly.
+**In progress / next:** retiring the legacy `agent.py` world; driving generation cost down (per-step model routing / cheaper providers); the embedding-based match-and-serve layer that makes serving near-free at scale; and, further out, the live human-contribution service and inductive "bubbles" clustering across a corpus of events.
 
----
-
-## Rate Limits
-
-At Tier 1 (30,000 input tokens/min for Sonnet), analyses run sequentially. The system automatically retries on transient errors (429 rate limit, 529 overloaded) with 30-150 second waits. As your API tier increases with usage, everything speeds up. Haiku calls have much higher rate limits and are not throttled.
-
----
-
-## JSON Export Structure
-
-### Batch result (`results/YYYY-MM-DD/topic_*.json`)
-
-```json
-{
-  "topic": "original phrasing from discovery",
-  "neutral_topic": "neutrally rephrased version used for analysis",
-  "label": "fact|narrative|study",
-  "primary_source": {"url": "...", "title": "...", "tier": "primary|originator"},
-  "trace_summary": "where this information comes from",
-  "views": [
-    {
-      "view_name": "Accountability",
-      "question": "Will anyone be held responsible?",
-      "key_claim": "...",
-      "sources": [{"url": "...", "perspective": "...", "emphasizes": "...", "downplays": "..."}]
-    }
-  ],
-  "mutations": {
-    "transitions": [
-      {"from_source": "...", "to_source": "...", "preserved": "...", "dropped": "...", "added": "...", "distorted": "..."}
-    ],
-    "overall": {"mutation_severity": "significant", "mutation_pattern": "sensationalization", "summary": "..."}
-  },
-  "omissions_by_view": [
-    {
-      "view_name": "Law & Order",
-      "completeness_score": 0.35,
-      "factual_omissions": [{"what_is_missing": "...", "found_in_lens": "...", "impact": "..."}],
-      "summary": "A reader of only this view would not know..."
-    }
-  ],
-  "social": {"spread_type": "mixed", "total_posts_found": 65, "sample_posts": [...]},
-  "social_by_view": {"Accountability": [{"author": "@user", "likes": 45, "url": "..."}]},
-  "gap_analysis": "what perspectives might still be missing",
-  "cost_usd": 4.23
-}
-```
-
-### Bluesky feed export (`--bluesky-feed --json`)
-
-```json
-{
-  "handle": "@user.bsky.social",
-  "posts_analyzed": 20,
-  "profile": {
-    "total_claims": 34,
-    "label_distribution": {
-      "narrative": {"count": 20, "percentage": 58.8},
-      "fact": {"count": 9, "percentage": 26.5},
-      "opinion": {"count": 5, "percentage": 14.7}
-    }
-  },
-  "claims": [...],
-  "social_spread": {...}
-}
-```
+Tributary is a research-stage tool today — a CLI plus a static viewer — on the way toward something journalists, and eventually anyone, can use to see where their information comes from.
