@@ -950,6 +950,129 @@ class EvidenceLandscape:
         }
 
 
+# ---------------------------------------------------------------------------
+# Human contributions (dormant schema — populated by the future contribution
+# service, not by AI generation)
+# ---------------------------------------------------------------------------
+# 1a gave every element a Provenance whose confirmations/disputes/revisions
+# hold contribution IDs. These types define what those IDs point to: the
+# ledger of human actions (Contribution) and the people who make them
+# (Contributor). Nothing generates these today — they exist so the
+# contribution service can be built later with NO schema migration.
+
+class ContributionKind(str, Enum):
+    """The kind of action a human contribution represents."""
+    CONFIRM = "confirm"          # affirm an element is correct
+    DISPUTE = "dispute"          # challenge an element (reason / proposed change in payload)
+    ADD = "add"                  # add a new element (source, instance, etc.)
+    EDIT = "edit"                # propose an edit to an element's content
+    FLAG = "flag"                # flag as problematic (spam, error, off-topic)
+    ADD_CONTEXT = "add_context"  # add a note/context without changing the element
+
+
+@dataclass
+class Contribution:
+    """A single human action against a fingerprint element. Lives in a
+    fingerprint's contribution ledger; referenced by id from the targeted
+    element's Provenance.confirmations / .disputes / .revisions."""
+    contribution_id: str = ""
+    kind: ContributionKind = ContributionKind.CONFIRM
+    target_element_id: str = ""        # instance_id / source_id / mutation_id / fingerprint_id
+    target_element_type: str = ""      # "attested_instance" | "information_source" | "mutation" | "fingerprint" | ...
+    contributor_id: str = ""
+    contributor_name: str = ""
+    reason: str = ""                   # the human's justification
+    payload: dict = field(default_factory=dict)  # proposed change / new element content
+    created_at: str = ""
+    upvotes: int = 0
+    downvotes: int = 0
+
+    def __post_init__(self):
+        if not self.created_at:
+            self.created_at = datetime.now(timezone.utc).isoformat()
+        if not self.contribution_id:
+            key = f"{self.contributor_id}|{self.kind.value}|{self.target_element_id}|{self.created_at}"
+            self.contribution_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+
+    @property
+    def score(self) -> int:
+        return self.upvotes - self.downvotes
+
+    def to_dict(self):
+        return {
+            "contribution_id": self.contribution_id,
+            "kind": self.kind.value,
+            "target_element_id": self.target_element_id,
+            "target_element_type": self.target_element_type,
+            "contributor_id": self.contributor_id,
+            "contributor_name": self.contributor_name,
+            "reason": self.reason,
+            "payload": self.payload,
+            "created_at": self.created_at,
+            "upvotes": self.upvotes,
+            "downvotes": self.downvotes,
+            "score": self.score,
+        }
+
+
+@dataclass
+class Contributor:
+    """A human who contributes to fingerprints. Reputation gates privileges
+    Wikipedia-style; thresholds harvested from the old ContributorProfile."""
+    contributor_id: str = ""
+    display_name: str = ""
+    reputation: int = 0
+    contributions_count: int = 0
+    joined_at: str = ""
+
+    def __post_init__(self):
+        if not self.joined_at:
+            self.joined_at = datetime.now(timezone.utc).isoformat()
+
+    # Reputation-gated privileges (escalating trust)
+    @property
+    def can_confirm(self) -> bool:        # confirm/dispute AI elements, flag errors
+        return self.reputation >= 0
+
+    @property
+    def can_add_sources(self) -> bool:    # add sources, claims, omissions
+        return self.reputation >= 10
+
+    @property
+    def can_add_flows(self) -> bool:      # add flows/mutations/views
+        return self.reputation >= 25
+
+    @property
+    def can_edit_ai(self) -> bool:        # edit AI-generated content
+        return self.reputation >= 50
+
+    @property
+    def can_override_ai(self) -> bool:    # consensus votes to override AI
+        return self.reputation >= 100
+
+    @property
+    def level(self) -> str:
+        if self.reputation >= 100:
+            return "trusted"
+        if self.reputation >= 50:
+            return "editor"
+        if self.reputation >= 25:
+            return "contributor"
+        if self.reputation >= 10:
+            return "member"
+        return "observer"
+
+    def to_dict(self):
+        return {
+            "contributor_id": self.contributor_id,
+            "display_name": self.display_name,
+            "reputation": self.reputation,
+            "contributions_count": self.contributions_count,
+            "joined_at": self.joined_at,
+            "level": self.level,
+        }
+
+
 @dataclass
 class NarrativeFingerprint:
     """Codified signature of a narrative — searchable, categorizable, dateable.
@@ -971,6 +1094,12 @@ class NarrativeFingerprint:
     evidence_landscape: EvidenceLandscape = field(default_factory=EvidenceLandscape)
 
     provenance: Provenance = field(default_factory=Provenance)
+
+    # Human contribution ledger (dormant until the contribution service is
+    # built). Element Provenance.confirmations/.disputes/.revisions hold
+    # contribution_ids that point into `contributions`.
+    contributions: list[Contribution] = field(default_factory=list)
+    contributors: list[Contributor] = field(default_factory=list)
 
     def __post_init__(self):
         if not self.fingerprint_id:
@@ -1000,6 +1129,8 @@ class NarrativeFingerprint:
             "taxonomic": self.taxonomic.to_dict(),
             "evidence_landscape": self.evidence_landscape.to_dict(),
             "provenance": self.provenance.to_dict(),
+            "contributions": [c.to_dict() for c in self.contributions],
+            "contributors": [c.to_dict() for c in self.contributors],
         }
 
     def to_json(self, indent: int = 2) -> str:
@@ -1085,8 +1216,10 @@ class SourceAnalysis:
 # ---------------------------------------------------------------------------
 
 @dataclass
-class Contribution:
-    """A single human contribution to an analysis."""
+class LegacyContribution:
+    """A single human contribution to an analysis. LEGACY — part of the old
+    TributaryEvent model, retained until that world is retired (1f). The
+    canonical contribution type for the fingerprint model is `Contribution`."""
     contribution_id: str = ""
     contributor_id: str = ""
     contributor_name: str = ""
@@ -1229,7 +1362,7 @@ class TributaryEvent:
     omissions: list[Omission] = field(default_factory=list)
 
     # Human contributions
-    contributions: list[Contribution] = field(default_factory=list)
+    contributions: list[LegacyContribution] = field(default_factory=list)
     contributors: list[ContributorProfile] = field(default_factory=list)
 
     # Metadata
@@ -1272,7 +1405,7 @@ class TributaryEvent:
             self.flows.append(flow)
             self.last_updated = datetime.now(timezone.utc).isoformat()
 
-    def add_contribution(self, contribution: Contribution):
+    def add_contribution(self, contribution: LegacyContribution):
         self.contributions.append(contribution)
         self.last_updated = datetime.now(timezone.utc).isoformat()
 
