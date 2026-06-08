@@ -1,0 +1,442 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "b23fb06dd262",
+  "event": "An ICE agent shot and killed Renee Good during an enforcement operation in Minneapolis on January 7, 2026",
+  "event_date": "2026-01-07",
+  "source_urls": [
+    "https://example.com/star"
+  ],
+  "created_at": "2026-06-08T06:11:27.204375+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "84bd0e046f01",
+        "statement": "Renee Good was shot and killed on January 7, 2026",
+        "verified": true,
+        "source_url": "",
+        "note": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T06:11:27.204354+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cd2319285c67",
+        "statement": "The shooting occurred during an ICE enforcement operation in Minneapolis",
+        "verified": true,
+        "source_url": "",
+        "note": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T06:11:27.204360+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "8cb23c1b2192",
+        "statement": "The agent was part of a multi-person team",
+        "verified": false,
+        "source_url": "",
+        "note": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T06:11:27.204364+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the use of force was justified",
+      "Whether protocol was followed",
+      "What the incident means for immigration policy"
+    ],
+    "summary": "All sides accept that Renee Good died during an ICE operation in Minneapolis on Jan 7. They disagree about whether the force was justified, whether procedure was followed, and what it means politically."
+  },
+  "framings": [
+    {
+      "framing_id": "d4cce6ea",
+      "name": "Accountability",
+      "question": "Was this lawful? Who is responsible?",
+      "key_claim": "The ICE agent unlawfully killed Renee Good and must be held accountable",
+      "description": "",
+      "emphasizes": "legal culpability and the demand for consequences",
+      "downplays": "operational context of the raid",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Family demands justice for Renee Good",
+        "Calls grow for independent investigation"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "33427b740234",
+          "name": "Minneasota Star",
+          "url": "https://example.com/star",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Outrage builds over fatal ICE shooting",
+          "date": "2026-01-08",
+          "role_evidence": "first major outlet to frame as accountability failure",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204232+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "99c5fa833cf1",
+          "name": "@civilrightsnow",
+          "url": "https://bsky.app/x",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "This is what impunity looks like",
+          "date": "2026-01-09",
+          "role_evidence": "viral thread, 40k reposts",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204303+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "the agent's account of the encounter",
+          "found_in_framing": "Use of Force",
+          "impact": "one-sided",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204312+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T06:11:27.204315+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "bdbf3e0e",
+      "name": "Use of Force",
+      "question": "Were procedures followed? Was the force proportionate?",
+      "key_claim": "The shooting may have followed protocol given a perceived threat during the operation",
+      "description": "",
+      "emphasizes": "procedure, training, split-second decisions",
+      "downplays": "the broader pattern of enforcement deaths",
+      "tone": "measured",
+      "sample_headlines": [
+        "What we know about the ICE operation protocol"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "78a9360efedc",
+          "name": "Law Enforcement Today",
+          "url": "https://example.com/let",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Officers face impossible decisions",
+          "date": "2026-01-09",
+          "role_evidence": "frames around procedure",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204326+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "the human cost to the family and community",
+          "found_in_framing": "Human Cost",
+          "impact": "depersonalizes",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204331+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T06:11:27.204333+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "bbae3989",
+      "name": "Human Cost",
+      "question": "Who was Renee Good and what was lost?",
+      "key_claim": "A beloved community member was killed, devastating her family and neighborhood",
+      "description": "",
+      "emphasizes": "the victim's life and the grief",
+      "downplays": "the legal and procedural questions",
+      "tone": "mournful",
+      "sample_headlines": [
+        "Renee Good remembered as a pillar of her community"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "381401a5472c",
+          "name": "Local Community Blog",
+          "url": "https://example.com/blog",
+          "carrier_type": "social",
+          "amplifier_role": "originator",
+          "excerpt": "Our neighbor, our loss",
+          "date": "2026-01-08",
+          "role_evidence": "community-driven memorial coverage",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204338+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T06:11:27.204342+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "8ad78f67",
+      "name": "Political Fallout",
+      "question": "How is this being used politically?",
+      "key_claim": "The shooting has become a flashpoint in the national immigration debate",
+      "description": "",
+      "emphasizes": "partisan positioning and policy implications",
+      "downplays": "the specific facts of the incident",
+      "tone": "analytical",
+      "sample_headlines": [
+        "ICE shooting reignites immigration enforcement fight"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "98679399fdc0",
+          "name": "National Wire",
+          "url": "https://example.com/wire",
+          "carrier_type": "news",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Both parties seize on Minneapolis shooting",
+          "date": "2026-01-10",
+          "role_evidence": "mainstream political framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T06:11:27.204347+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T06:11:27.204351+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "A missing framing is the immigrant-community-impact lens \u2014 how the shooting affects undocumented residents' willingness to engage with institutions. An institutional-reform lens (what policy changes, if any, follow) is also underrepresented.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T06:11:27.204369+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

@@ -432,6 +432,50 @@ section { animation: fadein 0.2s; }
 .prov-badge.prov-retracted { background: #fad7d1; color: #832018; }
 #meta-bar .prov-badge { margin-left: 0.2rem; }
 
+/* Downstream EventAnalysis view */
+.event-intro { margin-bottom: 1.2rem; }
+.event-intro .event-statement { font-size: 1.15rem; color: #222; line-height: 1.45; }
+.event-intro p { color: #666; margin: 0.5rem 0 0; font-size: 0.88rem; }
+.shared-foundation-card { margin-bottom: 1.6rem; border-left: 4px solid #2e7d32; }
+.shared-foundation-card .sf-summary { color: #333; font-style: italic; margin-bottom: 0.9rem; }
+.sf-section-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; margin: 0.7rem 0 0.35rem; }
+.sf-fact { font-size: 0.9rem; color: #333; margin: 0.25rem 0; padding-left: 1rem; position: relative; }
+.sf-fact::before { content: "•"; position: absolute; left: 0; color: #2e7d32; }
+.sf-fact.unverified::before { color: #aaa; }
+.sf-fact .sf-verified-tag { font-size: 0.68rem; color: #1e5128; margin-left: 0.4rem; }
+.sf-disagreement { font-size: 0.9rem; color: #6a4308; margin: 0.25rem 0; padding-left: 1rem; position: relative; }
+.sf-disagreement::before { content: "⇄"; position: absolute; left: 0; color: #d68f1a; }
+.framings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; margin-bottom: 1.4rem; }
+.framing-card { background: white; border: 1px solid #e5e5e5; border-radius: 6px; padding: 1rem 1.1rem; }
+.framing-card .fr-name { font-size: 1.05rem; font-weight: 600; color: #222; }
+.framing-card .fr-question { color: #4f2c5a; font-size: 0.9rem; margin: 0.2rem 0 0.6rem; font-style: italic; }
+.framing-card .fr-claim { color: #333; margin-bottom: 0.6rem; line-height: 1.45; }
+.framing-card .fr-tone { display: inline-block; font-size: 0.68rem; padding: 0.1rem 0.5rem; border-radius: 999px; background: #efece4; color: #6a5a45; margin-bottom: 0.6rem; }
+.fr-emph { font-size: 0.84rem; margin: 0.2rem 0; }
+.fr-emph .lbl { font-weight: 600; color: #555; }
+.fr-emph.up .lbl { color: #1e5128; }
+.fr-emph.down .lbl { color: #832018; }
+.fr-section { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin: 0.7rem 0 0.3rem; }
+.fr-carrier { font-size: 0.84rem; margin: 0.3rem 0; padding-bottom: 0.3rem; border-bottom: 1px solid #f3f3f3; }
+.fr-carrier .carrier-role { font-size: 0.66rem; padding: 0.05rem 0.45rem; border-radius: 999px; margin-right: 0.35rem; }
+.fr-carrier .carrier-role.originator { background: #fad7d1; color: #832018; }
+.fr-carrier .carrier-role.early-amplifier { background: #f7e0bb; color: #6a4308; }
+.fr-carrier .carrier-role.mass-amplifier { background: #fae7b8; color: #6a4d06; }
+.fr-carrier .carrier-role.institutional-adoption { background: #cfe0ee; color: #1b486f; }
+.fr-carrier .carrier-role.critic { background: #e2d2ec; color: #4a275a; }
+.fr-carrier .carrier-role.mention { background: #eaeaea; color: #444; }
+.fr-carrier .carrier-role.unknown { background: #eaeaea; color: #666; }
+.fr-carrier a { color: #2a6fa3; text-decoration: none; }
+.fr-carrier a:hover { text-decoration: underline; }
+.fr-carrier .carrier-excerpt { color: #666; }
+.fr-omission { font-size: 0.82rem; color: #6a4308; margin: 0.25rem 0; }
+.fr-omission .found-in { color: #888; }
+.fr-trace { margin-top: 0.7rem; }
+.fr-trace.clickable { cursor: pointer; color: #2a6fa3; font-weight: 500; font-size: 0.85rem; }
+.fr-trace.clickable:hover { text-decoration: underline; }
+.fr-trace.untraced { color: #aaa; font-size: 0.82rem; }
+.event-gap-card { border-left: 4px solid #d68f1a; }
+
 /* Multi-claim source-analysis view */
 .article-intro { margin-bottom: 1.2rem; }
 .article-intro a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
@@ -545,6 +589,7 @@ const ROLE_ORDER = ['originator','early-amplifier','mass-amplifier','institution
 
 let currentFP = null;
 let currentArticle = null;   // set when viewing a multi-claim source analysis
+let currentEvent = null;     // set when viewing a downstream event analysis
 
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
@@ -566,15 +611,18 @@ function loadFile(file) {
   reader.onload = () => {
     try {
       const data = JSON.parse(reader.result);
-      if (data.is_source_analysis) {
+      if (data.is_event_analysis) {
+        renderEventAnalysis(data);
+      } else if (data.is_source_analysis) {
         renderArticle(data);
       } else if (data.fingerprint_id && data.lexical) {
         currentArticle = null;
+        currentEvent = null;
         removeBackButton();
         document.getElementById('tabs').style.display = '';
         render(data);
       } else {
-        throw new Error('Not a recognizable fingerprint or source-analysis JSON');
+        throw new Error('Not a recognizable fingerprint, source-analysis, or event-analysis JSON');
       }
     } catch (e) {
       errorDiv.textContent = 'Failed to load: ' + e.message;
@@ -589,8 +637,117 @@ function removeBackButton() {
   if (b) b.remove();
 }
 
+function renderEventAnalysis(analysis) {
+  currentEvent = analysis;
+  currentArticle = null;
+  dropZone.hidden = true;
+  viewer.hidden = false;
+  removeBackButton();
+
+  document.getElementById('claim-phrase').textContent = analysis.event || '(event analysis)';
+
+  const meta = document.getElementById('meta-bar');
+  meta.innerHTML = '';
+  addMeta(meta, 'event analysis', analysis.analysis_id || '');
+  if (analysis.event_date) addMeta(meta, 'event date', (analysis.event_date || '').split('T')[0]);
+  addMeta(meta, 'framings', String((analysis.framings || []).length));
+  if (analysis.provenance) {
+    const span = document.createElement('span');
+    span.innerHTML = `<strong>analysis:</strong> ${provenanceBadge(analysis)}`;
+    meta.appendChild(span);
+  }
+
+  document.getElementById('tabs').style.display = 'none';
+
+  const fpById = {};
+  (analysis.fingerprints || []).forEach(f => { fpById[f.fingerprint_id] = f; });
+
+  const sf = analysis.shared_foundation || {};
+  const verified = sf.verified_facts || [];
+  const unverified = sf.unverified_shared_claims || [];
+  const disagreements = sf.points_of_disagreement || [];
+
+  const sharedHtml = `
+    <div class="card shared-foundation-card">
+      <h2>Common Ground</h2>
+      ${sf.summary ? `<div class="sf-summary">${escapeHtml(sf.summary)}</div>` : ''}
+      ${verified.length ? `<div class="sf-section-label">Verified shared facts</div>
+        ${verified.map(f => `<div class="sf-fact">${escapeHtml(f.statement || '')}${f.verified ? '<span class="sf-verified-tag">✓ verifiable</span>' : ''}</div>`).join('')}` : ''}
+      ${unverified.length ? `<div class="sf-section-label">Shared but unverified</div>
+        ${unverified.map(f => `<div class="sf-fact unverified">${escapeHtml(f.statement || '')}</div>`).join('')}` : ''}
+      ${disagreements.length ? `<div class="sf-section-label">Points of disagreement</div>
+        ${disagreements.map(p => `<div class="sf-disagreement">${escapeHtml(p)}</div>`).join('')}` : ''}
+    </div>`;
+
+  const framingsHtml = (analysis.framings || []).map((fr, idx) => {
+    const hasFp = !!fpById[fr.fingerprint_id];
+    const carriers = (fr.carriers || []).map(c => {
+      const role = c.amplifier_role || 'unknown';
+      return `<div class="fr-carrier">
+        <span class="carrier-role ${role}">${escapeHtml(role)}</span>
+        ${c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.name || c.url)}</a>` : `<span>${escapeHtml(c.name || '')}</span>`}
+        ${c.excerpt ? `<span class="carrier-excerpt"> — ${escapeHtml(c.excerpt)}</span>` : ''}
+        ${provenanceBadge(c)}
+      </div>`;
+    }).join('');
+    const omissions = (fr.omissions || []).map(o =>
+      `<div class="fr-omission">${escapeHtml(o.what_is_missing || '')} <span class="found-in">(in: ${escapeHtml(o.found_in_framing || '?')})</span></div>`
+    ).join('');
+    let trace;
+    if (hasFp) trace = `<div class="fr-trace clickable" data-framing-idx="${idx}">↗ Trace this framing's origin →</div>`;
+    else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced">(linked fingerprint ${escapeHtml(fr.fingerprint_id)} not embedded)</div>`;
+    else trace = `<div class="fr-trace untraced">(not yet traced — run with --trace-framings)</div>`;
+    return `
+      <div class="framing-card">
+        <div class="fr-name">${escapeHtml(fr.name || '')} ${provenanceBadge(fr)}</div>
+        ${fr.question ? `<div class="fr-question">${escapeHtml(fr.question)}</div>` : ''}
+        ${fr.key_claim ? `<div class="fr-claim">${escapeHtml(fr.key_claim)}</div>` : ''}
+        ${fr.tone ? `<span class="fr-tone">${escapeHtml(fr.tone)}</span>` : ''}
+        ${fr.emphasizes ? `<div class="fr-emph up"><span class="lbl">Emphasizes:</span> ${escapeHtml(fr.emphasizes)}</div>` : ''}
+        ${fr.downplays ? `<div class="fr-emph down"><span class="lbl">Downplays:</span> ${escapeHtml(fr.downplays)}</div>` : ''}
+        ${(fr.sample_headlines || []).length ? `<div class="fr-section">Sample headlines</div>${fr.sample_headlines.map(h => `<div class="fr-omission" style="color:#555;">“${escapeHtml(h)}”</div>`).join('')}` : ''}
+        ${carriers ? `<div class="fr-section">Carriers (who creates / amplifies)</div>${carriers}` : ''}
+        ${omissions ? `<div class="fr-section">Leaves out</div>${omissions}` : ''}
+        ${trace}
+      </div>`;
+  }).join('');
+
+  const main = document.querySelector('main');
+  main.innerHTML = `
+    <div class="event-intro">
+      <div class="event-statement">${escapeHtml(analysis.event || '')}</div>
+      <p>${(analysis.framings || []).length} narrative framings mapped across the ecosystem. The shared common ground is what all sides accept; each framing asks a different question.</p>
+    </div>
+    ${sharedHtml}
+    <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings</h2>
+    <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>
+    ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
+  `;
+
+  main.querySelectorAll('.fr-trace.clickable').forEach(el => {
+    el.onclick = () => {
+      const fr = analysis.framings[parseInt(el.dataset.framingIdx, 10)];
+      const fp = fpById[fr.fingerprint_id];
+      if (fp) openFingerprintFromEvent(fp);
+    };
+  });
+}
+
+function openFingerprintFromEvent(fp) {
+  document.getElementById('tabs').style.display = '';
+  render(fp);
+  removeBackButton();
+  const header = document.querySelector('header');
+  const back = document.createElement('button');
+  back.id = 'back-to-article';
+  back.textContent = '← Back to event';
+  back.onclick = () => { if (currentEvent) renderEventAnalysis(currentEvent); };
+  header.insertBefore(back, header.firstChild);
+}
+
 function renderArticle(analysis) {
   currentArticle = analysis;
+  currentEvent = null;
   dropZone.hidden = true;
   viewer.hidden = false;
   removeBackButton();
