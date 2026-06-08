@@ -71,6 +71,29 @@ _BLOG_SUFFIXES = (".substack.com", ".medium.com", ".wordpress.com",
                   ".blogspot.com", ".ghost.io", ".tumblr.com", ".wixsite.com")
 _GOV_SUFFIXES = (".gov", ".mil", ".senate.gov", ".house.gov")
 
+# Recognized third-party news outlets — used to decide whether a named source's
+# URL is a genuine SECONDARY relay (a politician quoted by CNN) vs the actor's
+# OWN site (a campaign page, an org's own domain), which is self-publication and
+# NOT a secondary source. Seeded from the canonical map + the bias-DB domain
+# aliases; deliberately conservative (better to miss a relay than to invent one).
+_KNOWN_NEWS_DOMAINS = set()
+
+
+def _load_known_news():
+    _KNOWN_NEWS_DOMAINS.update(d for d, _ in _DOMAIN_NAMES.items())
+    try:
+        import json as _json
+        from pathlib import Path as _Path
+        p = _Path(__file__).resolve().parent / "data" / "domain_aliases.json"
+        if p.exists():
+            _KNOWN_NEWS_DOMAINS.update((_json.loads(p.read_text(encoding="utf-8"))
+                                        .get("aliases", {})).keys())
+    except Exception:  # noqa: BLE001 — best-effort; the canonical map still seeds it
+        pass
+
+
+_load_known_news()
+
 # downstream carrier_type / source hints → actor_type
 _TYPE_MAP = {
     "news": "news", "social": "social", "political": "official",
@@ -228,6 +251,7 @@ class AmplificationEdge:
     narrative_label: str
     role: str                        # amplifier_role value
     direction: str                   # downstream | upstream-formal | upstream-social
+    tier: str = "primary"            # primary (originating source) | secondary (relaying venue)
     context_id: str = ""             # event analysis_id or fingerprint_id
     date: str = ""
     lineage_type: str = ""           # lexical | conceptual (upstream)
@@ -359,12 +383,26 @@ class ActorRegistry:
         for fr in event.get("framings", []):
             nref = (fr.get("framing_id", ""), fr.get("name", ""))
             for c in fr.get("carriers", []):
-                a = self.intern(resolve(name=c.get("name", ""), url=c.get("url", ""),
-                                        carrier_type=c.get("carrier_type", "")))
-                self._edge(a, narrative_kind="framing", narrative_id=nref[0],
-                           narrative_label=nref[1], role=c.get("amplifier_role", "unknown"),
-                           direction="downstream", context_id=ctx,
-                           source_url=c.get("url", ""), evidence=c.get("excerpt", ""))
+                name, url, ct = c.get("name", ""), c.get("url", ""), c.get("carrier_type", "")
+                role = c.get("amplifier_role", "unknown")
+                primary = self.intern(resolve(name=name, url=url, carrier_type=ct))
+                self._edge(primary, narrative_kind="framing", narrative_id=nref[0],
+                           narrative_label=nref[1], role=role, direction="downstream",
+                           tier="primary", context_id=ctx, source_url=url,
+                           evidence=c.get("excerpt", ""))
+                # Provenance chain: when a NAMED primary source (politician, org,
+                # scholar) was relayed via a recognized news outlet, that outlet
+                # is a SECONDARY actor in the same framing — capture it. Gated on
+                # a KNOWN news domain so an actor's OWN site (campaign page, org
+                # domain) isn't miscounted as a third-party relay.
+                if primary.key.startswith(("person:", "org:")) and url:
+                    venue = resolve(url=url)
+                    if venue.key != primary.key and venue.domain in _KNOWN_NEWS_DOMAINS:
+                        v = self.intern(venue)
+                        self._edge(v, narrative_kind="framing", narrative_id=nref[0],
+                                   narrative_label=nref[1], role="relay",
+                                   direction="downstream", tier="secondary",
+                                   context_id=ctx, source_url=url)
 
     def ingest_fingerprint(self, fp: dict):
         fid = fp.get("fingerprint_id", "")
@@ -423,14 +461,17 @@ def main():
     reg.finalize()
 
     by_dir = {}
+    by_tier = {}
     deg = {}
     for e in reg.edges:
         by_dir[e.direction] = by_dir.get(e.direction, 0) + 1
+        by_tier[e.tier] = by_tier.get(e.tier, 0) + 1
         deg[e.actor_key] = deg.get(e.actor_key, 0) + 1
         seen_in.setdefault(e.actor_key, set()).add(
             "down" if e.direction == "downstream" else "up")
 
-    print(f"actors: {len(reg.actors)}   edges: {len(reg.edges)}   by direction: {by_dir}")
+    print(f"actors: {len(reg.actors)}   edges: {len(reg.edges)}   "
+          f"by direction: {by_dir}   by tier: {by_tier}")
     types = {}
     for a in reg.actors.values():
         types[a.actor_type] = types.get(a.actor_type, 0) + 1
