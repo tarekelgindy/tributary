@@ -110,6 +110,27 @@ python fingerprint.py --event "an event" --trace-framings --save   # also finger
 
 ---
 
+## Building a corpus
+
+Two helpers turn "what happened" into a browsable corpus of event analyses:
+
+```bash
+# 1. DISCOVER (free) — pull notable events for a date from Wikipedia Current Events
+python discover.py --date 2026-06-07          # → topics_2026-06-07.txt
+#    (review/trim the file — delete any non-event fragments)
+
+# 2. BUILD — analyze each event into the corpus (incremental, resumable, resilient)
+python corpus.py topics_2026-06-07.txt --max-searches 6
+python corpus.py topics_2026-06-07.txt --batch      # ~50% off via the Batch API (async)
+python corpus.py topics.txt --claims --full         # upstream fingerprints instead of events
+```
+
+`corpus.py` saves each result as it completes (a crash or credit-out never loses finished work), dedups by input line so re-runs skip what's done, and logs+continues on a single-item failure. `--batch` submits all the framing searches as one async Batch-API job for ~50% off tokens — slower (minutes–hours), so it's for "no rush" corpus building; for fast iteration run live with `--framings-only`. Realistic cost: ~$0.30/event live, ~$0.15–0.20 batched.
+
+A caveat worth knowing: *notable ≠ contested*. Wikipedia's daily events include many neutral/factual items whose framings end up very similar. For a corpus that shows real disagreement, lean toward genuinely contested events (selecting by coverage divergence — e.g. topics with skewed left/right reporting — is a planned discovery enhancement).
+
+---
+
 ## The viewer
 
 `fingerprint_viewer.html` is a self-contained, dependency-free page. Open it in any browser and drag a JSON file onto it — it auto-detects whether it's a fingerprint, a source analysis, or an event analysis and renders the appropriate view. Nothing leaves your machine. Provenance badges show whether each element is AI-generated or human-verified; verification badges show which citations check out; the event view shows the common ground, framing cards, and carriers.
@@ -140,6 +161,9 @@ Three top-level types, unified by one **provenance + contribution substrate**:
 | `fingerprint.py` | The engine — `FingerprintGenerator` (upstream), `EventAnalyzer` (downstream), multi-claim mode, verification, the CLI |
 | `models.py` | All data types — the fingerprint layers, `EventAnalysis`/`NarrativeFraming`, `SourceAnalysis`, and the `Provenance`/`Contribution`/`Contributor` substrate |
 | `fingerprint_viewer.html` | Self-contained viewer for all three output types |
+| `discover.py` | Free topic discovery from Wikipedia Current Events → topics file |
+| `corpus.py` | Batch corpus builder (events or `--claims`), with `--batch` Batch-API mode |
+| `batch_probe.py` | One-shot check that web_search works in the Batch API |
 | `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
 | `social_search.py` | Bluesky spread analysis (used by `--social`) |
 | `requirements.txt` | Dependencies |

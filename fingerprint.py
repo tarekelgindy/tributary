@@ -1288,6 +1288,31 @@ async def _verify_information_source(http: httpx.AsyncClient, src) -> None:
     src.verification_notes = f"URL reachable (HTTP {status})"
 
 
+async def _verify_carrier(http: httpx.AsyncClient, carrier) -> None:
+    """Verify a FramingCarrier's URL exists (URL-only — the excerpt is a
+    representative headline, not necessarily a verbatim on-page quote)."""
+    if not carrier.url:
+        carrier.verification_status = "unchecked"
+        carrier.verification_notes = "no URL to verify"
+        return
+    status, err = await _verify_url_exists(http, carrier.url)
+    if status is None:
+        carrier.archive_url = await _find_wayback_snapshot(http, carrier.url)
+        carrier.verified = False
+        carrier.verification_status = "fetch-error"
+        carrier.verification_notes = err
+        return
+    if status >= 400:
+        carrier.archive_url = await _find_wayback_snapshot(http, carrier.url)
+        carrier.verified = False
+        carrier.verification_status = "url-error"
+        carrier.verification_notes = f"HTTP {status}"
+        return
+    carrier.verified = True
+    carrier.verification_status = "verified"
+    carrier.verification_notes = f"URL reachable (HTTP {status})"
+
+
 async def _verify_attested(http: httpx.AsyncClient, inst, check_quote: bool) -> None:
     """Verify an AttestedInstance's URL and (optionally) its exact_quote."""
     if not inst.source_url:
@@ -2971,13 +2996,33 @@ class EventAnalyzer:
                       f"{time.monotonic() - t0:.1f}s")
         return framings, notes
 
+    async def verify_event(self, analysis: EventAnalysis) -> EventAnalysis:
+        """Post-pass: HTTP-check every framing carrier's URL (with Wayback
+        fallback). Free (no API), flags dead/hallucinated carrier links so
+        the corpus is trustworthy."""
+        carriers = [c for fr in analysis.framings for c in fr.carriers if c.url]
+        if not carriers:
+            return analysis
+        _log_progress(f"Event: verifying {len(carriers)} carrier URLs")
+        headers = {"User-Agent": _VERIFY_USER_AGENT}
+        async with httpx.AsyncClient(headers=headers, timeout=_VERIFY_TIMEOUT) as http:
+            await asyncio.gather(
+                *[_verify_carrier(http, c) for c in carriers],
+                return_exceptions=True,
+            )
+        ok = sum(1 for c in carriers if c.verified)
+        _log_progress(f"Event: carriers verified {ok}/{len(carriers)}")
+        return analysis
+
     async def build_event_from_framings(
         self, event: str, event_date: str, framings: list,
         source_urls: Optional[list] = None, framings_only: bool = False,
+        verify: bool = True,
     ) -> EventAnalysis:
         """Given already-found framings (e.g. from a batch), run the cheap
-        live Haiku steps (shared foundation / omissions / gaps) and assemble
-        the EventAnalysis. Shared by the live and batch paths."""
+        live Haiku steps (shared foundation / omissions / gaps), verify the
+        carrier URLs, and assemble the EventAnalysis. Shared by the live and
+        batch paths."""
         if not framings:
             return EventAnalysis(
                 event=event, event_date=event_date, source_urls=source_urls or [],
@@ -2986,23 +3031,25 @@ class EventAnalyzer:
                 provenance=Provenance.ai(model=self.models["framings"]),
             )
         if framings_only:
-            return EventAnalysis(
+            analysis = EventAnalysis(
                 event=event, event_date=event_date, source_urls=source_urls or [],
                 framings=framings,
                 gap_analysis="(framings-only — shared foundation, omissions, and "
                              "gap analysis were skipped)",
                 provenance=Provenance.ai(model=self.models["framings"]),
             )
+            return await self.verify_event(analysis) if verify else analysis
         shared, _omit = await asyncio.gather(
             self.extract_shared_foundation(event, framings),
             self.analyze_omissions(framings),
         )
         gap_analysis = await self.detect_gaps(event, framings)
-        return EventAnalysis(
+        analysis = EventAnalysis(
             event=event, event_date=event_date, source_urls=source_urls or [],
             shared_foundation=shared, framings=framings, gap_analysis=gap_analysis,
             provenance=Provenance.ai(model=self.models["framings"]),
         )
+        return await self.verify_event(analysis) if verify else analysis
 
     def _parse_framings(self, raw_list) -> list:
         framings = []
@@ -3125,10 +3172,11 @@ class EventAnalyzer:
         scope: Optional[Scope] = None,
         source_urls: Optional[list] = None,
         framings_only: bool = False,
+        verify: bool = True,
     ) -> EventAnalysis:
         """Full downstream pipeline: neutralize -> framings+carriers ->
-        shared foundation -> omissions -> gaps. Framing key_claims are left
-        un-fingerprinted (decoupled); trace them on demand."""
+        shared foundation -> omissions -> gaps -> verify carriers. Framing
+        key_claims are left un-fingerprinted (decoupled); trace on demand."""
         scope = scope or Scope()
         event, event_date = await self.describe_event(raw)
         framings, notes = await self.search_framings(event, scope)
@@ -3144,7 +3192,7 @@ class EventAnalyzer:
                           "/ omissions / gap steps")
         return await self.build_event_from_framings(
             event, event_date, framings,
-            source_urls=source_urls, framings_only=framings_only,
+            source_urls=source_urls, framings_only=framings_only, verify=verify,
         )
 
     async def analyze_events_batch(
@@ -3152,6 +3200,7 @@ class EventAnalyzer:
         raws: list,
         scope: Optional[Scope] = None,
         framings_only: bool = False,
+        verify: bool = True,
     ) -> list:
         """Batch many events through the Batch API: the expensive framing
         searches (the ~90% cost) go as ONE batch (~50% off tokens, async),
@@ -3184,7 +3233,7 @@ class EventAnalyzer:
                 _log_progress(f"Event batch [{i+1}]: no framings "
                               "(empty/failed batch item)")
             analyses.append(await self.build_event_from_framings(
-                ev, dates[i], framings, framings_only=framings_only))
+                ev, dates[i], framings, framings_only=framings_only, verify=verify))
         return analyses
 
 
@@ -3311,7 +3360,8 @@ async def _cli(args):
             print("[--batch: the framing search goes through the async Batch "
                   "API; this can take minutes. Ctrl-C is safe.]", file=sys.stderr)
             analyses = await analyzer.analyze_events_batch(
-                [raw], scope=scope, framings_only=args.framings_only)
+                [raw], scope=scope, framings_only=args.framings_only,
+                verify=not args.no_verify)
             analysis = analyses[0]
             analysis.source_urls = [args.url] if args.url else []
         else:
@@ -3319,6 +3369,7 @@ async def _cli(args):
                 raw, scope=scope,
                 source_urls=[args.url] if args.url else [],
                 framings_only=args.framings_only,
+                verify=not args.no_verify,
             )
 
         # Decoupled framing→fingerprint: only trace framings on demand.

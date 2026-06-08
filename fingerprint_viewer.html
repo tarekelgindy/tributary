@@ -687,7 +687,7 @@ function renderEventAnalysis(analysis) {
         <span class="carrier-role ${role}">${escapeHtml(role)}</span>
         ${c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.name || c.url)}</a>` : `<span>${escapeHtml(c.name || '')}</span>`}
         ${c.excerpt ? `<span class="carrier-excerpt"> — ${escapeHtml(c.excerpt)}</span>` : ''}
-        ${provenanceBadge(c)}
+        ${provenanceBadge(c)}${verifyBadge(c)}${archiveBadge(c)}
       </div>`;
     }).join('');
     const omissions = (fr.omissions || []).map(o =>

@@ -101,7 +101,8 @@ async def run_corpus(args):
               "finished events are saved as they assemble.", file=sys.stderr)
         try:
             analyses = await analyzer.analyze_events_batch(
-                todo, scope=scope, framings_only=args.framings_only)
+                todo, scope=scope, framings_only=args.framings_only,
+                verify=not args.no_verify)
         except Exception as e:  # noqa: BLE001
             print(f"[corpus] batch failed: {type(e).__name__}: {e}\n"
                   "  (Re-run without --batch to process sequentially.)", file=sys.stderr)
@@ -137,6 +138,7 @@ async def run_corpus(args):
             else:
                 analysis = await analyzer.analyze_event(
                     topic, scope=scope, framings_only=args.framings_only,
+                    verify=not args.no_verify,
                 )
                 if not analysis.framings:
                     _log_progress(f"[{i}/{len(todo)}] no framings — skipped "
@@ -181,6 +183,9 @@ def main():
                         "Cheap Haiku steps still run live.")
     p.add_argument("--max-searches", type=int, default=6,
                    help="Cap web searches per call (default 6 for corpus economy).")
+    p.add_argument("--no-verify", action="store_true",
+                   help="Skip carrier-URL verification (events). Verification is free "
+                        "(HTTP only) and flags dead/hallucinated carrier links.")
     p.add_argument("--event-model", default="",
                    help="Blanket model override for the event pipeline steps.")
     p.add_argument("--region", default="US", help='Scope region (default "US").')
