@@ -2979,7 +2979,31 @@ class EventAnalyzer:
         un-fingerprinted (decoupled); trace them on demand."""
         scope = scope or Scope()
         event, event_date = await self.describe_event(raw)
-        framings, _notes = await self.search_framings(event, scope)
+        framings, notes = await self.search_framings(event, scope)
+
+        # If the framing search came back empty (e.g. an API empty-response,
+        # or a very recent event with thin coverage), don't burn three more
+        # calls producing nonsense on empty input — return a clear result.
+        if not framings:
+            _log_progress("Event: framing search returned no framings — "
+                          "skipping shared-foundation / omissions / gap steps")
+            return EventAnalysis(
+                event=event,
+                event_date=event_date,
+                source_urls=source_urls or [],
+                framings=[],
+                gap_analysis=(
+                    "No narrative framings were identified for this event. "
+                    "This usually means the framing search returned no usable "
+                    "result (check fingerprints/debug/ for an event_framings "
+                    "file — often a transient API empty response, worth a "
+                    "re-run), or the event is too recent/niche to have distinct "
+                    "framings yet. "
+                    + (f"Search notes: {notes}" if notes else "")
+                ),
+                provenance=Provenance.ai(model=self.models["framings"]),
+            )
+
         # Shared foundation + omissions don't depend on each other → parallel.
         shared, _omit = await asyncio.gather(
             self.extract_shared_foundation(event, framings),
