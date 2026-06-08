@@ -143,7 +143,7 @@ Three top-level types, unified by one **provenance + contribution substrate**:
 | `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
 | `social_search.py` | Bluesky spread analysis (used by `--social`) |
 | `requirements.txt` | Dependencies |
-| `agent.py`, `demo.py`, `batch.py`, `viewer*.html` | **Legacy** — the original pipeline; being retired as the fingerprint model absorbs its remaining ideas |
+| `legacy/` | The original pipeline (`agent.py`, `demo.py`, `batch.py`, old viewers), archived — see `legacy/README.md`. Its ideas have been absorbed into the unified model. |
 
 Outputs are saved under `fingerprints/`, `analyses/` (source analyses), and `events/` (event analyses) as JSON, with deduplication by lexical signature.
 

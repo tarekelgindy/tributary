@@ -126,8 +126,19 @@ class Attribution:
         }
 
 
+# ===========================================================================
+# LEGACY MODEL (archived) — TrackedClaim / TrackedSource / InformationFlow /
+# View / Omission / LegacyContribution / ContributorProfile / TributaryEvent,
+# plus the enums above (ClaimLabel, FlowType, ContributionType, ElementStatus)
+# and the Attribution class. These belong to the ORIGINAL Tributary pipeline
+# (now in ../legacy/). Nothing in the active fingerprint pipeline uses them.
+# The canonical model is everything below the "Provenance" section onward
+# (Provenance, the fingerprint layers, EventAnalysis, Contribution/Contributor).
+# Retained so the archived legacy/ code still has its types; do not extend.
+# ===========================================================================
+
 # ---------------------------------------------------------------------------
-# Core elements
+# Core elements (legacy)
 # ---------------------------------------------------------------------------
 
 @dataclass
