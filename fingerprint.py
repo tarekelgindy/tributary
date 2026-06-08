@@ -40,8 +40,11 @@ from models import (
     Domain,
     ElementOrigin,
     EvidenceLandscape,
+    EventAnalysis,
     ExtractedClaim,
     FramePrimitive,
+    FramingCarrier,
+    FramingOmission,
     GenealogyLayer,
     GenealogyStatus,
     InformationSource,
@@ -49,10 +52,13 @@ from models import (
     LineageRecord,
     Mutation,
     NarrativeFingerprint,
+    NarrativeFraming,
     Provenance,
     ReviewStatus,
     RhetoricalLayer,
     Scope,
+    SharedFact,
+    SharedFoundation,
     SocialAttestedInstance,
     SourceAnalysis,
     SourceDirection,
@@ -2654,6 +2660,344 @@ class FingerprintGenerator:
 
 
 # ---------------------------------------------------------------------------
+# Downstream: EventAnalysis generation (the mission's second direction)
+# ---------------------------------------------------------------------------
+
+EVENT_DESCRIBE_SYSTEM = """\
+You are neutralizing an event or statement for analysis. Given a claim,
+headline, or description of an event, produce a single neutral, factual
+one-sentence description of WHAT HAPPENED — stripped of any framing,
+spin, or interpretation. Name the concrete who/what/when/where; avoid
+characterizations, blame, and loaded words.
+
+Output ONLY JSON:
+{ "event": "neutral one-sentence description", "event_date": "ISO date if determinable, else \\"\\"" }
+"""
+
+
+EVENT_FRAMINGS_SYSTEM = """\
+You are a framing analyst for Tributary. Given a neutral event, search the
+information ecosystem and identify the distinct NARRATIVE FRAMINGS forming
+around it — and for each, WHO creates and amplifies it.
+
+A framing is a lens defined by the QUESTION it asks about the event, not by
+a political side. The same facts get narrated through different questions:
+"Was this lawful?" (accountability) vs "Were procedures followed?" (use of
+force) vs "Who was harmed?" (human cost) vs "How is this being used
+politically?" (political fallout). Aim for 4-8 genuinely distinct framings.
+
+BE AGGRESSIVELY NEUTRAL AND BALANCED. Include framings from across the
+political and ideological spectrum. Do NOT privilege one. Do NOT judge any
+framing's correctness. Your job is to map the terrain, not to referee it.
+
+For each framing identify the carriers — the outlets, authors, accounts,
+or institutions that create or amplify it — and assign each an
+amplifier_role:
+  originator              coined or first prominently used this framing
+  early-amplifier         spread it before it went mainstream
+  mass-amplifier          drove broad adoption (viral post, major outlet, big platform)
+  institutional-adoption  a party / govt / major institution adopting it officially
+  critic                  pushes back on or fact-checks this framing
+  mention                 uses it in passing
+
+Use web search to ground carriers in real, datable sources. Prefer concrete
+outlets/accounts with a representative headline or quote.
+
+Output ONLY JSON:
+{
+  "framings": [
+    {
+      "name": "Accountability",
+      "question": "the underlying question this lens asks",
+      "key_claim": "the narrative statement this framing asserts (one sentence, fingerprintable)",
+      "description": "1-2 sentences on what this framing is",
+      "emphasizes": "what this framing foregrounds",
+      "downplays": "what this framing minimizes or omits",
+      "tone": "measured | populist | alarmed | accusatory | celebratory | dismissive | ...",
+      "sample_headlines": ["representative headline 1", "headline 2"],
+      "carriers": [
+        {"name": "outlet/author/handle", "url": "...", "carrier_type": "news|social|political|institutional|academic|other",
+         "amplifier_role": "originator|early-amplifier|mass-amplifier|institutional-adoption|critic|mention",
+         "excerpt": "a representative headline or quote", "date": "ISO date if known",
+         "role_evidence": "one-line justification for the role"}
+      ]
+    }
+  ],
+  "search_notes": "what you searched and any coverage gaps"
+}
+"""
+
+
+EVENT_SHARED_FOUNDATION_SYSTEM = """\
+You are a shared-ground analyst for Tributary. Given a neutral event and the
+distinct framings forming around it, identify the SHARED FACTUAL GROUND —
+the specific, concrete facts that (almost) all framings accept, regardless
+of how they interpret them. This common ground is often the most clarifying
+part of an analysis because it's what is NOT contested.
+
+Include only SPECIFIC, ATOMIC, AGREED facts (names, dates, places, concrete
+actions, numbers, outcomes). EXCLUDE interpretations, value judgments,
+predictions, and anything one framing disputes. Mark a fact verified=true
+only if it is the kind of concrete primary-record fact that could be
+confirmed against an authoritative source; otherwise verified=false.
+
+Also list the genuine points of disagreement (what the framings actually
+argue about).
+
+Output ONLY JSON:
+{
+  "verified_facts": [{"statement": "...", "source_url": "...", "note": ""}],
+  "unverified_shared_claims": [{"statement": "...", "note": "why unverified"}],
+  "points_of_disagreement": ["..."],
+  "summary": "1-2 sentences on the shared foundation beneath the disagreement"
+}
+"""
+
+
+EVENT_OMISSIONS_SYSTEM = """\
+You are an omissions analyst for Tributary. Given the distinct framings of
+an event, identify for EACH framing what it leaves out that OTHER framings
+cover — the mechanism by which echo chambers work. A reader who only saw
+this framing would not know X.
+
+For each omission name: what is missing, which other framing surfaces it,
+the impact of not knowing it, and the type (factual / perspective / context).
+
+Output ONLY JSON keyed by framing name:
+{
+  "omissions_by_framing": {
+    "Accountability": [
+      {"what_is_missing": "...", "found_in_framing": "Use of Force", "impact": "...", "omission_type": "perspective"}
+    ]
+  }
+}
+"""
+
+
+EVENT_GAPS_SYSTEM = """\
+You are a completeness critic for Tributary. Given a neutral event and the
+framings identified so far, assess what framings or perspectives might still
+be MISSING from the map — angles, communities, or questions not yet
+represented. Be concrete. Aggressively neutral: name missing framings from
+any part of the spectrum.
+
+Output ONLY JSON:
+{ "gap_analysis": "2-4 sentences on what framings or perspectives may still be missing" }
+"""
+
+
+class EventAnalyzer:
+    """Downstream generator: given an event/statement, map the shared factual
+    ground and the distinct narrative framings forming around it (and who
+    carries each). The dual of FingerprintGenerator. Every step is
+    model-configurable — the on-ramp to per-step provider routing."""
+
+    # Per-step model defaults. Override via the `models` dict (or a blanket
+    # model). The web-search step (framings) needs a search-capable model.
+    DEFAULT_MODELS = {
+        "event_desc": HAIKU,
+        "framings": SONNET,            # web_search — ecosystem sweep, quality-critical
+        "shared_foundation": HAIKU,
+        "omissions": HAIKU,
+        "gaps": HAIKU,
+    }
+
+    def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None,
+                 max_searches: int = 10, models: Optional[dict] = None):
+        self.client = client or anthropic.AsyncAnthropic()
+        self.max_searches = max_searches
+        self.models = dict(self.DEFAULT_MODELS)
+        if models:
+            self.models.update(models)
+
+    def _web_search_tool(self) -> dict:
+        tool = {"type": "web_search_20250305", "name": "web_search"}
+        if self.max_searches and self.max_searches > 0:
+            tool["max_uses"] = self.max_searches
+        return tool
+
+    async def describe_event(self, raw: str) -> tuple:
+        """Neutralize the input into a factual event description + date."""
+        _log_progress("Event: neutral description (step 1/5)")
+        resp = await _create_with_retry(
+            self.client, model=self.models["event_desc"], max_tokens=512,
+            system=[{"type": "text", "text": EVENT_DESCRIBE_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": raw[:8000]}],
+        )
+        d = _parse_json_safe(_response_text(resp))
+        return (_clean_text_field(d.get("event")) or raw.strip(),
+                _clean_text_field(d.get("event_date")))
+
+    async def search_framings(self, event: str, scope: Scope) -> tuple:
+        """Find the distinct framings + carriers across the ecosystem."""
+        _log_progress("Event: framing search (step 2/5, web_search)")
+        t0 = time.monotonic()
+        user = (f"EVENT:\n{event}\n\nSCOPE: {_scope_clause(scope)}\n\n"
+                "Map the distinct narrative framings forming around this event "
+                "and who creates/amplifies each. Be balanced across the spectrum.")
+        resp = await _create_with_retry(
+            self.client, model=self.models["framings"], max_tokens=8192,
+            tools=[self._web_search_tool()],
+            system=[{"type": "text", "text": EVENT_FRAMINGS_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+            retry_on_empty_text=True,
+        )
+        raw_text = _response_text(resp)
+        data = _parse_json_safe(raw_text)
+        framings = self._parse_framings(data.get("framings") or [])
+        if not framings:
+            _save_debug_response("event_framings", raw_text)
+        _log_progress(f"Event: {len(framings)} framings found in "
+                      f"{time.monotonic() - t0:.1f}s")
+        return framings, _clean_text_field(data.get("search_notes"))
+
+    def _parse_framings(self, raw_list) -> list:
+        framings = []
+        for fr in raw_list:
+            if not isinstance(fr, dict):
+                continue
+            carriers = []
+            for c in (fr.get("carriers") or []):
+                if not isinstance(c, dict):
+                    continue
+                role_str = str(c.get("amplifier_role", "")).strip().lower()
+                try:
+                    role = AmplifierRole(role_str) if role_str else AmplifierRole.UNKNOWN
+                except ValueError:
+                    role = AmplifierRole.UNKNOWN
+                carriers.append(FramingCarrier(
+                    name=_clean_text_field(c.get("name")),
+                    url=_clean_text_field(c.get("url")),
+                    carrier_type=_clean_text_field(c.get("carrier_type")),
+                    amplifier_role=role,
+                    excerpt=_clean_text_field(c.get("excerpt")),
+                    date=_clean_text_field(c.get("date")),
+                    role_evidence=_clean_text_field(c.get("role_evidence")),
+                    provenance=Provenance.ai(model=self.models["framings"]),
+                ))
+            headlines = [h for h in (fr.get("sample_headlines") or []) if h]
+            framings.append(NarrativeFraming(
+                name=_clean_text_field(fr.get("name")),
+                question=_clean_text_field(fr.get("question")),
+                key_claim=_clean_text_field(fr.get("key_claim")),
+                description=_clean_text_field(fr.get("description")),
+                emphasizes=_clean_text_field(fr.get("emphasizes")),
+                downplays=_clean_text_field(fr.get("downplays")),
+                tone=_clean_text_field(fr.get("tone")),
+                sample_headlines=[str(h).strip() for h in headlines],
+                carriers=carriers,
+                provenance=Provenance.ai(model=self.models["framings"]),
+            ))
+        return framings
+
+    async def extract_shared_foundation(self, event: str, framings: list) -> SharedFoundation:
+        _log_progress("Event: shared foundation (step 3/5)")
+        framing_brief = [{"name": f.name, "key_claim": f.key_claim,
+                          "emphasizes": f.emphasizes} for f in framings]
+        user = (f"EVENT:\n{event}\n\nFRAMINGS:\n{json.dumps(framing_brief, indent=2)}")
+        resp = await _create_with_retry(
+            self.client, model=self.models["shared_foundation"], max_tokens=2048,
+            system=[{"type": "text", "text": EVENT_SHARED_FOUNDATION_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+        )
+        d = _parse_json_safe(_response_text(resp))
+        m = self.models["shared_foundation"]
+
+        def _facts(items, verified):
+            out = []
+            for it in (items or []):
+                if not isinstance(it, dict):
+                    continue
+                out.append(SharedFact(
+                    statement=_clean_text_field(it.get("statement")),
+                    verified=verified,
+                    source_url=_clean_text_field(it.get("source_url")),
+                    note=_clean_text_field(it.get("note")),
+                    provenance=Provenance.ai(model=m),
+                ))
+            return [f for f in out if f.statement]
+
+        return SharedFoundation(
+            verified_facts=_facts(d.get("verified_facts"), True),
+            unverified_shared_claims=_facts(d.get("unverified_shared_claims"), False),
+            points_of_disagreement=[str(p).strip() for p in (d.get("points_of_disagreement") or []) if p],
+            summary=_clean_text_field(d.get("summary")),
+        )
+
+    async def analyze_omissions(self, framings: list) -> None:
+        """Populate each framing's omissions in place (comparative, no search)."""
+        if len(framings) < 2:
+            return
+        _log_progress("Event: omissions per framing (step 4/5)")
+        brief = [{"name": f.name, "key_claim": f.key_claim,
+                  "emphasizes": f.emphasizes, "downplays": f.downplays} for f in framings]
+        resp = await _create_with_retry(
+            self.client, model=self.models["omissions"], max_tokens=3072,
+            system=[{"type": "text", "text": EVENT_OMISSIONS_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": json.dumps(brief, indent=2)}],
+        )
+        d = _parse_json_safe(_response_text(resp))
+        by_framing = d.get("omissions_by_framing") or {}
+        m = self.models["omissions"]
+        for f in framings:
+            for o in (by_framing.get(f.name) or []):
+                if not isinstance(o, dict):
+                    continue
+                f.omissions.append(FramingOmission(
+                    what_is_missing=_clean_text_field(o.get("what_is_missing")),
+                    found_in_framing=_clean_text_field(o.get("found_in_framing")),
+                    impact=_clean_text_field(o.get("impact")),
+                    omission_type=_clean_text_field(o.get("omission_type")),
+                    provenance=Provenance.ai(model=m),
+                ))
+
+    async def detect_gaps(self, event: str, framings: list) -> str:
+        _log_progress("Event: gap analysis (step 5/5)")
+        names = [f.name for f in framings]
+        user = f"EVENT:\n{event}\n\nFRAMINGS IDENTIFIED: {', '.join(names)}"
+        resp = await _create_with_retry(
+            self.client, model=self.models["gaps"], max_tokens=512,
+            system=[{"type": "text", "text": EVENT_GAPS_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+        )
+        d = _parse_json_safe(_response_text(resp))
+        return _clean_text_field(d.get("gap_analysis"))
+
+    async def analyze_event(
+        self,
+        raw: str,
+        scope: Optional[Scope] = None,
+        source_urls: Optional[list] = None,
+    ) -> EventAnalysis:
+        """Full downstream pipeline: neutralize -> framings+carriers ->
+        shared foundation -> omissions -> gaps. Framing key_claims are left
+        un-fingerprinted (decoupled); trace them on demand."""
+        scope = scope or Scope()
+        event, event_date = await self.describe_event(raw)
+        framings, _notes = await self.search_framings(event, scope)
+        # Shared foundation + omissions don't depend on each other → parallel.
+        shared, _omit = await asyncio.gather(
+            self.extract_shared_foundation(event, framings),
+            self.analyze_omissions(framings),
+        )
+        gap_analysis = await self.detect_gaps(event, framings)
+        return EventAnalysis(
+            event=event,
+            event_date=event_date,
+            source_urls=source_urls or [],
+            shared_foundation=shared,
+            framings=framings,
+            gap_analysis=gap_analysis,
+            provenance=Provenance.ai(model=self.models["framings"]),
+        )
+
+
+# ---------------------------------------------------------------------------
 # Storage
 # ---------------------------------------------------------------------------
 
@@ -2747,6 +3091,65 @@ async def _cli(args):
     skip_conceptual = not (full or args.conceptual)
     skip_mutations = not (full or args.mutations)
     skip_evidence = not (full or args.evidence)
+
+    # ---- Downstream mode: --event ------------------------------------
+    # Map the narrative framings forming around an event (the mission's
+    # second direction), instead of tracing one narrative upstream.
+    if args.event:
+        raw = args.claim
+        if args.url:
+            item = await gen._fetch_content(args.url)
+            raw = (item.text if item else "") or args.url
+        elif args.file:
+            try:
+                with open(args.file, "r", encoding="utf-8") as fh:
+                    raw = fh.read()
+            except OSError as e:
+                print(f"[error reading {args.file}: {e}]", file=sys.stderr)
+                return
+        if not raw:
+            print("[error: --event needs an event statement, --url, or --file]",
+                  file=sys.stderr)
+            return
+
+        models = {k: args.event_model for k in EventAnalyzer.DEFAULT_MODELS} if args.event_model else None
+        analyzer = EventAnalyzer(max_searches=args.max_searches, models=models)
+        analysis = await analyzer.analyze_event(
+            raw, scope=scope,
+            source_urls=[args.url] if args.url else [],
+        )
+
+        # Decoupled framing→fingerprint: only trace framings on demand.
+        if args.trace_framings and analysis.framings:
+            fp_store = FingerprintStore(args.store_dir) if args.save else None
+            for fr in analysis.framings:
+                if not fr.key_claim:
+                    continue
+                _log_progress(f"Tracing framing '{fr.name}': {fr.key_claim[:50]}")
+                fp = await gen.generate_fingerprint(
+                    fr.key_claim, scope=scope,
+                    skip_conceptual=skip_conceptual, skip_mutations=skip_mutations,
+                    include_social=args.social, skip_evidence=skip_evidence,
+                    skip_verification=args.no_verify,
+                )
+                fr.fingerprint_id = fp.fingerprint_id
+                analysis.fingerprints.append(fp)
+                if fp_store is not None:
+                    try:
+                        fp_store.save(fp)
+                    except Exception as e:
+                        _log_progress(f"Could not save fingerprint {fp.fingerprint_id}: {e}")
+
+        print(analysis.to_json())
+        if args.save:
+            from pathlib import Path
+            edir = Path(args.store_dir).parent / "events"
+            edir.mkdir(parents=True, exist_ok=True)
+            epath = edir / f"{analysis.analysis_id}.json"
+            epath.write_text(analysis.to_json(), encoding="utf-8")
+            print(f"[saved event analysis: {epath} "
+                  f"({len(analysis.framings)} framings)]")
+        return
 
     # ---- Multi-claim mode: --url / --file ----------------------------
     if args.url or args.file:
@@ -2859,6 +3262,18 @@ def main():
     parser.add_argument("--extract-only", action="store_true",
                         help="Multi-claim mode: extract and list the claims only, without "
                              "fingerprinting them (cheap preview — one Haiku call).")
+    parser.add_argument("--event", action="store_true",
+                        help="DOWNSTREAM mode: map the narrative framings forming around an "
+                             "event (the claim, --url, or --file), and who creates/amplifies "
+                             "each. Produces an EventAnalysis instead of a fingerprint.")
+    parser.add_argument("--event-model", default="",
+                        help="Blanket model override for all EventAnalysis steps "
+                             "(otherwise per-step defaults: Haiku for cheap steps, Sonnet "
+                             "for the framing search). Per-step control is available "
+                             "programmatically via EventAnalyzer(models=...).")
+    parser.add_argument("--trace-framings", action="store_true",
+                        help="In --event mode, also fingerprint each framing's key_claim "
+                             "(decoupled by default — off, since each is a full fingerprint).")
     parser.add_argument("--context", help="Optional context where the claim appeared")
     parser.add_argument("--region", default="US",
                         help='Regional focus for scope (default: "US")')
