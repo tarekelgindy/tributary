@@ -100,7 +100,43 @@ def fetch_events(d: date, timeout: float = 20.0) -> list:
     return parser.items
 
 
-def discover(d: date, limit: int = 0, min_len: int = 30, max_len: int = 280) -> list:
+_TOPVIEW_API = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
+                "en.wikipedia.org/all-access/{year}/{month:02d}/{day:02d}")
+# Non-article pages to drop from the most-viewed list.
+_TOPVIEW_SKIP = re.compile(r"^(Main_Page|Special:|Portal:|Wikipedia:|Help:|"
+                           r"Category:|Template:|File:|Talk:|User:)")
+
+
+def fetch_topview(d: date, limit: int = 50, timeout: float = 20.0) -> list:
+    """The most-viewed Wikipedia articles for a date (a 'what people are
+    actually looking up' trending signal), as readable topic phrases."""
+    url = _TOPVIEW_API.format(year=d.year, month=d.month, day=d.day)
+    headers = {
+        "User-Agent": "Tributary/0.1 (https://github.com/tarekelgindy/tributary) httpx",
+        "Accept": "application/json",
+    }
+    with httpx.Client(timeout=timeout, headers=headers) as client:
+        resp = client.get(url, headers=headers)
+        resp.raise_for_status()
+        data = resp.json()
+    items = (data.get("items") or [{}])[0].get("articles") or []
+    topics = []
+    for a in items:
+        art = a.get("article", "")
+        if not art or _TOPVIEW_SKIP.match(art):
+            continue
+        topic = unescape(art.replace("_", " ")).strip()
+        if topic and topic not in topics:
+            topics.append(topic)
+        if len(topics) >= limit:
+            break
+    return topics
+
+
+def discover(d: date, source: str = "wikipedia", limit: int = 0,
+             min_len: int = 30, max_len: int = 280) -> list:
+    if source == "topview":
+        return fetch_topview(d, limit=limit or 50)
     raw = fetch_events(d)
     seen, events = set(), []
     for item in raw:
@@ -126,9 +162,14 @@ def main():
     p.add_argument("--date", default="", help="YYYY-MM-DD (default: today, UTC).")
     p.add_argument("--days-back", type=int, default=0,
                    help="N days before today (ignored if --date is given).")
+    p.add_argument("--source", choices=["wikipedia", "topview"], default="wikipedia",
+                   help="wikipedia = Current Events portal (curated notable events, "
+                        "default); topview = the day's most-viewed Wikipedia pages "
+                        "(a 'what people are looking up' trending signal — pages, not "
+                        "events; pair with corpus.py --min-contestedness to filter).")
     p.add_argument("--out", default="",
                    help="Output file (default: topics_<date>.txt). Use '-' for stdout.")
-    p.add_argument("--limit", type=int, default=0, help="Max events (0 = all).")
+    p.add_argument("--limit", type=int, default=0, help="Max items (0 = all).")
     args = p.parse_args()
 
     if args.date:
@@ -140,23 +181,33 @@ def main():
     else:
         d = datetime.now(timezone.utc).date() - timedelta(days=args.days_back)
 
-    print(f"Fetching Wikipedia Current Events for {d.isoformat()}...", file=sys.stderr)
+    label = ("most-viewed pages (TopView)" if args.source == "topview"
+             else "Current Events")
+    print(f"Fetching Wikipedia {label} for {d.isoformat()}...", file=sys.stderr)
     try:
-        events = discover(d, limit=args.limit)
+        events = discover(d, source=args.source, limit=args.limit)
     except Exception as e:  # noqa: BLE001
         print(f"[failed: {type(e).__name__}: {e}]", file=sys.stderr)
-        print("(If the page doesn't exist yet, try an earlier --date or --days-back 1.)",
+        print("(If the page/data doesn't exist yet, try an earlier --date or --days-back 1.)",
               file=sys.stderr)
         sys.exit(1)
 
     if not events:
-        print(f"[no events found for {d.isoformat()} — the day's page may be empty or "
-              "not yet published; try --days-back 1]", file=sys.stderr)
+        print(f"[nothing found for {d.isoformat()} — the day's data may not be "
+              "published yet; try --days-back 1]", file=sys.stderr)
         sys.exit(0)
 
-    header = (f"# Notable events from Wikipedia Current Events, {d.isoformat()}\n"
-              f"# Source: {_portal_page_title(d)}\n"
-              f"# Review/trim, then: python corpus.py <this file> --framings-only --max-searches 4\n")
+    if args.source == "topview":
+        src_note = ("Wikipedia most-viewed pages (TopView) — topics/pages, not events")
+        src_line = "Wikipedia Pageviews top API"
+        run_hint = "python corpus.py <this file> --min-contestedness 6 --max-searches 6"
+    else:
+        src_note = "Wikipedia Current Events"
+        src_line = _portal_page_title(d)
+        run_hint = "python corpus.py <this file> --max-searches 6"
+    header = (f"# {src_note}, {d.isoformat()}\n"
+              f"# Source: {src_line}\n"
+              f"# Review/trim, then: {run_hint}\n")
     body = "\n".join(events) + "\n"
 
     if args.out == "-":

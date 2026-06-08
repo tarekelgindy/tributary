@@ -2907,6 +2907,61 @@ Output ONLY JSON:
 """
 
 
+CONTESTEDNESS_SYSTEM = """\
+You rate how CONTESTED each event is — how likely it is to have genuinely
+DIVERGENT narrative framings across the political / ideological / cultural
+spectrum. This decides whether an event is worth a full framing analysis:
+contested events produce a rich map of competing narratives; neutral ones
+produce near-identical framings and aren't worth the cost.
+
+Scoring (0-10):
+  0-3  neutral / consensus — everyone narrates it the same way. Natural
+       disasters, routine appointments, sports results, settled science,
+       procedural updates.
+  4-6  some divergence — moderately debated, or contested only on emphasis.
+  7-10 strongly contested — a culture-war flashpoint, a polarizing political
+       or legal action, an enforcement incident, an election with disputed
+       meaning, anything where left/right/other camps tell opposing stories.
+
+Judge the EVENT's inherent contestedness, not whether it's important or
+sad. A tragic but uncontested disaster scores LOW. Be aggressively neutral.
+
+Output ONLY JSON:
+{ "scores": [ {"idx": 0, "score": 7, "reason": "one line"} ] }
+Provide a score for EVERY input event, keyed by its idx.
+"""
+
+
+async def score_contestedness(client, topics: list, model: str = HAIKU) -> list:
+    """Rate each topic 0-10 for how likely it is to have divergent framings,
+    in one batched Haiku call (~$0.001 for dozens of topics). Returns a list
+    of {topic, score, reason} aligned to the input order. Used to gate corpus
+    spending on contested events only."""
+    if not topics:
+        return []
+    items = [{"idx": i, "event": t} for i, t in enumerate(topics)]
+    resp = await _create_with_retry(
+        client, model=model, max_tokens=4096,
+        system=[{"type": "text", "text": CONTESTEDNESS_SYSTEM,
+                 "cache_control": {"type": "ephemeral"}}],
+        messages=[{"role": "user", "content": json.dumps(items, indent=2)}],
+    )
+    data = _parse_json_safe(_response_text(resp))
+    by_idx = {}
+    for s in (data.get("scores") or []):
+        if isinstance(s, dict) and "idx" in s:
+            try:
+                by_idx[int(s["idx"])] = (float(s.get("score", 5)),
+                                         _clean_text_field(s.get("reason")))
+            except (TypeError, ValueError):
+                continue
+    out = []
+    for i, t in enumerate(topics):
+        score, reason = by_idx.get(i, (5.0, "(unscored)"))
+        out.append({"topic": t, "score": score, "reason": reason})
+    return out
+
+
 class EventAnalyzer:
     """Downstream generator: given an event/statement, map the shared factual
     ground and the distinct narrative framings forming around it (and who
@@ -2924,12 +2979,16 @@ class EventAnalyzer:
     }
 
     def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None,
-                 max_searches: int = 10, models: Optional[dict] = None):
+                 max_searches: int = 10, models: Optional[dict] = None,
+                 lean_framings: bool = False):
         self.client = client or anthropic.AsyncAnthropic()
         self.max_searches = max_searches
         self.models = dict(self.DEFAULT_MODELS)
         if models:
             self.models.update(models)
+        # Lean mode: fewer framings + fewer carriers each → much smaller output
+        # tokens → cheaper. The framing search output dominates event cost.
+        self.lean_framings = lean_framings
 
     def _web_search_tool(self) -> dict:
         tool = {"type": "web_search_20250305", "name": "web_search"}
@@ -2956,9 +3015,14 @@ class EventAnalyzer:
         user = (f"EVENT:\n{event}\n\nSCOPE: {_scope_clause(scope)}\n\n"
                 "Map the distinct narrative framings forming around this event "
                 "and who creates/amplifies each. Be balanced across the spectrum.")
+        if self.lean_framings:
+            user += ("\n\nLEAN MODE: limit to the 4-5 MOST distinct framings, and "
+                     "at most 3 carriers per framing (the most representative). "
+                     "Keep descriptions to one sentence. This keeps the response "
+                     "compact.")
         return {
             "model": self.models["framings"],
-            "max_tokens": 16384,
+            "max_tokens": 10240 if self.lean_framings else 16384,
             "tools": [self._web_search_tool()],
             "system": [{"type": "text", "text": EVENT_FRAMINGS_SYSTEM,
                         "cache_control": {"type": "ephemeral"}}],
@@ -3353,7 +3417,8 @@ async def _cli(args):
             return
 
         models = {k: args.event_model for k in EventAnalyzer.DEFAULT_MODELS} if args.event_model else None
-        analyzer = EventAnalyzer(max_searches=args.max_searches, models=models)
+        analyzer = EventAnalyzer(max_searches=args.max_searches, models=models,
+                                 lean_framings=args.lean_framings)
         if args.batch:
             # Route the expensive framing search through the Batch API (~50%
             # off, async — slower, for when you don't need it instantly).
@@ -3535,6 +3600,9 @@ def main():
                         help="In --event mode, route the expensive framing search through "
                              "the async Batch API (~50%% off tokens). Slower (minutes, no "
                              "SLA) — use when you don't need the result instantly.")
+    parser.add_argument("--lean-framings", action="store_true",
+                        help="In --event mode, ask for fewer framings (4-5) and carriers "
+                             "(<=3 each) — smaller output, cheaper.")
     parser.add_argument("--context", help="Optional context where the claim appeared")
     parser.add_argument("--region", default="US",
                         help='Regional focus for scope (default: "US")')

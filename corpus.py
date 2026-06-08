@@ -34,7 +34,8 @@ import sys
 import time
 from pathlib import Path
 
-from fingerprint import EventAnalyzer, FingerprintGenerator, FingerprintStore, _log_progress
+from fingerprint import (EventAnalyzer, FingerprintGenerator, FingerprintStore,
+                         score_contestedness, _log_progress)
 from models import EventAnalysis, Scope
 
 
@@ -72,13 +73,31 @@ async def run_corpus(args):
     scope = Scope(language="en", region=args.region)
     models = ({k: args.event_model for k in EventAnalyzer.DEFAULT_MODELS}
               if args.event_model else None)
-    analyzer = EventAnalyzer(max_searches=args.max_searches, models=models)
+    analyzer = EventAnalyzer(max_searches=args.max_searches, models=models,
+                             lean_framings=args.lean_framings)
     fp_gen = FingerprintGenerator(max_searches=args.max_searches)
     fp_store = FingerprintStore(str(out_dir)) if args.claims else None
 
     # Which items still need doing?
     todo = [t for t in topics if args.force or t not in index]
     skipped = len(topics) - len(todo)
+
+    # Contestedness pre-filter (events): skip neutral events that won't have
+    # divergent framings — one cheap Haiku call, gates the expensive analysis.
+    if args.min_contestedness > 0 and mode == "events" and todo:
+        _log_progress(f"Scoring contestedness of {len(todo)} events "
+                      "(one Haiku call)...")
+        scored = await score_contestedness(analyzer.client, todo)
+        kept, dropped = [], []
+        for s in scored:
+            (kept if s["score"] >= args.min_contestedness else dropped).append(s)
+        for s in dropped:
+            print(f"  [skip {s['score']:.0f}/10] {s['topic'][:60]} — {s['reason']}",
+                  file=sys.stderr)
+        print(f"[contestedness >= {args.min_contestedness}: kept {len(kept)} of "
+              f"{len(todo)}, dropped {len(dropped)} neutral events]", file=sys.stderr)
+        todo = [s["topic"] for s in kept]
+
     if args.limit:
         todo = todo[:args.limit]
 
@@ -186,6 +205,13 @@ def main():
     p.add_argument("--no-verify", action="store_true",
                    help="Skip carrier-URL verification (events). Verification is free "
                         "(HTTP only) and flags dead/hallucinated carrier links.")
+    p.add_argument("--min-contestedness", type=float, default=0,
+                   help="Events: skip events scoring below this (0-10) on a cheap "
+                        "contestedness pre-filter — so you only spend on events likely "
+                        "to have divergent framings. Try 6. Default 0 = off.")
+    p.add_argument("--lean-framings", action="store_true",
+                   help="Events: fewer framings/carriers per event (smaller output, "
+                        "cheaper).")
     p.add_argument("--event-model", default="",
                    help="Blanket model override for the event pipeline steps.")
     p.add_argument("--region", default="US", help='Scope region (default "US").')
