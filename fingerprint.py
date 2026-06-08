@@ -3032,6 +3032,7 @@ class EventAnalyzer:
         raw: str,
         scope: Optional[Scope] = None,
         source_urls: Optional[list] = None,
+        framings_only: bool = False,
     ) -> EventAnalysis:
         """Full downstream pipeline: neutralize -> framings+carriers ->
         shared foundation -> omissions -> gaps. Framing key_claims are left
@@ -3060,6 +3061,22 @@ class EventAnalyzer:
                     "framings yet. "
                     + (f"Search notes: {notes}" if notes else "")
                 ),
+                provenance=Provenance.ai(model=self.models["framings"]),
+            )
+
+        # Cheap preview: the framing search is the one valuable + expensive
+        # step. Stop here and skip the shared-foundation / omissions / gap
+        # calls (~$0.20 vs ~$0.50) — for eyeballing an event while iterating.
+        if framings_only:
+            _log_progress("Event: framings-only preview — skipping "
+                          "shared-foundation / omissions / gap steps")
+            return EventAnalysis(
+                event=event,
+                event_date=event_date,
+                source_urls=source_urls or [],
+                framings=framings,
+                gap_analysis="(framings-only preview — shared foundation, "
+                             "omissions, and gap analysis were skipped)",
                 provenance=Provenance.ai(model=self.models["framings"]),
             )
 
@@ -3200,6 +3217,7 @@ async def _cli(args):
         analysis = await analyzer.analyze_event(
             raw, scope=scope,
             source_urls=[args.url] if args.url else [],
+            framings_only=args.framings_only,
         )
 
         # Decoupled framing→fingerprint: only trace framings on demand.
@@ -3357,6 +3375,10 @@ def main():
     parser.add_argument("--trace-framings", action="store_true",
                         help="In --event mode, also fingerprint each framing's key_claim "
                              "(decoupled by default — off, since each is a full fingerprint).")
+    parser.add_argument("--framings-only", action="store_true",
+                        help="In --event mode, stop after the framing search and skip the "
+                             "shared-foundation / omissions / gap steps (~$0.20 vs ~$0.50) "
+                             "— a cheap preview for iterating on events.")
     parser.add_argument("--context", help="Optional context where the claim appeared")
     parser.add_argument("--region", default="US",
                         help='Regional focus for scope (default: "US")')
