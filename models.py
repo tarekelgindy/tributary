@@ -1409,6 +1409,11 @@ class EventAnalysis:
     # dict produced by bias_db.coverage_lean(); empty until enriched. The
     # ratings are AllSides'/MBFC's (attributed inside), aggregated by Tributary.
     coverage_lean: dict = field(default_factory=dict)
+    # Coalition structure: the bipartite actor↔framing slice for this event —
+    # which actors carry which framings, the bridges (actors spanning framings),
+    # and connectivity. Axis-free (no left/right). Produced by
+    # coalitions.coalition(); empty until enriched.
+    coalition: dict = field(default_factory=dict)
     # Shared contribution-ready substrate (1a/1b)
     provenance: Provenance = field(default_factory=Provenance)
     contributions: list[Contribution] = field(default_factory=list)
@@ -1435,6 +1440,7 @@ class EventAnalysis:
             "gap_analysis": self.gap_analysis,
             "fingerprints": [f.to_dict() for f in self.fingerprints],
             "coverage_lean": self.coverage_lean,
+            "coalition": self.coalition,
             "provenance": self.provenance.to_dict(),
             "contributions": [c.to_dict() for c in self.contributions],
             "contributors": [c.to_dict() for c in self.contributors],

@@ -3120,7 +3120,13 @@ class EventAnalyzer:
         )
         if verify:
             analysis = await self.verify_event(analysis)
-        return self._attach_coverage_lean(analysis)
+        return self._enrich(analysis)
+
+    def _enrich(self, analysis: EventAnalysis) -> EventAnalysis:
+        """Attach the free (no-API) downstream enrichments: the coalition
+        structure (always) and the coverage-lean (if the bias snapshot exists).
+        Best-effort — neither may fail the analysis."""
+        return self._attach_coalition(self._attach_coverage_lean(analysis))
 
     def _attach_coverage_lean(self, analysis: EventAnalysis) -> EventAnalysis:
         """Cross-reference the carriers against the local source-bias DB and
@@ -3139,6 +3145,18 @@ class EventAnalyzer:
             analysis.coverage_lean = coverage_lean(analysis.to_dict(), db=self._bias_db)
         except Exception as e:  # noqa: BLE001 — enrichment must never fail the analysis
             _log_progress(f"Event: coverage-lean skipped ({type(e).__name__}: {e})")
+        return analysis
+
+    def _attach_coalition(self, analysis: EventAnalysis) -> EventAnalysis:
+        """Build the bipartite actor↔framing coalition structure (actors.py +
+        coalitions.py). Free (no API), no external data — but still best-effort."""
+        if not analysis.framings:
+            return analysis
+        try:
+            from coalitions import coalition
+            analysis.coalition = coalition(analysis.to_dict())
+        except Exception as e:  # noqa: BLE001 — enrichment must never fail the analysis
+            _log_progress(f"Event: coalition skipped ({type(e).__name__}: {e})")
         return analysis
 
     def _parse_framings(self, raw_list) -> list:
