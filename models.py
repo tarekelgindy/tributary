@@ -313,14 +313,22 @@ class Mutation:
     added: str = ""
     distorted: str = ""
     status: ElementStatus = ElementStatus.AI_GENERATED
-    attribution: Attribution = None
+    attribution: Attribution = None              # legacy attribution (old model)
+    mutation_id: str = ""                         # stable id so contributions can target it
+    provenance: "Provenance" = None               # unified provenance (new model)
 
     def __post_init__(self):
         if self.attribution is None:
             self.attribution = Attribution(source="ai")
+        if not self.mutation_id:
+            key = f"{self.from_source}→{self.to_source}"
+            self.mutation_id = hashlib.sha256(key.encode()).hexdigest()[:12]
+        if self.provenance is None:
+            self.provenance = Provenance()
 
     def to_dict(self):
         return {
+            "mutation_id": self.mutation_id,
             "from_source": self.from_source,
             "to_source": self.to_source,
             "preserved": self.preserved,
@@ -329,6 +337,7 @@ class Mutation:
             "distorted": self.distorted,
             "status": self.status.value,
             "attribution": self.attribution.to_dict() if self.attribution else None,
+            "provenance": self.provenance.to_dict() if self.provenance else None,
         }
 
 
@@ -370,6 +379,143 @@ class Omission:
 # v1 populates L1 + L4 only. The L2 / L3 / L5 schemas exist here so the
 # storage format is stable from day one and later layers can be added
 # without migrating existing fingerprints.
+
+
+# ---------------------------------------------------------------------------
+# Provenance — the universal AI/human attribution + review layer
+# ---------------------------------------------------------------------------
+# Every contributable element in a fingerprint (each AttestedInstance,
+# InformationSource, Mutation, and the fingerprint itself) carries a single
+# Provenance object recording who produced it and its review state. Today
+# only the AI side is populated; the confirmations / disputes / revisions
+# lists exist but stay empty until the human-contribution layer goes live,
+# so adding human contributions later needs NO schema migration — just a
+# service that populates these fields. See models: Contribution / Contributor.
+
+class ElementOrigin(str, Enum):
+    """Who originally created an element."""
+    AI = "ai"
+    HUMAN = "human"
+
+
+class ReviewStatus(str, Enum):
+    """An element's state in the human-review lifecycle. Defaults to
+    AI_GENERATED — everything starts as an unreviewed AI assertion."""
+    AI_GENERATED = "ai_generated"        # AI produced it, no human review yet
+    HUMAN_ADDED = "human_added"          # a human created it
+    HUMAN_CONFIRMED = "human_confirmed"  # AI produced it, >=1 human confirmed
+    DISPUTED = "disputed"                # one or more humans dispute it
+    CONSENSUS = "consensus"              # multiple humans agree (settled)
+    RETRACTED = "retracted"              # marked incorrect by consensus
+
+
+@dataclass
+class Provenance:
+    """Universal provenance + review state for a contributable element.
+
+    The AI side (origin, model, confidence, reasoning) is filled at
+    generation time. The human side (confirmations, disputes, revisions)
+    is dormant until the contribution layer is built — present in the
+    schema so it never requires a migration."""
+    origin: ElementOrigin = ElementOrigin.AI
+    status: ReviewStatus = ReviewStatus.AI_GENERATED
+    model: str = ""                 # which model, if AI-generated
+    contributor_id: str = ""        # which human, if human-originated
+    contributor_name: str = ""
+    created_at: str = ""
+    confidence: float = 0.0         # AI confidence or human certainty
+    reasoning: str = ""
+    # --- dormant contribution state (populated by the future human layer) ---
+    confirmations: list = field(default_factory=list)  # list[contribution_id]
+    disputes: list = field(default_factory=list)        # list[contribution_id]
+    revisions: list = field(default_factory=list)        # prior versions / edit refs
+
+    def __post_init__(self):
+        if not self.created_at:
+            self.created_at = datetime.now(timezone.utc).isoformat()
+
+    @classmethod
+    def ai(cls, model: str = "", confidence: float = 0.0,
+           reasoning: str = "") -> "Provenance":
+        """Convenience factory for an AI-generated element."""
+        return cls(origin=ElementOrigin.AI, status=ReviewStatus.AI_GENERATED,
+                   model=model, confidence=confidence, reasoning=reasoning)
+
+    @classmethod
+    def human(cls, contributor_id: str, contributor_name: str = "",
+              confidence: float = 0.0, reasoning: str = "") -> "Provenance":
+        """Convenience factory for a human-added element."""
+        return cls(origin=ElementOrigin.HUMAN, status=ReviewStatus.HUMAN_ADDED,
+                   contributor_id=contributor_id, contributor_name=contributor_name,
+                   confidence=confidence, reasoning=reasoning)
+
+    @property
+    def is_ai(self) -> bool:
+        return self.origin == ElementOrigin.AI
+
+    @property
+    def confirmation_count(self) -> int:
+        return len(self.confirmations)
+
+    @property
+    def dispute_count(self) -> int:
+        return len(self.disputes)
+
+    @property
+    def is_settled(self) -> bool:
+        """Settled when confirmed by 3+ with no disputes, or by 5+ even with
+        some disputes (2:1 majority). Mirrors the old consensus logic."""
+        if self.dispute_count == 0 and self.confirmation_count >= 3:
+            return True
+        if self.confirmation_count >= 5 and self.confirmation_count > self.dispute_count * 2:
+            return True
+        return False
+
+    def to_dict(self):
+        return {
+            "origin": self.origin.value,
+            "status": self.status.value,
+            "model": self.model,
+            "contributor_id": self.contributor_id,
+            "contributor_name": self.contributor_name,
+            "created_at": self.created_at,
+            "confidence": self.confidence,
+            "reasoning": self.reasoning,
+            "confirmations": self.confirmations,
+            "disputes": self.disputes,
+            "revisions": self.revisions,
+            "confirmation_count": self.confirmation_count,
+            "dispute_count": self.dispute_count,
+            "is_settled": self.is_settled,
+        }
+
+    @classmethod
+    def from_dict(cls, d: Optional[dict]) -> "Provenance":
+        """Reconstruct from stored JSON, tolerating absence (old fingerprints
+        predate this field) and unknown enum values."""
+        if not d:
+            return cls()
+        try:
+            origin = ElementOrigin(str(d.get("origin", "ai")))
+        except ValueError:
+            origin = ElementOrigin.AI
+        try:
+            status = ReviewStatus(str(d.get("status", "ai_generated")))
+        except ValueError:
+            status = ReviewStatus.AI_GENERATED
+        return cls(
+            origin=origin,
+            status=status,
+            model=str(d.get("model", "")),
+            contributor_id=str(d.get("contributor_id", "")),
+            contributor_name=str(d.get("contributor_name", "")),
+            created_at=str(d.get("created_at", "")),
+            confidence=float(d.get("confidence", 0.0) or 0.0),
+            reasoning=str(d.get("reasoning", "")),
+            confirmations=list(d.get("confirmations", []) or []),
+            disputes=list(d.get("disputes", []) or []),
+            revisions=list(d.get("revisions", []) or []),
+        )
 
 
 class FramePrimitive(str, Enum):
@@ -562,6 +708,7 @@ class AttestedInstance:
     verification_status: str = "unchecked"  # unchecked / verified / url-error / fetch-error / quote-not-found
     verification_notes: str = ""
     archive_url: str = ""               # Wayback snapshot if the live URL is down
+    provenance: Provenance = field(default_factory=Provenance)  # who produced it + review state
 
     def __post_init__(self):
         if not self.instance_id:
@@ -585,6 +732,7 @@ class AttestedInstance:
             "verification_status": self.verification_status,
             "verification_notes": self.verification_notes,
             "archive_url": self.archive_url,
+            "provenance": self.provenance.to_dict(),
         }
 
 
@@ -610,6 +758,7 @@ class SocialAttestedInstance:
     verification_status: str = "unchecked"
     verification_notes: str = ""
     archive_url: str = ""
+    provenance: Provenance = field(default_factory=Provenance)
 
     def __post_init__(self):
         if not self.instance_id:
@@ -634,6 +783,7 @@ class SocialAttestedInstance:
             "verification_status": self.verification_status,
             "verification_notes": self.verification_notes,
             "archive_url": self.archive_url,
+            "provenance": self.provenance.to_dict(),
         }
 
 
@@ -751,6 +901,7 @@ class InformationSource:
     verification_status: str = "unchecked"
     verification_notes: str = ""
     archive_url: str = ""
+    provenance: Provenance = field(default_factory=Provenance)
 
     def __post_init__(self):
         if not self.source_id:
@@ -775,6 +926,7 @@ class InformationSource:
             "verification_status": self.verification_status,
             "verification_notes": self.verification_notes,
             "archive_url": self.archive_url,
+            "provenance": self.provenance.to_dict(),
         }
 
 
@@ -818,7 +970,7 @@ class NarrativeFingerprint:
     taxonomic: TaxonomicLayer = field(default_factory=TaxonomicLayer)
     evidence_landscape: EvidenceLandscape = field(default_factory=EvidenceLandscape)
 
-    attribution: Attribution = None
+    provenance: Provenance = field(default_factory=Provenance)
 
     def __post_init__(self):
         if not self.fingerprint_id:
@@ -833,8 +985,6 @@ class NarrativeFingerprint:
             self.created_at = now
         if not self.last_updated:
             self.last_updated = now
-        if self.attribution is None:
-            self.attribution = Attribution(source="ai")
 
     def to_dict(self):
         return {
@@ -849,7 +999,7 @@ class NarrativeFingerprint:
             "genealogy": self.genealogy.to_dict(),
             "taxonomic": self.taxonomic.to_dict(),
             "evidence_landscape": self.evidence_landscape.to_dict(),
-            "attribution": self.attribution.to_dict() if self.attribution else None,
+            "provenance": self.provenance.to_dict(),
         }
 
     def to_json(self, indent: int = 2) -> str:

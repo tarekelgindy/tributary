@@ -35,10 +35,10 @@ import httpx
 
 from models import (
     AmplifierRole,
-    Attribution,
     AttestedInstance,
     ConceptualLayer,
     Domain,
+    ElementOrigin,
     EvidenceLandscape,
     ExtractedClaim,
     FramePrimitive,
@@ -49,6 +49,8 @@ from models import (
     LineageRecord,
     Mutation,
     NarrativeFingerprint,
+    Provenance,
+    ReviewStatus,
     RhetoricalLayer,
     Scope,
     SocialAttestedInstance,
@@ -974,13 +976,14 @@ def _scope_clause(scope: Scope) -> str:
     return "; ".join(parts)
 
 
-def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
+def _instance_from_dict(d: dict, model: str = SONNET) -> Optional[AttestedInstance]:
     try:
         role_str = str(d.get("amplifier_role", "")).strip().lower()
         try:
             role = AmplifierRole(role_str) if role_str else AmplifierRole.UNKNOWN
         except ValueError:
             role = AmplifierRole.UNKNOWN
+        conf = float(d.get("confidence", 0.5))
         return AttestedInstance(
             date=_clean_text_field(d.get("date")),
             source_url=_clean_text_field(d.get("source_url")),
@@ -988,10 +991,11 @@ def _instance_from_dict(d: dict) -> Optional[AttestedInstance]:
             author=_clean_text_field(d.get("author")),
             lexical_form_seen=_clean_text_field(d.get("lexical_form_seen")),
             exact_quote=_clean_text_field(d.get("exact_quote")),
-            confidence=float(d.get("confidence", 0.5)),
+            confidence=conf,
             evidence=_clean_text_field(d.get("evidence")),
             amplifier_role=role,
             role_evidence=_clean_text_field(d.get("role_evidence")),
+            provenance=Provenance.ai(model=model, confidence=conf),
         )
     except (TypeError, ValueError):
         return None
@@ -1066,7 +1070,7 @@ def _clean_text_field(value) -> str:
     return s
 
 
-def _information_source_from_dict(d: dict) -> InformationSource:
+def _information_source_from_dict(d: dict, model: str = SONNET) -> InformationSource:
     """Parse an InformationSource from a model-emitted dict, tolerating
     invalid enum values by falling back to safe defaults."""
     def _safe_enum(value, enum_cls, default):
@@ -1091,6 +1095,7 @@ def _information_source_from_dict(d: dict) -> InformationSource:
                           SourceStatus.CURRENT),
         status_notes=_clean_text_field(d.get("status_notes")),
         notes=_clean_text_field(d.get("notes")),
+        provenance=Provenance.ai(model=model),
     )
 
 
@@ -2015,7 +2020,7 @@ class FingerprintGenerator:
             dropped=str(data.get("dropped", "")).strip(),
             added=str(data.get("added", "")).strip(),
             distorted=str(data.get("distorted", "")).strip(),
-            attribution=Attribution(source="ai", model=SONNET),
+            provenance=Provenance.ai(model=SONNET),
         )
 
     async def analyze_lineage_mutations(
@@ -2149,6 +2154,7 @@ class FingerprintGenerator:
                     likes=int(p.likes or 0),
                     reposts=int(p.reposts or 0),
                     replies=int(getattr(p, "replies", 0) or 0),
+                    provenance=Provenance.ai(model=HAIKU),
                 ))
 
             if instances:
@@ -2465,7 +2471,7 @@ class FingerprintGenerator:
             taxonomic=taxonomic,
             genealogy=genealogy,
             evidence_landscape=evidence,
-            attribution=Attribution(source="ai", model=SONNET),
+            provenance=Provenance.ai(model=SONNET),
         )
 
         # Post-pass: URL existence + quote-in-page verification for every
