@@ -966,6 +966,50 @@ def _parse_json_safe(text: str) -> dict:
     return {}
 
 
+def _recover_json_array_objects(text: str, key: str) -> list:
+    """Recover the COMPLETE {...} objects from a possibly-truncated JSON
+    array value `"key": [ ... ]`. Tolerant of a mid-array cutoff (e.g. the
+    response hit max_tokens before closing the JSON): returns every object
+    that fully parsed before the truncation point, skipping the final
+    incomplete one. String/escape aware so braces inside strings don't
+    fool the brace counter."""
+    m = re.search(r'"' + re.escape(key) + r'"\s*:\s*\[', text)
+    if not m:
+        return []
+    i = m.end()
+    objs, depth, start = [], 0, -1
+    in_str = escape = False
+    while i < len(text):
+        c = text[i]
+        if in_str:
+            if escape:
+                escape = False
+            elif c == "\\":
+                escape = True
+            elif c == '"':
+                in_str = False
+        else:
+            if c == '"':
+                in_str = True
+            elif c == "{":
+                if depth == 0:
+                    start = i
+                depth += 1
+            elif c == "}":
+                if depth > 0:
+                    depth -= 1
+                    if depth == 0 and start != -1:
+                        try:
+                            objs.append(json.loads(text[start:i + 1]))
+                        except json.JSONDecodeError:
+                            pass
+                        start = -1
+            elif c == "]" and depth == 0:
+                break
+        i += 1
+    return objs
+
+
 def _stopword_stripped(phrase: str) -> str:
     tokens = re.findall(r"[a-z0-9]+", phrase.lower())
     return " ".join(t for t in tokens if t not in _STOPWORDS)
@@ -2725,6 +2769,11 @@ Output ONLY JSON:
   ],
   "search_notes": "what you searched and any coverage gaps"
 }
+
+IMPORTANT: After searching, output ONLY the JSON object. Do NOT write any
+preamble, explanation, or summary before it — begin your final response
+with the opening brace `{`. Preamble wastes output budget and can truncate
+the JSON.
 """
 
 
@@ -2837,7 +2886,7 @@ class EventAnalyzer:
                 "Map the distinct narrative framings forming around this event "
                 "and who creates/amplifies each. Be balanced across the spectrum.")
         resp = await _create_with_retry(
-            self.client, model=self.models["framings"], max_tokens=8192,
+            self.client, model=self.models["framings"], max_tokens=16384,
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": EVENT_FRAMINGS_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
@@ -2846,7 +2895,17 @@ class EventAnalyzer:
         )
         raw_text = _response_text(resp)
         data = _parse_json_safe(raw_text)
-        framings = self._parse_framings(data.get("framings") or [])
+        raw_framings = data.get("framings") or []
+        # Salvage: tool-using models often wrap the JSON in a chatty preamble
+        # and can hit the token cap mid-array. If the clean parse found
+        # nothing, recover the complete framing objects that DID finish
+        # before any truncation point.
+        if not raw_framings:
+            raw_framings = _recover_json_array_objects(raw_text, "framings")
+            if raw_framings:
+                _log_progress(f"Event: recovered {len(raw_framings)} framings "
+                              "from truncated/wrapped output")
+        framings = self._parse_framings(raw_framings)
         if not framings:
             _save_debug_response("event_framings", raw_text)
         _log_progress(f"Event: {len(framings)} framings found in "
