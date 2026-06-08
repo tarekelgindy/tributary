@@ -115,19 +115,24 @@ python fingerprint.py --event "an event" --trace-framings --save   # also finger
 Two helpers turn "what happened" into a browsable corpus of event analyses:
 
 ```bash
-# 1. DISCOVER (free) — pull notable events for a date from Wikipedia Current Events
-python discover.py --date 2026-06-07          # → topics_2026-06-07.txt
+# 1. DISCOVER (free) — pull a day's topics from Wikipedia
+python discover.py --date 2026-06-07                    # Current Events portal (curated events)
+python discover.py --date 2026-06-07 --source topview   # most-viewed pages (what people look up)
 #    (review/trim the file — delete any non-event fragments)
 
 # 2. BUILD — analyze each event into the corpus (incremental, resumable, resilient)
 python corpus.py topics_2026-06-07.txt --max-searches 6
-python corpus.py topics_2026-06-07.txt --batch      # ~50% off via the Batch API (async)
-python corpus.py topics.txt --claims --full         # upstream fingerprints instead of events
+python corpus.py topics_2026-06-07.txt --min-contestedness 6   # spend only on contested events
+python corpus.py topics_2026-06-07.txt --lean-framings         # fewer framings/carriers, cheaper
+python corpus.py topics_2026-06-07.txt --batch                 # ~50% off via the Batch API (async)
+python corpus.py topics.txt --claims --full                   # upstream fingerprints instead of events
 ```
 
 `corpus.py` saves each result as it completes (a crash or credit-out never loses finished work), dedups by input line so re-runs skip what's done, and logs+continues on a single-item failure. `--batch` submits all the framing searches as one async Batch-API job for ~50% off tokens — slower (minutes–hours), so it's for "no rush" corpus building; for fast iteration run live with `--framings-only`. Realistic cost: ~$0.30/event live, ~$0.15–0.20 batched.
 
-A caveat worth knowing: *notable ≠ contested*. Wikipedia's daily events include many neutral/factual items whose framings end up very similar. For a corpus that shows real disagreement, lean toward genuinely contested events (selecting by coverage divergence — e.g. topics with skewed left/right reporting — is a planned discovery enhancement).
+**`--min-contestedness` is the key spend lever.** *Notable ≠ contested*: a day's events include many neutral/factual items (disasters, appointments, sports) whose framings end up nearly identical — money spent there shows no disagreement. This flag runs one cheap Haiku call that rates every event 0–10 on how likely it is to have *divergent* framings, then skips (and logs, with reasons) those below your threshold, so every dollar lands on events that actually show a spread. Try `6`. It pairs naturally with `--source topview` (raw trending pages, many neutral) — discover broad, then let the pre-filter keep the contested few. `--lean-framings` trims the per-event output (4–5 framings, ≤3 carriers each) for a cheaper, denser corpus.
+
+Deriving an event's coverage *lean* (left/right/center skew) directly — by cross-referencing the carriers Tributary finds against a source-bias database (MBFC/AllSides) — is the planned next discovery enhancement.
 
 ---
 
@@ -161,7 +166,7 @@ Three top-level types, unified by one **provenance + contribution substrate**:
 | `fingerprint.py` | The engine — `FingerprintGenerator` (upstream), `EventAnalyzer` (downstream), multi-claim mode, verification, the CLI |
 | `models.py` | All data types — the fingerprint layers, `EventAnalysis`/`NarrativeFraming`, `SourceAnalysis`, and the `Provenance`/`Contribution`/`Contributor` substrate |
 | `fingerprint_viewer.html` | Self-contained viewer for all three output types |
-| `discover.py` | Free topic discovery from Wikipedia Current Events → topics file |
+| `discover.py` | Free topic discovery from Wikipedia (`--source` Current Events portal or most-viewed `topview`) → topics file |
 | `corpus.py` | Batch corpus builder (events or `--claims`), with `--batch` Batch-API mode |
 | `batch_probe.py` | One-shot check that web_search works in the Batch API |
 | `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
