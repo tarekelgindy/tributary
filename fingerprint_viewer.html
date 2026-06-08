@@ -417,6 +417,21 @@ section { animation: fadein 0.2s; }
 }
 .archive-link:hover { text-decoration: underline; }
 
+/* Provenance badges — AI vs human + review state. Quiet by default;
+   human states light up once contributions populate. */
+.prov-badge {
+  display: inline-block; padding: 0.1rem 0.5rem;
+  border-radius: 999px; font-size: 0.7rem; font-weight: 500;
+  margin-right: 0.3rem; letter-spacing: 0.02em;
+}
+.prov-badge.prov-ai        { background: #f0eee9; color: #8a8275; }  /* muted: an AI assertion */
+.prov-badge.prov-human     { background: #d8e2ee; color: #2a4669; }
+.prov-badge.prov-confirmed { background: #d4e8d6; color: #1e5128; }
+.prov-badge.prov-consensus { background: #b9ddbd; color: #14411c; font-weight: 600; }
+.prov-badge.prov-disputed  { background: #f9e5c0; color: #6a4308; }
+.prov-badge.prov-retracted { background: #fad7d1; color: #832018; }
+#meta-bar .prov-badge { margin-left: 0.2rem; }
+
 /* Multi-claim source-analysis view */
 .article-intro { margin-bottom: 1.2rem; }
 .article-intro a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
@@ -706,6 +721,12 @@ function render(fp) {
   const window = (scope.time_window_start || '—') + ' to ' + (scope.time_window_end || 'present');
   addMeta(meta, 'scope', `${scope.language || 'en'} · ${scope.region || 'global'} · ${window}`);
   addMeta(meta, 'schema', fp.taxonomy_version || '?');
+  // Overall analysis provenance — the honest "this whole thing is AI" signal
+  if (fp.provenance) {
+    const span = document.createElement('span');
+    span.innerHTML = `<strong>analysis:</strong> ${provenanceBadge(fp)}`;
+    meta.appendChild(span);
+  }
 
   renderOverview(fp);
   renderLexical(fp);
@@ -801,6 +822,50 @@ function archiveBadge(item) {
   return `<a href="${escapeHtml(archive)}" target="_blank" rel="noopener" class="archive-link" title="Wayback snapshot">📦 archive</a>`;
 }
 
+function provenanceBadge(item) {
+  // Reads item.provenance ({origin, status, model, contributor_name,
+  // confirmation_count, dispute_count}). Quiet by default — AI-generated
+  // shows a small muted 'AI' chip; the human states (added / confirmed /
+  // consensus / disputed / retracted) light up automatically once the
+  // contribution layer populates them. Returns '' for fingerprints that
+  // predate the provenance field.
+  const p = item && item.provenance;
+  if (!p) return '';
+  const status = p.status || 'ai_generated';
+  const conf = p.confirmation_count || 0;
+  const disp = p.dispute_count || 0;
+  let label, cls, tip;
+  switch (status) {
+    case 'ai_generated':
+      label = 'AI'; cls = 'ai';
+      tip = 'AI-generated' + (p.model ? ' · ' + p.model : '') + ' · not human-reviewed';
+      break;
+    case 'human_added':
+      label = '✎ human'; cls = 'human';
+      tip = 'Added by ' + (p.contributor_name || 'a contributor');
+      break;
+    case 'human_confirmed':
+      label = '✓ confirmed' + (conf ? ' (' + conf + ')' : ''); cls = 'confirmed';
+      tip = 'AI-generated, human-confirmed';
+      break;
+    case 'consensus':
+      label = '✓✓ consensus'; cls = 'consensus';
+      tip = 'Multiple contributors agree';
+      break;
+    case 'disputed':
+      label = '⚠ disputed' + (disp ? ' (' + disp + ')' : ''); cls = 'disputed';
+      tip = 'Disputed by contributors';
+      break;
+    case 'retracted':
+      label = '✗ retracted'; cls = 'retracted';
+      tip = 'Marked incorrect by consensus';
+      break;
+    default:
+      label = status; cls = 'ai'; tip = status;
+  }
+  return `<span class="prov-badge prov-${cls}" title="${escapeHtml(tip)}">${escapeHtml(label)}</span>`;
+}
+
 function fmtDaysHuman(d) {
   if (d == null) return '—';
   if (d < 730) return `${d.toLocaleString()} days`;
@@ -878,7 +943,7 @@ function renderSocialSpread(lineage) {
         <div class="post-role">
           <span class="role-tag ${role}">${escapeHtml(role)}</span>
           ${p.role_evidence ? ` <span style="color:#666;">— ${escapeHtml(p.role_evidence)}</span>` : ''}
-          ${verifyBadge(p)}${archiveBadge(p)}
+          ${provenanceBadge(p)}${verifyBadge(p)}${archiveBadge(p)}
           ${p.post_url ? `<a href="${escapeHtml(p.post_url)}" target="_blank" rel="noopener" style="float:right;">↗ open</a>` : ''}
         </div>
       </div>
@@ -1334,6 +1399,7 @@ function showDetail(inst) {
       ${inst.evidence ? `<div class="field"><span class="label">Evidence</span>${escapeHtml(inst.evidence)}</div>` : ''}
       ${inst.role_evidence ? `<div class="field"><span class="label">Role evidence</span>${escapeHtml(inst.role_evidence)}</div>` : ''}
       ${inst.confidence != null ? `<div class="field"><span class="label">Confidence</span>${inst.confidence}</div>` : ''}
+      ${provenanceBadge(inst) ? `<div class="field"><span class="label">Provenance</span>${provenanceBadge(inst)}</div>` : ''}
       ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
     </div>
@@ -1421,7 +1487,7 @@ function renderEvidenceCard(s) {
       ${statusBadge}
       ${s.description ? `<div class="ev-description">${escapeHtml(s.description)}</div>` : ''}
       ${s.notes ? `<div class="ev-notes">${escapeHtml(s.notes)}</div>` : ''}
-      ${(verifyBadge(s) || archiveBadge(s)) ? `<div style="margin-bottom:0.4rem;">${verifyBadge(s)}${archiveBadge(s)}</div>` : ''}
+      ${(verifyBadge(s) || archiveBadge(s) || provenanceBadge(s)) ? `<div style="margin-bottom:0.4rem;">${provenanceBadge(s)}${verifyBadge(s)}${archiveBadge(s)}</div>` : ''}
       ${s.source_url ? `<div class="ev-link"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">↗ ${escapeHtml(s.source_url)}</a></div>` : ''}
     </div>
   `;
