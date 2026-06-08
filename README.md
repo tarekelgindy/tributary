@@ -136,6 +136,27 @@ Deriving an event's coverage *lean* (left/right/center skew) directly — by cro
 
 ---
 
+## Coverage lean (AllSides) — `bias_db.py`
+
+Ground News's signature feature is showing *how much* of a story's coverage is left / center / right. That's two layers: **the rating** (outlet → bias) and **the coverage** (which outlets ran it). AllSides and MBFC sell the *rating* layer; Ground News does the *coverage* aggregation. Tributary already produces a coverage sample — the **carriers** in an `EventAnalysis` — so we can derive the distribution ourselves:
+
+```bash
+python gen_bias_data.py                         # build the local AllSides snapshot (one-time, refreshable)
+python bias_db.py events/<id>.json              # coverage-lean for one analyzed event
+python bias_db.py --lookup nytimes.com          # what AllSides rates a single outlet
+```
+
+`bias_db.py` tags each **news** carrier's domain with its AllSides bias and aggregates into a distribution + a `lean_index` (−2 all-left … +2 all-right) + a plain skew label. The ratings are **AllSides'** — Tributary only looks them up and aggregates; nothing is invented. Outlets it can't resolve are reported as **coverage gaps**, never guessed.
+
+Honest limits, learned from validating on a real corpus:
+- **It's a US-political-story tool.** AllSides/MBFC are US-media databases, so international stories (whose carriers are Al Jazeera, Times of Israel, Anadolu…) resolve poorly. When too little coverage is rateable, it returns *"insufficient rated coverage to judge skew"* rather than faking a blindspot.
+- **News outlets only.** Officials, NGOs, think tanks, and courts are actors in a story, not press coverage of it — they're excluded (AllSides rates some of them, so without this gate they'd manufacture a fake skew).
+- **It's a sample, not a census.** The lean reflects the carriers Tributary surfaced, so treat "one-sided" as *possible* blindspot, read alongside the shown resolve-rate.
+
+Data lives in `data/` (`allsides_ratings.json`, built by `gen_bias_data.py`; `domain_aliases.json`, the domain↔outlet map). The default snapshot is the public AllSides community mirror — **real AllSides data but a 2019 vintage**; refresh from a current export with `gen_bias_data.py --from-file <export.csv>`. AllSides ratings are CC BY-NC 4.0 (attribution; commercial use needs an AllSides license). MBFC (9,000+ sources, real API) can be dropped in as `data/mbfc_ratings.json` to fill AllSides' long-tail gaps.
+
+---
+
 ## The viewer
 
 `fingerprint_viewer.html` is a self-contained, dependency-free page. Open it in any browser and drag a JSON file onto it — it auto-detects whether it's a fingerprint, a source analysis, or an event analysis and renders the appropriate view. Nothing leaves your machine. Provenance badges show whether each element is AI-generated or human-verified; verification badges show which citations check out; the event view shows the common ground, framing cards, and carriers.
@@ -168,6 +189,8 @@ Three top-level types, unified by one **provenance + contribution substrate**:
 | `fingerprint_viewer.html` | Self-contained viewer for all three output types |
 | `discover.py` | Free topic discovery from Wikipedia (`--source` Current Events portal or most-viewed `topview`) → topics file |
 | `corpus.py` | Batch corpus builder (events or `--claims`), with `--batch` Batch-API mode |
+| `bias_db.py` | Source-bias lookup + event coverage-lean (AllSides), with MBFC-fallback hook |
+| `gen_bias_data.py` | Builds the local AllSides ratings snapshot consumed by `bias_db.py` |
 | `batch_probe.py` | One-shot check that web_search works in the Batch API |
 | `ingestors.py` | Multi-platform content extraction (web, Bluesky, YouTube, X, TikTok) |
 | `social_search.py` | Bluesky spread analysis (used by `--social`) |

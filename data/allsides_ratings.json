@@ -1,0 +1,4936 @@
+{
+  "_meta": {
+    "source": "AllSides Media Bias Ratings",
+    "source_detail": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "license": "CC BY-NC 4.0 (attribution required; commercial use needs an AllSides license)",
+    "attribution_url": "https://www.allsides.com/media-bias/ratings",
+    "as_of": "2019-10-18",
+    "note": "Ratings are AllSides' — Tributary only aggregates them. Refresh via gen_bias_data.py --from-file <current AllSides export>.",
+    "count": 547
+  },
+  "outlets": [
+    {
+      "outlet": "AARP",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.37469975980784626,
+      "allsides_url": "https://www.allsides.com/news-source/aarp-media-bias"
+    },
+    {
+      "outlet": "ABC News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5944746142573916,
+      "allsides_url": "https://www.allsides.com/news-source/abc-news-media-bias"
+    },
+    {
+      "outlet": "Abridge News",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.6458333333333334,
+      "allsides_url": "https://www.allsides.com/news-source/abridge-news-media-bias"
+    },
+    {
+      "outlet": "Accuracy in Media",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Medium",
+      "perc_agree": 0.6259477674810446,
+      "allsides_url": "https://www.allsides.com/news-source/accuracy-media"
+    },
+    {
+      "outlet": "ACLU",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.42842707982485684,
+      "allsides_url": "https://www.allsides.com/news-source/american-civil-liberties-union"
+    },
+    {
+      "outlet": "AJ+",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7222222222222222,
+      "allsides_url": "https://www.allsides.com/news-source/aj-media-bias"
+    },
+    {
+      "outlet": "Al Cardenas",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5972927241962775,
+      "allsides_url": "https://www.allsides.com/news-source/al-cardenas"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.376536312849162,
+      "allsides_url": "https://www.allsides.com/news-source/al-jazeera-america"
+    },
+    {
+      "outlet": "AllSides",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.7162074202646995,
+      "allsides_url": "https://www.allsides.com/news-source/allsides-0"
+    },
+    {
+      "outlet": "AllSides Community",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.6272327964860908,
+      "allsides_url": "https://www.allsides.com/news-source/allsides-community"
+    },
+    {
+      "outlet": "Allysia Finley (Wall Street Journal)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4638009049773756,
+      "allsides_url": "https://www.allsides.com/news-source/allysia-finley"
+    },
+    {
+      "outlet": "AlterNet",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.7956861815596112,
+      "allsides_url": "https://www.allsides.com/news-source/alternet-media-bias"
+    },
+    {
+      "outlet": "American Conservative Union",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6440677966101694,
+      "allsides_url": "https://www.allsides.com/news-source/american-conservative-union"
+    },
+    {
+      "outlet": "American Enterprise Institute",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6594641313742438,
+      "allsides_url": "https://www.allsides.com/news-source/american-enterprise-institute"
+    },
+    {
+      "outlet": "American Greatness",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.8301886792452831,
+      "allsides_url": "https://www.allsides.com/news-source/american-greatness-media-bias"
+    },
+    {
+      "outlet": "American Spectator",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.7124328706049246,
+      "allsides_url": "https://www.allsides.com/news-source/american-spectator"
+    },
+    {
+      "outlet": "American Thinker",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.644674835061263,
+      "allsides_url": "https://www.allsides.com/news-source/american-thinker"
+    },
+    {
+      "outlet": "Americans for Democratic Action",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6944837340876945,
+      "allsides_url": "https://www.allsides.com/news-source/americans-democratic-action"
+    },
+    {
+      "outlet": "Americans for Tax Reform",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5817575083426029,
+      "allsides_url": "https://www.allsides.com/news-source/americans-tax-reform"
+    },
+    {
+      "outlet": "Andrew Napolitano",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.552491103202847,
+      "allsides_url": "https://www.allsides.com/news-source/andrew-napolitano"
+    },
+    {
+      "outlet": "Andrew Sullivan",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/andrew-sullivan-media-bias"
+    },
+    {
+      "outlet": "Andy Ngo",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/andy-ngo-media-bias"
+    },
+    {
+      "outlet": "Ann Coulter",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.8046544428772919,
+      "allsides_url": "https://www.allsides.com/news-source/ann-coulter"
+    },
+    {
+      "outlet": "Annafi Wahed",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5103926096997691,
+      "allsides_url": "https://www.allsides.com/news-source/annafi-wahed-media-bias"
+    },
+    {
+      "outlet": "AP",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5521628498727735,
+      "allsides_url": "https://www.allsides.com/news-source/ap"
+    },
+    {
+      "outlet": "Aquinas College Saint",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6176706827309237,
+      "allsides_url": "https://www.allsides.com/news-source/aquinas-college-saint"
+    },
+    {
+      "outlet": "Arkadi Gerney",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5361111111111111,
+      "allsides_url": "https://www.allsides.com/news-source/arkadi-gerney"
+    },
+    {
+      "outlet": "Arkansas Democrat-Gazette",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5692414752957551,
+      "allsides_url": "https://www.allsides.com/news-source/arkansas-democrat-gazette"
+    },
+    {
+      "outlet": "Associated Press",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5823820805513676,
+      "allsides_url": "https://www.allsides.com/news-source/associated-press-media-bias"
+    },
+    {
+      "outlet": "Association for Psychological Science",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5534804753820034,
+      "allsides_url": "https://www.allsides.com/news-source/association-psychological-science"
+    },
+    {
+      "outlet": "Atlanta Journal-Constitution",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5205003474635164,
+      "allsides_url": "https://www.allsides.com/news-source/atlanta-journal-constitution"
+    },
+    {
+      "outlet": "Atlas Network",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Medium",
+      "perc_agree": 0.6,
+      "allsides_url": "https://www.allsides.com/news-source/atlas-network"
+    },
+    {
+      "outlet": "AtlasOne",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Medium",
+      "perc_agree": 0.46325167037861914,
+      "allsides_url": "https://www.allsides.com/news-source/atlasone"
+    },
+    {
+      "outlet": "Austin American-Statesman",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5695764909248056,
+      "allsides_url": "https://www.allsides.com/news-source/austin-american-statesman"
+    },
+    {
+      "outlet": "Axios",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4642245806230743,
+      "allsides_url": "https://www.allsides.com/news-source/axios"
+    },
+    {
+      "outlet": "AZ Central",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.2647058823529412,
+      "allsides_url": "https://www.allsides.com/news-source/az-central-media-bias"
+    },
+    {
+      "outlet": "Barnstable Patriot",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46195069667738475,
+      "allsides_url": "https://www.allsides.com/news-source/barnstable-patriot"
+    },
+    {
+      "outlet": "BBC News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5048631123919308,
+      "allsides_url": "https://www.allsides.com/news-source/bbc-news-media-bias"
+    },
+    {
+      "outlet": "Bearing Drift",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5377551020408163,
+      "allsides_url": "https://www.allsides.com/news-source/bearing-drift"
+    },
+    {
+      "outlet": "Ben Sargent (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.46648793565683644,
+      "allsides_url": "https://www.allsides.com/news-source/ben-sargent-cartoonist"
+    },
+    {
+      "outlet": "Ben Shapiro",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6221606648199446,
+      "allsides_url": "https://www.allsides.com/news-source/ben-shapiro"
+    },
+    {
+      "outlet": "Ben Stein",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5761363636363637,
+      "allsides_url": "https://www.allsides.com/news-source/ben-stein"
+    },
+    {
+      "outlet": "Beth Ballentine",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4612005856515373,
+      "allsides_url": "https://www.allsides.com/news-source/beth-ballentine"
+    },
+    {
+      "outlet": "Better Angels",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": NaN,
+      "allsides_url": "https://www.allsides.com/news-source/better-angels-media-bias"
+    },
+    {
+      "outlet": "Billy Binion",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5661375661375662,
+      "allsides_url": "https://www.allsides.com/news-source/billy-binion"
+    },
+    {
+      "outlet": "Bloomberg",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.4592857142857143,
+      "allsides_url": "https://www.allsides.com/news-source/bloomberg-media-bias"
+    },
+    {
+      "outlet": "Blue Virginia",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5820348304307974,
+      "allsides_url": "https://www.allsides.com/news-source/blue-virginia"
+    },
+    {
+      "outlet": "Bob Gorrell (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5607235142118863,
+      "allsides_url": "https://www.allsides.com/news-source/bob-gorrell-cartoonist"
+    },
+    {
+      "outlet": "Boing Boing",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6089385474860335,
+      "allsides_url": "https://www.allsides.com/news-source/boing-boing"
+    },
+    {
+      "outlet": "Boston Herald",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5311355311355311,
+      "allsides_url": "https://www.allsides.com/news-source/boston-herald-media-bias"
+    },
+    {
+      "outlet": "Boston Herald Editorial",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5218855218855218,
+      "allsides_url": "https://www.allsides.com/news-source/boston-herald-editorial-media-bias"
+    },
+    {
+      "outlet": "Bowling Green Daily News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.47888675623800386,
+      "allsides_url": "https://www.allsides.com/news-source/bowling-green-daily-news"
+    },
+    {
+      "outlet": "Breitbart News",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.6771575219830501,
+      "allsides_url": "https://www.allsides.com/news-source/breitbart"
+    },
+    {
+      "outlet": "Brent Bozell",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "High",
+      "perc_agree": 0.5306553911205074,
+      "allsides_url": "https://www.allsides.com/news-source/brent-bozell"
+    },
+    {
+      "outlet": "Bret Stephens",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.44329896907216493,
+      "allsides_url": "https://www.allsides.com/news-source/bret-stephens"
+    },
+    {
+      "outlet": "Brookings Institution",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6036403151317576,
+      "allsides_url": "https://www.allsides.com/news-source/brookings-institute"
+    },
+    {
+      "outlet": "Business Insider",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.46671615936649347,
+      "allsides_url": "https://www.allsides.com/news-source/business-insider"
+    },
+    {
+      "outlet": "Bustle",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.49414348462664714,
+      "allsides_url": "https://www.allsides.com/news-source/bustle"
+    },
+    {
+      "outlet": "BuzzFeed News",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.48242079481709726,
+      "allsides_url": "https://www.allsides.com/news-source/buzzfeed-media-bias"
+    },
+    {
+      "outlet": "C-SPAN",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.7704732218758855,
+      "allsides_url": "https://www.allsides.com/news-source/c-span"
+    },
+    {
+      "outlet": "CalMatters",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.558252427184466,
+      "allsides_url": "https://www.allsides.com/news-source/calmatters"
+    },
+    {
+      "outlet": "CalWatchdog",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.48636859323882226,
+      "allsides_url": "https://www.allsides.com/news-source/calwatchdog"
+    },
+    {
+      "outlet": "Care 2",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.48326771653543305,
+      "allsides_url": "https://www.allsides.com/news-source/care-2"
+    },
+    {
+      "outlet": "Carnegie Endowment for International Peace",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.559593023255814,
+      "allsides_url": "https://www.allsides.com/news-source/carnegie-endowment-international-peace"
+    },
+    {
+      "outlet": "Carrie Lukas",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5578034682080925,
+      "allsides_url": "https://www.allsides.com/news-source/carrie-lukas"
+    },
+    {
+      "outlet": "Cathy Young",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.39285714285714285,
+      "allsides_url": "https://www.allsides.com/news-source/cathy-young-media-bias"
+    },
+    {
+      "outlet": "Cato Institute (blog)",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.3967343336275375,
+      "allsides_url": "https://www.allsides.com/news-source/cato-institute"
+    },
+    {
+      "outlet": "CBN",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.656473515082409,
+      "allsides_url": "https://www.allsides.com/news-source/cbn"
+    },
+    {
+      "outlet": "CBS News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5615647364996746,
+      "allsides_url": "https://www.allsides.com/news-source/cbs-news-media-bias"
+    },
+    {
+      "outlet": "Center - Major Media Sources",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5417867435158501,
+      "allsides_url": "https://www.allsides.com/news-source/center-major-media-sources"
+    },
+    {
+      "outlet": "Center For American Progress",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.40450989415554534,
+      "allsides_url": "https://www.allsides.com/news-source/center-american-progress"
+    },
+    {
+      "outlet": "Center for Media & Democracy PR Watch",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5034802784222738,
+      "allsides_url": "https://www.allsides.com/news-source/center-media-democracy-pr-watch"
+    },
+    {
+      "outlet": "Center for Public Integrity",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4710204081632653,
+      "allsides_url": "https://www.allsides.com/news-source/center-public-integrity"
+    },
+    {
+      "outlet": "Center for Strategic and Budgetary Assessments",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.45144356955380577,
+      "allsides_url": "https://www.allsides.com/news-source/cent-strategic-and-budgetary-assessments"
+    },
+    {
+      "outlet": "Center on Budget and Policy Priorities",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5301857585139319,
+      "allsides_url": "https://www.allsides.com/news-source/center-budget-and-policy-priorities-0"
+    },
+    {
+      "outlet": "Centre View",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.46747967479674796,
+      "allsides_url": "https://www.allsides.com/news-source/centre-view"
+    },
+    {
+      "outlet": "Chan Lowe (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4578313253012048,
+      "allsides_url": "https://www.allsides.com/news-source/chan-lowe-cartoonist"
+    },
+    {
+      "outlet": "Charles Blow",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4940047961630695,
+      "allsides_url": "https://www.allsides.com/news-source/charles-blow"
+    },
+    {
+      "outlet": "Charles Krauthammer",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5154929577464789,
+      "allsides_url": "https://www.allsides.com/news-source/charles-krauthammer"
+    },
+    {
+      "outlet": "Charlie Kirk",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6808510638297872,
+      "allsides_url": "https://www.allsides.com/news-source/charlie-kirk-media-bias"
+    },
+    {
+      "outlet": "Chicago Sun-Times",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5019857029388404,
+      "allsides_url": "https://www.allsides.com/news-source/chicago-sun-times"
+    },
+    {
+      "outlet": "Chicago Tribune",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3563008130081301,
+      "allsides_url": "https://www.allsides.com/news-source/chicago-tribune"
+    },
+    {
+      "outlet": "Children’s Defense Fund",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.4767726161369193,
+      "allsides_url": "https://www.allsides.com/news-source/childrens-defense-fund"
+    },
+    {
+      "outlet": "Chip Bok (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5182724252491694,
+      "allsides_url": "https://www.allsides.com/news-source/chip-bok-cartoonist"
+    },
+    {
+      "outlet": "Chris Britt (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6379310344827587,
+      "allsides_url": "https://www.allsides.com/news-source/chris-britt-cartoonist"
+    },
+    {
+      "outlet": "Chris Ruddy",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4083333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/chris-ruddy"
+    },
+    {
+      "outlet": "Christian Science Monitor",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.43141331569248215,
+      "allsides_url": "https://www.allsides.com/news-source/christian-science-monitor"
+    },
+    {
+      "outlet": "Christiane Amanpour",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4366391184573003,
+      "allsides_url": "https://www.allsides.com/news-source/christiane-amanpour"
+    },
+    {
+      "outlet": "Christopher Buskirk",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5217391304347826,
+      "allsides_url": "https://www.allsides.com/news-source/christopher-buskirk-media-bias"
+    },
+    {
+      "outlet": "Chuck Asay (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5451807228915663,
+      "allsides_url": "https://www.allsides.com/news-source/chuck-asay-cartoonist"
+    },
+    {
+      "outlet": "City Journal",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.557919621749409,
+      "allsides_url": "https://www.allsides.com/news-source/city-journal-media-bias"
+    },
+    {
+      "outlet": "CivilPolitics.org",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.501187648456057,
+      "allsides_url": "https://www.allsides.com/news-source/civilpoliticsorg"
+    },
+    {
+      "outlet": "Clay Bennett (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.573394495412844,
+      "allsides_url": "https://www.allsides.com/news-source/clay-bennett-cartoonist"
+    },
+    {
+      "outlet": "CNBC",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.2823614370825059,
+      "allsides_url": "https://www.allsides.com/news-source/cnbc"
+    },
+    {
+      "outlet": "CNET",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5310344827586206,
+      "allsides_url": "https://www.allsides.com/news-source/cnet"
+    },
+    {
+      "outlet": "CNN (Web News)",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.48936470422237116,
+      "allsides_url": "https://www.allsides.com/news-source/cnn-media-bias"
+    },
+    {
+      "outlet": "CNN - Editorial",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.7788141854451422,
+      "allsides_url": "https://www.allsides.com/news-source/cnn-editorial"
+    },
+    {
+      "outlet": "CNS News",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5471947194719472,
+      "allsides_url": "https://www.allsides.com/news-source/cns-news"
+    },
+    {
+      "outlet": "CNSNews.com",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5396253602305475,
+      "allsides_url": "https://www.allsides.com/news-source/cnsnewscom"
+    },
+    {
+      "outlet": "Columbia Journalism Review",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3269230769230769,
+      "allsides_url": "https://www.allsides.com/news-source/columbia-journalism-review"
+    },
+    {
+      "outlet": "Commentary Magazine",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.49230769230769234,
+      "allsides_url": "https://www.allsides.com/news-source/commentary-magazine-media-bias"
+    },
+    {
+      "outlet": "Conor Friedersdorf",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.42857142857142855,
+      "allsides_url": "https://www.allsides.com/news-source/conor-friedersdorf-media-bias"
+    },
+    {
+      "outlet": "Conservative HQ",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6935332708528584,
+      "allsides_url": "https://www.allsides.com/news-source/conservative-hq"
+    },
+    {
+      "outlet": "Cook Report",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6233666410453498,
+      "allsides_url": "https://www.allsides.com/news-source/cook-report"
+    },
+    {
+      "outlet": "Council on Foreign Relations",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4157303370786517,
+      "allsides_url": "https://www.allsides.com/news-source/council-foreign-relations-0"
+    },
+    {
+      "outlet": "Countable",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.4791666666666667,
+      "allsides_url": "https://www.allsides.com/news-source/countable-media-bias"
+    },
+    {
+      "outlet": "Counter Currents",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.591002044989775,
+      "allsides_url": "https://www.allsides.com/news-source/counter-currents"
+    },
+    {
+      "outlet": "Counterpointing",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5117004680187207,
+      "allsides_url": "https://www.allsides.com/news-source/counterpointing"
+    },
+    {
+      "outlet": "CrowdPAC",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48923959827833574,
+      "allsides_url": "https://www.allsides.com/news-source/crowdpac"
+    },
+    {
+      "outlet": "CU Independent",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4483870967741935,
+      "allsides_url": "https://www.allsides.com/news-source/cu-independent"
+    },
+    {
+      "outlet": "Current Affairs",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7228070175438597,
+      "allsides_url": "https://www.allsides.com/news-source/current-affairs-media-bias"
+    },
+    {
+      "outlet": "Daily Beast",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6452233561987619,
+      "allsides_url": "https://www.allsides.com/news-source/daily-beast-media-bias"
+    },
+    {
+      "outlet": "Daily Cardinal",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48359486447931527,
+      "allsides_url": "https://www.allsides.com/news-source/daily-cardinal"
+    },
+    {
+      "outlet": "Daily Kos",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7302228412256268,
+      "allsides_url": "https://www.allsides.com/news-source/daily-kos"
+    },
+    {
+      "outlet": "Daily Mail",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.572952911157504,
+      "allsides_url": "https://www.allsides.com/news-source/daily-mail"
+    },
+    {
+      "outlet": "Daily Northwestern",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48963317384370014,
+      "allsides_url": "https://www.allsides.com/news-source/daily-northwestern"
+    },
+    {
+      "outlet": "Daily Press",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4270833333333333,
+      "allsides_url": "https://www.allsides.com/news-source/daily-press"
+    },
+    {
+      "outlet": "Daily Progress",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5079365079365079,
+      "allsides_url": "https://www.allsides.com/news-source/daily-progress"
+    },
+    {
+      "outlet": "Daily Targum",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.36792452830188677,
+      "allsides_url": "https://www.allsides.com/news-source/daily-targum"
+    },
+    {
+      "outlet": "Damon Linker",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.48253275109170307,
+      "allsides_url": "https://www.allsides.com/news-source/damon-linker"
+    },
+    {
+      "outlet": "Dan Lucas",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.575,
+      "allsides_url": "https://www.allsides.com/news-source/dan-lucas"
+    },
+    {
+      "outlet": "Dan Wasserman (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.7027027027027027,
+      "allsides_url": "https://www.allsides.com/news-source/dan-wasserman-cartoonist"
+    },
+    {
+      "outlet": "Dana Milbank",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.3851508120649652,
+      "allsides_url": "https://www.allsides.com/news-source/dana-milbank"
+    },
+    {
+      "outlet": "Dana Summers (cartoonist)",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.49707602339181284,
+      "allsides_url": "https://www.allsides.com/news-source/dana-summers-cartoonist"
+    },
+    {
+      "outlet": "David Brooks",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.4422735346358792,
+      "allsides_url": "https://www.allsides.com/news-source/david-brooks"
+    },
+    {
+      "outlet": "David Holmes",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5478260869565217,
+      "allsides_url": "https://www.allsides.com/news-source/david-holmes"
+    },
+    {
+      "outlet": "David Ignatius",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.43873517786561267,
+      "allsides_url": "https://www.allsides.com/news-source/david-ignatius"
+    },
+    {
+      "outlet": "David Leonhardt",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5511811023622047,
+      "allsides_url": "https://www.allsides.com/news-source/david-leonhardt"
+    },
+    {
+      "outlet": "Debra Saunders",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5446808510638298,
+      "allsides_url": "https://www.allsides.com/news-source/debra-saunders"
+    },
+    {
+      "outlet": "Defense One",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5148514851485149,
+      "allsides_url": "https://www.allsides.com/news-source/defense-one-media-bias"
+    },
+    {
+      "outlet": "Democracy Now",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7467532467532467,
+      "allsides_url": "https://www.allsides.com/news-source/democracy-now"
+    },
+    {
+      "outlet": "Deseret News",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3809698750918442,
+      "allsides_url": "https://www.allsides.com/news-source/deseret-news"
+    },
+    {
+      "outlet": "Dick Locher (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.30158730158730157,
+      "allsides_url": "https://www.allsides.com/news-source/dick-locher-cartoonist"
+    },
+    {
+      "outlet": "Dick Morris",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.42209631728045327,
+      "allsides_url": "https://www.allsides.com/news-source/dick-morris"
+    },
+    {
+      "outlet": "Diplomatic Courier",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.564870259481038,
+      "allsides_url": "https://www.allsides.com/news-source/diplomatic-courier"
+    },
+    {
+      "outlet": "Drew Litton (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.29411764705882354,
+      "allsides_url": "https://www.allsides.com/news-source/drew-litton-cartoonist"
+    },
+    {
+      "outlet": "Drew Sheneman (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5480769230769231,
+      "allsides_url": "https://www.allsides.com/news-source/drew-sheneman-cartoonist"
+    },
+    {
+      "outlet": "Drudge Report",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6115595737810785,
+      "allsides_url": "https://www.allsides.com/news-source/drudge-report"
+    },
+    {
+      "outlet": "Duke Chronicle",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5069551777434312,
+      "allsides_url": "https://www.allsides.com/news-source/duke-chronicle"
+    },
+    {
+      "outlet": "E J Dionne",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5556858147713951,
+      "allsides_url": "https://www.allsides.com/news-source/e-j-dionne"
+    },
+    {
+      "outlet": "Economic Policy Institute",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.47586206896551725,
+      "allsides_url": "https://www.allsides.com/news-source/economic-policy-institute-0"
+    },
+    {
+      "outlet": "Ed Rogers",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.627906976744186,
+      "allsides_url": "https://www.allsides.com/news-source/ed-rogers"
+    },
+    {
+      "outlet": "EdVotes.org",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.7016129032258065,
+      "allsides_url": "https://www.allsides.com/news-source/edvotesorg"
+    },
+    {
+      "outlet": "Edward Morrissey",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5040322580645161,
+      "allsides_url": "https://www.allsides.com/news-source/edward-morrissey"
+    },
+    {
+      "outlet": "Eli Parser",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5909090909090909,
+      "allsides_url": "https://www.allsides.com/news-source/eli-parser-media-bias"
+    },
+    {
+      "outlet": "Environmental Defense Fund",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6004962779156328,
+      "allsides_url": "https://www.allsides.com/news-source/environmental-defense-fund"
+    },
+    {
+      "outlet": "Eric Allie (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.532258064516129,
+      "allsides_url": "https://www.allsides.com/news-source/eric-allie-cartoonist"
+    },
+    {
+      "outlet": "Erik Wemple",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.43041237113402064,
+      "allsides_url": "https://www.allsides.com/news-source/erik-wemple"
+    },
+    {
+      "outlet": "Esquire",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6464258262874711,
+      "allsides_url": "https://www.allsides.com/news-source/esquire"
+    },
+    {
+      "outlet": "Estes Park Trail Gazette",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4202247191011236,
+      "allsides_url": "https://www.allsides.com/news-source/estes-park-trail-gazette"
+    },
+    {
+      "outlet": "Eugene Robinson",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5860927152317881,
+      "allsides_url": "https://www.allsides.com/news-source/eugene-robinson"
+    },
+    {
+      "outlet": "Eurek Alert",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4735945485519591,
+      "allsides_url": "https://www.allsides.com/news-source/eurek-alert"
+    },
+    {
+      "outlet": "Ezra Klein",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5726681127982647,
+      "allsides_url": "https://www.allsides.com/news-source/ezra-klein"
+    },
+    {
+      "outlet": "Fact Checker Blog",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5480690221857025,
+      "allsides_url": "https://www.allsides.com/news-source/fact-checker-blog"
+    },
+    {
+      "outlet": "FactCheck.org",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5774084981068573,
+      "allsides_url": "https://www.allsides.com/news-source/factcheckorg-media-bias"
+    },
+    {
+      "outlet": "FAIR",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.44,
+      "allsides_url": "https://www.allsides.com/news-source/fairness-and-accuracy-reporting"
+    },
+    {
+      "outlet": "Fair.org",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4970414201183432,
+      "allsides_url": "https://www.allsides.com/news-source/fairorg"
+    },
+    {
+      "outlet": "Falls Church News - Press",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4473324213406293,
+      "allsides_url": "https://www.allsides.com/news-source/falls-church-news-press"
+    },
+    {
+      "outlet": "Family Research Council",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.3718120805369127,
+      "allsides_url": "https://www.allsides.com/news-source/family-research-council"
+    },
+    {
+      "outlet": "Fareed Zakaria",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3350970017636684,
+      "allsides_url": "https://www.allsides.com/news-source/fareed-zakaria"
+    },
+    {
+      "outlet": "Federation of American Scientists",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4649350649350649,
+      "allsides_url": "https://www.allsides.com/news-source/federation-american-scientists"
+    },
+    {
+      "outlet": "Financial Times",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6115107913669064,
+      "allsides_url": "https://www.allsides.com/news-source/financial-times-media-bias"
+    },
+    {
+      "outlet": "Fiscal Times",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5543293718166383,
+      "allsides_url": "https://www.allsides.com/news-source/fiscal-times"
+    },
+    {
+      "outlet": "FiveThirtyEight",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6222637979420018,
+      "allsides_url": "https://www.allsides.com/news-source/fivethirtyeight-0"
+    },
+    {
+      "outlet": "Food Democracy Now",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5138888888888888,
+      "allsides_url": "https://www.allsides.com/news-source/food-democracy-now"
+    },
+    {
+      "outlet": "Forbes",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6191738113795792,
+      "allsides_url": "https://www.allsides.com/news-source/forbes"
+    },
+    {
+      "outlet": "Foreign Affairs",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6435726210350584,
+      "allsides_url": "https://www.allsides.com/news-source/foreign-affairs"
+    },
+    {
+      "outlet": "Fox News Latino",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6536243822075782,
+      "allsides_url": "https://www.allsides.com/news-source/fox-news-latino"
+    },
+    {
+      "outlet": "Fox News Opinion",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7998708844415752,
+      "allsides_url": "https://www.allsides.com/news-source/fox-news-editorial-media-bias"
+    },
+    {
+      "outlet": "Fox Online News",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.4142841494139555,
+      "allsides_url": "https://www.allsides.com/news-source/fox-news-media-bias"
+    },
+    {
+      "outlet": "Frank Bruni",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4155844155844156,
+      "allsides_url": "https://www.allsides.com/news-source/frank-bruni"
+    },
+    {
+      "outlet": "Frank Miniter",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5036496350364964,
+      "allsides_url": "https://www.allsides.com/news-source/frank-miniter"
+    },
+    {
+      "outlet": "Freakonomics",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5959595959595959,
+      "allsides_url": "https://www.allsides.com/news-source/freakonomics"
+    },
+    {
+      "outlet": "Freedom House",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4125560538116592,
+      "allsides_url": "https://www.allsides.com/news-source/freedom-house"
+    },
+    {
+      "outlet": "Froma Harrop",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5446428571428571,
+      "allsides_url": "https://www.allsides.com/news-source/froma-harrop"
+    },
+    {
+      "outlet": "FrontPage Magazine",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5628970775095299,
+      "allsides_url": "https://www.allsides.com/news-source/frontpage-magazine"
+    },
+    {
+      "outlet": "Gary Markstein (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.3564356435643564,
+      "allsides_url": "https://www.allsides.com/news-source/gary-markstein-cartoonist"
+    },
+    {
+      "outlet": "Gary Varvel (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.72,
+      "allsides_url": "https://www.allsides.com/news-source/gary-varvel-cartoonist"
+    },
+    {
+      "outlet": "Gell",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Medium",
+      "perc_agree": 0.675,
+      "allsides_url": "https://www.allsides.com/news-source/gell-media-bias"
+    },
+    {
+      "outlet": "George Will",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.42022940563086547,
+      "allsides_url": "https://www.allsides.com/news-source/george-will"
+    },
+    {
+      "outlet": "Glenn Beck",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7359307359307359,
+      "allsides_url": "https://www.allsides.com/news-source/glenn-beck"
+    },
+    {
+      "outlet": "Glenn McCoy (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5714285714285714,
+      "allsides_url": "https://www.allsides.com/news-source/glenn-mccoy-cartoonist"
+    },
+    {
+      "outlet": "Google News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6626984126984127,
+      "allsides_url": "https://www.allsides.com/news-source/google-news-media-bias"
+    },
+    {
+      "outlet": "GOP.gov",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6648936170212766,
+      "allsides_url": "https://www.allsides.com/news-source/gopgov"
+    },
+    {
+      "outlet": "Grist",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.47011494252873565,
+      "allsides_url": "https://www.allsides.com/news-source/grist"
+    },
+    {
+      "outlet": "Grover Norquist",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.79,
+      "allsides_url": "https://www.allsides.com/news-source/grover-norquist"
+    },
+    {
+      "outlet": "Guest Writer - Center",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "High",
+      "perc_agree": 0.3333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/guest-writer-center-media-bias"
+    },
+    {
+      "outlet": "Guest Writer - Left",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.36828644501278773,
+      "allsides_url": "https://www.allsides.com/news-source/guest-writer-left"
+    },
+    {
+      "outlet": "Guest Writer - Right",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.39447731755424065,
+      "allsides_url": "https://www.allsides.com/news-source/guest-writer-right"
+    },
+    {
+      "outlet": "Hampton Roads Messanger",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5007541478129713,
+      "allsides_url": "https://www.allsides.com/news-source/hampton-roads-messanger"
+    },
+    {
+      "outlet": "Harvard Business School",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4636363636363636,
+      "allsides_url": "https://www.allsides.com/news-source/harvard-business-school"
+    },
+    {
+      "outlet": "Healthcare.gov",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.3430232558139535,
+      "allsides_url": "https://www.allsides.com/news-source/healthcaregov"
+    },
+    {
+      "outlet": "Heather Mac Donald",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.3548387096774194,
+      "allsides_url": "https://www.allsides.com/news-source/heather-mcdonald"
+    },
+    {
+      "outlet": "Henry A. Brechter",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.6111111111111112,
+      "allsides_url": "https://www.allsides.com/news-source/henry-brechter-media-bias"
+    },
+    {
+      "outlet": "Henry Payne (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4148148148148148,
+      "allsides_url": "https://www.allsides.com/news-source/henry-payne-cartoonist"
+    },
+    {
+      "outlet": "Herald Democrat",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5669515669515669,
+      "allsides_url": "https://www.allsides.com/news-source/herald-democrat-0"
+    },
+    {
+      "outlet": "Hirsh Joshi",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": NaN,
+      "allsides_url": "https://www.allsides.com/news-source/hirsh-joshi-media-bias"
+    },
+    {
+      "outlet": "Honolulu Civil Beat",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.42121684867394693,
+      "allsides_url": "https://www.allsides.com/news-source/honolulu-civil-beat"
+    },
+    {
+      "outlet": "HotAir",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5283548568220101,
+      "allsides_url": "https://www.allsides.com/news-source/hotair"
+    },
+    {
+      "outlet": "How Do We Fix It?",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5027223230490018,
+      "allsides_url": "https://www.allsides.com/news-source/how-do-we-fix-it"
+    },
+    {
+      "outlet": "Howard Kurtz",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5217391304347826,
+      "allsides_url": "https://www.allsides.com/news-source/howard-kurtz-media-bias"
+    },
+    {
+      "outlet": "Howard Kurtz",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5653495440729484,
+      "allsides_url": "https://www.allsides.com/news-source/howard-kurtz"
+    },
+    {
+      "outlet": "HuffPost",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5076003669997768,
+      "allsides_url": "https://www.allsides.com/news-source/huffpost-media-bias"
+    },
+    {
+      "outlet": "Inacow",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5989110707803993,
+      "allsides_url": "https://www.allsides.com/news-source/inacow"
+    },
+    {
+      "outlet": "Independent Institute",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Medium",
+      "perc_agree": 0.45054945054945056,
+      "allsides_url": "https://www.allsides.com/news-source/independent-institute"
+    },
+    {
+      "outlet": "Independent Journal Review",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5223948811700183,
+      "allsides_url": "https://www.allsides.com/news-source/independent-journal-review"
+    },
+    {
+      "outlet": "Indiana Daily Student",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.429097605893186,
+      "allsides_url": "https://www.allsides.com/news-source/indiana-daily-student"
+    },
+    {
+      "outlet": "Indy Online",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4716981132075472,
+      "allsides_url": "https://www.allsides.com/news-source/indy-online"
+    },
+    {
+      "outlet": "Indy Week",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4594594594594595,
+      "allsides_url": "https://www.allsides.com/news-source/indy-week"
+    },
+    {
+      "outlet": "InfoWars",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.8141716566866267,
+      "allsides_url": "https://www.allsides.com/news-source/infowars"
+    },
+    {
+      "outlet": "Inside Philanthropy",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.48484848484848486,
+      "allsides_url": "https://www.allsides.com/news-source/inside-philanthropy"
+    },
+    {
+      "outlet": "Intellectual Conservative",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4922360248447205,
+      "allsides_url": "https://www.allsides.com/news-source/intellectual-conservative"
+    },
+    {
+      "outlet": "International Business Times",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5727272727272728,
+      "allsides_url": "https://www.allsides.com/news-source/international-business-times"
+    },
+    {
+      "outlet": "Investor's Business Daily",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5565988523735003,
+      "allsides_url": "https://www.allsides.com/news-source/investors-business-daily"
+    },
+    {
+      "outlet": "IVN",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5082191780821917,
+      "allsides_url": "https://www.allsides.com/news-source/ivn"
+    },
+    {
+      "outlet": "Jack Ohman (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.59375,
+      "allsides_url": "https://www.allsides.com/news-source/jack-ohman-cartoonist"
+    },
+    {
+      "outlet": "Jack Welch",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5735294117647058,
+      "allsides_url": "https://www.allsides.com/news-source/jack-welch"
+    },
+    {
+      "outlet": "Jacobin",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.8616822429906542,
+      "allsides_url": "https://www.allsides.com/news-source/jacobin-media-bias"
+    },
+    {
+      "outlet": "James Hohmann",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.421875,
+      "allsides_url": "https://www.allsides.com/news-source/james-hohmann"
+    },
+    {
+      "outlet": "James Pethokoukis",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46825396825396826,
+      "allsides_url": "https://www.allsides.com/news-source/james-pethokoukis"
+    },
+    {
+      "outlet": "James Poulos",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6351351351351351,
+      "allsides_url": "https://www.allsides.com/news-source/james-poulos"
+    },
+    {
+      "outlet": "Jeff Danziger (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/jeff-danziger-cartoonist"
+    },
+    {
+      "outlet": "Jeff Jacoby",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5897435897435898,
+      "allsides_url": "https://www.allsides.com/news-source/jeff-jacoby"
+    },
+    {
+      "outlet": "Jeff Stahler (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6144578313253012,
+      "allsides_url": "https://www.allsides.com/news-source/jeff-stahler-cartoonist"
+    },
+    {
+      "outlet": "Jen Sorensen (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.618421052631579,
+      "allsides_url": "https://www.allsides.com/news-source/jen-sorensen-cartoonist"
+    },
+    {
+      "outlet": "Jennifer Rubin",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.37,
+      "allsides_url": "https://www.allsides.com/news-source/jennifer-rubin"
+    },
+    {
+      "outlet": "Jeremy E Sherman",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/jeremy-e-sherman-media-bias"
+    },
+    {
+      "outlet": "Jerry Bowyer",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.36176470588235293,
+      "allsides_url": "https://www.allsides.com/news-source/jerry-bowyer"
+    },
+    {
+      "outlet": "Jerry Holbert (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5324675324675324,
+      "allsides_url": "https://www.allsides.com/news-source/jerry-holbert-cartoonist"
+    },
+    {
+      "outlet": "Jesse Jackson",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.8524590163934426,
+      "allsides_url": "https://www.allsides.com/news-source/jesse-jackson"
+    },
+    {
+      "outlet": "Jezebel",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.75,
+      "allsides_url": "https://www.allsides.com/news-source/jezebel-media-bias"
+    },
+    {
+      "outlet": "Jim Morin (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.7428571428571429,
+      "allsides_url": "https://www.allsides.com/news-source/jim-morin-cartoonist"
+    },
+    {
+      "outlet": "Jim Rutenberg",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5274725274725275,
+      "allsides_url": "https://www.allsides.com/news-source/jim-rutenberg"
+    },
+    {
+      "outlet": "Joan Blades",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3565217391304348,
+      "allsides_url": "https://www.allsides.com/news-source/joan-blades"
+    },
+    {
+      "outlet": "Joe Scarborough",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.19293078055964655,
+      "allsides_url": "https://www.allsides.com/news-source/joe-scarborough"
+    },
+    {
+      "outlet": "Joel Pett (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5227272727272727,
+      "allsides_url": "https://www.allsides.com/news-source/joel-pett-cartoonist"
+    },
+    {
+      "outlet": "John Boehner",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3943298969072165,
+      "allsides_url": "https://www.allsides.com/news-source/john-boehner"
+    },
+    {
+      "outlet": "John Deering (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4533333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/john-deering-cartoonist"
+    },
+    {
+      "outlet": "John Fund",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.44886363636363635,
+      "allsides_url": "https://www.allsides.com/news-source/john-fund"
+    },
+    {
+      "outlet": "John Gable, AllSides Founder",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.4364406779661017,
+      "allsides_url": "https://www.allsides.com/news-source/john-gable"
+    },
+    {
+      "outlet": "John K. Herr",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5362318840579711,
+      "allsides_url": "https://www.allsides.com/news-source/john-k-herr"
+    },
+    {
+      "outlet": "John Pudner",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.4032258064516129,
+      "allsides_url": "https://www.allsides.com/news-source/john-pudner"
+    },
+    {
+      "outlet": "John Stossel",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5489721886336155,
+      "allsides_url": "https://www.allsides.com/news-source/john-stossel"
+    },
+    {
+      "outlet": "Jon Terbush",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.413953488372093,
+      "allsides_url": "https://www.allsides.com/news-source/jon-terbush"
+    },
+    {
+      "outlet": "Jonah Goldberg",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.40540540540540543,
+      "allsides_url": "https://www.allsides.com/news-source/jonah-goldberg-media-bias"
+    },
+    {
+      "outlet": "Jonathan Chait",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5231788079470199,
+      "allsides_url": "https://www.allsides.com/news-source/jonathan-chait"
+    },
+    {
+      "outlet": "Jonathan Miller",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.4818181818181818,
+      "allsides_url": "https://www.allsides.com/news-source/jonathan-miller"
+    },
+    {
+      "outlet": "Journalist's Resource",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46284501061571126,
+      "allsides_url": "https://www.allsides.com/news-source/journalists-resource"
+    },
+    {
+      "outlet": "Juan Williams",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5204262877442274,
+      "allsides_url": "https://www.allsides.com/news-source/juan-williams"
+    },
+    {
+      "outlet": "Jubilee Media",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5684210526315789,
+      "allsides_url": "https://www.allsides.com/news-source/jubilee-media-bias"
+    },
+    {
+      "outlet": "Judicial Watch",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4683421942967617,
+      "allsides_url": "https://www.allsides.com/news-source/judicial-watch"
+    },
+    {
+      "outlet": "Julian Zelizer",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.44129554655870445,
+      "allsides_url": "https://www.allsides.com/news-source/julian-zelizer"
+    },
+    {
+      "outlet": "Kathleen Parker",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6168582375478927,
+      "allsides_url": "https://www.allsides.com/news-source/kathleen-parker"
+    },
+    {
+      "outlet": "KATU",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4117647058823529,
+      "allsides_url": "https://www.allsides.com/news-source/katu-media-bias"
+    },
+    {
+      "outlet": "Ken Catalino (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.41935483870967744,
+      "allsides_url": "https://www.allsides.com/news-source/ken-catalino-cartoonist"
+    },
+    {
+      "outlet": "Kevin Kallaugher (cartoonist)",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5517241379310345,
+      "allsides_url": "https://www.allsides.com/news-source/kevin-kallaugher-cartoonist"
+    },
+    {
+      "outlet": "Kimberley A. Strassel",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5953488372093023,
+      "allsides_url": "https://www.allsides.com/news-source/kimberley-strassel"
+    },
+    {
+      "outlet": "Kirsten Powers",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.59375,
+      "allsides_url": "https://www.allsides.com/news-source/kirsten-powers-media-bias"
+    },
+    {
+      "outlet": "KQED",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5454545454545454,
+      "allsides_url": "https://www.allsides.com/news-source/kqed"
+    },
+    {
+      "outlet": "KSL",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5714285714285714,
+      "allsides_url": "https://www.allsides.com/news-source/ksl"
+    },
+    {
+      "outlet": "Lalo Alcaraz (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6071428571428571,
+      "allsides_url": "https://www.allsides.com/news-source/lalo-alcaraz-cartoonist"
+    },
+    {
+      "outlet": "Lanhee Chen",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.40540540540540543,
+      "allsides_url": "https://www.allsides.com/news-source/lanhee-chen"
+    },
+    {
+      "outlet": "Las Vegas Sun",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.49019607843137253,
+      "allsides_url": "https://www.allsides.com/news-source/las-vegas-sun"
+    },
+    {
+      "outlet": "Laura Rose Junco",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.2,
+      "allsides_url": "https://www.allsides.com/news-source/laura-rose-junco-media-bias"
+    },
+    {
+      "outlet": "Lauren Duca",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.651685393258427,
+      "allsides_url": "https://www.allsides.com/news-source/lauren-duca"
+    },
+    {
+      "outlet": "Leesburg Today",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5448504983388704,
+      "allsides_url": "https://www.allsides.com/news-source/leesburg-today"
+    },
+    {
+      "outlet": "Left - Major Media Sources",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.574468085106383,
+      "allsides_url": "https://www.allsides.com/news-source/left-major-publications"
+    },
+    {
+      "outlet": "Left Guest Commentaries",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4725274725274725,
+      "allsides_url": "https://www.allsides.com/news-source/left-guest-commentaries"
+    },
+    {
+      "outlet": "Leonard Pitts Jr",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5354330708661418,
+      "allsides_url": "https://www.allsides.com/news-source/leonard-pitts-jr"
+    },
+    {
+      "outlet": "Lifehacker",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5049900199600799,
+      "allsides_url": "https://www.allsides.com/news-source/lifehacker"
+    },
+    {
+      "outlet": "Lisa Benson (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5058823529411764,
+      "allsides_url": "https://www.allsides.com/news-source/lisa-benson-cartoonist"
+    },
+    {
+      "outlet": "Lisa Gable",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5405405405405406,
+      "allsides_url": "https://www.allsides.com/news-source/lisa-gable-media-bias"
+    },
+    {
+      "outlet": "Listen First Project",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5734265734265734,
+      "allsides_url": "https://www.allsides.com/news-source/listen-first-project-media-bias"
+    },
+    {
+      "outlet": "Live Action News",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6095505617977528,
+      "allsides_url": "https://www.allsides.com/news-source/live-action-news"
+    },
+    {
+      "outlet": "Living Room Conversations",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.43723494486853265,
+      "allsides_url": "https://www.allsides.com/news-source/living-room-conversations"
+    },
+    {
+      "outlet": "Longmont Times-Call",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.484251968503937,
+      "allsides_url": "https://www.allsides.com/news-source/longmont-times-call"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5753854940034266,
+      "allsides_url": "https://www.allsides.com/news-source/los-angeles-times-bias"
+    },
+    {
+      "outlet": "Louisville Courier-Journal",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5149501661129569,
+      "allsides_url": "https://www.allsides.com/news-source/louisville-courier-journal"
+    },
+    {
+      "outlet": "Manhattan Institute",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.38481675392670156,
+      "allsides_url": "https://www.allsides.com/news-source/manhattan-institute"
+    },
+    {
+      "outlet": "Marc A. Thiessen",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.554089709762533,
+      "allsides_url": "https://www.allsides.com/news-source/marc-thiessen"
+    },
+    {
+      "outlet": "Mark Gerzon",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.45,
+      "allsides_url": "https://www.allsides.com/news-source/mark-gerzon"
+    },
+    {
+      "outlet": "Mark Mix",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5958904109589042,
+      "allsides_url": "https://www.allsides.com/news-source/mark-mix"
+    },
+    {
+      "outlet": "Mark Morford",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6285714285714286,
+      "allsides_url": "https://www.allsides.com/news-source/morford-mark"
+    },
+    {
+      "outlet": "MarketWatch",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.37662337662337664,
+      "allsides_url": "https://www.allsides.com/news-source/marketwatch-media-bias"
+    },
+    {
+      "outlet": "Marshall Ramsey (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5591397849462365,
+      "allsides_url": "https://www.allsides.com/news-source/marshall-ramsey-cartoonist"
+    },
+    {
+      "outlet": "Mary O'Grady",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.421875,
+      "allsides_url": "https://www.allsides.com/news-source/mary-ogrady"
+    },
+    {
+      "outlet": "Mashable",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7402597402597403,
+      "allsides_url": "https://www.allsides.com/news-source/mashable"
+    },
+    {
+      "outlet": "Matt Bors (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.75,
+      "allsides_url": "https://www.allsides.com/news-source/matt-bors-cartoonist"
+    },
+    {
+      "outlet": "Matt Davies (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6666666666666666,
+      "allsides_url": "https://www.allsides.com/news-source/matt-davies-cartoonist"
+    },
+    {
+      "outlet": "Matt Drudge",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5678670360110804,
+      "allsides_url": "https://www.allsides.com/news-source/matt-drudge"
+    },
+    {
+      "outlet": "Matt Towery",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5232558139534884,
+      "allsides_url": "https://www.allsides.com/news-source/matt-towery"
+    },
+    {
+      "outlet": "Matt Welch",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3141025641025641,
+      "allsides_url": "https://www.allsides.com/news-source/matt-welch"
+    },
+    {
+      "outlet": "Matt Wuerker (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6304347826086957,
+      "allsides_url": "https://www.allsides.com/news-source/matt-wuerker-cartoonist"
+    },
+    {
+      "outlet": "Maureen Dowd",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.26685393258426965,
+      "allsides_url": "https://www.allsides.com/news-source/maureen-dowd"
+    },
+    {
+      "outlet": "McClatchyDC",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.47368421052631576,
+      "allsides_url": "https://www.allsides.com/news-source/mcclatchydc-media-bias"
+    },
+    {
+      "outlet": "Media Matters",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.61315380631797,
+      "allsides_url": "https://www.allsides.com/news-source/media-matters-bias"
+    },
+    {
+      "outlet": "Media Research Center",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4479015918958032,
+      "allsides_url": "https://www.allsides.com/news-source/media-research-center"
+    },
+    {
+      "outlet": "Mediaite",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.49357945425361155,
+      "allsides_url": "https://www.allsides.com/news-source/mediaite-bias"
+    },
+    {
+      "outlet": "Miami Herald",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.47530864197530864,
+      "allsides_url": "https://www.allsides.com/news-source/miami-herald"
+    },
+    {
+      "outlet": "Michael Barone",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5608465608465608,
+      "allsides_url": "https://www.allsides.com/news-source/michael-barone"
+    },
+    {
+      "outlet": "Michael Brendan Dougherty",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48,
+      "allsides_url": "https://www.allsides.com/news-source/michael-brendan-dougherty"
+    },
+    {
+      "outlet": "Michael Gerson",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.537117903930131,
+      "allsides_url": "https://www.allsides.com/news-source/michael-gerson"
+    },
+    {
+      "outlet": "Michael Goodwin",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6027397260273972,
+      "allsides_url": "https://www.allsides.com/news-source/michael-goodwin"
+    },
+    {
+      "outlet": "Michael Graham",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.36363636363636365,
+      "allsides_url": "https://www.allsides.com/news-source/michael-graham-media-bias"
+    },
+    {
+      "outlet": "Michael Kinsley",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5634920634920635,
+      "allsides_url": "https://www.allsides.com/news-source/michael-kinsley"
+    },
+    {
+      "outlet": "Michael Medved",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4607329842931937,
+      "allsides_url": "https://www.allsides.com/news-source/michael-medved"
+    },
+    {
+      "outlet": "Michael Ramirez (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.44565217391304346,
+      "allsides_url": "https://www.allsides.com/news-source/michael-ramirez-cartoonist"
+    },
+    {
+      "outlet": "Michelle Alexander",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/michelle-alexander-media-bias"
+    },
+    {
+      "outlet": "Michelle Malkin",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.649706457925636,
+      "allsides_url": "https://www.allsides.com/news-source/michelle-malkin"
+    },
+    {
+      "outlet": "MichelleMalkin.com",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6772413793103448,
+      "allsides_url": "https://www.allsides.com/news-source/michellemalkincom"
+    },
+    {
+      "outlet": "Michigan Daily",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5327635327635327,
+      "allsides_url": "https://www.allsides.com/news-source/michigan-daily"
+    },
+    {
+      "outlet": "Mike Lester (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6666666666666666,
+      "allsides_url": "https://www.allsides.com/news-source/mike-lester-cartoonist"
+    },
+    {
+      "outlet": "Mike Luckovich (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.549618320610687,
+      "allsides_url": "https://www.allsides.com/news-source/mike-luckovich-cartoonist"
+    },
+    {
+      "outlet": "Mike Thompson (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.42105263157894735,
+      "allsides_url": "https://www.allsides.com/news-source/mike-thompson-cartoonist"
+    },
+    {
+      "outlet": "Mismatch.org",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.41304347826086957,
+      "allsides_url": "https://www.allsides.com/news-source/mismatchorg-media-bias"
+    },
+    {
+      "outlet": "MIT News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5538461538461539,
+      "allsides_url": "https://www.allsides.com/news-source/mit-news"
+    },
+    {
+      "outlet": "Morgan Jacobsen",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.417910447761194,
+      "allsides_url": "https://www.allsides.com/news-source/morgan-jacobsen"
+    },
+    {
+      "outlet": "Mother Jones",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.8427281220803488,
+      "allsides_url": "https://www.allsides.com/news-source/mother-jones-bias"
+    },
+    {
+      "outlet": "MSNBC",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.7471067859021567,
+      "allsides_url": "https://www.allsides.com/news-source/msnbc"
+    },
+    {
+      "outlet": "MTV News Online",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4393939393939394,
+      "allsides_url": "https://www.allsides.com/news-source/mtv-news-online-media-bias"
+    },
+    {
+      "outlet": "National Committee to Preserve Social Security and Medicare",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.49595687331536387,
+      "allsides_url": "https://www.allsides.com/news-source/national-committee-preserve-social-security-and-medicare"
+    },
+    {
+      "outlet": "National Interest",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4349315068493151,
+      "allsides_url": "https://www.allsides.com/news-source/national-interest"
+    },
+    {
+      "outlet": "National Journal",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5815006468305304,
+      "allsides_url": "https://www.allsides.com/news-source/national-journal"
+    },
+    {
+      "outlet": "National Review",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6773538372261715,
+      "allsides_url": "https://www.allsides.com/news-source/national-review"
+    },
+    {
+      "outlet": "NBC Today Show",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.46678798908098273,
+      "allsides_url": "https://www.allsides.com/news-source/nbc-today-show"
+    },
+    {
+      "outlet": "NBCNews.com",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.4383632775989199,
+      "allsides_url": "https://www.allsides.com/news-source/nbc-news-media-bias"
+    },
+    {
+      "outlet": "Neil J. Young",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/neil-j-young-media-bias"
+    },
+    {
+      "outlet": "New Economy Working Group",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.593939393939394,
+      "allsides_url": "https://www.allsides.com/news-source/new-economy-working-group"
+    },
+    {
+      "outlet": "New Republic",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6507524649714582,
+      "allsides_url": "https://www.allsides.com/news-source/new-republic"
+    },
+    {
+      "outlet": "New York Daily News",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6928327645051194,
+      "allsides_url": "https://www.allsides.com/news-source/new-york-daily-news"
+    },
+    {
+      "outlet": "New York Magazine",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6854967948717948,
+      "allsides_url": "https://www.allsides.com/news-source/new-york-magazine"
+    },
+    {
+      "outlet": "New York Post",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5926344693910516,
+      "allsides_url": "https://www.allsides.com/news-source/new-york-post"
+    },
+    {
+      "outlet": "New York Times - News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.38316751815004035,
+      "allsides_url": "https://www.allsides.com/news-source/new-york-times"
+    },
+    {
+      "outlet": "New York Times - Opinion",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.7637795275590551,
+      "allsides_url": "https://www.allsides.com/news-source/new-york-times-opinion-media-bias"
+    },
+    {
+      "outlet": "NewsBusters",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.64,
+      "allsides_url": "https://www.allsides.com/news-source/newsbusters"
+    },
+    {
+      "outlet": "Newsmax",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.43241876343406244,
+      "allsides_url": "https://www.allsides.com/news-source/newsmax"
+    },
+    {
+      "outlet": "Newsweek",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.451963612158864,
+      "allsides_url": "https://www.allsides.com/news-source/newsweek"
+    },
+    {
+      "outlet": "Newt Gingrich",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.7032786885245902,
+      "allsides_url": "https://www.allsides.com/news-source/newt-gingrich"
+    },
+    {
+      "outlet": "Nicholas Kristof",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5083056478405316,
+      "allsides_url": "https://www.allsides.com/news-source/nicholas-kristof"
+    },
+    {
+      "outlet": "Nick Anderson (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.39473684210526316,
+      "allsides_url": "https://www.allsides.com/news-source/nick-anderson-cartoonist"
+    },
+    {
+      "outlet": "NMPolitics.net",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4166666666666667,
+      "allsides_url": "https://www.allsides.com/news-source/nmpoliticsnet"
+    },
+    {
+      "outlet": "No Labels",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.5769230769230769,
+      "allsides_url": "https://www.allsides.com/news-source/no-labels"
+    },
+    {
+      "outlet": "Noah Rothman",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5789473684210527,
+      "allsides_url": "https://www.allsides.com/news-source/noah-rothman-media-bias"
+    },
+    {
+      "outlet": "NPR Editorial",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48601307189542486,
+      "allsides_url": "https://www.allsides.com/news-source/npr-editorial"
+    },
+    {
+      "outlet": "NPR Online News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5723800542260993,
+      "allsides_url": "https://www.allsides.com/news-source/npr-media-bias"
+    },
+    {
+      "outlet": "One America News Network",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.49514563106796117,
+      "allsides_url": "https://www.allsides.com/news-source/one-america-news-network-media-bias"
+    },
+    {
+      "outlet": "OpenSecrets.org",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5504840940525588,
+      "allsides_url": "https://www.allsides.com/news-source/opensecretsorg"
+    },
+    {
+      "outlet": "Orange County Register",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5472222222222223,
+      "allsides_url": "https://www.allsides.com/news-source/orange-county-register"
+    },
+    {
+      "outlet": "Pacific Research Institute",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46886446886446886,
+      "allsides_url": "https://www.allsides.com/news-source/pacific-research-institute"
+    },
+    {
+      "outlet": "Pacific Standard",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/pacific-standard"
+    },
+    {
+      "outlet": "Pat Oliphant (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.46153846153846156,
+      "allsides_url": "https://www.allsides.com/news-source/pat-oliphant-cartoonist"
+    },
+    {
+      "outlet": "Paul Krugman",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "High",
+      "perc_agree": 0.614,
+      "allsides_url": "https://www.allsides.com/news-source/paul-krugman"
+    },
+    {
+      "outlet": "Paul Szep (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5319148936170213,
+      "allsides_url": "https://www.allsides.com/news-source/paul-szep-cartoonist"
+    },
+    {
+      "outlet": "PBS NewsHour",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5771299179167846,
+      "allsides_url": "https://www.allsides.com/news-source/pbs-newshour"
+    },
+    {
+      "outlet": "Peacock Panache",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6590909090909091,
+      "allsides_url": "https://www.allsides.com/news-source/peacock-panache"
+    },
+    {
+      "outlet": "Peggy Noonan",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.42602495543672014,
+      "allsides_url": "https://www.allsides.com/news-source/peggy-noonan"
+    },
+    {
+      "outlet": "People for the American Way",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6097560975609756,
+      "allsides_url": "https://www.allsides.com/news-source/people-american-way"
+    },
+    {
+      "outlet": "Peter Roff",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.6089965397923875,
+      "allsides_url": "https://www.allsides.com/news-source/peter-roff"
+    },
+    {
+      "outlet": "Peter Thiel",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/peter-thiel-media-bias"
+    },
+    {
+      "outlet": "Physicians for a National Health Program",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5813953488372093,
+      "allsides_url": "https://www.allsides.com/news-source/physicians-national-health-program"
+    },
+    {
+      "outlet": "Piers Morgan",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3452157598499062,
+      "allsides_url": "https://www.allsides.com/news-source/piers-morgan"
+    },
+    {
+      "outlet": "Pittsburgh Post-Gazette",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.457002457002457,
+      "allsides_url": "https://www.allsides.com/news-source/pittsburgh-post-gazette"
+    },
+    {
+      "outlet": "PJ Media",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5459770114942529,
+      "allsides_url": "https://www.allsides.com/news-source/pj-media-media-bias"
+    },
+    {
+      "outlet": "PJ Media",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.649402390438247,
+      "allsides_url": "https://www.allsides.com/news-source/pj-media"
+    },
+    {
+      "outlet": "Politico",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.39090831701711076,
+      "allsides_url": "https://www.allsides.com/news-source/politico-media-bias"
+    },
+    {
+      "outlet": "PoliticusUSA",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7557692307692307,
+      "allsides_url": "https://www.allsides.com/news-source/politicususa"
+    },
+    {
+      "outlet": "PolitiFact",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4155276107162384,
+      "allsides_url": "https://www.allsides.com/news-source/politifact"
+    },
+    {
+      "outlet": "Portland Press Herald",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.39655172413793105,
+      "allsides_url": "https://www.allsides.com/news-source/portland-press-herarld"
+    },
+    {
+      "outlet": "Prager University",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Think Tank / Policy Group",
+      "confidence": "High",
+      "perc_agree": 0.7925453653751839,
+      "allsides_url": "https://www.allsides.com/news-source/prager-university"
+    },
+    {
+      "outlet": "PRI (Public Radio International)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6380753138075314,
+      "allsides_url": "https://www.allsides.com/news-source/pri-public-radio-international"
+    },
+    {
+      "outlet": "ProCon.org",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6310915104740904,
+      "allsides_url": "https://www.allsides.com/news-source/proconorg"
+    },
+    {
+      "outlet": "Progressive Voices of Iowa",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6444444444444445,
+      "allsides_url": "https://www.allsides.com/news-source/progressive-voices-iowa"
+    },
+    {
+      "outlet": "Project Veritas",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4025974025974026,
+      "allsides_url": "https://www.allsides.com/news-source/project-veritas-media-bias"
+    },
+    {
+      "outlet": "ProPublica",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6124087591240875,
+      "allsides_url": "https://www.allsides.com/news-source/propublica"
+    },
+    {
+      "outlet": "PXW News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4883720930232558,
+      "allsides_url": "https://www.allsides.com/news-source/pxw-news"
+    },
+    {
+      "outlet": "Quartz",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5273132664437012,
+      "allsides_url": "https://www.allsides.com/news-source/quartz"
+    },
+    {
+      "outlet": "Quillette",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.36910994764397903,
+      "allsides_url": "https://www.allsides.com/news-source/quillette-media-bias"
+    },
+    {
+      "outlet": "Rachel Eckhardt",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.38235294117647056,
+      "allsides_url": "https://www.allsides.com/news-source/rachel-eckhardt"
+    },
+    {
+      "outlet": "Rahm Emanuel",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.20930232558139536,
+      "allsides_url": "https://www.allsides.com/news-source/rahm-emanuel-media-bias"
+    },
+    {
+      "outlet": "Ralph Benko",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.38392857142857145,
+      "allsides_url": "https://www.allsides.com/news-source/ralph-benko"
+    },
+    {
+      "outlet": "Ramesh Ponnuru",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5911602209944752,
+      "allsides_url": "https://www.allsides.com/news-source/ramesh-ponnuru"
+    },
+    {
+      "outlet": "RAND Corporation",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.44004524886877827,
+      "allsides_url": "https://www.allsides.com/news-source/rand-corporation"
+    },
+    {
+      "outlet": "Rand Paul",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5401785714285714,
+      "allsides_url": "https://www.allsides.com/news-source/rand-paul"
+    },
+    {
+      "outlet": "Rasmussen Reports",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4074074074074074,
+      "allsides_url": "https://www.allsides.com/news-source/rasmussen-reports"
+    },
+    {
+      "outlet": "Raw Story",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6230964467005076,
+      "allsides_url": "https://www.allsides.com/news-source/raw-story"
+    },
+    {
+      "outlet": "RealClearPolitics",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5357554786620531,
+      "allsides_url": "https://www.allsides.com/news-source/real-clear-politics"
+    },
+    {
+      "outlet": "Reason",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5983839763286674,
+      "allsides_url": "https://www.allsides.com/news-source/reason"
+    },
+    {
+      "outlet": "Reason Foundation",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4872881355932203,
+      "allsides_url": "https://www.allsides.com/news-source/reason-foundation"
+    },
+    {
+      "outlet": "Record Journal",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4657534246575342,
+      "allsides_url": "https://www.allsides.com/news-source/record-journal"
+    },
+    {
+      "outlet": "Red State",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.75125,
+      "allsides_url": "https://www.allsides.com/news-source/red-state"
+    },
+    {
+      "outlet": "redefinED",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6580310880829016,
+      "allsides_url": "https://www.allsides.com/news-source/redefined"
+    },
+    {
+      "outlet": "Rem Reider",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4375,
+      "allsides_url": "https://www.allsides.com/news-source/rem-reider"
+    },
+    {
+      "outlet": "Reuters",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6021675918583135,
+      "allsides_url": "https://www.allsides.com/news-source/reuters"
+    },
+    {
+      "outlet": "Rich Lowry",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5194444444444445,
+      "allsides_url": "https://www.allsides.com/news-source/rich-lowry-syndicated-columnist"
+    },
+    {
+      "outlet": "Rich Tafel",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5193798449612403,
+      "allsides_url": "https://www.allsides.com/news-source/rich-tafel"
+    },
+    {
+      "outlet": "Rich Zeoli",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5254237288135594,
+      "allsides_url": "https://www.allsides.com/news-source/rich-zeoli"
+    },
+    {
+      "outlet": "Richard A. Lowry",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.584,
+      "allsides_url": "https://www.allsides.com/news-source/richard-lowry"
+    },
+    {
+      "outlet": "Richard M. Cohen",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6666666666666666,
+      "allsides_url": "https://www.allsides.com/news-source/richard-cohen"
+    },
+    {
+      "outlet": "Richmond Times Dispatch",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5726256983240223,
+      "allsides_url": "https://www.allsides.com/news-source/richmond-times-dispatch"
+    },
+    {
+      "outlet": "Rick Ungar",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5079365079365079,
+      "allsides_url": "https://www.allsides.com/news-source/rick-ungar"
+    },
+    {
+      "outlet": "Right - Major Media Sources",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5087719298245614,
+      "allsides_url": "https://www.allsides.com/news-source/right-major-publications"
+    },
+    {
+      "outlet": "Right Guest Commentaries",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.54,
+      "allsides_url": "https://www.allsides.com/news-source/right-guest-commentaries"
+    },
+    {
+      "outlet": "Right Side News",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6733001658374793,
+      "allsides_url": "https://www.allsides.com/news-source/right-side-news"
+    },
+    {
+      "outlet": "Right Wing News",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.697029702970297,
+      "allsides_url": "https://www.allsides.com/news-source/right-wing-news"
+    },
+    {
+      "outlet": "Rob Rogers (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.8375,
+      "allsides_url": "https://www.allsides.com/news-source/rob-rogers-cartoonist"
+    },
+    {
+      "outlet": "Robert Ariail (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4727272727272727,
+      "allsides_url": "https://www.allsides.com/news-source/robert-ariail-cartoonist"
+    },
+    {
+      "outlet": "Robert Samuelson",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.47685185185185186,
+      "allsides_url": "https://www.allsides.com/news-source/robert-samuelson"
+    },
+    {
+      "outlet": "Roll Call",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5071428571428571,
+      "allsides_url": "https://www.allsides.com/news-source/roll-call-media-bias"
+    },
+    {
+      "outlet": "RollingStone.com",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.7868852459016393,
+      "allsides_url": "https://www.allsides.com/news-source/rolling-stone"
+    },
+    {
+      "outlet": "Ross Douthat",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6041666666666666,
+      "allsides_url": "https://www.allsides.com/news-source/ross-douthat"
+    },
+    {
+      "outlet": "Ruth Marcus",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.48638132295719844,
+      "allsides_url": "https://www.allsides.com/news-source/ruth-marcus"
+    },
+    {
+      "outlet": "Ryan Cooper",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7889908256880734,
+      "allsides_url": "https://www.allsides.com/news-source/ryan-cooper"
+    },
+    {
+      "outlet": "Ryan Cooper",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6283185840707964,
+      "allsides_url": "https://www.allsides.com/news-source/ryan-cooper-0"
+    },
+    {
+      "outlet": "Sally Pipes",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6983050847457627,
+      "allsides_url": "https://www.allsides.com/news-source/sally-pipes"
+    },
+    {
+      "outlet": "Salon",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6866347847973824,
+      "allsides_url": "https://www.allsides.com/news-source/salon"
+    },
+    {
+      "outlet": "San Francisco Chronicle",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.752007136485281,
+      "allsides_url": "https://www.allsides.com/news-source/san-francisco-chronicle"
+    },
+    {
+      "outlet": "San Jose Mercury News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.479136690647482,
+      "allsides_url": "https://www.allsides.com/news-source/san-jose-mercury-news"
+    },
+    {
+      "outlet": "SBG",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5263157894736842,
+      "allsides_url": "https://www.allsides.com/news-source/sbg"
+    },
+    {
+      "outlet": "Science Daily",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6206896551724138,
+      "allsides_url": "https://www.allsides.com/news-source/science-daily"
+    },
+    {
+      "outlet": "Scientific American",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6764285714285714,
+      "allsides_url": "https://www.allsides.com/news-source/scientific-american"
+    },
+    {
+      "outlet": "Scott Adams",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46875,
+      "allsides_url": "https://www.allsides.com/news-source/scott-adams-media-bias"
+    },
+    {
+      "outlet": "Scott Stantis (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4,
+      "allsides_url": "https://www.allsides.com/news-source/scott-stantis-cartoonist"
+    },
+    {
+      "outlet": "SF Weekly",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4256619144602851,
+      "allsides_url": "https://www.allsides.com/news-source/sf-weekly"
+    },
+    {
+      "outlet": "SFGate",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4706601466992665,
+      "allsides_url": "https://www.allsides.com/news-source/sf-gate"
+    },
+    {
+      "outlet": "Signe Wilkinson (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5952380952380952,
+      "allsides_url": "https://www.allsides.com/news-source/signe-wilkinson-cartoonist"
+    },
+    {
+      "outlet": "Sky-Hi Daily News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5428571428571428,
+      "allsides_url": "https://www.allsides.com/news-source/sky-hi-daily-news"
+    },
+    {
+      "outlet": "Slate",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5824137327027501,
+      "allsides_url": "https://www.allsides.com/news-source/slate"
+    },
+    {
+      "outlet": "Small World (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.358974358974359,
+      "allsides_url": "https://www.allsides.com/news-source/small-world-cartoonist"
+    },
+    {
+      "outlet": "Smerconish",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4017094017094017,
+      "allsides_url": "https://www.allsides.com/news-source/smerconish-media-bias"
+    },
+    {
+      "outlet": "Socialist Alternative",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6972972972972973,
+      "allsides_url": "https://www.allsides.com/news-source/socialist-alternative"
+    },
+    {
+      "outlet": "Socialist Project/The Bullet",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6970954356846473,
+      "allsides_url": "https://www.allsides.com/news-source/socialist-projectthe-bullet"
+    },
+    {
+      "outlet": "Splinter",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7929292929292929,
+      "allsides_url": "https://www.allsides.com/news-source/splinter-media-bias"
+    },
+    {
+      "outlet": "Spokesman Review",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4753623188405797,
+      "allsides_url": "https://www.allsides.com/news-source/spokesman-review"
+    },
+    {
+      "outlet": "State Journal",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.41389728096676737,
+      "allsides_url": "https://www.allsides.com/news-source/state-journal"
+    },
+    {
+      "outlet": "Steve Benson (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5204081632653061,
+      "allsides_url": "https://www.allsides.com/news-source/steve-benson-cartoonist"
+    },
+    {
+      "outlet": "Steve Breen (cartoonist)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5604395604395604,
+      "allsides_url": "https://www.allsides.com/news-source/steve-breen-cartoonist"
+    },
+    {
+      "outlet": "Steve Kelley (cartoonist)",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4827586206896552,
+      "allsides_url": "https://www.allsides.com/news-source/steve-kelley-cartoonist"
+    },
+    {
+      "outlet": "Steve Sack (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6507936507936508,
+      "allsides_url": "https://www.allsides.com/news-source/steve-sack-cartoonist"
+    },
+    {
+      "outlet": "StoryCorps",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/storycorps-media-bias"
+    },
+    {
+      "outlet": "Stuart Carlson (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.41509433962264153,
+      "allsides_url": "https://www.allsides.com/news-source/stuart-carlson-cartoonist"
+    },
+    {
+      "outlet": "Subverse",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 1.0,
+      "allsides_url": "https://www.allsides.com/news-source/subverse-media-bias"
+    },
+    {
+      "outlet": "Suspend Belief Podcast",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4482758620689655,
+      "allsides_url": "https://www.allsides.com/news-source/suspend-belief-podcast"
+    },
+    {
+      "outlet": "Tallahassee Democrat",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5118733509234829,
+      "allsides_url": "https://www.allsides.com/news-source/tallahassee-democrat"
+    },
+    {
+      "outlet": "TechCrunch",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6231060606060606,
+      "allsides_url": "https://www.allsides.com/news-source/techcrunch-media-bias"
+    },
+    {
+      "outlet": "Ted Rall (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5967741935483871,
+      "allsides_url": "https://www.allsides.com/news-source/ted-rall-cartoonist"
+    },
+    {
+      "outlet": "Teen Vogue",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.399702823179792,
+      "allsides_url": "https://www.allsides.com/news-source/teen-vogue"
+    },
+    {
+      "outlet": "Test Source",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4765957446808511,
+      "allsides_url": "https://www.allsides.com/news-source/test-source"
+    },
+    {
+      "outlet": "The Advocate-Messenger",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.43728813559322033,
+      "allsides_url": "https://www.allsides.com/news-source/advocate-messenger"
+    },
+    {
+      "outlet": "The American Conservative",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4612794612794613,
+      "allsides_url": "https://www.allsides.com/news-source/american-conservative-media-bias"
+    },
+    {
+      "outlet": "The Atlantic",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6283615192680898,
+      "allsides_url": "https://www.allsides.com/news-source/atlantic"
+    },
+    {
+      "outlet": "The Boston Globe",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5671167593328038,
+      "allsides_url": "https://www.allsides.com/news-source/boston-globe"
+    },
+    {
+      "outlet": "The Cadiz Record",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48639455782312924,
+      "allsides_url": "https://www.allsides.com/news-source/cadiz-record"
+    },
+    {
+      "outlet": "The Canyon County Zephyr",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5587044534412956,
+      "allsides_url": "https://www.allsides.com/news-source/canyon-county-zephry"
+    },
+    {
+      "outlet": "The College Fix",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5492227979274611,
+      "allsides_url": "https://www.allsides.com/news-source/college-fix"
+    },
+    {
+      "outlet": "The Commercial Appeal",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4083044982698962,
+      "allsides_url": "https://www.allsides.com/news-source/commercial-appeal"
+    },
+    {
+      "outlet": "The Courier-Journal",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3235294117647059,
+      "allsides_url": "https://www.allsides.com/news-source/courier-journal"
+    },
+    {
+      "outlet": "The Daily Caller",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6463160815873457,
+      "allsides_url": "https://www.allsides.com/news-source/daily-caller"
+    },
+    {
+      "outlet": "The Daily Show (humor)",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.43129181677817807,
+      "allsides_url": "https://www.allsides.com/news-source/daily-show"
+    },
+    {
+      "outlet": "The Daily Signal",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.767515923566879,
+      "allsides_url": "https://www.allsides.com/news-source/daily-signal"
+    },
+    {
+      "outlet": "The Daily Wire",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6692099433915826,
+      "allsides_url": "https://www.allsides.com/news-source/daily-wire"
+    },
+    {
+      "outlet": "The Dallas Morning News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.592,
+      "allsides_url": "https://www.allsides.com/news-source/dallas-morning-news"
+    },
+    {
+      "outlet": "The Delaware County Daily Times",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.46905537459283386,
+      "allsides_url": "https://www.allsides.com/news-source/delaware-county-daily-times"
+    },
+    {
+      "outlet": "The Economist",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.3492201039861352,
+      "allsides_url": "https://www.allsides.com/news-source/economist"
+    },
+    {
+      "outlet": "The Epoch Times",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6749769159741459,
+      "allsides_url": "https://www.allsides.com/news-source/epoch-times-media-bias"
+    },
+    {
+      "outlet": "The Federalist",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6700272479564032,
+      "allsides_url": "https://www.allsides.com/news-source/federalist"
+    },
+    {
+      "outlet": "The Flip Side",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5525672371638142,
+      "allsides_url": "https://www.allsides.com/news-source/flip-side-media-bias"
+    },
+    {
+      "outlet": "The Fulcrum",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.38095238095238093,
+      "allsides_url": "https://www.allsides.com/news-source/fulcrum-media-bias"
+    },
+    {
+      "outlet": "The Gateway Pundit",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5775535939470365,
+      "allsides_url": "https://www.allsides.com/news-source/gateway-pundit"
+    },
+    {
+      "outlet": "The Guardian",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6096262057877814,
+      "allsides_url": "https://www.allsides.com/news-source/guardian"
+    },
+    {
+      "outlet": "The Heritage Foundation",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.6352716352716353,
+      "allsides_url": "https://www.allsides.com/news-source/heritage-foundation"
+    },
+    {
+      "outlet": "The Hill",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.44778633301251203,
+      "allsides_url": "https://www.allsides.com/news-source/hill-media-bias"
+    },
+    {
+      "outlet": "The Independent",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5,
+      "allsides_url": "https://www.allsides.com/news-source/independent-0"
+    },
+    {
+      "outlet": "The Intercept",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6570964247020585,
+      "allsides_url": "https://www.allsides.com/news-source/intercept"
+    },
+    {
+      "outlet": "The Jerusalem Post",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.49743589743589745,
+      "allsides_url": "https://www.allsides.com/news-source/jerusalem-post-media-bias"
+    },
+    {
+      "outlet": "The Justice",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4727272727272727,
+      "allsides_url": "https://www.allsides.com/news-source/justice"
+    },
+    {
+      "outlet": "The Korea Herald",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6398104265402843,
+      "allsides_url": "https://www.allsides.com/news-source/korea-herald"
+    },
+    {
+      "outlet": "The Libertarian Republic",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5518969219756621,
+      "allsides_url": "https://www.allsides.com/news-source/libertarian-republic"
+    },
+    {
+      "outlet": "The Nation",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.7591297591297591,
+      "allsides_url": "https://www.allsides.com/news-source/nation"
+    },
+    {
+      "outlet": "The New Yorker",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7616515483265561,
+      "allsides_url": "https://www.allsides.com/news-source/new-yorker"
+    },
+    {
+      "outlet": "The Observer (New York)",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3512396694214876,
+      "allsides_url": "https://www.allsides.com/news-source/observer"
+    },
+    {
+      "outlet": "The Oracle",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.35766423357664234,
+      "allsides_url": "https://www.allsides.com/news-source/oracle"
+    },
+    {
+      "outlet": "The Philadelphia Inquirer",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4108527131782946,
+      "allsides_url": "https://www.allsides.com/news-source/phillycom"
+    },
+    {
+      "outlet": "The Post Millennial",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6440677966101694,
+      "allsides_url": "https://www.allsides.com/news-source/post-millennial-media-bias"
+    },
+    {
+      "outlet": "The Red and Black",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5854922279792746,
+      "allsides_url": "https://www.allsides.com/news-source/red-and-black"
+    },
+    {
+      "outlet": "The Reliable Bias",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.3780487804878049,
+      "allsides_url": "https://www.allsides.com/news-source/reliable-bias"
+    },
+    {
+      "outlet": "The Republican",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.2876984126984127,
+      "allsides_url": "https://www.allsides.com/news-source/republican"
+    },
+    {
+      "outlet": "The Resurgent",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6190476190476191,
+      "allsides_url": "https://www.allsides.com/news-source/resurgent-media-bias"
+    },
+    {
+      "outlet": "The Root",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4227005870841487,
+      "allsides_url": "https://www.allsides.com/news-source/root"
+    },
+    {
+      "outlet": "The Sacramento Bee",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4935064935064935,
+      "allsides_url": "https://www.allsides.com/news-source/sacramento-bee"
+    },
+    {
+      "outlet": "The Saturday Evening Post",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6086956521739131,
+      "allsides_url": "https://www.allsides.com/news-source/saturday-evening-post"
+    },
+    {
+      "outlet": "The Telegraph - UK",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.63107822410148,
+      "allsides_url": "https://www.allsides.com/news-source/telegraph-uk"
+    },
+    {
+      "outlet": "The Texas Observer",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4782608695652174,
+      "allsides_url": "https://www.allsides.com/news-source/texas-observer-media-bias"
+    },
+    {
+      "outlet": "The Verge",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6134453781512605,
+      "allsides_url": "https://www.allsides.com/news-source/verge"
+    },
+    {
+      "outlet": "The Week - News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5710770395608555,
+      "allsides_url": "https://www.allsides.com/news-source/the-week-bias"
+    },
+    {
+      "outlet": "The Weekly Standard",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.6312342569269521,
+      "allsides_url": "https://www.allsides.com/news-source/weekly-standard"
+    },
+    {
+      "outlet": "TheBlaze.com",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5623606334328584,
+      "allsides_url": "https://www.allsides.com/news-source/theblaze-bias"
+    },
+    {
+      "outlet": "ThinkProgress",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7621460506706408,
+      "allsides_url": "https://www.allsides.com/news-source/thinkprogress-bias"
+    },
+    {
+      "outlet": "Thomas Frank",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4717741935483871,
+      "allsides_url": "https://www.allsides.com/news-source/thomas-frank"
+    },
+    {
+      "outlet": "Thomas Sowell",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5787139689578714,
+      "allsides_url": "https://www.allsides.com/news-source/thomas-sowell"
+    },
+    {
+      "outlet": "Tim Groseclose",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6548672566371682,
+      "allsides_url": "https://www.allsides.com/news-source/tim-groseclose"
+    },
+    {
+      "outlet": "Tim Pool",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.6763005780346821,
+      "allsides_url": "https://www.allsides.com/news-source/tim-pool-media-bias"
+    },
+    {
+      "outlet": "Time Magazine",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5465571205007824,
+      "allsides_url": "https://www.allsides.com/news-source/time-magazine-news-media-bias"
+    },
+    {
+      "outlet": "Tom Cole",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6417910447761194,
+      "allsides_url": "https://www.allsides.com/news-source/tom-cole"
+    },
+    {
+      "outlet": "Tom Nichols",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.14285714285714285,
+      "allsides_url": "https://www.allsides.com/news-source/tom-nichols-media-bias"
+    },
+    {
+      "outlet": "Tom Toles (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.5617977528089888,
+      "allsides_url": "https://www.allsides.com/news-source/tom-toles-cartoonist"
+    },
+    {
+      "outlet": "Tony Auth (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.525,
+      "allsides_url": "https://www.allsides.com/news-source/tony-auth"
+    },
+    {
+      "outlet": "Townhall",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.3940582712566668,
+      "allsides_url": "https://www.allsides.com/news-source/townhall-bias"
+    },
+    {
+      "outlet": "Truth or Fiction",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5526315789473685,
+      "allsides_url": "https://www.allsides.com/news-source/truth-or-fiction"
+    },
+    {
+      "outlet": "Truthdig",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.8235294117647058,
+      "allsides_url": "https://www.allsides.com/news-source/truthdig-media-bias"
+    },
+    {
+      "outlet": "TruthOut",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.4835924006908463,
+      "allsides_url": "https://www.allsides.com/news-source/truthout"
+    },
+    {
+      "outlet": "Tucker Carlson",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "Medium",
+      "perc_agree": 0.5955882352941176,
+      "allsides_url": "https://www.allsides.com/news-source/tucker-carlson-media-bias"
+    },
+    {
+      "outlet": "U.S. News & World Report",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.47074122236671,
+      "allsides_url": "https://www.allsides.com/news-source/us-news-and-world-report"
+    },
+    {
+      "outlet": "Univision",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.445468509984639,
+      "allsides_url": "https://www.allsides.com/news-source/univision"
+    },
+    {
+      "outlet": "Upworthy",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.595679012345679,
+      "allsides_url": "https://www.allsides.com/news-source/upworthy"
+    },
+    {
+      "outlet": "USA TODAY",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5541010246919154,
+      "allsides_url": "https://www.allsides.com/news-source/usa-today-media-bias"
+    },
+    {
+      "outlet": "Vanity Fair",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.6081796603980281,
+      "allsides_url": "https://www.allsides.com/news-source/vanity-fair"
+    },
+    {
+      "outlet": "Vice",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.7697416974169742,
+      "allsides_url": "https://www.allsides.com/news-source/vice-media-bias"
+    },
+    {
+      "outlet": "Victor Hanson",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4787234042553192,
+      "allsides_url": "https://www.allsides.com/news-source/victor-hanson"
+    },
+    {
+      "outlet": "Volante",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4778761061946903,
+      "allsides_url": "https://www.allsides.com/news-source/volante"
+    },
+    {
+      "outlet": "Vote Smart",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "Think Tank / Policy Group",
+      "confidence": "NA",
+      "perc_agree": 0.48091603053435117,
+      "allsides_url": "https://www.allsides.com/news-source/vote-smark"
+    },
+    {
+      "outlet": "Vox",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5026701465569163,
+      "allsides_url": "https://www.allsides.com/news-source/vox-news-media-bias"
+    },
+    {
+      "outlet": "VT Digger",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.43820224719101125,
+      "allsides_url": "https://www.allsides.com/news-source/vt-digger"
+    },
+    {
+      "outlet": "Wake Up to Politics",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5675675675675675,
+      "allsides_url": "https://www.allsides.com/news-source/wake-politics-media-bias"
+    },
+    {
+      "outlet": "Wall Street Journal - Editorial",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.5757679180887372,
+      "allsides_url": "https://www.allsides.com/news-source/wall-street-journal-opinion"
+    },
+    {
+      "outlet": "Wall Street Journal - News",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.41141537446387333,
+      "allsides_url": "https://www.allsides.com/news-source/wall-street-journal-media-bias"
+    },
+    {
+      "outlet": "Walt Handelsman (cartoonist)",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4652777777777778,
+      "allsides_url": "https://www.allsides.com/news-source/walt-handelsman-cartoonist"
+    },
+    {
+      "outlet": "WANDTV",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": NaN,
+      "allsides_url": "https://www.allsides.com/news-source/wandtv-media-bias"
+    },
+    {
+      "outlet": "Washington Examiner",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6514560582423297,
+      "allsides_url": "https://www.allsides.com/news-source/washington-examiner"
+    },
+    {
+      "outlet": "Washington Free Beacon",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4965909090909091,
+      "allsides_url": "https://www.allsides.com/news-source/washington-free-beacon"
+    },
+    {
+      "outlet": "Washington Monthly",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5284810126582279,
+      "allsides_url": "https://www.allsides.com/news-source/washington-monthly"
+    },
+    {
+      "outlet": "Washington Post",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.6147000659195782,
+      "allsides_url": "https://www.allsides.com/news-source/washington-post-media-bias"
+    },
+    {
+      "outlet": "Washington Times",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6645890389397803,
+      "allsides_url": "https://www.allsides.com/news-source/washington-times-bias"
+    },
+    {
+      "outlet": "Watchdog.org",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.48230535894843274,
+      "allsides_url": "https://www.allsides.com/news-source/watchdogorg"
+    },
+    {
+      "outlet": "Western Journalism",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6979522184300341,
+      "allsides_url": "https://www.allsides.com/news-source/western-journalism"
+    },
+    {
+      "outlet": "WFAE",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.4549019607843137,
+      "allsides_url": "https://www.allsides.com/news-source/wfae"
+    },
+    {
+      "outlet": "WGBH",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5483870967741935,
+      "allsides_url": "https://www.allsides.com/news-source/wgbh"
+    },
+    {
+      "outlet": "WGN",
+      "rating": "center",
+      "lean_num": 0,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.3333333333333333,
+      "allsides_url": "https://www.allsides.com/news-source/wgn-media-bias"
+    },
+    {
+      "outlet": "Whatfinger News",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5803571428571429,
+      "allsides_url": "https://www.allsides.com/news-source/whatfinger-news-media-bias"
+    },
+    {
+      "outlet": "Whitehouse.gov",
+      "rating": "right-center",
+      "lean_num": 1,
+      "type": "Think Tank / Policy Group",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.45970488081725314,
+      "allsides_url": "https://www.allsides.com/news-source/whitehousegov"
+    },
+    {
+      "outlet": "Willam A. Galston",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "Author",
+      "confidence": "Low or Initial Rating",
+      "perc_agree": 0.5064102564102564,
+      "allsides_url": "https://www.allsides.com/news-source/willam-galston"
+    },
+    {
+      "outlet": "William Bennett",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.4185022026431718,
+      "allsides_url": "https://www.allsides.com/news-source/william-bennett"
+    },
+    {
+      "outlet": "William McGurn",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "Author",
+      "confidence": "NA",
+      "perc_agree": 0.6818181818181818,
+      "allsides_url": "https://www.allsides.com/news-source/william-mcgurn"
+    },
+    {
+      "outlet": "Wisconsin Gazette",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.5299684542586751,
+      "allsides_url": "https://www.allsides.com/news-source/wisconsin-gazette"
+    },
+    {
+      "outlet": "WND.com",
+      "rating": "right",
+      "lean_num": 2,
+      "type": "News Media",
+      "confidence": "High",
+      "perc_agree": 0.7115072933549432,
+      "allsides_url": "https://www.allsides.com/news-source/wndcom"
+    },
+    {
+      "outlet": "Yahoo! News",
+      "rating": "left-center",
+      "lean_num": -1,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.5553782317267795,
+      "allsides_url": "https://www.allsides.com/news-source/yahoo-news-media-bias"
+    },
+    {
+      "outlet": "Yahoo! The 360",
+      "rating": "allsides",
+      "lean_num": null,
+      "type": "News Media",
+      "confidence": "Medium",
+      "perc_agree": 0.6,
+      "allsides_url": "https://www.allsides.com/news-source/yahoo-360-media-bias"
+    },
+    {
+      "outlet": "Yes! Magazine",
+      "rating": "left",
+      "lean_num": -2,
+      "type": "News Media",
+      "confidence": "NA",
+      "perc_agree": 0.6807692307692308,
+      "allsides_url": "https://www.allsides.com/news-source/yes-magazine"
+    }
+  ]
+}
