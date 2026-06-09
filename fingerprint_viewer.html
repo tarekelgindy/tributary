@@ -519,13 +519,6 @@ section { animation: fadein 0.2s; }
 .coal-section { font-size: 0.78rem; font-weight: 600; color: #444; margin: 1rem 0 0.4rem; padding-top: 0.7rem; border-top: 1px solid #eee; }
 .coal-fchip.champ { background: #e7f1ea; color: #2c5f43; border-color: #cfe3d6; }
 .coal-fchip.oppose { background: #f6e9e7; color: #8a3326; border-color: #eed3ce; }
-.amp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0.35rem 0; border-top: 1px solid #f1f1f1; }
-.amp-date { font-family: ui-monospace, monospace; font-size: 0.72rem; color: #888; min-width: 5.5rem; }
-.amp-social { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.04em; color: #7a5a9a; background: #f1ecf6; border: 1px solid #e2d8ee; border-radius: 3px; padding: 0.04rem 0.35rem; }
-.amp-lineage { font-size: 0.68rem; color: #666; background: #f3f3f3; border-radius: 8px; padding: 0.04rem 0.4rem; }
-.amp-stance { font-size: 0.68rem; margin-left: auto; color: #888; }
-.amp-stance.amp-champion { color: #2c5f43; } .amp-stance.amp-oppose { color: #8a3326; }
-.amp-callout { color: #333; font-size: 0.85rem; margin: 0.2rem 0 0.4rem; }
 details.cov-backdrop { margin: 1.4rem 0; border: 1px solid #e5e5e5; border-radius: 6px; background: #fafafa; }
 details.cov-backdrop > summary { cursor: pointer; padding: 0.6rem 0.9rem; font-size: 0.82rem; color: #667; user-select: none; }
 details.cov-backdrop[open] > summary { border-bottom: 1px solid #eee; }
@@ -615,7 +608,6 @@ circle.instance:hover { opacity: 0.7; }
     <button data-tab="conceptual">L2 Conceptual</button>
     <button data-tab="rhetorical">L3 Rhetorical</button>
     <button data-tab="lineages">L4 Lineages</button>
-    <button data-tab="amplifiers">Amplifiers</button>
     <button data-tab="evidence">Evidence</button>
     <button data-tab="taxonomic">L5 Taxonomic</button>
   </nav>
@@ -626,7 +618,6 @@ circle.instance:hover { opacity: 0.7; }
     <section data-panel="conceptual" hidden></section>
     <section data-panel="rhetorical" hidden></section>
     <section data-panel="lineages" hidden></section>
-    <section data-panel="amplifiers" hidden></section>
     <section data-panel="evidence" hidden></section>
     <section data-panel="taxonomic" hidden></section>
   </main>
@@ -913,44 +904,6 @@ function renderCoverageBackdrop(cl) {
   </details>`;
 }
 
-function renderAmplifiers(fp) {
-  const el = document.querySelector('section[data-panel="amplifiers"]');
-  const amp = fp.amplifiers || {};
-  if (!amp.actors || !amp.actors.length) {
-    el.innerHTML = '<p class="empty">No amplifier data yet — run the upstream genealogy (and <code>--social</code> for accounts).</p>';
-    return;
-  }
-  const aType = t => `atype-${(t || 'other')}`;
-  const types = amp.by_actor_type || {};
-  const typeline = Object.entries(types).sort((a, b) => b[1] - a[1]).map(([t, n]) => `${n} ${t}`).join(' · ');
-  const span = amp.date_span ? `${(amp.date_span[0] || '').slice(0, 10)} → ${(amp.date_span[1] || '').slice(0, 10)}` : '';
-  const row = a => `
-    <div class="amp-row">
-      <span class="amp-date">${(a.first_date || '').slice(0, 10) || '—'}</span>
-      <span class="atype ${aType(a.actor_type)}">${escapeHtml(a.actor_type || 'other')}</span>
-      <span class="coal-actor">${escapeHtml(a.display || '')}</span>
-      ${a.is_social ? '<span class="amp-social">social</span>' : ''}
-      ${(a.lineages || []).map(l => `<span class="amp-lineage">${escapeHtml(l)}</span>`).join('')}
-      <span class="amp-stance amp-${escapeHtml(a.stance)}">${escapeHtml(a.stance)}</span>
-    </div>`;
-  const orig = (amp.originators || []).map(a => escapeHtml(a.display)).join(', ');
-  const crit = (amp.critics || []).map(a => escapeHtml(a.display)).join(', ');
-  el.innerHTML = `
-    <div class="card coalition-card">
-      <div class="cov-head">
-        <h2 style="margin:0;">Who Amplified This Narrative</h2>
-        <span class="cov-sub">${amp.n_actors} actors${span ? ' · ' + span : ''}${typeline ? ' · ' + typeline : ''}</span>
-      </div>
-      <p class="coal-intro">The same actor↔narrative graph as the event view, pointed <em>upstream</em> — who carried this narrative over time, with the dates and the individual / social accounts a downstream snapshot can't show.</p>
-      ${orig ? `<div class="coal-section">Originators <span class="coal-sub">— earliest credible articulation</span></div><div class="amp-callout">${orig}</div>` : ''}
-      ${crit ? `<div class="coal-section">Critics <span class="coal-sub">— pushed back / rebutted</span></div><div class="amp-callout">${crit}</div>` : ''}
-      <div class="coal-section">Amplification timeline</div>
-      ${amp.actors.slice(0, 40).map(row).join('')}
-      ${amp.actors.length > 40 ? `<div class="coal-more">+ ${amp.actors.length - 40} more actors</div>` : ''}
-      ${(amp.social_accounts || []).length ? `<div class="coal-more">${amp.social_accounts.length} social accounts (incl. Bluesky via --social)</div>` : ''}
-    </div>`;
-}
-
 function openFingerprintFromEvent(fp) {
   document.getElementById('tabs').style.display = '';
   render(fp);
@@ -1108,7 +1061,6 @@ function render(fp) {
   renderConceptual(fp);
   renderRhetorical(fp);
   renderLineages(fp);
-  renderAmplifiers(fp);
   renderEvidence(fp);
   renderTaxonomic(fp);
 
