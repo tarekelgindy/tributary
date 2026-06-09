@@ -36,16 +36,20 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
         reg.ingest_event(event)
         reg.finalize()
 
-    # framing_id -> {name, actors:set, primary:set, secondary:set}
+    # framing_id -> {name, actors:set, primary:set, secondary:set, stance:{actor:stance}}
+    _RANK = {"champion": 3, "oppose": 2, "mention": 1}
     fr = {}
     for e in reg.edges:
         if e.narrative_kind != "framing":
             continue
         m = fr.setdefault(e.narrative_id, {"name": e.narrative_label,
                                            "actors": set(), "primary": set(),
-                                           "secondary": set()})
+                                           "secondary": set(), "stance": {}})
         m["actors"].add(e.actor_key)
         m[e.tier].add(e.actor_key)
+        cur = m["stance"].get(e.actor_key)
+        if cur is None or _RANK[e.stance] > _RANK[cur]:
+            m["stance"][e.actor_key] = e.stance      # strongest stance this actor takes
 
     # include framings that had zero resolvable carriers, for honest counts
     for f in event.get("framings", []):
@@ -54,10 +58,17 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
                                                 "secondary": set()})
 
     fids = [k for k in fr if fr[k]["actors"]]          # framings with carriers
-    actor_framings = {}                                # actor_key -> set(framing_id)
+    actor_framings = {}                                # actor_key -> set(framing_id) carried
+    actor_champ = {}                                   # actor_key -> set(framing_id) CHAMPIONED
+    actor_oppose = {}                                  # actor_key -> set(framing_id) OPPOSED
     for fid in fids:
         for a in fr[fid]["actors"]:
             actor_framings.setdefault(a, set()).add(fid)
+        for a, st in fr[fid]["stance"].items():
+            if st == "champion":
+                actor_champ.setdefault(a, set()).add(fid)
+            elif st == "oppose":
+                actor_oppose.setdefault(a, set()).add(fid)
     n_actors = len(actor_framings)
 
     # pairwise overlap between framing coalitions
@@ -70,17 +81,31 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
                       "shared": len(inter), "jaccard": round(j, 3)})
     mean_j = round(sum(p["jaccard"] for p in pairs) / len(pairs), 3) if pairs else None
 
+    # BRIDGES now require CHAMPIONING 2+ framings — an actor that actively
+    # pushes multiple lenses, not one that merely mentions several (which is
+    # just broad coverage). Reference/aggregator hosts stay out.
     bridges = []
-    for a, fs in actor_framings.items():
-        # Reference/aggregator hosts (Wikipedia, Britannica…) bridge everything
-        # by being cited everywhere — that's not cross-cutting, it's infra. Keep
-        # them out of the connector signal (they remain carriers on the framing).
+    for a, fs in actor_champ.items():
         if len(fs) >= 2 and reg.actors[a].actor_type != "reference":
             act = reg.actors[a]
             bridges.append({"actor_id": act.actor_id, "display": act.display_name,
                             "actor_type": act.actor_type, "n_framings": len(fs),
                             "framings": sorted(fr[f]["name"] for f in fs)})
     bridges.sort(key=lambda b: -b["n_framings"])
+
+    # CONTESTED actors — the genuine strange bedfellows: champion one framing
+    # while OPPOSING (critic of) another. This is the real cross-pressure signal
+    # stance unlocks, distinct from breadth.
+    contested = []
+    for a in set(actor_champ) & set(actor_oppose):
+        if reg.actors[a].actor_type == "reference":
+            continue
+        act = reg.actors[a]
+        contested.append({"actor_id": act.actor_id, "display": act.display_name,
+                          "actor_type": act.actor_type,
+                          "champions": sorted(fr[f]["name"] for f in actor_champ[a]),
+                          "opposes": sorted(fr[f]["name"] for f in actor_oppose[a])})
+
     bridge_ratio = round(len(bridges) / n_actors, 3) if n_actors else 0.0
     siloed = sum(1 for fs in actor_framings.values() if len(fs) == 1)
     siloed_share = round(siloed / n_actors, 3) if n_actors else 0.0
@@ -96,10 +121,13 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
             act = reg.actors[a]
             out.append({"actor_id": act.actor_id, "display": act.display_name,
                         "actor_type": act.actor_type,
+                        "stance": fr[fid]["stance"].get(a, "mention"),
                         "tier": "primary" if a in fr[fid]["primary"] else "secondary",
-                        "bridges": len(actor_framings.get(a, ())) >= 2})
-        # primary first, then bridges, then alpha — viewer-ready order
-        return sorted(out, key=lambda c: (c["tier"] != "primary", not c["bridges"],
+                        "bridges": len(actor_champ.get(a, ())) >= 2})
+        # champions first, opposers flagged, then by tier/bridge/name — viewer-ready
+        order = {"champion": 0, "mention": 1, "oppose": 2}
+        return sorted(out, key=lambda c: (order.get(c["stance"], 1),
+                                          c["tier"] != "primary", not c["bridges"],
                                           c["display"].lower()))
 
     return {
@@ -112,6 +140,7 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
                       "carriers": _carrier_list(fid)}
                      for fid in fids],
         "bridges": bridges,
+        "contested_actors": contested,
         "framing_pairs": sorted(pairs, key=lambda p: p["jaccard"]),
         "by_actor_type": by_type,
         # Raw connectivity numbers — stored, but NOT dressed up as a polarization
@@ -130,8 +159,9 @@ def _structure_note(n_framings, n_actors, n_bridges) -> str:
     """A factual, guarded one-liner — describes connectivity, claims no verdict."""
     if n_framings < 2 or n_actors < 6:
         return "too few framings/actors to characterize the coalition structure"
-    return (f"{n_bridges} of {n_actors} actors bridge multiple framings; the rest "
-            f"appear under a single framing. See the bridges for who connects which lenses.")
+    return (f"{n_bridges} of {n_actors} actors actively champion more than one framing "
+            f"(real cross-cutting, not just broad coverage); see the bridges and any "
+            f"contested actors for who connects — or splits — which lenses.")
 
 
 def _print(rep: dict):
@@ -141,11 +171,16 @@ def _print(rep: dict):
     print(f"  {rep['structure_note']}")
     print(f"  actor types: {rep['by_actor_type']}")
     if rep["bridges"]:
-        print("  bridging actors (carry multiple framings — the connectors):")
+        print("  bridging actors (CHAMPION multiple framings — the connectors):")
         for b in rep["bridges"][:10]:
             print(f"    [{b['actor_type']:<12}] {b['display'][:34]:<34} "
                   f"{b['n_framings']} framings: {', '.join(b['framings'][:3])}"
                   f"{'…' if b['n_framings'] > 3 else ''}")
+    if rep.get("contested_actors"):
+        print("  contested actors (champion one framing, OPPOSE another — strange bedfellows):")
+        for c in rep["contested_actors"][:8]:
+            print(f"    [{c['actor_type']:<12}] {c['display'][:30]:<30} "
+                  f"champions[{', '.join(c['champions'][:2])}]  opposes[{', '.join(c['opposes'][:2])}]")
 
 
 def _load_dir(d: str):

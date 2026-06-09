@@ -252,6 +252,24 @@ class Actor:
                 "aliases": sorted(self.aliases)}
 
 
+# Stance: how an actor relates to the framing/narrative it carries — derived
+# from the amplifier_role we already collect. This is what separates an actor
+# that PUSHES a framing from one that merely mentions it or argues AGAINST it,
+# which is exactly the distinction that makes "bridges" meaningful instead of
+# just "covered it broadly".
+_CHAMPION_ROLES = {"originator", "early-amplifier", "mass-amplifier",
+                   "institutional-adoption"}
+
+
+def role_stance(role: str) -> str:
+    r = (role or "").lower()
+    if r == "critic":
+        return "oppose"          # pushed back / rebutted / fact-checked it
+    if r in _CHAMPION_ROLES:
+        return "champion"        # drove / originated / institutionalized it
+    return "mention"             # used it without driving spread (incl. relay/unknown)
+
+
 @dataclass
 class AmplificationEdge:
     """An actor amplifying a narrative — the unit both directions emit."""
@@ -262,6 +280,7 @@ class AmplificationEdge:
     narrative_label: str
     role: str                        # amplifier_role value
     direction: str                   # downstream | upstream-formal | upstream-social
+    stance: str = "mention"          # champion | mention | oppose (derived from role)
     tier: str = "primary"            # primary (originating source) | secondary (relaying venue)
     context_id: str = ""             # event analysis_id or fingerprint_id
     date: str = ""
@@ -386,6 +405,7 @@ class ActorRegistry:
         self._final = True
 
     def _edge(self, actor: Actor, **kw):
+        kw.setdefault("stance", role_stance(kw.get("role", "")))
         self.edges.append(AmplificationEdge(
             actor_key=actor.key, actor_display=actor.display_name, **kw))
 
