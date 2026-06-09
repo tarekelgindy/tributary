@@ -1104,6 +1104,12 @@ class NarrativeFingerprint:
     taxonomic: TaxonomicLayer = field(default_factory=TaxonomicLayer)
     evidence_landscape: EvidenceLandscape = field(default_factory=EvidenceLandscape)
 
+    # Upstream amplification summary: the canonical actors (from the genealogy
+    # attestation_log + social_spread) who carried this narrative over time —
+    # the upstream counterpart of EventAnalysis.coalition, same actor substrate.
+    # Produced by coalitions.fingerprint_actors(); empty until enriched.
+    amplifiers: dict = field(default_factory=dict)
+
     provenance: Provenance = field(default_factory=Provenance)
 
     # Human contribution ledger (dormant until the contribution service is
@@ -1139,6 +1145,7 @@ class NarrativeFingerprint:
             "genealogy": self.genealogy.to_dict(),
             "taxonomic": self.taxonomic.to_dict(),
             "evidence_landscape": self.evidence_landscape.to_dict(),
+            "amplifiers": self.amplifiers,
             "provenance": self.provenance.to_dict(),
             "contributions": [c.to_dict() for c in self.contributions],
             "contributors": [c.to_dict() for c in self.contributors],

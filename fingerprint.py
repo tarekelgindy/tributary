@@ -2601,6 +2601,14 @@ class FingerprintGenerator:
         if not skip_verification:
             fp = await self.verify_fingerprint(fp)
 
+        # Free, no-API: the upstream amplifier summary (canonical actors from
+        # the genealogy), the upstream counterpart of the event coalition.
+        try:
+            from coalitions import fingerprint_actors
+            fp.amplifiers = fingerprint_actors(fp.to_dict())
+        except Exception as e:  # noqa: BLE001 — enrichment must never fail generation
+            _log_progress(f"Amplifier summary skipped ({type(e).__name__}: {e})")
+
         return fp
 
     # -- Multi-claim source analysis ----------------------------------

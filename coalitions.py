@@ -155,6 +155,61 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
     }
 
 
+def fingerprint_actors(fp: dict, registry: ActorRegistry = None) -> dict:
+    """Upstream counterpart of coalition(): the canonical actors who amplified a
+    NarrativeFingerprint over time, resolved from its genealogy (attestation_log
+    + social_spread) via the SAME actor graph. Adds what downstream lacks —
+    TIME (dates) and the individuals/social accounts (incl. Bluesky from
+    --social). This is the A4 tie-off: both directions, one substrate."""
+    reg = registry or ActorRegistry()
+    if registry is None:
+        reg.ingest_fingerprint(fp)
+        reg.finalize()
+    _RANK = {"champion": 3, "oppose": 2, "mention": 1}
+    agg = {}
+    for e in reg.edges:
+        if e.narrative_kind != "fingerprint":
+            continue
+        a = agg.setdefault(e.actor_key, {"roles": set(), "stance": "mention",
+                                         "lineages": set(), "social": False,
+                                         "dates": [], "n": 0})
+        a["roles"].add(e.role)
+        if _RANK[e.stance] > _RANK[a["stance"]]:
+            a["stance"] = e.stance
+        if e.lineage_type:
+            a["lineages"].add(e.lineage_type)
+        if e.direction == "upstream-social":
+            a["social"] = True
+        if e.date:
+            a["dates"].append(e.date)
+        a["n"] += 1
+
+    actors = []
+    for k, a in agg.items():
+        act = reg.actors[k]
+        dates = sorted(d for d in a["dates"] if d)
+        actors.append({"actor_id": act.actor_id, "display": act.display_name,
+                       "actor_type": act.actor_type, "roles": sorted(a["roles"]),
+                       "stance": a["stance"], "lineages": sorted(a["lineages"]),
+                       "is_social": a["social"], "n_edges": a["n"],
+                       "first_date": dates[0] if dates else "",
+                       "last_date": dates[-1] if dates else ""})
+    actors.sort(key=lambda x: (x["first_date"] or "9999", x["display"].lower()))
+    all_dates = sorted(d for x in actors for d in (x["first_date"], x["last_date"]) if d)
+    by_type = {}
+    for x in actors:
+        by_type[x["actor_type"]] = by_type.get(x["actor_type"], 0) + 1
+    return {
+        "n_actors": len(actors),
+        "actors": actors,
+        "originators": [x for x in actors if "originator" in x["roles"]],
+        "critics": [x for x in actors if x["stance"] == "oppose"],
+        "social_accounts": [x for x in actors if x["is_social"]],
+        "by_actor_type": by_type,
+        "date_span": [all_dates[0], all_dates[-1]] if all_dates else None,
+    }
+
+
 def _structure_note(n_framings, n_actors, n_bridges) -> str:
     """A factual, guarded one-liner — describes connectivity, claims no verdict."""
     if n_framings < 2 or n_actors < 6:
@@ -198,8 +253,35 @@ def main():
     p.add_argument("event_json", nargs="?")
     p.add_argument("--sweep", default="", help="Calibration table over a corpus dir.")
     p.add_argument("--backfill", default="", help="Store `coalition` on each event JSON.")
+    p.add_argument("--backfill-fp", default="",
+                   help="Store `amplifiers` on each NarrativeFingerprint JSON in this dir.")
+    p.add_argument("--fp", default="", help="Show one fingerprint's upstream amplifiers.")
     p.add_argument("--json", action="store_true")
     args = p.parse_args()
+
+    if args.backfill_fp:
+        done = 0
+        for path, fp in _load_dir(args.backfill_fp):
+            if not fp.get("genealogy"):
+                continue
+            fp["amplifiers"] = fingerprint_actors(fp)
+            path.write_text(json.dumps(fp, indent=2, ensure_ascii=False, default=str),
+                            encoding="utf-8")
+            done += 1
+        print(f"[backfill] stored amplifiers on {done} fingerprint JSONs.", file=sys.stderr)
+        return
+    if args.fp:
+        fp = json.loads(Path(args.fp).read_text(encoding="utf-8"))
+        rep = fingerprint_actors(fp)
+        print(f"Upstream amplifiers — {(fp.get('lexical',{}) or {}).get('canonical_phrase','')[:60]}")
+        print(f"  {rep['n_actors']} actors; span {rep['date_span']}; types {rep['by_actor_type']}")
+        print(f"  originators: {', '.join(a['display'] for a in rep['originators'][:5]) or '(none)'}")
+        print(f"  critics: {', '.join(a['display'] for a in rep['critics'][:5]) or '(none)'}")
+        print(f"  social accounts: {len(rep['social_accounts'])}")
+        for a in rep["actors"][:12]:
+            print(f"    {a['first_date'][:10] or '          '}  [{a['actor_type']:<10}] "
+                  f"{a['display'][:32]:<32} {'/'.join(a['lineages'])} {a['stance']}")
+        return
 
     if args.sweep:
         rows = []
