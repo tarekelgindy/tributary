@@ -498,6 +498,28 @@ section { animation: fadein 0.2s; }
 .cov-eco { color: #555; font-size: 0.8rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed #e3e3e3; }
 .cov-attrib { color: #999; font-size: 0.72rem; margin-top: 0.6rem; }
 
+/* Coalition — who amplifies which framing (the headline of the event view) */
+.coalition-card { margin-bottom: 1.6rem; border-left: 4px solid #5a4b8a; }
+.coal-intro { color: #555; font-size: 0.85rem; line-height: 1.5; margin: 0.5rem 0 1rem; }
+.coal-bridge { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; padding: 0.45rem 0; border-top: 1px solid #f1f1f1; }
+.coal-bridge:first-child { border-top: none; }
+.coal-actor { font-weight: 600; color: #2d3a45; }
+.coal-arrow { color: #aaa; font-size: 0.76rem; margin: 0 0.1rem; }
+.coal-fchip { font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 10px; background: #efeaf6; color: #4a3d6b; border: 1px solid #ddd3ee; }
+.coal-empty { color: #777; font-size: 0.85rem; font-style: italic; }
+.coal-more { color: #888; font-size: 0.78rem; margin-top: 0.6rem; }
+.atype { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.1rem 0.4rem; border-radius: 3px; color: #fff; white-space: nowrap; }
+.atype-news { background: #3a6ea5; } .atype-official { background: #9a6a2e; }
+.atype-organization { background: #4a8a6a; } .atype-social { background: #7a5a9a; }
+.atype-academic { background: #6a6a6a; } .atype-person { background: #b5773a; }
+.atype-blog { background: #a05a5a; } .atype-reference { background: #bbb; } .atype-other { background: #999; }
+.carrier-bridge { font-size: 0.66rem; color: #5a4b8a; background: #efeaf6; border: 1px solid #ddd3ee; border-radius: 8px; padding: 0.04rem 0.4rem; margin-left: 0.3rem; white-space: nowrap; }
+.fr-carrier.is-bridge > a { font-weight: 600; }
+details.cov-backdrop { margin: 1.4rem 0; border: 1px solid #e5e5e5; border-radius: 6px; background: #fafafa; }
+details.cov-backdrop > summary { cursor: pointer; padding: 0.6rem 0.9rem; font-size: 0.82rem; color: #667; user-select: none; }
+details.cov-backdrop[open] > summary { border-bottom: 1px solid #eee; }
+details.cov-backdrop .coverage-card { margin: 0.8rem; border-left-width: 4px; }
+
 /* Multi-claim source-analysis view */
 .article-intro { margin-bottom: 1.2rem; }
 .article-intro a { color: #2a6fa3; text-decoration: none; word-break: break-all; }
@@ -684,6 +706,12 @@ function renderEventAnalysis(analysis) {
   const fpById = {};
   (analysis.fingerprints || []).forEach(f => { fpById[f.fingerprint_id] = f; });
 
+  // Coalition: map each bridging actor's display name -> how many framings it
+  // spans, so we can badge cross-cutting carriers inside the framing cards.
+  const co = analysis.coalition || {};
+  const bridgeByName = {};
+  (co.bridges || []).forEach(b => { bridgeByName[b.display] = b.n_framings; });
+
   const sf = analysis.shared_foundation || {};
   const verified = sf.verified_facts || [];
   const unverified = sf.unverified_shared_claims || [];
@@ -705,9 +733,12 @@ function renderEventAnalysis(analysis) {
     const hasFp = !!fpById[fr.fingerprint_id];
     const carriers = (fr.carriers || []).map(c => {
       const role = c.amplifier_role || 'unknown';
-      return `<div class="fr-carrier">
+      const bn = Object.keys(bridgeByName).find(b => b && (c.name || '').includes(b));
+      const bridgeBadge = bn ? `<span class="carrier-bridge" title="this actor carries ${bridgeByName[bn]} different framings of this event">⇄ ${bridgeByName[bn]} framings</span>` : '';
+      return `<div class="fr-carrier${bn ? ' is-bridge' : ''}">
         <span class="carrier-role ${role}">${escapeHtml(role)}</span>
         ${c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.name || c.url)}</a>` : `<span>${escapeHtml(c.name || '')}</span>`}
+        ${bridgeBadge}
         ${c.excerpt ? `<span class="carrier-excerpt"> — ${escapeHtml(c.excerpt)}</span>` : ''}
         ${provenanceBadge(c)}${verifyBadge(c)}${archiveBadge(c)}
       </div>`;
@@ -741,9 +772,10 @@ function renderEventAnalysis(analysis) {
       <p>${(analysis.framings || []).length} narrative framings mapped across the ecosystem. The shared common ground is what all sides accept; each framing asks a different question.</p>
     </div>
     ${sharedHtml}
-    ${renderCoverageLean(analysis.coverage_lean)}
+    ${renderCoalition(co)}
     <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings</h2>
     <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>
+    ${renderCoverageBackdrop(analysis.coverage_lean)}
     ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
   `;
 
@@ -816,6 +848,44 @@ function renderCoverageLean(cl) {
       ${ecoNote}
       <div class="cov-attrib">Outlet bias ratings: AllSides${cl.as_of ? ` (${escapeHtml(cl.as_of)})` : ''} — aggregated by Tributary, which adjudicates nothing. This is the lean of the carriers we surfaced, a sample, not a census.</div>
     </div>`;
+}
+
+function renderCoalition(co) {
+  if (!co || !(co.framings || []).length) return '';
+  const bridges = co.bridges || [];
+  const aType = t => `atype-${(t || 'other')}`;
+  const bridgesHtml = bridges.length
+    ? bridges.slice(0, 14).map(b => `
+        <div class="coal-bridge">
+          <span class="atype ${aType(b.actor_type)}">${escapeHtml(b.actor_type || 'other')}</span>
+          <span class="coal-actor">${escapeHtml(b.display || '')}</span>
+          <span class="coal-arrow">carries</span>
+          ${(b.framings || []).map(f => `<span class="coal-fchip">${escapeHtml(f)}</span>`).join('')}
+        </div>`).join('')
+    : `<p class="coal-empty">No actor carries more than one framing — each framing is carried by a largely separate set of actors (siloed coverage).</p>`;
+  const more = bridges.length > 14
+    ? `<div class="coal-more">+ ${bridges.length - 14} more bridging actors</div>` : '';
+  const types = co.by_actor_type || {};
+  const typeline = Object.entries(types).sort((a, b) => b[1] - a[1])
+    .map(([t, n]) => `${n} ${t}`).join(' · ');
+  return `
+    <div class="card coalition-card">
+      <div class="cov-head">
+        <h2 style="margin:0;">Who's Amplifying What</h2>
+        <span class="cov-sub">${co.n_actors || 0} actors across ${co.n_framings || 0} framings${typeline ? ' — ' + typeline : ''}</span>
+      </div>
+      <p class="coal-intro">Each framing is a different <em>question</em> being asked about this event. The actors below each carry <strong>more than one</strong> framing — the connectors that cut across the lenses (everyone else sits under a single framing). This maps <em>who amplifies which narrative</em>, not where a source sits on a left/right axis.</p>
+      <div class="coal-bridges">${bridgesHtml}</div>
+      ${more}
+    </div>`;
+}
+
+function renderCoverageBackdrop(cl) {
+  if (!cl || !cl.distribution) return '';
+  return `<details class="cov-backdrop">
+    <summary>Left / right coverage lean — AllSides backdrop (experimental, US-centric)</summary>
+    ${renderCoverageLean(cl)}
+  </details>`;
 }
 
 function openFingerprintFromEvent(fp) {

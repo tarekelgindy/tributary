@@ -194,6 +194,8 @@ Three top-level types, unified by one **provenance + contribution substrate**:
 | `fingerprint_viewer.html` | Self-contained viewer for all three output types |
 | `discover.py` | Free topic discovery from Wikipedia (`--source` Current Events portal or most-viewed `topview`) → topics file |
 | `corpus.py` | Batch corpus builder (events or `--claims`), with `--batch` Batch-API mode |
+| `actors.py` | Shared actor registry — resolves carriers (both directions) into canonical actor nodes of the bipartite amplification graph |
+| `coalitions.py` | Per-event coalition layer — who carries which framing, the cross-cutting bridges (axis-free) |
 | `bias_db.py` | Source-bias lookup + event coverage-lean (AllSides), with MBFC-fallback hook |
 | `gen_bias_data.py` | Builds the local AllSides ratings snapshot consumed by `bias_db.py` |
 | `batch_probe.py` | One-shot check that web_search works in the Batch API |
