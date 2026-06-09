@@ -71,6 +71,15 @@ _BLOG_SUFFIXES = (".substack.com", ".medium.com", ".wordpress.com",
                   ".blogspot.com", ".ghost.io", ".tumblr.com", ".wixsite.com")
 _GOV_SUFFIXES = (".gov", ".mil", ".senate.gov", ".house.gov")
 
+# Reference / aggregator hosts cited across nearly every story. They are
+# citation infrastructure, not opinionated actors — typing them 'reference'
+# lets the coalition layer keep them out of the "bridges" signal (otherwise
+# Wikipedia trivially bridges every framing and drowns out real cross-cutting
+# actors). They remain valid sources on an edge; they're just not connectors.
+_REFERENCE_DOMAINS = {"wikipedia.org", "britannica.com", "wikiwand.com",
+                      "wikidata.org", "wikimedia.org", "google.com",
+                      "yahoo.com", "msn.com", "news.google.com"}
+
 # Recognized third-party news outlets — used to decide whether a named source's
 # URL is a genuine SECONDARY relay (a politician quoted by CNN) vs the actor's
 # OWN site (a campaign page, an org's own domain), which is self-publication and
@@ -166,6 +175,8 @@ def _site_type(host: str, carrier_type: str) -> str:
     """Type a domain-keyed actor from the DOMAIN, not the speaker's role. A
     politician quoted via cnn.com (carrier_type 'political') must not make CNN
     'official'. Institutional/academic DO describe the host (hrw.org, harvard)."""
+    if _registrable(host) in _REFERENCE_DOMAINS:
+        return "reference"
     if host.endswith(_GOV_SUFFIXES):
         return "official"
     ct = (carrier_type or "").lower()

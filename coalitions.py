@@ -72,7 +72,10 @@ def coalition(event: dict, registry: ActorRegistry = None) -> dict:
 
     bridges = []
     for a, fs in actor_framings.items():
-        if len(fs) >= 2:
+        # Reference/aggregator hosts (Wikipedia, Britannica…) bridge everything
+        # by being cited everywhere — that's not cross-cutting, it's infra. Keep
+        # them out of the connector signal (they remain carriers on the framing).
+        if len(fs) >= 2 and reg.actors[a].actor_type != "reference":
             act = reg.actors[a]
             bridges.append({"actor_id": act.actor_id, "display": act.display_name,
                             "actor_type": act.actor_type, "n_framings": len(fs),
