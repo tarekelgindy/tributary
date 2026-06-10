@@ -78,6 +78,52 @@ async def run_corpus(args):
     fp_gen = FingerprintGenerator(max_searches=args.max_searches)
     fp_store = FingerprintStore(str(out_dir)) if args.claims else None
 
+    # Recovery path: a previous --batch run crashed locally after submission.
+    # The paid batch lives server-side (results retrievable for 29 days) and
+    # the custom_id -> input mapping was persisted at submit time; reattach,
+    # retrieve, assemble, save — no re-spend.
+    if args.resume_batch:
+        state_path = out_dir / "batch_state.json"
+        if not state_path.exists():
+            print(f"[corpus] no {state_path} found — nothing to resume.", file=sys.stderr)
+            return
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        bid, items = state["batch_id"], state["items"]
+        print(f"[corpus] resuming batch {bid} ({len(items)} items)...", file=sys.stderr)
+        import anthropic as _anthropic
+        client = _anthropic.Anthropic()
+        batch = client.messages.batches.retrieve(bid)
+        if batch.processing_status != "ended":
+            print(f"[corpus] batch status is '{batch.processing_status}' — try again "
+                  "later (it completes server-side within 24h).", file=sys.stderr)
+            return
+        results = {r.custom_id: r for r in client.messages.batches.results(bid)}
+        ok = fail = done = 0
+        for cid, item in items.items():
+            if item["raw"] in index and not args.force:
+                done += 1
+                continue
+            r = results.get(cid)
+            text = ""
+            if r is not None and getattr(r.result, "type", None) == "succeeded":
+                from fingerprint import _response_text
+                text = _response_text(r.result.message)
+            framings, _ = analyzer.parse_framings_text(text) if text else ([], "")
+            if not framings:
+                fail += 1
+                continue
+            analysis = await analyzer.build_event_from_framings(
+                item["event"], item["date"], framings,
+                framings_only=args.framings_only, verify=not args.no_verify)
+            (out_dir / f"{analysis.analysis_id}.json").write_text(
+                analysis.to_json(), encoding="utf-8")
+            index[item["raw"]] = analysis.analysis_id
+            index_path.write_text(json.dumps(index, indent=2), encoding="utf-8")
+            ok += 1
+        print(f"[corpus] resume done — {ok} recovered, {done} already saved, "
+              f"{fail} empty/failed. Corpus now has {len(index)} events.", file=sys.stderr)
+        return
+
     # Which items still need doing?
     todo = [t for t in topics if args.force or t not in index]
     skipped = len(topics) - len(todo)
@@ -125,10 +171,13 @@ async def run_corpus(args):
         try:
             analyses = await analyzer.analyze_events_batch(
                 todo, scope=scope, framings_only=args.framings_only,
-                verify=not args.no_verify)
+                verify=not args.no_verify,
+                state_file=str(out_dir / "batch_state.json"))
         except Exception as e:  # noqa: BLE001
             print(f"[corpus] batch failed: {type(e).__name__}: {e}\n"
-                  "  (Re-run without --batch to process sequentially.)", file=sys.stderr)
+                  "  (If the batch was already submitted, recover it without "
+                  "re-spending: python corpus.py <topics> --resume-batch. "
+                  "Otherwise re-run without --batch.)", file=sys.stderr)
             return
         for topic, analysis in zip(todo, analyses):
             if not analysis.framings:
@@ -225,6 +274,11 @@ def main():
                    help="Process at most N new items this run (0 = all).")
     p.add_argument("--force", action="store_true",
                    help="Re-process items already in the corpus index.")
+    p.add_argument("--resume-batch", action="store_true",
+                   help="Recover a --batch run that crashed locally after "
+                        "submission: reattach to the server-side batch recorded "
+                        "in <out-dir>/batch_state.json, retrieve results, and "
+                        "assemble/save events — no re-spend.")
     args = p.parse_args()
     asyncio.run(run_corpus(args))
 

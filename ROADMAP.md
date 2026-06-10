@@ -95,7 +95,7 @@ The matcher answers "have we already traced this narrative?" for every text ente
 - [x] CLI: match one claim → decision + neighbors; `--coverage <file>` → coverage metric; plus `--backfill`, `--queues`, `--enqueue`, `--calibrate`. *(2026-06-10)*
 
 **Corpus:**
-- [ ] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**; backfill coverage-lean. *(in progress 2026-06-10 — `topics_corpus1.txt` prepped: 115 deduped topics from a week of Current Events + TopView; coverage-lean/coalition now attach automatically at generation. **Awaiting the API run:** `python corpus.py topics_corpus1.txt --min-contestedness 6 --batch --max-searches 6`, est. ~$15–25 after the pre-filter.)*
+- [x] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**. *(2026-06-10 — done, with two fixes along the way: Haiku triage for discovery (`--clean`/`--clean-file`; bare names/list pages dropped, zero real events lost in the audited 114 drops) and a contestedness-scorer bug found by Tarek's first run — 215 topics in one 4096-token call truncated and silently "unscored" everything to 5.0, dropping the whole run; now chunked, salvage-parsed, and loud-failing before any spend. Build: batch `msgbatch_015144…`, **75/75 succeeded**; Tarek's machine crashed mid-run but all 75 events had already been retrieved and saved — the batch design held. **103 events now published and live.**)*
 - [x] Every event lands in the public gallery. *(2026-06-10 — `publish.py` exports events/ → tracked `gallery/` + `index.json`; `index.html` renders the corpus list from it. First batch live: 28 events at the public gallery, verified 200.)*
 
 **Deliverable:** a measured coverage rate; a browsable 100-event public corpus.
@@ -108,6 +108,7 @@ The matcher answers "have we already traced this narrative?" for every text ente
 Selection and prominence are where outlet bias lives even when individual stories are fair — and they are countable, structural, robust signals (P5). No LLM interpretation on the hot path.
 
 - [ ] `agenda.py`: RSS prominence capture for ~25 outlets (curated across the AllSides spectrum plus several international outlets); snapshot feed contents + item position on a schedule; store raw snapshots.
+- [ ] The same RSS capture doubles as **discovery** (decided 2026-06-10): cluster headlines into events via the matcher and emit topics annotated *carried by N outlets / one-side-only* — observed coverage divergence as the contestedness signal, replacing prediction. Include **fact-checker RSS** (PolitiFact, Snopes, FactCheck.org, AFP…) as a second stream: their selection (never their verdicts — P1) is contested-by-construction and yields *claim-shaped* inputs that grow the fingerprint corpus, which event discovery alone never feeds.
 - [ ] Daily event-universe snapshot via `discover.py` (both Current Events and topview sources).
 - [ ] Headline → event mapping (the matcher from Phase 1 does the heavy lifting: headline embeddings vs. event key-claims).
 - [ ] Per-outlet **attention distribution** vs. the event universe → outlet *agenda fingerprints*.

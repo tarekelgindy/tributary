@@ -1569,7 +1569,8 @@ async def _create_with_retry(client, max_attempts: int = 5,
 # ---------------------------------------------------------------------------
 
 def run_message_batch(requests: list, poll_seconds: int = 20,
-                      max_wait_seconds: int = 24 * 3600, label: str = "batch") -> dict:
+                      max_wait_seconds: int = 24 * 3600, label: str = "batch",
+                      state_file: str = "", state_items: Optional[dict] = None) -> dict:
     """Submit a list of {custom_id, params} Messages requests to the Anthropic
     Message Batches API (~50% off tokens), poll to completion, and return
     {custom_id: response_text or None}. Synchronous (mirrors the proven
@@ -1577,9 +1578,21 @@ def run_message_batch(requests: list, poll_seconds: int = 20,
 
     web_search is supported in batch (confirmed by batch_probe.py). A single
     item's dependent stages can't share a batch — this batches ONE stage
-    across many items, where the per-stage wait is amortized."""
+    across many items, where the per-stage wait is amortized.
+
+    state_file: if given, the batch id (+ state_items, e.g. the custom_id ->
+    input mapping) is persisted there IMMEDIATELY after submission — so a
+    local crash mid-poll never strands a paid server-side batch: results stay
+    retrievable for 29 days and the mapping needed to assemble them is on
+    disk (corpus.py --resume-batch)."""
     client = anthropic.Anthropic()
     batch = client.messages.batches.create(requests=requests)
+    if state_file:
+        Path(state_file).write_text(json.dumps({
+            "batch_id": batch.id, "label": label,
+            "submitted_at": datetime.now(timezone.utc).isoformat(),
+            "completed": False, "items": state_items or {},
+        }, indent=1, ensure_ascii=False), encoding="utf-8")
     _log_progress(f"{label}: submitted {len(requests)} requests "
                   f"(batch {batch.id}); polling...")
     waited = 0
@@ -1602,6 +1615,14 @@ def run_message_batch(requests: list, poll_seconds: int = 20,
             err = getattr(r.result, "error", rtype)
             _log_progress(f"{label}: request {r.custom_id} {rtype}: {err}")
             out[r.custom_id] = None
+    if state_file:
+        try:
+            state = json.loads(Path(state_file).read_text(encoding="utf-8"))
+            state["completed"] = True
+            Path(state_file).write_text(json.dumps(state, indent=1, ensure_ascii=False),
+                                        encoding="utf-8")
+        except (OSError, json.JSONDecodeError):
+            pass
     return out
 
 
@@ -3339,6 +3360,7 @@ class EventAnalyzer:
         scope: Optional[Scope] = None,
         framings_only: bool = False,
         verify: bool = True,
+        state_file: str = "",
     ) -> list:
         """Batch many events through the Batch API: the expensive framing
         searches (the ~90% cost) go as ONE batch (~50% off tokens, async),
@@ -3352,15 +3374,22 @@ class EventAnalyzer:
         events = [d[0] for d in descs]
         dates = [d[1] for d in descs]
 
-        # Stage 2 (BATCH, web_search): all framing searches in one job.
+        # Stage 2 (BATCH, web_search): all framing searches in one job. The
+        # custom_id -> input mapping is persisted (state_file) at submission so
+        # a local crash mid-poll never strands the paid batch.
         requests = [
             {"custom_id": f"fr-{i}",
              "params": self.framings_request_params(events[i], scope)}
             for i in range(len(events))
         ]
+        state_items = {f"fr-{i}": {"raw": raws[i], "event": events[i],
+                                   "date": dates[i]}
+                       for i in range(len(events))}
         _log_progress(f"Event batch: submitting {len(requests)} framing "
                       "searches to the Batch API (~50% off, async)")
-        results = await run_message_batch_async(requests, label="framings")
+        results = await run_message_batch_async(
+            requests, label="framings",
+            state_file=state_file, state_items=state_items)
 
         # Stage 3 (live Haiku per event): foundation/omissions/gaps + assemble.
         analyses = []
