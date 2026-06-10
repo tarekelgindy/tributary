@@ -292,6 +292,12 @@ def calibrate(pairs_path: str, hi: float = HI_THRESHOLD,
     confident-match FALSE POSITIVES (label=different but sim >= hi) — Gate 1
     requires zero before serve-from-cache becomes default."""
     pairs = json.loads(Path(pairs_path).read_text(encoding="utf-8"))
+    if isinstance(pairs, dict):           # gen_gate1_pairs.py wraps with instructions
+        pairs = pairs.get("pairs", [])
+    unlabeled = [p for p in pairs if not p.get("label")]
+    if unlabeled:
+        raise SystemExit(f"{len(unlabeled)} of {len(pairs)} pairs are unlabeled — "
+                         "fill every \"label\" with same | paraphrase | different first.")
     texts = [p["a"] for p in pairs] + [p["b"] for p in pairs]
     vecs = embed_texts(texts)
     n = len(pairs)

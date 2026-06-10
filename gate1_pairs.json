@@ -1,0 +1,185 @@
+{
+  "_instructions": "Label each pair: 'same' = the same narrative/claim (one fingerprint should serve both); 'paraphrase' = the same idea in clearly different wording; 'different' = distinct claims, even if about the same topic. Trust your judgment; don't overthink edge cases — note them in 'note' if you want. Then run: python matcher.py --calibrate gate1_pairs.json",
+  "pairs": [
+    {
+      "id": 0,
+      "a": "Iran's missile strikes on Israel are a lawful and proportionate response to the US–Israeli assault on Iranian sovereignty, leadership, and civilian infrastructure that began on February 28, 2026.",
+      "b": "Trump's willingness to override Netanyahu and pressure Iran back to the table is the decisive act of a strong dealmaker bringing peace to the Middle East.",
+      "label": ""
+    },
+    {
+      "id": 1,
+      "a": "Iran's closure of the Strait of Hormuz has triggered the greatest global energy security crisis in history, driving inflation, recession risk, and supply chain disruption worldwide.",
+      "b": "Iran's closure of the Strait of Hormuz — through which 20% of the world's oil passes — has triggered a global energy and supply-chain crisis that is the war's most consequential and underappreciated strategic outcome.",
+      "label": ""
+    },
+    {
+      "id": 2,
+      "a": "Iran frames its strikes on Ben Gurion Airport as legitimate military retaliation against a dual-use military-civilian facility, part of a sustained response to the US-Israeli campaign that began on February 28, 2026.",
+      "b": "Iran's western airspace closure is a calculated, rapid-response deterrence mechanism that Tehran deploys within hours of perceived military threats to signal readiness and raise the cost of aggression.",
+      "label": ""
+    },
+    {
+      "id": 3,
+      "a": "Iran's missile strikes on Israel are a lawful and proportionate response to the US–Israeli assault on Iranian sovereignty, leadership, and civilian infrastructure that began on February 28, 2026.",
+      "b": "Iran's missile launches and the resulting airspace closures are a direct, forewarned response to Israel's strike on Beirut's residential suburbs, framed by Tehran as legitimate self-defense under international law.",
+      "label": ""
+    },
+    {
+      "id": 4,
+      "a": "The Deir Qanoun strike is evidence that Israel is defying a nominally active Trump-brokered ceasefire, undermining US diplomatic credibility and threatening the wider Iran nuclear deal negotiations.",
+      "b": "The ceasefire is structurally fragile because both Israel and Hamas continue actions that push the other toward escalation, making sustained peace dependent on both parties' restraint, not just Israel's.",
+      "label": ""
+    },
+    {
+      "id": 5,
+      "a": "The Nabatieh and Tyre strikes were lawful counterterrorism operations against documented Hezbollah infrastructure that had been used to launch attacks on Israeli forces and civilians.",
+      "b": "The strikes on Nabatieh and Tyre serve a territorial ambition — expanding Israel's 'security zone' deeper into Lebanon — not merely counterterrorism, raising fears of permanent occupation.",
+      "label": ""
+    },
+    {
+      "id": 6,
+      "a": "Iran closed its western airspace in direct coordination with launching ballistic missile barrages at Israel, making the closure an operational component of an active military campaign.",
+      "b": "Iran's airspace closure is a lawful and proportionate sovereign response to Israeli and US military aggression, framed by Tehran as a warning to aggressors to end hostile actions.",
+      "label": ""
+    },
+    {
+      "id": 7,
+      "a": "Russia's ambassador recall is one tool in a coordinated campaign of diplomatic, economic, and informational coercion designed to override Armenia's democratic sovereign choice to align with Europe.",
+      "b": "The ambassador recall is the diplomatic face of an economic war that directly threatens Armenian farmers, workers, and households dependent on Russian trade, gas, and remittances.",
+      "label": ""
+    },
+    {
+      "id": 8,
+      "a": "The U.S. strikes and resulting closure of the Strait of Hormuz have triggered a global economic shock—spiking oil prices, disrupting supply chains, and hitting American households at the pump.",
+      "b": "The uranium ultimatum and the associated war have closed the Strait of Hormuz, triggering an oil price shock that is inflicting real economic pain on American consumers and global markets.",
+      "label": ""
+    },
+    {
+      "id": 9,
+      "a": "Each Israeli strike that kills Palestinian civilians deepens US political divisions, strains the administration's credibility with Arab American voters and allies, and complicates hostage-deal diplomacy.",
+      "b": "Killing Khamenei has ignited a chain of retaliatory strikes across the Middle East that risks drawing the entire region into a catastrophic, uncontrollable conflict.",
+      "label": ""
+    },
+    {
+      "id": 10,
+      "a": "Iran's threat and Israel's continued Lebanon strikes collectively inflict catastrophic human costs on Lebanese civilians, who are pawns in a geopolitical confrontation not of their making.",
+      "b": "Iran's willingness to fire missiles despite active U.S. negotiations reveals that Trump overestimated his leverage and that the ceasefire was built on shaky assumptions about Iranian compliance.",
+      "label": ""
+    },
+    {
+      "id": 11,
+      "a": "Iran's conditional threat to resume attacks, and Israel's defiance of US calls for restraint in Lebanon, are together the primary obstacle to a historic US-Iran deal that would stabilize the region.",
+      "b": "Iran's threat to resume attacks against Israel over Lebanon is not about protecting Lebanese civilians but about using Lebanon as leverage in Iran's nuclear and Hormuz Strait negotiations with the United States.",
+      "label": ""
+    },
+    {
+      "id": 12,
+      "a": "Despite the optics of Munir's late-night Tehran meeting, fundamental disagreements over nuclear enrichment, the Strait of Hormuz, and mutual distrust make a durable agreement unlikely in the near term.",
+      "b": "Iran's conditional threat to resume mass attacks, in a context of fragile ceasefires, multiple active fronts, and Houthi re-entry, signals a system on the verge of catastrophic escalation beyond any party's control.",
+      "label": ""
+    },
+    {
+      "id": 13,
+      "a": "The Israeli military campaign has killed thousands, displaced over a million Lebanese civilians, and is systematically destroying the economic and social fabric of southern Lebanon.",
+      "b": "Israeli strikes on densely populated areas of southern Lebanon and Dahieh have killed thousands of Lebanese civilians and displaced entire communities, constituting a humanitarian catastrophe.",
+      "label": ""
+    },
+    {
+      "id": 14,
+      "a": "The U.S. strikes constitute illegal aggression against a sovereign nation, violating the UN Charter, and Iran has an inherent right to self-defense and retaliation.",
+      "b": "U.S. military strikes on Iranian soil in Bandar Abbas are flagrant violations of Iranian sovereignty, international law, and the UN Charter, regardless of the 'self-defense' label.",
+      "label": ""
+    },
+    {
+      "id": 15,
+      "a": "chewing gum stays in your stomach for years",
+      "b": "swallowed gum stays in your stomach for years",
+      "label": ""
+    },
+    {
+      "id": 16,
+      "a": "The expanded consulate is a justified, even overdue, assertion of American strategic primacy in the Arctic against Russian and Chinese encroachment.",
+      "b": "The consulate expansion is a necessary and overdue assertion of American strategic presence in an Arctic theater increasingly contested by rival great powers.",
+      "label": ""
+    },
+    {
+      "id": 17,
+      "a": "U.S. 'excessive demands' are in fact appropriate coercive leverage, and softening them would simply reward Iranian intransigence and nuclear brinkmanship.",
+      "b": "U.S. military strikes on Iranian soil in Bandar Abbas are flagrant violations of Iranian sovereignty, international law, and the UN Charter, regardless of the 'self-defense' label.",
+      "label": ""
+    },
+    {
+      "id": 18,
+      "a": "Trump's threat to deploy troops to seize Iran's uranium without a deal — as part of a broader unauthorized war — violates the Constitution, the 1973 War Powers Act, and the UN Charter.",
+      "b": "A forced seizure of Iran's uranium without congressional authorization or UN sanction would violate the War Powers Act, the U.S. Constitution, and Article 2(4) of the UN Charter.",
+      "label": ""
+    },
+    {
+      "id": 19,
+      "a": "The killing of Odeh is legitimate retributive justice — Israel is systematically eliminating the perpetrators of the deadliest attack on Jews since the Holocaust, as promised.",
+      "b": "Killing Odeh — a chief architect of the October 7 massacre — was a justified act of counterterrorism justice that Israel was obligated to carry out.",
+      "label": ""
+    },
+    {
+      "id": 20,
+      "a": "Civilian deaths in Israeli drone strikes, while tragic, result from Hamas's deliberate embedding of military infrastructure in civilian areas, forcing the IDF into impossible targeting decisions.",
+      "b": "These targeted strikes occur within a pattern of IDF operations in Gaza that, even when aimed at militants, cause civilian deaths and contribute to a broader humanitarian catastrophe.",
+      "label": ""
+    },
+    {
+      "id": 21,
+      "a": "The Beirut strike triggered Iranian missile barrages at Israel and threatens to unravel fragile ceasefire talks, risking a multi-front regional war that could draw in U.S. forces and destabilize global energy markets.",
+      "b": "Israel's unauthorized strike on Beirut — in direct defiance of Trump's request — broke a fragile ceasefire and compelled Iran's missile response, threatening to unravel months of US-mediated diplomacy.",
+      "label": ""
+    },
+    {
+      "id": 22,
+      "a": "The strikes on Nabatieh and Tyre serve a territorial ambition — expanding Israel's 'security zone' deeper into Lebanon — not merely counterterrorism, raising fears of permanent occupation.",
+      "b": "Israeli airstrikes in Gaza City, Deir al-Balah, and al-Mawasi are lawful acts of self-defense targeting Hamas military infrastructure and personnel who pose an ongoing threat to Israeli security.",
+      "label": ""
+    },
+    {
+      "id": 23,
+      "a": "Iran's first missile strike since the April 8 ceasefire threatens to unravel fragile diplomacy and reignite a broader regional war.",
+      "b": "Iran's first missile attack since the April 2026 ceasefire is a deliberate violation that threatens to unravel U.S.–Iran negotiations and reignite the wider war.",
+      "label": ""
+    },
+    {
+      "id": 24,
+      "a": "Trump's Operation Epic Fury is an unconstitutional, unauthorized war that has already blown past the 60-day War Powers Act deadline, and Congress is finally asserting its Article I authority.",
+      "b": "Operation Epic Fury was an unconstitutional war of choice launched by a single executive without the congressional authorization required by Article I and the War Powers Resolution.",
+      "label": ""
+    },
+    {
+      "id": 25,
+      "a": "Operation Epic Fury was a necessary, last-resort strike to neutralize Iran's nuclear program and missile capabilities before they posed an existential threat to the United States and its allies.",
+      "b": "Operation Epic Fury is a necessary, if costly, operation to destroy Iran's nuclear program and prevent a generational proliferation threat, and the War Powers vote undermines a legitimate strategic objective.",
+      "label": ""
+    },
+    {
+      "id": 26,
+      "a": "Iran is deliberately and repeatedly striking Kuwait's civilian airport despite Kuwait's non-combatant status, constituting unprovoked aggression against a neutral country.",
+      "b": "Iran denies striking Kuwait's civilian airport, claiming the terminal was damaged by a failed US Patriot interceptor, and frames its broader military actions as lawful self-defense against US aggression.",
+      "label": ""
+    },
+    {
+      "id": 27,
+      "a": "electric vehicles worse for climate than gas cars due to power plant emissions",
+      "b": "electric vehicles worse for climate than gasoline due to power plant emissions",
+      "label": ""
+    },
+    {
+      "id": 28,
+      "a": "Iran acted within its right of self-defense after Israel repeatedly violated the ceasefire by attacking Lebanon and killing civilians, making the missile strike a lawful and proportionate warning.",
+      "b": "Iran's missile launches and the resulting airspace closures are a direct, forewarned response to Israel's strike on Beirut's residential suburbs, framed by Tehran as legitimate self-defense under international law.",
+      "label": ""
+    },
+    {
+      "id": 29,
+      "a": "Israel is systematically violating the US-brokered ceasefire and international humanitarian law by striking civilian areas before warnings are issued and while a formal truce remains nominally in force.",
+      "b": "Israel is systematically breaching a legally binding ceasefire by conducting near-daily lethal strikes that kill civilians, constituting potential war crimes.",
+      "label": ""
+    }
+  ]
+}
