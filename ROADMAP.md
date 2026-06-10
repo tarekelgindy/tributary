@@ -101,6 +101,12 @@ The matcher answers "have we already traced this narrative?" for every text ente
 **Deliverable:** a measured coverage rate; a browsable 100-event public corpus.
 **Gate 1 (semantic, per P5):** 30 claim pairs spanning same-narrative / paraphrase / different — human judgment vs. matcher band. Require agreement on clear cases and **zero confident-match false positives** before serve-from-cache becomes default behavior.
 
+> **Gate 1 log (2026-06-10): embedding-only serving FAILED; two-stage retrieve-then-confirm PASSED and is now the default.**
+> *Setup:* 30 pairs sampled blind from the live corpus (474 claims; similarity-stratified, sims withheld from the labeler); Tarek labeled 4 same / 11 paraphrase / 15 different, observing that the differences hinge on **blame attribution** and **stated consequences vs. bare events**.
+> *Embedding-only result:* 1 confident false positive at sim 0.85 (two "Operation Epic Fury was necessary" claims with different conclusions) — different-narrative pairs reach 0.85 cosine while paraphrases sit 0.77–0.90, so **no threshold separates them**. Tarek's observation is the mechanism: narrative identity lives in blame/consequence, exactly what topical embeddings compress away — and exactly what Tributary's framings are *defined* by. Embedding-only serving is permanently off (available only behind `--trust-matcher`, not recommended).
+> *Two-stage result:* a strict Haiku same-claim judge (same subject + same blame attribution + same asserted consequence, ~$0.001/call) validated against the same 30 labels: 4/4 same confirmed, 14/15 different rejected — including the embedding's false positive; its own single error sat below the candidate threshold where serving is impossible. **Composite confident false positives: 0.** Serving now requires both stages to agree (`Matcher.match_confirmed`), wired as the default in the fingerprint save path; live end-to-end checks pass (exact → serve+confirmed; blame-shifted variant → review; novel → generate, no confirm spend).
+> *Caveats:* n=30 with only 4 "same" labels — margins are thin; re-run the calibration as the corpus grows (the harness is `gen_gate1_pairs.py` + `matcher.py --calibrate`). Decision: gate satisfied **via the two-stage rule**; Phase 1 complete except the carried-over SourceAnalysis example.
+
 ---
 
 ## Phase 2 — Agenda layer v1 (~2–3 weeks)

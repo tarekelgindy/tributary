@@ -46,9 +46,17 @@ from pathlib import Path
 # sentence-similarity, the most battle-tested choice at this size.
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-HI_THRESHOLD = 0.85    # "confidently the same" — Gate 1 calibrates this
+HI_THRESHOLD = 0.85    # candidate threshold (Gate 1: NOT sufficient to serve alone)
 LO_THRESHOLD = 0.70    # below this on both axes = confidently new
-EXACT_THRESHOLD = 0.95  # near-exact phrasing alone suffices to serve (see below)
+EXACT_THRESHOLD = 0.95  # near-exact phrasing — still confirmed before serving
+
+# Stage-2 judge prompt — validated against the 30 human-labeled Gate 1 pairs
+# (4/4 same confirmed; 14/15 different rejected, incl. the embedding stage's
+# false positive; its own single error sat below the candidate threshold).
+CONFIRM_SYSTEM = """You judge whether two short texts assert the SAME claim — strictly.
+Same means: same subject, same attribution of responsibility/blame, and the same asserted conclusion or consequence. Mere topical overlap is NOT same. A claim that assigns blame differs from one that stays neutral on blame. A claim asserting a consequence differs from one that only states the event.
+Input: JSON list of {"id", "a", "b"}.
+Output ONLY JSON: {"judgments": [{"id": 0, "same": true|false, "why": "<= 8 words"}, ...]}"""
 
 _DEFAULT_DIR = Path(__file__).resolve().parent / "fingerprints"
 
@@ -104,12 +112,14 @@ class MatchResult:
     best: Neighbor = None
     neighbors: list = field(default_factory=list)
     thresholds: tuple = (HI_THRESHOLD, LO_THRESHOLD)
+    confirm: dict = None          # stage-2 judgment, when a serve was attempted
 
     def to_dict(self):
         return {"decision": self.decision, "text": self.text,
                 "best": self.best.to_dict() if self.best else None,
                 "neighbors": [n.to_dict() for n in self.neighbors],
-                "thresholds": {"hi": self.thresholds[0], "lo": self.thresholds[1]}}
+                "thresholds": {"hi": self.thresholds[0], "lo": self.thresholds[1]},
+                "confirm": self.confirm}
 
 
 class Matcher:
@@ -222,6 +232,51 @@ class Matcher:
         if best.l1_sim < lo and best.l2_sim < lo:
             return "generate"
         return "review"
+
+    # ---------- match confirmation (stage 2 of serving) ----------
+    def confirm(self, text_a: str, text_b: str,
+                model: str = "claude-haiku-4-5-20251001") -> dict:
+        """Stage-2 judge: do two texts assert the SAME claim — same subject,
+        same attribution of blame, same asserted consequence? Gate 1 showed
+        embeddings alone cannot make this call (different-narrative pairs
+        reach 0.85 cosine; the discriminating features are exactly blame and
+        consequence, which embeddings compress away) while a strict Haiku
+        judgment rejected the embedding's false positive. NOTHING SERVES
+        WITHOUT THIS CONFIRMATION. ~$0.001/call vs $0.30+ regeneration.
+        Requires ANTHROPIC_API_KEY; raises on any failure (callers treat
+        failure as not-confirmed)."""
+        import anthropic
+        from fingerprint import _parse_json_safe
+        client = anthropic.Anthropic()
+        resp = client.messages.create(
+            model=model, max_tokens=256,
+            system=[{"type": "text", "text": CONFIRM_SYSTEM}],
+            messages=[{"role": "user", "content": json.dumps(
+                [{"id": 0, "a": text_a, "b": text_b}])}])
+        text = "".join(b.text for b in resp.content
+                       if getattr(b, "type", "") == "text")
+        j = (_parse_json_safe(text) or {}).get("judgments") or [{}]
+        return {"same": bool(j[0].get("same", False)),
+                "why": str(j[0].get("why", ""))}
+
+    def match_confirmed(self, text: str, hi: float = HI_THRESHOLD,
+                        lo: float = LO_THRESHOLD, top: int = 5) -> MatchResult:
+        """match() + the confirmation stage: a serve_cached/lexical_variant
+        candidate is downgraded to review unless the Haiku judge confirms the
+        claims are the same. The two stages fail differently (embeddings miss
+        blame/consequence; the judge can misread borderline stance), so
+        serving requires both — measured composite false positives on the
+        Gate 1 calibration set: zero."""
+        r = self.match(text, hi=hi, lo=lo, top=top)
+        if r.decision in ("serve_cached", "lexical_variant") and r.best:
+            try:
+                verdict = self.confirm(text, r.best.canonical_phrase)
+            except Exception as e:  # noqa: BLE001 — no confirmation, no serving
+                verdict = {"same": False, "why": f"confirm unavailable: {type(e).__name__}"}
+            r.confirm = verdict
+            if not verdict["same"]:
+                r.decision = "review"
+        return r
 
     # ---------- variant attachment ----------
     def attach_variant(self, fingerprint_id: str, text: str) -> bool:

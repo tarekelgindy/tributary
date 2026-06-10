@@ -3640,33 +3640,38 @@ async def _cli(args):
                 f"L2 and L4 skipped to avoid cost. Pass --force to regenerate.]"
             )
             return
-        # Semantic matcher (Phase 1): local embeddings catch paraphrases the
-        # lexical check misses. ADVISORY until Gate 1's calibration passes
-        # (zero confident-match false positives) — it reports, and only
-        # --trust-matcher lets a semantic serve_cached/variant skip generation.
+        # Semantic matcher (Phase 1): local embeddings find the candidate;
+        # a Haiku judge confirms same-claim (same blame, same consequence)
+        # before anything serves. Gate 1 (2026-06-10): embedding-only serving
+        # produced a confident false positive at 0.85 and stays disabled;
+        # the two-stage composite measured ZERO false positives on the
+        # calibration pairs, so two-stage serve-from-cache is the default.
+        # --trust-matcher skips the ~$0.001 confirmation (not recommended).
         # Graceful no-op if sentence-transformers isn't installed.
         if not args.force:
             try:
                 from matcher import Matcher
                 m = Matcher(args.store_dir)
-                r = m.match(args.claim)
+                r = m.match(args.claim) if args.trust_matcher else m.match_confirmed(args.claim)
                 if r.decision in ("serve_cached", "lexical_variant") and r.best:
                     note = (f"[semantic match: {r.decision} -> "
                             f"{r.best.fingerprint_id} "
                             f"\"{r.best.canonical_phrase[:60]}\" "
-                            f"(L1 {r.best.l1_sim:.2f} / L2 {r.best.l2_sim:.2f})]")
-                    if args.trust_matcher:
-                        if r.decision == "lexical_variant":
-                            m.attach_variant(r.best.fingerprint_id, args.claim)
-                            note += " [attached as phrase variant]"
-                        print(json.dumps(r.to_dict(), indent=2))
-                        print(note + " — generation skipped. Pass --force to regenerate.")
-                        return
-                    print(note + " (advisory until Gate 1; pass --trust-matcher "
-                          "to serve cached)", file=sys.stderr)
+                            f"(L1 {r.best.l1_sim:.2f} / L2 {r.best.l2_sim:.2f}"
+                            f"{'; confirmed: ' + r.confirm['why'] if r.confirm else ''})]")
+                    if r.decision == "lexical_variant":
+                        m.attach_variant(r.best.fingerprint_id, args.claim)
+                        note += " [attached as phrase variant]"
+                    print(json.dumps(r.to_dict(), indent=2))
+                    print(note + " — generation skipped. Pass --force to regenerate.")
+                    return
+                if r.confirm and not r.confirm.get("same"):
+                    print(f"[matcher: candidate {r.best.fingerprint_id} rejected by "
+                          f"confirmation ({r.confirm['why']}) -> generating]",
+                          file=sys.stderr)
             except ImportError:
                 pass  # matcher is optional; lexical dedup already ran
-            except Exception as e:  # noqa: BLE001 — advisory layer must never block
+            except Exception as e:  # noqa: BLE001 — the matcher must never block
                 print(f"[semantic matcher skipped: {type(e).__name__}: {e}]",
                       file=sys.stderr)
 
@@ -3781,10 +3786,10 @@ def main():
     parser.add_argument("--force", action="store_true",
                         help="Save even if an existing match is found")
     parser.add_argument("--trust-matcher", action="store_true",
-                        help="Let a confident semantic match serve the cached "
-                             "fingerprint (or attach a phrase variant) instead "
-                             "of generating. Advisory-only until Gate 1's "
-                             "calibration is logged in ROADMAP.md.")
+                        help="Serve on embedding similarity ALONE, skipping the "
+                             "~$0.001 Haiku same-claim confirmation. Not "
+                             "recommended: Gate 1 measured a confident false "
+                             "positive for embedding-only serving.")
     args = parser.parse_args()
     asyncio.run(_cli(args))
 
