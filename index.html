@@ -77,6 +77,9 @@
        framings of one congressional vote.</p>
   </a>
 
+  <h2 id="corpus-heading" hidden>Full corpus — every published event analysis</h2>
+  <div id="corpus-list"></div>
+
   <div class="links">
     <strong>Use it yourself:</strong> the viewer is one dependency-free HTML file; analyses are plain JSON.
     <a href="https://github.com/tarekelgindy/tributary">GitHub repo</a> ·
@@ -87,5 +90,25 @@
   <footer>All analyses are AI-generated and labeled as such; none are yet human-reviewed — the provenance
     badges in the viewer say exactly that.</footer>
 </div>
+<script>
+// Corpus list: rendered from gallery/index.json (written by publish.py).
+// Graceful no-op if the gallery hasn't been published yet.
+fetch('gallery/index.json')
+  .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+  .then(idx => {
+    const entries = idx.entries || [];
+    if (!entries.length) return;
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
+      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    document.getElementById('corpus-heading').hidden = false;
+    document.getElementById('corpus-list').innerHTML = entries.map(e => `
+      <a class="card" href="fingerprint_viewer.html?load=gallery/events/${esc(e.id)}.json">
+        <span class="kind down">event analysis</span><span class="title">${esc(e.event)}</span>
+        <p>${e.event_date ? esc(String(e.event_date).slice(0, 10)) + ' · ' : ''}${e.n_framings} framings${
+          e.n_actors ? ' · ' + e.n_actors + ' actors' : ''}${e.skew ? ' · coverage: ' + esc(e.skew) : ''}</p>
+      </a>`).join('');
+  })
+  .catch(() => {});
+</script>
 </body>
 </html>
