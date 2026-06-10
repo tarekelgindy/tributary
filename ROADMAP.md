@@ -95,8 +95,8 @@ The matcher answers "have we already traced this narrative?" for every text ente
 - [x] CLI: match one claim → decision + neighbors; `--coverage <file>` → coverage metric; plus `--backfill`, `--queues`, `--enqueue`, `--calibrate`. *(2026-06-10)*
 
 **Corpus:**
-- [ ] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**; backfill coverage-lean.
-- [ ] Every event lands in the public gallery (Phase 0 made this possible).
+- [ ] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**; backfill coverage-lean. *(in progress 2026-06-10 — `topics_corpus1.txt` prepped: 115 deduped topics from a week of Current Events + TopView; coverage-lean/coalition now attach automatically at generation. **Awaiting the API run:** `python corpus.py topics_corpus1.txt --min-contestedness 6 --batch --max-searches 6`, est. ~$15–25 after the pre-filter.)*
+- [x] Every event lands in the public gallery. *(2026-06-10 — `publish.py` exports events/ → tracked `gallery/` + `index.json`; `index.html` renders the corpus list from it. First batch live: 28 events at the public gallery, verified 200.)*
 
 **Deliverable:** a measured coverage rate; a browsable 100-event public corpus.
 **Gate 1 (semantic, per P5):** 30 claim pairs spanning same-narrative / paraphrase / different — human judgment vs. matcher band. Require agreement on clear cases and **zero confident-match false positives** before serve-from-cache becomes default behavior.
