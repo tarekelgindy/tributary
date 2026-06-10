@@ -3579,6 +3579,8 @@ async def _cli(args):
     store = None
     if args.save:
         store = FingerprintStore(args.store_dir)
+        # Cheap lexical pre-filter (exact signature / shared n-grams) — high
+        # precision, kept as the first line of dedup.
         existing = store.find_matching(lexical)
         if existing and not args.force:
             print(json.dumps(lexical.to_dict(), indent=2))
@@ -3587,6 +3589,35 @@ async def _cli(args):
                 f"L2 and L4 skipped to avoid cost. Pass --force to regenerate.]"
             )
             return
+        # Semantic matcher (Phase 1): local embeddings catch paraphrases the
+        # lexical check misses. ADVISORY until Gate 1's calibration passes
+        # (zero confident-match false positives) — it reports, and only
+        # --trust-matcher lets a semantic serve_cached/variant skip generation.
+        # Graceful no-op if sentence-transformers isn't installed.
+        if not args.force:
+            try:
+                from matcher import Matcher
+                m = Matcher(args.store_dir)
+                r = m.match(args.claim)
+                if r.decision in ("serve_cached", "lexical_variant") and r.best:
+                    note = (f"[semantic match: {r.decision} -> "
+                            f"{r.best.fingerprint_id} "
+                            f"\"{r.best.canonical_phrase[:60]}\" "
+                            f"(L1 {r.best.l1_sim:.2f} / L2 {r.best.l2_sim:.2f})]")
+                    if args.trust_matcher:
+                        if r.decision == "lexical_variant":
+                            m.attach_variant(r.best.fingerprint_id, args.claim)
+                            note += " [attached as phrase variant]"
+                        print(json.dumps(r.to_dict(), indent=2))
+                        print(note + " — generation skipped. Pass --force to regenerate.")
+                        return
+                    print(note + " (advisory until Gate 1; pass --trust-matcher "
+                          "to serve cached)", file=sys.stderr)
+            except ImportError:
+                pass  # matcher is optional; lexical dedup already ran
+            except Exception as e:  # noqa: BLE001 — advisory layer must never block
+                print(f"[semantic matcher skipped: {type(e).__name__}: {e}]",
+                      file=sys.stderr)
 
     # No dedup hit (or --force): run the pipeline (lean by default; opt-in
     # layers per the flags), reusing the L1 we already generated.
@@ -3698,6 +3729,11 @@ def main():
                         help="Directory for the fingerprint store")
     parser.add_argument("--force", action="store_true",
                         help="Save even if an existing match is found")
+    parser.add_argument("--trust-matcher", action="store_true",
+                        help="Let a confident semantic match serve the cached "
+                             "fingerprint (or attach a phrase variant) instead "
+                             "of generating. Advisory-only until Gate 1's "
+                             "calibration is logged in ROADMAP.md.")
     args = parser.parse_args()
     asyncio.run(_cli(args))
 

@@ -86,13 +86,13 @@ The repo is now public; it is the first impression and the "share results" surfa
 The matcher answers "have we already traced this narrative?" for every text entering the system. It is the keystone: it collapses serving cost, gives narrative identity across events, and makes the personal mirror affordable.
 
 **Matcher (`matcher.py`, new module — do not grow `fingerprint.py`):**
-- [ ] Local embedding model via `sentence-transformers` (pick one small/strong model; pin the version; store model name alongside vectors — vectors from different models must never be compared).
-- [ ] Embed **two texts per fingerprint, separately**: L1 `canonical_phrase`, and L2 (`claim_predicate` + `causal_structure`).
-- [ ] Store vectors in a sidecar (`fingerprints/vectors.json` keyed by `fingerprint_id`), not inside `index.json`. Backfill the existing corpus.
-- [ ] Decision grid on (L1-sim, L2-sim): both high → **serve cached**; L2 high + L1 low → **same idea, new phrasing** → attach as lexical variant (additive schema; old JSON must still render); middle band → **review queue** (a JSON queue file — later, the first job for human contributors); both low → **queue for batch generation**.
-- [ ] Thresholds: start ~0.85 (high) / ~0.70 (low) and calibrate on the real corpus before trusting them (Gate 1).
-- [ ] Replace `FingerprintStore.find_matching` at its call site; keep the old lexical check as a cheap pre-filter if useful.
-- [ ] CLI: `python matcher.py "some claim"` → match status + nearest neighbors; `python matcher.py --coverage <file>` → the coverage metric over a list of claims.
+- [x] Local embedding model via `sentence-transformers` (pinned: `sentence-transformers/all-MiniLM-L6-v2`; model name stored in the sidecar meta; mismatched sidecars are rejected, never compared). *(2026-06-10)*
+- [x] Embed **two texts per fingerprint, separately**: L1 `canonical_phrase`, and L2 (`claim_predicate` + `causal_structure`). *(2026-06-10 — L2 falls back to L1 for lean fingerprints, flagged)*
+- [x] Store vectors in a sidecar (`fingerprints/vectors.json`), not inside `index.json`. Backfill the existing corpus. *(2026-06-10 — 16 fingerprints, 12.7s, incremental re-embeds only on text change)*
+- [x] Decision grid on (L1-sim, L2-sim) + queues. *(2026-06-10 — plus `attach_variant()` writing new phrasings onto `phrase_variants`, additive. **Validation finding for Gate 1:** the stored L2 text is an abstract restatement whose register sits far from colloquial queries — a fingerprint's own canonical phrase scored L2 0.40 against its own predicate (spread 0.40–0.87). Added a near-exact rule: L1 ≥ 0.95 serves outright. Probe set in `test_claims.txt`: novel claims reject at 0.03–0.09; the related-topic trap (capital-gains vs negative-gearing) correctly not served; paraphrases land in review — conservative under-serving until Gate 1 calibrates per-axis thresholds.)*
+- [x] Thresholds: start ~0.85 / ~0.70, calibrate at Gate 1. *(2026-06-10 — defaults in place; `--calibrate <pairs.json>` harness built: band agreement + confident-false-positive count)*
+- [x] Replace `FingerprintStore.find_matching` at its call site; keep the old lexical check as a cheap pre-filter. *(2026-06-10 — lexical pre-filter kept; semantic matcher runs **advisory** at the save path, with `--trust-matcher` to opt into serve/variant; flips to default only when Gate 1 logs zero confident false positives. Graceful no-op without the library.)*
+- [x] CLI: match one claim → decision + neighbors; `--coverage <file>` → coverage metric; plus `--backfill`, `--queues`, `--enqueue`, `--calibrate`. *(2026-06-10)*
 
 **Corpus:**
 - [ ] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**; backfill coverage-lean.
