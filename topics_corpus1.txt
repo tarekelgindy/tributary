@@ -1,7 +1,56 @@
-# Corpus build 1 - Wikipedia Current Events 2026-06-03..09 + TopView 2026-06-08, deduped
+# Corpus build 1 - Wikipedia Current Events 2026-05-27..06-09 (2 weeks) + TopView 2026-06-05..09, deduped
 # Review/trim, then:
 #   python corpus.py topics_corpus1.txt --min-contestedness 6 --batch --max-searches 6
-# (pre-filter is one cheap Haiku call; batch ~50% off; expect roughly 40-60% kept)
+# (pre-filter is one cheap Haiku call over all topics; batch ~50% off tokens)
+The United States Office of Foreign Assets Control announces under Executive Order 13224 that it has imposed sanctions against Iran's Persian Gulf Strait Authority, the newly-created body used for managing the Strait of Hormuz
+United States sanctions against Iran
+Tasnim News Agency reports that the IRGC Navy has forced a U.S. oil tanker to turn back as it attempted to cross the Strait of Hormuz
+Global Affairs Canada confirms a report from Semafor that Canadian officials in the Middle East, including the United Arab Emirates, helped American citizens escape the region during the early stages of the war
+Canada and the 2026 Iran war, Canada-United States relations
+Reuters and Axios reports that the U.S. military has launched new defensive strikes against a military site at the Strait of Hormuz that officials say posed a threat to American forces and commercial traffic
+The U.S. military says that it intercepted four Iranian drones and struck an Iranian drone station in Bandar Abbas, Hormozgan province. However, the U.S says that the ceasefire remains in place despite the strikes
+7 May 2026 United States strikes on Iran
+Both Hamas and Israeli defense minister Israel Katz confirm that Al-Qassam Brigades commander and leader in the Gaza Strip Mohammed Odeh was killed by an Israeli airstrike on May 26 near Gaza City along with his wife and three children
+The Organisation for the Prohibition of Chemical Weapons says that several chemical weapons from the Assad regime have been found in Syria over the past weeks
+Syrian chemical weapons program, Use of chemical weapons in the Syrian civil war
+Trade union members at Samsung Electronics in South Korea approve a long-term bonus agreement tied to semiconductor profits, averting a planned strike amid increased global demand for artificial intelligence-related memory chips
+2024-present global memory supply shortage, AI boom
+Three Latvian climbers are killed and another is critically injured after a fall on Denali in Alaska, U.S., while rescue and recovery operations continue
+Rescuers locate five of seven villagers alive after they become trapped for a week in a flooded cave in Xaisomboun province, Laos, while search operations continue for the remaining two people
+World Health Organization chief Tedros Adhanom Ghebreyesus warns that the war in the Democratic Republic of the Congo (DRC) could worsen the outbreak in the country
+Uganda temporarily closes its border with the DRC and imposes quarantine and health screening measures following the spread of Ebola cases in central Africa linked to the outbreak in the DRC
+2026 Central Africa Ebola epidemic
+The World Health Organization reports that the number of cases of hantavirus linked to MV Hondius has increased to 13
+The American Cancer Society adds the FDA-approved Guardant Health Shield blood test to its recommended colorectal cancer screening options in the United States amidst a rise in colon cancer cases in young adults
+The South African foreign ministry denies United States president Donald Trump's assertions that Afrikaners face a humanitarian emergency in South Africa. The statement comes as the U.S. increased the number of permits for Afrikaner refugees
+A Cambodian court sentences six Chinese nationals to life imprisonment for kidnapping, torturing, and murdering a South Korean student linked to a transnational fraud network operating in Cambodia
+U.S. military aircraft disable The Gambia-flagged bulk carrier Lian Star and leave it adrift in the Gulf of Oman after it ignored warnings while attempting to reach a port in Iran
+2026 Strait of Hormuz campaign
+Falling debris from a Fateh-110 missile intercepted by air defenses hit the Ali Al Salem Air Base in Kuwait, mildly injuring an estimated 5 American servicemen and contractors, and damaging two MQ-9 Reaper drones
+Israeli Air Force strikes and artillery shelling are reported near Beaufort Castle as Israeli troops approach the outskirts of Nabatieh, Lebanon
+The United States military carries out a strike on a boat accused of drug trafficking in the eastern Pacific Ocean, killing three people
+United States strikes on alleged drug traffickers during Operation Southern Spear
+At least eight people are killed during clashes between forces loyal to disputed Somali president Hassan Sheikh Mohamud and ousted South West State president Abdiaziz Laftagareen after they enter the regional capital Baidoa
+Constitutional crisis in Somalia, Controversies of Hassan Sheikh Mohamud
+Vanessa Pulgar-n from Colombia wins the first MGI All Stars beauty pageant, held in Bangkok, Thailand
+A truck carrying Afghan refugees returning from Pakistan overturns on a highway in Laghman Province, Afghanistan, killing 22 people and injuring 36 others
+At least six people are killed and ten others are injured when a four-story commercial building collapses in Saidul Ajaib, Delhi, India
+Four more men trapped in a flooded cave in Xaisomboun province, Laos, are rescued after 10 days, bringing the total number of survivors recovered to five, while search operations continue for two missing persons
+The driver is killed and 23 people are wounded when a bus crashes in Baranya County, Hungary
+A person is killed and at least 95 others are injured after a Pangasinan-bound bus collides with an SUV and a Baguio-bound bus along Marcos Highway in Tuba, Benguet, Philippines
+A meteor lands off the coast of Massachusetts, United States, causing an explosion and a loud sonic boom. The explosion occurred at 2:11 p.m. local time, causing major disruption. The remnants of the meteor are presumed to be located in Cape Cod Bay
+Uganda's health ministry reports two more cases of ebola in Kampala, bringing the total number of cases in the country to nine
+The MV Hondius cruise ship, which was at center of hantavirus infections including the Andes strain during the outbreak, is cleared to sail again after undergoing cleaning and disinfection
+Russia recalls its ambassador to Armenia over Armenia's closer relations with the European Union, citing concerns about its commitments within the Eurasian Economic Union
+Armenia-Russia relations, Armenia-European Union relations
+India signs a 60 billion rupees (US$629 million) deal to supply BrahMos missiles to Vietnam, which will also include training and logistical support
+A court in the Turks and Caicos Islands sentences former premier Michael Misick to over four years in prison for corruption, embezzlement, and accepting bribery
+Maltese citizens vote to elect the members of the House of Representatives
+In association football, defending champions Paris Saint-Germain (PSG) win their second Champions League title after defeating Arsenal 4-3 on penalties following a 1-1 draw after extra time during the final at Pusk-s Ar-na in Budapest, Hungary
+2026 UEFA Champions League final
+Following PSG's Champions League victory, police arrest more than 280 people in Paris, France, following clashes, vandalism, arson, an attempted intrusion into a police station, and disruptions to traffic and public transport during celebrations
+2026 Paris Saint-Germain celebration riots
+In basketball, the San Antonio Spurs defeat the defending champions, the Oklahoma City Thunder, in seven games to win the Western Conference finals and reach the NBA Finals for the first time since 2014, where they will face the New York Knicks
 At least two people are killed and 11 are injured by Israeli airstrikes in Beirut, Lebanon, which Israel claimed targeted Hezbollah infrastructure, violating the ongoing ceasefire
 Iranian state media reports that Pakistani interior minister Mohsin Naqvi handed Iranian foreign minister Abbas Araghchi a "written message" from prime minister Shehbaz Sharif for supreme leader Mojtaba Khamenei
 U.S. president Donald Trump urges Iran to return to ceasefire negotiations and finalize a deal. He also says that Israeli prime minister Benjamin Netanyahu will have "no choice" but to accept any deal that the U.S. reaches with Iran
@@ -53,7 +102,6 @@ The government of West Bengal, India, deports nearly 5,000 Bangladeshi nationals
 Former Supreme Court justice and United Nations High Commissioner for Human Rights Louise Arbour is sworn in as the 31st Governor General of Canada
 Several members from Iran, Iraq, and Somalia, along with international sports delegations including referee Omar Abdulkadir Artan, are denied visas and blocked from entering the United States for the FIFA World Cup
 2026 FIFA World Cup controversies
-2026 Strait of Hormuz campaign
 Israel issues an evacuation warning for Tyre, Lebanon, after an Israeli airstrike there killed at least eight people and injured 32
 Israeli troops kill one person in northern Israel, near the border of Israel and Lebanon
 At least 10 people are killed and 106 others are injured in a Russian missile and drone attack on Kharkiv Oblast, Ukraine
@@ -67,53 +115,94 @@ The Sri Lankan High Court sentences former deputy minister Sarana Gunawardena to
 Philippine police arrest former superintendent Rafael Dumlao, who was convicted in the 2016 kidnapping and killing of South Korean businessman Jee Ick-Joo at Camp Crame and had been evading imprisonment
 Kidnapping and killing of Jee Ick-Joo
 Three people are injured in a mass stabbing at a school in Blackley, Manchester, England. A 14-year-old student is arrested
+Alexander Zverev
 Obsession (2025 film)
-2026 Peruvian general election
+Flavio Cobolli
 2026 FIFA World Cup
 Backrooms (film)
-Alexander Zverev
 Masters of the Universe (2026 film)
 Christian Eriksen
-Deaths in 2026
-Peddi
-79th Tony Awards
+Salim Kumar
 Killing of Rachel Nickell
-Spencer Pratt
 Scary Movie (2026 film)
-Stacey King
-Inde Navarrette
-ChatGPT
-Ford Creek Patrol Cabin
-Nelly Korda
-Nithya Raman
-Michael Jackson
-2026 Armenian parliamentary election
-.xxx
-Jalen Brunson
-B-la Pap
-Robert Napper
-Manav Suthar
-Teach You a Lesson
-FIFA World Cup
-Lewis Hamilton
-2026 Gilgit Baltistan Assembly election
-Neatsville, Kentucky
 Anthony Head
-Disclosure Day
-David Sullivan (businessman)
+Peddi
+Manav Suthar
+Kimi Antonelli
+Stacey King
+Deaths in 2026
+Robert Napper
+Michael Jackson
+Inde Navarrette
+Mirra Andreeva
+2026 Formula One World Championship
+Pa-O National Organisation
+Peter Phillips
+Brett Goldstein
+Murder of Henry Nowak
+Teach You a Lesson
+Lewis Hamilton
+2026 Armenian parliamentary election
+ChatGPT
+The Backrooms
+Jalen Brunson
+Neatsville, Kentucky
+James Handy
 Michael (2026 film)
+Xerxes Desai
+Nelly Korda
+Dua Lipa
+Callum Turner
+FIFA World Cup
+J. T. Poston
+Kim Kardashian
+Kane Parsons
+Office Romance (2026 film)
+Titan Company
+Off Campus
+Foot binding
+Disclosure Day
+Widow's Bay
+Judith Barsi
+Spider-Noir
+2026 Peruvian general election
+79th Tony Awards
+Spencer Pratt
+Ford Creek Patrol Cabin
+Nithya Raman
+.xxx
+B-la Pap
+2026 Gilgit Baltistan Assembly election
+David Sullivan (businessman)
 Pink (singer)
 Kristen Welker
 Divock Origi
-Off Campus
-The Backrooms
-Brett Goldstein
-Murder of Henry Nowak
-Kimi Antonelli
 Shoshana Bean
 Aubrey Plaza
 Keiko Fujimori
-Kim Kardashian
-Widow's Bay
 Schmigadoon! (musical)
 XXX
+Victor Wembanyama
+Killing of Austin Metcalf
+.xyz
+Stephon Castle
+OG Anunoby
+Gephyromantis tschenki
+New York Knicks
+Timoth-e Chalamet
+Ethan Slater
+Jeff Bezos
+Karl-Anthony Towns
+USS Liberty incident
+Ariana Grande
+Landry Shamet
+Mike Brown (basketball, born 1970)
+Limonene
+Donald Trump
+Dylan Harper
+Michael Olise
+Rolf Harris
+List of FIFA World Cup finals
+Carmelo Anthony
+Rick Brunson
+Artemis III
