@@ -2940,29 +2940,51 @@ Provide a score for EVERY input event, keyed by its idx.
 """
 
 
-async def score_contestedness(client, topics: list, model: str = HAIKU) -> list:
-    """Rate each topic 0-10 for how likely it is to have divergent framings,
-    in one batched Haiku call (~$0.001 for dozens of topics). Returns a list
-    of {topic, score, reason} aligned to the input order. Used to gate corpus
-    spending on contested events only."""
+async def score_contestedness(client, topics: list, model: str = HAIKU,
+                               chunk_size: int = 40) -> list:
+    """Rate each topic 0-10 for how likely it is to have divergent framings.
+    Returns a list of {topic, score, reason} aligned to the input order. Used
+    to gate corpus spending on contested events only.
+
+    Chunked (default 40 topics per Haiku call): a single call for 200+ topics
+    exceeds max_tokens and truncates mid-JSON, which once silently left EVERY
+    topic "(unscored)" at the default 5 — and a >= 6 threshold then dropped
+    the entire corpus run. Each chunk also gets the truncation-salvage parser,
+    and a final guard FAILS LOUDLY if scoring mostly didn't work, instead of
+    letting a parse failure masquerade as "everything is neutral"."""
     if not topics:
         return []
-    items = [{"idx": i, "event": t} for i, t in enumerate(topics)]
-    resp = await _create_with_retry(
-        client, model=model, max_tokens=4096,
-        system=[{"type": "text", "text": CONTESTEDNESS_SYSTEM,
-                 "cache_control": {"type": "ephemeral"}}],
-        messages=[{"role": "user", "content": json.dumps(items, indent=2)}],
-    )
-    data = _parse_json_safe(_response_text(resp))
     by_idx = {}
-    for s in (data.get("scores") or []):
-        if isinstance(s, dict) and "idx" in s:
-            try:
-                by_idx[int(s["idx"])] = (float(s.get("score", 5)),
-                                         _clean_text_field(s.get("reason")))
-            except (TypeError, ValueError):
-                continue
+    for start in range(0, len(topics), chunk_size):
+        chunk = topics[start:start + chunk_size]
+        items = [{"idx": start + i, "event": t} for i, t in enumerate(chunk)]
+        resp = await _create_with_retry(
+            client, model=model, max_tokens=8192,
+            system=[{"type": "text", "text": CONTESTEDNESS_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": json.dumps(items, indent=2)}],
+        )
+        text = _response_text(resp)
+        data = _parse_json_safe(text)
+        scores = (data.get("scores") if isinstance(data, dict) else None) or []
+        if not scores:  # truncated/malformed -> salvage complete objects
+            scores = _recover_json_array_objects(text, "scores")
+        for s in scores:
+            if isinstance(s, dict) and "idx" in s:
+                try:
+                    by_idx[int(s["idx"])] = (float(s.get("score", 5)),
+                                             _clean_text_field(s.get("reason")))
+                except (TypeError, ValueError):
+                    continue
+    unscored = len(topics) - sum(1 for i in range(len(topics)) if i in by_idx)
+    if unscored > len(topics) * 0.5:
+        raise RuntimeError(
+            f"contestedness scoring failed: {unscored} of {len(topics)} topics "
+            f"came back unscorable (unparseable model output). Not filtering — "
+            f"re-run, or drop --min-contestedness to proceed unfiltered.")
+    if unscored:
+        _log_progress(f"contestedness: {unscored} of {len(topics)} topics "
+                      "unscored (kept at default 5.0)")
     out = []
     for i, t in enumerate(topics):
         score, reason = by_idx.get(i, (5.0, "(unscored)"))

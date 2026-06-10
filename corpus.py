@@ -83,11 +83,15 @@ async def run_corpus(args):
     skipped = len(topics) - len(todo)
 
     # Contestedness pre-filter (events): skip neutral events that won't have
-    # divergent framings — one cheap Haiku call, gates the expensive analysis.
+    # divergent framings — cheap chunked Haiku calls, gating the expensive analysis.
     if args.min_contestedness > 0 and mode == "events" and todo:
         _log_progress(f"Scoring contestedness of {len(todo)} events "
-                      "(one Haiku call)...")
-        scored = await score_contestedness(analyzer.client, todo)
+                      f"({(len(todo) + 39) // 40} chunked Haiku calls)...")
+        try:
+            scored = await score_contestedness(analyzer.client, todo)
+        except RuntimeError as e:
+            print(f"[corpus] ABORTED before any spend — {e}", file=sys.stderr)
+            return
         kept, dropped = [], []
         for s in scored:
             (kept if s["score"] >= args.min_contestedness else dropped).append(s)
