@@ -74,9 +74,10 @@ The repo is now public; it is the first impression and the "share results" surfa
 **Deliverable:** a link you would willingly send a journalist.
 **Gate 0:** a person outside the project can open an example trace from a bare URL with no instructions.
 
-> **Gate 0 log (2026-06-10): NOT YET PASSED — blocked on one account-level action.**
-> *Evidence:* Pages is enabled and **built** (API status `built`); all gallery links verified 200 over local HTTP; the `?load=` bootstrap unit-tested (happy/404/no-param). But every `tarekelgindy.github.io` URL 301-redirects to `http://tarek-elgindy.com/…`, the custom domain configured on the *user* site, and that domain is **NXDOMAIN** (verified via 8.8.8.8) — GitHub serves all project sites under a user site's custom domain, so the deployed gallery is unreachable.
-> *Decision:* everything in-repo is done; the fix is outside this repo — either **remove the custom domain** from the `tarekelgindy.github.io` user-site settings (Settings → Pages → Custom domain → remove, or delete its `CNAME` file) or **restore DNS** for `tarek-elgindy.com`. Re-test afterwards: open `https://tarekelgindy.github.io/tributary/` and click any trace; if it renders, Gate 0 passes.
+> **Gate 0 log (2026-06-10): PASSED.**
+> *Path there:* Pages was enabled and built, but every URL 301-redirected to `tarek-elgindy.com` — a custom domain on the *user* site that had gone NXDOMAIN (GitHub serves all project sites under a user site's custom domain). After Tarek confirmed the domain was dead, the stale `CNAME` file and Pages setting were removed from `tarekelgindy.github.io` (restorable by re-adding the CNAME if the domain ever returns).
+> *Evidence:* live, unauthenticated, no instructions: `https://tarekelgindy.github.io/tributary/` → 200 (gallery); the viewer page → 200; the deep-link permalink (`fingerprint_viewer.html?load=examples/event_platner_allegations.json`) serves the viewer with the load bootstrap, and the JSON it fetches → 200 same-origin. The bootstrap itself was unit-tested (happy/404/no-param) and all five examples verified to parse and route.
+> *Decision:* gate passed → Phase 1 (matcher + corpus) is unblocked. Residual Phase 0 item carried forward: one `SourceAnalysis` example for the gallery (needs an API run).
 
 ---
 
