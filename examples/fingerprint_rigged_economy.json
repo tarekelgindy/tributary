@@ -1,0 +1,3555 @@
+{
+  "fingerprint_id": "2821c6ff8631",
+  "created_at": "2026-05-22T07:51:40.129890+00:00",
+  "last_updated": "2026-05-22T07:51:40.129890+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "the economy is rigged against working people",
+    "phrase_variants": [
+      "rigged economy",
+      "system is rigged against workers",
+      "the deck is stacked against working people",
+      "economy rigged for the rich",
+      "rigged against the working class",
+      "the game is rigged"
+    ],
+    "diagnostic_ngrams": [
+      "rigged economy",
+      "rigged against working",
+      "deck is stacked",
+      "system is rigged"
+    ],
+    "stopword_stripped_signature": "economy rigged against working people"
+  },
+  "conceptual": {
+    "claim_predicate": "the economic system structurally disadvantages workers relative to owners of capital",
+    "entities": {
+      "agent": "owners of capital / political and economic elites",
+      "patient": "workers / the working class",
+      "arena": "the economic system",
+      "instrument": "the design of rules, ownership, taxation, and political influence"
+    },
+    "causal_structure": "the design of economic institutions systematically transfers value from labor to capital, resulting in worker disadvantage"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-blame",
+      "harm-claim",
+      "identity-defense"
+    ],
+    "valence": {
+      "villain": "owners of capital and political/economic elites",
+      "victim": "workers and the working class",
+      "hero": ""
+    },
+    "epistemic_stance": "certain",
+    "register": "populist"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "single-origin",
+      "first_attested_date": "1991-10-20",
+      "first_attested_source": "https://www.inquirer.com/philly/news/From_the_archive__How_game_was_rigged_against_middle_class.html",
+      "attestation_confidence": 0.95,
+      "primary_origin_id": "cad030d3528c",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "cad030d3528c",
+          "date": "1991-10-20",
+          "source_url": "https://www.inquirer.com/philly/news/From_the_archive__How_game_was_rigged_against_middle_class.html",
+          "source_title": "How game was rigged against middle class (America: What Went Wrong? — Day One)",
+          "author": "Donald L. Barlett and James B. Steele",
+          "lexical_form_seen": "game was rigged against middle class",
+          "exact_quote": "How game was rigged against middle class [headline, Day One of the 'America: What Went Wrong?' series, Philadelphia Inquirer, Oct. 20, 1991]",
+          "confidence": 0.95,
+          "evidence": "The Inquirer's own editor's note on the 2012 republication explicitly states: 'The following story ran Oct. 20, 1991, on Day One of the nine-day America: What went wrong? series published in the Inquirer.' Barlett and Steele's headline uses the exact diagnostic n-gram 'game was rigged against [middle class]'. The series was later expanded into a best-selling 1992 book of the same name. The article date is confirmed by both the editor's note and contemporaneous bibliographic records for the book.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the earliest recovered dated instance of the 'game is rigged against [working/middle class people]' framing in the diagnostic lexical chain; the 1991 Inquirer series predates all other identified instances and the phrase appears verbatim in the headline."
+        },
+        {
+          "instance_id": "6b7051388ed0",
+          "date": "2005-01-01",
+          "source_url": "https://www.pbs.org/newshour/politics/four-decades-later-bernie-sanders-ready-deliver-stump-speech",
+          "source_title": "Four decades later, Bernie Sanders ready to deliver his stump speech",
+          "author": "Bernie Sanders (as quoted by PBS NewsHour)",
+          "lexical_form_seen": "rigged economy",
+          "exact_quote": "\"This is a rigged economy, which works for the rich and the powerful, and is not working for ordinary Americans.\"",
+          "confidence": 0.72,
+          "evidence": "NPR and PBS both report that Sanders has used 'rigged economy' language since at least the 1970s (NPR found audio from 1976), but the earliest confirmed verbatim quote of the exact phrase 'rigged economy' in a dateable source comes from his 2005 House floor speech per NPR transcript analysis. The 1976 audio exists at the Vermont Historical Society but the exact phrasing is reported as thematically identical but not confirmed to contain the exact diagnostic phrase. Confidence is moderate because the 1970s audio has not been directly quoted with this lexical form in any available source.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Sanders used 'rigged economy' repeatedly in Congress speeches from at least 2005, well before it entered mainstream political discourse; his decades-long use pre-dates the Warren/Obama/Trump wave and laid rhetorical groundwork."
+        },
+        {
+          "instance_id": "a29d3e22af5a",
+          "date": "2012-09-05",
+          "source_url": "https://abcnews.com/Politics/OTUS/transcript-elizabeth-warrens-democratic-convention-speech/story?id=17164726",
+          "source_title": "Transcript: Elizabeth Warren's Democratic Convention Speech",
+          "author": "Elizabeth Warren",
+          "lexical_form_seen": "game is rigged against them; system is rigged",
+          "exact_quote": "\"people who work their hearts out but are up against a hard truth—the game is rigged against them. People feel like the system is rigged against them. And here's the painful part: they're right. The system is rigged.\"",
+          "confidence": 0.99,
+          "evidence": "Full transcript of Warren's DNC speech on September 5, 2012 is archived at ABC News and the American Presidency Project. Warren herself has recounted that Obama White House aides tried to remove the 'rigged' lines before the speech. Date confirmed by multiple contemporaneous news accounts.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Warren's 2012 DNC speech was nationally televised, widely clipped and quoted, and marked the moment the 'system is rigged' framing entered the Democratic Party's mainstream political vocabulary; she later revealed party insiders tried to suppress the phrase, underscoring its novelty and impact."
+        },
+        {
+          "instance_id": "aa05fc7aca62",
+          "date": "2013-12-04",
+          "source_url": "https://obamawhitehouse.archives.gov/the-press-office/2013/12/04/remarks-president-economic-mobility",
+          "source_title": "Remarks by the President on Economic Mobility",
+          "author": "Barack Obama",
+          "lexical_form_seen": "deck is stacked against them",
+          "exact_quote": "\"It's rooted in the nagging sense that no matter how hard they work, the deck is stacked against them.\"",
+          "confidence": 0.99,
+          "evidence": "Full White House transcript archived at obamawhitehouse.archives.gov. Speech delivered December 4, 2013 at THEARC in Washington D.C. Contemporaneously described by Huffington Post (per ACRU commentary dated January 7, 2014) as 'the most important speech of his Presidency.' Date confirmed by White House archive metadata.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "A sitting U.S. president using 'the deck is stacked against them' in a major nationally-broadcast inequality speech represents the highest level of institutional adoption of this diagnostic n-gram, bringing it from political campaigns into official presidential rhetoric."
+        },
+        {
+          "instance_id": "0dd839a23c73",
+          "date": "2015-05-26",
+          "source_url": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-sanders-launches-presidential-campaign-vermont",
+          "source_title": "Sanders Launches Presidential Campaign in Vermont",
+          "author": "Bernie Sanders",
+          "lexical_form_seen": "rigged economy",
+          "exact_quote": "\"This type of rigged economy is not what America is supposed to be about.\"",
+          "confidence": 0.99,
+          "evidence": "Official campaign press release archived at the American Presidency Project (UCSB), dated May 26, 2015. This is Sanders' presidential campaign launch speech at Waterfront Park, Burlington, Vermont. The 'rigged economy' phrase appears in the press release text.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Sanders' presidential launch speech placed 'rigged economy' at the center of a major, nationally-covered campaign, catalyzing its spread into daily cable news and social media; it became the defining slogan of his 2015–16 run."
+        },
+        {
+          "instance_id": "cdad3c1c9ea2",
+          "date": "2015-07-07",
+          "source_url": "https://www.epi.org/blog/the-game-is-rigged-against-hardworking-americans/",
+          "source_title": "The Game Is Rigged Against Hardworking Americans",
+          "author": "Economic Policy Institute",
+          "lexical_form_seen": "game is rigged against hardworking Americans; rigged the labor market against everyday hardworking Americans",
+          "exact_quote": "\"the most powerful economic actors have rigged the labor market against everyday hardworking Americans\"",
+          "confidence": 0.95,
+          "evidence": "EPI blog post dated July 7, 2015, confirmed by page metadata. Title uses the diagnostic phrase 'game is rigged against.' EPI is a major labor-aligned think tank whose adoption of the phrase signals movement into expert/institutional labor-movement vocabulary.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "EPI's use of 'game is rigged against hardworking Americans' in a policy context represents the labor-think-tank ecosystem adopting and normalizing the framing just as the Sanders campaign was gaining steam."
+        },
+        {
+          "instance_id": "e1bf33acd58e",
+          "date": "2015-11-13",
+          "source_url": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-the-rigged-economy",
+          "source_title": "Sanders Campaign Press Release — The Rigged Economy (TV Ad)",
+          "author": "Bernie Sanders presidential campaign",
+          "lexical_form_seen": "rigged economy (ad title and script)",
+          "exact_quote": "\"He's taking on Wall Street and a corrupt political system that keeps in place a rigged economy.\"",
+          "confidence": 0.99,
+          "evidence": "Official Sanders campaign press release dated November 13, 2015, archived at UCSB American Presidency Project. The 30-second TV ad titled 'Rigged Economy' began airing in Iowa and New Hampshire on November 14, 2015. Confirmed by Washington Post contemporaneous coverage.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The paid TV ad titled 'Rigged Economy' broadcast the phrase into millions of living rooms across key primary states, cementing 'rigged economy' as the dominant label for this framing in the 2016 election cycle."
+        },
+        {
+          "instance_id": "1bcc0427db60",
+          "date": "2016-04-01",
+          "source_url": "https://fortune.com/2016/06/29/marketplace-edison-survey-rigged/",
+          "source_title": "71% of Americans Believe the U.S. Economy Is Rigged",
+          "author": "Donald Trump (as quoted), Fortune/Marketplace-Edison survey",
+          "lexical_form_seen": "economy is rigged",
+          "exact_quote": "\"If you think about it, the economy is rigged. The banking system is rigged.\"",
+          "confidence": 0.85,
+          "evidence": "Fortune article (June 29, 2016) cites Trump's April 2016 New York rally. The approximate date 'this past April' places it around April 2016; exact rally date not confirmed. Fortune and Marketplace-Edison survey confirm that by mid-2016, 71% of Americans said the economy was 'rigged in favor of certain groups,' demonstrating mass public adoption of the framing.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Trump's adoption of 'the economy is rigged' in rally speeches from both left and right simultaneously confirmed the phrase had crossed partisan lines and achieved true mass-public resonance, as reflected in the Fortune/Marketplace survey showing 71% agreement."
+        },
+        {
+          "instance_id": "2d637c39b85b",
+          "date": "2017-04-01",
+          "source_url": "https://www.milkenreview.org/articles/the-rigged-labor-market",
+          "source_title": "The Rigged Labor Market",
+          "author": "Milken Institute Review",
+          "lexical_form_seen": "economy is 'rigged against you, the American people'; labor market is rigged against American workers",
+          "exact_quote": "\"the economy is 'rigged against you, the American people'\" [quoting Trump]; \"the ways in which the labor market is rigged against American workers\"",
+          "confidence": 0.9,
+          "evidence": "Milken Institute Review article, metadata-dated April 28, 2017. Quotes Trump's campaign use of 'rigged against you, the American people' and calls for 'unrigging the labor market.' Represents the phrase entering mainstream centrist economic policy discourse.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The centrist Milken Institute Review's adoption of 'rigged against American workers' as analytical vocabulary signals the framing's absorption into mainstream economic policy discussion beyond partisan politics."
+        },
+        {
+          "instance_id": "d1a2cda7d4fe",
+          "date": "2018-10-16",
+          "source_url": "https://www.scientificamerican.com/article/the-american-economy-is-rigged/",
+          "source_title": "The American Economy Is Rigged",
+          "author": "Joseph E. Stiglitz",
+          "lexical_form_seen": "The American Economy Is Rigged",
+          "exact_quote": "\"The American Economy Is Rigged\" [article title, Scientific American, October 2018]",
+          "confidence": 0.99,
+          "evidence": "PubMed and Scientific American both confirm publication date of October 16, 2018 (Scientific American, Vol. 319, No. 5). Nobel laureate economist Stiglitz uses the phrase as his article title, representing peak academic-mainstream legitimization of the framing.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "A Nobel Prize-winning economist publishing 'The American Economy Is Rigged' in Scientific American marks the framing's full institutionalization in peer-reviewed/flagship academic-public media, completing its journey from protest slogan to analytical economics vocabulary."
+        },
+        {
+          "instance_id": "a045d566d3b7",
+          "date": "2019-01-07",
+          "source_url": "https://thehill.com/opinion/finance/423828-economic-alarmists-tell-tall-tales-of-a-rigged-economy/",
+          "source_title": "Economic alarmists tell tall tales of a rigged economy",
+          "author": "The Hill (opinion)",
+          "lexical_form_seen": "rigged economy; system is rigged",
+          "exact_quote": "\"if Stiglitz is right and the system is rigged, if only the fattest of the fat cats are getting ahead, then the system needs more than an improvement\"",
+          "confidence": 0.9,
+          "evidence": "The Hill op-ed dated January 7, 2019, explicitly pushes back on Stiglitz's 'The American Economy Is Rigged' framing, using the diagnostic phrases while contesting the claim.",
+          "amplifier_role": "critic",
+          "role_evidence": "This is an explicit rebuttal of the 'rigged economy' framing, fact-checking and disputing the narrative — the archetypal critic role in the amplifier chain."
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "",
+      "mutations": [
+        {
+          "from_source": "https://www.inquirer.com/philly/news/From_the_archive__How_game_was_rigged_against_middle_class.html",
+          "to_source": "https://www.pbs.org/newshour/politics/four-decades-later-bernie-sanders-ready-deliver-stump-speech",
+          "preserved": "the core framing that the economic system is 'rigged' against ordinary/middle-class people in favor of those with power",
+          "dropped": "the investigative, evidence-based newspaper series context grounding the claim in documented policy and corporate decisions",
+          "added": "explicit class-enemy framing ('rich and powerful') and direct political stump-speech register targeting a voting audience",
+          "distorted": "scope widened from middle class being structurally disadvantaged to a totalizing 'rigged economy' serving only elites",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.488943+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.pbs.org/newshour/politics/four-decades-later-bernie-sanders-ready-deliver-stump-speech",
+          "to_source": "https://abcnews.com/Politics/OTUS/transcript-elizabeth-warrens-democratic-convention-speech/story?id=17164726",
+          "preserved": "the core claim that the economic system is 'rigged' and structurally favors the powerful over ordinary working people",
+          "dropped": "the explicit contrast between 'the rich and the powerful' as beneficiaries versus ordinary Americans as victims",
+          "added": "the emotional labor framing ('work their hearts out'), the validation device ('they're right'), and audience-mirroring via 'people feel like'",
+          "distorted": "shift from declarative structural diagnosis to empathetic emotional testimony, centering feeling and lived experience over systemic description",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.841968+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://abcnews.com/Politics/OTUS/transcript-elizabeth-warrens-democratic-convention-speech/story?id=17164726",
+          "to_source": "https://obamawhitehouse.archives.gov/the-press-office/2013/12/04/remarks-president-economic-mobility",
+          "preserved": "the core claim that ordinary working people face a structurally unfair economic system regardless of effort",
+          "dropped": "the explicit declarative confirmation ('they're right') and the direct assertion that the system is definitively rigged",
+          "added": "the softening qualifier 'nagging sense,' framing inequality as a subjective feeling rather than an objective condition",
+          "distorted": "shift from Warren's declarative structural indictment to Obama's more hedged, psychological framing of worker perception",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.559577+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://obamawhitehouse.archives.gov/the-press-office/2013/12/04/remarks-president-economic-mobility",
+          "to_source": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-sanders-launches-presidential-campaign-vermont",
+          "preserved": "the structural framing that the economic system unfairly disadvantages ordinary working people",
+          "dropped": "the acknowledgment of individual effort ('no matter how hard they work') that grounded the earlier empathetic framing",
+          "added": "explicit label 'rigged economy' and nationalistic appeal to American identity and ideals",
+          "distorted": "shift from empathetic description of felt disadvantage to accusatory political indictment of the economic system as deliberately corrupt",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.384698+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-sanders-launches-presidential-campaign-vermont",
+          "to_source": "https://www.epi.org/blog/the-game-is-rigged-against-hardworking-americans/",
+          "preserved": "the core metaphor that the economic system is 'rigged' against ordinary working people",
+          "dropped": "the aspirational contrast with American ideals ('what America is supposed to be about')",
+          "added": "specific identification of 'the most powerful economic actors' as agents and 'labor market' as the site of rigging",
+          "distorted": "shift from broad national moral critique to a targeted institutional diagnosis of labor market mechanisms",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:14.984119+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.epi.org/blog/the-game-is-rigged-against-hardworking-americans/",
+          "to_source": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-the-rigged-economy",
+          "preserved": "the core metaphor of a 'rigged' economy structurally favoring powerful interests over ordinary workers",
+          "dropped": "the specific labor-market framing and the 'hardworking Americans' qualifier grounding the claim in workplace dynamics",
+          "added": "explicit political-system causation ('corrupt political system') and a named antagonist ('Wall Street') personalizing the structural critique",
+          "distorted": "scope shifted from labor-market economics to a broad political corruption frame, making the claim about systemic governance rather than employer-worker power imbalance",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.177467+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.presidency.ucsb.edu/documents/sanders-campaign-press-release-the-rigged-economy",
+          "to_source": "https://fortune.com/2016/06/29/marketplace-edison-survey-rigged/",
+          "preserved": "the core claim that the economy is 'rigged' against ordinary people by powerful financial interests",
+          "dropped": "the specific political-system corruption framing and the worker-vs-capital structural critique underlying Sanders's usage",
+          "added": "explicit naming of 'the banking system' as a discrete rigged institution alongside the broader economy",
+          "distorted": "Sanders's left-populist structural critique of Wall Street power was reframed as Trump's broader anti-establishment grievance without class-specific targeting",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.076019+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://fortune.com/2016/06/29/marketplace-edison-survey-rigged/",
+          "to_source": "https://www.milkenreview.org/articles/the-rigged-labor-market",
+          "preserved": "the core claim that the economy is structurally rigged against ordinary people, using Trump's own 'rigged' vocabulary",
+          "dropped": "the specific reference to the banking system as the mechanism of rigging",
+          "added": "explicit labor-market framing and the specific target audience 'American workers,' narrowing the claim to employment context",
+          "distorted": "scope shifted from a general economic and financial system critique to a specific labor-market structural argument against workers",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.995440+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.milkenreview.org/articles/the-rigged-labor-market",
+          "to_source": "https://www.scientificamerican.com/article/the-american-economy-is-rigged/",
+          "preserved": "the core claim that the economic system is structurally rigged against ordinary American workers",
+          "dropped": "the specific labor market mechanisms and the attribution of the 'rigged' framing to Trump's rhetoric",
+          "added": "Stiglitz's Nobel-laureate authority lends the claim academic legitimacy in a science-oriented publication",
+          "distorted": "scope broadened from 'labor market' specifically to 'the American economy' as a whole",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.448787+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.scientificamerican.com/article/the-american-economy-is-rigged/",
+          "to_source": "https://thehill.com/opinion/finance/423828-economic-alarmists-tell-tall-tales-of-a-rigged-economy/",
+          "preserved": "the 'rigged' framing of the economic system as structurally unfair, attributed to Stiglitz",
+          "dropped": "Stiglitz's empirical grounding and specific structural analysis from the Scientific American piece",
+          "added": "dismissive 'alarmist' framing and the hyperbolic 'fattest of the fat cats' characterization to undercut the claim",
+          "distorted": "Stiglitz's analytical argument is recast as an extreme, contestable opinion to be refuted rather than engaged on evidence",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.139911+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        }
+      ],
+      "timeline_stats": {
+        "active_from": "1991-10-20",
+        "active_through": "2019-01-07",
+        "active_span_days": 9941,
+        "years_active": 28,
+        "years_with_activity": 9,
+        "instances_per_year": {
+          "1991": 1,
+          "2005": 1,
+          "2012": 1,
+          "2013": 1,
+          "2015": 3,
+          "2016": 1,
+          "2017": 1,
+          "2018": 1,
+          "2019": 1
+        },
+        "instances_per_year_by_role": {
+          "1991": {
+            "originator": 1
+          },
+          "2005": {
+            "early-amplifier": 1
+          },
+          "2012": {
+            "mass-amplifier": 1
+          },
+          "2013": {
+            "institutional-adoption": 1
+          },
+          "2015": {
+            "mass-amplifier": 2,
+            "early-amplifier": 1
+          },
+          "2016": {
+            "mass-amplifier": 1
+          },
+          "2017": {
+            "institutional-adoption": 1
+          },
+          "2018": {
+            "institutional-adoption": 1
+          },
+          "2019": {
+            "critic": 1
+          }
+        },
+        "peak_year": "2015",
+        "peak_year_count": 3,
+        "originator_to_mass_amplifier_days": 7626,
+        "originator_to_institutional_adoption_days": 8081,
+        "originator_to_critic_days": 9941,
+        "days_since_latest": 2692
+      },
+      "social_spread": [
+        {
+          "instance_id": "1c11e0df82e0",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mkblhobqsq2y",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-04-24T22:33:39.672347Z",
+          "post_text": "Amazon, Meta, and Microsoft are all planning huge layoffs.\n\nAmazon got $17.5B in federal tax breaks last year. Jeff Bezos is worth $271B.\n\nMeta saved $13.7B in taxes. Mark Zuckerberg is worth $231B.\n\nMicrosoft saved $12.5B last year. Its CEO is worth $1.3B.\n\nThis is what a rigged economy looks like.",
+          "matched_ngram": "rigged economy",
+          "likes": 12723,
+          "reposts": 5024,
+          "replies": 406,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "12,723 likes and 5,024 reposts from verified political figure rbreich with large following; presents canonical framing with specific data evidence; high engagement indicates substantial spread"
+        },
+        {
+          "instance_id": "45dc48bb36df",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mlvwswcb3y2y",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-05-15T18:15:14.704132Z",
+          "post_text": "Amazon, Meta, and Microsoft are all planning huge layoffs.\n\nAmazon got $17.5B in federal tax breaks last year. Jeff Bezos is worth $270B.\n\nMeta saved $13.7B in taxes. Mark Zuckerberg is worth $210B.\n\nMicrosoft saved $12.5B last year. Its CEO is worth $1.3B.\n\nThis is what a rigged economy looks like.",
+          "matched_ngram": "rigged economy",
+          "likes": 7546,
+          "reposts": 3096,
+          "replies": 280,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "7,546 likes and 3,096 reposts from same high-profile author; near-identical framing to idx 0; repeated posting amplifies the narrative"
+        },
+        {
+          "instance_id": "004d37f558fa",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/chrismurphyct.bsky.social/post/3mkqg6p3e7c2f",
+          "author_handle": "chrismurphyct.bsky.social",
+          "post_date": "2026-04-30T20:09:05.913Z",
+          "post_text": "Our current economy is rigged. It just is. \n\nA new report shows that 88 of the largest companies in America, including:\n\nAmazon \nCitigroup \nHaliburton  \nKohl's \nPalantir \nPayPal \nPG&E \nSouthwest Airlines \nTesla \nUnited Airlines \nDisney\n\npaid ZERO corporate income tax last year.",
+          "matched_ngram": "rigged economy",
+          "likes": 5272,
+          "reposts": 2414,
+          "replies": 301,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "5,272 likes and 2,414 reposts from verified political figure; presents canonical framing with extensive corporate examples; significant engagement"
+        },
+        {
+          "instance_id": "d898544cf80e",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/nationalnurses.bsky.social/post/3mjhgdxdjb22q",
+          "author_handle": "nationalnurses.bsky.social",
+          "post_date": "2026-04-14T12:52:53.065Z",
+          "post_text": "Nurses are the most trusted profession in the country. Why? Because we're not afraid to speak up for the truth! \n\nWe're on day ✌in Washington, D.C. speaking out against a rigged society that benefits the 1%, while the working class are squeezed more and more.",
+          "matched_ngram": "rigged against working",
+          "likes": 4055,
+          "reposts": 1064,
+          "replies": 95,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "4,055 likes and 1,064 reposts from institutional account (National Nurses Union); uses framing as organizational call-to-action; combines narrative with direct action"
+        },
+        {
+          "instance_id": "68384d49854a",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/kevinmkruse.bsky.social/post/3mm5qmrccuc23",
+          "author_handle": "kevinmkruse.bsky.social",
+          "post_date": "2026-05-18T20:45:43.645Z",
+          "post_text": "Imagine being a billionaire in an unequal society where the system has been massively rigged in your favor, watching as ordinary people fall further and further behind and get more and more desperate, and thinking a slightly higher tax rate is the worst possible thing that might ever happen to you.",
+          "matched_ngram": "system is rigged",
+          "likes": 2571,
+          "reposts": 569,
+          "replies": 76,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing in passing as rhetorical device; sarcastic tone aimed at billionaires rather than amplifying the narrative itself; lower engagement"
+        },
+        {
+          "instance_id": "448cd493e3d7",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mjffgqn3en27",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-04-13T17:31:08.953397Z",
+          "post_text": "If you want to understand why our economy is rigged for the super rich, look at this graph.",
+          "matched_ngram": "rigged economy",
+          "likes": 2145,
+          "reposts": 820,
+          "replies": 61,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "2,145 likes and 820 reposts from high-profile political figure rbreich; frames the narrative as central explanation; consistent with broader messaging pattern"
+        },
+        {
+          "instance_id": "58b0f0194de6",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mleazwfv3k25",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-05-08T17:30:11.837715Z",
+          "post_text": "The most powerful force in American politics today is anti-establishment fury at a rigged economic system.\n\nTo counter Trump’s culture wars and fake populism, progressives must mount a real battle against economic elites who have rigged the game — and shafted millions of working class people.",
+          "matched_ngram": "rigged against working",
+          "likes": 2061,
+          "reposts": 588,
+          "replies": 71,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "2,061 likes and 588 reposts from rbreich; explicitly positions rigged economy as primary counter-narrative to Trump; calls for political mobilization around framing"
+        },
+        {
+          "instance_id": "75bac73d133a",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3lbgb6oikjy2p",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2024-11-21T01:00:01.425Z",
+          "post_text": "\"This is the truth. This is what's happening, and this is what we have to stand against.\"\n\nI spoke with PoliticsGirl about the dangers America faces, how 45 years of an increasingly rigged economy brought us to this moment, and where we go from here.",
+          "matched_ngram": "rigged economy",
+          "likes": 2093,
+          "reposts": 403,
+          "replies": 55,
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "dated 2024-11-21, earlier than most posts in batch; from high-profile source (rbreich); frames narrative as historical explanation spanning 45 years; contributed to normalization before 2026 uptake"
+        },
+        {
+          "instance_id": "75826f2f2482",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mkssuvqw4j23",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-05-01T19:01:14.246698Z",
+          "post_text": "If you want to understand why our economy is rigged for the super rich, look at this graph.",
+          "matched_ngram": "rigged economy",
+          "likes": 1648,
+          "reposts": 689,
+          "replies": 42,
+          "amplifier_role": "mention",
+          "role_evidence": "near-identical text to idx 5; routine repetition of framing with lower engagement; incremental amplification"
+        },
+        {
+          "instance_id": "43093a8c2aef",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mjde2nvxxd2q",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-04-12T22:01:14.262335Z",
+          "post_text": "For nearly a half century, trickle-down economic policies have resulted in a tax system rigged in favor of the rich. This is not only bad for our economy, but it’s leading to a billionaire takeover of our democracy as well. Watch. https://www.youtube.com/watch?v=wkiO0_uSJAk",
+          "matched_ngram": "rigged economy",
+          "likes": 1577,
+          "reposts": 458,
+          "replies": 68,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "1,577 likes and 458 reposts from rbreich; connects rigged economy framing to democracy threat; includes video link extending reach; dated early in narrative spread"
+        },
+        {
+          "instance_id": "dedeabcaea41",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/jeremycorbyn.bsky.social/post/3mlm3bn74wc2e",
+          "author_handle": "jeremycorbyn.bsky.social",
+          "post_date": "2026-05-11T20:08:26.117Z",
+          "post_text": "This country might be about to have its 6th Prime Minister in 7 years. \n\nWhy? Because they’ve all failed to take on a rigged economic system that enriches the few at the expense of us all.\n\nPeople want a society where children don’t go hungry. That is really not too much to ask.",
+          "matched_ngram": "system is rigged",
+          "likes": 1295,
+          "reposts": 337,
+          "replies": 42,
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "1,295 likes and 337 reposts from verified international political figure (Jeremy Corbyn); applies framing to UK context; extends narrative beyond US audience"
+        },
+        {
+          "instance_id": "e03da9d404de",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/chrismurphyct.bsky.social/post/3mgpwb75bwk2t",
+          "author_handle": "chrismurphyct.bsky.social",
+          "post_date": "2026-03-10T17:43:23.482Z",
+          "post_text": "Our politics are fundamentally corrupt. And our economy is rigged against working people because of this corruption.",
+          "matched_ngram": "rigged against working",
+          "likes": 1075,
+          "reposts": 302,
+          "replies": 37,
+          "amplifier_role": "mention",
+          "role_evidence": "explicitly states the framing but in passing within broader political corruption argument; lower engagement; secondary framing"
+        },
+        {
+          "instance_id": "e414f62aff88",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/atrupar.com/post/3mmck745nbc22",
+          "author_handle": "atrupar.com",
+          "post_date": "2026-05-20T18:34:01.505Z",
+          "post_text": "Rep. Analilia Mejia: \"The erosion of voting rights is coupled with a rigged economy, because the way the prevent the rules from coming for them, the way they can keep the grift going, is ensuring we do not have a political voice to stop them. That's the game.\"",
+          "matched_ngram": "rigged economy",
+          "likes": 1021,
+          "reposts": 316,
+          "replies": 19,
+          "amplifier_role": "mention",
+          "role_evidence": "quotes political representative using framing; institutional voice but limited engagement; passes the narrative without original amplification"
+        },
+        {
+          "instance_id": "43fe60dc551d",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/markjacob.bsky.social/post/3mldx5ziyfs2p",
+          "author_handle": "markjacob.bsky.social",
+          "post_date": "2026-05-08T14:33:31.930Z",
+          "post_text": "When the voters approve a map to help Democrats, it's nullified. When Republican legislators approve a map to help Republicans without going to the voters, it's allowed.\nThe system is rigged to help the fascists.",
+          "matched_ngram": "system is rigged",
+          "likes": 966,
+          "reposts": 354,
+          "replies": 26,
+          "amplifier_role": "mention",
+          "role_evidence": "uses 'rigged' language but applies it to electoral/voting rights system specifically, not economic system; separate domain despite similar terminology"
+        },
+        {
+          "instance_id": "090294084c19",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/whstancil.bsky.social/post/3mm454vlpbs22",
+          "author_handle": "whstancil.bsky.social",
+          "post_date": "2026-05-18T05:24:10.443Z",
+          "post_text": "I mean I know it’s normal now. But government officials lying and saying the elections have all been rigged is functionally treason against the constitutional system and should be punished as such.",
+          "matched_ngram": "system is rigged",
+          "likes": 1078,
+          "reposts": 207,
+          "replies": 39,
+          "amplifier_role": "critic",
+          "role_evidence": "rejects rigged-system framing when applied to elections; explicitly condemns the rhetoric as 'treason'; argues against the framing even if not directly addressing economic rigging"
+        },
+        {
+          "instance_id": "9ea5fab02a58",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/warren.senate.gov/post/3mhxooymk322q",
+          "author_handle": "warren.senate.gov",
+          "post_date": "2026-03-26T13:14:26.002Z",
+          "post_text": "Multi-millionaires and billionaires keep getting richer and richer while working families get squeezed by a rigged economy.\n\nNo more.\n\nIt’s time for a wealth tax — and for our government to start working for working people.",
+          "matched_ngram": "rigged economy",
+          "likes": 990,
+          "reposts": 217,
+          "replies": 50,
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "posted from Senator Elizabeth Warren's official account (warren.senate.gov); official government use of framing; 990 likes and 217 reposts; paired with policy proposal"
+        },
+        {
+          "instance_id": "098e88334928",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/katiephang.bsky.social/post/3mlo4p7pygk2g",
+          "author_handle": "katiephang.bsky.social",
+          "post_date": "2026-05-12T15:39:14.970Z",
+          "post_text": "@repstansbury.bsky.social: \"The system was designed to protect the wealthy; it didn’t fail.  It was rigged from the beginning when those mansions were built.  The system was built on inequality and built on exploiting people.  It is written into the landscape here in Palm Beach and in New Mexico.\"",
+          "matched_ngram": "system is rigged",
+          "likes": 844,
+          "reposts": 275,
+          "replies": 17,
+          "amplifier_role": "mention",
+          "role_evidence": "quotes activist framing; passes narrative along but doesn't independently amplify; moderate engagement; secondary voice"
+        },
+        {
+          "instance_id": "c75ca025d131",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rbreich.bsky.social/post/3mjl4xa3xwo2x",
+          "author_handle": "rbreich.bsky.social",
+          "post_date": "2026-04-16T00:15:20.832049Z",
+          "post_text": "For nearly a half century, trickle-down economic policies have resulted in a tax system rigged in favor of the rich. This is not only bad for our economy, but it’s leading to a billionaire takeover of our democracy as well. Watch. https://www.youtube.com/watch?v=wkiO0_uSJAk",
+          "matched_ngram": "rigged economy",
+          "likes": 807,
+          "reposts": 230,
+          "replies": 15,
+          "amplifier_role": "mention",
+          "role_evidence": "near-identical to idx 9; routine reposting with lower engagement; incremental mention"
+        },
+        {
+          "instance_id": "9dd44d58df59",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/warren.senate.gov/post/3mjwluxgwnk2a",
+          "author_handle": "warren.senate.gov",
+          "post_date": "2026-04-20T13:41:48.383Z",
+          "post_text": "While the ultra-rich get even richer, families are getting squeezed by a rigged economy.\n \nIt's time for the government to stop listening to the richest of the rich and start working for working people.",
+          "matched_ngram": "rigged economy",
+          "likes": 709,
+          "reposts": 213,
+          "replies": 37,
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "from Senator Warren's official account; official government adoption of framing; 709 likes and 213 reposts; policy-forward messaging"
+        },
+        {
+          "instance_id": "aa172dfaf3f8",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/rachelgilmore.bsky.social/post/3mi7hpkrfs22u",
+          "author_handle": "rachelgilmore.bsky.social",
+          "post_date": "2026-03-29T15:30:46.752Z",
+          "post_text": "This speech is really good. \n\nHe stays firmly focused on how we’re all struggling because of the ultra-wealthy hoarding profits and the monopolies on our groceries, cellphone and internet, etc.\n\n“This is more than a rigged economy. It’s a war on working people,” Lewis said.",
+          "matched_ngram": "rigged economy",
+          "likes": 492,
+          "reposts": 105,
+          "replies": 11,
+          "amplifier_role": "mention",
+          "role_evidence": "quotes activist speech using framing; endorsement and amplification but through secondary reporting; 492 likes and 105 reposts; passes narrative without originating"
+        },
+        {
+          "instance_id": "b25a8d9a0409",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/bexrousse.bsky.social/post/3k7ct6kkh5d2m",
+          "author_handle": "bexrousse.bsky.social",
+          "post_date": "2023-09-13T23:54:50.474Z",
+          "post_text": "Elwood is helpfully helping me edge my Cat Tarot deck. 🙃😼 #TarotSky",
+          "matched_ngram": "deck is stacked",
+          "likes": 12,
+          "reposts": 1,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "unrelated tarot post; no connection to narrative framing"
+        },
+        {
+          "instance_id": "4d9b58504da0",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/quiz.baby/post/3lipi4creqs2d",
+          "author_handle": "quiz.baby",
+          "post_date": "2025-02-21T18:54:18.288Z",
+          "post_text": "The people who count down to midterms, count the days of the first real rigged election. They already working on it. Are you already working against?",
+          "matched_ngram": "rigged against working",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "critic",
+          "role_evidence": "applies 'rigged' language to election process (not economy); argues system is being rigged in real-time; distinct framing about electoral integrity rather than economic system"
+        },
+        {
+          "instance_id": "94ecf656566f",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/laborradionet.bsky.social/post/3lw5wgfju3c2m",
+          "author_handle": "laborradionet.bsky.social",
+          "post_date": "2025-08-11T23:15:16.114Z",
+          "post_text": "The Rick Smith Show 8-11-2025\r\n\r\nOn The Rick Smith Show, Hallie Shoffner, a sixth-generation Arkansas farmer who recently lost her family farm and is now running for U.S. Senate shares her personal story of hardship and determination, vowing to fight for working people against a rigged economic syst",
+          "matched_ngram": "rigged against working",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "agricultural radio show mention of framing; uses narrative in passing; minimal engagement; routine mention"
+        },
+        {
+          "instance_id": "c14e664396c7",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/yurrpost.bsky.social/post/3mgnj2x5dgm2b",
+          "author_handle": "yurrpost.bsky.social",
+          "post_date": "2026-03-09T18:41:54.671570Z",
+          "post_text": "I think that awakening is partly fueled by the internet, but also partly because people are getting tired of being told 'you're just not working hard enough' when the system is rigged against them",
+          "matched_ngram": "rigged against working",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing conversationally to explain broader phenomenon; minimal engagement; passing reference"
+        },
+        {
+          "instance_id": "22d0666a4b8c",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/blakes7bot.torpidity.net/post/3mi2mtcyqzr2r",
+          "author_handle": "blakes7bot.torpidity.net",
+          "post_date": "2026-03-27T17:19:02.790094Z",
+          "post_text": "Series D, Episode 11 - Orbit\r\n\r\nVILA:  It certainly takes some getting used to.\r\nAVON:  What does?\r\nVILA:  Knowing we've finally cracked it. All I want now is to find a way of living forever.\r\nAVON:  Hmmm.\r\n\r\nhttps://blake.torpidity.net/m/411/178",
+          "matched_ngram": "deck is stacked",
+          "likes": 9,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "Blake's 7 episode transcript; no relation to narrative"
+        },
+        {
+          "instance_id": "2e1a602c7745",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/johnlcole.bsky.social/post/3miudjuyetk2h",
+          "author_handle": "johnlcole.bsky.social",
+          "post_date": "2026-04-06T22:41:55.679Z",
+          "post_text": "“A secretary shouldn’t pay a higher tax rate than the CEO,” Boyle said. “The current tax code is rigged against working people and the middle class. Our proposal finally changes this and makes billionaires pay their fair share.”",
+          "matched_ngram": "rigged against working",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "quotes political figure using framing; policy-focused; minimal engagement; secondary voice"
+        },
+        {
+          "instance_id": "d2eba317321a",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/bodyfag.bsky.social/post/3mjfxzrwmbk2p",
+          "author_handle": "bodyfag.bsky.social",
+          "post_date": "2026-04-13T23:03:59.709Z",
+          "post_text": "hi everyone 💛 i go by Declan/Deck. i'm a 29yo transmasc genderqueer bear (he/they) & this is where i post thirst traps & repost my queer friends & loved ones' thirst traps as well ✨",
+          "matched_ngram": "deck is stacked",
+          "likes": 9,
+          "reposts": 1,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "bio post; no connection to narrative"
+        },
+        {
+          "instance_id": "e89b6f265d99",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/whpshw.bsky.social/post/3mjznghpmik2o",
+          "author_handle": "whpshw.bsky.social",
+          "post_date": "2026-04-21T18:47:28.834Z",
+          "post_text": "\"Our top messages were Democrats as fighters against a rigged economy on behalf of an inclusive coalition of voters.\"",
+          "matched_ngram": "rigged economy",
+          "likes": 4,
+          "reposts": 1,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "quotes campaign messaging using framing; low engagement; secondary reporting of strategy rather than amplification"
+        },
+        {
+          "instance_id": "cb0ee9920ae2",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/civicroot.bsky.social/post/3mko7qgd55c2l",
+          "author_handle": "civicroot.bsky.social",
+          "post_date": "2026-04-29T23:08:25.039Z",
+          "post_text": "Support Abdul:\n\nsecure.actblue.com/donate/em-ms...",
+          "matched_ngram": "rigged against working",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "donation link with minimal context; no meaningful use of framing; minimal engagement"
+        },
+        {
+          "instance_id": "e439d556e604",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/samnoack.bsky.social/post/3ml47r4xhpc26",
+          "author_handle": "samnoack.bsky.social",
+          "post_date": "2026-05-05T12:46:05.113Z",
+          "post_text": "The one thing I've learned about the USA economy is that once you have billions of dollars, you basically can't lose. The system is rigged to favor billion dollar plans at everyone's expense.\n\nA bunch of normal people pooling $9 billion together to wield such unfair power wasn't part of the plan tho",
+          "matched_ngram": "rigged economy",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing conversationally about systemic wealth advantage; personal observation; minimal engagement"
+        },
+        {
+          "instance_id": "38a4737803ab",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/russincheshire.bsky.social/post/3mldijijmv222",
+          "author_handle": "russincheshire.bsky.social",
+          "post_date": "2026-05-08T10:11:30.632Z",
+          "post_text": "On the left, we blame an economic system that is clearly dysfunctional and corrupt. Rigged markets. Vampire capitalists. Offshore criminality. Weak regulation. Bought politics. Supine leadership.\n\nOn the right, they blame brown people locked in a motel in Clacton.\n\nWho knows who's right?",
+          "matched_ngram": "system is rigged",
+          "likes": 116,
+          "reposts": 11,
+          "replies": 1,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing as part of broader UK political comparison; sarcastic tone questioning the framing's validity; 116 likes and 11 reposts indicate low spread for intent"
+        },
+        {
+          "instance_id": "87bbb78ba0cd",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/tnps47.bsky.social/post/3mlg2v3j2322z",
+          "author_handle": "tnps47.bsky.social",
+          "post_date": "2026-05-09T10:45:26.485Z",
+          "post_text": "Almost like the whole system is corrupt and rigged.",
+          "matched_ngram": "system is rigged",
+          "likes": 5,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "brief passing use of framing; minimal engagement; routine mention"
+        },
+        {
+          "instance_id": "c755591eedde",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/theopinionatednpc.bsky.social/post/3mllgt7yqtk2s",
+          "author_handle": "theopinionatednpc.bsky.social",
+          "post_date": "2026-05-11T14:02:27.679Z",
+          "post_text": "You are blissfully ignorant to the corruption that is the electoral college and the Supreme Court. \n\nDoubly so when Republikkklans are actively stripping away power from the VRA to weaken the vote of minority communities.  \n\nWhat's the point in voting when the system is rigged anyway?",
+          "matched_ngram": "system is rigged",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing in rhetorical question about electoral system; applies to voting rather than economic system; minimal engagement"
+        },
+        {
+          "instance_id": "8e4db907440c",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/votekiper.org/post/3mlp4ezawfs2h",
+          "author_handle": "votekiper.org",
+          "post_date": "2026-05-13T01:06:12.379Z",
+          "post_text": "Until the dems fight to pay the reps, nothing will change. All the hard work doesn’t matter if the game is rigged against you. You can’t have a party of the working class if the working class can’t afford to serve.",
+          "matched_ngram": "rigged against working",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing about working-class political representation; minimal engagement; passing reference"
+        },
+        {
+          "instance_id": "a6006c0c1975",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/unityinthelight.bsky.social/post/3mlsnbt55ws2a",
+          "author_handle": "unityinthelight.bsky.social",
+          "post_date": "2026-05-14T10:46:37.757Z",
+          "post_text": "it’s the parallel economy and sound money forces breaking through the rigged surface.\n\nThe reset isn’t coming.  \nIt’s already pricing in.\n\nEyes wide open. The quiet ones are winning. 🔥\n\nEXPERIENCE \"THE JOURNEY\"\n\nrumble.com/playlists/Hk...",
+          "matched_ngram": "rigged economy",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "uses 'rigged' language in alternative economic framing (sound money, parallel economy); different ideological context; minimal engagement"
+        },
+        {
+          "instance_id": "087ad0cf92f2",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/tastromo.bsky.social/post/3mlwjnw5y7s2a",
+          "author_handle": "tastromo.bsky.social",
+          "post_date": "2026-05-15T23:52:27.939Z",
+          "post_text": "I don’t understand UBI in a rigged neoliberal economy. How is it meant to work?\n\nSay we are given $500 a week. Won’t private businesses just go “yippee it’s payday for us” and raise their prices hugely?\n\nDoes anyone think Woolworths and Cole’s won’t double their prices overnight?",
+          "matched_ngram": "rigged economy",
+          "likes": 8,
+          "reposts": 0,
+          "replies": 3,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing as premise for UBI criticism; skeptical application of narrative; minimal engagement; secondary voice"
+        },
+        {
+          "instance_id": "1fc098279f2e",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/dicoach.bsky.social/post/3mm5c6vhxsc2p",
+          "author_handle": "dicoach.bsky.social",
+          "post_date": "2026-05-18T16:27:25.875Z",
+          "post_text": "Black Childhood Is Not Safe in This Country open.substack.com/pub/jackiesa... \"And before they even hit middle school, the American Psychological Association shows the deck is already stacked: Black children are seen as older, less innocent,",
+          "matched_ngram": "deck is stacked",
+          "likes": 8,
+          "reposts": 4,
+          "replies": 2,
+          "amplifier_role": "mention",
+          "role_evidence": "article link with framing reference; minimal engagement; secondary distribution"
+        },
+        {
+          "instance_id": "6fc11700e21b",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/repemilyrandall.bsky.social/post/3mma5ov3y4c24",
+          "author_handle": "repemilyrandall.bsky.social",
+          "post_date": "2026-05-19T19:44:52.862Z",
+          "post_text": "As costs go up — less and less people believe the American dream is still possible because the system is rigged against us.",
+          "matched_ngram": "system is rigged",
+          "likes": 11,
+          "reposts": 1,
+          "replies": 3,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing conversationally about American dream; from political figure but minimal engagement; passing reference"
+        },
+        {
+          "instance_id": "ecc607add3d7",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/3shepsbuckeye.bsky.social/post/3mmbxhzoqms2r",
+          "author_handle": "3shepsbuckeye.bsky.social",
+          "post_date": "2026-05-20T12:58:59.815Z",
+          "post_text": "It amazes me that people still support a gop that is openly stealing billions of dollars our tax money . Taking away all of our rights. Giving more money and power to the oligarchs.\nTHEY STILL VOTE for 🍊💩 picks . Are they really that foolish or is Ellen musk have the system rigged?",
+          "matched_ngram": "system is rigged",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "amplifier_role": "mention",
+          "role_evidence": "uses framing in political critique; minimal engagement; routine mention"
+        },
+        {
+          "instance_id": "9251bd0f290b",
+          "platform": "bluesky",
+          "post_url": "https://bsky.app/profile/savornt.bsky.social/post/3mme6em5qxc2w",
+          "author_handle": "savornt.bsky.social",
+          "post_date": "2026-05-21T10:07:40.634Z",
+          "post_text": "It's amazing to look at Americans bitch and moan about how the government is stealing their money, and then sit there going \"why shouldn't I be allowed to gamble on a rigged system! I should be allowed to fall for any scam i want!\"\n\nTaxes = bad. Gambling = good.\n\nFucking moron",
+          "matched_ngram": "system is rigged",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 2,
+          "amplifier_role": "mention",
+          "role_evidence": "mentions 'rigged system' in sarcastic criticism of public attitudes; dismissive framing; minimal engagement"
+        }
+      ],
+      "social_search_performed": true,
+      "social_search_notes": "Searched 5 queries on Bluesky (canonical phrase + diagnostic n-grams). Found 674 unique posts; sampled 40 for role classification."
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "single-origin",
+      "first_attested_date": "-0133-01-01",
+      "first_attested_source": "https://classics.mit.edu/Plutarch/tiberius.html",
+      "attestation_confidence": 0.9,
+      "primary_origin_id": "dc2b06680637",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "dc2b06680637",
+          "date": "-0133-01-01",
+          "source_url": "https://classics.mit.edu/Plutarch/tiberius.html",
+          "source_title": "Life of Tiberius Gracchus (Plutarch's Parallel Lives, preserving Tiberius's speech of 133 BCE)",
+          "author": "Tiberius Sempronius Gracchus (speech preserved by Plutarch)",
+          "lexical_form_seen": "Wealthy landowners use legal mechanisms and political power to illegally seize public land from poor citizens; the law itself (500 iugera limit) is systematically ignored by elites who reclaim land 'under other people's names'; free laboring farmers are displaced and replaced with slave labor capital, while soldiers who fight for the state own nothing",
+          "exact_quote": "\"The rich men of the neighbourhood contrived to get these lands again into their possession, under other people's names\"",
+          "confidence": 0.9,
+          "evidence": "Tiberius Gracchus's 133 BCE speech (preserved by Plutarch) is an explicit, detailed articulation of the exact structural claim: wealthy elites use legal manipulation and political power to circumvent rules designed to protect workers/small farmers, allowing land (capital) to be concentrated upward at the expense of the laboring class. The mechanism is clear — 'rich men contrived to get lands into their possession under other people's names,' systematically violating the 500-iugera cap, using their political power to block enforcement. The result is worker dispossession: 'the poor, who were thus deprived of their farms, were no longer able to serve in war.' Plutarch records Tiberius explicitly arguing that the economic and legal system, as operated by elites, structurally transfers public assets (value) from the laboring citizen-farmer class to the landholding capital class. This is a more complete and explicit version of the structural claim than either Amos or Hesiod — naming ownership, law/rules, and political influence as the instruments. NOTE: 133 BCE is later than both Amos and Hesiod but substantially earlier than the proposed 0350-01-01 date. However, since Amos (~760 BCE) is even earlier, Tiberius Gracchus is better categorized as an intermediate amplifier/restater rather than originator.",
+          "amplifier_role": "unknown",
+          "role_evidence": "Tiberius Gracchus (133 BCE) does not originate the structural claim — Amos and Hesiod precede him by 5–6 centuries — but he is the clearest pre-0350-01-01 political articulaton of it, moving from prophetic moral critique to a legislative and structural-causal diagnosis. He names the specific instruments (legal manipulation, land law, political power, slave-capital substitution for free labor) and explicitly connects them to the systematic dispossession of the laboring class. He is an amplifier who makes the structural claim fully explicit in political-reform language."
+        },
+        {
+          "instance_id": "d49a5d9b911f",
+          "date": "-0700-01-01",
+          "source_url": "https://languagemuseum.org/exhibits/the-power-of-poetry-exhibit/poetry-from-greece/works-and-days/",
+          "source_title": "Works and Days (Erga kai Hemerai)",
+          "author": "Hesiod",
+          "lexical_form_seen": "Aristocratic landlords dominate the Greek-speaking world; small farmers struggle to survive; 'bribe-devouring kings' (δωροφάγοι βασιλεῖς) collude with property-owners against laboring farmers; the judicial and political system is captured by those with property to reward those who labor little over those who labor much",
+          "exact_quote": "\"Hesiod uses a particular instance in his life...as a springboard into a discussion of the injustice of aristocratic landowners\"",
+          "confidence": 0.82,
+          "evidence": "Hesiod's Works and Days (~700 BCE) opens with a direct complaint about 'bribe-devouring kings' who serve the property-owning class at the expense of laboring farmers. Hesiod explicitly describes a world 'dominated by aristocratic landlords, so that small farmers such as himself had to struggle to survive.' The poem diagnoses a structural distortion: those who own property can influence the legal/judicial system ('the agora,' the courts, the 'bribe-swallowing lords') against those who only have their labor. Hesiod's description of aristocratic lords who 'labor little and receive much' while farmers 'labor much and get little' (echoed in Aristotle's later paraphrase) captures the labor-to-capital value transfer. The mechanism named is the capture of legal and political institutions (judges, courts) by property owners — precisely the 'instrument' in the structural claim (design of rules and political influence). However, unlike Amos, Hesiod stops short of diagnosing a complete systemic/structural causal mechanism and focuses more on moral-ethical corruption; his structural awareness is real but less systematically developed.",
+          "amplifier_role": "originator",
+          "role_evidence": "Hesiod (~700 BCE) predates the proposed 0350-01-01 date by roughly 350 years and is the earliest Greek-tradition articulation of the structural claim. He names ownership concentration (aristocratic landlords), political/judicial capture (bribe-devouring kings), and the resulting disadvantage of laboring farmers relative to property-owning elites. His confidence rating is slightly lower than Amos because his framing is more ethical-moral than structural-causal, and because 'capital' in his text means landed property and political office rather than productive capital in the modern sense."
+        },
+        {
+          "instance_id": "0bd7fec572b7",
+          "date": "-0740-01-01",
+          "source_url": "https://scielo.org.za/scielo.php?script=sci_arttext&pid=S2074-77052018000100029",
+          "source_title": "Isaiah 5: A Prophetic Critique of Economic Proportion (Book of Isaiah)",
+          "author": "Prophet Isaiah of Jerusalem",
+          "lexical_form_seen": "Landowners add field to field (land concentration); elites control taxation and market prices through political connection to the royal elite; rents exacted at each stage of production undermine small farmers; urban absentee landowners dictate market resources against rural hired labor",
+          "exact_quote": "\"This also increased the social stratification between the urban-based absentee landowners and the rural-based hired labour force\"",
+          "confidence": 0.88,
+          "evidence": "Isaiah 5 (~740 BCE) contains the famous 'woe' oracle against those 'who join house to house, who add field to field, until there is no more room' (Isaiah 5:8). Scholarly analysis of the socioeconomic context shows this addresses a specific structural mechanism: the urban-based absentee landowning elite, politically connected to the royal court, used taxation and rental policy to extract rents at each phase of agricultural production, undermining the self-sufficiency of small farmers and concentrating wealth. The article in Scielo explicitly identifies that 'rents or taxes could be exacted for each segment of the process of production,' that 'this had the effect of undermining the self-sufficiency of small farmers,' and that 'the urban elite [could] dictate market resources and prices, most probably encouraged or even aided by the trade and taxation policies controlled by the royal elite to which they belonged.' This is the same structural claim: elite ownership + political influence + designed tax/rent rules → systematic value transfer from laboring farmers to absentee capital owners. The instrument of 'the design of rules, ownership, taxation, and political influence' is present and explicitly causal.",
+          "amplifier_role": "unknown",
+          "role_evidence": "Isaiah is a near-contemporary of Amos (~740 BCE) and articulates the same structural claim in a more explicitly political-economic frame, emphasizing the collusion between landowning capital and state/royal power in designing the taxation and pricing rules that transfer value from workers to owners. He is an independent co-originator rather than a later amplifier of Amos."
+        },
+        {
+          "instance_id": "c8222728ff77",
+          "date": "-0760-01-01",
+          "source_url": "https://www.biola.edu/blogs/good-book-blog/2015/social-justice-in-amos",
+          "source_title": "Book of Amos (Hebrew Bible / Old Testament)",
+          "author": "Prophet Amos of Tekoa",
+          "lexical_form_seen": "Elites use courts, rigged weights, grain-taxes, and debt-slavery to dispossess peasants and transfer wealth upward; the design of economic and judicial institutions structurally bleeds the laboring poor for the benefit of landowners and merchants",
+          "exact_quote": "\"By these business practices and economic structures, the members of the upper classes were guilty of taking property that rightfully belonged to others\"",
+          "confidence": 0.95,
+          "evidence": "The Book of Amos (~760–750 BCE, active during the reign of Jeroboam II) is the strongest pre-0350 BCE articulation of the exact structural claim. Amos directly names the instruments: (1) rigged market scales and false weights (Amos 8:5–6) used by merchant-owners to extract value from workers/buyers; (2) the courts ('the gate') systematically manipulated by elites against the poor (Amos 5:10–12); (3) grain-rent levied on peasants who farm land owned by elites (Amos 5:11); (4) debt-slavery as the mechanism by which dispossessed workers are absorbed as capital assets ('selling the righteous for silver, and the needy for a pair of sandals,' Amos 2:6). Scholarly analysis explicitly frames this as 'existing economic structures' by which 'the ruling class was enriching itself by exploiting the poor' — not merely personal moral failing but a designed institutional system. Amos names all four structural instruments in the target claim: rules (courts/law), ownership (land concentration), taxation (grain-rent), and political influence (monarchy aligned with wealthy, priests serving the crown). The causal mechanism — institutions transferring value from labor/peasants to landowning capital class — is unmistakably present. This is not merely a 'related idea'; it is the same structural claim articulated in a different vocabulary (covenant-prophetic rather than political-economic).",
+          "amplifier_role": "originator",
+          "role_evidence": "Amos (~760 BCE) predates the proposed earliest date of 0350-01-01 by approximately four centuries and is the first known writer to articulate the full structural mechanism — not just inequality as outcome, but the specific instruments (designed rules, ownership, taxation, judicial capture, political elite alignment) by which owners of land/capital systematically extract value from workers. His oracles name all the structural components with remarkable specificity and connect them causally to worker dispossession."
+        },
+        {
+          "instance_id": "4c292100f38c",
+          "date": "0350-01-01",
+          "source_url": "https://classics.mit.edu/Aristotle/politics.1.one.html",
+          "source_title": "Politics (Politika)",
+          "author": "Aristotle",
+          "lexical_form_seen": "masters vs. natural slaves; household economy; those who rule by virtue of owning versus those who serve by necessity of their condition",
+          "exact_quote": "a piece of property is a tool for action separate from its owner",
+          "confidence": 0.62,
+          "evidence": "Aristotle's Politics theorizes the oikos as a hierarchy in which ownership of property confers the right to command; the propertyless serve those who own. While Aristotle naturalizes this inequality rather than critiquing it, his framework is the earliest systematic articulation that ownership structurally positions one class over another in the economic order — the same structural claim, argued from the master's perspective. Vocabulary is entirely distinct from diagnostic n-grams: 'master/slave,' 'oikonomia,' 'natural rule.'",
+          "amplifier_role": "originator",
+          "role_evidence": "Chronologically earliest systematic text articulating that ownership of productive property confers structural command over laborers within an economic institution."
+        },
+        {
+          "instance_id": "87eb4daa0fb9",
+          "date": "1776-03-09",
+          "source_url": "https://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book01/ch08.htm",
+          "source_title": "An Inquiry into the Nature and Causes of the Wealth of Nations, Book I, Ch. 8",
+          "author": "Adam Smith",
+          "lexical_form_seen": "masters vs. workmen; tacit combination of masters; law authorises employers' combinations while prohibiting workers'; masters can hold out longer than workmen",
+          "exact_quote": "Masters are always and everywhere in a sort of tacit, but constant and uniform combination, not to raise the wages of labour above their actual rate.",
+          "confidence": 0.96,
+          "evidence": "Smith explicitly observes that the law 'authorises, or at least does not prohibit' masters' wage-suppression combinations while prohibiting workers' combinations; that masters can survive without workers far longer than workers can without masters; and that 'whenever the legislature attempts to regulate the differences between masters and their workmen, its counsellors are always the masters.' This is the structural claim — design of rules transfers value from labor to capital — argued in Enlightenment political-economy vocabulary, not diagnostic n-grams.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Smith's Wealth of Nations was the foundational text of modern political economy and gave the structural claim its first rigorous empirical articulation in mainstream economic thought."
+        },
+        {
+          "instance_id": "7d433413d20a",
+          "date": "1825-01-01",
+          "source_url": "https://www.marxists.org/reference/subject/economics/hodgskin/labour-defended.htm",
+          "source_title": "Labour Defended Against the Claims of Capital",
+          "author": "Thomas Hodgskin",
+          "lexical_form_seen": "artificial vs. natural property rights; capitalists' unproductive claim on the whole produce; 'legalized robbery'; state suppresses workers' natural right to the full product of their labor",
+          "exact_quote": "the state actively suppresses the natural right of laborers to the full product of their labor, in favor of the artificial right of property established by violence",
+          "confidence": 0.94,
+          "evidence": "Hodgskin used Ricardo's labor theory of value to argue that 'artificial' property rights created by legislation allow owners of capital to claim an unearned share of workers' production. He explicitly identified state-enforced property rules as the mechanism of transfer — precisely the 'instrument' in the structural claim. Vocabulary: 'natural vs. artificial right,' 'unproductiveness of capital,' 'whole produce of labour.' Entirely distinct from diagnostic n-grams.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Hodgskin was the first Anglophone writer to center the structural claim on the legal-institutional design of property rights as the causal mechanism of worker disadvantage, directly influencing Marx."
+        },
+        {
+          "instance_id": "9006942d373b",
+          "date": "1848-02-21",
+          "source_url": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",
+          "source_title": "Manifesto of the Communist Party",
+          "author": "Karl Marx and Friedrich Engels",
+          "lexical_form_seen": "bourgeoisie accumulates wealth by exploiting the proletariat; ruling class regulates those who cannot work; history of class struggle; means of production owned by one class used to appropriate surplus from another",
+          "exact_quote": "The bourgeoisie (ruling class) accumulate wealth and power by exploiting the proletariat (workers)",
+          "confidence": 0.98,
+          "evidence": "The Manifesto is the founding mass-circulation text arguing that the design of capitalist property relations structurally transfers value from those who labor to those who own, and that the state, law, and ideology reinforce this transfer. Vocabulary: 'means of production,' 'bourgeoisie/proletariat,' 'class struggle,' 'exploitation.' No overlap with diagnostic n-grams.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The Manifesto brought the structural claim to a global mass audience for the first time and established the vocabulary for a century of subsequent articulations."
+        },
+        {
+          "instance_id": "f95930ce4efd",
+          "date": "1867-09-14",
+          "source_url": "https://www.marxists.org/archive/marx/works/1867-c1/",
+          "source_title": "Das Kapital, Vol. I",
+          "author": "Karl Marx",
+          "lexical_form_seen": "surplus value; workers paid the value of their labor-power, not the value they produce; capitalists appropriate the surplus; exploitation embedded in the wage relation itself",
+          "exact_quote": "workers produce value but capitalists control how much of it is returned to them in wages",
+          "confidence": 0.99,
+          "evidence": "Capital develops the structural claim with full rigor: the wage relation is designed such that the worker is paid the reproduction cost of their labor-power while the capitalist appropriates all surplus value produced beyond that cost. The entire economic system — property law, the wage contract, money, the state — is shown to systematically transfer value from labor to capital. No diagnostic n-grams used; vocabulary is 'surplus value,' 'labor-power,' 'means of production,' 'valorization.'",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Das Kapital is the most elaborated academic statement of the structural claim and has grounded nearly every subsequent scholarly and political articulation of it."
+        },
+        {
+          "instance_id": "15c2f9e04d29",
+          "date": "1879-01-01",
+          "source_url": "https://www.americanyawp.com/reader/16-capital-and-labor/henry-george-progress-and-poverty-selections-1879/",
+          "source_title": "Progress and Poverty: An Inquiry into the Cause of Industrial Depressions and of Increase of Want with Increase of Wealth",
+          "author": "Henry George",
+          "lexical_form_seen": "monopoly ownership of land; rent captures all gains from progress; workers denied fruits of their labor by landowners' control of access; political liberty hollow when land is monopolized",
+          "exact_quote": "Political liberty, when the equal right to land is denied, becomes merely the liberty to compete for employment at starvation wages.",
+          "confidence": 0.95,
+          "evidence": "George argues that concentrated ownership of land — the foundational productive asset — allows non-producing owners to extract rent from all who need land to work, driving wages to subsistence and concentrating wealth at the top. The structural claim is articulated in Georgist vocabulary: 'land monopoly,' 'unearned increment,' 'rent.' Progress and Poverty sold millions of copies, making it a major US mass-amplifier. Vocabulary entirely distinct from diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Progress and Poverty sold several million copies in the late 1800s and became one of the most-read books of the era, making the structural claim about ownership and worker disadvantage accessible to an enormous popular audience."
+        },
+        {
+          "instance_id": "674a25c6444c",
+          "date": "1891-05-15",
+          "source_url": "https://www.newadvent.org/library/docs_le13rn.htm",
+          "source_title": "Rerum Novarum (On the Condition of the Working Classes)",
+          "author": "Pope Leo XIII",
+          "lexical_form_seen": "destitution among the masses; abounding wealth among a very small number; workers isolated and helpless; need for just wages; capital must not exploit labor; rights and duties of capital and labor",
+          "exact_quote": "new developments in industry...abounding wealth among a very small number and destitution among the masses...caused conflict to break forth",
+          "confidence": 0.88,
+          "evidence": "Rerum Novarum explicitly identifies concentrated capital ownership and industrial power as placing workers in a structurally disadvantaged position, requiring state and church intervention to ensure just wages and working conditions. It frames the problem as the design of industrial property relations, not individual moral failings. Vocabulary: 'condition of the working classes,' 'rights and duties of capital and labor,' 'just wage.' Distinct from all diagnostic n-grams; articulates from Catholic social teaching tradition.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "As a papal encyclical, Rerum Novarum represents the Catholic Church's institutional adoption of the structural claim and became the cornerstone of Catholic social teaching for over a century, reaching hundreds of millions of readers worldwide."
+        },
+        {
+          "instance_id": "e76df746f443",
+          "date": "1899-01-01",
+          "source_url": "https://brocku.ca/MeadProject/Veblen/Veblen_1899/",
+          "source_title": "The Theory of the Leisure Class: An Economic Study in the Evolution of Institutions",
+          "author": "Thorstein Veblen",
+          "lexical_form_seen": "leisure class vs. industrial class; pecuniary culture vs. instinct of workmanship; owners pursue conspicuous consumption while workers perform productive labor; business interests versus industrial interests",
+          "exact_quote": "workers required to be diligent, efficient, and co-operative, whilst the owners concerned themselves with making money and with the public display of their accumulated wealth",
+          "confidence": 0.88,
+          "evidence": "Veblen's institutional economics argues that the design of capitalist institutions — particularly pecuniary ownership divorced from productive work — systematically rewards non-producing owners while compelling workers to perform all actual industrial labor. Business enterprise (ownership/finance) and industry (productive work) are structurally at odds, with institutional rules channeling gains to owners. Vocabulary: 'leisure class,' 'predatory culture,' 'pecuniary vs. industrial employments,' 'instinct of workmanship.' Entirely distinct from diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Theory of the Leisure Class was a popular bestseller and public sensation, introducing the structural critique in a non-Marxist, accessible vocabulary that reached progressive and mainstream audiences."
+        },
+        {
+          "instance_id": "aee36441bfca",
+          "date": "1912-10-01",
+          "source_url": "https://historymatters.gmu.edu/d/5725/",
+          "source_title": "Speech of Acceptance, International Socialist Review (October 1912)",
+          "author": "Eugene V. Debs",
+          "lexical_form_seen": "private ownership by capitalists of the productive machinery used by workers; capitalists filch the wealth produced by workers; tools of labor belong to labor; political parties stand for capitalist ownership",
+          "exact_quote": "The Republican, Democratic, and Progressive parties all stand for the private ownership by the capitalists of the productive machinery used by the workers, so that the capitalists can continue to filch the wealth produced by the workers.",
+          "confidence": 0.97,
+          "evidence": "Debs explicitly names private ownership of productive machinery as the instrument by which capitalists systematically extract value from workers, and argues that both major parties' platforms codify this arrangement. This is the structural claim articulated in the vocabulary of American labor radicalism: 'wage slavery,' 'tools of labor,' 'productive machinery,' 'filch.' No overlap with diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Debs received nearly one million votes for president in 1912 and spoke to hundreds of thousands directly; his speeches and writings were the primary vehicle for popularizing the structural claim to American working-class audiences."
+        },
+        {
+          "instance_id": "bd9fdde4483d",
+          "date": "1952-01-01",
+          "source_url": "https://en.wikipedia.org/wiki/American_Capitalism",
+          "source_title": "American Capitalism: The Concept of Countervailing Power",
+          "author": "John Kenneth Galbraith",
+          "lexical_form_seen": "individual worker highly vulnerable to private economic power; countervailing power needed to offset corporate dominance; without it private decisions lead to unhampered exploitation of workers",
+          "exact_quote": "private decisions could and presumably would lead to the unhampered exploitation of the public, or of workers, farmers and others who are intrinsically weak as individuals.",
+          "confidence": 0.91,
+          "evidence": "Galbraith argues that the structural design of a concentrated corporate economy leaves individual workers 'intrinsically weak' and subject to exploitation in the absence of organized countervailing power. The structural claim is framed in institutional economics vocabulary: 'countervailing power,' 'market concentration,' 'bilateral monopoly,' 'corporate dominance.' Entirely distinct from diagnostic n-grams; represents a liberal Cold War–era reformulation of the claim.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "American Capitalism was a widely read mainstream bestseller that reintroduced the structural claim to postwar liberal readers in non-Marxist institutional vocabulary."
+        },
+        {
+          "instance_id": "6d89192207eb",
+          "date": "1956-01-01",
+          "source_url": "https://en.wikipedia.org/wiki/The_Power_Elite",
+          "source_title": "The Power Elite",
+          "author": "C. Wright Mills",
+          "lexical_form_seen": "interlocking corporate, military, and political elites; ordinary citizen a relatively powerless subject of manipulation; economic elites shape norms, policies, and laws to serve their own interests; power concentrated in command posts of social structure",
+          "exact_quote": "the ordinary citizen in modern times is a relatively powerless subject of manipulation by those three entities",
+          "confidence": 0.9,
+          "evidence": "Mills argues that a tightly interlocked elite of corporate, military, and political leaders dominates American institutions, shaping laws and economic rules to their benefit while ordinary workers/citizens are effectively powerless. The structural claim is articulated in sociological vocabulary: 'power elite,' 'command posts,' 'interlocking institutions,' 'underlying populations.' No overlap with diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The Power Elite was a celebrated and widely-read sociological text that became a touchstone for the structural claim across academic, journalistic, and activist traditions."
+        },
+        {
+          "instance_id": "131a21806edb",
+          "date": "1967-01-01",
+          "source_url": "https://time.com/5783976/martin-luther-king-jr-economic-justice/",
+          "source_title": "Where Do We Go From Here: Chaos or Community? / Memphis and Poor People's Campaign speeches",
+          "author": "Martin Luther King Jr.",
+          "lexical_form_seen": "economic system takes necessities from the masses to give luxuries to the classes; radical redistribution of economic and political power; capitalism left gulf between superfluous wealth and abject poverty; economic justice as next phase of freedom struggle",
+          "exact_quote": "an economic system which takes necessities from the masses to give luxuries to the classes",
+          "confidence": 0.95,
+          "evidence": "King explicitly argued that the design of American capitalism — its property relations, labor market structure, and political economy — systematically transferred value from workers and the poor to the wealthy few, requiring a 'radical redistribution of economic and political power.' Vocabulary: 'economic system,' 'masses vs. classes,' 'necessities vs. luxuries,' 'radical redistribution.' Entirely distinct from diagnostic n-grams; comes from the civil rights / democratic-socialist tradition.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "King's moral authority and mass following made his late-career economic critique among the most influential popularizations of the structural claim in American history, linking it to racial justice and the labor movement."
+        },
+        {
+          "instance_id": "056be21bf71d",
+          "date": "2010-11-02",
+          "source_url": "https://en.wikipedia.org/wiki/Griftopia",
+          "source_title": "Griftopia: Bubble Machines, Vampire Squids, and the Long Con That Is Breaking America",
+          "author": "Matt Taibbi",
+          "lexical_form_seen": "grifter class; wealth and power transferred to a super-rich minority through politico-financial processes; financial industry captured regulatory agencies; revolving door between Wall Street and Washington; 'long con'",
+          "exact_quote": "wealth and power are transferred to a super-rich 'grifter class' that holds a grip on the political process",
+          "confidence": 0.91,
+          "evidence": "Taibbi argues the 2008 crisis was not a market accident but the systematic result of financial elites using political influence to design regulations, bailouts, and market structures in their own favor, transferring wealth from ordinary Americans to the top. Vocabulary: 'grifter class,' 'long con,' 'vampire squid,' 'bubble machines,' 'revolving door.' Entirely distinct from diagnostic n-grams; popular journalism tradition.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Griftopia was a New York Times bestseller and Rolling Stone's journalism reached a mass audience, making Taibbi one of the most widely read popularizers of the structural claim in the post-2008 era."
+        },
+        {
+          "instance_id": "5c9b5b865d09",
+          "date": "2012-06-04",
+          "source_url": "https://en.wikipedia.org/wiki/The_Price_of_Inequality",
+          "source_title": "The Price of Inequality: How Today's Divided Society Endangers Our Future",
+          "author": "Joseph E. Stiglitz",
+          "lexical_form_seen": "rent-seeking; political capture by the wealthy; markets shaped by politics to advantage the top at the expense of the rest; rules of the game weaken bargaining strength of workers vis-à-vis capital",
+          "exact_quote": "politics have shaped the market, and shaped it in ways that advantage the top at the expense of the rest",
+          "confidence": 0.97,
+          "evidence": "Stiglitz, a Nobel laureate, argues that US inequality is not the result of market forces or technology but of deliberate political capture by the wealthy, who design regulatory and tax rules to suppress wages and concentrate income. He explicitly uses 'rent-seeking' and 'bargaining power' as analytical frames. Vocabulary: 'rent-seeking,' 'political capture,' 'market rules,' '1 percent.' Entirely distinct from diagnostic n-grams; mainstream academic economics tradition.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The Price of Inequality was a bestselling trade book by a Nobel Prize winner, written during the Occupy movement, that gave the structural claim rigorous academic backing and enormous mainstream visibility."
+        },
+        {
+          "instance_id": "db38ebdd0401",
+          "date": "2014-04-15",
+          "source_url": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century",
+          "source_title": "Capital in the Twenty-First Century (Le Capital au XXIe siècle)",
+          "author": "Thomas Piketty",
+          "lexical_form_seen": "r > g; rate of return on capital exceeds economic growth rate; wealth accumulated from ownership outpaces income from labor; inherited wealth grows faster than wages; ownership concentrates structurally",
+          "exact_quote": "when the rate of return on capital (r) is greater than the rate of economic growth (g) over the long term, the result is concentration of wealth",
+          "confidence": 0.97,
+          "evidence": "Piketty provides an empirical and theoretical demonstration that the structural design of capital markets — where the rate of return on owned assets systematically exceeds the growth of wage income — predictably transfers wealth from workers to capital owners over time. Vocabulary: 'r > g,' 'capital-to-income ratio,' 'patrimonial capitalism,' 'inherited wealth.' Entirely distinct from diagnostic n-grams; mainstream academic economics.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Capital in the Twenty-First Century became a global publishing sensation, reaching the NYT bestseller list, and gave the structural claim unprecedented empirical grounding and mainstream academic legitimacy."
+        },
+        {
+          "instance_id": "221956bd5d74",
+          "date": "2014-06-30",
+          "source_url": "https://www.politico.com/magazine/story/2014/06/the-pitchforks-are-coming-for-us-plutocrats-108014/",
+          "source_title": "The Pitchforks Are Coming… For Us Plutocrats (Politico Magazine) / TED Talk: Beware, Fellow Plutocrats",
+          "author": "Nick Hanauer",
+          "lexical_form_seen": "plutocrats; top 1% growing richer as bottom 50% grow poorer; neoliberal economists work only for big corporations and billionaires; wages stagnant for 40 years while ownership class enriched",
+          "exact_quote": "over the last 30 years, in the USA alone, the top one percent has grown 21 trillion dollars richer while the bottom 50 percent have grown 900 billion dollars poorer",
+          "confidence": 0.9,
+          "evidence": "Hanauer, a self-identified member of the capital-owning class, argues that the economic system has been deliberately designed to funnel gains to owners while holding down worker wages, citing stagnant wages, neoliberal policy capture, and extreme wealth concentration as evidence. Vocabulary: 'plutocrats,' 'neoliberal era,' 'pitchforks,' 'feudal society.' Distinct from diagnostic n-grams; insider-capitalist confessional genre.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Hanauer's Politico essay and TED Talk went viral and reached tens of millions of readers/viewers, making the structural claim uniquely persuasive because it came from a self-declared member of the owner class."
+        },
+        {
+          "instance_id": "810151cdf080",
+          "date": "2015-09-29",
+          "source_url": "https://www.penguinrandomhouse.com/books/227780/saving-capitalism-by-robert-b-reich/",
+          "source_title": "Saving Capitalism: For the Many, Not the Few",
+          "author": "Robert B. Reich",
+          "lexical_form_seen": "big corporations and the wealthiest people have steadily rigged the rules; market organized by political power; property rights, contract law, bankruptcy, antitrust all structured to benefit owners at expense of workers; no free market without government",
+          "exact_quote": "big corporations and the country's wealthiest people have steadily rigged the rules that structure the economy — through lobbying, massive political contributions, and the courts.",
+          "confidence": 0.97,
+          "evidence": "Reich argues that the entire institutional infrastructure of capitalism — property law, bankruptcy, contract, antitrust, intellectual property, labor law — is designed through political influence by the wealthy to transfer value from workers to capital owners. The structural claim is articulated in policy vocabulary: 'rules of the game,' 'market design,' 'political influence,' 'rigged.' Entirely distinct from diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Saving Capitalism was a bestselling trade book and Netflix documentary that made the structural claim about institutional design accessible to a broad mainstream US audience."
+        },
+        {
+          "instance_id": "cf1547fa71f9",
+          "date": "2018-11-13",
+          "source_url": "https://manhattan.institute/book/the-once-and-future-worker",
+          "source_title": "The Once and Future Worker: A Vision for the Renewal of Work in America",
+          "author": "Oren Cass",
+          "lexical_form_seen": "economic consensus optimizes for GDP/consumption rather than worker welfare; policy elites put worker interests last; hyper-globalization and free flow of capital harm working class; proletarian self-sufficiency vs. capital mobility",
+          "exact_quote": "the nation's proverbial elites are willing to put the American worker's interests first",
+          "confidence": 0.82,
+          "evidence": "Cass, writing from a conservative/nationalist perspective, argues that bipartisan economic policy has been designed to optimize for capital returns and consumption at the expense of working-class employment and wages, structurally disadvantaging workers. Vocabulary: 'productive pluralism,' 'working class,' 'capital mobility,' 'self-sufficiency.' Distinct from diagnostic n-grams; conservative political economy tradition. Represents cross-ideological adoption of the structural claim.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The Once and Future Worker was widely reviewed and praised across ideological lines (Romney, Vance, Brooks), bringing the structural claim to conservative policy circles and demonstrating its cross-ideological reach."
+        },
+        {
+          "instance_id": "8f367baa971a",
+          "date": "2020-03-24",
+          "source_url": "https://www.epi.org/event/the-system-who-rigged-it-how-we-fix-it-with-former-u-s-secretary-of-labor-robert-reich/",
+          "source_title": "The System: Who Rigged It, How We Fix It",
+          "author": "Robert B. Reich",
+          "lexical_form_seen": "power system designed to bail out corporations rather than people; large corporations, Wall Street banks, and exceedingly rich individuals gained political power to game the system; wages prevented from rising in tandem with productivity gains",
+          "exact_quote": "large corporations, Wall Street banks and a relative handful of exceedingly rich individuals have gained enough political power to game the system",
+          "confidence": 0.95,
+          "evidence": "Reich's follow-up sharpens the structural claim: elites have used political power to design economic institutions (tax code, labor law, corporate governance rules) so that productivity gains flow to executives and investors, not workers. Vocabulary: 'power system,' 'gaming the system,' 'productivity-wage gap.' Distinct from diagnostic n-grams.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Published during COVID and widely read; Reich's Substack and social media presence amplified this to millions, making it one of the most circulated recent statements of the structural claim."
+        },
+        {
+          "instance_id": "bd105189312b",
+          "date": "2023-05-16",
+          "source_url": "https://www.amazon.com/Power-Progress-Thousand-Year-Technology-Prosperity/dp/1541702530",
+          "source_title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
+          "author": "Daron Acemoglu and Simon Johnson",
+          "lexical_form_seen": "technology shaped by what powerful people want and believe; gains from technology go mainly to a narrow elite; workers displaced by automation; 'vision oligarchy'; institutional design determines whether technology creates shared or concentrated prosperity",
+          "exact_quote": "technology is shaped by what powerful people want and believe, generating riches...for those already powerful. For most of the rest of us, there is the illusion of progress.",
+          "confidence": 0.96,
+          "evidence": "Acemoglu and Johnson argue across a 1000-year historical sweep that technological and economic gains are not automatically shared but are captured by elites through control of institutional design and political power, with workers bearing the costs. Vocabulary: 'vision oligarchy,' 'automation,' 'inclusive vs. extractive institutions,' 'shared prosperity.' Entirely distinct from diagnostic n-grams; contemporary academic economics and institutional political economy.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Power and Progress by two MIT economists (both later Nobel laureates) was one of the most reviewed and discussed economics books of 2023, giving the structural claim cutting-edge academic authority and massive mainstream reach."
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "TRADITIONS CHECKED: (1) Hebrew prophetic tradition (8th–6th century BCE): Checked Amos, Isaiah, Micah, Jeremiah, Ezekiel, and the Mosaic legal codes (Leviticus, Deuteronomy). Found strong matches in Amos (~760 BCE) and Isaiah 5 (~740 BCE) — both reported as earlier ancestors above. Ruled out Micah as a co-originator (makes related but less structurally specific claims about landowners and the poor). (2) Ancient Greek tradition: Checked Hesiod (~700 BCE), Plato's Republic (~375 BCE), Aristotle's Politics (~335 BCE), and Aristophanes' comedies (~420 BCE). Hesiod reported as an earlier ancestor. Plato's Republic Book VIII (oligarchy analysis, ~375 BCE) ruled out as an earlier ancestor because it postdates the proposed 0350-01-01 date only marginally and the analysis is of political degeneration rather than a structural claim about the labor-capital relationship per se — it addresses wealth-in-politics more than value transfer from workers to capital owners. Aristotle's Politics (~335 BCE) is close to the proposed date but also postdates it; Aristotle's observations about those who 'labor much and get little' vs. those who 'labor little and receive much' are relevant but primarily observations about collective ownership failures rather than a diagnosis of how the design of institutions systematically transfers value from labor to capital. (3) Roman Republican tradition: Checked Tiberius Gracchus (133 BCE) — reported as an earlier ancestor/amplifier above — and Gaius Gracchus (123 BCE), Plutarch's and Appian's accounts of the agrarian crisis. Cicero was checked and ruled out (defends senatorial property rights, not a critic of the structural claim). (4) Ancient Mesopotamian tradition: Checked Hammurabi's Code (~1754 BCE) carefully. While it regulates wages and protects workers from some exploitation, it does NOT articulate the structural claim that the DESIGN of economic institutions systematically transfers value from labor to capital — it is prescriptive law, not a structural diagnosis of how ownership/rules/taxation disadvantage workers. It was therefore ruled out. (5) Ancient Chinese tradition (Confucian/Legalist): Searched briefly; found no pre-350 BCE Chinese text that articulates the specific structural claim about capital-owners using institution design to transfer value from labor, in a form sufficiently parallel to be a direct ancestor. Mencius (~4th century BCE) addresses exploitation of farmers but postdates 350 BCE. (6) Ancient Indian tradition (Vedic/Upanishadic/early Buddhist): Checked briefly; found no clear earlier articulation of this specific structural claim in the varna/jati system literature or early Buddhist economics texts that predates and matches the structural mechanism described. LIMITATIONS: Many pre-modern texts (Sumerian laments, pre-literary oral traditions, Phoenician and early Canaanite texts) are inaccessible, untranslated, or lost entirely. The Amos dating (~760 BCE) is based on textual and archaeological consensus; the text as we have it reached final written form later, though scholars broadly accept it as reflecting 8th-century BCE conditions and oracles. The claim that 0350-01-01 is the earliest articulation is decisively falsified by Amos (~760 BCE), Isaiah 5 (~740 BCE), Hesiod (~700 BCE), and Tiberius Gracchus (133 BCE) — all of which clearly and specifically articulate that the design of ownership, rules, taxation, and political influence systematically transfers value from laborers to capital/land owners.",
+      "mutations": [
+        {
+          "from_source": "https://languagemuseum.org/exhibits/the-power-of-poetry-exhibit/poetry-from-greece/works-and-days/",
+          "to_source": "https://www.biola.edu/blogs/good-book-blog/2015/social-justice-in-amos",
+          "preserved": "the core claim that economic structures allow elites to unjustly extract wealth from those below them",
+          "dropped": "the personal autobiographical grounding (Hesiod's own dispute) that anchored the critique in lived experience",
+          "added": "explicit moral-legal framing of 'rightful belonging' and collective guilt attributed to an entire class",
+          "distorted": "shift from narrative complaint about specific aristocratic injustice to systematic indictment of upper-class business practices as a category of wrongdoing",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.250135+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.biola.edu/blogs/good-book-blog/2015/social-justice-in-amos",
+          "to_source": "https://classics.mit.edu/Aristotle/politics.1.one.html",
+          "preserved": "the idea that property and its ownership are central to understanding economic and social power relationships",
+          "dropped": "the moral condemnation of exploitative practices and the claim that wealth was wrongfully extracted from others",
+          "added": "an abstract philosophical framework treating property as an instrumental concept, detached from ethical judgment",
+          "distorted": "shift from prophetic indictment of class-based theft to neutral ontological definition, removing structural critique entirely",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.682284+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://classics.mit.edu/Aristotle/politics.1.one.html",
+          "to_source": "https://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book01/ch08.htm",
+          "preserved": "the structural relationship between property/capital owners and those who work under them",
+          "dropped": "the abstract philosophical framing of property as a tool separate from its owner",
+          "added": "explicit collective coordination ('combination') among masters as a deliberate suppressive mechanism against wage increases",
+          "distorted": "shift from neutral ontological observation about property to pointed accusation of systemic employer collusion against workers",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.349401+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book01/ch08.htm",
+          "to_source": "https://www.marxists.org/reference/subject/economics/hodgskin/labour-defended.htm",
+          "preserved": "the structural claim that organized capital systematically holds down labor's economic position",
+          "dropped": "Smith's empirical, observational framing of employer coordination as tacit market behavior without moral condemnation",
+          "added": "natural rights language, the state as active enforcer of oppression, and 'violence' as the origin of property rights",
+          "distorted": "shift from descriptive coordination among employers to a normative indictment of property itself as illegitimate and coercive",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.315543+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.marxists.org/reference/subject/economics/hodgskin/labour-defended.htm",
+          "to_source": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",
+          "preserved": "the structural claim that a ruling class extracts value from workers through systemic advantage",
+          "dropped": "the specific critique of state violence and artificial property rights as the mechanism of suppression",
+          "added": "class terminology ('bourgeoisie,' 'proletariat') and the dynamic of accumulation as the central analytical frame",
+          "distorted": "shift from natural-rights moral argument about stolen labor to materialist class-power exploitation narrative",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.342226+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",
+          "to_source": "https://www.marxists.org/archive/marx/works/1867-c1/",
+          "preserved": "the structural claim that capitalists extract value produced by workers, concentrating wealth among owners",
+          "dropped": "the explicit class-conflict framing and political call to action implied by 'ruling class' and 'exploiting'",
+          "added": "a mechanistic, economic explanation focused on wage determination and control over value distribution",
+          "distorted": "shift from moral-political accusation of exploitation to an analytical labor-theory-of-value framework",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.653249+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.marxists.org/archive/marx/works/1867-c1/",
+          "to_source": "https://www.americanyawp.com/reader/16-capital-and-labor/henry-george-progress-and-poverty-selections-1879/",
+          "preserved": "the structural claim that workers are systematically disadvantaged by the economic system controlling their access to wages and livelihood",
+          "dropped": "the labor theory of value and the mechanism of capitalist extraction of surplus value from worker-produced output",
+          "added": "land ownership as the root cause of dispossession, and the framing of political liberty as illusory without equal land rights",
+          "distorted": "the locus of exploitation shifts from capital-labor relations to land monopoly, redirecting critique from capitalists to landowners",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.619520+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.americanyawp.com/reader/16-capital-and-labor/henry-george-progress-and-poverty-selections-1879/",
+          "to_source": "https://www.newadvent.org/library/docs_le13rn.htm",
+          "preserved": "the structural claim that industrial capitalism concentrates wealth narrowly while leaving workers in deprivation",
+          "dropped": "George's specific land-rights mechanism as the root cause, and the starvation-wages framing of labor competition",
+          "added": "ecclesiastical moral authority and framing of inequality as a source of social conflict requiring Church guidance",
+          "distorted": "shift from a precise land-monopoly argument to a general description of industrial inequality, obscuring the causal mechanism",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.633603+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.newadvent.org/library/docs_le13rn.htm",
+          "to_source": "https://brocku.ca/MeadProject/Veblen/Veblen_1899/",
+          "preserved": "the structural contrast between a wealthy ownership class and workers who bear disproportionate productive burden",
+          "dropped": "the moral urgency and social-conflict framing; Leo's explicit warning of crisis and class rupture disappears",
+          "added": "behavioral and cultural observation — conspicuous display of wealth as a defining leisure-class practice — absent in Leo's account",
+          "distorted": "shift from crisis-driven moral indictment of inequality to detached institutional-evolutionary analysis of class behavior norms",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.793009+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://brocku.ca/MeadProject/Veblen/Veblen_1899/",
+          "to_source": "https://historymatters.gmu.edu/d/5725/",
+          "preserved": "the structural claim that owners extract value while workers labor, maintaining the capital-labor power imbalance",
+          "dropped": "Veblen's sociological observation of conspicuous wealth display and the behavioral contrast between worker diligence and owner idleness",
+          "added": "explicit partisan political targeting of three named parties and the morally charged verb 'filch' implying theft",
+          "distorted": "shift from descriptive institutional analysis of class behavior to accusatory political mobilization framing ownership as active robbery",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.826227+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://historymatters.gmu.edu/d/5725/",
+          "to_source": "https://en.wikipedia.org/wiki/American_Capitalism",
+          "preserved": "the structural claim that private ownership arrangements allow exploitation of workers by economically dominant actors",
+          "dropped": "the explicit partisan political indictment of named parties and the militant vocabulary of 'filching' stolen wealth",
+          "added": "academic hedging ('could and presumably would'), inclusion of farmers and the public as victim categories, and individualist vulnerability framing",
+          "distorted": "shift from class-war certainty about capitalist theft to probabilistic technocratic concern about market power and weak individuals",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.774663+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/American_Capitalism",
+          "to_source": "https://en.wikipedia.org/wiki/The_Power_Elite",
+          "preserved": "the structural claim that ordinary individuals are disadvantaged or exploited by more powerful economic/institutional forces",
+          "dropped": "the specific enumeration of vulnerable groups (workers, farmers) and the conditional 'could and presumably would' hedging",
+          "added": "the tripartite 'power elite' framework and explicit psychological concept of 'manipulation' as the mechanism of domination",
+          "distorted": "scope broadened from economic exploitation by private decisions to generalized political-military-corporate power over all citizens",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:18.065337+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/The_Power_Elite",
+          "to_source": "https://time.com/5783976/martin-luther-king-jr-economic-justice/",
+          "preserved": "the structural claim that economic arrangements systematically disadvantage ordinary people for the benefit of a powerful minority",
+          "dropped": "the tripartite institutional analysis (military, corporate, political elites) and the concept of manipulation as mechanism",
+          "added": "moral-theological framing of necessities vs. luxuries and the rhetorical masses/classes antithesis drawn from populist tradition",
+          "distorted": "shift from sociological analysis of power structures to moral indictment of distributive injustice, personalizing harm as deprivation of basic needs",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.193892+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://time.com/5783976/martin-luther-king-jr-economic-justice/",
+          "to_source": "https://en.wikipedia.org/wiki/Griftopia",
+          "preserved": "the structural claim that the economic system transfers resources from ordinary people to a wealthy elite",
+          "dropped": "the moral framing around basic necessities vs. luxuries, and its grounding in civil-rights-era economic justice discourse",
+          "added": "criminal/con-artist vocabulary ('grifter class'), explicit political-capture mechanism, and post-2008 financial-crisis targeting",
+          "distorted": "shift from a broad class-based moral critique to a narrower accusation of deliberate elite criminality and political manipulation",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.189626+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Griftopia",
+          "to_source": "https://en.wikipedia.org/wiki/The_Price_of_Inequality",
+          "preserved": "the core claim that political power enables wealth concentration among elites at the expense of ordinary people",
+          "dropped": "the conspiratorial 'grifter class' framing and the implication of deliberate criminal manipulation of the political process",
+          "added": "academic economic language ('shaped the market') and a systemic/structural causal mechanism replacing personality-driven corruption",
+          "distorted": "shift from populist expose of named predatory actors to neutral technocratic analysis of policy feedback loops",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.720534+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/The_Price_of_Inequality",
+          "to_source": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century",
+          "preserved": "the structural claim that the economic system systematically advantages capital owners over others",
+          "dropped": "the political agency argument — that deliberate policy choices by powerful actors cause inequality",
+          "added": "a formal mathematical inequality (r > g) and long-run historical framing as the explanatory mechanism",
+          "distorted": "shift from politically-driven redistribution upward to an impersonal, law-like dynamic of capital accumulation",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.890261+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century",
+          "to_source": "https://www.politico.com/magazine/story/2014/06/the-pitchforks-are-coming-for-us-plutocrats-108014/",
+          "preserved": "the structural claim that capital accumulation concentrates wealth among the already-wealthy at the expense of others",
+          "dropped": "the formal r>g theoretical mechanism and the long-run historical framing across centuries of data",
+          "added": "specific dollar figures, a 30-year American timeframe, and explicit bottom-50% losers framing for populist audience targeting",
+          "distorted": "shift from abstract universal economic law to concrete national grievance narrative implying active plutocratic extraction",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.163195+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.politico.com/magazine/story/2014/06/the-pitchforks-are-coming-for-us-plutocrats-108014/",
+          "to_source": "https://www.penguinrandomhouse.com/books/227780/saving-capitalism-by-robert-b-reich/",
+          "preserved": "the structural claim that the economic system systematically advantages wealthy owners/corporations over ordinary workers",
+          "dropped": "the specific quantitative wealth-shift statistics ($21 trillion vs $900 billion) that grounded the earlier claim empirically",
+          "added": "explicit mechanisms of rigging — lobbying, political contributions, courts — as intentional agency rather than passive outcome",
+          "distorted": "shift from descriptive inequality outcome to accusation of deliberate, coordinated rule-manipulation by named powerful actors",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.976564+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.penguinrandomhouse.com/books/227780/saving-capitalism-by-robert-b-reich/",
+          "to_source": "https://manhattan.institute/book/the-once-and-future-worker",
+          "preserved": "the framing that elite actors shape economic outcomes at workers' expense",
+          "dropped": "the specific mechanisms (lobbying, political contributions, courts) and the active 'rigging' agency attributed to corporations and wealthy individuals",
+          "added": "a normative call framed around national identity and elite obligation, shifting from diagnosis to prescription",
+          "distorted": "Reich's structural-power critique becomes a question of elite willingness/values rather than institutional capture",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:15.802189+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://manhattan.institute/book/the-once-and-future-worker",
+          "to_source": "https://www.epi.org/event/the-system-who-rigged-it-how-we-fix-it-with-former-u-s-secretary-of-labor-robert-reich/",
+          "preserved": "the structural claim that systemic power arrangements disadvantage ordinary workers relative to concentrated elite interests",
+          "dropped": "the normative framing around elite willingness or unwillingness to prioritize workers, which implied a moral/attitudinal diagnosis",
+          "added": "explicit identification of corporations, Wall Street banks, and wealthy individuals as named agents, plus the 'rigged/gamed' political-power mechanism",
+          "distorted": "shift from a cultural critique of elite priorities to a political-power capture argument, broadening scope from labor policy to systemic governance",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.176295+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.epi.org/event/the-system-who-rigged-it-how-we-fix-it-with-former-u-s-secretary-of-labor-robert-reich/",
+          "to_source": "https://www.amazon.com/Power-Progress-Thousand-Year-Technology-Prosperity/dp/1541702530",
+          "preserved": "the structural claim that concentrated power among elites shapes economic systems to benefit themselves at others' expense",
+          "dropped": "explicit identification of corporations, Wall Street banks, and political mechanisms as the agents of systemic capture",
+          "added": "technology as the specific mediating mechanism of elite power, and the rhetorical concept of 'illusion of progress'",
+          "distorted": "shift from political economy and deliberate 'gaming' to a longer historical-technological determinism framing",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-22T07:51:16.043705+00:00",
+            "confidence": 0.0,
+            "reasoning": ""
+          }
+        }
+      ],
+      "timeline_stats": {
+        "active_from": "0350-01-01",
+        "active_through": "2023-05-16",
+        "active_span_days": 611186,
+        "years_active": 1673,
+        "years_with_activity": 19,
+        "instances_per_year": {
+          "350": 1,
+          "1776": 1,
+          "1825": 1,
+          "1848": 1,
+          "1867": 1,
+          "1879": 1,
+          "1891": 1,
+          "1899": 1,
+          "1912": 1,
+          "1952": 1,
+          "1956": 1,
+          "1967": 1,
+          "2010": 1,
+          "2012": 1,
+          "2014": 2,
+          "2015": 1,
+          "2018": 1,
+          "2020": 1,
+          "2023": 1
+        },
+        "instances_per_year_by_role": {
+          "350": {
+            "originator": 1
+          },
+          "1776": {
+            "early-amplifier": 1
+          },
+          "1825": {
+            "early-amplifier": 1
+          },
+          "1848": {
+            "early-amplifier": 1
+          },
+          "1867": {
+            "early-amplifier": 1
+          },
+          "1879": {
+            "mass-amplifier": 1
+          },
+          "1891": {
+            "institutional-adoption": 1
+          },
+          "1899": {
+            "mass-amplifier": 1
+          },
+          "1912": {
+            "mass-amplifier": 1
+          },
+          "1952": {
+            "mass-amplifier": 1
+          },
+          "1956": {
+            "mass-amplifier": 1
+          },
+          "1967": {
+            "mass-amplifier": 1
+          },
+          "2010": {
+            "mass-amplifier": 1
+          },
+          "2012": {
+            "mass-amplifier": 1
+          },
+          "2014": {
+            "mass-amplifier": 2
+          },
+          "2015": {
+            "mass-amplifier": 1
+          },
+          "2018": {
+            "mass-amplifier": 1
+          },
+          "2020": {
+            "mass-amplifier": 1
+          },
+          "2023": {
+            "mass-amplifier": 1
+          }
+        },
+        "peak_year": "2014",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": 558456,
+        "originator_to_institutional_adoption_days": 562973,
+        "originator_to_critic_days": null,
+        "days_since_latest": 1102
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "economic",
+    "domain_confidence": 0.98,
+    "inductive_cluster_ids": [],
+    "tropes": [
+      "rigged-game",
+      "elites-vs-people",
+      "stolen-prosperity"
+    ]
+  },
+  "evidence_landscape": {
+    "sources": [
+      {
+        "source_id": "c0fb30a1dab4",
+        "title": "BLS & McKinsey: Decline of the U.S. Labor Share of Income (2000–2016)",
+        "description": "Bureau of Labor Statistics data analyzed by McKinsey shows the labor share of national income fell from 63.3% in 2000 to 56.7% in 2016, with BLS data indicating three-fourths of the entire post-1947 decline occurred in that 16-year window. Had labor share stayed at 1998 levels, average worker pay might be roughly $3,000 per year higher.",
+        "direction": "supports",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.mckinsey.com/featured-insights/employment-and-growth/a-new-look-at-the-declining-labor-share-of-income-in-the-united-states",
+        "date": "2019-05-22",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Draws on BLS primary data; the steepness and timing of the decline directly supports the claim that structural shifts have disadvantaged workers relative to capital owners."
+      },
+      {
+        "source_id": "439af20f025c",
+        "title": "EPI Productivity–Pay Gap Tracker",
+        "description": "The Economic Policy Institute tracks the divergence between productivity and typical worker pay since 1979. From 1979 to 2025, productivity rose roughly 90% while median hourly compensation rose only about 33%. EPI attributes the entire gap to rising inequality—both within labor and capital's growing share—driven by intentional policy choices.",
+        "direction": "supports",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.epi.org/productivity-pay-gap/",
+        "date": "2026-03-23",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Uses BLS source data; EPI is a left-leaning labor think tank, but underlying BLS data on the productivity-pay gap is widely accepted as real even among critics who dispute its interpretation."
+      },
+      {
+        "source_id": "f073eed97b67",
+        "title": "Saez & Zucman, 'Wealth Inequality in the United States since 1913' (QJE, 2016)",
+        "description": "Using capitalized income tax data, Saez and Zucman document a U-shaped curve in US wealth concentration: the top 0.1% wealth share fell from ~25% in 1929 to ~7% in 1979, then rose back to ~22% by 2012. By 2020 the top 1% share had risen by more than 10 percentage points since the late 1970s; in 2018 the top 400 wealthiest Americans paid a lower effective tax rate than the macroeconomic average.",
+        "direction": "supports",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.nber.org/papers/w20625",
+        "date": "2016-01-01",
+        "status": "methodology-disputed",
+        "status_notes": "Smith, Zidar & Zwick (2020) find the capitalization method may overstate concentration at the very top (top 0.01%); Saez and Zucman dispute this in turn, making the precise magnitude contested though the directional trend is broadly accepted.",
+        "notes": "The single most-cited primary source on the structural accumulation of capital at the top; methodology debate affects the magnitude but not the direction of the finding."
+      },
+      {
+        "source_id": "acea329eeb3e",
+        "title": "Gilens & Page, 'Testing Theories of American Politics' (Perspectives on Politics, 2014)",
+        "description": "Analyzing 1,779 policy issues, Princeton/Northwestern political scientists found that economic elites and business interest groups have substantial independent impacts on US government policy while average citizens and mass-based interest groups have little or no independent influence. The study is sometimes called 'the oligarchy study.'",
+        "direction": "supports",
+        "strength": "moderate",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "http://piketty.pse.ens.fr/files/GilensPage2014.pdf",
+        "date": "2014-09-01",
+        "status": "methodology-disputed",
+        "status_notes": "Bashir (2015, Research & Politics) showed the statistical test underestimates median-citizen impact and that in direct elite-vs-citizen disagreements, average Americans got their preferred outcome roughly as often as elites did.",
+        "notes": "Provides evidence for the 'political instrument' dimension of the claim—that rules are shaped in favor of capital owners—but the statistical methodology has credible published critiques."
+      },
+      {
+        "source_id": "3261e3b0b545",
+        "title": "Western & Rosenfeld, 'Unions, Norms, and the Rise in U.S. Wage Inequality' (American Sociological Review, 2011)",
+        "description": "Using data from 1973–2007, this peer-reviewed study finds that union erosion (private-sector union membership fell from 34% to 8% over this period) explains approximately one-third of the growth of wage inequality among men and about one-fifth among women.",
+        "direction": "supports",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.asanet.org/wp-content/uploads/savvy/images/journals/docs/pdf/asr/WesternandRosenfeld.pdf",
+        "date": "2011-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Identifies institutional dismantling (union decline) as a measurable structural mechanism transmitting disadvantage to workers; the 'instrument' in the claim's framing."
+      },
+      {
+        "source_id": "df2fb36a60cc",
+        "title": "IMF Working Paper: 'What Explains the Decline of the U.S. Labor Share of Income?' (WP/17/167)",
+        "description": "IMF researchers find the US labor share decline since 2000 is broad-based across industries and states, driven by a combination of routinization of tasks, declining unionization, import competition, and use of foreign inputs—not a single cause.",
+        "direction": "redirects",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.imf.org/-/media/Files/Publications/WP/2017/wp17167.ashx",
+        "date": "2017-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Accepts the empirical decline but attributes it substantially to technology and trade, not primarily intentional rule-rigging by elites—redirecting toward structural/impersonal causes."
+      },
+      {
+        "source_id": "509b8d90d41a",
+        "title": "Brookings Institution: 'Globalization, Technology, and Inequality: It's the Policies, Stupid' (2018)",
+        "description": "Argues that both globalization and skill-biased technological change are important drivers of inequality, but their distributional consequences are not pre-ordained. Policy failures—not the design of rules by elites—have largely failed to redistribute gains, and better policies could produce more inclusive outcomes.",
+        "direction": "redirects",
+        "strength": "moderate",
+        "source_venue": "institutional",
+        "source_type": "secondary",
+        "source_url": "https://www.brookings.edu/articles/globalization-technology-and-inequality-its-the-policies-stupid/",
+        "date": "2018-02-16",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Presents inequality as stemming from impersonal market forces plus policy inadequacy rather than intentional structural rigging—different conclusion from same starting facts."
+      },
+      {
+        "source_id": "fd2c0443a3b1",
+        "title": "Tax Foundation: 'Labor Share of Net Income Is Within Its Historical Range' (2023)",
+        "description": "Argues that the widely cited decline in labor share disappears when using net income (removing depreciation and government transfers not received by individuals). On a net basis, the labor share in 2022 was 69.0%—close to the long-run average of 69.9% since 1929. Concludes inequality concerns should focus on within-labor inequality, not the labor-vs-capital split.",
+        "direction": "disputes",
+        "strength": "moderate",
+        "source_venue": "institutional",
+        "source_type": "secondary",
+        "source_url": "https://taxfoundation.org/blog/labor-share-net-income-within-historical-range/",
+        "date": "2023-10-17",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Directly challenges one of the claim's core empirical pillars using a different but defensible measure of national income; Tax Foundation leans market-oriented, which is relevant context."
+      },
+      {
+        "source_id": "715e2e5b1eec",
+        "title": "Mercatus Center / Bashir (2015): Critique of Productivity-Pay Gap and Gilens-Page",
+        "description": "Two related methodological disputes: Mercatus (citing Sherk) argues that once deflator choice and benefits inclusion are corrected, compensation has closely tracked productivity. Bashir (2015) shows Gilens-Page's statistical model underestimates median-citizen policy influence, and that ordinary Americans received their preferred policy outcome roughly as often as elites when the two groups disagreed.",
+        "direction": "disputes",
+        "strength": "moderate",
+        "source_venue": "institutional",
+        "source_type": "secondary",
+        "source_url": "https://www.mercatus.org/research/data-visualizations/contrary-white-house-claim-compensation-has-been-line-productivity",
+        "date": "2016-04-14",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Represents the strongest methodological challenges to two key empirical pillars of the 'rigged' claim; published in a peer-reviewed venue (Bashir) or prominent market-oriented think tank (Mercatus)."
+      },
+      {
+        "source_id": "2b194d640b1e",
+        "title": "AEA Research Feature: 'Measuring US Income Inequality' (2024)",
+        "description": "Economists argue that most of the rise in income inequality is driven not by a labor-vs-capital shift at the aggregate level but by rising inequality within labor (top workers pulling ahead) and within capital (top capitalists pulling ahead). For the top 1%, after 2000 the rise is driven by capital income inequality; for the top 0.01%, it's almost entirely capital income inequality across the full 1980–2020 period.",
+        "direction": "redirects",
+        "strength": "moderate",
+        "source_venue": "peer-reviewed",
+        "source_type": "secondary",
+        "source_url": "https://www.aeaweb.org/research/income-inequality-macro-perspectives",
+        "date": "2024-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Redirects from a workers-vs-owners frame to a within-group inequality frame—suggesting the problem may be concentrated elites vs. everyone else (including most capital owners), rather than capital as a class vs. labor as a class."
+      },
+      {
+        "source_id": "e2a296ff7e15",
+        "title": "Pew Research Center: 'Trends in U.S. Income and Wealth Inequality' (2020)",
+        "description": "Documents that the wealth gap between America's richest and poorest families more than doubled from 1989 to 2016. In 1989 the richest 5% had 114 times the wealth of families in the second quintile; by 2016 that ratio had grown to 248. Income inequality by any measure has been rising since 1970.",
+        "direction": "shared-context",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "secondary",
+        "source_url": "https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/",
+        "date": "2020-01-09",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Widely cited nonpartisan documentation of the empirical fact of rising inequality—the uncontested common ground on which all sides in this debate operate."
+      },
+      {
+        "source_id": "0ebaaf574121",
+        "title": "BLS: 'Understanding the Labor Productivity and Compensation Gap' (2017)",
+        "description": "Official BLS analysis confirms productivity and compensation grew in tandem from the 1940s through the early 1970s, then began diverging. However, it also notes that once the same price deflator is applied to both series, the gap in 87% of industries shrinks considerably—a key point in the methodological debate over how large the gap really is.",
+        "direction": "shared-context",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.bls.gov/opub/btn/volume-6/understanding-the-labor-productivity-and-compensation-gap.htm",
+        "date": "2017-06-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Primary government data source that both sides cite; its nuance (deflator sensitivity) is the crux of the methodological dispute between EPI and market-oriented critics."
+      },
+      {
+        "source_id": "8fa15cbbabaa",
+        "title": "CLASP / EPI: Federal Minimum Wage Now a Poverty Wage (2025)",
+        "description": "In 2025 the federal minimum wage of $7.25/hour—unchanged since 2009—now falls below the federal poverty threshold for a single adult working full-time. After inflation adjustment, the 2025 minimum wage is about 40% below the 1970 minimum wage in real terms ($7.25 vs. an equivalent ~$13.05).",
+        "direction": "supports",
+        "strength": "moderate",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.epi.org/blog/the-federal-minimum-wage-is-officially-a-poverty-wage-in-2025/",
+        "date": "2025-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Provides concrete evidence that a specific policy instrument (the minimum wage floor) has structurally declined in real value, directly harming the lowest-paid workers while benefiting employers."
+      },
+      {
+        "source_id": "e295db157143",
+        "title": "Elsby, Hobijn & Sahin, 'The Decline of the U.S. Labor Share' (Brookings Papers, 2013)",
+        "description": "A detailed examination finding that about one-third of the measured decline in the published labor share is a statistical artifact of imputing self-employed income, and that the decline has been concentrated in trade and manufacturing sectors—suggesting sector-specific forces rather than economy-wide structural rigging.",
+        "direction": "redirects",
+        "strength": "moderate",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.brookings.edu/wp-content/uploads/2016/07/2013b_elsby_labor_share.pdf",
+        "date": "2013-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "Accepts the directional trend but complicates its interpretation and magnitude; a methodological caution that partially deflates the empirical claim without refuting it."
+      },
+      {
+        "source_id": "47e111754672",
+        "title": "Saez & Zucman, 'The Rise of Income and Wealth Inequality in America' (JEP, 2020)",
+        "description": "Documents that between 1978 and 2018, the share of pre-tax income earned by the top 1% rose from 10% to about 19%, and the share of wealth owned by the top 0.1% rose from 7% to about 18%. In 2018 the effective tax rate on the 400 wealthiest Americans was below the macroeconomic average tax rate of 29%, indicating a regressive tax structure at the top.",
+        "direction": "supports",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.34.4.3",
+        "date": "2020-01-01",
+        "status": "current",
+        "status_notes": "None",
+        "notes": "The tax regressivity finding directly supports the claim's 'taxation as instrument' dimension, showing the rules of the tax system structurally favor owners of large capital."
+      }
+    ],
+    "summary": "The empirical common ground is substantial and largely uncontested: US labor's share of national income has declined since roughly 2000, productivity has outpaced median worker pay since the late 1970s, wealth concentration has risen sharply since the 1980s, and income inequality by nearly any measure has widened. The supporting evidence is strongest on these descriptive facts and is backed by peer-reviewed work (Saez-Zucman, Western-Rosenfeld), BLS primary data, and political-science research (Gilens-Page) showing business interests have disproportionate policy influence. The disputing and redirecting evidence clusters around two arguments: (1) methodological challenges show some of the measured gaps shrink considerably with different (defensible) measurement choices—particularly the productivity-pay gap and the labor share decline—and (2) most mainstream economists, including IMF and Brookings researchers, attribute the structural shifts substantially to impersonal forces (technology, globalization, skill-biased change) rather than to deliberate elite rule-rigging, with policy failures of omission rather than intentional design. A secondary redirect, noted in AEA research, suggests the real fracture is within-group—elite workers and elite capitalists pulling ahead of everyone else—rather than a clean capital-vs-labor class division. The 'rigged' framing's most contested element is intentionality and agent: the facts of structural disadvantage are broadly accepted; whether they reflect design, neglect, or neutral market forces is what divides experts.",
+    "search_notes": "Searched across labor economics (labor share, productivity-pay gap), wealth distribution (Saez-Zucman, Pew), political science (Gilens-Page, lobbying literature), and methodological critiques (Tax Foundation, Mercatus, Bashir 2015). Relatively under-covered: comparative international evidence (whether the US pattern is uniquely attributable to policy vs. shared with other market economies), race/gender-disaggregated structural disadvantage within labor, and more recent post-2020 pandemic-era wage dynamics that may complicate the long-run trend.",
+    "generated_at": "2026-05-22T07:46:15.551771+00:00"
+  },
+  "attribution": {
+    "source": "ai",
+    "model": "claude-sonnet-4-6",
+    "contributor_name": "",
+    "timestamp": "2026-05-22T07:51:40.129849+00:00",
+    "confidence": 0.0,
+    "reasoning": ""
+  },
+  "amplifiers": {
+    "n_actors": 56,
+    "actors": [
+      {
+        "actor_id": "aa8455731ec0",
+        "display": "mit.edu",
+        "actor_type": "news",
+        "roles": [
+          "originator",
+          "unknown"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "-0133-01-01",
+        "last_date": "0350-01-01"
+      },
+      {
+        "actor_id": "4db00212f7a6",
+        "display": "languagemuseum.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "-0700-01-01",
+        "last_date": "-0700-01-01"
+      },
+      {
+        "actor_id": "35a8ba117afd",
+        "display": "scielo.org.za",
+        "actor_type": "news",
+        "roles": [
+          "unknown"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "-0740-01-01",
+        "last_date": "-0740-01-01"
+      },
+      {
+        "actor_id": "a1f8adcbc4ce",
+        "display": "biola.edu",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "-0760-01-01",
+        "last_date": "-0760-01-01"
+      },
+      {
+        "actor_id": "6b8667c1a873",
+        "display": "marxists.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 4,
+        "first_date": "1776-03-09",
+        "last_date": "1867-09-14"
+      },
+      {
+        "actor_id": "a3ca5e61b437",
+        "display": "americanyawp.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1879-01-01",
+        "last_date": "1879-01-01"
+      },
+      {
+        "actor_id": "3cfee3948b51",
+        "display": "newadvent.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1891-05-15",
+        "last_date": "1891-05-15"
+      },
+      {
+        "actor_id": "871b3a571b00",
+        "display": "brocku.ca",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1899-01-01",
+        "last_date": "1899-01-01"
+      },
+      {
+        "actor_id": "a1302bc68616",
+        "display": "gmu.edu",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1912-10-01",
+        "last_date": "1912-10-01"
+      },
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 5,
+        "first_date": "1952-01-01",
+        "last_date": "2014-04-15"
+      },
+      {
+        "actor_id": "5357eb44eda0",
+        "display": "TIME",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1967-01-01",
+        "last_date": "1967-01-01"
+      },
+      {
+        "actor_id": "4efcfb7708b9",
+        "display": "inquirer.com",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1991-10-20",
+        "last_date": "1991-10-20"
+      },
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2005-01-01",
+        "last_date": "2005-01-01"
+      },
+      {
+        "actor_id": "4188265a077c",
+        "display": "ABC News",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2012-09-05",
+        "last_date": "2012-09-05"
+      },
+      {
+        "actor_id": "3bc472045c9d",
+        "display": "archives.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2013-12-04",
+        "last_date": "2013-12-04"
+      },
+      {
+        "actor_id": "5c2a2db8baf2",
+        "display": "Politico",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-06-30",
+        "last_date": "2014-06-30"
+      },
+      {
+        "actor_id": "a6a97f8e5301",
+        "display": "ucsb.edu",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2015-05-26",
+        "last_date": "2015-11-13"
+      },
+      {
+        "actor_id": "95febee05a63",
+        "display": "epi.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2015-07-07",
+        "last_date": "2020-03-24"
+      },
+      {
+        "actor_id": "bfd9ccdb7da7",
+        "display": "penguinrandomhouse.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2015-09-29",
+        "last_date": "2015-09-29"
+      },
+      {
+        "actor_id": "b2071de706c4",
+        "display": "fortune.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2016-04-01",
+        "last_date": "2016-04-01"
+      },
+      {
+        "actor_id": "6c0ea36e6159",
+        "display": "milkenreview.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2017-04-01",
+        "last_date": "2017-04-01"
+      },
+      {
+        "actor_id": "56d675bb130f",
+        "display": "scientificamerican.com",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2018-10-16",
+        "last_date": "2018-10-16"
+      },
+      {
+        "actor_id": "f1840100c662",
+        "display": "manhattan.institute",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2018-11-13",
+        "last_date": "2018-11-13"
+      },
+      {
+        "actor_id": "2c2b079fb9d9",
+        "display": "The Hill",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-01-07",
+        "last_date": "2019-01-07"
+      },
+      {
+        "actor_id": "32407faddf14",
+        "display": "amazon.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2023-05-16",
+        "last_date": "2023-05-16"
+      },
+      {
+        "actor_id": "6d4397cc9edd",
+        "display": "@bexrousse.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2023-09-13T23:54:50.474Z",
+        "last_date": "2023-09-13T23:54:50.474Z"
+      },
+      {
+        "actor_id": "e8b5b4ee19d9",
+        "display": "@rbreich.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier",
+          "mention"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 8,
+        "first_date": "2024-11-21T01:00:01.425Z",
+        "last_date": "2026-05-15T18:15:14.704132Z"
+      },
+      {
+        "actor_id": "89c3da009021",
+        "display": "@quiz.baby",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2025-02-21T18:54:18.288Z",
+        "last_date": "2025-02-21T18:54:18.288Z"
+      },
+      {
+        "actor_id": "57615d9b5614",
+        "display": "@laborradionet.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2025-08-11T23:15:16.114Z",
+        "last_date": "2025-08-11T23:15:16.114Z"
+      },
+      {
+        "actor_id": "5951d62c401f",
+        "display": "@yurrpost.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-09T18:41:54.671570Z",
+        "last_date": "2026-03-09T18:41:54.671570Z"
+      },
+      {
+        "actor_id": "b2b1af25b949",
+        "display": "@chrismurphyct.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier",
+          "mention"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 2,
+        "first_date": "2026-03-10T17:43:23.482Z",
+        "last_date": "2026-04-30T20:09:05.913Z"
+      },
+      {
+        "actor_id": "f05297038328",
+        "display": "@warren.senate.gov",
+        "actor_type": "social",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 2,
+        "first_date": "2026-03-26T13:14:26.002Z",
+        "last_date": "2026-04-20T13:41:48.383Z"
+      },
+      {
+        "actor_id": "c563cbcfc386",
+        "display": "@blakes7bot.torpidity.net",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-27T17:19:02.790094Z",
+        "last_date": "2026-03-27T17:19:02.790094Z"
+      },
+      {
+        "actor_id": "f1f9212aa80c",
+        "display": "@rachelgilmore.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-29T15:30:46.752Z",
+        "last_date": "2026-03-29T15:30:46.752Z"
+      },
+      {
+        "actor_id": "6f7a154573b0",
+        "display": "@johnlcole.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-06T22:41:55.679Z",
+        "last_date": "2026-04-06T22:41:55.679Z"
+      },
+      {
+        "actor_id": "0b1fbed76b5a",
+        "display": "@bodyfag.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-13T23:03:59.709Z",
+        "last_date": "2026-04-13T23:03:59.709Z"
+      },
+      {
+        "actor_id": "a368988b4380",
+        "display": "@nationalnurses.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-14T12:52:53.065Z",
+        "last_date": "2026-04-14T12:52:53.065Z"
+      },
+      {
+        "actor_id": "c50bab56df69",
+        "display": "@whpshw.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-21T18:47:28.834Z",
+        "last_date": "2026-04-21T18:47:28.834Z"
+      },
+      {
+        "actor_id": "ecee300b5354",
+        "display": "@civicroot.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-29T23:08:25.039Z",
+        "last_date": "2026-04-29T23:08:25.039Z"
+      },
+      {
+        "actor_id": "e1eeea934c5b",
+        "display": "@samnoack.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-05T12:46:05.113Z",
+        "last_date": "2026-05-05T12:46:05.113Z"
+      },
+      {
+        "actor_id": "b582494bcf27",
+        "display": "@russincheshire.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-08T10:11:30.632Z",
+        "last_date": "2026-05-08T10:11:30.632Z"
+      },
+      {
+        "actor_id": "c613afa391a5",
+        "display": "@markjacob.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-08T14:33:31.930Z",
+        "last_date": "2026-05-08T14:33:31.930Z"
+      },
+      {
+        "actor_id": "3fdb801efea1",
+        "display": "@tnps47.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-09T10:45:26.485Z",
+        "last_date": "2026-05-09T10:45:26.485Z"
+      },
+      {
+        "actor_id": "621d3c093649",
+        "display": "@theopinionatednpc.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-11T14:02:27.679Z",
+        "last_date": "2026-05-11T14:02:27.679Z"
+      },
+      {
+        "actor_id": "7ce9d67baa43",
+        "display": "@jeremycorbyn.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-11T20:08:26.117Z",
+        "last_date": "2026-05-11T20:08:26.117Z"
+      },
+      {
+        "actor_id": "8a85c9095445",
+        "display": "@katiephang.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-12T15:39:14.970Z",
+        "last_date": "2026-05-12T15:39:14.970Z"
+      },
+      {
+        "actor_id": "86a898d96658",
+        "display": "@votekiper.org",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-13T01:06:12.379Z",
+        "last_date": "2026-05-13T01:06:12.379Z"
+      },
+      {
+        "actor_id": "c509b9d97edd",
+        "display": "@unityinthelight.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-14T10:46:37.757Z",
+        "last_date": "2026-05-14T10:46:37.757Z"
+      },
+      {
+        "actor_id": "2f6c6db9fbc1",
+        "display": "@tastromo.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-15T23:52:27.939Z",
+        "last_date": "2026-05-15T23:52:27.939Z"
+      },
+      {
+        "actor_id": "d9d63fbd2b7e",
+        "display": "@whstancil.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T05:24:10.443Z",
+        "last_date": "2026-05-18T05:24:10.443Z"
+      },
+      {
+        "actor_id": "83802c667650",
+        "display": "@dicoach.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T16:27:25.875Z",
+        "last_date": "2026-05-18T16:27:25.875Z"
+      },
+      {
+        "actor_id": "fb04c194daa7",
+        "display": "@kevinmkruse.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T20:45:43.645Z",
+        "last_date": "2026-05-18T20:45:43.645Z"
+      },
+      {
+        "actor_id": "7b6a392af11f",
+        "display": "@repemilyrandall.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-19T19:44:52.862Z",
+        "last_date": "2026-05-19T19:44:52.862Z"
+      },
+      {
+        "actor_id": "e7cbca1bcaa5",
+        "display": "@3shepsbuckeye.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-20T12:58:59.815Z",
+        "last_date": "2026-05-20T12:58:59.815Z"
+      },
+      {
+        "actor_id": "af3d0d8c9635",
+        "display": "@atrupar.com",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-20T18:34:01.505Z",
+        "last_date": "2026-05-20T18:34:01.505Z"
+      },
+      {
+        "actor_id": "4efa9a85e4ba",
+        "display": "@savornt.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-21T10:07:40.634Z",
+        "last_date": "2026-05-21T10:07:40.634Z"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "aa8455731ec0",
+        "display": "mit.edu",
+        "actor_type": "news",
+        "roles": [
+          "originator",
+          "unknown"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "-0133-01-01",
+        "last_date": "0350-01-01"
+      },
+      {
+        "actor_id": "4db00212f7a6",
+        "display": "languagemuseum.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "-0700-01-01",
+        "last_date": "-0700-01-01"
+      },
+      {
+        "actor_id": "a1f8adcbc4ce",
+        "display": "biola.edu",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "-0760-01-01",
+        "last_date": "-0760-01-01"
+      },
+      {
+        "actor_id": "4efcfb7708b9",
+        "display": "inquirer.com",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1991-10-20",
+        "last_date": "1991-10-20"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "2c2b079fb9d9",
+        "display": "The Hill",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-01-07",
+        "last_date": "2019-01-07"
+      },
+      {
+        "actor_id": "89c3da009021",
+        "display": "@quiz.baby",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2025-02-21T18:54:18.288Z",
+        "last_date": "2025-02-21T18:54:18.288Z"
+      },
+      {
+        "actor_id": "d9d63fbd2b7e",
+        "display": "@whstancil.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T05:24:10.443Z",
+        "last_date": "2026-05-18T05:24:10.443Z"
+      }
+    ],
+    "social_accounts": [
+      {
+        "actor_id": "6d4397cc9edd",
+        "display": "@bexrousse.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2023-09-13T23:54:50.474Z",
+        "last_date": "2023-09-13T23:54:50.474Z"
+      },
+      {
+        "actor_id": "e8b5b4ee19d9",
+        "display": "@rbreich.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier",
+          "mention"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 8,
+        "first_date": "2024-11-21T01:00:01.425Z",
+        "last_date": "2026-05-15T18:15:14.704132Z"
+      },
+      {
+        "actor_id": "89c3da009021",
+        "display": "@quiz.baby",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2025-02-21T18:54:18.288Z",
+        "last_date": "2025-02-21T18:54:18.288Z"
+      },
+      {
+        "actor_id": "57615d9b5614",
+        "display": "@laborradionet.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2025-08-11T23:15:16.114Z",
+        "last_date": "2025-08-11T23:15:16.114Z"
+      },
+      {
+        "actor_id": "5951d62c401f",
+        "display": "@yurrpost.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-09T18:41:54.671570Z",
+        "last_date": "2026-03-09T18:41:54.671570Z"
+      },
+      {
+        "actor_id": "b2b1af25b949",
+        "display": "@chrismurphyct.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier",
+          "mention"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 2,
+        "first_date": "2026-03-10T17:43:23.482Z",
+        "last_date": "2026-04-30T20:09:05.913Z"
+      },
+      {
+        "actor_id": "f05297038328",
+        "display": "@warren.senate.gov",
+        "actor_type": "social",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 2,
+        "first_date": "2026-03-26T13:14:26.002Z",
+        "last_date": "2026-04-20T13:41:48.383Z"
+      },
+      {
+        "actor_id": "c563cbcfc386",
+        "display": "@blakes7bot.torpidity.net",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-27T17:19:02.790094Z",
+        "last_date": "2026-03-27T17:19:02.790094Z"
+      },
+      {
+        "actor_id": "f1f9212aa80c",
+        "display": "@rachelgilmore.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-03-29T15:30:46.752Z",
+        "last_date": "2026-03-29T15:30:46.752Z"
+      },
+      {
+        "actor_id": "6f7a154573b0",
+        "display": "@johnlcole.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-06T22:41:55.679Z",
+        "last_date": "2026-04-06T22:41:55.679Z"
+      },
+      {
+        "actor_id": "0b1fbed76b5a",
+        "display": "@bodyfag.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-13T23:03:59.709Z",
+        "last_date": "2026-04-13T23:03:59.709Z"
+      },
+      {
+        "actor_id": "a368988b4380",
+        "display": "@nationalnurses.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-14T12:52:53.065Z",
+        "last_date": "2026-04-14T12:52:53.065Z"
+      },
+      {
+        "actor_id": "c50bab56df69",
+        "display": "@whpshw.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-21T18:47:28.834Z",
+        "last_date": "2026-04-21T18:47:28.834Z"
+      },
+      {
+        "actor_id": "ecee300b5354",
+        "display": "@civicroot.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-04-29T23:08:25.039Z",
+        "last_date": "2026-04-29T23:08:25.039Z"
+      },
+      {
+        "actor_id": "e1eeea934c5b",
+        "display": "@samnoack.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-05T12:46:05.113Z",
+        "last_date": "2026-05-05T12:46:05.113Z"
+      },
+      {
+        "actor_id": "b582494bcf27",
+        "display": "@russincheshire.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-08T10:11:30.632Z",
+        "last_date": "2026-05-08T10:11:30.632Z"
+      },
+      {
+        "actor_id": "c613afa391a5",
+        "display": "@markjacob.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-08T14:33:31.930Z",
+        "last_date": "2026-05-08T14:33:31.930Z"
+      },
+      {
+        "actor_id": "3fdb801efea1",
+        "display": "@tnps47.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-09T10:45:26.485Z",
+        "last_date": "2026-05-09T10:45:26.485Z"
+      },
+      {
+        "actor_id": "621d3c093649",
+        "display": "@theopinionatednpc.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-11T14:02:27.679Z",
+        "last_date": "2026-05-11T14:02:27.679Z"
+      },
+      {
+        "actor_id": "7ce9d67baa43",
+        "display": "@jeremycorbyn.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-11T20:08:26.117Z",
+        "last_date": "2026-05-11T20:08:26.117Z"
+      },
+      {
+        "actor_id": "8a85c9095445",
+        "display": "@katiephang.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-12T15:39:14.970Z",
+        "last_date": "2026-05-12T15:39:14.970Z"
+      },
+      {
+        "actor_id": "86a898d96658",
+        "display": "@votekiper.org",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-13T01:06:12.379Z",
+        "last_date": "2026-05-13T01:06:12.379Z"
+      },
+      {
+        "actor_id": "c509b9d97edd",
+        "display": "@unityinthelight.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-14T10:46:37.757Z",
+        "last_date": "2026-05-14T10:46:37.757Z"
+      },
+      {
+        "actor_id": "2f6c6db9fbc1",
+        "display": "@tastromo.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-15T23:52:27.939Z",
+        "last_date": "2026-05-15T23:52:27.939Z"
+      },
+      {
+        "actor_id": "d9d63fbd2b7e",
+        "display": "@whstancil.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T05:24:10.443Z",
+        "last_date": "2026-05-18T05:24:10.443Z"
+      },
+      {
+        "actor_id": "83802c667650",
+        "display": "@dicoach.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T16:27:25.875Z",
+        "last_date": "2026-05-18T16:27:25.875Z"
+      },
+      {
+        "actor_id": "fb04c194daa7",
+        "display": "@kevinmkruse.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-18T20:45:43.645Z",
+        "last_date": "2026-05-18T20:45:43.645Z"
+      },
+      {
+        "actor_id": "7b6a392af11f",
+        "display": "@repemilyrandall.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-19T19:44:52.862Z",
+        "last_date": "2026-05-19T19:44:52.862Z"
+      },
+      {
+        "actor_id": "e7cbca1bcaa5",
+        "display": "@3shepsbuckeye.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-20T12:58:59.815Z",
+        "last_date": "2026-05-20T12:58:59.815Z"
+      },
+      {
+        "actor_id": "af3d0d8c9635",
+        "display": "@atrupar.com",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-20T18:34:01.505Z",
+        "last_date": "2026-05-20T18:34:01.505Z"
+      },
+      {
+        "actor_id": "4efa9a85e4ba",
+        "display": "@savornt.bsky.social",
+        "actor_type": "social",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": true,
+        "n_edges": 1,
+        "first_date": "2026-05-21T10:07:40.634Z",
+        "last_date": "2026-05-21T10:07:40.634Z"
+      }
+    ],
+    "by_actor_type": {
+      "news": 23,
+      "reference": 1,
+      "official": 1,
+      "social": 31
+    },
+    "date_span": [
+      "-0133-01-01",
+      "2026-05-21T10:07:40.634Z"
+    ]
+  }
+}
