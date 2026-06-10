@@ -1,37 +1,28 @@
-# Corpus build 1 - Wikipedia Current Events 2026-05-27..06-09 (2 weeks) + TopView 2026-06-05..09, deduped
+# Corpus build 1 - Wikipedia Current Events 2026-05-13..06-09 (4 weeks) + TopView 06-05..09; Haiku-triaged
 # Review/trim, then:
 #   python corpus.py topics_corpus1.txt --min-contestedness 6 --batch --max-searches 6
 # (pre-filter is one cheap Haiku call over all topics; batch ~50% off tokens)
 The United States Office of Foreign Assets Control announces under Executive Order 13224 that it has imposed sanctions against Iran's Persian Gulf Strait Authority, the newly-created body used for managing the Strait of Hormuz
-United States sanctions against Iran
 Tasnim News Agency reports that the IRGC Navy has forced a U.S. oil tanker to turn back as it attempted to cross the Strait of Hormuz
 Global Affairs Canada confirms a report from Semafor that Canadian officials in the Middle East, including the United Arab Emirates, helped American citizens escape the region during the early stages of the war
-Canada and the 2026 Iran war, Canada-United States relations
 Reuters and Axios reports that the U.S. military has launched new defensive strikes against a military site at the Strait of Hormuz that officials say posed a threat to American forces and commercial traffic
 The U.S. military says that it intercepted four Iranian drones and struck an Iranian drone station in Bandar Abbas, Hormozgan province. However, the U.S says that the ceasefire remains in place despite the strikes
-7 May 2026 United States strikes on Iran
 Both Hamas and Israeli defense minister Israel Katz confirm that Al-Qassam Brigades commander and leader in the Gaza Strip Mohammed Odeh was killed by an Israeli airstrike on May 26 near Gaza City along with his wife and three children
 The Organisation for the Prohibition of Chemical Weapons says that several chemical weapons from the Assad regime have been found in Syria over the past weeks
-Syrian chemical weapons program, Use of chemical weapons in the Syrian civil war
 Trade union members at Samsung Electronics in South Korea approve a long-term bonus agreement tied to semiconductor profits, averting a planned strike amid increased global demand for artificial intelligence-related memory chips
-2024-present global memory supply shortage, AI boom
 Three Latvian climbers are killed and another is critically injured after a fall on Denali in Alaska, U.S., while rescue and recovery operations continue
 Rescuers locate five of seven villagers alive after they become trapped for a week in a flooded cave in Xaisomboun province, Laos, while search operations continue for the remaining two people
 World Health Organization chief Tedros Adhanom Ghebreyesus warns that the war in the Democratic Republic of the Congo (DRC) could worsen the outbreak in the country
 Uganda temporarily closes its border with the DRC and imposes quarantine and health screening measures following the spread of Ebola cases in central Africa linked to the outbreak in the DRC
-2026 Central Africa Ebola epidemic
 The World Health Organization reports that the number of cases of hantavirus linked to MV Hondius has increased to 13
 The American Cancer Society adds the FDA-approved Guardant Health Shield blood test to its recommended colorectal cancer screening options in the United States amidst a rise in colon cancer cases in young adults
 The South African foreign ministry denies United States president Donald Trump's assertions that Afrikaners face a humanitarian emergency in South Africa. The statement comes as the U.S. increased the number of permits for Afrikaner refugees
 A Cambodian court sentences six Chinese nationals to life imprisonment for kidnapping, torturing, and murdering a South Korean student linked to a transnational fraud network operating in Cambodia
 U.S. military aircraft disable The Gambia-flagged bulk carrier Lian Star and leave it adrift in the Gulf of Oman after it ignored warnings while attempting to reach a port in Iran
-2026 Strait of Hormuz campaign
 Falling debris from a Fateh-110 missile intercepted by air defenses hit the Ali Al Salem Air Base in Kuwait, mildly injuring an estimated 5 American servicemen and contractors, and damaging two MQ-9 Reaper drones
 Israeli Air Force strikes and artillery shelling are reported near Beaufort Castle as Israeli troops approach the outskirts of Nabatieh, Lebanon
 The United States military carries out a strike on a boat accused of drug trafficking in the eastern Pacific Ocean, killing three people
-United States strikes on alleged drug traffickers during Operation Southern Spear
 At least eight people are killed during clashes between forces loyal to disputed Somali president Hassan Sheikh Mohamud and ousted South West State president Abdiaziz Laftagareen after they enter the regional capital Baidoa
-Constitutional crisis in Somalia, Controversies of Hassan Sheikh Mohamud
 Vanessa Pulgar-n from Colombia wins the first MGI All Stars beauty pageant, held in Bangkok, Thailand
 A truck carrying Afghan refugees returning from Pakistan overturns on a highway in Laghman Province, Afghanistan, killing 22 people and injuring 36 others
 At least six people are killed and ten others are injured when a four-story commercial building collapses in Saidul Ajaib, Delhi, India
@@ -42,14 +33,11 @@ A meteor lands off the coast of Massachusetts, United States, causing an explosi
 Uganda's health ministry reports two more cases of ebola in Kampala, bringing the total number of cases in the country to nine
 The MV Hondius cruise ship, which was at center of hantavirus infections including the Andes strain during the outbreak, is cleared to sail again after undergoing cleaning and disinfection
 Russia recalls its ambassador to Armenia over Armenia's closer relations with the European Union, citing concerns about its commitments within the Eurasian Economic Union
-Armenia-Russia relations, Armenia-European Union relations
 India signs a 60 billion rupees (US$629 million) deal to supply BrahMos missiles to Vietnam, which will also include training and logistical support
 A court in the Turks and Caicos Islands sentences former premier Michael Misick to over four years in prison for corruption, embezzlement, and accepting bribery
 Maltese citizens vote to elect the members of the House of Representatives
 In association football, defending champions Paris Saint-Germain (PSG) win their second Champions League title after defeating Arsenal 4-3 on penalties following a 1-1 draw after extra time during the final at Pusk-s Ar-na in Budapest, Hungary
-2026 UEFA Champions League final
 Following PSG's Champions League victory, police arrest more than 280 people in Paris, France, following clashes, vandalism, arson, an attempted intrusion into a police station, and disruptions to traffic and public transport during celebrations
-2026 Paris Saint-Germain celebration riots
 In basketball, the San Antonio Spurs defeat the defending champions, the Oklahoma City Thunder, in seven games to win the Western Conference finals and reach the NBA Finals for the first time since 2014, where they will face the New York Knicks
 At least two people are killed and 11 are injured by Israeli airstrikes in Beirut, Lebanon, which Israel claimed targeted Hezbollah infrastructure, violating the ongoing ceasefire
 Iranian state media reports that Pakistani interior minister Mohsin Naqvi handed Iranian foreign minister Abbas Araghchi a "written message" from prime minister Shehbaz Sharif for supreme leader Mojtaba Khamenei
@@ -57,14 +45,10 @@ U.S. president Donald Trump urges Iran to return to ceasefire negotiations and f
 U.S. president Trump threatens that the United States will seize and destroy Iran's highly enriched uranium, with or without their cooperation
 The Israeli Air Force intercepts multiple waves of Iranian missiles fired at northern Israel, the first launches at Israel since the ceasefire began in April, targeting the Ramat David Airbase
 The Iranian military command says that the Israeli attacks on southern Lebanon and the Dahieh suburb of Beirut "crossed all red lines" and that there will be a response if they continue
-2026 Iranian strikes on Israel
 At least 13 Palestinians are killed by Israeli airstrikes across Gaza City, Deir al-Balah, and al-Mawasi, in Gaza, in violation of the ongoing ceasefire
 Bahraini interior minister Rashid bin Abdullah Al Khalifa says that the country will prohibit mourning of the former Iranian supreme leader Ali Khamenei during the Ashura commemorations
-Bahrain-Iran relations, Reactions to the assassination of Ali Khamenei
-Reactions to the 2026 Iran war
 Iraq and Syria temporarily close their airspace, and the Damascus International Airport suspends its operations, amidst the Iranian strikes on Israel
 Iran closes its airspace in the western part of the country
-Economic impact of the 2026 Iran war
 Twenty-one people are killed and 19 others injured after a bus overturned and caught fire near Nasiriyah, Iraq
 Six people are killed after a van collided with a truck in Sichuan Province, China
 Two people are killed when a Gulfstream G200 private jet crashes at La Romana International Airport in La Romana, Dominican Republic
@@ -77,22 +61,18 @@ Islanders of Jersey vote to elect 49 seats of the States Assembly
 Peruvians vote in the second round of presidential elections between Popular Force candidate Keiko Fujimori and Together for Peru candidate Roberto S-nchez
 South Korean president Lee Jae Myung names Han Seong-sook as the new prime minister. If parliament approves her appointment, she will become the first woman in twenty years to hold the post
 In association football, Florentino P-rez is re-elected president of Real Madrid, defeating Enrique Riquelme
-2026 Real Madrid CF presidential election
 The Iranian military says that attacks on Israel will resume if it continues the war against Lebanon
 The Islamic Revolutionary Guard Corps launches strikes in the Sulaymaniyah Governorate against the Kurdish opposition group headquarters in the Kurdistan region of Iraq
-2026 Iranian strikes on the Kurdistan Region
 The Houthis fire two missiles at Israel, one of which was intercepted, and another that did not reach it
 Iran ambassador to Russia Kazem Jalali tells the Russian newspaper Izvestia that the Strait of Hormuz will reopen, but with new conditions set by Iran and Oman, including transit fees
 Israel Defense Forces confirms that they have killed three Palestinian Islamic Jihad militants in the central Gaza Strip
 Eleven people, including four police officers, are killed and dozens others are injured during clashes between police and supporters of the banned Joint Awami Action Committee (JAAC) in Azad Kashmir, Pakistan. Police arrest more than 70 JAAC members
-Kashmir conflict, Protests in Pakistan
 The Iraqi Civil Aviation Authority reopens Iraq's airspace after Iran announced that it was halting attacks against Israel. Additionally, Syria reopens its airspace, including resuming operations at the Damascus International Airport
 Tehran's Imam Khomeini International Airport resumes operations after suspending incoming flights following recent military exchanges between Iran and Israel
 The Kyrgyz Foreign Ministry says that the European Commission's Directorate-General for Mobility and Transport removed Kyrgyzstan from the European Union aviation safety blacklist after 20 years
 Philippine president Bongbong Marcos orders the suspension of classes in affected areas across Mindanao, coinciding with the country's first day of the new school year
 Eight people are killed and six others injured after an explosion at a steel plant in Visakhapatnam, India
 The U.S. National Oceanic and Atmospheric Administration records the country's second-warmest spring since records began, while drought conditions affect more than half of the contiguous states despite above-average precipitation in some regions
-Climate change in the United States
 Brazil's health ministry suspends administration of its single-dose dengue vaccine after two deaths and another severe adverse event among more than 500,000 recipients prompt a safety review, although no causal link has been established
 The International Campaign to Abolish Nuclear Weapons reports that the world's nine nuclear-armed states increased spending on nuclear weapons by nearly 20% to US$119 billion, the highest annual total on record, in 2025
 A Finnish court sentences former Polarica [fi] chief executive Jukka Kristo to two and a half years' imprisonment for human trafficking after finding that dozens of Thai berry pickers were subjected to forced labour and exploitative working conditions in Finland
@@ -101,108 +81,154 @@ Declared results indicate that Reform Jersey leader Sam M-zec will not be re-ele
 The government of West Bengal, India, deports nearly 5,000 Bangladeshi nationals and detains hundreds more as part of a campaign targeting undocumented migrants following the state's recent election
 Former Supreme Court justice and United Nations High Commissioner for Human Rights Louise Arbour is sworn in as the 31st Governor General of Canada
 Several members from Iran, Iraq, and Somalia, along with international sports delegations including referee Omar Abdulkadir Artan, are denied visas and blocked from entering the United States for the FIFA World Cup
-2026 FIFA World Cup controversies
 Israel issues an evacuation warning for Tyre, Lebanon, after an Israeli airstrike there killed at least eight people and injured 32
 Israeli troops kill one person in northern Israel, near the border of Israel and Lebanon
 At least 10 people are killed and 106 others are injured in a Russian missile and drone attack on Kharkiv Oblast, Ukraine
 The administration of the Rapid Support Forces in West Darfur accuses the Sudanese Army of destroying the Ardamata bridge in a drone strike in Geneina, Sudan
-List of ongoing armed conflicts
 The United States Energy Information Administration reports that Middle Eastern oil producers have reduced output by more than 11 million barrels per day, due to the Strait of Hormuz closure
 The National Highway Traffic Safety Administration reports that Stellantis has recalled over 1 million Jeep Wrangler and Gladiator models from 2021 to 2025 in the United States over fire concerns
 The death toll from yesterday's earthquake in Mindanao, Philippines, increases to 41 people killed, with 479 more injured and four missing. All casualties come from the Davao and Soccsksargen regions
 Riots erupt in Belfast and Newtownards, Northern Ireland due to yesterday-s knife attack
 The Sri Lankan High Court sentences former deputy minister Sarana Gunawardena to 16 years' imprisonment after convicting him on corruption charges related to kickbacks from government procurement contracts
 Philippine police arrest former superintendent Rafael Dumlao, who was convicted in the 2016 kidnapping and killing of South Korean businessman Jee Ick-Joo at Camp Crame and had been evading imprisonment
-Kidnapping and killing of Jee Ick-Joo
 Three people are injured in a mass stabbing at a school in Blackley, Manchester, England. A 14-year-old student is arrested
-Alexander Zverev
-Obsession (2025 film)
-Flavio Cobolli
-2026 FIFA World Cup
-Backrooms (film)
-Masters of the Universe (2026 film)
-Christian Eriksen
-Salim Kumar
-Killing of Rachel Nickell
-Scary Movie (2026 film)
-Anthony Head
-Peddi
-Manav Suthar
-Kimi Antonelli
-Stacey King
-Deaths in 2026
-Robert Napper
-Michael Jackson
-Inde Navarrette
-Mirra Andreeva
-2026 Formula One World Championship
-Pa-O National Organisation
-Peter Phillips
-Brett Goldstein
-Murder of Henry Nowak
-Teach You a Lesson
-Lewis Hamilton
-2026 Armenian parliamentary election
-ChatGPT
-The Backrooms
-Jalen Brunson
-Neatsville, Kentucky
-James Handy
-Michael (2026 film)
-Xerxes Desai
-Nelly Korda
-Dua Lipa
-Callum Turner
-FIFA World Cup
-J. T. Poston
-Kim Kardashian
-Kane Parsons
-Office Romance (2026 film)
-Titan Company
-Off Campus
-Foot binding
-Disclosure Day
-Widow's Bay
-Judith Barsi
-Spider-Noir
-2026 Peruvian general election
-79th Tony Awards
-Spencer Pratt
-Ford Creek Patrol Cabin
-Nithya Raman
-.xxx
-B-la Pap
-2026 Gilgit Baltistan Assembly election
-David Sullivan (businessman)
-Pink (singer)
-Kristen Welker
-Divock Origi
-Shoshana Bean
-Aubrey Plaza
-Keiko Fujimori
-Schmigadoon! (musical)
-XXX
-Victor Wembanyama
-Killing of Austin Metcalf
-.xyz
-Stephon Castle
-OG Anunoby
-Gephyromantis tschenki
-New York Knicks
-Timoth-e Chalamet
-Ethan Slater
-Jeff Bezos
-Karl-Anthony Towns
-USS Liberty incident
-Ariana Grande
-Landry Shamet
-Mike Brown (basketball, born 1970)
-Limonene
-Donald Trump
-Dylan Harper
-Michael Olise
-Rolf Harris
-List of FIFA World Cup finals
-Carmelo Anthony
-Rick Brunson
-Artemis III
+U.S. president Donald Trump says that he is open to accepting Iran's 20-year suspension on their nuclear program if Iran gives a real guarantee
+The United States announces that Israel and Lebanon agreed to extend their ceasefire for 45 days, and that more specific political and security negotiations will begin on May 29 and June 2, respectively
+Israeli airstrikes kill at least seven people across Nabatieh, Tibnin, and Harouf, and injure 37 people in Tyre, Lebanon
+Hamas military leader Izz al-Din al-Haddad is assassinated alongside his wife and daughter in an Israeli airstrike in Gaza City
+U.S. president Donald Trump announces that U.S. and Nigerian forces have eliminated ISIS second-in-command Abu-Bilal al-Minuki during a joint mission
+Seventeen police trainees and an unknown number of soldiers are killed in a mass shooting by Islamist militants at a specialised military school in Buni Yadi, Yobe State, Nigeria
+Russia and Ukraine swap 205 prisoners of war following a violated three-day ceasefire
+The Sudanese Army says that they have re-captured the Blue Nile town of Khor Hassan, near the border with Ethiopia, from the Rapid Support Forces
+The Camera Nazionale della Moda Italiana, which organizes Milan Fashion Week in Italy, announces guidelines encouraging participating brands not to display fur products during fashion shows following pressure from animal rights groups
+The Integrated Food Security Phase Classification warns that 19.5 million people in Sudan are facing hunger amidst the three-year civil war
+Six people are killed and 19 others injured in a collision between a passenger bus and a cargo truck in Hadramout, Yemen
+Six people are killed and 10 others were injured after a speeding tanker hit the vehicle they were traveling in from behind in Karnataka, India
+An ebola outbreak is confirmed in the Democratic Republic of the Congo's Ituri Province by the Africa Centres for Disease Control and Prevention, killing 80 people
+The South Sudan Health Ministry issues an ebola alert in the country following cases in the DRC and Uganda
+Chinese foreign minister Wang Yi says that China and the United States have agreed to continue implementing previous trade agreements and to establish trade and investment councils following talks between Chinese leader Xi Jinping and U.S. president Donald Trump in Beijing
+Thirty-six countries and the European Union join the Special Tribunal for the Crime of Aggression against Ukraine
+Two Mexican officials sought for extradition by the U.S. in April on charges of alleged collusion with organized crime are reportedly detained in Europe and the U.S
+Matthew Wale is appointed as the prime minister of Solomon Islands after Jeremiah Manele was ousted in a no-confidence vote
+The United World Wrestling lifts restrictions on wrestlers from Russia and Belarus that was imposed following the Russian invasion of Ukraine and will allow them to compete under their respective national flags
+Iran confirms that it has sent a proposal to the United States for ceasefire talks including a withdrawal of American troops from areas close to Iran, an end to all conflicts in the region, and compensation for damages caused by the war
+United States vice president JD Vance says that progress has been made in talks with Iran regarding its nuclear program. However, he also stated that the U.S. is ready to resume strikes if talks fail
+The Israeli Navy intercepts a flotilla boat taking part in the Global Sumud Flotilla that was to be headed for the Gaza Strip in a effort to break the blockade
+A Syrian soldier is killed and at least twelve others are injured in a car bomb explosion in Damascus
+Israeli airstrikes kill 19 people and injure 34 in the Nabatieh District and the Tyre District, Lebanon
+Israel seizes control of approximately 1,000 km2 (390 sq mi) of territory across the Gaza Strip, Lebanon, and Syria, an area equivalent to roughly 5% of the country's landmass
+Estonia reports that a Romanian NATO F-16 fighter jet shot down a drone, suspected to be of Ukrainian origin impacted by Russian electronic warfare mechanisms, over Estonian territory
+The Sudanese Emergency Lawyers reports that 28 people have been killed in a drone strike on a market in West Kordofan, Sudan
+The U.S. African Command says that U.S. and Nigerian forces have launched airstrikes on a ISIS camp in Nigeria
+In literature, Taiwan Travelogue by Yang Shuang-zi and translated by Lin King wins the 2026 International Booker Prize
+At least 10,000 homes are evacuated amid spreading wildfires in Santa Rosa Island and Simi Valley, California, United States
+Ten people are killed in torrential rain and flooding in Guizhou, Hubei, and Hunan provinces, China
+The death toll from a pickup truck crash in Huanjiang Maonan Autonomous County, Guangxi, China, rises to ten after the bodies of nine missing people were recovered
+At least 27 people are injured in a Mw 6.1 earthquake off the coast of Ica Department, Peru
+The death toll in the Ebola outbreak in eastern Democratic Republic of the Congo rises to 131
+Sudan begins implementing Ebola measures, including screening passengers at the international airport in Port Sudan
+Thailand reports two cases of mpox, prompting the Department of Disease Control to increase surveillance of the disease
+Taiwan reports its first case of the transmissible mpox clade Ib variant in a man in his 20s in northern Taiwan
+Norway reports the first recorded case of avian influenza in a polar bear in Europe after the H5N5 virus was detected in the animal in Svalbard
+Somaliland announces that the country will open an embassy in Jerusalem to strengthen its ties with Israel, for now the only country to recognize Somaliland as an independent nation. Israel announces that it will reciprocrate by opening an embassy in Hargeisa
+The cabinet of Thailand approves plans to reduce the length of visa-free stays for travelers from more than 90 countries as part of measures targeting crimes involving foreign nationals
+Catalonian police arrest Jonathan Andic, the son of Mango founder Isak Andic, as part of an investigation into Isak's death during a hiking trip to Collbat- in 2024
+Vietnamese police arrest five Chinese nationals and a local accused of operating a gold smuggling network in Hanoi that allegedly traded more than US$45 million worth of gold
+Three people, including two Japanese nationals and a Chinese national, are injured in a stabbing attack at a restaurant in Shanghai, China
+Several banks close in La Paz as protests intensify across Bolivia, with demonstrators demanding the resignation of president Rodrigo Paz
+The War Powers Resolution, requiring a halt to hostilities in Iran not approved by the United States Congress, passes a preliminary vote in the U.S. Senate by 50-47 following several failed attempts, after the defection of Louisiana Republican senator Bill Cassidy
+In association football, Arsenal win the Premier League, their fourth Premier League title and 14th English title, with one match to spare, after runner-ups Manchester City fail to win against AFC Bournemouth at Dean Court
+The Athletic reports that FIFA is planning to ban the Iranian Lion and Sun flag and related apparel in World Cup stadiums during the upcoming games
+World Cup co-host United States allows the DR Congo football team to participate in the upcoming games in the country despite ebola concerns
+Ukraine Secret Service Alpha Group forces strike a Russian Federal Security Service headquarters in Kherson Oblast, Ukraine
+Belarusian president Alexander Lukashenko says that his country will not join the current war, and says that he is ready to meet Ukrainian president Volodymyr Zelenskyy
+Casualties are reported with no exact number after heavy fighting breaks out on the outskirts of regional capital Baidoa between forces loyal to the federal government and troops aligned with South West State ousted president Abdiaziz Laftagareen
+The Sudan Doctors Network reports that a drone strike by the Rapid Support Forces and Sudan People's Liberation Movement-North in Dilling, South Kordofan, Sudan, has injured six people
+Drone strikes Lithuania and Latvia causing mayhem and panic country-wide
+Ten people are killed in a head-on collision between a minibus and a bus in Mpumalanga, South Africa
+At least nine people are killed and nine others are injured when a building collapses in Fez, Morocco
+India and the African Union postpone the upcoming India-Africa Forum Summit, originally scheduled to be held in New Delhi between May 28 and 31, due to the Ebola outbreak in parts of Africa
+India, South Korea, and Thailand issue travel alerts for the Democratic Republic of the Congo (DRC) and Uganda, while South Korea plans to impose a level-4 travel ban for parts of the DRC, especially the Ituri Province, due to the Ebola outbreak in both countries
+The United States temporarily pauses deportation flights to the DRC
+Uganda temporarily suspends flights to and from the DRC
+Residents protesting the handling of the public health crisis set ablaze an Ebola treatment center in the Ituri Province after Congolese police fired warning shots and tear gas
+The United States inaugurates a new consulate in Nuuk, Greenland, amidst the Trump administration's focus on the Arctic and tensions over efforts to purchase it
+Greenlanders gather to protest the opening of the new U.S. consulate in Nuuk in opposition to U.S. president Donald Trump's efforts to purchase Greenland
+Greenland prime minister Jens-Frederik Nielsen says that he will not attend the opening ceremony of the new U.S. consulate in Nuuk
+U.S. ambassador to Denmark Ken Howery says that Trump has ruled out the use of military force against Greenland
+Twenty people are killed in a mass shooting at a ranch in the village of Rigores, Trujillo, Col-n Department, Honduras. In a separate incident, five police officers and three alleged gang members are killed in a shootout in the village of Corinto, Omoa, Cort-s Department
+Thai police arrest eleven additional suspects linked to a cyber fraud network allegedly connected to Chinese national Sun Mingchen, who faces weapons charges after authorities discovered military-grade firearms and explosives at his residence in Pattaya, Chonburi
+The Court of Appeal of Paris, France, convicts Airbus and Air France of manslaughter over the 2009 crash of Air France Flight 447, which killed 228 people, and orders both companies to pay the maximum corporate fine and compensation to victims' families
+The Government of Puntland states that federal executive and legislative mandates under the Somali provisional constitution have ended, as federal institutions enter a transitional phase with unclear mandates
+In association football, Al-Nassr win their 11th Saudi Pro League title after defeating Damac 3-1 on the final matchday of the season
+Pakistan Army field marshal Asim Munir visits Tehran, Iran, in a effort to broker a ceasefire deal between Iran and the United States to end the war
+According to the Tasnim News Agency, Iranian foreign minister Abbas Araghchi and field marshal Asim Munir held late night talks amidst ongoing diplomatic efforts
+A source citing Reuters says that a negotiating team from Qatar arrives in Tehran in an effort to secure a peace deal between Iran and the U.S. to end the war
+Iranian foreign minister Abbas Araghchi says that "excessive demands" by the U.S. are the main obstacle in the peace talks
+An Iranian foreign ministry spokesperson says that Iran will not agree to give its highly enriched uranium to the U.S
+The Islamic Revolutionary Guard Corps Navy reports that 35 ships passed through the Strait of Hormuz with permission over the previous 24 hours
+A Qatari liquefied natural gas tanker crosses the strait for the first time in nearly two weeks, bound from Ras Laffan to Tianjin, China
+Six people are killed and six more injured in an Israeli airstrike in Deir Qanoun an-Naher. Two paramedics are among the fatalities, while three more are injured
+A paramedic is killed and four more are injured in two separate Israeli airstrikes in Tyre District
+Israeli drone strikes kill two people in Rafah and Gaza City
+U.S. secretary of state Marco Rubio says that no peace talks are currently taking place, but the United States is "ready" to play a role if they resume
+The Malian military conducts drone strikes on the governor's office and other locations in Kidal, Kidal Region, Mali, which did not cause any casualties
+Seven people are killed and 110 more injured in clashes between the Misak and Nasa, rival Indigenous groups, over a dispute to a land in Silvia, Cauca Department, Colombia. The army has deployed 500 soldiers in response
+Mexico and the European Union sign an updated trade agreement that reduces tariffs and expands market access
+The Dutch cabinet approves a bill to ban the importation of goods from Israeli settlements, and will explore if the ban can be extended to services and investments
+More than 90 miners are killed and others are injured in a mining accident after a gas explosion at a coal mine in Shanxi, China
+Major power outages at night on Sumatra island leave millions without electricity for hours. Several officials declare a state of emergency due to concerns over temperature and weather conditions
+40,000 people are evacuated in Garden Grove, California, U.S., due to a chemical tank leak, and fears of a possible explosion
+The death toll from a building collapse in Fez, Morocco, yesterday rises to 15
+One person is killed and 36 others are injured, including two seriously, in an explosion at a dry dock in Staten Island, New York, United States
+At least one person is killed and nine others are injured in an explosion at the petrochemical plant of MOL in Tisza-jv-ros, Borsod-Aba-j-Zempl-n County, Hungary
+The Ituri provincial government orders funerals to be conducted only by specialized personnel, limits public gatherings to no more than fifty people, and suspends the local football league
+Rwanda imposes a travel ban on foreign nationals that have been to the DRC in the past thirty days, and requires a quarantine for Rwandan citizens or residents who have been there
+United Nations emergency relief coordinator Tom Fletcher announces that the organization is providing US$60 million in funding for the outbreak response
+Acting U.S. navy secretary Hung Cao says that the United States has put on hold US$14 billion of arms sales to Taiwan to preserve munitions during the Iran war
+NATO conducts Operation Arcade Strike, an exercise in drone warfare, at an unused platform of the London Underground's Charing Cross tube station to be prepared for potential conflict with Russia by 2030
+Slovenia elects Democratic Party leader Janez Jan-a as prime minister after lawmakers approve a minority coalition government, replacing former prime minister Robert Golob of the Freedom Movement
+Senegalese president Bassirou Diomaye Faye dismisses prime minister Ousmane Sonko and dissolves the government amid growing tensions within the ruling coalition and ongoing economic challenges in Senegal
+Andrew Giuliani, head of the FIFA World Cup 2026 Task Force, says that the DR Congo soccer team must isolate for 21 days or risk the ability to enter the U.S. for the upcoming FIFA World Cup amidst the ebola outbreak in the country
+The Islamic Revolutionary Guard Corps Navy reports that 33 ships passed through the Strait of Hormuz after receiving permission in the past 24 hours
+The Iranian military shoots down an alleged Israeli surveillance drone over Hormozgan province, Iran
+The Ukrainian Security Service reports that Ukrainian forces have successfully launched an overnight drone strike on the Vtorovo oil pumping station in the Vladimir Oblast in Russia
+Four people are killed and over a hundred are injured in a Russian missile and drone attack on Kyiv, Ukraine. The National Chernobyl Museum is severely damaged, among other buildings
+At least 30 people are killed and over 52 are injured after the explosion of a bomb at a car park near a train station in Quetta, Balochistan, Pakistan. The Balochistan Liberation Army claims responsibility
+Sudanese Armed Forces announces that they have seized control of Al-Barka in the Blue Nile region of Sudan. The SAF's Fourth Infantry Division confirmed the military operation in a statement
+A Malaysian citizen dies after a nine-story building, under construction as a condo-hotel, collapses in Angeles, Pampanga, Philippines. At least 26 people are rescued, while search operations are ongoing for 23 others still missing
+Five people are killed and another is injured in a fire at a shop in Qidong County, Hunan, China
+Three people are killed and 17 others are reported missing after overnight torrential rains in Yongchuan, Chongqing, China
+At least 16 people die from heat stroke in Telangana, India, as temperatures exceed 45 -C (113 -F) during a heat wave, prompting public safety measures from the government
+Bahrain sentences nine people to life in prison for espionage on behalf of Iran's Islamic Revolutionary Guard Corps
+Hundreds of inmates seize control of a prison in Barinas, Venezuela, and protest alleged torture and abuse, demanding the removal of the prison director as security forces surround the facility
+Four people are killed and one of the gunmen is injured in a mass shooting in Kabul, Afghanistan. Two suspects are arrested
+Iranian Americans gather in San Francisco, California, United States at the Ferry Building opposing an immediate end to the Iran war, citing concerns that it would leave the Islamic Republic regime in power and undermine hopes for change in the country
+Cypriots vote to elect 56 of the 80 seats in the House of Representatives. Recent opinion polls have indicated that the conservative DISY and the leftist AKEL are competing for first place, while the hard-right ELAM is also expected to make gains in the legislature
+DISY wins the most with 17 seats, followed by AKEL in second with 15 seats and ELAM in third with eight seats. ALMA and Direct Democracy Cyprus enter the legislature with four seats each
+Turkish police raid the headquarters of the Republican People's Party and evict its leadership, including -zg-r -zel
+Romuald Wadagni is sworn in as the president of Benin, succeeding Patrice Talon
+In Senegal, Malick Ndiaye resigns as National Assembly president following the dismissal of prime minister Ousmane Sonko, clearing the way for Sonko to seek the parliament's presidency amid tensions within the ruling coalition
+Thousands of people protest in Madrid, Spain, against increasing housing costs
+In auto racing, Meyer Shank's Felix Rosenqvist defeats Penske's David Malukas to win the 110th Indianapolis 500, giving Meyer Shank its second victory in the event. The margin of victory is 0.023 seconds, making it the closest finish in Indianapolis 500 history
+The president of the Iranian football federation says FIFA has approved the country's World Cup training base being switched from the United States to Mexico due to the ongoing conflict
+Israeli airstrikes across eastern and southern Lebanon kill at least 31 people and injure dozens more, as Hezbollah and Israel report intensified ground operations and cross-border attacks despite an existing ceasefire
+Israel says that it has killed the new military chief of Hamas, Mohamed Odeh, just 11 days after his predecessor was killed
+Sudanese Armed Forces announce that they have recaptured four more towns in the Blue Nile region following clashes with the Rapid Support Forces and the Sudan People's Liberation Movement-North
+BP chairperson Albert Manifold is removed with immediate effect over "serious" conduct concerns
+Uzbekistan resumes the export of gold in April with an export of US$1.5 billion following a six-month pause
+One person is killed, ten people are injured, and nine others are missing in a major chemical explosion at a paper mill in Longview, Washington, United States
+Four people, including two children, are killed, and five more are injured in a collision between a train and a school bus in Buggenhout, Belgium
+Six people are killed after a house fire in the village of Yuryevka, Omsk Oblast, Russia
+Six people are killed after entering an under-construction septic tank in Kalahandi District, India
+Three people are killed and three others are injured after an overpass collapses in Seoul, South Korea
+One person is killed and eleven others are injured after a magnitude 4.6 earthquake in Jhelum District, Punjab, Pakistan
+The Bahamas announces enhanced health screening and possible quarantine measures for travelers who recently visited the Democratic Republic of the Congo (DRC), South Sudan, and Uganda following the Ebola epidemic in central Africa
+Canada announces a 90-day entry ban on residents of the DRC, South Sudan, and Uganda and imposes quarantine measures on some travelers following the Ebola epidemic
+Russian health minister Mikhail Murashko says that Russia has developed a breakthrough vaccine for the Bundibugyo ebolavirus strain of the disease
+The United States announces plans to send health officers to Kenya to open a potential quarantine facility amidst the Ebola epidemic
+Mexico arrests Isai Mart-nez Zepeda, identified by authorities as a nephew of imprisoned former Sinaloa Cartel leader El Chapo, in Sonora
+A jury is sworn in for the criminal trial of former Northern Irish MP Jeffrey Donaldson for sexual offences, which is to begin at 10:30 the following day. His wife Eleanor is undergoing a separate trial of the facts as she was deemed to be unfit to stand trial by medical experts
+American football player Josh Jacobs is arrested in Wisconsin on five charges of domestic violence
+The South Carolina Senate rejects a redistricting effort to change the congressional districts in the U.S. state of South Carolina before the upcoming U.S. midterm elections
+The Chamber of Deputies of Bolivia approves legislation allowing president Rodrigo Paz to declare a state of emergency and deploy the military amid anti-government protests over economic conditions in the country
