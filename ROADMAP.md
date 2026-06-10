@@ -1,0 +1,182 @@
+# Tributary — Roadmap
+
+**Mission:** make the identity-information landscape visible and measurable — where information comes from, who amplifies it, what each ecosystem covers and omits — so that people, and the journalists and organizers who serve them, can see the structure behind what they read. Tributary does not adjudicate truth. It targets *mutual legibility* (you can see the shape of your information world and others') and *shared structural facts* (who said what first, who covered what, who never mentioned it).
+
+This document is both a public commitment and the working plan. Phases are gated: each gate is evidence that must exist before the next phase starts. Standing principles govern all work in every phase.
+
+---
+
+## Standing principles
+
+**P1 — Process-normative, conclusion-neutral.**
+Tributary is openly normative about *epistemic process* — citing primary sources, issuing corrections, originating vs. relaying, attributing, exposing methods — and strictly neutral about *conclusions*.
+- Banned vocabulary in product output: "misinformation," "disinformation," "fake news," "AI slop," "true," "false," "debunked" (as a verdict), or any truth/quality verdict.
+- Required vocabulary: behavioral-provenance descriptors that a reader can verify — *originates N% / relays N%*, *links primary documents: rarely/often*, *corrections issued: none observed*, *citation pattern: predominantly self-referential*, *provenance: untraceable beyond X*, *machine-generation signals present*.
+- A verdict asks for trust; a structural description invites verification. Inviting verification is the only move that works on a reader whose trust we don't have.
+
+**P2 — Tributary practices the epistemics it measures.**
+A provenance tool that scores others on corrections and methods must visibly have both.
+- `METHODOLOGY.md` — what each output claims, how it's produced, known failure modes and limits.
+- `CORRECTIONS.md` — a public, dated log of every substantive error found in published output, and the fix.
+- A published, *measured* error rate (see Phase 0/3 audit task). A known error rate is citable; an assumed-perfect one is disqualifying.
+- Every element already carries `Provenance`; keep it that way. Provenance for the provenance tool.
+
+**P3 — Neutrality laws for any intervention** (recommendations, onramps, curation):
+1. Optimize only for cross-cutting *exposure/diversity* — never toward a "correct" ideology or outlet list.
+2. Always multiple options; the user chooses.
+3. Always show *why* each option was surfaced.
+4. User-initiated, never pushed.
+5. Trust signals are structural/behavioral (P1), never verdicts.
+
+**P4 — Local-first for personal data.**
+Browser history and watch history are maximally sensitive, and the target users are trust-poor by definition. Personal-mirror processing runs on-device; raw history never leaves the machine; at most, anonymized claim embeddings touch a remote matcher — and in the pilot, not even that (ship the corpus snapshot to the client).
+
+**P5 — Robust signals over interpretive signals.**
+Prefer signals built from volume, presence, position, and structure (what was covered, how prominently, by whom) over signals that depend on AI interpretation (stance, role, framing labels). Where interpretive labels are used:
+- Try to **disprove** a signal before presenting it as valuable.
+- Report "it works" (mechanical) and "it's valuable" (semantic) as separate claims.
+- Audit AI-generated labels on real examples before building anything on top of them.
+
+**P6 — Share results, not access.**
+Outputs are static JSON + a dependency-free viewer. Browsing is free for everyone, forever. Generation cost is solved by *fingerprint once, match-and-serve many* — not by gating access.
+
+**P7 — Gates are binding.**
+The Non-goals list at the bottom stays closed until a gate explicitly reopens an item. Solo-builder hours are the scarcest resource in the project; the gates exist to spend them on evidence, not optimism.
+
+---
+
+## Strategy in brief
+
+**First user:** the media-and-misinformation desk — press critics, disinfo/OSINT reporters, verification teams, J-school researchers. Their job is literally "where did this narrative come from and who is pushing it," and they can only cite a tool whose methodology they can defend. METHODOLOGY.md, the corrections log, and the measured error rate *are the product* for this user.
+
+**The ladder (personal product):** mirror → annotate → recommend → opt-in curation. Never feed override — technically impossible from outside the platforms and ethically fraught even if it weren't. The strongest mirror feature is the **omission report**: *here's what happened this period; here's the slice your diet showed you; here's what your sources never mentioned.* It is purely additive — it disputes nothing the person believes — which makes it the intervention least likely to trip the identity-protective immune system.
+
+**The heartbeat:** research instruments don't get discovered; recurring publications do. A weekly digest ("This Week in Narratives") is simultaneously the distribution engine, the operational forcing function, and the corpus-growth mechanism.
+
+**The flywheel:** journalists read the digest/gallery → cite and embed trace permalinks → readers meet provenance in-context (the answer to the selection-effect problem) → some become mirror pilots → their feeds surface novel narratives → corpus grows → matcher coverage rises → marginal cost falls → more analytical capacity per digest.
+
+**Defensible assets:** the corpus (compounds via matcher coverage) and earned trust (compounds via methodology + corrections). The LLM pipeline itself is *not* defensible — anyone can call a model. When choosing between pipeline cleverness and corpus/trust/distribution, the latter wins.
+
+---
+
+## Phase 0 — Public face (~1 week)
+
+The repo is now public; it is the first impression and the "share results" surface. Make it show the product.
+
+- [ ] Rewrite `INTRO.md` for the current pipeline (it still documents `demo.py`/`batch.py`, which now live in `legacy/`).
+- [ ] Delete `backup/` (duplicates `legacy/`); `legacy/` is the single archive.
+- [ ] Move or delete stale old-format root JSONs (`rigged_full.json`, `iran_war.json`, `border_trace.json`, `perspectives_*.json`, `world_cup_1936.json`, `ev_lifetime_emissions.json`, `results/`, `traces/`) — none deserialize in the current viewer/schema.
+- [ ] Create `examples/` with 4–6 *real, current-format* outputs: the "economy is rigged" full fingerprint (the dual-lineage signature demo), one contested `EventAnalysis` with coverage-lean + coalitions, one `SourceAnalysis`. Fix or replace the synthetic demo's "Minneasota Star" typo.
+- [ ] GitHub Pages: host `fingerprint_viewer.html` + a gallery index. Add a `?load=<url>` query param to the viewer so every example has a **stable permalink** (this is the future "trace card" embed for journalists).
+- [ ] `METHODOLOGY.md` v1: port the README's honest-limits sections (bias-DB US-centricity, sample-not-census, news-media gate, resolve-rate guard) into a standalone page; state what each layer does and does not claim.
+- [ ] `CORRECTIONS.md`: create with format (date, output affected, error, fix, root cause) — empty is fine; existing is the point.
+
+**Deliverable:** a link you would willingly send a journalist.
+**Gate 0:** a person outside the project can open an example trace from a bare URL with no instructions.
+
+---
+
+## Phase 1 — Matcher + corpus (~2–3 weeks, ~$25 API)
+
+The matcher answers "have we already traced this narrative?" for every text entering the system. It is the keystone: it collapses serving cost, gives narrative identity across events, and makes the personal mirror affordable.
+
+**Matcher (`matcher.py`, new module — do not grow `fingerprint.py`):**
+- [ ] Local embedding model via `sentence-transformers` (pick one small/strong model; pin the version; store model name alongside vectors — vectors from different models must never be compared).
+- [ ] Embed **two texts per fingerprint, separately**: L1 `canonical_phrase`, and L2 (`claim_predicate` + `causal_structure`).
+- [ ] Store vectors in a sidecar (`fingerprints/vectors.json` keyed by `fingerprint_id`), not inside `index.json`. Backfill the existing corpus.
+- [ ] Decision grid on (L1-sim, L2-sim): both high → **serve cached**; L2 high + L1 low → **same idea, new phrasing** → attach as lexical variant (additive schema; old JSON must still render); middle band → **review queue** (a JSON queue file — later, the first job for human contributors); both low → **queue for batch generation**.
+- [ ] Thresholds: start ~0.85 (high) / ~0.70 (low) and calibrate on the real corpus before trusting them (Gate 1).
+- [ ] Replace `FingerprintStore.find_matching` at its call site; keep the old lexical check as a cheap pre-filter if useful.
+- [ ] CLI: `python matcher.py "some claim"` → match status + nearest neighbors; `python matcher.py --coverage <file>` → the coverage metric over a list of claims.
+
+**Corpus:**
+- [ ] `discover.py` → `--min-contestedness 6` → `corpus.py --batch` to **~100 events**; backfill coverage-lean.
+- [ ] Every event lands in the public gallery (Phase 0 made this possible).
+
+**Deliverable:** a measured coverage rate; a browsable 100-event public corpus.
+**Gate 1 (semantic, per P5):** 30 claim pairs spanning same-narrative / paraphrase / different — human judgment vs. matcher band. Require agreement on clear cases and **zero confident-match false positives** before serve-from-cache becomes default behavior.
+
+---
+
+## Phase 2 — Agenda layer v1 (~2–3 weeks)
+
+Selection and prominence are where outlet bias lives even when individual stories are fair — and they are countable, structural, robust signals (P5). No LLM interpretation on the hot path.
+
+- [ ] `agenda.py`: RSS prominence capture for ~25 outlets (curated across the AllSides spectrum plus several international outlets); snapshot feed contents + item position on a schedule; store raw snapshots.
+- [ ] Daily event-universe snapshot via `discover.py` (both Current Events and topview sources).
+- [ ] Headline → event mapping (the matcher from Phase 1 does the heavy lifting: headline embeddings vs. event key-claims).
+- [ ] Per-outlet **attention distribution** vs. the event universe → outlet *agenda fingerprints*.
+- [ ] **Omission report** generator: per outlet/ecosystem, events with zero observed coverage in the period.
+- [ ] Store as JSON; render in the viewer as a new card (additive).
+
+**Deliverable:** Digest issue #1 produced end-to-end from a real week of captures.
+**Gate 2 (the most important audit in the project):** for 10 claimed "never mentioned" items, manually search the outlet's own site. Require ≥9/10 to hold. RSS is not full coverage — if the audit fails, add sitemap/news-sitemap capture **before any omission claim is published**. A false "they never covered it" is Tributary's single most damaging possible error.
+
+---
+
+## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
+
+- [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery.
+- [ ] Send each issue directly to five named media reporters/desks you'd want as users.
+- [ ] Every issue's underlying JSON ships to the public gallery (corpus grows as a byproduct).
+- [ ] Maintain `CORRECTIONS.md` religiously; publish the first audited error rate (sample ~50 attestations from the corpus, manually verify, publish precision + the audit itself).
+- [ ] Side quest, using the evidence pack this phase creates (open methodology, public instrument, demonstrated cadence, named user segment): grant applications — Knight, Mozilla, Sloan, Reynolds Journalism Institute and similar.
+
+**Gate 3:** by issue 8 — any *organic* engagement (an unsolicited reply, a citation, a subscriber, a journalist-shaped repo star). Engagement → double down on distribution and proceed to Phase 4. Silence → stop building, run five user interviews, revise.
+
+---
+
+## Phase 4 — Cross-event graph (~2–3 weeks; requires Phase 1)
+
+- [ ] Persist `ActorRegistry` across the corpus (SQLite or `registry.json`) — **not Neo4j**.
+- [ ] Name↔domain bridge table to merge identities currently split between name-keys (downstream) and domain-keys (upstream); explicit handling for aggregator hosts.
+- [ ] Narrative identity across events via the matcher: cluster framings/fingerprints whose embeddings match → durable narrative nodes.
+- [ ] Corpus-scale queries: **actor profile** (everything X amplified across events, with stance/tier breakdown over time) and **narrative profile** (who carried it, where, when).
+- [ ] First endogenous community-detection pass on the bipartite graph — structural only. Community labels are *descriptive exemplars* ("cluster anchored by A, B, C"), never AI-assigned identity names.
+
+**Deliverable:** `python graph.py --actor <key>` answering "show me everything this actor amplified across 100 events" — plus a new recurring digest section.
+**Gate 4:** entity-resolution audit — sample 30 actor nodes; merges/splits correct ≥90%; confirm no identity-name community labels shipped.
+
+---
+
+## Phase 5 — Mirror pilot (~3–4 weeks)
+
+The personal information-diet mirror, v1, built on the cheapest honest ingestion available.
+
+- [ ] `importers/youtube_takeout.py`: parse YouTube Takeout watch history (**metadata-only v1** — titles, channels, timestamps; no transcription). Channels resolve through the actor registry; titles run through the matcher.
+- [ ] Diet map report (local HTML, P4-compliant): actor/community composition of the diet; behavioral-provenance texture of its sources; and the flagship — the **personal omission report**: the event universe vs. what this diet surfaced.
+- [ ] Run on your own takeout first; then five volunteers with fresh takeouts.
+
+**Deliverable:** five real diet maps.
+**Gate 5:** the second-week open — do ≥2 of 5 volunteers voluntarily look at a week-2 report? Yes → plan the browser extension and a second importer. No → interviews before any further personal-product build. This single retention signal is the cheapest possible test of the entire personal-product thesis; it runs **before** any extension, transcription, or second-platform work.
+
+---
+
+## Non-goals (binding until a gate reopens them — P7)
+
+- Model-routing Phases 2/3 (DeepSeek/Gemini provider abstraction, cross-provider search). Cost analysis showed web-search fees dominate; Batch API + caps + the matcher are the levers that matter.
+- Neo4j (SQLite/JSON registry is sufficient at this scale).
+- TikTok/Instagram ingestion and any transcription-dependent importer (until Gate 5 passes).
+- Browser extension (until Gate 5 passes).
+- Any feed-curation or feed-override feature (until far up the ladder, and only within P3's laws).
+- Truth verdicts of any kind — **permanent**, not deferred (P1).
+
+---
+
+## Working conventions (for AI-assisted implementation)
+
+These encode the project's established workflow; AI assistants (Claude Code) should follow them on every task.
+
+1. **Two commits per feature** where applicable: one for the pipeline (`models.py` + engine), one for the viewer. Detailed commit messages; end with the Co-Authored-By trailer.
+2. **Compile-check before committing** (`python -m py_compile <files>`). Runtime checks require the `.venv`; system-Python import failures for `anthropic` are expected, not bugs.
+3. **Schema changes are additive.** New fields get defaults; previously saved JSON must always deserialize and render (placeholders are fine).
+4. **Validate with a real run** before calling a feature done: run a real claim/event, read the JSON, then commit.
+5. **Validate semantically, not just mechanically (P5).** Before presenting any new signal as valuable: try to disprove it; check it corpus-wide, not on one vivid example; audit any AI-generated labels it depends on; report "it works" and "it's valuable" as separate claims with explicit confidence.
+6. **API flakiness ≠ code bug.** 429/529 overloads happen; the pipeline retries with backoff. Don't "fix" an overload.
+7. **Threading pattern for features:** `models.py` (schema) → engine (generation + CLI flag) → `fingerprint_viewer.html` (render).
+8. Housekeeping: add `analyses/` to `.gitignore` (known one-line fix).
+9. **Keep this roadmap current**: check off tasks, and log each gate's result inline under its phase (date + evidence + decision).
+
+---
+
+*The plan in one line: the matcher makes it affordable, the corpus makes it defensible, the weekly digest makes it discoverable, and the gates make sure each rung of the ladder holds weight before standing on it.*
