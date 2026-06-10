@@ -63,16 +63,20 @@ The Non-goals list at the bottom stays closed until a gate explicitly reopens an
 
 The repo is now public; it is the first impression and the "share results" surface. Make it show the product.
 
-- [ ] Rewrite `INTRO.md` for the current pipeline (it still documents `demo.py`/`batch.py`, which now live in `legacy/`).
-- [ ] Delete `backup/` (duplicates `legacy/`); `legacy/` is the single archive.
-- [ ] Move or delete stale old-format root JSONs (`rigged_full.json`, `iran_war.json`, `border_trace.json`, `perspectives_*.json`, `world_cup_1936.json`, `ev_lifetime_emissions.json`, `results/`, `traces/`) — none deserialize in the current viewer/schema.
-- [ ] Create `examples/` with 4–6 *real, current-format* outputs: the "economy is rigged" full fingerprint (the dual-lineage signature demo), one contested `EventAnalysis` with coverage-lean + coalitions, one `SourceAnalysis`. Fix or replace the synthetic demo's "Minneasota Star" typo.
-- [ ] GitHub Pages: host `fingerprint_viewer.html` + a gallery index. Add a `?load=<url>` query param to the viewer so every example has a **stable permalink** (this is the future "trace card" embed for journalists).
-- [ ] `METHODOLOGY.md` v1: port the README's honest-limits sections (bias-DB US-centricity, sample-not-census, news-media gate, resolve-rate guard) into a standalone page; state what each layer does and does not claim.
-- [ ] `CORRECTIONS.md`: create with format (date, output affected, error, fix, root cause) — empty is fine; existing is the point.
+- [x] Rewrite `INTRO.md` for the current pipeline (it still documents `demo.py`/`batch.py`, which now live in `legacy/`). *(2026-06-10)*
+- [x] Delete `backup/` (duplicates `legacy/`); `legacy/` is the single archive. *(2026-06-10)*
+- [x] Move or delete stale old-format root JSONs (`rigged_full.json`, `iran_war.json`, `border_trace.json`, `perspectives_*.json`, `world_cup_1936.json`, `ev_lifetime_emissions.json`, `results/`, `traces/`) — none deserialize in the current viewer/schema. *(2026-06-10 — deleted, plus `rigged_economy.json` and `fox_trans_kids.json`, verified same old format; all recoverable from git history)*
+- [x] Create `examples/` with 4–6 *real, current-format* outputs… *(2026-06-10 — five shipped: rigged-economy + chewing-gum fingerprints, Platner + Gaza + House-war-powers events, each verified to parse and route; typo fixed to "Minnesota Star Tribune". **Remaining:** one `SourceAnalysis` example — none exists locally; needs a fresh API run.)*
+- [x] GitHub Pages: host `fingerprint_viewer.html` + a gallery index. Add a `?load=<url>` query param to the viewer so every example has a **stable permalink**. *(2026-06-10 — `?load=` added via shared `routeData()`, unit-tested; `index.html` gallery created; Pages enabled via API on `main` `/`, build status "built". URL reachability blocked by the account-level custom-domain issue — see Gate 0 log.)*
+- [x] `METHODOLOGY.md` v1: port the README's honest-limits sections into a standalone page; state what each layer does and does not claim. *(2026-06-10)*
+- [x] `CORRECTIONS.md`: create with format (date, output affected, error, fix, root cause). *(2026-06-10 — opens with three pipeline-level errors caught during development, because the pattern is the point)*
 
 **Deliverable:** a link you would willingly send a journalist.
 **Gate 0:** a person outside the project can open an example trace from a bare URL with no instructions.
+
+> **Gate 0 log (2026-06-10): NOT YET PASSED — blocked on one account-level action.**
+> *Evidence:* Pages is enabled and **built** (API status `built`); all gallery links verified 200 over local HTTP; the `?load=` bootstrap unit-tested (happy/404/no-param). But every `tarekelgindy.github.io` URL 301-redirects to `http://tarek-elgindy.com/…`, the custom domain configured on the *user* site, and that domain is **NXDOMAIN** (verified via 8.8.8.8) — GitHub serves all project sites under a user site's custom domain, so the deployed gallery is unreachable.
+> *Decision:* everything in-repo is done; the fix is outside this repo — either **remove the custom domain** from the `tarekelgindy.github.io` user-site settings (Settings → Pages → Custom domain → remove, or delete its `CNAME` file) or **restore DNS** for `tarek-elgindy.com`. Re-test afterwards: open `https://tarekelgindy.github.io/tributary/` and click any trace; if it renders, Gate 0 passes.
 
 ---
 
