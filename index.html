@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tributary — example traces</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         margin: 0; background: #f7f6f3; color: #222; line-height: 1.55; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
+  h1 { font-size: 1.7rem; margin: 0 0 0.3rem; }
+  .tagline { color: #555; margin: 0 0 0.4rem; font-size: 1.02rem; }
+  .nolabel { color: #777; font-size: 0.88rem; margin: 0 0 2rem; }
+  .nolabel a { color: #2a6fa3; text-decoration: none; }
+  h2 { font-size: 0.82rem; font-weight: 600; color: #555; text-transform: uppercase;
+       letter-spacing: 0.07em; margin: 2rem 0 0.8rem; }
+  .card { display: block; background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+          padding: 1rem 1.2rem; margin-bottom: 0.8rem; text-decoration: none; color: inherit;
+          transition: border-color 0.15s, box-shadow 0.15s; }
+  .card:hover { border-color: #888; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+  .card .kind { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em;
+                padding: 0.12rem 0.5rem; border-radius: 3px; color: #fff; margin-right: 0.5rem; }
+  .kind.up { background: #2a6fa3; }
+  .kind.down { background: #5a4b8a; }
+  .card .title { font-weight: 600; font-size: 1.02rem; }
+  .card p { margin: 0.45rem 0 0; color: #555; font-size: 0.9rem; }
+  .links { margin-top: 2.2rem; padding-top: 1.2rem; border-top: 1px solid #e5e5e5;
+           color: #666; font-size: 0.9rem; }
+  .links a { color: #2a6fa3; text-decoration: none; }
+  footer { margin-top: 2rem; color: #999; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tributary</h1>
+  <p class="tagline">See where information on the internet really comes from — and how it spreads.
+     Every trace below is real, unedited pipeline output: where a narrative originated, who amplified it,
+     what framings formed around an event, and what each one leaves out.</p>
+  <p class="nolabel">Tributary never labels claims true or false — it shows provenance you can verify yourself.
+     How each layer is produced, and its known limits: <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a> ·
+     <a href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md">corrections log</a></p>
+
+  <h2>Upstream — where did this narrative come from?</h2>
+
+  <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_rigged_economy.json">
+    <span class="kind up">fingerprint</span><span class="title">“The economy is rigged against working people”</span>
+    <p>The dual-lineage demo: the <em>phrasing</em> traces through recent US politics, while the underlying
+       <em>idea</em> traces back through centuries of economic thought — two timelines, side by side.
+       With a 15-source evidence landscape and observed social-media spread.</p>
+  </a>
+
+  <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json">
+    <span class="kind up">fingerprint</span><span class="title">“Chewing gum stays in your stomach for years”</span>
+    <p>A decades-old folk claim. The genealogy reaches back to pre-modern medicine and includes both the
+       claim’s spreaders and the medical literature and fact-checkers that dispute it — recorded, not adjudicated.</p>
+  </a>
+
+  <h2>Downstream — what narratives formed around an event?</h2>
+
+  <a class="card" href="fingerprint_viewer.html?load=examples/event_platner_allegations.json">
+    <span class="kind down">event analysis</span><span class="title">Misconduct allegations against a Senate candidate</span>
+    <p>Eight competing framings of one contested US story, the common ground beneath them, who carries each —
+       and a coverage backdrop spanning the outlet spectrum (15 rated outlets).</p>
+  </a>
+
+  <a class="card" href="fingerprint_viewer.html?load=examples/event_gaza_airstrikes.json">
+    <span class="kind down">event analysis</span><span class="title">Israeli airstrikes in Gaza</span>
+    <p>An international story where a US left/right axis doesn’t map. The coalition view shows the real
+       structure of the coverage; the US-centric ratings backdrop honestly reports it can’t judge skew here.</p>
+  </a>
+
+  <a class="card" href="fingerprint_viewer.html?load=examples/event_house_war_powers.json">
+    <span class="kind down">event analysis</span><span class="title">House vote on Iran war powers</span>
+    <p>The largest actor coalition in the corpus — 30+ officials, outlets, and institutions across eight
+       framings of one congressional vote.</p>
+  </a>
+
+  <div class="links">
+    <strong>Use it yourself:</strong> the viewer is one dependency-free HTML file; analyses are plain JSON.
+    <a href="https://github.com/tarekelgindy/tributary">GitHub repo</a> ·
+    <a href="https://github.com/tarekelgindy/tributary/blob/main/INTRO.md">plain-language intro</a> ·
+    <a href="https://github.com/tarekelgindy/tributary/blob/main/README.md">full README</a> ·
+    <a href="https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md">roadmap</a>
+  </div>
+  <footer>All analyses are AI-generated and labeled as such; none are yet human-reviewed — the provenance
+    badges in the viewer say exactly that.</footer>
+</div>
+</body>
+</html>

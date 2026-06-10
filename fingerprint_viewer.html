@@ -653,31 +653,53 @@ dropZone.addEventListener('drop', e => {
 });
 fileInput.addEventListener('change', e => { if (e.target.files.length) loadFile(e.target.files[0]); });
 
+function routeData(data) {
+  if (data.is_event_analysis) {
+    renderEventAnalysis(data);
+  } else if (data.is_source_analysis) {
+    renderArticle(data);
+  } else if (data.fingerprint_id && data.lexical) {
+    currentArticle = null;
+    currentEvent = null;
+    removeBackButton();
+    document.getElementById('tabs').style.display = '';
+    render(data);
+  } else {
+    throw new Error('Not a recognizable fingerprint, source-analysis, or event-analysis JSON');
+  }
+}
+
 function loadFile(file) {
   errorDiv.textContent = '';
   const reader = new FileReader();
   reader.onload = () => {
     try {
-      const data = JSON.parse(reader.result);
-      if (data.is_event_analysis) {
-        renderEventAnalysis(data);
-      } else if (data.is_source_analysis) {
-        renderArticle(data);
-      } else if (data.fingerprint_id && data.lexical) {
-        currentArticle = null;
-        currentEvent = null;
-        removeBackButton();
-        document.getElementById('tabs').style.display = '';
-        render(data);
-      } else {
-        throw new Error('Not a recognizable fingerprint, source-analysis, or event-analysis JSON');
-      }
+      routeData(JSON.parse(reader.result));
     } catch (e) {
       errorDiv.textContent = 'Failed to load: ' + e.message;
     }
   };
   reader.onerror = () => { errorDiv.textContent = 'File read error.'; };
   reader.readAsText(file);
+}
+
+// Permalink support: fingerprint_viewer.html?load=<url> fetches a JSON and
+// renders it directly — this is what makes every example/gallery trace a
+// stable, shareable link. Relative paths resolve against this page (always
+// same-origin); absolute URLs need CORS on their host. Under file:// the
+// fetch can't work, so we say so instead of failing silently.
+const loadParam = new URLSearchParams(location.search).get('load');
+if (loadParam) {
+  errorDiv.textContent = 'Loading …';
+  fetch(loadParam)
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(data => { errorDiv.textContent = ''; routeData(data); })
+    .catch(e => {
+      errorDiv.textContent = `Failed to load "${loadParam}": ${e.message}` +
+        (location.protocol === 'file:'
+          ? ' — ?load= needs the page served over HTTP; for local files, drag the JSON onto this page instead.'
+          : '');
+    });
 }
 
 function removeBackButton() {
