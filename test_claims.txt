@@ -1,0 +1,12 @@
+# Semantic-validation probes for the matcher (against the 17-fingerprint corpus).
+# Expectations, per probe:
+# 1-2: paraphrases of corpus narratives -> should match (serve_cached or lexical_variant)
+# 3:   same idea, very different words -> lexical_variant or review (L2 should beat L1)
+# 4-5: genuinely new narratives -> generate
+# 6:   related-topic-but-different-claim -> must NOT serve_cached (discrimination test)
+the economy is rigged in favor of the wealthy elite
+swallowing chewing gum means it stays inside your gut for seven years
+ordinary working families can never get ahead because the financial system is structurally stacked against them
+the moon landing was staged by NASA in a film studio
+drinking eight glasses of water a day is necessary for health
+capital gains tax cuts mostly benefit property investors at the expense of renters
