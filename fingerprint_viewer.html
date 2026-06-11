@@ -526,6 +526,17 @@ section { animation: fadein 0.2s; }
 .lean-chip.right { background: #b23b2e; }
 .lean-chip.unrated { background: #fff; color: #888; border: 1px solid #ccc; }
 
+/* Framing-attention matrix (Phase 2.6): outlets × an event's own framings */
+.fa-table { border-collapse: collapse; width: 100%; font-size: 0.8rem; }
+.fa-table th, .fa-table td { padding: 0.3rem 0.45rem; border-bottom: 1px solid #f0f0f0; text-align: center; }
+.fa-table th { color: #666; font-weight: 600; font-size: 0.72rem; }
+.fa-table td.o-name, .fa-table th.o-name { text-align: left; white-space: nowrap; }
+.fa-cell { display: inline-block; min-width: 1.6rem; border-radius: 4px; padding: 0.1rem 0.3rem; background: #ece8f5; color: #4a3d75; font-weight: 600; }
+.fa-cell.zero { background: transparent; color: #ccc; font-weight: 400; }
+.fa-legend { padding: 0.4rem 0; border-top: 1px solid #f1f1f1; font-size: 0.84rem; color: #333; }
+.fa-fid { display: inline-block; background: #5a4b8a; color: #fff; border-radius: 4px; padding: 0.05rem 0.4rem; font-size: 0.72rem; margin-right: 0.4rem; }
+.fa-audit { display: inline-block; background: #fdf3e6; color: #9a5b1f; border: 1px solid #ecd3ae; border-radius: 10px; padding: 0.1rem 0.55rem; font-size: 0.72rem; }
+
 /* Coalition — who amplifies which framing (the headline of the event view) */
 .coalition-card { margin-bottom: 1.6rem; border-left: 4px solid #5a4b8a; }
 .coal-intro { color: #555; font-size: 0.85rem; line-height: 1.5; margin: 0.5rem 0 1rem; }
@@ -695,7 +706,9 @@ function refHostName(url) {
 function isReferenceHost(url) { return !!(url && refHostName(url)); }
 
 function routeData(data) {
-  if (data.is_agenda_report) {
+  if (data.is_framing_attention) {
+    renderFramingAttention(data);
+  } else if (data.is_agenda_report) {
     renderAgendaReport(data);
   } else if (data.is_event_analysis) {
     renderEventAnalysis(data);
@@ -983,6 +996,77 @@ function openFingerprintFromEvent(fp) {
   back.textContent = '← Back to event';
   back.onclick = () => { if (currentEvent) renderEventAnalysis(currentEvent); };
   header.insertBefore(back, header.firstChild);
+}
+
+// ---- Framing-attention matrix (Phase 2.6): outlets × event framings ------
+// Divergence measured against the event's OWN framings — no L/R axis in the
+// claim. Labels are AI-interpretive (judge provenance shown; Gate 2.6b badge
+// stays until the human audit passes).
+
+function renderFramingAttention(r) {
+  currentEvent = null;
+  currentArticle = null;
+  dropZone.hidden = true;
+  viewer.hidden = false;
+  removeBackButton();
+  document.getElementById('tabs').style.display = 'none';
+
+  document.getElementById('claim-phrase').textContent =
+    'Framing attention — ' + (r.event || '').slice(0, 120);
+  const meta = document.getElementById('meta-bar');
+  meta.innerHTML = '';
+  addMeta(meta, 'event', r.event_id || '');
+  addMeta(meta, 'window', `${r.window_days || '?'} day(s)`);
+  addMeta(meta, 'headlines', String(r.n_candidate_headlines || 0));
+  addMeta(meta, 'judge', `${(r.judge || {}).model || '?'} (${(r.judge || {}).prompt_version || ''})`);
+
+  const framings = r.framings || [];
+  const fIds = framings.map(f => f.id);
+  const fLabel = {};
+  framings.forEach((f, i) => { fLabel[f.id] = 'F' + (i + 1); });
+  const totals = r.framing_totals || {};
+
+  const legend = framings.map((f, i) => {
+    const t = totals[f.id] || {};
+    return `<div class="fa-legend"><span class="fa-fid">F${i + 1}</span>
+      <strong>${escapeHtml(f.name)}</strong>
+      <span style="color:#888;">— ${t.items || 0} headline(s) across ${t.n_outlets || 0} outlet(s)</span>
+      <div style="color:#555; margin-top:0.15rem;">${escapeHtml(f.key_claim)}</div></div>`;
+  }).join('');
+
+  const rows = Object.entries(r.matrix || {}).map(([okey, row]) => {
+    const cells = fIds.map(fid => {
+      const c = (row.framings || {})[fid];
+      return `<td>${c ? `<span class="fa-cell" title="best feed position ${c.best_position}">${c.items}</span>` : '<span class="fa-cell zero">·</span>'}</td>`;
+    }).join('');
+    const details = fIds.flatMap(fid => ((row.framings || {})[fid] || {}).headlines ? row.framings[fid].headlines.map(h =>
+      `<div class="agenda-evidence">${fLabel[fid]} (${escapeHtml(h.confidence)}) — ${h.link ? `<a href="${escapeHtml(h.link)}" target="_blank" rel="noopener">${escapeHtml(h.title)}</a>` : escapeHtml(h.title)} <span style="color:#aaa;">pos ${h.position}; ${escapeHtml(h.why || '')}</span></div>`) : []
+    ).join('');
+    return `<tr><td class="o-name">${escapeHtml(row.name)} ${leanChip(row.lean)}</td>
+      ${cells}<td><span class="fa-cell zero">${row.none || 0}</span></td></tr>` +
+      (details ? `<tr><td colspan="${fIds.length + 2}" style="text-align:left;"><details><summary style="cursor:pointer; color:#777; font-size:0.74rem;">headlines + judge reasons</summary>${details}</details></td></tr>` : '');
+  }).join('');
+
+  const main = document.querySelector('main');
+  main.innerHTML = `
+    <div class="event-intro">
+      <div class="event-statement">Which framings does each outlet's front feed express?</div>
+      <p>Headlines from the capture window aligned to this event's own framings — narrative-level selection,
+      with no left/right axis in the claim. <span class="fa-audit">${escapeHtml((r.judge || {}).audit_status || 'audit status unknown')}</span></p>
+    </div>
+    <div class="card">
+      <h2>The framings</h2>
+      ${legend}
+    </div>
+    <div class="card">
+      <h2>Outlet × framing matrix</h2>
+      <div style="overflow-x:auto;"><table class="fa-table">
+        <tr><th class="o-name">outlet</th>${fIds.map(fid => `<th title="${escapeHtml((framings.find(f => f.id === fid) || {}).name || '')}">${fLabel[fid]}</th>`).join('')}<th>none</th></tr>
+        ${rows}
+      </table></div>
+      <div class="agenda-caveat" style="margin-top:0.9rem;"><strong>Read this first:</strong> ${escapeHtml(r.method_caveat || '')}</div>
+    </div>
+  `;
 }
 
 // ---- Agenda report (Phase 2): selection & prominence across outlets ------
