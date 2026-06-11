@@ -124,6 +124,8 @@ Selection and prominence are where outlet bias lives even when individual storie
 **Deliverable:** Digest issue #1 produced end-to-end from a real week of captures. *(In progress: capture scheduled 2026-06-11; a real week accrues by ~2026-06-18.)*
 **Gate 2 (the most important audit in the project):** for 10 claimed "never mentioned" items, manually search the outlet's own site. Require ≥9/10 to hold. RSS is not full coverage — if the audit fails, add sitemap/news-sitemap capture **before any omission claim is published**. A false "they never covered it" is Tributary's single most damaging possible error. *(Run this against the 7-day report once a week of captures exists. Known feed-scope risk to probe: Fox's and Newsweek's mixed-latest feeds undersample hard news.)*
 
+> **Gate 2 pre-log (2026-06-11): the informal spot check FAILED — the sitemap contingency is triggered.** Tarek checked the first report's "no observed coverage" rows against the outlets' own homepages: Fox News, Newsmax, ABC Australia and others all visibly carried the Iran-strikes story. Two compounding causes: **one feed ≠ the outlet** (Fox's "latest" feed is lifestyle-heavy; every feed is a thin, oddly-scoped slice of an editorial surface), and **related-but-differently-angled headlines fall below even the adjacency guard** (ABC AU's Hormuz-oil angle sat at 0.277 vs. the strikes centroid). Per this gate's own contingency: RSS-based omission claims are dead on arrival; existence claims move to news-sitemap capture (Phase 2.6), and Gate 2 will be run against sitemap-based claims. RSS remains the *prominence* instrument (feed position), which sitemaps cannot provide.
+
 > **Phase 2 side-find (2026-06-11):** the P5 disprove-first audit of the new lean labels caught a live published-output error — bias_db's fuzzy contains pass had equated unrelated outlets by substring (National Post→The Nation, Iran International→The Nation, Kyiv Independent→The Independent…), fabricating 7 published "possible blindspot" skew claims. Fixed, corpus re-backfilled, gallery republished, logged in CORRECTIONS.md.
 
 ---
@@ -136,9 +138,36 @@ The digest links readers to traces; the traces must be readable by someone who d
 - [ ] **Upstream view: de-clutter.** Trim superfluous fields from the default fingerprint view; foreground the genealogy's *milestone* moments (origin, first amplification, institutional adoption, major mutations) over the full attestation log (keep the log behind a toggle).
 - [ ] **Amplifier-impact visualization — scoped honestly (P5).** Tarek's instinct: show the *impact* of amplification (e.g. interaction rising after an actor amplifies). A timeline of dated attestations with role-colored milestones and cumulative-spread shading is supportable from current data. A Sankey/flow diagram implying *who caused whose uptake* is NOT — temporal order isn't influence, and the attestation log is a sparse sample; flow visuals would assert causality we can't verify. Park true flow-viz until Phase 4's cross-event actor profiles (and even then, label it observed-sequence, not influence).
 
+## Phase 2.6 — Omission integrity + the narrative bridge (~1–2 weeks; from Tarek's 2026-06-11 review; runs while captures accrue)
+
+Two findings from the first real agenda reports set this phase. (1) RSS-based omission claims failed the informal Gate 2 spot check — see the Gate 2 pre-log. (2) The agenda layer measures *story selection* but says nothing about *narratives*: framings live in the event analyses, and nothing connects an outlet's headlines to an event's framings. This phase makes the most dangerous claim safe and makes the instrument narrative-centric — measuring divergence against an event's **own framings** rather than a national L/R axis (the AllSides backdrop stays, attributed, but stops being the headline).
+
+**Omission integrity — sitemaps for existence, RSS for prominence:**
+- [ ] Roster: add a per-outlet `news_sitemap` URL (discover via robots.txt `Sitemap:` entries + common paths; validate every URL with a real fetch, exactly as the RSS roster was). Outlets without a usable news-sitemap are listed as such and get **no omission claims at all** — an honest gap, not a guess.
+- [ ] `sitemaps.py` (new module — keep `agenda.py` from growing): daily capture of news-sitemap article lists (URL, title, pubdate; news-sitemaps enumerate ~48h of *all* articles — a near-census, which is what an absence claim requires) → `agenda/sitemaps/`. Free, keyless, added to the scheduled wrapper.
+- [ ] Rework the omission test in `agenda.py`: **existence = sitemap titles** (embedding adjacency guard runs against them); RSS feeds only existence-check outlets with no sitemap — and those outlets are excluded from publishable claims. Feed position keeps powering prominence/attention as today.
+- [ ] **Validation before anything else proceeds:** the Iran-strikes spot check must flip — Fox/Newsmax/ABC-AU must show coverage via their sitemaps for the same story the RSS layer claimed they missed.
+
+**Framing-attention bridge — the agenda layer meets the framing layer:**
+- [ ] Weekly: top 3–5 agenda stories (by carriage + divergence signals) → `corpus.py` event analyses with `--trace-framings` (~$2–4/week). This also fixes the starved fingerprint corpus (16 fingerprints vs. 103 events): the corpus grows **where attention actually is**, and `attach_traces` finally has something to find.
+- [ ] `framing_attention()`: for a story with an event analysis, align each outlet's captured headlines to the event's framings — embedding prefilter against framing `key_claim`s, then a batched Haiku **framing-alignment judge** (which framing does this headline express, or "none"). This label is interpretive, so the full P5 protocol applies: provenance on every label, disprove-first audit before anything builds on it, "it works" and "it's valuable" reported separately. P1 holds: alignment with a framing, never quality or truth of one.
+- [ ] Output per event: an **outlet × framing attention matrix** — which framings each outlet's headlines express, with what prominence, and which framings it never touches. No L/R axis anywhere in the claim; international outlets become first-class (Al Jazeera is unplaceable on AllSides but perfectly placeable against an event's framings).
+- [ ] Viewer: render the matrix on the event card (additive).
+
+**Durability + calibration (same window, smaller):**
+- [ ] Move capture off the single desktop: GitHub Actions cron running `--capture`/`--universe`/sitemap capture (free, keyless), committing snapshots to the repo or a data branch (gzip + a retention policy). One crashed machine must not break the digest cadence; public raw captures also suit P6. Local Task Scheduler becomes the backup.
+- [ ] Calibrate the clustering thresholds Gate-1-style: ~40 labeled headline pairs (same-story / related / different) sampled from real captures → calibrate story-join 0.62 and adjacency 0.42; log the result here.
+- [ ] **Digest editorial line (binding until the gates below pass):** publishable — shared-agenda stories, attention distributions, one-side-only flags *with their evidence shown*; **not publishable** — outlet-level omission claims (until Gate 2 passes on sitemap data), the universe cross-check (experimental), framing-attention matrices (until Gate 2.6b passes).
+
+**Deliverable:** an omission report that survives the spot check that killed the last one, plus one real outlet × framing matrix for a current event.
+**Gate 2 (rerun, sitemap-based):** as specified in Phase 2 — 10 claimed omissions, manual site search, ≥9/10 hold.
+**Gate 2.6b (framing labels, per P5):** ~30 sampled headline→framing alignments vs. Tarek's blind judgment. Require ≥80% agreement and **zero confidently-wrong-framing assignments** before any matrix ships in a digest. Embedding-only alignment is presumed insufficient (Gate 1 showed embeddings compress away exactly what framings are made of); if the judge fails too, the matrix waits.
+
+---
+
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
 
-- [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery.
+- [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery. *(Issue #1 follows the Phase 2.6 editorial line: omission claims and framing matrices appear only after their gates pass; everything else ships with evidence shown.)*
 - [ ] Send each issue directly to five named media reporters/desks you'd want as users.
 - [ ] Every issue's underlying JSON ships to the public gallery (corpus grows as a byproduct).
 - [ ] Maintain `CORRECTIONS.md` religiously; publish the first audited error rate (sample ~50 attestations from the corpus, manually verify, publish precision + the audit itself).
