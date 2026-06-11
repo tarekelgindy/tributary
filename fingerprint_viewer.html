@@ -533,6 +533,7 @@ section { animation: fadein 0.2s; }
 .fa-table td.o-name, .fa-table th.o-name { text-align: left; white-space: nowrap; }
 .fa-cell { display: inline-block; min-width: 1.6rem; border-radius: 4px; padding: 0.1rem 0.3rem; background: #ece8f5; color: #4a3d75; font-weight: 600; }
 .fa-cell.zero { background: transparent; color: #ccc; font-weight: 400; }
+.fa-cell.featured { background: #5a4b8a; color: #fff; box-shadow: 0 0 0 2px #c9bfe4; }
 .fa-legend { padding: 0.4rem 0; border-top: 1px solid #f1f1f1; font-size: 0.84rem; color: #333; }
 .fa-fid { display: inline-block; background: #5a4b8a; color: #fff; border-radius: 4px; padding: 0.05rem 0.4rem; font-size: 0.72rem; margin-right: 0.4rem; }
 .fa-audit { display: inline-block; background: #fdf3e6; color: #9a5b1f; border: 1px solid #ecd3ae; border-radius: 10px; padding: 0.1rem 0.55rem; font-size: 0.72rem; }
@@ -1042,7 +1043,8 @@ function renderFramingAttention(r) {
   const rows = Object.entries(r.matrix || {}).map(([okey, row]) => {
     const cells = fIds.map(fid => {
       const c = (row.framings || {})[fid];
-      return `<td>${c ? `<span class="fa-cell" title="best feed position ${c.best_position}">${c.items}</span>` : '<span class="fa-cell zero">·</span>'}</td>`;
+      const led = c && c.best_position <= 5;
+      return `<td>${c ? `<span class="fa-cell${led ? ' featured' : ''}" title="best feed position ${c.best_position}${led ? ' — this outlet LED its feed with this framing' : ''}">${c.items}</span>` : '<span class="fa-cell zero">·</span>'}</td>`;
     }).join('');
     const details = fIds.flatMap(fid => ((row.framings || {})[fid] || {}).headlines ? row.framings[fid].headlines.map(h =>
       `<div class="agenda-evidence">${fLabel[fid]} (${escapeHtml(h.confidence)}) — ${h.link ? `<a href="${escapeHtml(h.link)}" target="_blank" rel="noopener">${escapeHtml(h.title)}</a>` : escapeHtml(h.title)} <span style="color:#aaa;">pos ${h.position}; ${escapeHtml(h.why || '')}</span></div>`) : []
@@ -1065,6 +1067,7 @@ function renderFramingAttention(r) {
     </div>
     <div class="card">
       <h2>Outlet × framing matrix</h2>
+      <p style="color:#777; font-size:0.8rem;">Counts of front-feed headlines per framing. <span class="fa-cell featured" style="font-size:0.7rem;">dark</span> = the outlet <em>led its feed</em> with this framing (position ≤ 5) — featuring is a stronger editorial statement than carrying.</p>
       <div style="overflow-x:auto;"><table class="fa-table">
         <tr><th class="o-name">outlet</th>${fIds.map(fid => `<th title="${escapeHtml((framings.find(f => f.id === fid) || {}).name || '')}">${fLabel[fid]}</th>`).join('')}<th>none</th></tr>
         ${rows}
@@ -1141,24 +1144,36 @@ function renderAgendaReport(report) {
   // -- per-outlet attention (the outlet's agenda fingerprint) --
   // Volume from the sitemap census where one exists; feed position is the
   // separate prominence signal. Feed-only outlets are labeled as such.
+  // Tolerates both report generations (schema convention: old JSON must
+  // always render): v1 rows used items/best_position; v2 uses feed_items/
+  // best_feed_position + the sitemap census fields.
   const att = report.attention || {};
   const attCards = Object.entries(att)
-    .filter(([, a]) => a.stream === 'news' && ((a.sitemap_articles || 0) > 0 || (a.feed_items || 0) > 0))
-    .sort((a, b) => (b[1].sitemap_articles || b[1].feed_items || 0) - (a[1].sitemap_articles || a[1].feed_items || 0))
+    .filter(([, a]) => a.stream === 'news' &&
+      ((a.sitemap_articles || 0) > 0 || (a.feed_items ?? a.items ?? 0) > 0))
+    .sort((a, b) => (b[1].sitemap_articles || b[1].feed_items || b[1].items || 0) -
+                    (a[1].sitemap_articles || a[1].feed_items || a[1].items || 0))
     .map(([key, a]) => {
       const sitemapBased = (a.sitemap_articles || 0) > 0;
+      const feedItems = a.feed_items ?? a.items ?? 0;
       const top = (a.top || []).slice(0, 3).map(t => {
-        const n = sitemapBased ? `${t.articles} article${t.articles === 1 ? '' : 's'}` : `${t.feed_items} feed item${t.feed_items === 1 ? '' : 's'}`;
-        const pos = t.best_feed_position ? ` · feed pos ${t.best_feed_position}` : (sitemapBased ? ' · not feed-featured' : '');
+        const nFeed = t.feed_items ?? t.items ?? 0;
+        const n = sitemapBased ? `${t.articles} article${t.articles === 1 ? '' : 's'}` : `${nFeed} feed item${nFeed === 1 ? '' : 's'}`;
+        const bp = t.best_feed_position ?? t.best_position;
+        const pos = bp ? ` · feed pos ${bp}` : (sitemapBased ? ' · not feed-featured' : '');
         return `<div>${(100 * t.share).toFixed(1)}% (${n}${pos}) — ${escapeHtml(t.label)}</div>`;
       }).join('');
+      const featured = (a.featured || []).slice(0, 3).map(f =>
+        `<div>pos ${f.best_feed_position}${f.captures_seen > 1 ? ` across ${f.captures_seen} captures` : ''} — ${escapeHtml(f.label)}</div>`
+      ).join('');
       const base = sitemapBased
-        ? `${a.sitemap_articles} articles (sitemap census) · ${a.feed_items} feed items`
-        : `${a.feed_items} feed items · <em>${escapeHtml(a.basis || '')}</em>`;
+        ? `${a.sitemap_articles} articles (sitemap census) · ${feedItems} feed items`
+        : `${feedItems} feed items · <em>${escapeHtml(a.basis || 'front-feed sample')}</em>`;
       return `<div class="agenda-att">
         <div class="o-name">${escapeHtml(a.name)} ${leanChip(leans[key])}</div>
         <div style="color:#777; font-size:0.74rem;">${base}</div>
         <div class="o-top">${top || '<em>no stories matched</em>'}</div>
+        ${featured ? `<div class="o-top" style="border-top:1px dashed #e7e7e7; margin-top:0.35rem; padding-top:0.3rem;"><strong style="color:#5a4b8a;">Led their feed:</strong>${featured}</div>` : ''}
       </div>`;
     }).join('');
 
