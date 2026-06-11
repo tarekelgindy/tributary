@@ -494,6 +494,41 @@ def describe_stories(stories: list, leans: dict, roster: dict) -> list:
     return out
 
 
+def attach_traces(stories: list, max_stories: int = 60,
+                  min_sim: float = 0.60) -> int:
+    """Bridge to Phase 1: match each cross-outlet story label against the
+    FINGERPRINT corpus (headline embeddings vs. traced narratives). Embedding
+    stage only — free, and explicitly a LEAD for the digest, not a serving
+    decision (serving still requires Matcher.match_confirmed, per Gate 1).
+    Attaches 'nearest_trace' {fingerprint_id, canonical_phrase, l1/l2 sims,
+    decision} where the best neighbor clears min_sim on either axis."""
+    try:
+        from matcher import Matcher
+        m = Matcher()
+        if not m.sidecar.get("vectors"):
+            return 0
+    except Exception:  # noqa: BLE001 — no corpus / no library: silently no-op
+        return 0
+    n = attached = 0
+    for s in stories:
+        if s["n_outlets"] < 2 or n >= max_stories:
+            continue
+        n += 1
+        r = m.match(s["label"])
+        b = r.best
+        if b and max(b.l1_sim, b.l2_sim) >= min_sim:
+            s["nearest_trace"] = {
+                "fingerprint_id": b.fingerprint_id,
+                "canonical_phrase": b.canonical_phrase,
+                "l1_sim": round(b.l1_sim, 3), "l2_sim": round(b.l2_sim, 3),
+                "decision": r.decision,
+                "note": "embedding-stage lead only; not confirmed (Gate 1: "
+                        "serving requires the two-stage judge)",
+            }
+            attached += 1
+    return attached
+
+
 def write_topics(stories: list, days: int, min_outlets: int = 3) -> Path:
     """The discovery output: contested-by-observation topics for corpus.py.
     Selection = carried broadly OR one-side-only OR fact-checker-selected —
@@ -694,6 +729,10 @@ def build_report(days: int, threshold: float, min_outlets: int,
     items_by_outlet, stale_dropped = aggregate_items(snaps, days)
     raw_stories, vecs_by_outlet = cluster_stories(items_by_outlet, threshold=threshold)
     stories = describe_stories(raw_stories, leans, roster)
+    n_traced = attach_traces(stories)
+    if n_traced:
+        print(f"[report] {n_traced} stories matched an already-traced "
+              f"narrative (embedding-stage leads)", file=sys.stderr)
     end = _now_utc()
     report = {
         "is_agenda_report": True,
