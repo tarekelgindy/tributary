@@ -1433,29 +1433,29 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Israeli officials announced that Ben Gurion Airport in Tel Aviv will remain open following Iranian missile launches, but stated they are prepared to close it if",
-    "rated_outlets": 2,
+    "rated_outlets": 1,
     "distribution": {
-      "left": 1,
+      "left": 0,
       "lean-left": 0,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
-      "left": 50,
+      "left": 0,
       "lean-left": 0,
-      "center": 50,
+      "center": 100,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 0,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -1.0,
-    "resolve_rate": 0.25,
+    "lean_index": 0.0,
+    "resolve_rate": 0.12,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 6,
+      "unrated_news_carriers": 7,
       "examples": [
         {
           "carrier": "Ynet News",
@@ -1480,19 +1480,15 @@
         {
           "carrier": "Palestine Chronicle",
           "domain": "palestinechronicle.com"
+        },
+        {
+          "carrier": "International Investment / The Guardian (cited)",
+          "domain": "internationalinvestment.biz"
         }
       ]
     },
     "non_news_carriers": 2,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "International Investment / The Guardian (cited)",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "The Jerusalem Post",
         "carrier": "The Jerusalem Post",

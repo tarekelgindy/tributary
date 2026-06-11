@@ -1471,33 +1471,41 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Bahrain's interior minister announced that the country will prohibit mourning of former Iranian supreme leader Ali Khamenei during Ashura commemorations.",
-    "rated_outlets": 4,
+    "rated_outlets": 2,
     "distribution": {
-      "left": 1,
+      "left": 0,
       "lean-left": 2,
-      "center": 1,
+      "center": 0,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
-      "left": 25,
-      "lean-left": 50,
-      "center": 25,
+      "left": 0,
+      "lean-left": 100,
+      "center": 0,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 3,
-    "center": 1,
+    "left_of_center": 2,
+    "center": 0,
     "right_of_center": 0,
     "lean_index": -1.0,
-    "resolve_rate": 0.67,
-    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "resolve_rate": 0.33,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 2,
+      "unrated_news_carriers": 4,
       "examples": [
+        {
+          "carrier": "The National (UAE)",
+          "domain": "thenationalnews.com"
+        },
         {
           "carrier": "New Lines Magazine",
           "domain": "newlinesmag.com"
+        },
+        {
+          "carrier": "Iran International",
+          "domain": "iranintl.com"
         },
         {
           "carrier": "Xinhua / Chinese state media",
@@ -1507,14 +1515,6 @@
     },
     "non_news_carriers": 7,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "Iran International",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "Al Jazeera",
         "carrier": "Al Jazeera",
@@ -1530,14 +1530,6 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "name"
-      },
-      {
-        "outlet": "International Business Times",
-        "carrier": "The National (UAE)",
-        "bucket": "center",
-        "lean_num": 0,
-        "source": "allsides",
-        "matched_by": "contains"
       }
     ],
     "ecosystem": {

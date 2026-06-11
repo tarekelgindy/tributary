@@ -209,13 +209,39 @@ class BiasDB:
                 for k, e in self._by_norm.items():
                     if prefer_news and not e.get("type", "").lower().startswith("news"):
                         continue
-                    if len(k) >= 5 and (k in nk or nk in k):
+                    if len(k) >= 5 and (k in nk or nk in k) and _contains_ok(k, nk):
                         return self._rating(e, "contains")
         return None
 
     @property
     def meta(self) -> dict:
         return self._meta
+
+
+# Generic desk/edition bits: when one normalized name extends another AT THE
+# END, the extension must be one of these for the match to count as the SAME
+# outlet ('foxnews' -> 'foxnewsdigital').
+_CONTAINS_EXTRAS = {"news", "online", "onlinenews", "digital", "com", "media",
+                    "magazine", "editorial", "opinion", "politics", "staff",
+                    "us", "uk"}
+
+
+def _contains_ok(k: str, nk: str) -> bool:
+    """Guard for the fuzzy contains pass, after a corpus audit found 46 of 51
+    published contains-matches were WRONG (Iran International -> The Nation,
+    Kyiv Independent -> The Independent, Oman Observer -> The Observer (NY),
+    National Post -> The Nation...). Containment counts as identity only when
+    the shorter name is a PREFIX of the longer and the leftover is a generic
+    desk/edition suffix or a plural 's'. A leading extension is a different
+    brand (NewsNation is not The Nation), and 'nation'+'al...' is a different
+    word entirely — both rejected."""
+    short, long_ = (k, nk) if len(k) <= len(nk) else (nk, k)
+    if short == long_:
+        return True
+    if long_.startswith(short):
+        rest = long_[len(short):]
+        return rest in _CONTAINS_EXTRAS or rest == "s"
+    return False
 
 
 def _prefer(a: dict, b: dict) -> bool:

@@ -1912,30 +1912,34 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international ac",
-    "rated_outlets": 3,
+    "rated_outlets": 2,
     "distribution": {
-      "left": 1,
+      "left": 0,
       "lean-left": 1,
       "center": 0,
       "lean-right": 1,
       "right": 0
     },
     "distribution_pct": {
-      "left": 33,
-      "lean-left": 33,
+      "left": 0,
+      "lean-left": 50,
       "center": 0,
-      "lean-right": 33,
+      "lean-right": 50,
       "right": 0
     },
-    "left_of_center": 2,
+    "left_of_center": 1,
     "center": 0,
     "right_of_center": 1,
-    "lean_index": -0.67,
-    "resolve_rate": 0.5,
+    "lean_index": 0.0,
+    "resolve_rate": 0.33,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 3,
+      "unrated_news_carriers": 4,
       "examples": [
+        {
+          "carrier": "Iran International",
+          "domain": "iranintl.com"
+        },
         {
           "carrier": "NBC News (Barbara Slavin / Stimson Center)",
           "domain": "nbcnews.com"
@@ -1952,14 +1956,6 @@
     },
     "non_news_carriers": 9,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "Iran International",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "Time Magazine",
         "carrier": "Time Magazine",

@@ -1335,33 +1335,37 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Iran closed airspace in its western region.",
-    "rated_outlets": 5,
+    "rated_outlets": 2,
     "distribution": {
-      "left": 3,
+      "left": 0,
       "lean-left": 1,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
-      "left": 60,
-      "lean-left": 20,
-      "center": 20,
+      "left": 0,
+      "lean-left": 50,
+      "center": 50,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 4,
+    "left_of_center": 1,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -1.4,
-    "resolve_rate": 0.36,
+    "lean_index": -0.5,
+    "resolve_rate": 0.14,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 9,
+      "unrated_news_carriers": 12,
       "examples": [
         {
           "carrier": "Gulf News",
           "domain": "gulfnews.com"
+        },
+        {
+          "carrier": "Iran International",
+          "domain": "iranintl.com"
         },
         {
           "carrier": "Times of Israel",
@@ -1370,6 +1374,10 @@
         {
           "carrier": "Türkiye Today",
           "domain": "turkiyetoday.com"
+        },
+        {
+          "carrier": "NewsNation / AP",
+          "domain": "newsnationnow.com"
         },
         {
           "carrier": "The New Arab",
@@ -1382,43 +1390,11 @@
         {
           "carrier": "PressTV (Iran state media)",
           "domain": "presstv.ir"
-        },
-        {
-          "carrier": "Caliber.Az",
-          "domain": "caliber.az"
-        },
-        {
-          "carrier": "The Media Line",
-          "domain": "themedialine.org"
         }
       ]
     },
     "non_news_carriers": 4,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "Iran International",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
-      {
-        "outlet": "The Nation",
-        "carrier": "NewsNation / AP",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
-      {
-        "outlet": "The Nation",
-        "carrier": "Aviation International News (AIN Online)",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "CBS News",
         "carrier": "CBS News",

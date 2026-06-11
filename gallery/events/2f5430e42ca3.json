@@ -81,7 +81,7 @@
         "statement": "Oil prices rose significantly during the disruption period",
         "verified": true,
         "source_url": "",
-        "note": "All framings acknowledge price increases; specific price levels ($117\u2013138/b Brent) cited but require verification against commodity price records",
+        "note": "All framings acknowledge price increases; specific price levels ($117–138/b Brent) cited but require verification against commodity price records",
         "provenance": {
           "origin": "ai",
           "status": "ai_generated",
@@ -218,7 +218,7 @@
       },
       {
         "fact_id": "d7645bae515c",
-        "statement": "Pipeline bypass capacity is limited to 2.6\u20135.5 mb/d versus 20 mb/d historical Hormuz flows",
+        "statement": "Pipeline bypass capacity is limited to 2.6–5.5 mb/d versus 20 mb/d historical Hormuz flows",
         "verified": false,
         "source_url": "",
         "note": "Technical infrastructure claim; requires verification against pipeline capacity databases (Suez, Sumed, Saudi-Yanbu, UAE pipelines)",
@@ -374,8 +374,8 @@
       "name": "Historic Supply Shock / Market Disruption",
       "question": "How severe is this disruption to global oil markets, and what are the macroeconomic consequences?",
       "key_claim": "The Hormuz closure and associated production shut-ins constitute the largest oil supply disruption in the history of the global oil market, triggering recession-level price and inflation pressures worldwide.",
-      "description": "This framing treats the EIA production data as evidence of an unprecedented market event, benchmarking it against prior shocks (1973, 1979, 1990). It centers price trajectories, inventory drawdowns, and downstream economic damage\u2014inflation, GDP contraction, stagflation risk\u2014as the primary story.",
-      "emphasizes": "Scale of output lost (10\u201311+ mb/d shut-in), Brent price surge past $117\u2013138/b, global inventory depletion at record pace, recession probability, comparison to 1970s oil crises",
+      "description": "This framing treats the EIA production data as evidence of an unprecedented market event, benchmarking it against prior shocks (1973, 1979, 1990). It centers price trajectories, inventory drawdowns, and downstream economic damage—inflation, GDP contraction, stagflation risk—as the primary story.",
+      "emphasizes": "Scale of output lost (10–11+ mb/d shut-in), Brent price surge past $117–138/b, global inventory depletion at record pace, recession probability, comparison to 1970s oil crises",
       "downplays": "Causes of the military conflict, human casualties, geopolitical power shifts, long-term structural alternatives",
       "tone": "alarmed",
       "sample_headlines": [
@@ -422,7 +422,7 @@
           "amplifier_role": "originator",
           "excerpt": "\"production shut-ins averaged 10.5 million barrels per day in April\"",
           "date": "2026-04-07",
-          "role_evidence": "EIA's April 2026 Short-Term Energy Outlook and associated press release provided the specific shut-in figures (10.5\u201310.8 mb/d) that anchored global coverage of the supply shock.",
+          "role_evidence": "EIA's April 2026 Short-Term Energy Outlook and associated press release provided the specific shut-in figures (10.5–10.8 mb/d) that anchored global coverage of the supply shock.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -512,7 +512,7 @@
           "amplifier_role": "early-amplifier",
           "excerpt": "\"a shortfall close to 20 percent, making this geopolitical event three to five times larger\"",
           "date": "2026-03-20",
-          "role_evidence": "Published a quantitative historical comparison framing the Hormuz shock as 3\u20135x the magnitude of 1973/1979 shocks, giving the 'historic' framing academic credibility early in the crisis.",
+          "role_evidence": "Published a quantitative historical comparison framing the Hormuz shock as 3–5x the magnitude of 1973/1979 shocks, giving the 'historic' framing academic credibility early in the crisis.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -620,7 +620,7 @@
       "question": "Does this crisis expose structural weaknesses in global energy supply chains and the strategic risk of chokepoint dependence?",
       "key_claim": "The Hormuz closure reveals that the global energy system was dangerously over-reliant on a single maritime chokepoint, with no adequate alternative infrastructure to absorb a full disruption.",
       "description": "This framing interrogates the system design that allowed ~20% of global oil supply to flow through a single 21-mile-wide strait. It foregrounds inadequate bypass capacity, insufficient strategic reserves, and the failure of decades of energy security planning.",
-      "emphasizes": "Limited pipeline bypass capacity (~2.6\u20135.5 mb/d vs 20 mb/d flows), SPR levels, IEA emergency releases, absence of alternative LNG routes for Qatar, policy failures preceding the crisis",
+      "emphasizes": "Limited pipeline bypass capacity (~2.6–5.5 mb/d vs 20 mb/d flows), SPR levels, IEA emergency releases, absence of alternative LNG routes for Qatar, policy failures preceding the crisis",
       "downplays": "Immediate price movements, the identity of the belligerents, renewable energy alternatives",
       "tone": "alarmed",
       "sample_headlines": [
@@ -631,7 +631,7 @@
       "carriers": [
         {
           "carrier_id": "ea81719cd256",
-          "name": "IEA \u2014 Strait of Hormuz Emergency Response page",
+          "name": "IEA — Strait of Hormuz Emergency Response page",
           "url": "https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz",
           "carrier_type": "institutional",
           "amplifier_role": "originator",
@@ -833,7 +833,7 @@
       "framing_id": "baa2032e",
       "name": "Geopolitical Power Realignment",
       "question": "Who wins and who loses strategic power as a result of the disruption, and how does it redraw global influence?",
-      "key_claim": "The Hormuz closure is redistributing geopolitical power\u2014benefiting Russia, U.S. shale, and Iran's leverage\u2014while stranding Gulf producers and forcing Asian importers into emergency supply diplomacy.",
+      "key_claim": "The Hormuz closure is redistributing geopolitical power—benefiting Russia, U.S. shale, and Iran's leverage—while stranding Gulf producers and forcing Asian importers into emergency supply diplomacy.",
       "description": "This framing focuses on the geopolitical winners and losers produced by the disruption: Russia's windfall from redirected demand, U.S. shale's opportunity, Iran's coercive leverage, China and India's scramble for alternatives, and the collapse of the Gulf Cooperation Council's economic model.",
       "emphasizes": "Russia's competitive gain, U.S. blockade, China/India supply diplomacy, Iran's chokepoint leverage, collapse of GCC economic model, IRGC transit-fee extortion reports",
       "downplays": "Humanitarian costs, domestic consumer pain, climate implications",
@@ -852,7 +852,7 @@
           "amplifier_role": "originator",
           "excerpt": "\"The biggest geopolitical beneficiary is Moscow\"",
           "date": "2026-06-03",
-          "role_evidence": "One of the first sustained analytical pieces naming specific geopolitical winners and losers\u2014Russia, U.S. shale, Iran\u2014from the disruption, framing it as a permanent realignment rather than a temporary shock.",
+          "role_evidence": "One of the first sustained analytical pieces naming specific geopolitical winners and losers—Russia, U.S. shale, Iran—from the disruption, framing it as a permanent realignment rather than a temporary shock.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -996,7 +996,7 @@
         },
         {
           "carrier_id": "db9ab950ac8d",
-          "name": "Wikipedia \u2014 2026 Strait of Hormuz crisis",
+          "name": "Wikipedia — 2026 Strait of Hormuz crisis",
           "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "carrier_type": "other",
           "amplifier_role": "mass-amplifier",
@@ -1048,7 +1048,7 @@
       "framing_id": "aa8ae413",
       "name": "Clean Energy Transition Catalyst",
       "question": "Does this crisis prove that fossil fuel dependence is the true energy security risk, and should it accelerate the shift to renewables?",
-      "key_claim": "The Hormuz disruption exposes fossil fuel supply chains\u2014not renewable energy intermittency\u2014as the primary energy security vulnerability, and constitutes a once-in-a-generation argument for accelerating the clean energy transition.",
+      "key_claim": "The Hormuz disruption exposes fossil fuel supply chains—not renewable energy intermittency—as the primary energy security vulnerability, and constitutes a once-in-a-generation argument for accelerating the clean energy transition.",
       "description": "This framing recasts the crisis as vindication of the energy transition argument: that traded fossil fuels routed through choke points are inherently fragile, while domestically generated renewables are not. It calls on governments to resist locking in new fossil fuel infrastructure and instead accelerate electrification, solar, wind, and green fuels.",
       "emphasizes": "Fossil fuel vulnerability vs. renewable resilience, contrast between Spain's low post-Hormuz electricity prices (57% renewables) and Singapore's $200/MWh prices (95% gas), IEA/UNFCCC calls for transition acceleration",
       "downplays": "Short-term constraints on transition (grid, financing, China supply-chain dependence), coal and LNG expansion as near-term substitutes, transition costs during crisis",
@@ -1181,7 +1181,7 @@
         },
         {
           "carrier_id": "800395d5210d",
-          "name": "Council on Foreign Relations (CFR) \u2014 Climate Realism Initiative",
+          "name": "Council on Foreign Relations (CFR) — Climate Realism Initiative",
           "url": "https://www.cfr.org/articles/the-energy-transition-and-the-strait-of-hormuz",
           "carrier_type": "academic",
           "amplifier_role": "critic",
@@ -1217,7 +1217,7 @@
           "amplifier_role": "early-amplifier",
           "excerpt": "\"Geopolitical disruption to fossil fuel supply is both a strong long-term argument for accelerating renewables deployment and a powerful short-term brake\"",
           "date": "2026-05-06",
-          "role_evidence": "WEF amplified the transition framing while adding nuance about short-term fossil fuel subsidies acting as a brake\u2014reaching a global policymaker audience.",
+          "role_evidence": "WEF amplified the transition framing while adding nuance about short-term fossil fuel subsidies acting as a brake—reaching a global policymaker audience.",
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
@@ -1247,7 +1247,7 @@
           "amplifier_role": "early-amplifier",
           "excerpt": "\"fossil fuels are now intermittent and uncertain\"",
           "date": "2026-06-05",
-          "role_evidence": "Ember's energy strategist coined the key rhetorical inversion\u2014'fossil fuels are now the intermittent ones'\u2014that became the framing's defining soundbite, quoted in CNBC.",
+          "role_evidence": "Ember's energy strategist coined the key rhetorical inversion—'fossil fuels are now the intermittent ones'—that became the framing's defining soundbite, quoted in CNBC.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -1293,7 +1293,7 @@
       "framing_id": "8f82a947",
       "name": "U.S. Energy Independence / Domestic Production Vindication",
       "question": "Does the crisis validate or challenge claims of U.S. energy independence, and what does it mean for America's domestic energy posture?",
-      "key_claim": "Despite the U.S. being the world's largest oil producer and importing less than 3% of its oil from the Persian Gulf, American consumers are still suffering price spikes\u2014exposing 'energy independence' as a political slogan rather than economic insulation.",
+      "key_claim": "Despite the U.S. being the world's largest oil producer and importing less than 3% of its oil from the Persian Gulf, American consumers are still suffering price spikes—exposing 'energy independence' as a political slogan rather than economic insulation.",
       "description": "This framing interrogates the political narrative of U.S. energy independence against the reality that oil is a globally fungible commodity. It is contested from two directions: by those who argue the crisis proves the U.S. should expand domestic fossil fuel production further, and by those who argue it proves the meaninglessness of fossil-fuel-based 'independence.'",
       "emphasizes": "U.S. record domestic production, sub-3% Persian Gulf import share, but continuing domestic gasoline/diesel price spikes; oil's global price-setting mechanism; Trump administration 'energy independence' rhetoric vs. pump prices",
       "downplays": "The global solidarity dimension, humanitarian context, non-oil commodities also disrupted",
@@ -1490,7 +1490,7 @@
       "carriers": [
         {
           "carrier_id": "d32b0091bb1d",
-          "name": "Wikipedia \u2014 2026 Strait of Hormuz crisis",
+          "name": "Wikipedia — 2026 Strait of Hormuz crisis",
           "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "carrier_type": "other",
           "amplifier_role": "mass-amplifier",
@@ -1661,8 +1661,8 @@
     {
       "framing_id": "e2c06e3f",
       "name": "Global South / Asymmetric Humanitarian Cost",
-      "question": "Who bears the disproportionate human cost\u2014food insecurity, fuel shortages, inflation\u2014of a disruption primarily caused by and serving the interests of major powers?",
-      "key_claim": "The Hormuz supply disruption inflicts its worst costs\u2014food insecurity, fertilizer shortages, fuel poverty, and inflation\u2014on import-dependent developing nations and Gulf civilian populations who had no role in the conflict that caused it.",
+      "question": "Who bears the disproportionate human cost—food insecurity, fuel shortages, inflation—of a disruption primarily caused by and serving the interests of major powers?",
+      "key_claim": "The Hormuz supply disruption inflicts its worst costs—food insecurity, fertilizer shortages, fuel poverty, and inflation—on import-dependent developing nations and Gulf civilian populations who had no role in the conflict that caused it.",
       "description": "This framing centers the developing world, Gulf civilian populations, and vulnerable communities as the victims of a geopolitical conflict between major powers. It highlights fertilizer supply disruptions, food import dependence in Gulf states, inflation in South and Southeast Asia, and the asymmetry between U.S. economic insulation and global developing-nation exposure.",
       "emphasizes": "30%+ of global urea trade through Hormuz, food import emergency in Gulf states (80%+ caloric import dependence), Philippines/Vietnam/Pakistan fuel crises, $3.36B/month added to ASEAN's import bill, desalination plant attacks in Kuwait and Qatar",
       "downplays": "OECD consumer pain, geopolitical power competition, military dimensions",
@@ -1705,7 +1705,7 @@
         },
         {
           "carrier_id": "97314cc699cf",
-          "name": "IEA \u2014 Middle East and Global Energy Markets page",
+          "name": "IEA — Middle East and Global Energy Markets page",
           "url": "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
           "carrier_type": "institutional",
           "amplifier_role": "early-amplifier",
@@ -1765,7 +1765,7 @@
         },
         {
           "carrier_id": "561247589afa",
-          "name": "Wikipedia \u2014 Economic impact of the 2026 Iran war",
+          "name": "Wikipedia — Economic impact of the 2026 Iran war",
           "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
           "carrier_type": "other",
           "amplifier_role": "mass-amplifier",
@@ -1831,7 +1831,7 @@
           "amplifier_role": "early-amplifier",
           "excerpt": "\"food security consequences of a prolonged Hormuz closure may outlast the energy market recovery by 6 to 18 months\"",
           "date": "2026-04-26",
-          "role_evidence": "Specialist analysis platform introduced the agricultural-cycle delay argument\u2014that food insecurity would persist 6\u201318 months after Hormuz reopens\u2014extending the humanitarian framing beyond immediate crisis duration.",
+          "role_evidence": "Specialist analysis platform introduced the agricultural-cycle delay argument—that food insecurity would persist 6–18 months after Hormuz reopens—extending the humanitarian framing beyond immediate crisis duration.",
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
@@ -1890,13 +1890,13 @@
       "carriers": [
         {
           "carrier_id": "52338c252b40",
-          "name": "Wikipedia \u2014 2026 Strait of Hormuz crisis",
+          "name": "Wikipedia — 2026 Strait of Hormuz crisis",
           "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "carrier_type": "other",
           "amplifier_role": "mass-amplifier",
           "excerpt": "\"China and Russia vetoed a draft resolution on the Strait of Hormuz\"",
           "date": "2026-04-07",
-          "role_evidence": "Wikipedia's article is the primary mass-audience reference documenting the legal and UN dimensions\u2014IRGC toll reports, UNSC veto, UNCLOS questions\u2014aggregating sources from multiple legal and diplomatic outlets.",
+          "role_evidence": "Wikipedia's article is the primary mass-audience reference documenting the legal and UN dimensions—IRGC toll reports, UNSC veto, UNCLOS questions—aggregating sources from multiple legal and diplomatic outlets.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -1956,7 +1956,7 @@
           "amplifier_role": "originator",
           "excerpt": "\"sanctions against Oman would be illegal and contrary to the UN Charter and international law\"",
           "date": "2026-05-28",
-          "role_evidence": "Iran's Foreign Ministry was the originating voice of the counter-legal framing\u2014arguing that U.S. threats against Oman and the blockade itself violated international law\u2014inverting the accountability direction.",
+          "role_evidence": "Iran's Foreign Ministry was the originating voice of the counter-legal framing—arguing that U.S. threats against Oman and the blockade itself violated international law—inverting the accountability direction.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
@@ -2059,15 +2059,15 @@
       }
     }
   ],
-  "gap_analysis": "Missing are framings centered on: (1) financial/investor perspectives\u2014how markets, pension funds, and energy sector shareholders are positioned or harmed; (2) the role of non-state actors, private energy companies, and trading firms in either exacerbating or stabilizing the disruption; (3) technical/engineering solutions and infrastructure alternatives (pipelines, storage, LNG capacity) that bypass the strait; (4) domestic political economy within Middle Eastern producers themselves\u2014internal pressure, regime stability, and competing interests among OPEC members. Also absent: perspectives from energy-poor nations or communities dependent on affordable oil for transport/heating, and any framing that questions the EIA's methodology or data reliability itself.",
+  "gap_analysis": "Missing are framings centered on: (1) financial/investor perspectives—how markets, pension funds, and energy sector shareholders are positioned or harmed; (2) the role of non-state actors, private energy companies, and trading firms in either exacerbating or stabilizing the disruption; (3) technical/engineering solutions and infrastructure alternatives (pipelines, storage, LNG capacity) that bypass the strait; (4) domestic political economy within Middle Eastern producers themselves—internal pressure, regime stability, and competing interests among OPEC members. Also absent: perspectives from energy-poor nations or communities dependent on affordable oil for transport/heating, and any framing that questions the EIA's methodology or data reliability itself.",
   "fingerprints": [],
   "coverage_lean": {
     "event": "The United States Energy Information Administration reported that Middle Eastern oil producers reduced output by more than 11 million barrels per day following ",
-    "rated_outlets": 2,
+    "rated_outlets": 1,
     "distribution": {
       "left": 0,
       "lean-left": 0,
-      "center": 2,
+      "center": 1,
       "lean-right": 0,
       "right": 0
     },
@@ -2079,17 +2079,21 @@
       "right": 0
     },
     "left_of_center": 0,
-    "center": 2,
+    "center": 1,
     "right_of_center": 0,
     "lean_index": 0.0,
-    "resolve_rate": 0.5,
+    "resolve_rate": 0.25,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 2,
+      "unrated_news_carriers": 3,
       "examples": [
         {
           "carrier": "OilPrice.com",
           "domain": "oilprice.com"
+        },
+        {
+          "carrier": "The Diplomat",
+          "domain": "thediplomat.com"
         },
         {
           "carrier": "Fortune",
@@ -2099,14 +2103,6 @@
     },
     "non_news_carriers": 17,
     "matched": [
-      {
-        "outlet": "Diplomatic Courier",
-        "carrier": "The Diplomat",
-        "bucket": "center",
-        "lean_num": 0,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "CNBC",
         "carrier": "CNBC",
@@ -2875,7 +2871,7 @@
       "siloed_share": 0.607,
       "mean_jaccard": 0.122
     },
-    "structure_note": "10 of 28 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+    "structure_note": "10 of 28 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
   },
   "provenance": {
     "origin": "ai",

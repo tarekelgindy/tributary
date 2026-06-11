@@ -2013,29 +2013,29 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Armenia held a National Assembly election with incumbent Prime Minister Nikol Pashinyan and his Civil Contract party seeking to retain power.",
-    "rated_outlets": 4,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
       "lean-left": 1,
-      "center": 3,
+      "center": 2,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 25,
-      "center": 75,
+      "lean-left": 33,
+      "center": 67,
       "lean-right": 0,
       "right": 0
     },
     "left_of_center": 1,
-    "center": 3,
+    "center": 2,
     "right_of_center": 0,
-    "lean_index": -0.25,
-    "resolve_rate": 0.33,
+    "lean_index": -0.33,
+    "resolve_rate": 0.25,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 8,
+      "unrated_news_carriers": 9,
       "examples": [
         {
           "carrier": "Euronews",
@@ -2062,12 +2062,12 @@
           "domain": "mirrorspectator.com"
         },
         {
-          "carrier": "commonspace.eu / Narek Sukiasyan",
-          "domain": "commonspace.eu"
+          "carrier": "The Insider (exiled Russian investigative outlet)",
+          "domain": "eurasianet.org"
         },
         {
-          "carrier": "EVN Report (Maria Titizian & Roubina Margossian)",
-          "domain": "evnreport.com"
+          "carrier": "commonspace.eu / Narek Sukiasyan",
+          "domain": "commonspace.eu"
         }
       ]
     },
@@ -2096,14 +2096,6 @@
         "lean_num": 0,
         "source": "allsides",
         "matched_by": "name"
-      },
-      {
-        "outlet": "Business Insider",
-        "carrier": "The Insider (exiled Russian investigative outlet)",
-        "bucket": "center",
-        "lean_num": 0,
-        "source": "allsides",
-        "matched_by": "contains"
       }
     ],
     "ecosystem": {

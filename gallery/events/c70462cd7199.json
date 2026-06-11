@@ -2075,41 +2075,42 @@
   "contributors": [],
   "coverage_lean": {
     "event": "U.S. President Trump stated that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
-    "rated_outlets": 9,
+    "rated_outlets": 7,
     "distribution": {
-      "left": 3,
+      "left": 1,
       "lean-left": 3,
       "center": 3,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
-      "left": 33,
-      "lean-left": 33,
-      "center": 33,
+      "left": 14,
+      "lean-left": 43,
+      "center": 43,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 6,
+    "left_of_center": 4,
     "center": 3,
     "right_of_center": 0,
-    "lean_index": -1.0,
-    "resolve_rate": 1.0,
+    "lean_index": -0.71,
+    "resolve_rate": 0.78,
     "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 0,
-      "examples": []
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "Israel National News (Arutz Sheva)",
+          "domain": "israelnationalnews.com"
+        },
+        {
+          "carrier": "Iran International",
+          "domain": "iranintl.com"
+        }
+      ]
     },
     "non_news_carriers": 7,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "Israel National News (Arutz Sheva)",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "MSNBC",
         "carrier": "MSNBC / ms.now Opinion",
@@ -2117,14 +2118,6 @@
         "lean_num": -2,
         "source": "allsides",
         "matched_by": "name"
-      },
-      {
-        "outlet": "The Nation",
-        "carrier": "Iran International",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
       },
       {
         "outlet": "Washington Post",

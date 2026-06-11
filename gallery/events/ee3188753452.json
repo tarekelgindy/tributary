@@ -1662,30 +1662,34 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Iraq and Syria closed their airspace and Damascus International Airport suspended operations following Iranian military strikes on Israel.",
-    "rated_outlets": 7,
+    "rated_outlets": 5,
     "distribution": {
-      "left": 2,
+      "left": 0,
       "lean-left": 2,
       "center": 3,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
-      "left": 29,
-      "lean-left": 29,
-      "center": 43,
+      "left": 0,
+      "lean-left": 40,
+      "center": 60,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 4,
+    "left_of_center": 2,
     "center": 3,
     "right_of_center": 0,
-    "lean_index": -0.86,
-    "resolve_rate": 0.54,
-    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "lean_index": -0.4,
+    "resolve_rate": 0.38,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 6,
+      "unrated_news_carriers": 8,
       "examples": [
+        {
+          "carrier": "NewsNation",
+          "domain": "newsnationnow.com"
+        },
         {
           "carrier": "TRT World",
           "domain": "trtworld.com"
@@ -1707,6 +1711,10 @@
           "domain": "newarab.com"
         },
         {
+          "carrier": "Nation Thailand / wire",
+          "domain": "nationthailand.com"
+        },
+        {
           "carrier": "Times of Israel",
           "domain": "timesofisrael.com"
         }
@@ -1714,22 +1722,6 @@
     },
     "non_news_carriers": 8,
     "matched": [
-      {
-        "outlet": "The Nation",
-        "carrier": "NewsNation",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
-      {
-        "outlet": "The Nation",
-        "carrier": "Nation Thailand / wire",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
-      },
       {
         "outlet": "CNN (Web News)",
         "carrier": "CNN",

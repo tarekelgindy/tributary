@@ -1477,29 +1477,29 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Pakistani Interior Minister Mohsin Naqvi handed Iranian Foreign Minister Abbas Araghchi a written message from Pakistani Prime Minister Shehbaz Sharif addressed",
-    "rated_outlets": 4,
+    "rated_outlets": 3,
     "distribution": {
-      "left": 2,
+      "left": 1,
       "lean-left": 1,
       "center": 0,
       "lean-right": 1,
       "right": 0
     },
     "distribution_pct": {
-      "left": 50,
-      "lean-left": 25,
+      "left": 33,
+      "lean-left": 33,
       "center": 0,
-      "lean-right": 25,
+      "lean-right": 33,
       "right": 0
     },
-    "left_of_center": 3,
+    "left_of_center": 2,
     "center": 0,
     "right_of_center": 1,
-    "lean_index": -1.0,
-    "resolve_rate": 0.25,
+    "lean_index": -0.67,
+    "resolve_rate": 0.19,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 12,
+      "unrated_news_carriers": 13,
       "examples": [
         {
           "carrier": "TRT World",
@@ -1530,8 +1530,8 @@
           "domain": "news.cgtn.com"
         },
         {
-          "carrier": "Vietnam.vn / VNA (Vietnam News Agency)",
-          "domain": "vietnam.vn"
+          "carrier": "Iran International",
+          "domain": "iranintl.com"
         }
       ]
     },
@@ -1544,14 +1544,6 @@
         "lean_num": -2,
         "source": "allsides",
         "matched_by": "domain"
-      },
-      {
-        "outlet": "The Nation",
-        "carrier": "Iran International",
-        "bucket": "left",
-        "lean_num": -2,
-        "source": "allsides",
-        "matched_by": "contains"
       },
       {
         "outlet": "Al Jazeera",
