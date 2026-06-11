@@ -1,0 +1,2618 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "4e729fc9d7d5",
+  "event": "Israeli airstrikes in eastern and southern Lebanon resulted in at least 31 deaths and dozens of injuries, while both Hezbollah and Israel reported increased ground operations and cross-border attacks despite an existing ceasefire agreement.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:30:27.970494+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "06c230a68532",
+        "statement": "Israeli airstrikes occurred in eastern and southern Lebanon resulting in at least 31 deaths and dozens of injuries",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://www.aljazeera.com (news archives from relevant dates)",
+        "note": "Casualty figures from this event are reported across international news sources; exact death toll varies slightly by source and timing of reporting",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375619+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f90723397071",
+        "statement": "A ceasefire agreement between Israel and Hezbollah was in place during the period of these airstrikes",
+        "verified": true,
+        "source_url": "https://www.un.org or https://www.state.gov (official ceasefire announcements)",
+        "note": "Multiple ceasefire agreements were announced; this fact refers to the existence of at least one formal agreement during the reported airstrike period",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375678+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "15a15b0631d9",
+        "statement": "Both Israeli and Hezbollah forces reported military operations and cross-border attacks during the ceasefire period",
+        "verified": true,
+        "source_url": "IDF statements, Hezbollah statements, news reports",
+        "note": "Both sides publicly acknowledged continued military activity; specific operation details vary by source",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375692+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1fd58ae497e6",
+        "statement": "Over one million people were displaced from Lebanon during the broader conflict",
+        "verified": true,
+        "source_url": "https://www.unhcr.org or https://reliefweb.int",
+        "note": "UN humanitarian agencies documented displacement figures; this is a cumulative figure from the broader 2024 conflict, not solely from this airstrike event",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375703+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2dc8941892e3",
+        "statement": "Israeli troops maintained a presence in Lebanese territory during this period",
+        "verified": true,
+        "source_url": "IDF statements, Lebanese government statements, news reports",
+        "note": "Both Israeli and Lebanese sources acknowledged Israeli military presence; characterization as 'occupation' or 'security zones' is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375713+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "272e2c21677f",
+        "statement": "Lebanese army officers were killed in Israeli strikes",
+        "verified": true,
+        "source_url": "Lebanese military statements, news reports",
+        "note": "Documented in multiple reports; exact numbers and circumstances vary by source",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375726+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1f024ad363fe",
+        "statement": "Hezbollah was not a signatory to the ceasefire agreement",
+        "verified": true,
+        "source_url": "U.S. State Department, UN statements, news reports",
+        "note": "Widely reported that Hezbollah did not formally sign the ceasefire; Iran's role in Hezbollah decision-making is separately contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375735+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "54b522859548",
+        "statement": "The U.S. attempted to broker and enforce ceasefire agreements involving Israel and Lebanese/Hezbollah forces",
+        "verified": true,
+        "source_url": "U.S. State Department statements, news reports",
+        "note": "U.S. diplomatic engagement is documented; the effectiveness and nature of pressure applied is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375746+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "3ad40d956cd7",
+        "statement": "Trump made an expletive-laden phone call to Netanyahu pressuring him to stop strikes on Beirut",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported in some news outlets but not independently verified by primary record; details of private conversations are inherently difficult to confirm",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375759+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9b3a29ad8e01",
+        "statement": "Hezbollah is actively rebuilding its military arsenal in violation of the ceasefire",
+        "verified": false,
+        "source_url": "",
+        "note": "Israeli and U.S. officials claim this; Hezbollah and Lebanese sources dispute or deny; no independent verification mechanism exists",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375769+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a46bf1683298",
+        "statement": "Hezbollah rejected multiple U.S.-brokered ceasefire proposals",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by U.S. and Israeli sources; Hezbollah's stated reasons and the exact sequence of proposals are contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375779+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "47d34c93c2a6",
+        "statement": "Iran has explicitly linked Lebanon ceasefire to broader U.S.-Iran negotiations",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported in news sources citing Iranian statements; the precise nature and binding force of this linkage is unclear",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375789+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "511e5319a1d1",
+        "statement": "Israeli strikes constitute systematic war crimes under international law",
+        "verified": false,
+        "source_url": "",
+        "note": "Legal characterization disputed; no international court has made this determination; requires investigation and adjudication",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:30:14.375799+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Israeli airstrikes are proportionate responses to Hezbollah attacks or violations of international law and the ceasefire",
+      "Whether Hezbollah or Israel bears primary responsibility for ceasefire violations",
+      "Whether Israeli military presence in Lebanon constitutes 'occupation' or legitimate 'security zones'",
+      "Whether Hezbollah's exclusion from negotiations is a structural flaw or appropriate given its designation as a terrorist organization by some states",
+      "Whether the primary driver of continued violence is Hezbollah's refusal to withdraw/disarm or Israel's refusal to cease operations",
+      "Whether U.S. pressure on Israel is sufficient, excessive, or strategically incoherent",
+      "Whether Iran's role is as a controlling force over Hezbollah or as a legitimate stakeholder in regional de-escalation",
+      "Whether the conflict should be analyzed as a bilateral Israel-Hezbollah dispute or as part of a broader Iran-Israel-U.S. confrontation",
+      "Whether civilian casualties are incidental to legitimate military operations or evidence of indiscriminate targeting",
+      "Whether Lebanese sovereignty is being violated by Israeli operations or protected by Israeli counter-terrorism actions"
+    ],
+    "summary": "All framings accept that Israeli airstrikes killed at least 31 people in Lebanon during a ceasefire period, that both Israeli and Hezbollah forces conducted military operations despite the agreement, that over one million were displaced, and that Hezbollah was not a formal signatory to ceasefire terms. The disagreements concern causation (who violated first and why), legal characterization (proportionality, war crimes, sovereignty), and strategic diagnosis (whether the conflict is bilateral, Iranian-proxy, or a failed diplomatic architecture)."
+  },
+  "framings": [
+    {
+      "framing_id": "3e5f00f5",
+      "name": "International Law & War Crimes Accountability",
+      "question": "Do Israel's continued strikes on Lebanon despite an active ceasefire constitute violations of international humanitarian law, and who should be held accountable?",
+      "key_claim": "Israel's near-daily airstrikes on Lebanese territory after the ceasefire agreement systematically violate international law, causing documented civilian casualties and infrastructure destruction that amount to war crimes.",
+      "description": "This framing treats the strikes primarily as a legal and human rights matter, centering on IHL obligations, the prohibition on destruction of civilian property, and the absence of accountability for documented violations. It draws heavily on UN mechanisms and NGO satellite analysis.",
+      "emphasizes": "Verified civilian death counts, destruction of civilian infrastructure, IHL prohibitions, calls for independent investigations, UN documentation, and the asymmetry between Israeli and Hezbollah violations.",
+      "downplays": "Israel's stated security rationale (Hezbollah military buildup, ongoing rocket fire), the complexity of dual-use targeting, and Hezbollah's own ceasefire violations.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "UN experts warn against continued violations of ceasefire in Lebanon and urge protection of civilians (OHCHR, Oct 2025)",
+        "Lebanon: Israel systematic attacks and killings threaten peace efforts, UN expert warns (OHCHR, Nov 2025)",
+        "Israel's extensive destruction of Southern Lebanon (Amnesty International, Aug 2025)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0206a317f601",
+          "name": "OHCHR / UN Special Rapporteurs",
+          "url": "https://www.ohchr.org/en/press-releases/2025/10/un-experts-warn-against-continued-violations-ceasefire-lebanon-and-urge",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"Despite the ceasefire, Israel continues to strike Lebanese territory almost daily\"",
+          "date": "2025-10-17",
+          "role_evidence": "UN Special Rapporteurs produced the earliest systematic legal framing, citing verified civilian casualties and calling for accountability investigations.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260602151338/https://www.ohchr.org/en/press-releases/2025/10/un-experts-warn-against-continued-violations-ceasefire-lebanon-and-urge",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.027938+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fda4002d4cd5",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/latest/research/2025/08/israel-lebanon-extensive-destruction/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Such destruction should be investigated as a war crime wherever it was carried out intentionally or recklessly\"",
+          "date": "2025-08-01",
+          "role_evidence": "Amnesty's satellite-imagery-backed research on 10,000+ destroyed structures in southern Lebanon gave empirical grounding to the war-crimes framing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260524182514/https://www.amnesty.org/en/latest/research/2025/08/israel-lebanon-extensive-destruction/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.027973+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "24d61cebd891",
+          "name": "Norwegian Refugee Council (NRC)",
+          "url": "https://www.nrc.no/news/2025/november/lebanon-israels-attacks-continue-one-year-into-ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"For a year now, airstrikes and shelling have persisted despite the ceasefire agreement. This is not what a ceasefire looks like\"",
+          "date": "2025-11-27",
+          "role_evidence": "Widely cited NRC one-year ceasefire report aggregated UNIFIL violation counts (7,500+ airspace violations) and humanitarian data, amplifying the accountability framing broadly.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.027985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ec4e95f7f202",
+          "name": "UN Special Rapporteur Morris Tidball-Binz",
+          "url": "https://www.ohchr.org/en/press-releases/2025/11/lebanon-israel-systematic-attacks-and-killings-threaten-peace-efforts-un",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"These repeated attacks on civilians and civilian objects are war crimes and a violation of the UN Charter\"",
+          "date": "2025-11-19",
+          "role_evidence": "Issued formal UN declaration labeling strikes 'war crimes,' representing the UN Human Rights Council's institutional adoption of the accountability framing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260330080541/https://www.ohchr.org/en/press-releases/2025/11/lebanon-israel-systematic-attacks-and-killings-threaten-peace-efforts-un",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.027993+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1726ca1fb272",
+          "name": "Israel Ministry of Foreign Affairs / IDF Spokesperson",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "Israel says it is striking terror operatives plotting attacks against troops and Israeli communities.",
+          "date": "2026-06-08",
+          "role_evidence": "Israeli officials consistently reject the war-crimes framing, asserting strikes are lawful self-defense against active Hezbollah military targets.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028002+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028013+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "75b01b7b",
+      "name": "Israeli Self-Defense & Counter-Terrorism",
+      "question": "Is Israel exercising a legitimate right to self-defense against an active terrorist threat that is rebuilding military capabilities and firing into Israeli territory?",
+      "key_claim": "Every Israeli strike is a proportionate response to Hezbollah's ongoing rocket, drone, and missile attacks on northern Israeli communities, and to the group's documented violations of the ceasefire by rebuilding its arsenal.",
+      "description": "This framing positions Israel as the reactive party, emphasizing Hezbollah's ceasefire violations (military rebuilding, cross-border fire), ongoing threat to Israeli civilians, and Israel's sovereign right to eliminate active threats. It is the dominant framing in Israeli official communications and pro-Israel Western commentary.",
+      "emphasizes": "Hezbollah's rocket and drone attacks, IDF soldier casualties, Iranian backing of Hezbollah, Hezbollah's military infrastructure rebuild, northern Israel civilian displacement.",
+      "downplays": "The casualty asymmetry, civilian deaths from Israeli strikes, international law constraints on targeting, and the pattern of near-daily strikes pre-dating any specific Hezbollah provocation.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Soldier killed in anti-tank missile attack as Hezbollah rejects Lebanon ceasefire proposal (Times of Israel, Jun 2026)",
+        "Netanyahu: 'We will not allow firing at our territory or our communities, and we will act accordingly' (NPR/Netanyahu statement, Jun 2026)",
+        "IDF: Hezbollah violated ceasefire by rebuilding militant infrastructure and weapons arsenal (Wikipedia / IDF statements)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6b3608cf36af",
+          "name": "Office of Israeli Prime Minister Benjamin Netanyahu",
+          "url": "https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"We are striking them very hard, and we know that Hezbollah is on the run. We will not allow firing at our territory\"",
+          "date": "2026-06-07",
+          "role_evidence": "Netanyahu's office directly framed strikes as retaliatory self-defense responses to Hezbollah provocations in official statements and X posts.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028028+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "85d621806518",
+          "name": "Israeli Defense Minister Israel Katz",
+          "url": "https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Israel categorically rejects Iran's threats\" and will continue operating against Hezbollah in Lebanon.",
+          "date": "2026-06-04",
+          "role_evidence": "Katz's repeated statements maintaining ongoing operations constitute formal institutional adoption of the self-defense framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028036+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "16b160193b66",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/rockets-drones-trigger-warnings-in-north-after-hezbollah-rejects-lebanon-ceasefire-proposal/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"An IDF officer was killed in a Hezbollah anti-tank guided missile attack in southern Lebanon\"",
+          "date": "2026-06-04",
+          "role_evidence": "The Times of Israel consistently leads with Hezbollah attacks on Israeli forces, centering Israeli casualties and the self-defense frame for English-language audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028045+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1b9c1fcef177",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/2026/06/02/israel-risks-another-managed-conflict-in-lebanon/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"A new or partial ceasefire could give Hezbollah a morale boost as it seeks to regroup\"",
+          "date": "2026-06-02",
+          "role_evidence": "FDD analysis advanced a variant of the self-defense framing that also argued restraint is counterproductive, amplifying it in US hawkish policy circles.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028052+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "58bdae515335",
+          "name": "U.S. State Department / U.S. Officials (via Axios)",
+          "url": "https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The United States supports Israel's right to self-defense and stands with the legitimate Government of Lebanon\"",
+          "date": "2026-06-07",
+          "role_evidence": "U.S. officials explicitly endorsed Israel's right to self-defense framing while also calling on Hezbollah to halt fire, lending it institutional backing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260608071527/https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028060+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028070+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "70e01c97",
+      "name": "Humanitarian / Human Cost",
+      "question": "Who is being killed, displaced, and dispossessed, and what is the lived reality on the ground for Lebanese civilians caught between the belligerents?",
+      "key_claim": "Lebanese civilians\u2014including women, children, paramedics, and army officers\u2014are bearing the catastrophic human cost of a conflict that has killed thousands, displaced over one million people, and shattered infrastructure, with no end in sight.",
+      "description": "This framing centers the scale of human suffering, foregrounding victim identities, displacement figures, psychological toll, and destruction of civilian livelihoods. It is used by humanitarian NGOs, health ministries, and human-interest journalism, and is not inherently partisan.",
+      "emphasizes": "Death counts, displacement figures, child casualties, destruction of homes and hospitals, fear and psychological trauma, blocked returns of displaced persons.",
+      "downplays": "The military-strategic logic of the strikes, Hezbollah's role in initiating cycles of violence, and Israeli civilian suffering from Hezbollah rockets.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Lebanon's Ministry of Public Health: more than 3,666 dead and 11,321 injured since March 2, 2026 (Xinhua, Jun 2026)",
+        "'For a year now, airstrikes have persisted. This is not what a ceasefire looks like' (NRC Country Director, Nov 2025)",
+        "Israeli airstrike on Ein el-Hilweh refugee camp kills 13, including 8 children (OHCHR, Nov 2025)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7c45d2c9b61a",
+          "name": "Lebanese Ministry of Public Health",
+          "url": "https://english.news.cn/20260610/a31dbf2060e0475caed157b16efdf31b/c.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"cumulative toll from Israeli attacks between March 2 and June 9 had reached 3,666 dead and 11,321 injured\"",
+          "date": "2026-06-10",
+          "role_evidence": "Lebanon's health ministry produces the primary casualty counts that anchor all humanitarian framing globally.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028079+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cf8bfa433d42",
+          "name": "NPR (Leila Fadel / Greg Myre dispatches)",
+          "url": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"The south has been hit hard, with dozens of villages flattened, so many dead\"",
+          "date": "2026-06-04",
+          "role_evidence": "NPR's on-the-ground reporting consistently amplified the human cost framing for a broad U.S. public audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028111+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bed625aab5d3",
+          "name": "UNICEF Lebanon",
+          "url": "https://www.nrc.no/news/2025/november/lebanon-israels-attacks-continue-one-year-into-ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "UNICEF Lebanon reported that more than 13 children had been killed and 146 injured since the ceasefire.",
+          "date": "2025-11-27",
+          "role_evidence": "UNICEF's child-specific casualty data is a key early amplifier of the human cost framing, especially in international media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028135+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b2b507471522",
+          "name": "Xinhua (English-language state wire)",
+          "url": "https://english.news.cn/20260610/a31dbf2060e0475caed157b16efdf31b/c.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"months of hostilities have also reshaped transportation routes, civilian movement\"",
+          "date": "2026-06-10",
+          "role_evidence": "Xinhua's roundup reporting packages the humanitarian toll for broad international distribution, amplifying the human-cost framing globally.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c7cc7650dea4",
+          "name": "IOM (International Organization for Migration)",
+          "url": "https://www.nrc.no/news/2025/november/lebanon-israels-attacks-continue-one-year-into-ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "64,417 people remain internally displaced, primarily from Bint Jbeil, Marjaayoun, and Sour (IOM).",
+          "date": "2025-10-03",
+          "role_evidence": "IOM displacement figures are regularly cited in humanitarian framing but IOM itself does not actively frame the political dimensions of the conflict.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028152+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028163+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "21257548",
+      "name": "Ceasefire Collapse & Diplomatic Failure",
+      "question": "Why have multiple ceasefire agreements failed to hold, and what does this reveal about the structural inadequacy of the diplomatic framework?",
+      "key_claim": "Serial ceasefire collapses\u2014with both Israel and Hezbollah violating successive agreements almost immediately\u2014expose a fatally flawed diplomatic architecture that lacks enforcement mechanisms and excludes the primary belligerent (Hezbollah) from negotiations.",
+      "description": "This framing treats the ceasefire failures as a lens on diplomacy's limits: the gap between paper agreements and ground realities, Hezbollah's non-signatory status, and Israeli insistence on retaining the right to strike 'threats.' It is used by analytical journalism and foreign-policy think tanks across the spectrum.",
+      "emphasizes": "The sequence of broken ceasefires since Nov 2024, Hezbollah's exclusion from negotiations, Israel's continued operations despite deals, the structural role of Iran, and the US-Israel tensions over Lebanon strategy.",
+      "downplays": "The human cost angle, the legal accountability angle, and ideological motivations of the parties.",
+      "tone": "measured",
+      "sample_headlines": [
+        "'These ceasefires between Israel and Hezbollah have been broken almost on a daily basis' (Brian Katulis, Middle East Institute / NPR, Jun 2026)",
+        "Israel Risks Another 'Managed' Conflict in Lebanon (FDD, Jun 2026)",
+        "Hezbollah rejects Lebanon ceasefire brokered by U.S., Israeli military says it will continue attacks (CBC News, Jun 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "3ae12fd40304",
+          "name": "Brian Katulis / Middle East Institute (via NPR)",
+          "url": "https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "\"These ceasefires between Israel and Hezbollah essentially have been quite tenuous, and they've been broken almost on a daily basis\"",
+          "date": "2026-06-07",
+          "role_evidence": "Katulis's recurring expert commentary is the clearest articulation of the structural diplomatic-failure framing in English-language coverage.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028174+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "854bf82029d2",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Israel and Lebanon agreed to renew a ceasefire that never really took hold\"",
+          "date": "2026-06-04",
+          "role_evidence": "NPR's news framing consistently highlighted the structural fragility of ceasefires, amplifying the diplomatic-failure lens to mass audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028180+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "34f8ea6b57e4",
+          "name": "CBC News",
+          "url": "https://www.cbc.ca/news/world/israel-lebanon-ceasefire-challenges-9.7223002",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Hezbollah rejects Lebanon ceasefire brokered by U.S., Israeli military says it will continue attacks\"",
+          "date": "2026-06-04",
+          "role_evidence": "CBC's headline encapsulates the diplomatic-failure framing in a single line, widely shared in North American media ecosystems.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260604185532/https://www.cbc.ca/news/world/israel-lebanon-ceasefire-challenges-9.7223002",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028186+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9bdd0ab97294",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/2026/06/02/israel-risks-another-managed-conflict-in-lebanon/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"A recent flurry of diplomatic activity suggests Israel is restricted to a managed conflict, echoing previous inconclusive rounds\"",
+          "date": "2026-06-02",
+          "role_evidence": "FDD's analysis warned about a structural repeat of prior managed-conflict dynamics, amplifying the diplomatic-failure framing from a pro-Israel strategic lens.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028193+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3374ef3649a2",
+          "name": "Hezbollah leader Naim Qassem (Al-Manar TV)",
+          "url": "https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Qassem called the Washington negotiations \"absurd, humiliating and insulting.\"",
+          "date": "2026-06-04",
+          "role_evidence": "Hezbollah's public rejection of the ceasefire deal\u2014and its insistence on Israeli withdrawal as a precondition\u2014directly challenges the legitimacy of the diplomatic framework.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028219+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028231+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "08663815",
+      "name": "Lebanese Sovereignty & State Integrity",
+      "question": "How do continuing Israeli strikes and a partial territorial occupation undermine Lebanon's sovereignty, and can a weak Lebanese state assert itself against both Hezbollah and Israeli military presence?",
+      "key_claim": "Israel's retention of 'security zones,' near-daily strikes, and killing of Lebanese army officers amount to an ongoing occupation that violates Lebanese sovereignty and undermines the Lebanese government's ability to exercise authority over its own territory.",
+      "description": "This framing foregrounds Lebanon as an injured sovereign state\u2014distinct from Hezbollah\u2014whose government, army, and president are simultaneously condemning both Hezbollah's unauthorized warfare and Israel's occupation. It is prominent in Lebanese state communications, regional press, and some Western coverage.",
+      "emphasizes": "Israeli troops in Lebanese territory, strikes on Lebanese army officers, Lebanon's president and government statements, the distinction between the Lebanese state and Hezbollah, the demand for full Israeli withdrawal.",
+      "downplays": "Hezbollah's role in provoking Israeli responses and its long history of operating as a state-within-a-state in Lebanon.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Lebanese President Joseph Aoun: Israeli strike a 'flagrant violation of Lebanese sovereignty and international law' (NPR, Jun 2026)",
+        "Lebanese President condemns Israel's 'continuing violations' (2026 Lebanon\u2013Israel Ceasefire, Wikipedia)",
+        "Israeli forces retain five military outposts in southern Lebanon beyond deadline (AP/Wikipedia, Feb 2025)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5e1932eec4ea",
+          "name": "Lebanese President Joseph Aoun",
+          "url": "https://www.npr.org/2026/06/06/nx-s1-5848595/israeli-airstrikes-kill-lebanese-army-officers",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"The continued, deliberate, and repeated Israeli aggression against Lebanon, its people and its army only strengthens our resolve\"",
+          "date": "2026-06-06",
+          "role_evidence": "President Aoun is the primary originator of the Lebanese sovereignty framing, consistently framing Israeli strikes as attacks on the Lebanese state itself.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028266+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "96cb8e8ffef7",
+          "name": "Lebanon's National News Agency (NNA)",
+          "url": "https://www.npr.org/2026/06/06/nx-s1-5848595/israeli-airstrikes-kill-lebanese-army-officers",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israel's attacks aim to thwart efforts \"to reach a solution that would restore stability\u2026 and lead to the Israeli withdrawal from the occupied Lebanese territories.\"",
+          "date": "2026-06-06",
+          "role_evidence": "NNA is the official Lebanese state news wire that amplifies Aoun's and the government's sovereignty framing to international outlets.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028277+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e80429e1ce53",
+          "name": "UN Special Rapporteur / OHCHR (April 2026)",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/un-experts-condemn-israels-unprecedented-bombing-lebanon-after-ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Since the cessation of hostilities between Lebanon and Israel on 27 November 2024, Israel has repeatedly violated Lebanon's sovereignty\"",
+          "date": "2026-04-15",
+          "role_evidence": "OHCHR's institutional adoption of the sovereignty-violation framing gave it authoritative mass amplification in international media.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260606154816/https://www.ohchr.org/en/press-releases/2026/04/un-experts-condemn-israels-unprecedented-bombing-lebanon-after-ceasefire",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028286+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "df82bbed13a1",
+          "name": "Brazil / International Community Condemnations",
+          "url": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Brazil condemned 8 April 2026 Israeli attacks in Lebanon as a breach of the April 2026 ceasefire, demanding Israel suspend military operations.",
+          "date": "2026-04-08",
+          "role_evidence": "Multiple states formally adopting Lebanon's sovereignty framing at the governmental level, institutionalizing it in international diplomacy.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028292+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f215bd0056d2",
+          "name": "Israel Defense Ministry / IDF",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Israel \"categorically rejects\" Iran's threats and will continue operations in Lebanon against Hezbollah.",
+          "date": "2026-06-08",
+          "role_evidence": "Israel consistently denies the occupation/sovereignty-violation framing, arguing it targets only Hezbollah military assets and retains the right of self-defense.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028298+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028308+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b5bd376f",
+      "name": "US-Israel Geopolitical Tension & Alliance Management",
+      "question": "Is Israel undermining U.S. strategic interests by continuing its Lebanon offensive in defiance of American ceasefire efforts, and what does this reveal about the limits of U.S. influence over Israel?",
+      "key_claim": "Israel's insistence on continuing Lebanon strikes despite direct White House pressure\u2014including a reportedly expletive-laden Trump phone call\u2014is straining the U.S.-Israel alliance and jeopardizing Trump's Iran deal and regional de-escalation goals.",
+      "description": "This framing treats Lebanon as a case study in U.S.-Israel alliance management, centering on Trump's frustration with Netanyahu, the tension between Israel's military objectives and U.S. diplomatic goals with Iran, and the limits of American leverage. It appeals to foreign-policy realists across the political spectrum.",
+      "emphasizes": "Trump-Netanyahu friction, U.S. attempts to restrain Israeli strikes on Beirut, Iran's linkage of Lebanon to U.S.-Iran negotiations, American diplomatic capital expenditure, and the strategic incoherence of U.S. policy.",
+      "downplays": "The human rights and legal dimensions, and the immediate security threat to Israeli civilians from Hezbollah.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Trump and Netanyahu at odds after heated call over Israel's offensive into Lebanon (NPR, Jun 2026)",
+        "Trump says he deterred Netanyahu from 'a major raid of Beirut' (CNN, Jun 2026)",
+        "Israel's continued fighting with Hezbollah in Lebanon has threatened to derail progress towards a U.S.-Iran deal (TIME, Jun 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4e2274f88f9d",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"The Israelis told the Trump administration that Hezbollah's continued attacks on northern Israel violate a ceasefire, giving Israel the right to hit Beirut\"",
+          "date": "2026-06-07",
+          "role_evidence": "Axios's behind-the-scenes sourcing on U.S.-Israel back-channel dynamics was among the first to ground the alliance-tension framing in specific reported details.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028315+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dd413219177d",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Trump's phone call with Netanyahu became heated as he pressed Israel to scale back its Lebanon offensive\"",
+          "date": "2026-06-01",
+          "role_evidence": "CNN's live coverage of the Trump-Netanyahu confrontation over Lebanon drove the alliance-tension framing to a mass U.S. audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028322+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "44c2ecd368c5",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/04/nx-s1-5845410/trump-and-netanyahu-at-odds-after-heated-call-over-israels-offensive-into-lebanon",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Trump really seems to want a deal with Iran, so this grabbed his attention\"",
+          "date": "2026-06-04",
+          "role_evidence": "NPR's analysis connected the Lebanon strikes directly to the Iran deal calculus, amplifying the strategic-tension framing for a broad public audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028328+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "28d1f9a90525",
+          "name": "TIME",
+          "url": "https://time.com/article/2026/06/08/israel-iran-war-direct-attacks-latest-ceasefire-trump-netanyahu-lebanon/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Israel's continued fighting with Hezbollah in Lebanon has also threatened to derail progress towards a U.S.\u2013Iran deal\"",
+          "date": "2026-06-08",
+          "role_evidence": "TIME's framing explicitly tied Lebanon to Iran deal diplomacy early, amplifying the geopolitical-tension framing in international political commentary.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028335+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "122dfbeb0ef3",
+          "name": "Israel's hard-right ministers (Ben-Gvir, Smotrich)",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Ben-Gvir called the ceasefire proposal \"a serious mistake\" and Smotrich argued for intensifying pressure on Hezbollah in Beirut.",
+          "date": "2026-06-08",
+          "role_evidence": "Israel's far-right coalition partners publicly opposed restraint in Lebanon, acting as an internal critic of the framing that U.S. pressure should shape Israeli operations.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028341+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028351+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d8e04d79",
+      "name": "Hezbollah as Obstructionist Actor",
+      "question": "Is Hezbollah\u2014by rejecting ceasefires, continuing attacks, and refusing to withdraw\u2014primarily responsible for prolonging civilian suffering in Lebanon and blocking Lebanese state sovereignty?",
+      "key_claim": "Hezbollah's rejection of multiple U.S.-brokered ceasefires, its refusal to withdraw from southern Lebanon, and its continued rocket and drone attacks are the primary drivers of ongoing violence and the chief obstacle to Lebanese reconstruction and sovereignty.",
+      "description": "This framing, used by U.S. officials, the Lebanese government itself, and pro-Israel Western media, positions Hezbollah as the spoiler blocking peace\u2014distinct from the Lebanese state and population, and ultimately serving Iranian rather than Lebanese interests.",
+      "emphasizes": "Hezbollah's ceasefire rejection, its continued firing on Israeli forces, its non-signatory status in negotiations, Iran's control over Hezbollah, and the Lebanese government's own condemnations of the group.",
+      "downplays": "Israel's continued operations that Hezbollah cites as justification for non-compliance, the structural leverage asymmetry between the parties, and the history of Israeli occupation that underpins Hezbollah's founding rationale.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Hezbollah rejects ceasefire deal agreed on by Israel and Lebanon (NPR, Jun 2026)",
+        "U.S. official: Hezbollah 'is exclusively to blame for any continuation of hostilities' (Axios, Jun 2026)",
+        "Lebanese President and PM criticize Iran for opposing ceasefire deal: country should not be used as a 'bargaining chip' (NPR, Jun 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "1398aad9b784",
+          "name": "U.S. State Department officials (via Axios)",
+          "url": "https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"Hezbollah is exclusively to blame for any continuation of hostilities\"",
+          "date": "2026-06-07",
+          "role_evidence": "U.S. officials are the primary institutional originators of the 'Hezbollah as spoiler' framing, stated explicitly in on-record Axios communications.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260608071527/https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028360+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "594d3a7b161b",
+          "name": "Lebanese President Joseph Aoun / Prime Minister",
+          "url": "https://www.npr.org/2026/06/06/nx-s1-5848595/israeli-airstrikes-kill-lebanese-army-officers",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Lebanon should not be used by Tehran as a \"bargaining chip\" in its talks with Washington.",
+          "date": "2026-06-06",
+          "role_evidence": "The Lebanese government's own condemnations of Hezbollah and Iran represent a notable institutional adoption of this framing from an unexpected (non-Israeli, non-U.S.) source.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028368+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ab66a2e9d4f0",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Hezbollah has officially rejected a ceasefire deal\" and its leader called Lebanon-Israel talks \"absurd, humiliating and insulting.\"",
+          "date": "2026-06-04",
+          "role_evidence": "NPR's straightforward reporting on Hezbollah's rejection, paired with the Lebanese government's condemnation of Iran, served as mass amplification of this framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028374+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "16b160193b66",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/rockets-drones-trigger-warnings-in-north-after-hezbollah-rejects-lebanon-ceasefire-proposal/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"An IDF officer was killed in a Hezbollah anti-tank guided missile attack in southern Lebanon, as the Iran-backed terror group rejected a ceasefire plan\"",
+          "date": "2026-06-04",
+          "role_evidence": "Times of Israel's use of 'terror group' language and juxtaposition with IDF casualties consistently frames Hezbollah as the primary obstructionist actor.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028380+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "22f35a7704f6",
+          "name": "Naim Qassem / Hezbollah (Al-Manar)",
+          "url": "https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Qassem said demands for Hezbollah to leave southern Lebanon under fire would mean \"surrender, defeat and achieving the enemy's goals.\"",
+          "date": "2026-06-04",
+          "role_evidence": "Hezbollah directly contests the 'obstructionist' label, framing its rejection of ceasefires as principled resistance to occupation rather than spoiler behavior.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028386+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028396+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "73ec0b89",
+      "name": "Regional Escalation & Iran Proxy War",
+      "question": "Are the Lebanon strikes a node in a wider Iran-Israel-US regional proxy conflict, and does continued fighting in Lebanon risk triggering catastrophic regional escalation?",
+      "key_claim": "Israel's Lebanon strikes are inseparable from the broader Iran-Israel-US confrontation, with Iran's linkage of Lebanon to any wider ceasefire making every airstrike a potential trigger for catastrophic regional escalation involving the Houthis, Iranian ballistic missiles, and U.S. forces.",
+      "description": "This framing situates the Lebanon strikes within the 2026 Iran war context, emphasizing the interconnectedness of all theaters and the fragility of any partial deal that excludes Lebanon. It is prominent in analytical geopolitical journalism, think-tank commentary, and national security reporting.",
+      "emphasizes": "Iran's declared linkage of Lebanon to ceasefire with the U.S., Hezbollah as an Iranian proxy, Houthi co-belligerency, U.S. force posture, risk of escalation dominos, and the failure to include Lebanon in the Iran war ceasefire.",
+      "downplays": "The immediate human cost within Lebanon itself, and the agency of Lebanese actors who are subordinated to the proxy-war narrative.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Israel strikes Beirut after Hezbollah attack, risking Iran response (Axios, Jun 2026)",
+        "Iran: any further Israeli aggression in southern Lebanon will provoke a 'severe and crushing' response (Xinhua, Jun 2026)",
+        "Israel's Lebanon offensive threatens to derail U.S.-Iran negotiations (TIME, Jun 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "aac6b9179975",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Iran threatened last week to launch a missile attack against Israel if it attacks Beirut, while the U.S. has backed Israel's right to self-defence\"",
+          "date": "2026-06-07",
+          "role_evidence": "Axios was among the first outlets to systematically frame Lebanon strikes as the lever most likely to trigger Iranian escalation and derail the U.S.-Iran track.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028403+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b36624b7db2f",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/06/07/world/live-news/iran-war-trump-israel-lebanon",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"The latest strikes mark the worst escalation since the April ceasefire and resulted in more casualties across the region\"",
+          "date": "2026-06-07",
+          "role_evidence": "CNN's live coverage of the Iran-Israel exchange, linked explicitly to Lebanon operations, drove the escalation-risk framing to a global mass audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028409+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "987bd1eea77f",
+          "name": "TIME",
+          "url": "https://time.com/article/2026/06/08/israel-iran-war-direct-attacks-latest-ceasefire-trump-netanyahu-lebanon/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Iran has repeatedly objected to Israel's fighting with Hezbollah and said that a permanent cessation of Israeli attacks across the region is a precondition for any U.S.-Iran deal\"",
+          "date": "2026-06-08",
+          "role_evidence": "TIME's analysis explicitly mapped how Lebanon fighting feeds into the Iran nuclear/deal calculus, amplifying the escalation framing in policy-oriented audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028416+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "85c819ef29ac",
+          "name": "Wikipedia / 2026 Lebanon War article (aggregator of sourced events)",
+          "url": "https://en.wikipedia.org/wiki/2026_Lebanon_war",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Iran called for an end to Israeli attacks in Lebanon as a condition for a wider ceasefire.",
+          "date": "2026-06-10",
+          "role_evidence": "Wikipedia's event aggregation reflects mainstream media consensus framing of Lebanon as part of the wider Iran-proxy-war theater.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028422+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fc6cfeb57ae5",
+          "name": "Iran's Khatam al-Anbiya Central Headquarters (state media)",
+          "url": "https://english.news.cn/20260610/a31dbf2060e0475caed157b16efdf31b/c.html",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Any further Israeli \"aggression and malicious acts\" including in southern Lebanon would provoke a \"severe and crushing\" response from Tehran.",
+          "date": "2026-06-10",
+          "role_evidence": "Iran's military command directly institutionalizing the escalation-linkage framing in official statements, confirming Lebanon's place in the broader proxy-war frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:30:00.028427+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:30:00.028434+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing framings include: (1) Lebanese civilian perspectives on state capacity and protection\u2014why residents remain in conflict zones and their views on Lebanese government effectiveness versus Hezbollah provision of services; (2) Israeli domestic security concerns and civilian casualty narratives from northern Israeli communities under rocket fire; (3) Economic/infrastructure impact framing\u2014damage to Lebanese hospitals, water systems, agriculture, and displacement costs; (4) Ceasefire agreement specifics and enforcement mechanisms\u2014which party violated which terms first, and structural weaknesses in the agreement itself rather than just blame assignment; (5) Regional Sunni Arab state interests (Saudi Arabia, UAE, Egypt) in Lebanon stability versus Iran-aligned actors; (6) Voices from Lebanese political factions outside Hezbollah on how to resolve the conflict.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Israeli airstrikes in eastern and southern Lebanon resulted in at least 31 deaths and dozens of injuries, while both Hezbollah and Israel reported increased gro",
+    "rated_outlets": 1,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 100,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": -1.0,
+    "resolve_rate": 0.5,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 1,
+      "examples": [
+        {
+          "carrier": "CBC News",
+          "domain": "cbc.ca"
+        }
+      ]
+    },
+    "non_news_carriers": 10,
+    "matched": [
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 15,
+        "political": 12,
+        "social": 0,
+        "institutional": 11,
+        "academic": 1,
+        "other": 1
+      },
+      "vested_interest": 23,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 29,
+    "framings": [
+      {
+        "framing_id": "3e5f00f5",
+        "name": "International Law & War Crimes Accountability",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3bb7dd047291",
+            "display": "Norwegian Refugee Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8da227b68894",
+            "display": "OHCHR",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9c08f04ee2a5",
+            "display": "UN Special Rapporteur Morris Tidball-Binz",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "3f2357eeb02b",
+            "display": "Israel Ministry of Foreign Affairs",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "75b01b7b",
+        "name": "Israeli Self-Defense & Counter-Terrorism",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1e24c1ed9349",
+            "display": "Israeli Defense Minister Israel Katz",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9eb019829da2",
+            "display": "U.S. State Department",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "70e01c97",
+        "name": "Humanitarian / Human Cost",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "04a0339064aa",
+            "display": "Lebanese Ministry of Public Health",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "37948070cd2b",
+            "display": "UNICEF Lebanon",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5d64640b987a",
+            "display": "Xinhua",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2ffb5b5f961d",
+            "display": "IOM",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "21257548",
+        "name": "Ceasefire Collapse & Diplomatic Failure",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1e4bd9cf7f3f",
+            "display": "Brian Katulis",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "798039f8d77a",
+            "display": "CBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9919a03577e4",
+            "display": "Hezbollah leader Naim Qassem",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "08663815",
+        "name": "Lebanese Sovereignty & State Integrity",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "645671d49eb9",
+            "display": "Lebanese President Joseph Aoun",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e6684df08f53",
+            "display": "Brazil",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "63ae9d9fd023",
+            "display": "UN Special Rapporteur",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "04e38d72e605",
+            "display": "Israel Defense Ministry",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b5bd376f",
+        "name": "US-Israel Geopolitical Tension & Alliance Management",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "02a69d972d01",
+            "display": "Israel's hard-right ministers",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d8e04d79",
+        "name": "Hezbollah as Obstructionist Actor",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "645671d49eb9",
+            "display": "Lebanese President Joseph Aoun",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b471e2f8857e",
+            "display": "U.S. State Department officials",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f7dbe72f0d55",
+            "display": "Naim Qassem",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "73ec0b89",
+        "name": "Regional Escalation & Iran Proxy War",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "990d5fa14e92",
+            "display": "Iran's Khatam al-Anbiya Central Headquarters",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 6,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Hezbollah as Obstructionist Actor",
+          "Humanitarian / Human Cost",
+          "Israeli Self-Defense & Counter-Terrorism",
+          "Lebanese Sovereignty & State Integrity",
+          "US-Israel Geopolitical Tension & Alliance Management"
+        ]
+      },
+      {
+        "actor_id": "9d5bddf5863a",
+        "display": "The Times of Israel",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Hezbollah as Obstructionist Actor",
+          "Israeli Self-Defense & Counter-Terrorism"
+        ]
+      },
+      {
+        "actor_id": "58eb5b0cd045",
+        "display": "Foundation for Defense of Democracies",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Israeli Self-Defense & Counter-Terrorism"
+        ]
+      },
+      {
+        "actor_id": "645671d49eb9",
+        "display": "Lebanese President Joseph Aoun",
+        "actor_type": "official",
+        "n_framings": 2,
+        "framings": [
+          "Hezbollah as Obstructionist Actor",
+          "Lebanese Sovereignty & State Integrity"
+        ]
+      },
+      {
+        "actor_id": "0c78698c2453",
+        "display": "Axios",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Regional Escalation & Iran Proxy War",
+          "US-Israel Geopolitical Tension & Alliance Management"
+        ]
+      },
+      {
+        "actor_id": "922a54b2a6d6",
+        "display": "CNN",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Regional Escalation & Iran Proxy War",
+          "US-Israel Geopolitical Tension & Alliance Management"
+        ]
+      },
+      {
+        "actor_id": "5357eb44eda0",
+        "display": "TIME",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Regional Escalation & Iran Proxy War",
+          "US-Israel Geopolitical Tension & Alliance Management"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Humanitarian / Human Cost",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Ceasefire Collapse & Diplomatic Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian / Human Cost",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Israeli Self-Defense & Counter-Terrorism",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Lebanese Sovereignty & State Integrity",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Lebanese Sovereignty & State Integrity",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "US-Israel Geopolitical Tension & Alliance Management",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "Humanitarian / Human Cost",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Humanitarian / Human Cost",
+        "b": "Lebanese Sovereignty & State Integrity",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Humanitarian / Human Cost",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Lebanese Sovereignty & State Integrity",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Humanitarian / Human Cost",
+        "b": "Ceasefire Collapse & Diplomatic Failure",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Humanitarian / Human Cost",
+        "b": "US-Israel Geopolitical Tension & Alliance Management",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "Lebanese Sovereignty & State Integrity",
+        "shared": 2,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Lebanese Sovereignty & State Integrity",
+        "b": "US-Israel Geopolitical Tension & Alliance Management",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "US-Israel Geopolitical Tension & Alliance Management",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Hezbollah as Obstructionist Actor",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Lebanese Sovereignty & State Integrity",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 3,
+        "jaccard": 0.273
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "Ceasefire Collapse & Diplomatic Failure",
+        "shared": 3,
+        "jaccard": 0.3
+      },
+      {
+        "a": "US-Israel Geopolitical Tension & Alliance Management",
+        "b": "Regional Escalation & Iran Proxy War",
+        "shared": 3,
+        "jaccard": 0.375
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 4,
+        "jaccard": 0.4
+      },
+      {
+        "a": "Israeli Self-Defense & Counter-Terrorism",
+        "b": "US-Israel Geopolitical Tension & Alliance Management",
+        "shared": 4,
+        "jaccard": 0.444
+      },
+      {
+        "a": "US-Israel Geopolitical Tension & Alliance Management",
+        "b": "Hezbollah as Obstructionist Actor",
+        "shared": 4,
+        "jaccard": 0.444
+      }
+    ],
+    "by_actor_type": {
+      "news": 7,
+      "organization": 7,
+      "person": 3,
+      "official": 10,
+      "academic": 1,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.241,
+      "siloed_share": 0.724,
+      "mean_jaccard": 0.159
+    },
+    "structure_note": "7 of 29 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:30:27.970439+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

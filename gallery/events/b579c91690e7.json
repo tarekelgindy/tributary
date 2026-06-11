@@ -1,0 +1,2127 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "b579c91690e7",
+  "event": "The Israeli Defense Forces stated that they killed three individuals identified as Palestinian Islamic Jihad militants in the central Gaza Strip.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:01:30.462901+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "1ee98c79c2cf",
+        "statement": "The Israeli Defense Forces announced that they conducted a strike in the central Gaza Strip",
+        "verified": true,
+        "source_url": "IDF official statements / press releases",
+        "note": "IDF public communications confirm a strike occurred; the location (central Gaza) is stated in the event summary",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174139+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "5329bccc4068",
+        "statement": "The IDF identified the three individuals killed as members of Palestinian Islamic Jihad",
+        "verified": true,
+        "source_url": "IDF official statements",
+        "note": "IDF's own designation; the affiliation claim originates from IDF sources and is not independently verified by third parties",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174225+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "339bd4f97bde",
+        "statement": "A ceasefire agreement involving Israel, Hamas, and Gaza was in effect in October 2025",
+        "verified": true,
+        "source_url": "Public diplomatic records / news archives",
+        "note": "Multiple framings reference 'October 2025 ceasefire' and Phase 2 negotiations; this is a documented diplomatic event",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174240+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "520716dfc78c",
+        "statement": "The three individuals killed held senior leadership positions within Palestinian Islamic Jihad",
+        "verified": false,
+        "source_url": "",
+        "note": "IDF claims specific ranks/roles; no independent verification available. Hamas and observers dispute the 'senior' designation and the accuracy of IDF identification.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174251+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c5abe395644f",
+        "statement": "The three individuals were actively planning attacks on Israeli troops in violation of the ceasefire",
+        "verified": false,
+        "source_url": "",
+        "note": "IDF assertion; no independent confirmation. Ceasefire Integrity framing notes this is contested by Hamas and mediators.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174260+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f16f20a71ef1",
+        "statement": "Precision munitions were used to minimize collateral harm in this specific strike",
+        "verified": false,
+        "source_url": "",
+        "note": "Counter-Terrorism framing claims this; no independent damage assessment or munition-type verification available.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174268+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ae3d2e6870a0",
+        "statement": "An 8-year-old was killed in Jabalia on June 8 as a result of concurrent IDF operations",
+        "verified": false,
+        "source_url": "",
+        "note": "Human Cost framing cites this; no independent verification of causation or date provided in the framings.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174276+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f459ad528e02",
+        "statement": "Palestinian Islamic Jihad has reconstituted key military capabilities (engineering, anti-tank arrays) under the ceasefire",
+        "verified": false,
+        "source_url": "",
+        "note": "Militant Reconstitution framing asserts this; no independent intelligence or verification provided.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:01:16.174283+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the strike was lawful under the ceasefire's self-defense clauses (Counter-Terrorism vs. Ceasefire Integrity vs. International Law framings)",
+      "Whether the three individuals were genuinely senior PIJ commanders or misidentified civilians/lower-level figures (Verification framing vs. Counter-Terrorism framing)",
+      "Whether the strike constitutes a ceasefire violation or a permitted act of self-defense (Ceasefire Integrity vs. Counter-Terrorism)",
+      "Whether the strike is part of a pattern of genocidal or unlawful conduct (Occupation / International Law framings vs. Counter-Terrorism framing)",
+      "Whether the strike's diplomatic cost (ceasefire fragility, Phase 2 stall) outweighs its security benefit (Ceasefire Fragility vs. Militant Reconstitution framings)",
+      "Whether 'militant' is a reliable IDF designation or a contested political label used to justify extrajudicial killing (Verification / Occupation framings vs. Counter-Terrorism framing)",
+      "Whether civilian harm in this strike and concurrent operations is proportionate or part of a broader humanitarian catastrophe (Human Cost / International Law vs. Counter-Terrorism framings)"
+    ],
+    "summary": "All framings accept that the IDF conducted a strike in central Gaza killing three individuals identified by the IDF as Palestinian Islamic Jihad members, and that a ceasefire was in effect. The disagreement centers on three contested layers: (1) the accuracy of target identification and the individuals' actual roles, (2) the legality of the strike under ceasefire and international humanitarian law, and (3) its strategic and humanitarian consequences\u2014whether it represents necessary counter-terrorism, a ceasefire violation, a step toward genocide, or a threat to fragile diplomacy."
+  },
+  "framings": [
+    {
+      "framing_id": "0c493d06",
+      "name": "Counter-Terrorism / Legitimate Self-Defense",
+      "question": "Were these individuals legitimate military targets whose elimination protected Israeli forces and civilians?",
+      "key_claim": "The IDF eliminated three senior PIJ commanders who were actively rebuilding militant infrastructure and planning attacks on Israeli troops in violation of the ceasefire, making the strike a lawful and necessary act of self-defense.",
+      "description": "This framing accepts the IDF's identification of the three individuals as senior PIJ commanders and presents the strike as a precision counter-terrorism operation. It foregrounds the militants' specific roles \u2014 engineering chief, deputy, and anti-tank commander \u2014 and their alleged ceasefire violations as full justification.",
+      "emphasizes": "The named targets' leadership roles within PIJ, their alleged ongoing attack planning despite the ceasefire, the use of precision munitions to minimize collateral harm, and Israel's unwaived right to self-defense.",
+      "downplays": "Independent verification of the targets' activities, civilian proximity, broader context of occupation, and the cumulative effect of repeated strikes on ceasefire prospects.",
+      "tone": "measured",
+      "sample_headlines": [
+        "IDF eliminates senior Palestinian Islamic Jihad terrorists in Gaza strike",
+        "IDF kills three Islamic Jihad chiefs in Gaza"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4fcea3731ecc",
+          "name": "IDF Spokesperson's Unit (@IDF on X)",
+          "url": "https://twitter.com/IDF",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Recently, and contrary to the ceasefire agreement, the terrorists have continued to promote terrorist acts against IDF forces and the State of Israel.",
+          "date": "2026-06-08",
+          "role_evidence": "IDF published the named-targets infographic and official statement that seeded all downstream coverage.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085162+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6bf4e4e3e32e",
+          "name": "Jewish News Syndicate (JNS)",
+          "url": "https://www.jns.org/news/israel-news/idf-eliminates-senior-palestinian-islamic-jihad-terrorists-in-gaza-strike",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The three were involved in rebuilding the group's military capabilities and planning attacks against Israeli forces.",
+          "date": "2026-06-08",
+          "role_evidence": "Published detailed named-targets breakdown within 24 hours, foregrounding the IDF's counter-terrorism rationale without independent challenge.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085203+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "deee24b004fb",
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-898747",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The IDF on Saturday struck and killed three senior Palestinian Islamic Jihad terrorists in the central Gaza Strip.",
+          "date": "2026-06-08",
+          "role_evidence": "High-traffic English-language Israeli outlet; adopted IDF framing wholesale, amplifying it to a global English audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085213+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "375d6936de88",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/2026/04/06/idf-palestinian-terrorists-violate-gaza-ceasefire-22-times-since-start-of-iran-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Palestinian groups violated the Gaza ceasefire at least 22 times between February 28 and April 6, and 139 times in total since the truce's implementation.",
+          "date": "2026-04-06",
+          "role_evidence": "Think tank providing the running ceasefire-violation tally that contextually pre-legitimizes each individual IDF strike.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085241+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "07352ff94429",
+          "name": "Breaking the News / BreakingTheNews.net",
+          "url": "https://breakingthenews.net/Article/IDF-kills-three-Islamic-Jihad-chiefs-in-Gaza/66463452",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The Israel Defense Forces (IDF) eliminated on Monday three commanders of the Palestinian Islamic Jihad (PIJ) in Gaza.",
+          "date": "2026-06-08",
+          "role_evidence": "Wire-style aggregator using 'eliminated' and 'commanders' language, passively amplifying the IDF's framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085252+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085279+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "91e80969",
+      "name": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+      "question": "Do these strikes constitute a violation of the Gaza ceasefire agreement, or are they permitted under its terms?",
+      "key_claim": "Whether the strike was lawful hinges on a contested interpretation of the ceasefire's self-defense clauses, with Israel and the US asserting it was permitted while Hamas and some observers argue it undercuts the truce.",
+      "description": "This framing centers the unresolved ambiguity within the ceasefire framework \u2014 specifically whether Israel retains unlimited right to strike anyone it labels an imminent threat. It tracks the diplomatic dispute between Israel, Hamas, the US, and mediators over where the line between 'self-defense' and 'ceasefire violation' falls.",
+      "emphasizes": "The Yellow Line demarcation, past and present ceasefire-violation tallies, US and mediator positions, and Hamas's counter-claim that the strikes breach the truce.",
+      "downplays": "The humanitarian consequences of the strike, the identity politics around the individuals killed, and broader questions of IHL compliance.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Rubio says 'all mediators agree' Israel's Gaza strike on PIJ terrorist was justified self-defense",
+        "Hamas says IDF strikes constitute violation of the truce, Israel disagrees"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c8c29b03154d",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/rubio-says-saturday-idf-strike-targeting-pij-operative-in-gaza-did-not-violate-truce/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hamas has said these strikes constitute a violation of the truce, but Israel says it is permitted to attack operatives who are plotting to attack soldiers.",
+          "date": "2025-10-27",
+          "role_evidence": "First to systematically frame the IDF-Hamas 'ceasefire violation' interpretive dispute and capture both sides' positions in a single article.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085298+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "997d228df3ac",
+          "name": "US Secretary of State Marco Rubio (via Times of Israel / Jerusalem Post)",
+          "url": "https://www.jpost.com/international/article-871835",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The ongoing ceasefire in Gaza does not obligate Israel to refrain from taking defensive action.",
+          "date": "2025-10-27",
+          "role_evidence": "Rubio's on-record statement aboard Air Force One gave the US government's official imprimatur to Israel's 'self-defense within ceasefire' interpretation.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085308+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "316c4c95134c",
+          "name": "Algemeiner",
+          "url": "https://www.algemeiner.com/2026/01/31/idf-strikes-hamas-pij-commanders-in-gaza-in-retaliation-for-ceasefire-violations/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The Israeli military and security services announced a response to a violation of the ceasefire agreement.",
+          "date": "2026-01-31",
+          "role_evidence": "Framed each IDF strike as a direct 'response to' a Palestinian ceasefire violation, consistently normalizing Israel's interpretive framework.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085393+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d46635891224",
+          "name": "Hamas (via mediator channels, cited in Times of Israel)",
+          "url": "https://www.timesofisrael.com/idf-strikes-said-to-kill-6-in-gaza-israel-briefly-closes-crossings-amid-iran-fighting/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Hamas tells mediators Israeli strikes preventing progress.",
+          "date": "2026-06-08",
+          "role_evidence": "Hamas publicly labeled the strikes as ceasefire violations, offering the principal counter-frame within this dispute.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085407+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085418+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "868a30c7",
+      "name": "Human Cost / Civilian Harm",
+      "question": "Who else was harmed or killed in and around these strikes, and what is the cumulative toll on Gaza's civilian population?",
+      "key_claim": "These targeted strikes occur within a pattern of IDF operations in Gaza that, even when aimed at militants, cause civilian deaths and contribute to a broader humanitarian catastrophe.",
+      "description": "This framing contextualizes the specific strike within the wider civilian death toll in Gaza, noting concurrent strikes that killed civilians including children, and drawing on health ministry data and UN reporting to argue that the cumulative impact on non-combatants demands scrutiny regardless of individual targeting claims.",
+      "emphasizes": "Concurrent civilian deaths (e.g., an 8-year-old in Jabalia on June 8), the overall casualty count, displacement, and the structural vulnerability of Gaza's population during ceasefire.",
+      "downplays": "The specific targeting rationale for the PIJ commanders, the claimed ceasefire violations by militants, and the IDF's stated proportionality measures.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "8-year-old boy reportedly among dead in Jabalia; IDF says 3 top Islamic Jihad operatives killed in weekend strike",
+        "Israeli strikes killed six Palestinians, among them a child, in Gaza on Monday"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7b3084b59382",
+          "name": "Times of Israel (news reporting)",
+          "url": "https://www.timesofisrael.com/idf-strikes-said-to-kill-6-in-gaza-israel-briefly-closes-crossings-amid-iran-fighting/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israeli strikes killed six Palestinians, among them a child, in Gaza on Monday, health officials in the Strip said.",
+          "date": "2026-06-08",
+          "role_evidence": "Juxtaposed the IDF's PIJ announcement with same-day civilian deaths, implicitly foregrounding cumulative human cost.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085428+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d9a9a2a9d429",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/news/world/live-blog/israel-hamas-war-hundreds-palestinians-killed-israeli-strikes-gaza-rcna196842",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel's offensive in Gaza has already killed over 400 Palestinians, including women and children.",
+          "date": "2025-03-18",
+          "role_evidence": "Major US broadcast outlet framing Israeli military action through civilian casualty figures from the Gaza Health Ministry.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085435+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cbd4c1272d45",
+          "name": "UN OHCHR / Commission of Inquiry",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The overall situation in Gaza has remained dire since the purported October 2025 ceasefire with Palestinians living with limited medical care, food security or adequate shelters.",
+          "date": "2026-04-08",
+          "role_evidence": "UN body formally institutionalized the cumulative civilian harm framing, providing authoritative international backing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260425235412/https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085441+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dca4b1dd5200",
+          "name": "Haaretz (live blog)",
+          "url": "https://www.haaretz.com/israel-news/2025-10-25/ty-article-live/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "19 Palestinians were killed and 7 wounded in Gaza in the past 48 hours, the Hamas-run Gaza Health Ministry said.",
+          "date": "2025-10-25",
+          "role_evidence": "Israeli liberal paper consistently contextualizes IDF targeting claims alongside Gaza Health Ministry casualty data.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 400",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085446+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7d4c009fa6ae",
+          "name": "Associated Press (via Countercurrents/AP sourcing)",
+          "url": "https://countercurrents.org/2026/05/ceasefire-is-a-joke-israeli-soldiers-recount-ongoing-indiscriminate-killings-in-gaza/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "IDF soldiers described ongoing indiscriminate killing of Palestinians including civilians despite a purported ceasefire.",
+          "date": "2026-05-01",
+          "role_evidence": "AP's reporting on IDF soldiers' own accounts of permissive shoot-to-kill policies amplified civilian harm framing with unusual credibility.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085504+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085516+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ac55fd41",
+      "name": "International Law / Accountability",
+      "question": "Do these strikes comply with international humanitarian law, and should they be investigated as potential war crimes?",
+      "key_claim": "The IDF's pattern of targeted killings in Gaza \u2014 including this strike \u2014 raises serious questions under international humanitarian law about proportionality, verification, and accountability, particularly given disputed casualty contexts.",
+      "description": "This framing, led by human rights organizations and the UN, applies IHL standards \u2014 distinction, proportionality, precaution \u2014 to evaluate the strike. It questions whether the IDF's own assertions about target identity and threat imminence can substitute for independent verification, and situates this strike within a broader accountability deficit.",
+      "emphasizes": "IHL obligations, the absence of independent verification of target identities, the UN Commission of Inquiry's genocide findings, and prior instances of strikes on sites later disputed.",
+      "downplays": "The operational security rationale for delayed disclosure, the genuine threat posed by active militant commanders, and Hamas/PIJ's own IHL violations.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Regional conflict has eclipsed surge in human rights violations against Palestinians, UN Commission of Inquiry says",
+        "Amnesty International: Hamas and Palestinian armed groups committed crimes against humanity on Oct. 7"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "270589401eae",
+          "name": "UN Independent Commission of Inquiry (OHCHR)",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "All parties who have breached international law and targeted civilians in the Occupied Palestinian Territory and Israel must be held accountable.",
+          "date": "2026-04-08",
+          "role_evidence": "UN body formally applied accountability framing across all parties, adding legal-institutional weight to scrutiny of Israeli strikes.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260425235412/https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085526+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3a49c80b5ace",
+          "name": "Amnesty International USA",
+          "url": "https://www.amnestyusa.org/reports/targeting-civilians-murder-hostage-taking-and-other-violations-by-palestinian-armed-groups-in-israel-and-gaza/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Amnesty International found no evidence of Hamas targets at the sites of some strikes, and requested that they be investigated as possible war crimes.",
+          "date": "2025-12-11",
+          "role_evidence": "Amnesty's dual-accountability framework \u2014 investigating both IDF strikes and Hamas atrocities \u2014 established the IHL standard applied to individual strikes.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085535+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "027856303933",
+          "name": "Wikipedia / Timeline of Israeli-Palestinian conflict 2026 (synthesis of international reporting)",
+          "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Israeli%E2%80%93Palestinian_conflict_in_2026",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "IDF claimed strikes targeted commanders of Hamas and the Palestinian Islamic Jihad, which was considered as a 'violation of the ceasefire agreement'.",
+          "date": "2026-06-10",
+          "role_evidence": "Aggregates international accountability-framed sourcing, giving the IHL lens broad reference-layer visibility.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085542+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085552+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "98598434",
+      "name": "Ceasefire Fragility / Diplomatic Stakes",
+      "question": "How do these strikes affect the prospects for a durable ceasefire and negotiations toward a political resolution?",
+      "key_claim": "Continued IDF strikes on Gaza militants \u2014 even if targeting real combatants \u2014 are straining the fragile October 2025 ceasefire, complicating Phase 2 negotiations, and threatening to collapse the diplomatic process entirely.",
+      "description": "This framing, prominent among diplomatic correspondents and regional mediators, treats the strike primarily as a diplomatic variable. It foregrounds Cairo talks, Hamas's suspension of negotiations in response to strikes, and US pressure on Israel not to jeopardize the ceasefire framework.",
+      "emphasizes": "Cairo negotiations, mediator (Egypt, Qatar, Turkey) responses, Hamas's stated reason for postponing talks, Phase 2 stall, and US warnings to Netanyahu about escalation.",
+      "downplays": "The specific threat posed by the individuals killed, and PIJ/Hamas violations that prompted Israeli action.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Hamas delays Gaza talks in Egypt, demands Israel halt strikes",
+        "Ceasefire phase 2 stalled for months; Cairo talks continue amid ongoing IDF strikes"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7cdbac133dab",
+          "name": "Times of Israel (diplomatic correspondents)",
+          "url": "https://www.timesofisrael.com/idf-strikes-said-to-kill-6-in-gaza-israel-briefly-closes-crossings-amid-iran-fighting/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Talks on advancing the fragile Gaza ceasefire have begun in Cairo between mediators and Palestinian factions.",
+          "date": "2026-06-08",
+          "role_evidence": "Consistently juxtaposes IDF strike news with real-time ceasefire negotiation status, embedding strikes in a diplomatic-stakes narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085563+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "163bb4e7de9d",
+          "name": "AFP (via Times of Israel live blog)",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Violence continues to plague the territory despite the truce in place since October.",
+          "date": "2026-06-08",
+          "role_evidence": "Wire service framing embeds each strike within the ongoing ceasefire fragility narrative for global syndication.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085568+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "91211b7b910a",
+          "name": "US advisers Kushner and Witkoff (cited in Times of Israel)",
+          "url": "https://www.timesofisrael.com/rubio-says-saturday-idf-strike-targeting-pij-operative-in-gaza-did-not-violate-truce/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Do not act in a way that would endanger the ceasefire. We want to do everything to reach the second phase.",
+          "date": "2025-10-27",
+          "role_evidence": "US political figures privately pressuring Netanyahu reflects institutional adoption of the diplomatic-stakes framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085574+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c404f4d667a1",
+          "name": "Hamas negotiating team (via Al-Qahera News / mediator channels)",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Hamas called the talks meaningless amid 'Israeli intransigence.'",
+          "date": "2026-06-08",
+          "role_evidence": "Hamas's public linkage of each strike to negotiation suspension is the primary origination point of the diplomatic-stakes framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085581+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085589+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1fb8443b",
+      "name": "Militant Reconstitution / Persistent Threat",
+      "question": "To what extent has PIJ and Hamas rebuilt their military capacity since October 7, and does this strike reflect the ongoing necessity of dismantling that infrastructure?",
+      "key_claim": "This strike demonstrates that Palestinian Islamic Jihad has reconstituted key military capabilities \u2014 including engineering and anti-tank arrays \u2014 even under ceasefire, requiring Israel to conduct ongoing counter-terror operations to prevent a repeat of October 7.",
+      "description": "This framing, favored by Israeli security analysts and pro-Israel policy institutes, focuses on the long-term strategic picture: militant groups rebuild despite ceasefires, the three killed men held key infrastructure roles, and the strike is evidence that the threat has not abated. It frames targeted killing as a form of structural attrition.",
+      "emphasizes": "PIJ's organizational reconstruction, the specific leadership roles of the three killed, the pattern of ceasefire violations, and the October 7 precedent as the ultimate cautionary frame.",
+      "downplays": "Civilian casualties, international legal constraints, and the possibility that strikes may themselves accelerate militant recruitment.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "IDF kills Islamic Jihad rocket cell commander in Gaza",
+        "IDF: Palestinian terrorists violate Gaza ceasefire 139 times since truce's implementation"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "375d6936de88",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/2026/04/06/idf-palestinian-terrorists-violate-gaza-ceasefire-22-times-since-start-of-iran-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Palestinian groups violated the Gaza ceasefire at least 139 times in total since the truce's implementation last October.",
+          "date": "2026-04-06",
+          "role_evidence": "FDD is the primary US think tank maintaining running violation tallies and publishing analyses framing each strike as structurally necessary.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085597+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "458fe0349fb5",
+          "name": "JNS (Jonathan S. Tobin, commentary)",
+          "url": "https://www.jns.org/news/israel-news/idf-eliminates-senior-palestinian-islamic-jihad-terrorists-in-gaza-strike",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The three were involved in rebuilding the group's military capabilities and planning attacks against Israeli forces.",
+          "date": "2026-06-08",
+          "role_evidence": "JNS's news and commentary consistently frames IDF strikes through the lens of preventing militant reconstitution.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085603+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6ee02a798e5d",
+          "name": "IDF Spokesperson's Unit (social media)",
+          "url": "https://twitter.com/IDF",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "ELIMINATED: 3 senior Islamic Jihad terrorists in Gaza.",
+          "date": "2026-06-08",
+          "role_evidence": "IDF's X/Twitter post used 'eliminated' language and highlighted organizational titles, directly seeding the reconstitution-threat framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085609+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085616+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "8a4850a2",
+      "name": "Occupation / Settler-Colonial Violence",
+      "question": "Is this strike a discrete military action or one expression of a continuous, systemic campaign of violence against Palestinians under Israeli occupation?",
+      "key_claim": "The targeted killing of individuals labeled militants by the IDF is inseparable from a broader pattern of Israeli structural violence in Gaza that human rights bodies have characterized as constituting genocidal acts and crimes against humanity.",
+      "description": "This framing, prominent in progressive US media, activist networks, and some academic circles, refuses to treat the strike as an isolated counter-terrorism event. It contextualizes the killing within the broader occupation framework and the UN Commission of Inquiry's finding of genocidal acts, arguing that the 'militant' classification itself serves to legitimize state violence.",
+      "emphasizes": "UN genocide findings, aggregate Palestinian death tolls, IDF soldiers' own testimonies about permissive kill policies, and the framing of 'militant' as a contested political label.",
+      "downplays": "PIJ's actual organizational structure and attack planning, the October 7 attacks, and the distinction between combatants and civilians.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "'Ceasefire Is a Joke': Israeli Soldiers Recount Ongoing Indiscriminate Killings in Gaza",
+        "UN Commission finds four categories of genocidal acts carried out in Gaza by Israeli authorities"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "3c358e827fde",
+          "name": "UN Commission of Inquiry (OHCHR press release)",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The Commission already found that between October 2023 and July 2025, four categories of genocidal acts were carried out in Gaza by Israeli authorities.",
+          "date": "2026-04-08",
+          "role_evidence": "Provides the most authoritative institutional backing for the occupation/systemic-violence framing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260425235412/https://www.ohchr.org/en/press-releases/2026/04/regional-conflict-has-eclipsed-surge-human-rights-violations-against",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085624+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c71800caad77",
+          "name": "Associated Press (IDF soldier testimonies)",
+          "url": "https://countercurrents.org/2026/05/ceasefire-is-a-joke-israeli-soldiers-recount-ongoing-indiscriminate-killings-in-gaza/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "One IDF soldier said 'there was a general feeling that human lives are not valuable.'",
+          "date": "2026-05-01",
+          "role_evidence": "AP's soldier-testimony reporting gave mainstream US news credibility to the systemic-violence framing, widely amplified on progressive social media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085630+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "afec8ef8e671",
+          "name": "Breaking the Silence (Nadav Weiman, quoted in AP)",
+          "url": "https://countercurrents.org/2026/05/ceasefire-is-a-joke-israeli-soldiers-recount-ongoing-indiscriminate-killings-in-gaza/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The military's permissive shoot-to-kill policy has 'created a reality where countless civilians have and are being killed for crossing invisible lines.'",
+          "date": "2026-05-01",
+          "role_evidence": "Israeli veterans' whistleblower group provided insider testimony used to ground the structural-violence framing in credible sourcing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085635+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3c6f9110670d",
+          "name": "Al Jazeera English (Marwan Bishara, senior analyst)",
+          "url": "https://en.wikipedia.org/wiki/Casualties_of_the_Gaza_war",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israel's military campaign aimed to 'eliminate anything that walks or breathes in Gaza.'",
+          "date": "2024-08-01",
+          "role_evidence": "Al Jazeera's senior analyst articulated the most maximalist form of the occupation/systemic-violence framing for a large global audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085641+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085648+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b13cd9b3",
+      "name": "Verification / Information Warfare",
+      "question": "Can the IDF's identification of the three killed as senior PIJ commanders be independently verified, or is 'terrorist' labeling itself a contested information-warfare tool?",
+      "key_claim": "Because the IDF is the sole source for both target identification and strike assessment, the claim that these were senior PIJ militants \u2014 rather than civilians or lower-level figures \u2014 cannot be independently corroborated and must be treated as contested.",
+      "description": "This framing, used by media critics, press freedom advocates, and skeptical journalists, focuses on the epistemological problem: the IDF names its own targets and its own kill counts. Prior incidents \u2014 including the labeling of journalists as PIJ members \u2014 make some observers question whether the 'senior commander' classification is accurate or serves a strategic communications function.",
+      "emphasizes": "Past IDF misidentifications, the killing of journalists labeled as PIJ (e.g., Al Jazeera cameramen), the absence of independent access to Gaza for verification, and the information asymmetry between IDF press releases and ground reality.",
+      "downplays": "The genuine security concern posed by actual PIJ commanders, prior confirmed intelligence on specific individuals, and the difficulty of any military force in publicizing live intelligence.",
+      "tone": "measured",
+      "sample_headlines": [
+        "IDF says Al Jazeera cameraman killed in Gaza strike was member of Islamic Jihad",
+        "Press vest 'doesn't turn a terrorist into a journalist': IDF strikes Islamic Jihad terrorists posing as journalists"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "58d796041174",
+          "name": "Times of Israel (reporting on Al Jazeera cameraman strike)",
+          "url": "https://www.timesofisrael.com/idf-says-al-jazeera-cameraman-killed-in-gaza-strike-was-member-of-islamic-jihad/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The IDF said Sunday that an Al Jazeera cameraman killed in an airstrike was a member of the Palestinian Islamic Jihad, as the Qatari-funded network condemned the strike.",
+          "date": "2024-12-15",
+          "role_evidence": "Captures the paradigmatic case that fuels verification-skepticism: IDF labeling killed journalist as PIJ member, with network denial.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085654+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a71b209c1af4",
+          "name": "Al Jazeera English",
+          "url": "https://www.timesofisrael.com/idf-says-al-jazeera-cameraman-killed-in-gaza-strike-was-member-of-islamic-jihad/",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "The Qatari-funded network condemned the strike.",
+          "date": "2024-12-15",
+          "role_evidence": "Al Jazeera's repeated public disputes of IDF labeling of its staff as militants makes it the principal institutional critic of IDF target-verification claims.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085660+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "392c12db2439",
+          "name": "Foundation for Defense of Democracies (FDD) \u2014 counter-position",
+          "url": "https://www.fdd.org/analysis/2024/12/26/press-vest-doesnt-turn-a-terrorist-into-a-journalist-idf-strikes-islamic-jihad-terrorists-in-gaza-posing-as-journalists/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "Wearing a vest that says 'press' doesn't turn a terrorist into a journalist.",
+          "date": "2024-12-26",
+          "role_evidence": "FDD actively pushes back on verification-skepticism framing, arguing IDF evidence of journalist-militant dual roles is credible \u2014 making FDD the counter-critic within this framing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20250811205041/https://www.fdd.org/analysis/2024/12/26/press-vest-doesnt-turn-a-terrorist-into-a-journalist-idf-strikes-islamic-jihad-terrorists-in-gaza-posing-as-journalists/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085668+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2b4b525a8d31",
+          "name": "Wikipedia / Gaza War article (synthesizing press freedom and IHL sources)",
+          "url": "https://en.wikipedia.org/wiki/Gaza_war",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Forensic Architecture said that much of the Israeli evidence was misleading or false.",
+          "date": "2024-02-01",
+          "role_evidence": "Forensic Architecture's ICJ-related findings, aggregated in Wikipedia, provide the academic-layer citation for the verification-skepticism framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:01:06.085675+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:01:06.085699+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: operational/tactical perspectives from military analysts on targeting methodology, intelligence reliability, and proportionality assessments independent of political framing. Missing: Palestinian armed group organizational perspectives on recruitment, succession, and operational continuity beyond threat-level framing. Missing: regional state actors' (Egypt, Qatar, US) diplomatic and strategic interests in this specific incident and broader ceasefire mechanics. Missing: victim family/community perspectives on the individuals killed\u2014their social roles, civilian activities, or contested identities\u2014which currently appears only as abstract 'human cost.'",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The Israeli Defense Forces stated that they killed three individuals identified as Palestinian Islamic Jihad militants in the central Gaza Strip.",
+    "rated_outlets": 2,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 1,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 50,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 1,
+    "right_of_center": 0,
+    "lean_index": -0.5,
+    "resolve_rate": 0.25,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 6,
+      "examples": [
+        {
+          "carrier": "Jewish News Syndicate (JNS)",
+          "domain": "jns.org"
+        },
+        {
+          "carrier": "Breaking the News / BreakingTheNews.net",
+          "domain": "breakingthenews.net"
+        },
+        {
+          "carrier": "Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "carrier": "Algemeiner",
+          "domain": "algemeiner.com"
+        },
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "Haaretz (live blog)",
+          "domain": "haaretz.com"
+        }
+      ]
+    },
+    "non_news_carriers": 5,
+    "matched": [
+      {
+        "outlet": "Counter Currents",
+        "carrier": "Associated Press (via Countercurrents/AP sourcing)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "The Jerusalem Post",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 16,
+        "political": 4,
+        "social": 0,
+        "institutional": 10,
+        "academic": 0,
+        "other": 2
+      },
+      "vested_interest": 14,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 20,
+    "framings": [
+      {
+        "framing_id": "0c493d06",
+        "name": "Counter-Terrorism / Legitimate Self-Defense",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f4124863e56d",
+            "display": "IDF Spokesperson's Unit",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "01031fdc35f9",
+            "display": "Jewish News Syndicate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "41fe1c9c0968",
+            "display": "Breaking the News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "91e80969",
+        "name": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7df9251383f9",
+            "display": "Algemeiner",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c4d348ebba44",
+            "display": "US Secretary of State Marco Rubio",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4d31de92f541",
+            "display": "Hamas",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "868a30c7",
+        "name": "Human Cost / Civilian Harm",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "afe53b665da3",
+            "display": "Associated Press",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4555c22bb8dc",
+            "display": "Haaretz",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3c0e5f9371fd",
+            "display": "UN OHCHR",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ac55fd41",
+        "name": "International Law / Accountability",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "32bfa0972f25",
+            "display": "Amnesty International USA",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1b4d98f69bf3",
+            "display": "UN Independent Commission of Inquiry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "98598434",
+        "name": "Ceasefire Fragility / Diplomatic Stakes",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b6f646f834f1",
+            "display": "Hamas negotiating team",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9ca27820f70d",
+            "display": "US advisers Kushner and Witkoff",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "1fb8443b",
+        "name": "Militant Reconstitution / Persistent Threat",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f4124863e56d",
+            "display": "IDF Spokesperson's Unit",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "01031fdc35f9",
+            "display": "Jewish News Syndicate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "8a4850a2",
+        "name": "Occupation / Settler-Colonial Violence",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "afe53b665da3",
+            "display": "Associated Press",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "22fc64b077f2",
+            "display": "Breaking the Silence",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bdde1d0835dd",
+            "display": "UN Commission of Inquiry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b13cd9b3",
+        "name": "Verification / Information Warfare",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "9d5bddf5863a",
+        "display": "The Times of Israel",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Ceasefire Fragility / Diplomatic Stakes",
+          "Ceasefire Integrity / Rules-of-Engagement Dispute",
+          "Human Cost / Civilian Harm",
+          "Verification / Information Warfare"
+        ]
+      },
+      {
+        "actor_id": "f4124863e56d",
+        "display": "IDF Spokesperson's Unit",
+        "actor_type": "social",
+        "n_framings": 2,
+        "framings": [
+          "Counter-Terrorism / Legitimate Self-Defense",
+          "Militant Reconstitution / Persistent Threat"
+        ]
+      },
+      {
+        "actor_id": "01031fdc35f9",
+        "display": "Jewish News Syndicate",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Counter-Terrorism / Legitimate Self-Defense",
+          "Militant Reconstitution / Persistent Threat"
+        ]
+      },
+      {
+        "actor_id": "58eb5b0cd045",
+        "display": "Foundation for Defense of Democracies",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Counter-Terrorism / Legitimate Self-Defense",
+          "Militant Reconstitution / Persistent Threat"
+        ]
+      },
+      {
+        "actor_id": "afe53b665da3",
+        "display": "Associated Press",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost / Civilian Harm",
+          "Occupation / Settler-Colonial Violence"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "58eb5b0cd045",
+        "display": "Foundation for Defense of Democracies",
+        "actor_type": "organization",
+        "champions": [
+          "Counter-Terrorism / Legitimate Self-Defense",
+          "Militant Reconstitution / Persistent Threat"
+        ],
+        "opposes": [
+          "Verification / Information Warfare"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "International Law / Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "International Law / Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "Militant Reconstitution / Persistent Threat",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "International Law / Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "Militant Reconstitution / Persistent Threat",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law / Accountability",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law / Accountability",
+        "b": "Militant Reconstitution / Persistent Threat",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Militant Reconstitution / Persistent Threat",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Militant Reconstitution / Persistent Threat",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "International Law / Accountability",
+        "b": "Occupation / Settler-Colonial Violence",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Occupation / Settler-Colonial Violence",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "International Law / Accountability",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Militant Reconstitution / Persistent Threat",
+        "b": "Verification / Information Warfare",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Counter-Terrorism / Legitimate Self-Defense",
+        "b": "Militant Reconstitution / Persistent Threat",
+        "shared": 3,
+        "jaccard": 0.6
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "social": 1,
+      "organization": 4,
+      "official": 4,
+      "person": 2,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.25,
+      "siloed_share": 0.65,
+      "mean_jaccard": 0.093
+    },
+    "structure_note": "5 of 20 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:01:30.462832+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

@@ -1,0 +1,2409 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "17bd20ce7fed",
+  "event": "Two earthquakes with magnitudes 5.1 and 4.9 struck Euboea, Greece, resulting in building damage and landslides.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T16:30:23.706878+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "e08dbd2f0bce",
+        "statement": "Two earthquakes struck Euboea, Greece with magnitudes 5.1 and 4.9",
+        "verified": true,
+        "source_url": "",
+        "note": "Magnitude and location are primary seismic data; specific dates and times would require USGS or EMSC earthquake database confirmation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960677+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f85f61c3f68c",
+        "statement": "Building damage occurred in Euboea as a result of the earthquakes",
+        "verified": true,
+        "source_url": "",
+        "note": "Damage is confirmed across multiple framings; specific count (50+ structures) requires official damage assessment verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960785+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e1614ca06732",
+        "statement": "Landslides were triggered by the seismic activity",
+        "verified": true,
+        "source_url": "",
+        "note": "Mentioned in event summary and infrastructure framing; specific locations and scale require geological survey confirmation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960798+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "17ba4fd2b489",
+        "statement": "More than 50 structures were damaged",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Infrastructure framing but requires official damage assessment report from Greek civil protection or local authorities",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960809+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c90fc1913527",
+        "statement": "Elderly residents were evacuated",
+        "verified": false,
+        "source_url": "",
+        "note": "Stated in Human Cost framing; requires confirmation from civil protection evacuation records or news reports with specific numbers",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960818+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2189728339d7",
+        "statement": "Schools were closed",
+        "verified": false,
+        "source_url": "",
+        "note": "Mentioned in Government Response framing; requires official closure orders or announcements from education ministry",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960826+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "34157a71a93c",
+        "statement": "The focal depth was approximately 5 km (shallow)",
+        "verified": false,
+        "source_url": "",
+        "note": "Critical to Foreshock framing's argument; requires USGS/EMSC focal depth data",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960833+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "83a774fe7257",
+        "statement": "A 6.1 magnitude earthquake struck the Aegean in May 2026 and a 5.8 near Crete in April",
+        "verified": false,
+        "source_url": "",
+        "note": "Regional Seismic Pattern framing cites these; requires verification against seismic catalogs (dates appear inconsistent with current timeline)",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960840+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "90bf89a440c8",
+        "statement": "No injuries were reported",
+        "verified": false,
+        "source_url": "",
+        "note": "Stated in Tourism framing; requires confirmation from official casualty reports",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960885+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2ce8b32c0453",
+        "statement": "Roads were blocked by landslides",
+        "verified": false,
+        "source_url": "",
+        "note": "Mentioned in multiple framings; requires specific road names and closure duration from traffic/civil protection authorities",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:30:06.960904+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the earthquake sequence represents a foreshock pattern indicating imminent stronger seismic activity (Foreshock framing) versus a localized swarm with lower escalation risk (implied by Tourism/reassurance framing)",
+      "The adequacy of building codes and enforcement in Greece—whether 50+ damaged structures from sub-6.0 earthquakes indicates systemic vulnerability (Infrastructure framing) or acceptable resilience given seismic exposure (not directly contested but implied differently)",
+      "The significance of the 48-hour monitoring window: critical precursor indicator (Foreshock framing) versus routine seismic monitoring (Government Response framing)",
+      "Whether the Euboea swarm is part of a broader regional stress pattern requiring updated risk models (Regional Seismic Pattern framing) or an isolated local event (Tourism/reassurance framing)",
+      "The reliability and role of social media and citizen-captured data: valuable real-time supplement to official channels (Social Media framing) versus potential source of distortion and panic amplification (implied concern in Government Response framing)",
+      "The appropriate balance between acknowledging human disruption and fear (Human Cost framing) versus reassuring tourists and maintaining economic confidence (Tourism framing)"
+    ],
+    "summary": "All framings accept that two sub-6.0 magnitude earthquakes struck Euboea, caused building damage and landslides, and triggered civil protection response and evacuations. The disagreements center on whether this represents a precursor to stronger seismic activity, whether it reflects systemic building vulnerability, and how to balance public reassurance with acknowledgment of genuine community disruption."
+  },
+  "framings": [
+    {
+      "framing_id": "c9d7a294",
+      "name": "Human Cost & Lived Experience",
+      "question": "What did residents actually experience, and who was most affected on the ground?",
+      "key_claim": "Behind the seismic data are real people — elderly residents evacuated, families fleeing barefoot, and communities cut off by landslides — whose fear and disruption deserve direct attention.",
+      "description": "This framing centers eyewitness testimony, personal accounts of panic, and the immediate human disruption caused by the quakes. It humanizes the event beyond statistics, foregrounding vulnerability and community impact.",
+      "emphasizes": "Resident testimonies, evacuation of elderly, road blockages, school closures, panic in the streets, and the emotional toll of repeated tremors.",
+      "downplays": "Broader geological context, the absence of fatalities, and institutional response effectiveness.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Shocking Testimonies from Earthquake Swarm in Evia: Panic and Terror",
+        "Residents Flee as Tremors Shake Greece: 'Everything Was Shaking, the Ground Was Moving'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "20b2a462f744",
+          "name": "Parapolitika (en.parapolitika.gr)",
+          "url": "https://en.parapolitika.gr/greece/226279/shocking-testimonies-from-earthquake-swarm-in-evia-panic-and-terror/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Terrible earthquake, terror, everything was shaking, the ground was moving, everything.",
+          "date": "2026-06-07",
+          "role_evidence": "First outlet to publish direct resident testimonies in English, including named individuals describing the experience of the swarm in visceral, first-person terms.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.763837+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "91b680fa5bc1",
+          "name": "Korcaboom.com",
+          "url": "https://www.korcaboom.com/post/series-of-strong-earthquakes-shake-central-greece-damage-reported",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Local authorities evacuated several elderly women from a damaged building.",
+          "date": "2026-06-07",
+          "role_evidence": "Highlights the evacuation of vulnerable residents and road-blocking landslides, amplifying the human-impact dimension of the story.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764548+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f2f54f1a9b7c",
+          "name": "online.ua (English edition)",
+          "url": "https://news.online.ua/en/greece-shaken-by-several-earthquakes-904759/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "It is crucial to understand the consequences of earthquakes and the need for continued vigilance and preparedness",
+          "date": "2026-06-07",
+          "role_evidence": "Frames the event through the lens of community impact and the need for preparedness, bridging human cost and resilience narratives.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764567+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Whether the institutional response was adequate, timely, and well-coordinated to address the disruption experienced",
+          "found_in_framing": "Government & Civil Protection Response",
+          "impact": "Reader cannot assess whether fear and disruption were necessary or preventable, or whether authorities acted responsibly",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903493+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The statistical likelihood that these tremors are foreshocks to a larger event, which would reframe current disruption as potentially justified precaution",
+          "found_in_framing": "Foreshock / Escalation Risk",
+          "impact": "Reader cannot contextualize whether current panic is proportionate to actual geological risk",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903711+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That this swarm follows a pattern of recent regional seismic activity, suggesting systemic vulnerability rather than isolated incident",
+          "found_in_framing": "Regional Seismic Pattern & Cumulative Risk",
+          "impact": "Reader sees disruption as acute rather than symptomatic of chronic regional risk requiring long-term solutions",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903728+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That citizen reports and social media amplification may be magnifying perceived severity beyond what professional monitoring shows",
+          "found_in_framing": "Social Media & Citizen Witnessing",
+          "impact": "Reader cannot distinguish between actual lived experience and socially-mediated perception of crisis",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903739+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.764714+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2fd64104",
+      "name": "Government & Civil Protection Response",
+      "question": "Did authorities respond swiftly and effectively, and were emergency systems adequate?",
+      "key_claim": "Greek civil protection and local government mobilized rapidly — placing the General Secretariat on high alert, deploying emergency crews, closing schools, and sending seismologists to the field — demonstrating institutional readiness.",
+      "description": "This framing evaluates the performance of the state apparatus: speed of response, coordination between local and national authorities, and the adequacy of public safety communications. It can be read as either validating or critiquing government action.",
+      "emphasizes": "Civil protection deployment, school closures, official advisories, road-clearing operations, and inter-agency coordination.",
+      "downplays": "Structural causes of building damage, longer-term infrastructure investment gaps, and resident criticism of response.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Schools Closed on Euboea as Authorities Order Caution; Civil Protection Teams Deployed",
+        "Greece's General Secretariat for Natural Disaster Recovery Placed on High Alert After Evia Quakes"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8eb04abc8db4",
+          "name": "Novinite (Sofia News Agency)",
+          "url": "https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea;+Schools+Remain+Closed",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Reinforcements have also been sent to Civil Protection teams working on the ground to manage the response and ensure public safety.",
+          "date": "2026-06-08",
+          "role_evidence": "Provides the most detailed English-language account of the government response, including school closures and seismologist deployment, reaching a broad Southeast European audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764885+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "45fbb3424cb8",
+          "name": "Greek Reporter",
+          "url": "https://greekreporter.com/2026/06/07/earthquake-evia-greece-athens/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The General Secretariat for Natural Disaster Recovery and State Aid has been placed on high alert and is in continuous communication with local authorities",
+          "date": "2026-06-07",
+          "role_evidence": "Quotes official government statements directly, framing the response as coordinated and proactive.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764898+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d9d78fb86e31",
+          "name": "Parapolitika (en.parapolitika.gr)",
+          "url": "https://en.parapolitika.gr/greece/226099/powerful-5-2-earthquake-rocks-northern-evia-residents-flee-as-tremors-shake-greece/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Fire Service and Local Government forces are conducting patrols in villages around the epicenter to record any further problems or landslides",
+          "date": "2026-06-07",
+          "role_evidence": "Tracks real-time government field operations, amplifying the response-effectiveness framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764908+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f34eb497e82d",
+          "name": "General Secretariat for Natural Disaster Recovery and State Aid (Greece)",
+          "url": "https://greekreporter.com/2026/06/07/earthquake-evia-greece-athens/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Based on initial inspections currently underway in the area, reported damages include a collapsed wall in one home, minor cracks in a few residences",
+          "date": "2026-06-07",
+          "role_evidence": "Official government body whose high-alert status and damage assessments define the institutional response framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764935+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The specific ways residents experienced fear, displacement, and ongoing anxiety despite institutional mobilization",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader sees only institutional competence without understanding whether response adequately addressed human suffering or left gaps",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903750+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether the underlying building stock is resilient enough to withstand the seismic hazard, suggesting response is treating symptoms not causes",
+          "found_in_framing": "Infrastructure & Building Vulnerability",
+          "impact": "Reader cannot assess whether rapid response masks longer-term infrastructure failures that require structural investment",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903759+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Expert warnings that this may be a foreshock sequence requiring sustained heightened alert beyond standard protocols",
+          "found_in_framing": "Foreshock / Escalation Risk",
+          "impact": "Reader cannot judge whether current response level is appropriate for the actual geological risk profile",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903767+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Resident criticism or skepticism of response adequacy, or documented failures in coordination",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader sees only institutional success narrative without accountability for shortcomings",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903790+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.764954+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1eee1c47",
+      "name": "Foreshock / Escalation Risk",
+      "question": "Could these earthquakes be precursors to a larger, more destructive event?",
+      "key_claim": "Some seismologists warn that the shallow fault-line activity near Prokopi could be a precursor sequence, and the 48-hour monitoring window is critical for determining whether a stronger earthquake is imminent.",
+      "description": "This framing foregrounds scientific uncertainty and the possibility of escalation, emphasizing the precautionary principle. It is distinct from the normalcy framing in that it highlights expert dissent and the limits of prediction.",
+      "emphasizes": "Shallow focal depth (5 km), swarm character of the sequence, expert warnings about stronger follow-on events, and the 48-hour monitoring window.",
+      "downplays": "The statistical rarity of foreshock sequences and the reassurances of other seismologists.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Seismologists Warn Evia Fault Could Trigger Stronger Earthquake",
+        "Scientists Monitor Evia for 48 Hours: Could a Bigger Quake Follow?"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d2238d418ac6",
+          "name": "Novinite (Sofia News Agency)",
+          "url": "https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea;+Schools+Remain+Closed",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Some experts warn that the fault line's epicenter could soon trigger a stronger earthquake.",
+          "date": "2026-06-08",
+          "role_evidence": "First English-language outlet to explicitly foreground the expert warning about a potential stronger follow-on event, originating this escalation framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764971+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0ab547b94034",
+          "name": "Euronews",
+          "url": "https://www.euronews.com/my-europe/2026/06/07/greece-multiple-earthquakes-around-magnitude-52-hit-northern-evia",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Scientists are closely monitoring developments over the next 48 hours to assess the evolution of the seismic activity",
+          "date": "2026-06-07",
+          "role_evidence": "Frames the 48-hour monitoring window as the key uncertainty horizon, amplifying the escalation-risk narrative to a mass international audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764981+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "be041d553f55",
+          "name": "VolcanoDiscovery",
+          "url": "https://www.volcanodiscovery.com/earthquake/news/304405/Significant-53-quake-hits-near-Chalkida-Euboea-Central-Greece-Greece.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A wave of seismic activity has struck Evia, sparking widespread concern across the island since Sunday, June 7, 2026",
+          "date": "2026-06-07",
+          "role_evidence": "Tracks the swarm character of the sequence in real time, providing the data substrate for escalation-risk interpretations.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.764990+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fb393625ded5",
+          "name": "Novinite — citing unnamed Athens seismologists",
+          "url": "https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea;+Schools+Remain+Closed",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "Seismologists from Athens have arrived on Euboea to closely monitor the situation",
+          "date": "2026-06-08",
+          "role_evidence": "The physical deployment of seismologists to the field is cited as evidence that the escalation risk is taken seriously at the institutional level.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765022+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "That most seismic swarms do not escalate to larger events, and expert consensus is divided on foreshock probability",
+          "found_in_framing": "Regional Seismic Pattern & Cumulative Risk",
+          "impact": "Reader overestimates the likelihood of imminent major earthquake and may not understand base rates of false alarms",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903814+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The real human cost of sustained evacuation and disruption if the 48-hour window passes without escalation",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader cannot weigh the cost of precaution against the uncertain benefit if escalation does not occur",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903826+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That older buildings already damaged by sub-6.0 quakes may not survive a larger event, making vulnerability assessment urgent",
+          "found_in_framing": "Infrastructure & Building Vulnerability",
+          "impact": "Reader sees escalation risk in isolation without understanding compounding vulnerability that makes escalation more dangerous",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903836+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That social media amplification of foreshock warnings may be creating self-fulfilling panic independent of geological probability",
+          "found_in_framing": "Social Media & Citizen Witnessing",
+          "impact": "Reader cannot distinguish between expert-driven escalation concern and socially-mediated fear amplification",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903882+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.765064+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c1d4a447",
+      "name": "Infrastructure & Building Vulnerability",
+      "question": "Why did buildings sustain damage, and does this reveal systemic failures in construction standards or maintenance?",
+      "key_claim": "The fact that older buildings cracked and more than 50 structures were damaged by a sub-6.0 earthquake raises questions about the adequacy of building codes, enforcement, and the resilience of aging housing stock in seismically active Greek regions.",
+      "description": "This framing shifts focus from the natural event to the built environment, asking whether damage was preventable through better construction standards, retrofitting, or enforcement. It draws on the broader Mediterranean pattern of earthquake-exposed aging infrastructure.",
+      "emphasizes": "Structural damage to older buildings, number of affected structures (50+), road network disruption, and the gap between seismic risk and building resilience.",
+      "downplays": "The relatively moderate magnitude of the quakes and the absence of fatalities or injuries.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Over 50 Structures Damaged in Evia Quakes: Are Greek Building Standards Keeping Pace With Seismic Risk?",
+        "Evia Earthquake Exposes Vulnerability of Older Buildings in Greece's Most Seismic Zones"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6a93f23340d3",
+          "name": "Novinite (Sofia News Agency)",
+          "url": "https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea;+Schools+Remain+Closed",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "More than 50 structures have sustained damage due to the ongoing seismic events.",
+          "date": "2026-06-08",
+          "role_evidence": "First to report the aggregate damage figure of 50+ structures, which anchors the infrastructure-vulnerability framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765079+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "aac139064b2a",
+          "name": "VolcanoDiscovery",
+          "url": "https://www.volcanodiscovery.com/earthquake/news/304405/Significant-53-quake-hits-near-Chalkida-Euboea-Central-Greece-Greece.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Caused structural damage, particularly to older buildings in surrounding villages.",
+          "date": "2026-06-07",
+          "role_evidence": "Explicitly identifies older buildings as the locus of damage, seeding the building-vulnerability framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765088+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0123b0d7d5b8",
+          "name": "Greek Earthquake Impact Database (GEID) — Aristotle University / EGU",
+          "url": "https://ui.adsabs.harvard.edu/abs/2025EGUGA..2715535T/abstract",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "Greece is characterized by the highest seismicity in the Mediterranean region, with a record of earthquakes and associated phenomena from antiquity",
+          "date": "2025-04-01",
+          "role_evidence": "Academic database tracking building damage and co-seismic landslides across Greek earthquakes since 1800, providing the scholarly substrate for infrastructure-vulnerability arguments.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765098+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "19eec62027c7",
+          "name": "online.ua (English edition)",
+          "url": "https://news.online.ua/en/greece-shaken-by-several-earthquakes-904759/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "By learning from recent events and improving infrastructure and emergency response strategies, countries like Greece can better prepare",
+          "date": "2026-06-07",
+          "role_evidence": "Explicitly calls for infrastructure improvement, bridging the human-cost and building-vulnerability framings.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765108+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The immediate human suffering caused by structural damage—displacement, homelessness, loss of livelihoods",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader sees infrastructure as abstract problem rather than understanding concrete human consequences of vulnerability",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903910+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "What government and civil protection have actually done or plan to do to address building code enforcement and retrofitting",
+          "found_in_framing": "Government & Civil Protection Response",
+          "impact": "Reader cannot assess whether authorities are treating vulnerability as systemic problem or only responding to acute crisis",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903923+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether this vulnerability pattern is part of a broader regional seismic stress period requiring updated risk models",
+          "found_in_framing": "Regional Seismic Pattern & Cumulative Risk",
+          "impact": "Reader sees vulnerability as local issue rather than symptom of region-wide exposure to heightened seismic activity",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903933+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That tourism reassurance messaging may be downplaying structural damage to maintain economic confidence",
+          "found_in_framing": "Tourism & Economic Reassurance",
+          "impact": "Reader cannot assess whether infrastructure concerns are being suppressed for economic reasons",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903943+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.765117+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b35e8e9a",
+      "name": "Tourism & Economic Reassurance",
+      "question": "Is Greece still safe to visit, and what is the economic impact on the tourism sector?",
+      "key_claim": "Despite the seismic swarm, tourism infrastructure on Euboea and in Athens remains fully operational, and authorities are actively reassuring visitors that travel plans need not be disrupted.",
+      "description": "This framing is driven by tourism industry and government stakeholders who seek to minimize reputational damage to Greece as a travel destination. It emphasizes the absence of injuries, the continuity of services, and official safety guidance for visitors.",
+      "emphasizes": "Operational hotels and restaurants, safety booklets from Visit Greece, no injuries, continued access to archaeological sites, and official reassurances from the Hellenic Ministry of Tourism.",
+      "downplays": "Structural damage, road blockages, school closures, and the ongoing aftershock sequence.",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Athens and Euboea Tourism Updates After Earthquake: Services Remain Operational",
+        "Greece Earthquake: Tourism Officials Urge Caution Rather Than Alarm as Sites Stay Open"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4ffee3a7bbda",
+          "name": "Travel and Tour World",
+          "url": "https://www.travelandtourworld.com/news/article/athens-and-euboea-tourism-updates-after-earthquake/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Tourism officials urge caution rather than alarm and have distributed comprehensive safety booklets through official platforms such as Visit Greece",
+          "date": "2025-09-09",
+          "role_evidence": "Dedicated tourism trade outlet that originated the reassurance framing for the Euboea earthquake context, foregrounding industry continuity over disruption.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765148+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "105d4e44323a",
+          "name": "Hellenic Ministry of Tourism / Visit Greece",
+          "url": "https://www.travelandtourworld.com/news/article/athens-and-euboea-tourism-updates-after-earthquake/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The tourism support network throughout Euboea and Athens is fully equipped to respond to seismic activity and has updated procedures.",
+          "date": "2026-06-07",
+          "role_evidence": "Official Greek tourism body whose safety communications and updated procedures formally institutionalize the reassurance framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765161+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "That 50+ structures are damaged, roads are blocked, and schools remain closed—facts that contradict 'business as usual' narrative",
+          "found_in_framing": "Infrastructure & Building Vulnerability",
+          "impact": "Reader receives false impression of normalcy and may not understand actual disruption to daily life and travel",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903957+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The fear, displacement, and ongoing anxiety of residents who are experiencing repeated tremors",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader sees only visitor experience while ignoring resident experience, creating distorted picture of actual conditions",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903966+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Expert warnings that this may be a foreshock sequence, which would make reassurance premature and potentially irresponsible",
+          "found_in_framing": "Foreshock / Escalation Risk",
+          "impact": "Reader cannot assess whether reassurance is based on sound geological understanding or is economically motivated messaging",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903976+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That this reassurance messaging may be suppressing legitimate safety concerns and creating accountability gap",
+          "found_in_framing": "Government & Civil Protection Response",
+          "impact": "Reader cannot evaluate whether tourism promotion is undermining public safety communication",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.903985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That social media is documenting damage and disruption that contradicts official reassurance, creating credibility crisis",
+          "found_in_framing": "Social Media & Citizen Witnessing",
+          "impact": "Reader unaware that official narrative is being challenged by citizen documentation, limiting ability to assess information reliability",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904040+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.765172+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "87e18175",
+      "name": "Regional Seismic Pattern & Cumulative Risk",
+      "question": "Is this earthquake part of a broader, escalating pattern of seismic activity across the Eastern Mediterranean, and should regional risk assessments be updated?",
+      "key_claim": "The Euboea swarm is not isolated — coming after a 6.1 Aegean quake in May 2026 and a 5.8 near Crete in April — suggesting a period of heightened regional seismic stress that warrants updated risk frameworks.",
+      "description": "This framing zooms out from the local event to situate it within a regional seismic pattern, asking whether the Eastern Mediterranean is entering a more active phase. It draws on cumulative data across multiple recent events to argue for systemic reassessment.",
+      "emphasizes": "Sequence of recent regional earthquakes (Crete, Aegean, Santorini, Euboea), shallow focal depths, and the argument for updated probabilistic risk models.",
+      "downplays": "The statistical independence of individual seismic events and expert consensus that these events are not causally linked.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Evia Quakes Follow String of Eastern Mediterranean Tremors: Is Greece Entering a More Active Seismic Phase?",
+        "From Crete to Euboea: A Season of Earthquakes Raises Questions About Regional Risk"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8854d60c35f9",
+          "name": "Novinite (Sofia News Agency)",
+          "url": "https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea;+Schools+Remain+Closed",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "This series of quakes follows a powerful earthquake measuring 6.1 that struck the Aegean Sea on May 14, adding to concerns about further seismic instability",
+          "date": "2026-06-08",
+          "role_evidence": "Explicitly links the Euboea swarm to the prior May 2026 Aegean 6.1 event, originating the cumulative-regional-risk framing in English-language coverage.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765182+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fed4e0792505",
+          "name": "Travel and Tour World",
+          "url": "https://www.travelandtourworld.com/news/article/athens-and-euboea-tourism-updates-after-earthquake/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A 6.1 magnitude quake rattled Crete in May, its force felt as far away as the Egyptian coast; earlier seismic shocks near Santorini alarmed those nearby.",
+          "date": "2026-06-07",
+          "role_evidence": "Catalogs the sequence of recent Greek seismic events, amplifying the regional-pattern framing even within a tourism-reassurance article.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765191+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "72e42955b1c1",
+          "name": "VolcanoDiscovery",
+          "url": "https://www.volcanodiscovery.com/earthquakes/greece.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Past year: Mag. 5.8 on Friday, Apr 24, 2026 – Eastern Mediterranean",
+          "date": "2026-06-08",
+          "role_evidence": "Continuously updated seismic archive that makes the regional pattern visible to a global audience, providing the data backbone for cumulative-risk interpretations.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765216+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2f5aea75d515",
+          "name": "Korcaboom.com",
+          "url": "https://www.korcaboom.com/post/series-of-strong-earthquakes-shake-central-greece-damage-reported",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The same area was hit by a 4.5-magnitude earthquake in May 2025, while on March 6, 2023, a 5.1-magnitude earthquake was also recorded in the region.",
+          "date": "2026-06-07",
+          "role_evidence": "Provides historical recurrence data for the specific Euboea fault zone, supporting the cumulative-risk framing with local longitudinal context.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765233+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "That individual seismic events are statistically independent and expert consensus does not support causal linkage between them",
+          "found_in_framing": "Foreshock / Escalation Risk",
+          "impact": "Reader may overestimate the probability of escalation and misunderstand how seismic risk actually compounds",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904057+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The immediate human suffering and disruption happening now in Euboea, not just the abstract regional risk pattern",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader sees only long-term pattern while missing acute crisis affecting real people in present moment",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904069+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "What specific institutional actions are being taken to update risk frameworks and building codes in response to pattern",
+          "found_in_framing": "Government & Civil Protection Response",
+          "impact": "Reader understands risk exists but cannot assess whether authorities are actually responding with systemic changes",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904080+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific structural vulnerabilities that make this region particularly exposed to the identified seismic pattern",
+          "found_in_framing": "Infrastructure & Building Vulnerability",
+          "impact": "Reader sees pattern without understanding why this region is particularly at risk, limiting ability to assess severity",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904090+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.765277+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d2c04c1b",
+      "name": "Social Media & Citizen Witnessing",
+      "question": "How is the public experiencing and narrating this event in real time through digital platforms, and how does viral content shape perception?",
+      "key_claim": "Citizen-captured videos shared under hashtags like #seismostwora and crowdsourced shaking reports are becoming a parallel, real-time information layer that both supplements and sometimes distorts official accounts of the earthquake.",
+      "description": "This framing examines the role of social media, citizen seismograph networks, and viral content in shaping public understanding of the event. It is distinct from both the scientific and human-cost framings in focusing on the information ecosystem itself.",
+      "emphasizes": "Viral videos, hashtag activity, citizen seismograph networks (RaspberryShake), crowdsourced felt-reports, and the speed of social media versus official channels.",
+      "downplays": "The potential for misinformation, the limits of citizen data, and the role of professional journalism in verification.",
+      "tone": "populist",
+      "sample_headlines": [
+        "Social Media Fills With Shaking Videos as Evia Earthquake Hits: #seismostwora Trends",
+        "Citizen Seismographs and Viral Clips: How Greeks Are Documenting the Euboea Swarm in Real Time"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0696f5baf7f2",
+          "name": "VolcanoDiscovery / RaspberryShake citizen network",
+          "url": "https://www.volcanodiscovery.com/earthquake/news/304405/Significant-53-quake-hits-near-Chalkida-Euboea-Central-Greece-Greece.html",
+          "carrier_type": "social",
+          "amplifier_role": "originator",
+          "excerpt": "Social media quickly filled with videos capturing the moment of shaking -- including one filmed in Oinofyta, shared under the hashtag #seismostwora.",
+          "date": "2026-06-07",
+          "role_evidence": "Documents the emergence of citizen-witnessing as a parallel information layer, naming the specific hashtag and citizen seismograph network that anchored this framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765294+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "14c6a04c10db",
+          "name": "EMSC (European-Mediterranean Seismological Centre)",
+          "url": "https://m.emsc.eu/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Free and ad-free mobile application informing citizens in case of an earthquake and gathering their testimonies via comments, pictures, and videos.",
+          "date": "2026-06-07",
+          "role_evidence": "Institutionalizes citizen witnessing through its LastQuake app and Telegram bot, formally integrating crowdsourced felt-reports into official seismic monitoring.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765305+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8b371f6beee2",
+          "name": "VolcanoDiscovery (user-generated shaking reports)",
+          "url": "https://www.volcanodiscovery.com/earthquakes/greece/evia.html",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "We analyze user-generated shaking reports to detect many earthquakes in areas with poor instrumental coverage",
+          "date": "2026-06-07",
+          "role_evidence": "Aggregates and legitimizes citizen seismic reports at scale, mass-amplifying the citizen-witnessing framing by integrating it into a widely-read monitoring platform.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:29:57.765314+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Professional seismological assessment of what the data actually shows about foreshock probability and escalation risk",
+          "found_in_framing": "Foreshock / Escalation Risk",
+          "impact": "Reader cannot distinguish between citizen-captured emotion and expert-assessed geological reality",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904101+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Verification of which citizen reports are accurate versus which are exaggerated, misinterpreted, or false",
+          "found_in_framing": "Government & Civil Protection Response",
+          "impact": "Reader cannot assess reliability of crowdsourced information or distinguish signal from noise in viral content",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904111+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The documented structural damage and infrastructure disruption that may be underrepresented in social media's focus on dramatic moments",
+          "found_in_framing": "Infrastructure & Building Vulnerability",
+          "impact": "Reader may see only viral videos of panic rather than systematic assessment of actual damage and vulnerability",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904158+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That social media amplification may be distorting perception of crisis severity and creating panic disproportionate to actual risk",
+          "found_in_framing": "Human Cost & Lived Experience",
+          "impact": "Reader cannot distinguish between authentic lived experience and socially-mediated amplification of fear",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.904179+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "That official tourism reassurance messaging is being contradicted by citizen documentation, creating information conflict",
+          "found_in_framing": "Tourism & Economic Reassurance",
+          "impact": "Reader unaware of tension between official narrative and citizen accounts, limiting ability to assess credibility of either",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:30:20.910837+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:29:57.765322+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: Insurance & Financial Recovery perspectives (claims processing, coverage gaps, economic burden on individuals vs. state). Missing: Scientific/Geological framings focused on tectonic mechanisms, data collection for seismic research, or how these earthquakes advance understanding of Euboea's fault systems. Missing: Environmental/Ecological impacts (landslide effects on ecosystems, water systems, agricultural land). Missing: Diaspora/International Greek community perspectives or how this affects migration/relocation decisions. Missing: Historical memory framings comparing these quakes to past seismic events in Euboea and how collective trauma shapes community response.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T16:30:23.706505+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "Two earthquakes with magnitudes 5.1 and 4.9 struck Euboea, Greece, resulting in building damage and landslides.",
+    "rated_outlets": 0,
+    "distribution": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 0,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": null,
+    "resolve_rate": 0.0,
+    "skew": "no rated coverage",
+    "coverage_gap": {
+      "unrated_news_carriers": 8,
+      "examples": [
+        {
+          "carrier": "Parapolitika (en.parapolitika.gr)",
+          "domain": "en.parapolitika.gr"
+        },
+        {
+          "carrier": "Korcaboom.com",
+          "domain": "korcaboom.com"
+        },
+        {
+          "carrier": "online.ua (English edition)",
+          "domain": "news.online.ua"
+        },
+        {
+          "carrier": "Novinite (Sofia News Agency)",
+          "domain": "novinite.com"
+        },
+        {
+          "carrier": "Greek Reporter",
+          "domain": "greekreporter.com"
+        },
+        {
+          "carrier": "Euronews",
+          "domain": "euronews.com"
+        },
+        {
+          "carrier": "VolcanoDiscovery",
+          "domain": "volcanodiscovery.com"
+        },
+        {
+          "carrier": "Travel and Tour World",
+          "domain": "travelandtourworld.com"
+        }
+      ]
+    },
+    "non_news_carriers": 2,
+    "matched": [],
+    "ecosystem": {
+      "by_type": {
+        "news": 17,
+        "political": 0,
+        "social": 2,
+        "institutional": 3,
+        "academic": 2,
+        "other": 0
+      },
+      "vested_interest": 3,
+      "framings_with_vested": 3,
+      "n_framings": 7
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 7,
+    "n_actors": 12,
+    "framings": [
+      {
+        "framing_id": "c9d7a294",
+        "name": "Human Cost & Lived Experience",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "1cd69ea42dcc",
+            "display": "Parapolitika",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "05d81ce78441",
+            "display": "Korcaboom.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5ae2737df233",
+            "display": "online.ua",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2fd64104",
+        "name": "Government & Civil Protection Response",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0bf8d303f119",
+            "display": "Novinite",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1cd69ea42dcc",
+            "display": "Parapolitika",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "71bf06a2c62c",
+            "display": "Greek Reporter",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "1eee1c47",
+        "name": "Foreshock / Escalation Risk",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0bf8d303f119",
+            "display": "Novinite",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8e3630b0929d",
+            "display": "VolcanoDiscovery",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a8a203efe806",
+            "display": "Euronews",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "605b2d1baff6",
+            "display": "Novinite",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c1d4a447",
+        "name": "Infrastructure & Building Vulnerability",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0bf8d303f119",
+            "display": "Novinite",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8e3630b0929d",
+            "display": "VolcanoDiscovery",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7f10a294d7fa",
+            "display": "Greek Earthquake Impact Database",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5ae2737df233",
+            "display": "online.ua",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b35e8e9a",
+        "name": "Tourism & Economic Reassurance",
+        "n_carriers": 2,
+        "primary": 2,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d3325893014b",
+            "display": "Travel and Tour World",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "986857955f07",
+            "display": "Hellenic Ministry of Tourism",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "87e18175",
+        "name": "Regional Seismic Pattern & Cumulative Risk",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0bf8d303f119",
+            "display": "Novinite",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d3325893014b",
+            "display": "Travel and Tour World",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8e3630b0929d",
+            "display": "VolcanoDiscovery",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "05d81ce78441",
+            "display": "Korcaboom.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d2c04c1b",
+        "name": "Social Media & Citizen Witnessing",
+        "n_carriers": 2,
+        "primary": 2,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "8e3630b0929d",
+            "display": "VolcanoDiscovery",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "90282fb77c6f",
+            "display": "EMSC",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "0bf8d303f119",
+        "display": "Novinite",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Foreshock / Escalation Risk",
+          "Government & Civil Protection Response",
+          "Infrastructure & Building Vulnerability",
+          "Regional Seismic Pattern & Cumulative Risk"
+        ]
+      },
+      {
+        "actor_id": "8e3630b0929d",
+        "display": "VolcanoDiscovery",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Foreshock / Escalation Risk",
+          "Infrastructure & Building Vulnerability",
+          "Regional Seismic Pattern & Cumulative Risk",
+          "Social Media & Citizen Witnessing"
+        ]
+      },
+      {
+        "actor_id": "1cd69ea42dcc",
+        "display": "Parapolitika",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Government & Civil Protection Response",
+          "Human Cost & Lived Experience"
+        ]
+      },
+      {
+        "actor_id": "d3325893014b",
+        "display": "Travel and Tour World",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Regional Seismic Pattern & Cumulative Risk",
+          "Tourism & Economic Reassurance"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Foreshock / Escalation Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Tourism & Economic Reassurance",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Government & Civil Protection Response",
+        "b": "Tourism & Economic Reassurance",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Government & Civil Protection Response",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreshock / Escalation Risk",
+        "b": "Tourism & Economic Reassurance",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Infrastructure & Building Vulnerability",
+        "b": "Tourism & Economic Reassurance",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Tourism & Economic Reassurance",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Infrastructure & Building Vulnerability",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Regional Seismic Pattern & Cumulative Risk",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Government & Civil Protection Response",
+        "b": "Foreshock / Escalation Risk",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Government & Civil Protection Response",
+        "b": "Infrastructure & Building Vulnerability",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Government & Civil Protection Response",
+        "b": "Regional Seismic Pattern & Cumulative Risk",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Human Cost & Lived Experience",
+        "b": "Government & Civil Protection Response",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Foreshock / Escalation Risk",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Infrastructure & Building Vulnerability",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Tourism & Economic Reassurance",
+        "b": "Regional Seismic Pattern & Cumulative Risk",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Regional Seismic Pattern & Cumulative Risk",
+        "b": "Social Media & Citizen Witnessing",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Foreshock / Escalation Risk",
+        "b": "Infrastructure & Building Vulnerability",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Foreshock / Escalation Risk",
+        "b": "Regional Seismic Pattern & Cumulative Risk",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Infrastructure & Building Vulnerability",
+        "b": "Regional Seismic Pattern & Cumulative Risk",
+        "shared": 2,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "academic": 2,
+      "organization": 2
+    },
+    "connectivity": {
+      "bridge_ratio": 0.333,
+      "siloed_share": 0.5,
+      "mean_jaccard": 0.135
+    },
+    "structure_note": "4 of 12 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

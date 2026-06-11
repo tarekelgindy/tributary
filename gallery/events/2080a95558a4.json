@@ -1,0 +1,2225 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "2080a95558a4",
+  "event": "The Rapid Support Forces administration in West Darfur stated that the Sudanese Army destroyed the Ardamata bridge in Geneina using a drone strike.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:05:44.884325+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "09d451f623c3",
+        "statement": "The Ardamata bridge is located in Geneina, West Darfur, Sudan",
+        "verified": true,
+        "source_url": "https://www.openstreetmap.org/",
+        "note": "Geographic fact verifiable against mapping sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752415+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "6a7d0a6fa4f8",
+        "statement": "Geneina is in RSF-administered territory as of mid-2024",
+        "verified": true,
+        "source_url": "https://acleddata.com/",
+        "note": "Territorial control documented by conflict monitoring organizations",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752464+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3ef0dbd1c910",
+        "statement": "The RSF administration in West Darfur made a public statement attributing the bridge destruction to a SAF drone strike",
+        "verified": true,
+        "source_url": "",
+        "note": "Verifiable as a claim made; the attribution itself is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752476+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b1f738baa6e2",
+        "statement": "Sudan is experiencing a humanitarian crisis with millions requiring assistance",
+        "verified": true,
+        "source_url": "https://www.unocha.org/",
+        "note": "UN OCHA and humanitarian agencies document ongoing crisis",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752486+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b5254145ebae",
+        "statement": "The Ardamata bridge connects Geneina to the Chad border region",
+        "verified": true,
+        "source_url": "https://www.openstreetmap.org/",
+        "note": "Geographic/infrastructure fact",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752494+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "2575dbc79eca",
+        "statement": "The Ardamata bridge was destroyed by a drone strike on or around June 9, 2024",
+        "verified": false,
+        "source_url": "",
+        "note": "The destruction itself is not independently verified; only the RSF's attribution claim is documented. No satellite imagery, SAF acknowledgment, or third-party confirmation provided in the framings.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752505+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cf554f643961",
+        "statement": "The bridge is the 'last viable artery' for humanitarian supplies into Geneina before the rainy season",
+        "verified": false,
+        "source_url": "",
+        "note": "Humanitarian assessments of supply route viability are not independently confirmed; depends on current operational status of alternative routes and seasonal conditions",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752513+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "15bc383b0370",
+        "statement": "The bridge has significant military utility for RSF supply chains",
+        "verified": false,
+        "source_url": "",
+        "note": "RSF's use of the bridge for logistics is asserted but not independently documented in the framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752521+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "5f954666b776",
+        "statement": "The SAF conducted synchronized drone operations on June 9 (Ardamata bridge + Omdurman anti-drone engagements)",
+        "verified": false,
+        "source_url": "",
+        "note": "The simultaneity and coordination of these operations is not independently verified",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752530+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9929cd7a1432",
+        "statement": "An RSF PM visited Ardamata 48 hours before the strike",
+        "verified": false,
+        "source_url": "",
+        "note": "Timing claim is not independently verified; only cited as context for the 'propaganda framing' interpretation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:05:32.752538+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the bridge was destroyed by SAF drone strike, RSF self-sabotage, or remains intact (attribution and occurrence itself)",
+      "Whether the strike, if it occurred, was a deliberate attack on civilian infrastructure (IHL violation) or a legitimate military operation targeting RSF supply lines",
+      "Whether the RSF administration's statement is a factual report or an information operation/propaganda claim designed to generate international sympathy",
+      "Whether the primary harm is humanitarian (civilian supply disruption) or political (delegitimization of RSF governance project)",
+      "Whether the bridge destruction fits a pattern of ethnic cleansing/genocide against Masalit and non-Arab communities, or is incidental to military strategy",
+      "Whether the incident represents escalating drone warfare by both sides or asymmetric SAF targeting of civilian infrastructure",
+      "Whether the bridge's destruction primarily threatens West Darfur civilians or represents a spillover crisis affecting Chad and regional stability"
+    ],
+    "summary": "All framings accept that the RSF administration claimed the Ardamata bridge in Geneina was destroyed by a SAF drone strike, that Geneina is RSF-controlled, that the bridge connects to Chad, and that Sudan faces a severe humanitarian crisis. The disagreement is fundamental: whether the strike occurred at all, who is responsible if it did, what its military vs. civilian significance is, and what pattern it represents\u2014ranging from legitimate military targeting to war crimes to information warfare to genocide."
+  },
+  "framings": [
+    {
+      "framing_id": "8746286b",
+      "name": "Humanitarian Catastrophe",
+      "question": "What does the destruction of the Ardamata bridge mean for the survival of civilians in West Darfur?",
+      "key_claim": "Destroying the Ardamata bridge severs the last viable artery for food, fuel, and medical supplies into a city already on the edge of famine \u2014 with no viable alternative before the rainy season.",
+      "description": "This framing centers the bridge's role as the primary lifeline connecting El Geneina to Chad-side supply corridors. It foregrounds imminent famine, medical collapse, and displacement risk if the route is not restored.",
+      "emphasizes": "Civilian dependence on the bridge; rainy season closing alternative routes; 30+ million Sudanese already needing humanitarian assistance; compounding effect on food, fuel, and medical transport",
+      "downplays": "Military rationale or strategic context for the strike; RSF's own role in restricting aid; the source of the attribution claim (RSF administration)",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Sudan war: Drone attacks damage key aid routes",
+        "Humanitarian partners warn there will be no viable alternative routes once seasonal rains intensify"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "42465b64abfd",
+          "name": "UN News / Office of the Spokesperson",
+          "url": "https://news.un.org/en/story/2026/06/1167688",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The bridge links the city of El Geneina to areas near the border with neighbouring Chad. It is a vital route for commercial traffic and humanitarian supplies entering the Darfur region.",
+          "date": "2026-06-10",
+          "role_evidence": "UN Deputy Spokesperson Farhan Haq formally raised the bridge destruction in a New York press briefing, giving the humanitarian framing institutional weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005851+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5cc5779d7da",
+          "name": "AllAfrica / Mirage News (UN wire syndication)",
+          "url": "https://allafrica.com/stories/202606100011.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "This has disrupted the movement of civilians and aid operations as the rainy season begins.",
+          "date": "2026-06-10",
+          "role_evidence": "Syndicated UN press briefing language across multiple outlets, broadening the humanitarian framing's reach",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005891+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e193da9cec6a",
+          "name": "Darfur Victims Advocacy Organization",
+          "url": "https://3ayin.com/en/bulletin37-/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The group held the military fully responsible for the destruction of vital civilian infrastructure that serves as the city's primary artery for food, fuel, and medical transport.",
+          "date": "2026-06-09",
+          "role_evidence": "Issued the first on-record condemnation foregrounding civilian infrastructure impact, anchoring the humanitarian frame",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005904+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0e70e71a41f5",
+          "name": "Darfur Women Action Group (DWAG)",
+          "url": "https://www.darfurwomenaction.org/statements/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "SAF are launching heavy artillery shelling, air strikes, and indiscriminate attacks mainly targeting civilian homes, markets, bridges, essential public services, and evacuation routes.",
+          "date": "2026-06-10",
+          "role_evidence": "Consistently amplifies civilian infrastructure targeting by SAF as part of their Sudan advocacy posture",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005914+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6607bf61766d",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/projects/sudan-conflict/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Both the SAF and RSF are actively restricting aid delivery across Sudan.",
+          "date": "2026-05-01",
+          "role_evidence": "Pre-existing documentation of both parties targeting civilian infrastructure contextualizes the bridge strike within a broader humanitarian framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260515142152/https://www.amnesty.org/en/projects/sudan-conflict/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005925+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.005940+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d89db158",
+      "name": "SAF War Crime / International Humanitarian Law Accountability",
+      "question": "Did the Sudanese Armed Forces commit a violation of international humanitarian law by targeting protected civilian infrastructure?",
+      "key_claim": "The SAF deliberately struck a civilian bridge in a densely populated, RSF-controlled city, constituting an unlawful attack on civilian infrastructure under IHL.",
+      "description": "This framing evaluates the strike through the lens of international humanitarian law \u2014 specifically the prohibition on targeting objects indispensable to civilian survival. It holds the SAF legally and morally responsible regardless of military rationale.",
+      "emphasizes": "Civilian nature of the bridge; SAF as the accountable party; pattern of SAF airstrikes on civilian infrastructure in Darfur; calls for accountability",
+      "downplays": "RSF's own use of civilian infrastructure for military logistics; dual-use nature of the bridge; RSF's role in shaping the information environment around the strike",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Darfur Victims Advocacy Organization condemns army drone targeting of Ardamata Bridge",
+        "SAF airstrike on crowded market a flagrant war crime \u2014 Amnesty International"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f84c1f518055",
+          "name": "Darfur Victims Advocacy Organization",
+          "url": "https://3ayin.com/en/bulletin37-/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "An army drone targeted the Ardamata Bridge in the Al-Naseem neighbourhood of Al-Junaynah city in West Darfur State.",
+          "date": "2026-06-09",
+          "role_evidence": "First entity on record to formally attribute the strike to the army and frame it as an attack on protected civilian infrastructure",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005958+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d8cf9e12913f",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/projects/sudan-conflict/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Amnesty International experts verified multiple instances of ethnically motivated attacks against ethnic Masalit people in West Darfur.",
+          "date": "2026-06-10",
+          "role_evidence": "Has repeatedly branded SAF airstrikes in Darfur as war crimes, providing an established IHL accountability framework into which this strike fits",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260515142152/https://www.amnesty.org/en/projects/sudan-conflict/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005968+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6f82db17fbb8",
+          "name": "EU Agency for Asylum (EUAA) / OHCHR",
+          "url": "https://www.euaa.europa.eu/coi/sudan/2025/security-situation/22-darfur/222-conflict-dynamics-and-tactics",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The SAF carried out indiscriminate airstrikes in Darfur, including in El Geneina in West Darfur, resulting in civilian casualties and displacement.",
+          "date": "2025-01-01",
+          "role_evidence": "EUAA COI report systematically documents SAF civilian infrastructure strikes in Darfur, providing an authoritative evidentiary baseline for IHL accountability claims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fc325f839f12",
+          "name": "Sudan Tribune",
+          "url": "https://sudantribune.com/article/308684",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The administration described the incident as a 'direct attack on a vital service facility relied upon by thousands of civilians.'",
+          "date": "2025-12-27",
+          "role_evidence": "Consistently relays RSF civil administration statements framing SAF strikes as civilian-targeting, amplifying the IHL accountability narrative",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260519064154/https://sudantribune.com/article/308684",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005986+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "64b9e9f579bf",
+          "name": "UN Human Rights Council Fact-Finding Mission (FFM)",
+          "url": "https://www.darfurwomenaction.org/statements/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The FFM has documented and reported on widespread violations by both the RSF and the SAF, including indiscriminate shelling of civilians.",
+          "date": "2026-06-10",
+          "role_evidence": "DWAG advocates specifically for FFM renewal to preserve evidence of SAF and RSF violations, institutionalizing the IHL accountability framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.005995+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006009+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "5f013fce",
+      "name": "SAF Military Strategy / Legitimate Military Operation",
+      "question": "Was the bridge strike a rational military operation to degrade RSF logistics and control of RSF-held territory?",
+      "key_claim": "The SAF targeted the Ardamata bridge as part of a deliberate aerial campaign to sever RSF supply chains and undermine paramilitary control over West Darfur's infrastructure.",
+      "description": "This framing situates the strike within the SAF's documented strategy of using air power to cut RSF logistics networks in Darfur, including fuel routes, military convoys, and supply infrastructure. It treats the bridge as dual-use infrastructure within an active conflict zone.",
+      "emphasizes": "SAF's stated military objectives; RSF's use of infrastructure for military logistics; the bridge's proximity to active RSF-controlled territory; precedent of SAF targeting RSF supply corridors",
+      "downplays": "Civilian casualty and humanitarian access consequences; international legal prohibitions on attacks on civilian objects; RSF's framing as the victim",
+      "tone": "measured",
+      "sample_headlines": [
+        "Sudanese army drone strike kills senior RSF commander in West Darfur",
+        "The army maintains it is targeting military equipment, including advanced air defence systems and drones, as well as cross-border fuel trucks"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fda4da81bcbd",
+          "name": "Sudan Tribune",
+          "url": "https://sudantribune.com/article/311726",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The army's aerial operations aim to destroy RSF military hardware, including air defence systems and drones, while also targeting fuel markets and cross-border supply chains.",
+          "date": "2026-03-13",
+          "role_evidence": "Regularly carries SAF military source statements foregrounding the strategic logic of targeting RSF-linked infrastructure in West Darfur",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006020+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "df80c2b3089d",
+          "name": "SAF Military Sources (via Sudan Tribune / Reuters)",
+          "url": "https://sudantribune.com/article/311687",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "A military source told Reuters that armed forces drones targeted groups involved in the transport of fuel from Chad into Sudanese territory.",
+          "date": "2026-03-12",
+          "role_evidence": "The SAF is the originator of the military-rationale framing, consistently asserting that strikes target RSF military logistics, not civilians",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260326052059/https://sudantribune.com/article/311687",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006029+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "00bd2c01aaf6",
+          "name": "Geopolitical Monitor",
+          "url": "https://www.geopoliticalmonitor.com/drone-warfare-over-sudan-the-siege-from-the-air/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Both sides turned to drone warfare for an edge.",
+          "date": "2025-10-14",
+          "role_evidence": "Contextualizes the SAF's drone strategy as a symmetric counter to RSF aerial capabilities, implicitly normalizing the military rationale framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006038+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f669563c05f6",
+          "name": "Al Jazeera Visual Investigations (Drone Warfare in Sudan)",
+          "url": "https://www.aljazeera.com/news/longform/2026/2/3/drone-warfare-in-sudan-tracking-1000-aerial-attacks-since-april-2023",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Drones have killed scores of civilians, crippled infrastructure and plunged Sudanese cities into darkness.",
+          "date": "2026-02-03",
+          "role_evidence": "Maps the structural symmetry of drone use by both sides, lending credibility to the SAF's claim that drone infrastructure strikes are part of documented war strategy by both belligerents",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006047+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006057+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "194c42ce",
+      "name": "RSF Information Operation / Propaganda Framing",
+      "question": "Is the RSF civil administration's attribution of the bridge strike to the SAF credible, or is this a strategic use of the event for narrative warfare?",
+      "key_claim": "The RSF's parallel civilian administration is instrumentalizing the bridge strike to delegitimize the SAF, generate international sympathy, and bolster the RSF's self-presentation as a governance actor protecting civilians.",
+      "description": "This framing scrutinizes the evidentiary basis and political timing of the RSF claim, noting that the attribution comes exclusively from the RSF-affiliated civil administration \u2014 a body with a direct interest in portraying the SAF as a war criminal actor. It links the strike to the RSF's parallel state-building project.",
+      "emphasizes": "RSF's information environment; the sole source of the attribution claim; the political timing (48 hours after RSF PM visit to Ardamata); RSF governance legitimacy project; prior RSF propaganda patterns",
+      "downplays": "The plausibility of the SAF attribution; civilian suffering caused by the bridge destruction; the documented pattern of SAF airstrikes in the area",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "RSF-aligned 'Founding Government' PM visits Ardamata \u2014 bridge struck 48 hours later",
+        "RSF civil administration condemns bridge strike, holds army 'fully responsible'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "09cbad212da4",
+          "name": "Ayin Network",
+          "url": "https://3ayin.com/en/bulletin37-/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "The timing of the strike was notable, occurring just 48 hours after Prime Minister Mohamed Hassan al-Ta'aishi of the parallel 'Founding' government visited the Ardamata zone.",
+          "date": "2026-06-09",
+          "role_evidence": "First to explicitly flag the political timing of the RSF civil administration's statement in relation to the PM's visit, introducing the information-operations lens",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006068+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "aef77ac40dde",
+          "name": "Wikipedia / Sudan Civil War Timeline (2026)",
+          "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Sudanese_civil_war_(2026)",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "The RSF claimed to have shot down an SAF Bayraktar drone over the city.",
+          "date": "2026-06-01",
+          "role_evidence": "Regularly documents competing RSF and SAF claims without verification, implicitly contextualizing both as competing narratives requiring scrutiny",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006077+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3df16067990f",
+          "name": "Grokipedia / Ardamata Massacre Analysis",
+          "url": "https://grokipedia.com/page/Ardamata_massacre",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "RSF-aligned statements frame the operations as defensive countermeasures against Masalit elements integrated into Sudanese Armed Forces (SAF) structures.",
+          "date": "2026-01-17",
+          "role_evidence": "Documents the RSF's consistent pattern of reframing its own actions and attributing adversary actions through its civil administration \u2014 providing context for evaluating current attribution claims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006089+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1e298a3a9d22",
+          "name": "Peoples Dispatch",
+          "url": "https://peoplesdispatch.org/2026/03/23/sudan-war-spillover-kills-17-more-civilians-in-chad/",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "Both parties to the civil war in Sudan \u2013 the SAF and the RSF \u2013 have blamed each other for this strike.",
+          "date": "2026-03-26",
+          "role_evidence": "Notes competing attributions in earlier Geneina-area strikes, establishing a pattern of mutual blame that complicates exclusive RSF attributions",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260517062153/https://peoplesdispatch.org/2026/03/23/sudan-war-spillover-kills-17-more-civilians-in-chad/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006099+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006113+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "6db090a5",
+      "name": "RSF Parallel State / Governance Legitimacy",
+      "question": "Does the Ardamata bridge strike signal the SAF's attempt to destroy the material foundations of the RSF's rival governance project in Darfur?",
+      "key_claim": "By striking civilian infrastructure in RSF-administered West Darfur, the SAF is targeting not just military assets but the very infrastructure that gives the RSF's parallel 'Founding Government' credibility as a functioning state.",
+      "description": "This framing zooms out from the single strike to ask about the broader contest over governance legitimacy. It frames the bridge \u2014 and the RSF's school exams and civilian administration \u2014 as symbols of rival statehood, and the strike as an attack on that rival state's infrastructure rather than purely a military act.",
+      "emphasizes": "RSF's parallel government project; the political symbolism of civilian infrastructure; the connection between the PM's Ardamata visit and the strike timing; the RSF's attempt to govern territories it controls",
+      "downplays": "The RSF's own atrocities and illegitimacy in Darfur; civilian suffering; the military logic of the strike",
+      "tone": "measured",
+      "sample_headlines": [
+        "RSF's 'Founding Government' PM rings school exam bell in Ardamata \u2014 army drone strikes bridge 48 hours later",
+        "10,000 students sit exams under RSF-aligned government in Darfur for first time in three years"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "3d1f454455fb",
+          "name": "Ayin Network",
+          "url": "https://3ayin.com/en/bulletin37-/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Organised by the RSF-aligned 'Ta'sis' (Founding) coalition government, the event marks the first time in over three years that these exams have taken place in these regions, establishing a completely severed educational system from the army-controlled central government.",
+          "date": "2026-06-09",
+          "role_evidence": "Explicitly contextualizes the bridge strike within the RSF governance narrative and the rival exam system, originating the parallel-state framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006124+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5dfc1c27fba",
+          "name": "MadaMasr (Sudan Nashra bulletin)",
+          "url": "https://www.madamasr.com/en/2026/01/08/news/u/sudan-nashra-rising-civilian-toll-infrastructure-damage-as-rsf-military-trade-drone-strikes-military-reinforces-eastern-border-braces-for-rsf-splm-n-assault-from-ethiopia-major-ground-assaults/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Rising civilian toll, infrastructure damage as RSF, military trade drone strikes",
+          "date": "2026-01-08",
+          "role_evidence": "Egypt-based independent outlet tracking the dual-governance contest in Sudan, contextualizing infrastructure strikes within the rival state legitimacy competition",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260206200624/https://www.madamasr.com/en/2026/01/08/news/u/sudan-nashra-rising-civilian-toll-infrastructure-damage-as-rsf-military-trade-drone-strikes-military-reinforces-eastern-border-braces-for-rsf-splm-n-assault-from-ethiopia-major-ground-assaults/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006132+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a54127e818fd",
+          "name": "Council on Foreign Relations (Global Conflict Tracker)",
+          "url": "https://www.cfr.org/global-conflict-tracker/conflict/power-struggle-sudan",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "As the civil war enters its fourth year, Sudan's two warring factions remain locked in a deadly power struggle.",
+          "date": "2026-05-08",
+          "role_evidence": "CFR's framing of the war as a 'power struggle' between two governance structures contextualizes the bridge strike as part of the contest for territorial administration",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006142+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006155+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e3852280",
+      "name": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+      "question": "What does the bridge strike reveal about how drone warfare is reshaping the Sudan civil war, and what are the strategic and humanitarian implications?",
+      "key_claim": "The synchronized June 9 drone operations \u2014 Ardamata bridge strike plus Omdurman anti-drone engagements \u2014 mark a new phase in which both sides are using drones to target infrastructure, severing cities and compounding humanitarian collapse.",
+      "description": "This framing places the bridge strike in the context of the wider drone war, examining how both the SAF and RSF have escalated infrastructure strikes using UAVs. It asks structural questions about the arms race, drone sourcing, and the compounding effects of airpower-led warfare.",
+      "emphasizes": "The escalating role of drones by both SAF and RSF; synchronized nature of June 9 operations; dual-use and infrastructure targeting; arms supply chains (UAE/China/Turkey); lack of strategic discrimination",
+      "downplays": "Specific legal accountability for the bridge strike; ethnic and political dimensions of Darfur violence; humanitarian consequences beyond infrastructure",
+      "tone": "measured",
+      "sample_headlines": [
+        "The drones being used in Sudan: 1,000 attacks since April 2023",
+        "Sudan's warring factions unleashed a synchronised wave of drone operations on Tuesday morning, striking critical infrastructure in West Darfur"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "45484252a226",
+          "name": "Al Jazeera (Visual Investigations / Sanad unit)",
+          "url": "https://www.aljazeera.com/news/longform/2026/2/3/drone-warfare-in-sudan-tracking-1000-aerial-attacks-since-april-2023",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Modular, well-adapted to sanctions evasions and devastatingly effective, drones have killed scores of civilians, crippled infrastructure and plunged Sudanese cities into darkness.",
+          "date": "2026-02-03",
+          "role_evidence": "Produced the most comprehensive public investigation into drone warfare in Sudan, establishing the dominant analytical vocabulary for this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006167+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bb2f4569f03e",
+          "name": "Ayin Network",
+          "url": "https://3ayin.com/en/bulletin37-/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Sudan's warring factions unleashed a synchronised wave of drone operations on Tuesday morning, June 9, striking critical infrastructure in West Darfur.",
+          "date": "2026-06-09",
+          "role_evidence": "First to report the synchronized June 9 drone operations across multiple fronts, originating the escalation/synchronization frame for this specific event",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006176+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c2bc2d7fbd90",
+          "name": "Geopolitical Monitor",
+          "url": "https://www.geopoliticalmonitor.com/drone-warfare-over-sudan-the-siege-from-the-air/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Drones have become central to the RSF's campaign and to the Sudanese Armed Forces' counterattacks.",
+          "date": "2025-10-14",
+          "role_evidence": "Established the 'siege from the air' analytical frame for drone infrastructure warfare in Sudan months before the bridge strike",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260217163756/https://www.geopoliticalmonitor.com/drone-warfare-over-sudan-the-siege-from-the-air/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006185+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0c043145f63d",
+          "name": "Wikipedia Timeline of the Sudanese Civil War (2026)",
+          "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Sudanese_civil_war_(2026)",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "The RSF has established domestic drone assembly and launch platforms inside the country to bypass international shipping blockades.",
+          "date": "2026-06-01",
+          "role_evidence": "Catalogues the ongoing escalation of drone strikes by both sides, reinforcing the technological escalation framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006193+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006205+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "0b189d9b",
+      "name": "Regional Spillover / Chad-Sudan Border Crisis",
+      "question": "Does the bridge destruction \u2014 on a route linking Geneina directly to Chad \u2014 signal further destabilization of the Chad-Sudan border and humanitarian corridor?",
+      "key_claim": "The destruction of the Ardamata bridge, the primary link between El Geneina and the Chad border, risks severing the last functioning humanitarian corridor into West Darfur and deepening Sudan's spillover crisis into Chad.",
+      "description": "This framing is geopolitical, focusing on what the bridge's destruction means for cross-border flows \u2014 aid, refugees, fuel \u2014 and for the diplomatic and security situation in Chad. It connects the event to a pattern of SAF strikes near the Adre/Adukong border crossings and Chad's responses.",
+      "emphasizes": "The bridge's role on the Chad-Sudan humanitarian corridor; the rainy season closing alternatives; Chad's 1 million Sudanese refugees; prior cross-border drone incidents and Chad's responses; UN Security Council concern",
+      "downplays": "Internal Sudanese military rationale; ethnic dimensions of the conflict; RSF governance claims",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Sudan war spillover kills 17 more civilians in Chad",
+        "With the conflict in Sudan in its fourth year, its direct impact on Chad cannot be overemphasized \u2014 UN ASG Martha Pobee to Security Council"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "826f37ecb1a7",
+          "name": "UN News / Martha Pobee (ASG for Africa) via Security Council briefing",
+          "url": "https://news.un.org/en/story/2026/06/1167688",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'With the conflict in Sudan in its fourth year, its direct impact on Chad cannot be overemphasized,' Martha Pobee, Assistant Secretary-General for Africa, told ambassadors on Tuesday.",
+          "date": "2026-06-10",
+          "role_evidence": "Elevated the Chad spillover framing to the UN Security Council simultaneously with the bridge strike, giving it formal institutional weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006218+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a72f33723b43",
+          "name": "Peoples Dispatch",
+          "url": "https://peoplesdispatch.org/2026/03/23/sudan-war-spillover-kills-17-more-civilians-in-chad/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Chad \u2013 which hosts a million Sudanese refugees, mainly fleeing the RSF from Darfur \u2013 shut the borders.",
+          "date": "2026-03-26",
+          "role_evidence": "Documented the pattern of border-area SAF drone strikes and Chad's geopolitical responses, establishing the spillover framing before the bridge event",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260517062153/https://peoplesdispatch.org/2026/03/23/sudan-war-spillover-kills-17-more-civilians-in-chad/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006228+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8aa4a976767a",
+          "name": "Sudan Tribune",
+          "url": "https://sudantribune.com/article/312837",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The crossing, which international organizations use to deliver humanitarian aid to Darfur, has faced repeated drone strikes.",
+          "date": "2026-04-16",
+          "role_evidence": "Systematically covers SAF drone strikes on the Adukong/Adre corridor, building the evidentiary base for the regional spillover framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260426080513/https://sudantribune.com/article/312837",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006237+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006251+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2853f58a",
+      "name": "Ethnic Cleansing / Genocide Continuity",
+      "question": "Does the SAF strike on Ardamata \u2014 a locality associated with the 2023 Masalit massacre \u2014 represent another chapter in the deliberate targeting of non-Arab communities in West Darfur?",
+      "key_claim": "The SAF strike on the Ardamata bridge occurs in a neighborhood symbolically and historically linked to the mass killing of Masalit civilians in 2023, and must be understood within a broader pattern of destroying infrastructure sustaining civilian life in non-Arab communities.",
+      "description": "This framing connects the current strike to the documented history of ethnic violence in Ardamata \u2014 most prominently the November 2023 RSF massacre of 800\u20132,000 Masalit \u2014 and asks whether ongoing infrastructure destruction constitutes a continuation of the elimination campaign, now carried out by the SAF through aerial means.",
+      "emphasizes": "Ardamata's history as a site of genocide; the Masalit community's continued vulnerability; the dual character of the SAF and RSF as both perpetrators of harm to non-Arab civilians; structural elimination of civilian life-support systems",
+      "downplays": "The RSF's own role in the Ardamata massacre and ongoing ethnic violence; the bridge's military dual-use value; SAF's stated military justification",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "On 8 November 2023, the RSF and Janjaweed massacred between 800 and 2,000 in Ardamata, Geneina \u2014 now the same neighborhood's bridge is bombed by the SAF",
+        "The cycle of violence in Sudan may amount to war crimes, crimes against humanity, and genocide \u2014 Darfur Women Action Group"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "e00050bc87d3",
+          "name": "Darfur Women Action Group (DWAG)",
+          "url": "https://www.darfurwomenaction.org/statements/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The cycle of violence in Sudan exhibits a total disregard for international law, and may amount to war crimes, crimes against humanity, and genocide.",
+          "date": "2026-06-10",
+          "role_evidence": "Explicitly frames both RSF and SAF attacks in Darfur as potential genocide, contextualizing the bridge strike within a continuous elimination campaign against civilians",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006261+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d8cf9e12913f",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/projects/sudan-conflict/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Amnesty International experts verified multiple instances of ethnically motivated attacks against ethnic Masalit people in West Darfur in towns like Ardamata, El Geneina, Misterei and Tandelti.",
+          "date": "2026-06-01",
+          "role_evidence": "Has institutionally linked Ardamata to ethnically motivated violence, giving this framing authoritative NGO backing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260515142152/https://www.amnesty.org/en/projects/sudan-conflict/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006270+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "93dca899e09b",
+          "name": "Council on Foreign Relations (Global Conflict Tracker)",
+          "url": "https://www.cfr.org/global-conflict-tracker/conflict/power-struggle-sudan",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "In early November, RSF forces and allied militias killed more than 800 people in a multi-day rampage in Ardamata.",
+          "date": "2026-05-08",
+          "role_evidence": "CFR's conflict tracker establishes Ardamata's salience as a site of ethnic violence, giving the genocide-continuity framing mainstream institutional grounding",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006279+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fc41db734e06",
+          "name": "Human Rights Watch",
+          "url": "https://grokipedia.com/page/Ardamata_massacre",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Human Rights Watch documented hundreds of civilian deaths in early November 2023, following RSF seizure of a local military base.",
+          "date": "2023-11-01",
+          "role_evidence": "HRW's documentation of the original Ardamata massacre created the foundational evidence base for the genocide-continuity framing that subsequent actors apply to new strikes in the same locality",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006288+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2ea308caf8d7",
+          "name": "U.S. Government (State Department genocide designation)",
+          "url": "https://grokipedia.com/page/Ardamata_massacre",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "In January 2025, the United States formally accused the RSF of genocide in Darfur, citing Ardamata as evidence of intent to destroy Masalit communities.",
+          "date": "2025-01-01",
+          "role_evidence": "The U.S. genocide designation explicitly cited Ardamata, making the locality a formal reference point for international genocide accountability claims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:22.006297+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:05:22.006312+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: civilian infrastructure resilience and reconstruction perspectives (how communities rebuild, alternative routes, economic adaptation); local Geneina residents' direct accounts and priorities (distinct from RSF/SAF institutional narratives); technical/forensic analysis framing (independent verification of drone strike claims, bridge damage assessment); Sudanese diaspora or international mediation actor perspectives on ceasefire/negotiation pathways; and economic/trade corridor impacts beyond humanitarian framing (how bridge destruction affects regional commerce, livelihoods, supply chains). Also absent: perspectives from other armed groups or militias operating in West Darfur, and Chadian government/border community responses to the incident.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The Rapid Support Forces administration in West Darfur stated that the Sudanese Army destroyed the Ardamata bridge in Geneina using a drone strike.",
+    "rated_outlets": 1,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 100,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": -1.0,
+    "resolve_rate": 0.17,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 5,
+      "examples": [
+        {
+          "carrier": "AllAfrica / Mirage News (UN wire syndication)",
+          "domain": "allafrica.com"
+        },
+        {
+          "carrier": "Sudan Tribune",
+          "domain": "sudantribune.com"
+        },
+        {
+          "carrier": "Geopolitical Monitor",
+          "domain": "geopoliticalmonitor.com"
+        },
+        {
+          "carrier": "Peoples Dispatch",
+          "domain": "peoplesdispatch.org"
+        },
+        {
+          "carrier": "MadaMasr (Sudan Nashra bulletin)",
+          "domain": "madamasr.com"
+        }
+      ]
+    },
+    "non_news_carriers": 8,
+    "matched": [
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera Visual Investigations (Drone Warfare in Sudan)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 14,
+        "political": 0,
+        "social": 0,
+        "institutional": 16,
+        "academic": 0,
+        "other": 3
+      },
+      "vested_interest": 16,
+      "framings_with_vested": 6,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 19,
+    "framings": [
+      {
+        "framing_id": "8746286b",
+        "name": "Humanitarian Catastrophe",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8b71f39d0335",
+            "display": "Darfur Victims Advocacy Organization",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "107227acd612",
+            "display": "Darfur Women Action Group",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0508638eed57",
+            "display": "UN News",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "04d0e66e9d3a",
+            "display": "AllAfrica",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d89db158",
+        "name": "SAF War Crime / International Humanitarian Law Accountability",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8b71f39d0335",
+            "display": "Darfur Victims Advocacy Organization",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0029f47195dc",
+            "display": "Sudan Tribune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "aaa55bc15f8d",
+            "display": "EU Agency for Asylum",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "057ebbf1c50d",
+            "display": "UN Human Rights Council Fact-Finding Mission",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "5f013fce",
+        "name": "SAF Military Strategy / Legitimate Military Operation",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0029f47195dc",
+            "display": "Sudan Tribune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ae2669073a5f",
+            "display": "SAF Military Sources",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9319738fda1e",
+            "display": "Geopolitical Monitor",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "194c42ce",
+        "name": "RSF Information Operation / Propaganda Framing",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d540aef49a29",
+            "display": "Ayin Network",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "00f9af20ab6d",
+            "display": "Grokipedia",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2e7aefff1d09",
+            "display": "Peoples Dispatch",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "6db090a5",
+        "name": "RSF Parallel State / Governance Legitimacy",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d540aef49a29",
+            "display": "Ayin Network",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f9bf00afcf16",
+            "display": "MadaMasr",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e3852280",
+        "name": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d540aef49a29",
+            "display": "Ayin Network",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9319738fda1e",
+            "display": "Geopolitical Monitor",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "0b189d9b",
+        "name": "Regional Spillover / Chad-Sudan Border Crisis",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0029f47195dc",
+            "display": "Sudan Tribune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0508638eed57",
+            "display": "UN News",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2e7aefff1d09",
+            "display": "Peoples Dispatch",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2853f58a",
+        "name": "Ethnic Cleansing / Genocide Continuity",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "107227acd612",
+            "display": "Darfur Women Action Group",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9b38021f1212",
+            "display": "Human Rights Watch",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ea688dc66cc1",
+            "display": "U.S. Government",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "81c88e339a69",
+        "display": "Amnesty International",
+        "actor_type": "person",
+        "n_framings": 3,
+        "framings": [
+          "Ethnic Cleansing / Genocide Continuity",
+          "Humanitarian Catastrophe",
+          "SAF War Crime / International Humanitarian Law Accountability"
+        ]
+      },
+      {
+        "actor_id": "0029f47195dc",
+        "display": "Sudan Tribune",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Regional Spillover / Chad-Sudan Border Crisis",
+          "SAF Military Strategy / Legitimate Military Operation",
+          "SAF War Crime / International Humanitarian Law Accountability"
+        ]
+      },
+      {
+        "actor_id": "d540aef49a29",
+        "display": "Ayin Network",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Drone Warfare Escalation / Technological Transformation of the Conflict",
+          "RSF Information Operation / Propaganda Framing",
+          "RSF Parallel State / Governance Legitimacy"
+        ]
+      },
+      {
+        "actor_id": "0508638eed57",
+        "display": "UN News",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Humanitarian Catastrophe",
+          "Regional Spillover / Chad-Sudan Border Crisis"
+        ]
+      },
+      {
+        "actor_id": "8b71f39d0335",
+        "display": "Darfur Victims Advocacy Organization",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "Humanitarian Catastrophe",
+          "SAF War Crime / International Humanitarian Law Accountability"
+        ]
+      },
+      {
+        "actor_id": "107227acd612",
+        "display": "Darfur Women Action Group",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Ethnic Cleansing / Genocide Continuity",
+          "Humanitarian Catastrophe"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Drone Warfare Escalation / Technological Transformation of the Conflict",
+          "SAF Military Strategy / Legitimate Military Operation"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "2e7aefff1d09",
+        "display": "Peoples Dispatch",
+        "actor_type": "news",
+        "champions": [
+          "Regional Spillover / Chad-Sudan Border Crisis"
+        ],
+        "opposes": [
+          "RSF Information Operation / Propaganda Framing"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "SAF Military Strategy / Legitimate Military Operation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "RSF Information Operation / Propaganda Framing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "RSF Parallel State / Governance Legitimacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "RSF Information Operation / Propaganda Framing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "RSF Parallel State / Governance Legitimacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF Military Strategy / Legitimate Military Operation",
+        "b": "RSF Information Operation / Propaganda Framing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF Military Strategy / Legitimate Military Operation",
+        "b": "RSF Parallel State / Governance Legitimacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF Military Strategy / Legitimate Military Operation",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "RSF Information Operation / Propaganda Framing",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "RSF Parallel State / Governance Legitimacy",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Regional Spillover / Chad-Sudan Border Crisis",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "SAF Military Strategy / Legitimate Military Operation",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "SAF War Crime / International Humanitarian Law Accountability",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "RSF Parallel State / Governance Legitimacy",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "SAF Military Strategy / Legitimate Military Operation",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "RSF Information Operation / Propaganda Framing",
+        "b": "RSF Parallel State / Governance Legitimacy",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "RSF Information Operation / Propaganda Framing",
+        "b": "Regional Spillover / Chad-Sudan Border Crisis",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "RSF Parallel State / Governance Legitimacy",
+        "b": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "SAF War Crime / International Humanitarian Law Accountability",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Humanitarian Catastrophe",
+        "b": "Ethnic Cleansing / Genocide Continuity",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "SAF Military Strategy / Legitimate Military Operation",
+        "b": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "RSF Information Operation / Propaganda Framing",
+        "b": "Drone Warfare Escalation / Technological Transformation of the Conflict",
+        "shared": 2,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "person": 4,
+      "organization": 6,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.368,
+      "siloed_share": 0.421,
+      "mean_jaccard": 0.089
+    },
+    "structure_note": "7 of 19 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:05:44.884277+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

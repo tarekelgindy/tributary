@@ -1,0 +1,2835 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "34820d956cd0",
+  "event": "Three people were injured in a stabbing incident at a school in Blackley, Manchester, England, and a 14-year-old student was arrested.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:07:27.692429+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "e36679a4bbac",
+        "statement": "Three people were injured in a stabbing incident at Co-op Academy in Blackley, Manchester, England.",
+        "verified": true,
+        "source_url": "https://www.bbc.co.uk/news/",
+        "note": "Standard news reporting of the incident; specific school name and location are primary-record facts.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099132+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f772e1a4e5be",
+        "statement": "A 14-year-old student was arrested in connection with the incident.",
+        "verified": true,
+        "source_url": "https://www.gmp.police.uk/",
+        "note": "Age and arrest status are verifiable against police statements and court records.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099177+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "80f68ce6a635",
+        "statement": "The incident occurred at a school campus in Blackley, Manchester.",
+        "verified": true,
+        "source_url": "https://www.manchester.gov.uk/",
+        "note": "Location is a concrete, verifiable fact.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099184+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "c93a9064c649",
+        "statement": "Staff members physically restrained the armed student and/or held a door shut to prevent further harm.",
+        "verified": false,
+        "source_url": "",
+        "note": "Widely reported in media and school trust statements, but relies on eyewitness accounts and official statements rather than independent verification; no video or forensic confirmation in public domain.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099190+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2e3ef2193113",
+        "statement": "The school had 'no reason to search' the student prior to the incident.",
+        "verified": false,
+        "source_url": "",
+        "note": "Attributed to school's own statement, but the exact wording, context, and whether this reflects actual policy or post-hoc explanation is not independently verified.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099193+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cf4c44092c2c",
+        "statement": "A lockdown was implemented and was effective in containing the incident.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported by school and police, but the precise timeline, scope, and causal role in preventing further harm are not independently documented.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099197+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "34a78e0cc4df",
+        "statement": "The 14-year-old suspect was charged under Section 18 assault (GBH with intent).",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported in media but charging decisions are typically not released in detail for juveniles; exact charge may be subject to legal reporting restrictions.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099201+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "46b0f8998780",
+        "statement": "Police concluded there was 'no wider threat' to the community.",
+        "verified": false,
+        "source_url": "https://www.gmp.police.uk/",
+        "note": "Police statement, but the basis for this conclusion and whether it was premature are contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099206+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "20fd4ab1e989",
+        "statement": "There were prior incidents of violence or weapons at the same school campus.",
+        "verified": false,
+        "source_url": "",
+        "note": "Alluded to in some framings but not independently verified in public reporting; school safety records are not always publicly disclosed.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:07:11.099210+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether this incident is part of a systemic 'epidemic' of youth knife crime or an isolated tragedy; framings differ on frequency, trend data, and causation.",
+      "Whether the school's security and screening protocols were adequate or represent a critical failure; disagreement on what 'no reason to search' means and whether DfE guidance is sufficient.",
+      "Whether the 14-year-old suspect should be prosecuted under adult assault law (Section 18) or treated primarily as a safeguarding/welfare case; disagreement on juvenile justice philosophy.",
+      "Whether the incident demonstrates institutional competence (swift response, effective lockdown) or institutional failure (communication gaps, prevention gaps); framings emphasize different aspects of the same response.",
+      "Whether the root cause is individual pathology, unmet mental health/safeguarding needs, or broader social/policy failures; disagreement on prevention vs. punishment.",
+      "Whether the incident reflects government policy failure (Conservative critique of Labour sentencing; Labour defence of systemic approach) or is being exploited for partisan gain; disagreement on who bears responsibility.",
+      "Whether the focus should be on the human cost and trauma or on systemic lessons and policy reform; framings prioritize different moral and analytical frames."
+    ],
+    "summary": "All framings accept that three people were injured in a stabbing at Co-op Academy Blackley by a 14-year-old student who was arrested, and that staff intervention and rapid response occurred. The disagreements are entirely about causation (epidemic vs. isolated incident), responsibility (school security, government policy, individual pathology, or systemic safeguarding failure), appropriate response (punishment vs. rehabilitation vs. prevention), and political attribution\u2014not about the concrete facts of what happened."
+  },
+  "framings": [
+    {
+      "framing_id": "626bfe05",
+      "name": "Knife Crime Epidemic",
+      "question": "Is this incident evidence of a worsening, systemic knife crime crisis in the UK \u2014 and is government doing enough to stop it?",
+      "key_claim": "The Blackley stabbing is yet another symptom of an unchecked youth knife crime epidemic that demands urgent, stronger government action.",
+      "description": "This framing situates the incident within a broader, ongoing pattern of youth knife crime across England. It treats the event not as isolated but as a data point in a well-documented trend, demanding policy escalation.",
+      "emphasizes": "The frequency of youth stabbings, prior incidents at the same school, the government's stated targets (halving knife crime in a decade), and the gap between political rhetoric and street reality.",
+      "downplays": "The individual circumstances of the 14-year-old suspect, the school's specific handling, and the fact that injuries were non-life-threatening.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Manchester school stabbing: Teen girl arrested after teacher and students injured",
+        "The government needs to do more to stop knife crime \u2014 parent after Blackley attack"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4c5caf290a78",
+          "name": "Brit Brief",
+          "url": "https://britbrief.co.uk/crime/violence/manchester-school-stabbing-teen-girl-arrested-three-injured.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The government needs to do more to stop knife crime.",
+          "date": "2026-06-09",
+          "role_evidence": "Prominently quoted parent's demand for government action, situating the attack within a systemic failure narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.232982+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "77240397c235",
+          "name": "GB News",
+          "url": "https://www.gbnews.com/news/manchester-school-lockdown-pupil-arrested-three-injured-stabbing",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The school was the site of a separate stabbing incident in 2022.",
+          "date": "2026-06-09",
+          "role_evidence": "Noted the school's prior 2022 stabbing to suggest a pattern, contextualising the incident as part of a recurring local/national crisis.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233125+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ec6406b09199",
+          "name": "UK Parliament (Hansard) \u2014 Knife Crime Debate",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Knives are still being carried, stabbings are still occurring and lives are still being lost.",
+          "date": "2026-04-14",
+          "role_evidence": "Cross-party parliamentary debate in April 2026 established the systemic crisis frame; this incident arrives within that already-active political narrative.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7a3c0ff1f9bf",
+          "name": "NewsX World (YouTube)",
+          "url": "https://www.youtube.com/watch?v=R2DIaYXWk40",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "14-Year-Old Arrested After School Knife Attack in Manchester",
+          "date": "2026-06-09",
+          "role_evidence": "Video coverage distributed via YouTube reaching broad international audience, foregrounding the youth-knife-crime angle.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233157+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The specific circumstances and individual profile of the 14-year-old suspect, including any mental health, safeguarding, or social factors that may have contributed to the act",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader cannot assess whether this is a systemic epidemic or an isolated incident involving a vulnerable young person requiring intervention rather than punishment",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457719+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The actual physical outcomes: that injuries were non-life-threatening and that staff intervention prevented escalation",
+          "found_in_framing": "Teacher Heroism / Staff Bravery",
+          "impact": "Reader may overestimate the severity and inevitability of harm, inflating perception of threat level",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457737+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The school's specific security and screening failures that allowed the weapon to enter the building",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader cannot distinguish between societal knife crime trends and preventable institutional vulnerabilities",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457740+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human cost and trauma experienced by victims and the school community",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader engages with the incident as abstract policy problem rather than real harm to real people",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457744+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233170+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "cfac77dd",
+      "name": "Teacher Heroism / Staff Bravery",
+      "question": "Did teachers go above and beyond to protect students, and should they be lauded \u2014 or is it alarming they had to?",
+      "key_claim": "Staff at Co-op Academy acted as the true last line of defence, physically restraining an armed student and holding a door shut to prevent further harm.",
+      "description": "This framing centres the courageous actions of school staff \u2014 especially the science teacher stabbed in the neck while disarming the suspect, and five colleagues who held the classroom door shut. It is both celebratory of individual heroism and implicitly critical of a system that placed adults in that position.",
+      "emphasizes": "The personal sacrifice and split-second decisions of teachers, witness accounts of the classroom confrontation, the trust's proud statement about staff.",
+      "downplays": "Structural questions about why no weapon screening detected the knife, the psychological burden on staff, and policy failures.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Hero teacher stabbed in neck by knife-wielding schoolgirl: Police arrest suspect, 14, after attack",
+        "Manchester school issues new details on stabbings as staff bravery hailed"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7ed3e21e7cf7",
+          "name": "MSN / Daily Mail syndication",
+          "url": "https://www.msn.com/en-gb/news/uknews/three-suffer-knife-wounds-in-school-stabbing-pupils-in-lockdown-as-girl-is-arrested/ar-AA25bgin",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Hero teacher stabbed in neck by knife-wielding schoolgirl",
+          "date": "2026-06-09",
+          "role_evidence": "Coined the 'hero teacher' headline framing, foregrounding Mr Abdullah's individual act of sacrifice.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233184+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5c072a7315ec",
+          "name": "Co-op Academies Trust (official statement)",
+          "url": "https://britbrief.co.uk/crime/courts/co-op-academy-manchester-statement-on-stabbings.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "We are incredibly proud of the swift actions of our staff.",
+          "date": "2026-06-09",
+          "role_evidence": "Formal institutional statement explicitly celebrating staff bravery, widely re-quoted across outlets.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233194+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7883d786982b",
+          "name": "ITV News Granada",
+          "url": "https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Staff 'acted bravely' to quickly detain a girl before Police arrived.",
+          "date": "2026-06-09",
+          "role_evidence": "Regional broadcast with direct on-the-ground reporting that amplified the bravery narrative to a large audience.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260609173924/https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233203+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8c71bdc0523a",
+          "name": "Manchester Evening News (Facebook)",
+          "url": "https://www.facebook.com/ManchesterEveningNews/posts/breaking-manchester-school-issues-new-details-on-stabbings-as-staff-bravery-hail/1481542900674737/",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Manchester school issues new details on stabbings as staff bravery hailed",
+          "date": "2026-06-09",
+          "role_evidence": "Facebook post from major regional outlet amplifying the staff-bravery frame to a large local social audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233212+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The systemic security failure that allowed a knife to enter the school undetected in the first place",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader may conclude that heroic staff response is sufficient, obscuring the need for preventative security measures",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457748+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The psychological and long-term burden on staff who were forced into a violent confrontation",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader celebrates staff actions without understanding the trauma cost to those staff members",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457751+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether the incident reflects a broader epidemic of youth knife crime or is an outlier",
+          "found_in_framing": "Knife Crime Epidemic",
+          "impact": "Reader cannot contextualize whether this heroism is routine necessity or exceptional circumstance",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457754+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The suspect's own circumstances and whether she received adequate safeguarding support",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader sees only the suspect as perpetrator, not as potentially vulnerable young person whose needs were unmet",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457757+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233225+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "48958872",
+      "name": "School Security & Prevention Failure",
+      "question": "Why was a student able to bring a knife into a classroom undetected, and do schools need mandatory weapon-screening protocols?",
+      "key_claim": "The school's admission that it had 'no reason to search' the student exposes a critical gap between existing DfE screening guidance and effective weapon prevention.",
+      "description": "This framing focuses on the systemic failure of physical security measures at schools. It asks whether current search-and-screening policies are sufficient, and whether metal detectors or mandatory screening should be expanded.",
+      "emphasizes": "The school's own statement that weapons can be 'easily concealed,' prior incidents at the same campus, the absence of any pre-incident warning signs, and the adequacy of DfE guidelines.",
+      "downplays": "The individual motive or background of the suspect, and the broader societal drivers of youth violence.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Co-op Academy: 'We had no reason to conduct a search on any student this morning'",
+        "Manchester school had strict screening policies but weapons 'can unfortunately be small and easily concealed'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "e2db470ebed7",
+          "name": "Co-op Academies Trust (official statement)",
+          "url": "https://britbrief.co.uk/crime/courts/co-op-academy-manchester-statement-on-stabbings.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Weapons can unfortunately be small and easily concealed without prior indicators.",
+          "date": "2026-06-09",
+          "role_evidence": "The school's own statement introduced the 'we couldn't have detected it' defence, which anchors the security-failure debate.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233235+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a44f9c78c7a0",
+          "name": "Yahoo News / BBC syndication",
+          "url": "https://www.yahoo.com/news/us/articles/schoolgirl-arrested-three-injured-knife-085837311.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Staff had 'no reason to conduct a search on any student this morning'.",
+          "date": "2026-06-09",
+          "role_evidence": "Widely syndicated report that foregrounded the school's no-search admission, fuelling questions about protocol gaps.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233249+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f0f7a1b44413",
+          "name": "UK Government / DfE \u2014 Schools' Response to Knife Crime Report",
+          "url": "https://assets.publishing.service.gov.uk/media/68d12f0ee65dc716bfb1dbda/Schools_response_to_knife_crimes_in_schools.pdf",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "Schools' response to knife crime in schools (September 2025)",
+          "date": "2025-09",
+          "role_evidence": "Government-commissioned report on exactly this topic already in the public domain, likely to be cited in policy follow-up to this incident.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233259+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7eba96da9df9",
+          "name": "House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/sn04304/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "Powers are being strengthened by the Crime and Policing Act 2026.",
+          "date": "2026-06",
+          "role_evidence": "Legislative background note on anti-social behaviour and knife powers, contextualising the evolving legal framework around school searches.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260607080616/https://commonslibrary.parliament.uk/research-briefings/sn04304/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233269+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The broader societal drivers of youth knife crime and whether better screening alone can address root causes",
+          "found_in_framing": "Knife Crime Epidemic",
+          "impact": "Reader may believe institutional fixes are sufficient without addressing underlying social factors",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457761+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The individual circumstances of the 14-year-old suspect and unmet safeguarding needs",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader focuses on detection/prevention mechanisms without understanding why a young person brought a weapon to school",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457764+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The actual human impact on victims and the school community",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader engages with the incident as technical security problem rather than source of real trauma",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457767+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The effectiveness of the school's crisis response and lockdown procedures",
+          "found_in_framing": "Institutional Competence & Crisis Management",
+          "impact": "Reader may conclude the school failed entirely, missing evidence that protocols worked to contain harm",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457770+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233278+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "46fc4523",
+      "name": "Criminal Justice & Accountability",
+      "question": "Is the criminal charge (Section 18 GBH with intent) appropriate for a 14-year-old, and how should the justice system handle juvenile perpetrators of serious violence?",
+      "key_claim": "A 14-year-old being charged under Section 18 assault raises serious questions about juvenile justice, sentencing, and whether punitive or rehabilitative responses are more effective.",
+      "description": "This framing focuses on the legal process: the severity of the charge, the suspect's age, the appropriate balance of accountability versus rehabilitation, and broader debates about youth sentencing reform. It is particularly salient given the April 2026 parliamentary debate over relaxed sentencing under the Sentencing Act 2026.",
+      "emphasizes": "The specific charge (GBH with intent), the suspect's age of 14, the Sentencing Act 2026 controversy, and Conservative criticism that Labour sentencing is too lenient.",
+      "downplays": "The victims' experiences and the immediate community trauma.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "14-year-old girl arrested on suspicion of Section 18 assault, remains in custody",
+        "Opposition: Labour 'repeatedly speaks strongly but fails to back this up with necessary custodial sentences'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c287ed4e0331",
+          "name": "Greater Manchester Police (official statement)",
+          "url": "https://aboutmanchester.co.uk/blackley-school-in-lockdown-with-three-pupils-stabbed/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Arrested on suspicion of section 18 assault and remains in custody for questioning.",
+          "date": "2026-06-09",
+          "role_evidence": "Police statement formally defined the legal charge, setting the accountability framing in motion.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233289+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "be00641b8f32",
+          "name": "IBTimes UK",
+          "url": "https://www.ibtimes.co.uk/teen-arrested-stabbing-manchester-school-1801808",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A 14-year-old girl was arrested on suspicion of Section 18 assault and remains in custody.",
+          "date": "2026-06-09",
+          "role_evidence": "Foregrounded the specific charge in headline and lede, signalling the legal/accountability lens.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233297+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0faa6244e7cd",
+          "name": "UK Parliament \u2014 Knife Crime Debate (Conservative opposition)",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The Labour party repeatedly speaks strongly, but it fails to back this up with the necessary custodial sentences.",
+          "date": "2026-04-14",
+          "role_evidence": "Conservative MPs actively prosecuted a sentencing-leniency critique in parliament weeks before this incident, a frame ready to absorb it.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233306+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4bbe62e1fac5",
+          "name": "Kemi Badenoch / Conservative Party (MSN)",
+          "url": "https://www.msn.com/en-gb/news/uknews/three-suffer-knife-wounds-in-school-stabbing-pupils-in-lockdown-as-girl-is-arrested/ar-AA25bgin",
+          "carrier_type": "political",
+          "amplifier_role": "mention",
+          "excerpt": "Fear of being called racist meant authorities did not stop tragedies \u2013 Badenoch",
+          "date": "2026-06-09",
+          "role_evidence": "Conservative leader's concurrent comments about equalities law and institutional failure appeared in the same news cycle, indirectly connecting to accountability framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233316+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The victims' experiences, injuries, and psychological trauma from the attack",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader debates sentencing policy in abstract terms without centering the harm experienced by those attacked",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457774+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The suspect's age (14), mental health status, and whether punitive or rehabilitative approaches are more effective for juveniles",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader may support harsh sentencing without understanding developmental neuroscience or evidence on juvenile rehabilitation",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457777+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether this incident is part of a genuine epidemic or being used for partisan political purposes",
+          "found_in_framing": "Political Fallout & Partisan Signalling",
+          "impact": "Reader cannot assess whether the criminal justice debate is evidence-based or opportunistic",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457780+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The school's security failures that enabled the weapon to reach the classroom",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader focuses on post-incident justice without examining preventative failures",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457782+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233325+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "25a8d762",
+      "name": "Human Cost & Community Trauma",
+      "question": "What is the lived experience of victims, witnesses, and the school community \u2014 and what emotional toll does this event exact?",
+      "key_claim": "Beyond statistics and policy debates, real children and a young teacher were physically and psychologically harmed, and a school community has been traumatised.",
+      "description": "This framing centres the experiences of the direct victims and the school community: the injured teacher and two students, frightened parents, and traumatised classmates who witnessed the attack or were in lockdown.",
+      "emphasizes": "Eyewitness testimony, parental distress, the emotional aftermath, the school's trauma support plan, and the human faces behind the incident.",
+      "downplays": "Policy debates, the suspect's perspective, and systemic causes.",
+      "tone": "measured",
+      "sample_headlines": [
+        "'It's very scary' \u2014 parent outside Co-op Academy after three stabbed",
+        "Manchester school to provide 'full emotional support' as pupils return Wednesday"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a094b1e47a15",
+          "name": "ITV News Granada",
+          "url": "https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Manchester school reopens after two pupils and teacher stabbed",
+          "date": "2026-06-09",
+          "role_evidence": "Sent reporters to the scene, capturing parent and community reaction on camera and foregrounding community recovery.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260609173924/https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233335+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "32c71f9855e1",
+          "name": "About Manchester",
+          "url": "https://aboutmanchester.co.uk/blackley-school-in-lockdown-with-three-pupils-stabbed/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Injuries are thankfully not believed to be serious, and all are stable at this time.",
+          "date": "2026-06-09",
+          "role_evidence": "Local outlet foregrounded relief and community reassurance, centring the human stakes of the event.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233343+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "73edb0502dfd",
+          "name": "Brit Brief",
+          "url": "https://britbrief.co.uk/crime/violence/manchester-school-stabbing-teen-girl-arrested-three-injured.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'It's very scary. My son said the science teacher was stabbed in the neck.'",
+          "date": "2026-06-09",
+          "role_evidence": "Extended parental testimony and eyewitness quotes centred the fear and trauma of those directly affected.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233351+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8dc5a329fb80",
+          "name": "Co-op Academies Trust (official statement)",
+          "url": "https://britbrief.co.uk/crime/courts/co-op-academy-manchester-statement-on-stabbings.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Full emotional support will be in place for pupils.",
+          "date": "2026-06-09",
+          "role_evidence": "School's explicit commitment to trauma support acknowledges and institutionalises the human-cost framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233359+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Whether this incident reflects a systemic epidemic of youth knife crime or is an isolated case",
+          "found_in_framing": "Knife Crime Epidemic",
+          "impact": "Reader understands immediate trauma but cannot assess whether this is symptomatic of broader societal failure",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457786+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The school's security and screening failures that allowed the weapon to enter",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader sympathizes with victims but cannot identify preventative measures that might protect future communities",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457789+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The suspect's own circumstances, age (14), and unmet needs that may have driven the act",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader may view the suspect only as perpetrator, not as young person whose safeguarding needs failed",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457791+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The effectiveness of institutional crisis response and whether protocols worked to contain harm",
+          "found_in_framing": "Institutional Competence & Crisis Management",
+          "impact": "Reader focuses on suffering without acknowledging that staff and systems prevented worse outcomes",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457794+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233369+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f81f39c1",
+      "name": "Institutional Competence & Crisis Management",
+      "question": "Did the school and police respond correctly \u2014 and should lockdown, communication, and containment procedures be praised or scrutinised?",
+      "key_claim": "The swift lockdown, staff containment of the suspect, and rapid police response averted greater harm and demonstrate that institutional protocols can work \u2014 but parent communication failures reveal gaps.",
+      "description": "This framing evaluates the institutional performance of the school, police, and emergency services. It distinguishes between what worked (lockdown, staff restraint, rapid arrest) and what fell short (one grandfather learned about the incident from the news, not the school).",
+      "emphasizes": "Speed of police and staff response, lockdown effectiveness, the police chief's reassurance statements, the school's communication to parents, and whether the 'no wider threat' conclusion was justified.",
+      "downplays": "Societal causes of knife crime, the suspect's wellbeing, and longer-term policy questions.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Manchester school in lockdown with pupil arrested after three people injured in suspected stabbing",
+        "Manchester school reopens Wednesday \u2014 'full emotional support in place'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d56f0de77f99",
+          "name": "Greater Manchester Police / Chief Insp. Jon Shilvock",
+          "url": "https://aboutmanchester.co.uk/blackley-school-in-lockdown-with-three-pupils-stabbed/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The incident was swiftly and quickly dealt with by staff before officers attending to arrest the girl.",
+          "date": "2026-06-09",
+          "role_evidence": "Police's own framing of the response as swift and effective set the 'competent response' narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233403+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c63ba1514a9a",
+          "name": "GB News",
+          "url": "https://www.gbnews.com/news/manchester-school-lockdown-pupil-arrested-three-injured-stabbing",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Authorities have said there is no wider threat to pupils or staff.",
+          "date": "2026-06-09",
+          "role_evidence": "Amplified police reassurance framing and the 'school chose to go into lockdown' procedural detail.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233424+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f9257f92724e",
+          "name": "Brit Brief (grandfather quote)",
+          "url": "https://britbrief.co.uk/crime/violence/manchester-school-stabbing-teen-girl-arrested-three-injured.html",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "Jeff Lydiate learned about the incident through the news rather than the school.",
+          "date": "2026-06-09",
+          "role_evidence": "Surfaced a counter-data point \u2014 a failure of parent communication \u2014 that subtly critiques the otherwise-praised institutional response.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233438+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9b9e863cd048",
+          "name": "ITV News Granada",
+          "url": "https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The school was immediately placed into lockdown, and staff acted bravely to quickly detain a student.",
+          "date": "2026-06-09",
+          "role_evidence": "Broadcast coverage provided the widest amplification of the institutional-competence narrative to regional and national audiences.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260609173924/https://www.itv.com/news/granada/2026-06-09/three-pupils-injuries-after-stabbing-at-a-school",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233449+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The security screening failure that allowed the weapon to enter the school in the first place",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader may conclude institutional protocols are adequate when fundamental prevention gaps exist",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457798+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human cost and ongoing trauma to victims and the school community",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader celebrates institutional efficiency without acknowledging the real suffering caused",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457800+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The suspect's age (14) and whether the response should be rehabilitative rather than punitive",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader assesses crisis management without considering the suspect's developmental stage and needs",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457803+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether this incident is being weaponised for political purposes or reflects genuine policy failure",
+          "found_in_framing": "Political Fallout & Partisan Signalling",
+          "impact": "Reader may accept institutional reassurance statements without recognizing partisan framing",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457806+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233462+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1e32cdd8",
+      "name": "Juvenile Suspect Welfare & Root Causes",
+      "question": "What drove a 14-year-old girl to bring a knife to school and attack classmates \u2014 and what does this say about failures to support vulnerable young people?",
+      "key_claim": "A 14-year-old girl committing this act is a symptom of unmet mental health, social, or safeguarding needs, and the criminal response alone cannot address the underlying causes.",
+      "description": "This framing asks what circumstances produced the suspect's behaviour, emphasising that children who carry out violence are often themselves victims of neglect, trauma, or failed early intervention. It is nascent in early coverage but expected to emerge as context develops.",
+      "emphasizes": "The suspect's age, the failure of preventative services, early intervention policy gaps, and the government's own 'supporting young people' pillar of its knife crime plan.",
+      "downplays": "The severity of harm caused to victims and the immediate community's fear.",
+      "tone": "measured",
+      "sample_headlines": [
+        "How will the new knife crime plan reduce youth knife crime so fewer families face the impossible? \u2014 MP question, Hansard",
+        "Understanding root causes: why knife crime is not decreasing in certain regions"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "e9fcd4ed1462",
+          "name": "UK Parliament \u2014 Hansard Knife Crime Debate",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "What work is under way on understanding the root causes of why, in certain regions, knife crime is not following the national trend?",
+          "date": "2026-04-14",
+          "role_evidence": "MPs explicitly raised root-cause and youth-support questions in the pre-existing knife crime debate, a frame poised to apply to this case.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233480+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dcd03f157c92",
+          "name": "UK Government Knife Crime Plan \u2014 'Protecting Lives, Building Hope'",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Supporting young people, stopping those at risk from turning to knife crime.",
+          "date": "2026-04-14",
+          "role_evidence": "Government's own strategy explicitly frames knife crime as a youth-welfare and prevention issue, not just a punitive one.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233492+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f1be2484a65f",
+          "name": "IBTimes UK",
+          "url": "https://www.ibtimes.co.uk/teen-arrested-stabbing-manchester-school-1801808",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "A 14-year-old girl has been arrested after three people were injured.",
+          "date": "2026-06-09",
+          "role_evidence": "Situated incident alongside related youth-violence stories, implicitly invoking the broader juvenile-welfare context.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233501+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The severity of harm caused to victims and the immediate community's fear and trauma",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader may sympathize with the suspect's circumstances while minimizing the real harm experienced by those attacked",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457809+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether this incident is part of a broader epidemic of youth knife crime or an isolated case",
+          "found_in_framing": "Knife Crime Epidemic",
+          "impact": "Reader cannot assess whether systemic intervention is needed or whether this is an outlier",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457812+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The school's specific security and screening failures that allowed the weapon to enter",
+          "found_in_framing": "School Security & Prevention Failure",
+          "impact": "Reader focuses on the suspect's needs without examining institutional vulnerabilities that enabled the act",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457817+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The criminal justice response and whether sentencing is proportionate to harm caused",
+          "found_in_framing": "Criminal Justice & Accountability",
+          "impact": "Reader may advocate for rehabilitation without acknowledging accountability to victims",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457819+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233570+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e1e185cb",
+      "name": "Political Fallout & Partisan Signalling",
+      "question": "How are political actors using this incident to score points, and whose narrative of blame \u2014 Labour's governance, Conservative sentencing failures, or austerity-era cuts \u2014 prevails?",
+      "key_claim": "The Blackley stabbing is being weaponised across the political spectrum: by Conservatives to attack Labour's soft-on-crime sentencing reforms, and by Labour to defend its 'Protecting Lives, Building Hope' knife crime plan.",
+      "description": "This framing tracks the political use of the incident, situating it within a live partisan battle over the Crime and Policing Act 2026, the Sentencing Act 2026, and the government's 10-year knife crime strategy. It asks who 'wins' politically rather than what happened operationally.",
+      "emphasizes": "Party-political point-scoring, the Conservative charge that Labour avoids custodial sentences, Labour's defence of its systemic approach, and the broader culture-war dimension of who is 'soft' on crime.",
+      "downplays": "The victims and the actual facts of the incident.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Labour 'repeatedly speaks strongly but fails to back this up with necessary custodial sentences' \u2014 Conservative MP",
+        "Badenoch: 'Fear of being called racist meant authorities did not stop tragedies'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5e745bc690f0",
+          "name": "Conservative MPs \u2014 House of Commons Knife Crime Debate",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "It is pitiful that those convicted of knife crime offences who would previously have gone to prison could now avoid it.",
+          "date": "2026-04-14",
+          "role_evidence": "Conservative opposition laid down the partisan attack lines on sentencing weeks before this incident, ready to be activated.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233592+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9f183e66fccd",
+          "name": "Kemi Badenoch / MSN news cycle",
+          "url": "https://www.msn.com/en-gb/news/uknews/three-suffer-knife-wounds-in-school-stabbing-pupils-in-lockdown-as-girl-is-arrested/ar-AA25bgin",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Fear of being called racist meant authorities did not stop tragedies \u2013 Badenoch",
+          "date": "2026-06-09",
+          "role_evidence": "Conservative leader's comments ran in the same news cycle as the stabbing, implicitly linking institutional timidity to violence outcomes.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233608+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "64784f76d113",
+          "name": "UK Government (Labour) \u2014 'Protecting Lives, Building Hope' plan",
+          "url": "https://hansard.parliament.uk/commons/2026-04-14/debates/D653ADFD-F14B-4162-A34A-0B5C92FEB1D4/KnifeCrime",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "We have published the 'Protecting lives, building hope' plan\u2026 to halve knife crime in a decade.",
+          "date": "2026-04-14",
+          "role_evidence": "Government's published strategy is its counter-framing shield against Conservative attacks, foregrounding systemic investment over punitive response.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233621+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f229c3a539a0",
+          "name": "@TruthFairy131 / X (Twitter)",
+          "url": "https://twitter.com/TruthFairy131",
+          "carrier_type": "social",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Manchester Triple School Stabbing [viral post, June 9 2026]",
+          "date": "2026-06-09",
+          "role_evidence": "Social media account (cited in IBTimes coverage) amplified the incident framing with a politically charged label ('triple stabbing') on X.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:00.233631+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The actual facts of the incident: injuries, response effectiveness, and what actually happened",
+          "found_in_framing": "Institutional Competence & Crisis Management",
+          "impact": "Reader engages with political narrative without grounding in factual reality of the incident",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457824+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The victims' experiences and the real human trauma caused by the attack",
+          "found_in_framing": "Human Cost & Community Trauma",
+          "impact": "Reader sees incident as political tool rather than source of real suffering",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457827+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Whether knife crime is genuinely epidemic or whether statistics support the political claims being made",
+          "found_in_framing": "Knife Crime Epidemic",
+          "impact": "Reader cannot assess whether political rhetoric matches actual crime trends",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457830+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The suspect's age (14) and circumstances, which complicate simple 'soft on crime' narratives",
+          "found_in_framing": "Juvenile Suspect Welfare & Root Causes",
+          "impact": "Reader accepts partisan framing without understanding the complexity of juvenile justice",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:07:21.457834+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:07:00.233655+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing framings include: (1) Victim-centered perspectives beyond trauma\u2014medical outcomes, long-term recovery needs, and victim advocacy; (2) The arrested minor's family perspective\u2014parental accountability, family support systems, and how families navigate having a child accused of serious crime; (3) Broader school community resilience and peer support narratives, distinct from institutional management; (4) International/comparative context on youth violence prevention models that work; (5) Mental health system failures or gaps specific to early intervention; (6) Socioeconomic and neighborhood context of Blackley itself\u2014deprivation, resource allocation, youth services availability; (7) The role of social media, peer dynamics, or specific triggers in the incident; (8) Weapon access/supply chain perspective\u2014how a 14-year-old obtained a knife.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Three people were injured in a stabbing incident at a school in Blackley, Manchester, England, and a 14-year-old student was arrested.",
+    "rated_outlets": 1,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 100,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": -1.0,
+    "resolve_rate": 0.14,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 6,
+      "examples": [
+        {
+          "carrier": "Brit Brief",
+          "domain": "britbrief.co.uk"
+        },
+        {
+          "carrier": "GB News",
+          "domain": "gbnews.com"
+        },
+        {
+          "carrier": "NewsX World (YouTube)",
+          "domain": "youtube.com"
+        },
+        {
+          "carrier": "MSN / Daily Mail syndication",
+          "domain": "msn.com"
+        },
+        {
+          "carrier": "ITV News Granada",
+          "domain": "itv.com"
+        },
+        {
+          "carrier": "IBTimes UK",
+          "domain": "ibtimes.co.uk"
+        }
+      ]
+    },
+    "non_news_carriers": 6,
+    "matched": [
+      {
+        "outlet": "Yahoo! News",
+        "carrier": "Yahoo News / BBC syndication",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 14,
+        "political": 5,
+        "social": 2,
+        "institutional": 10,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 15,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 18,
+    "framings": [
+      {
+        "framing_id": "626bfe05",
+        "name": "Knife Crime Epidemic",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "559dbe12c9df",
+            "display": "Brit Brief",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "cf695ec67391",
+            "display": "GB News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e82f141f8128",
+            "display": "UK Parliament",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c11963820a03",
+            "display": "YouTube",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "cfac77dd",
+        "name": "Teacher Heroism / Staff Bravery",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5376740ed7f0",
+            "display": "Co-op Academies Trust",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0285648def18",
+            "display": "ITV News Granada",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9ad6e59092f3",
+            "display": "Manchester Evening News",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6605d3481883",
+            "display": "MSN",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "48958872",
+        "name": "School Security & Prevention Failure",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5376740ed7f0",
+            "display": "Co-op Academies Trust",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0fc5f3381b38",
+            "display": "Yahoo",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "53a77278cb5c",
+            "display": "House of Commons Library",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cbf5d176b7a6",
+            "display": "UK Government",
+            "actor_type": "person",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "46fc4523",
+        "name": "Criminal Justice & Accountability",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "61811a8650ff",
+            "display": "Greater Manchester Police",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e82f141f8128",
+            "display": "UK Parliament",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "afeb0f9e81c5",
+            "display": "IBTimes UK",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1e15bc3ded5a",
+            "display": "Kemi Badenoch",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "25a8d762",
+        "name": "Human Cost & Community Trauma",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "559dbe12c9df",
+            "display": "Brit Brief",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5376740ed7f0",
+            "display": "Co-op Academies Trust",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0285648def18",
+            "display": "ITV News Granada",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "83c82f583355",
+            "display": "About Manchester",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f81f39c1",
+        "name": "Institutional Competence & Crisis Management",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "cf695ec67391",
+            "display": "GB News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "61811a8650ff",
+            "display": "Greater Manchester Police",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0285648def18",
+            "display": "ITV News Granada",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "559dbe12c9df",
+            "display": "Brit Brief",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "1e32cdd8",
+        "name": "Juvenile Suspect Welfare & Root Causes",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "e82f141f8128",
+            "display": "UK Parliament",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "37977a1a9235",
+            "display": "UK Government Knife Crime Plan",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "afeb0f9e81c5",
+            "display": "IBTimes UK",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e1e185cb",
+        "name": "Political Fallout & Partisan Signalling",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "097a765eb564",
+            "display": "@TruthFairy131",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4a4df61a45d5",
+            "display": "Conservative MPs",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1e15bc3ded5a",
+            "display": "Kemi Badenoch",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cbf5d176b7a6",
+            "display": "UK Government",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "e82f141f8128",
+        "display": "UK Parliament",
+        "actor_type": "organization",
+        "n_framings": 3,
+        "framings": [
+          "Criminal Justice & Accountability",
+          "Juvenile Suspect Welfare & Root Causes",
+          "Knife Crime Epidemic"
+        ]
+      },
+      {
+        "actor_id": "5376740ed7f0",
+        "display": "Co-op Academies Trust",
+        "actor_type": "person",
+        "n_framings": 3,
+        "framings": [
+          "Human Cost & Community Trauma",
+          "School Security & Prevention Failure",
+          "Teacher Heroism / Staff Bravery"
+        ]
+      },
+      {
+        "actor_id": "0285648def18",
+        "display": "ITV News Granada",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Human Cost & Community Trauma",
+          "Institutional Competence & Crisis Management",
+          "Teacher Heroism / Staff Bravery"
+        ]
+      },
+      {
+        "actor_id": "559dbe12c9df",
+        "display": "Brit Brief",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost & Community Trauma",
+          "Knife Crime Epidemic"
+        ]
+      },
+      {
+        "actor_id": "cf695ec67391",
+        "display": "GB News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Institutional Competence & Crisis Management",
+          "Knife Crime Epidemic"
+        ]
+      },
+      {
+        "actor_id": "61811a8650ff",
+        "display": "Greater Manchester Police",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "Criminal Justice & Accountability",
+          "Institutional Competence & Crisis Management"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "559dbe12c9df",
+        "display": "Brit Brief",
+        "actor_type": "news",
+        "champions": [
+          "Human Cost & Community Trauma",
+          "Knife Crime Epidemic"
+        ],
+        "opposes": [
+          "Institutional Competence & Crisis Management"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Teacher Heroism / Staff Bravery",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "School Security & Prevention Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "Criminal Justice & Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "School Security & Prevention Failure",
+        "b": "Criminal Justice & Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "School Security & Prevention Failure",
+        "b": "Institutional Competence & Crisis Management",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "School Security & Prevention Failure",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Criminal Justice & Accountability",
+        "b": "Human Cost & Community Trauma",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Community Trauma",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Community Trauma",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Institutional Competence & Crisis Management",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Institutional Competence & Crisis Management",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Juvenile Suspect Welfare & Root Causes",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Criminal Justice & Accountability",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Human Cost & Community Trauma",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "School Security & Prevention Failure",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "Institutional Competence & Crisis Management",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "School Security & Prevention Failure",
+        "b": "Human Cost & Community Trauma",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "School Security & Prevention Failure",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Criminal Justice & Accountability",
+        "b": "Institutional Competence & Crisis Management",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Criminal Justice & Accountability",
+        "b": "Political Fallout & Partisan Signalling",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Knife Crime Epidemic",
+        "b": "Institutional Competence & Crisis Management",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Teacher Heroism / Staff Bravery",
+        "b": "Human Cost & Community Trauma",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Human Cost & Community Trauma",
+        "b": "Institutional Competence & Crisis Management",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Criminal Justice & Accountability",
+        "b": "Juvenile Suspect Welfare & Root Causes",
+        "shared": 2,
+        "jaccard": 0.4
+      }
+    ],
+    "by_actor_type": {
+      "organization": 3,
+      "news": 5,
+      "social": 3,
+      "person": 3,
+      "reference": 2,
+      "official": 2
+    },
+    "connectivity": {
+      "bridge_ratio": 0.333,
+      "siloed_share": 0.5,
+      "mean_jaccard": 0.097
+    },
+    "structure_note": "6 of 18 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:07:27.692297+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

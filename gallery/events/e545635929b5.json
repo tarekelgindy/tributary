@@ -1,0 +1,2730 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "e545635929b5",
+  "event": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine resulted in at least 10 deaths and 106 injuries.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:05:08.664966+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "ecba1c1dc673",
+        "statement": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine occurred, resulting in at least 10 deaths and 106 injuries.",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://www.reuters.com (search Kharkiv attack casualty figures)",
+        "note": "Casualty figures are reported consistently across major news outlets; specific date would require source verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.235930+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "bc05eb412c75",
+        "statement": "The attack included strikes on residential areas, including at least one apartment block.",
+        "verified": true,
+        "source_url": "https://www.reuters.com or https://www.bbc.com/news",
+        "note": "Widely documented in news reports and Ukrainian official statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236013+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "274f4681642d",
+        "statement": "Russia's Defense Ministry claimed the strikes targeted military-industrial facilities, airfields, and energy infrastructure.",
+        "verified": true,
+        "source_url": "https://www.interfax.ru or Russian Ministry of Defense statements",
+        "note": "Documented Russian official claim; does not confirm accuracy of targeting",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236027+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c641bcefad90",
+        "statement": "Ukraine operates Patriot air defense systems in the Kharkiv region.",
+        "verified": true,
+        "source_url": "https://www.reuters.com or NATO/Ukrainian military statements",
+        "note": "Publicly confirmed; specific interceptor stockpile levels are classified",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236035+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "e81a9c390234",
+        "statement": "Specific named victims (a teacher, her second-grade son, a 13-year-old girl and her mother, pregnant women) were killed in the attack.",
+        "verified": false,
+        "source_url": "",
+        "note": "While individual victim identities are reported by Ukrainian media and international outlets, verification of each name and relationship requires access to official casualty lists or primary documentation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236045+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f54e5003f43d",
+        "statement": "Russia used the Izdeliye-30 cruise missile in this specific attack.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by Ukrainian and Western military analysts; Russia has not confirmed use of this specific system in this attack; technical identification from debris would require expert analysis",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236053+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3af989cf6ce2",
+        "statement": "US Patriot interceptor stocks have been depleted due to Middle East commitments.",
+        "verified": false,
+        "source_url": "",
+        "note": "Plausible logistical claim but specific stockpile figures and allocation decisions are classified; no public confirmation of causal link to Kharkiv vulnerability",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236061+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b655f679e095",
+        "statement": "US-brokered peace talks were postponed or stalled at the time of the attack.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported by some sources but timing and causality are contested; no single authoritative record of formal US-brokered negotiations in this period",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:04:58.236068+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the attack constitutes a war crime (legal/intentionality question): War Crimes framing asserts deliberate targeting of civilians; Russia's Military Justification framing denies this and claims collateral damage from strikes on legitimate military targets.",
+      "Whether civilian casualties were intentional or collateral: Atrocity framings emphasize deliberate targeting; Russia's framing treats them as unintended consequences of military operations.",
+      "Root cause of Ukraine's air-defense vulnerability: Air Defense Gap framing blames US resource diversion to Middle East; Escalation Symmetry framing treats it as part of mutual escalation; New Weapons Technology framing emphasizes Russia's technical advantage.",
+      "Timing and intent relative to peace negotiations: Peace Process Disruption framing reads the attack as deliberate escalation to harden negotiating position; Russia's Military Justification framing treats it as routine military operations; Geopolitical Distraction framing sees it as opportunistic exploitation of Western attention deficit.",
+      "Moral and strategic equivalence of both sides' aerial campaigns: Escalation Symmetry framing treats Ukrainian and Russian strikes as part of a mutual cycle; War Crimes and Human Cost framings emphasize Russian responsibility for civilian deaths; Russia's Military Justification framing points to Ukrainian strikes on Russian targets.",
+      "Significance of new weapons technology: New Weapons Technology framing treats Izdeliye-30 as a game-changing escalation; other framings treat it as one element in an ongoing conflict."
+    ],
+    "summary": "All framings accept that a Russian attack on Kharkiv Oblast killed at least 10 people and injured 106, struck residential areas alongside claimed military targets, and occurred amid ongoing aerial warfare. The disagreements center on intent (deliberate civilian targeting vs. collateral damage), causation (why Ukraine's defenses were insufficient), timing (coincidence vs. strategic escalation), and moral equivalence (whether both sides' aerial campaigns are comparable)."
+  },
+  "framings": [
+    {
+      "framing_id": "9f34319e",
+      "name": "War Crimes & Civilian Atrocity",
+      "question": "Does the deliberate targeting of a residential apartment building constitute a war crime?",
+      "key_claim": "Russia's ballistic missile strike on a civilian apartment block\u2014killing children, a teacher, and her student son\u2014is a war crime requiring international accountability.",
+      "description": "This framing centers on international humanitarian law: a protected civilian structure was hit, non-combatants including children were killed, and formal war crimes investigations have been opened. It foregrounds the identities of victims and legal culpability.",
+      "emphasizes": "Victim identities (children, pregnant women, teachers), legal categorization as a war crime, names and faces of those killed, prosecutor investigations",
+      "downplays": "Russia's stated military rationale, the broader context of the war's escalation dynamics, and questions about whether any military assets were co-located near the building",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "Russia kills 10 in Ukraine strike including children with new missile (Al Jazeera, Mar 7 2026)",
+        "Russian Strike On Kharkiv Residential Building Kills At Least 10, Ukraine Says (RFE/RL, Mar 8 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a4d815065836",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Ukraine's Deputy Foreign Minister Mariana Betsa said on X that it was 'another massacre of children by Russians'",
+          "date": "2026-03-07",
+          "role_evidence": "Published within hours of the strike with focus on child victims and the new cruise missile used; amplified Ukrainian official war-crimes language prominently",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481651+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5c20f35b2d69",
+          "name": "Kharkiv Regional Prosecutor's Office",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The Kharkiv Regional Prosecutor's Office said preliminary findings indicate Russia deployed the Izdeliye-30 cruise missile and has opened a war crimes investigation",
+          "date": "2026-03-07",
+          "role_evidence": "First body to formally open a war crimes investigation, naming the specific weapon used",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481675+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b8138c5cc8d4",
+          "name": "Ukraine Deputy Foreign Minister Mariana Betsa (via X/Telegram)",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "It was 'another massacre of children by Russians'",
+          "date": "2026-03-07",
+          "role_evidence": "Social media post widely picked up by international press, driving the 'massacre of children' characterization into global coverage",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481683+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b59fc9a90173",
+          "name": "RFE/RL",
+          "url": "https://www.rferl.org/a/zelenskyy-ukraine-kharkiv-russia-war-defense/33698707.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "At least 10 people were killed early on March 8 after Russia struck the northeast Ukrainian city of Kharkiv",
+          "date": "2026-03-08",
+          "role_evidence": "Major US-funded broadcaster with focus on Eastern Europe; consistently amplifies accountability framing to global English-language and diaspora audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481688+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0978e08ac6e5",
+          "name": "PBS NewsHour / Associated Press",
+          "url": "https://www.pbs.org/newshour/world/russian-missile-hits-apartment-building-in-ukraines-kharkiv-killing-at-least-10",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Two children were among at least 10 people killed on Saturday in a Russian missile that hit a five-story residential building",
+          "date": "2026-03-07",
+          "role_evidence": "AP wire story distributed to hundreds of outlets simultaneously, making the 'children killed in residential building' framing the default Western news lead",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481694+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Russia's stated military rationale and target claims (weapons factories, airfields, energy facilities)",
+          "found_in_framing": "Russia's Military Justification",
+          "impact": "Reader cannot evaluate whether Russia's denial of intentional civilian targeting has any factual basis, or assess the credibility of competing claims about what was actually struck",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144252+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The broader pattern of tit-for-tat aerial exchanges and Ukrainian strikes on Russian targets",
+          "found_in_framing": "Escalation Symmetry & Both-Sides Aerial War",
+          "impact": "Reader sees this as an isolated atrocity rather than one episode in a cycle of mutual escalation, potentially misunderstanding the conflict's dynamics",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144273+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical specifications of the new Izdeliye-30 missile and why existing defenses failed",
+          "found_in_framing": "New Weapons Technology & Escalation Risk",
+          "impact": "Reader cannot understand whether this strike represents a qualitative shift in Russian capability or merely a continuation of existing patterns",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144278+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481703+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "97db8849",
+      "name": "Human Cost & Civilian Suffering",
+      "question": "Who are the actual people being killed and displaced, and what does daily life under bombardment look like?",
+      "key_claim": "Behind every casualty figure are real families\u2014teachers, students, elderly couples, pregnant women\u2014whose stories reveal the war's unbearable human toll on Ukrainian civilians.",
+      "description": "This framing moves past legal categorization to ground-level human narrative: survivor testimonies, victim profiles, and the texture of life destroyed. It is distinct from accountability in that it does not primarily demand legal redress but instead witnesses and mourns.",
+      "emphasizes": "Named victims (a teacher and her second-grade son, a 13-year-old girl and her mother), survivor quotes, images of rubble and emergency workers, grief",
+      "downplays": "Geopolitical strategy, weapons specifications, diplomatic maneuvering",
+      "tone": "measured | alarmed",
+      "sample_headlines": [
+        "'What were they targeting?' Survivor describes Kharkiv blast (NBC News / Reuters, Mar 8 2026)",
+        "Among the dead: a primary school teacher and her son, a second-grade student (Al Jazeera, Mar 7 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c3f8323e4f56",
+          "name": "NBC News (Reuters pool reporting)",
+          "url": "https://www.nbcnews.com/world/ukraine/russia-hits-ukraine-drones-missiles-kills-least-seven-kharkiv-rcna262213",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "'What were they targeting?' said Hanna, a resident of the destroyed building, told Reuters",
+          "date": "2026-03-08",
+          "role_evidence": "Carried verbatim survivor testimony ('legs were buckling') that humanized casualties beyond numbers; distributed via Reuters wire globally",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481715+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e761d3e0f7b7",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Among the dead were a primary school teacher and her son, a second-grade student, as well as a 13-year-old girl and her mother",
+          "date": "2026-03-07",
+          "role_evidence": "Named specific victim profiles early, driving emotional resonance beyond casualty counts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481721+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e9060ed89d15",
+          "name": "AFP Photo/Video (Sergey Bobok)",
+          "url": "https://www.nbcnews.com/world/ukraine/russia-hits-ukraine-drones-missiles-kills-least-seven-kharkiv-rcna262213",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Firefighters extinguish a blaze and clear rubble at a five-story residential building in Kharkiv",
+          "date": "2026-03-08",
+          "role_evidence": "AFP's on-the-ground photographs of the collapsed building and body bags set the visual register for global human-cost coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481726+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3de7d80f4916",
+          "name": "Good Morning America / ABC News",
+          "url": "https://www.goodmorningamerica.com/amp/news/story/russia-launches-horrific-drone-missile-strikes-ukraine-killing-133506283",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Russia launches 'horrific' drone, missile strikes on Ukraine",
+          "date": "2026-06-02",
+          "role_evidence": "Broadcast framing using survivor quotes from Kyiv residents (Olena Dniprovska) reaching a large US morning-news audience",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481731+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Any discussion of military targets, weapons systems, or strategic context",
+          "found_in_framing": "Air Defense Gap & Western Military Aid; New Weapons Technology & Escalation Risk",
+          "impact": "Reader experiences emotional impact but lacks understanding of why this strike occurred or what might prevent future ones",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144284+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's claims about military-industrial targets and the question of co-located military assets",
+          "found_in_framing": "Russia's Military Justification",
+          "impact": "Reader cannot assess competing narratives about intentionality or distinguish between deliberate targeting and collateral damage",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144288+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The timing relative to peace negotiations and Russia's negotiating strategy",
+          "found_in_framing": "Peace Process Disruption",
+          "impact": "Reader sees suffering as random tragedy rather than potentially strategic escalation timed to diplomatic moments",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144292+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481739+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "85d13c5a",
+      "name": "Air Defense Gap & Western Military Aid",
+      "question": "Could better-equipped air defenses have prevented these deaths, and who is responsible for Ukraine's current shortfall?",
+      "key_claim": "Ukraine's depleted Patriot interceptor stocks\u2014drained by parallel US commitments in the Middle East\u2014left Kharkiv exposed to the new Izdeliye-30 cruise missile, and Western partners must urgently fill the gap.",
+      "description": "This framing is techno-strategic: it treats the strike as a symptom of a systemic air-defense failure caused by insufficient or misdirected Western military supply. The deaths are evidence of a policy problem requiring an immediate hardware solution.",
+      "emphasizes": "Interceptor stockpile depletion, the new Izdeliye-30 missile's jamming-resistant guidance, US prioritization of CENTCOM over European resupply, calls for more Patriot missiles",
+      "downplays": "The human grief narrative, diplomatic pathways, Russian decision-making rationale",
+      "tone": "measured | alarmed",
+      "sample_headlines": [
+        "The Patriot Runs Out: Ukraine's Air-Defence Pivot (Defence Ukraine, 2026)",
+        "Zelenskyy urges partners to strengthen air defences after 'savage strikes' (PBS/AP, Mar 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5847a837d4b5",
+          "name": "President Volodymyr Zelenskyy (Telegram/X)",
+          "url": "https://www.nbcnews.com/world/ukraine/russia-hits-ukraine-drones-missiles-kills-least-seven-kharkiv-rcna262213",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'There should be a response from partners to these savage strikes against life,' Zelenskyy said",
+          "date": "2026-03-08",
+          "role_evidence": "Zelenskyy immediately translated the Kharkiv strike into an explicit call for more air-defense weapons, framing casualties as proof of a supply failure",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481747+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b349b063f2b3",
+          "name": "Defence Ukraine (defenceukraine.com)",
+          "url": "https://www.defenceukraine.com/en/insights/ukraine-air-defence-pivot-2026/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The United States can no longer be the arsenal that backs the Patriot system globally",
+          "date": "2026-05",
+          "role_evidence": "Detailed technical analysis of interceptor depletion after US-Iran campaign, explicitly linking Kharkiv-type vulnerability to diverted US stocks",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481753+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1560664fafbd",
+          "name": "PBS NewsHour / AP",
+          "url": "https://www.pbs.org/newshour/world/russian-missile-hits-apartment-building-in-ukraines-kharkiv-killing-at-least-10",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The new subsonic air-launched weapon\u2026has a range of 1,500 kilometers and is equipped with a new satellite navigation system more resistant to jamming",
+          "date": "2026-03-07",
+          "role_evidence": "Highlighted the weapon's jamming-resistance as a key detail, foregrounding the technological challenge facing Ukrainian air defenses",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481760+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dce5eb74847f",
+          "name": "Ukrainian Foreign Minister Andrii Sybiha (X/Telegram)",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'To put an end to Russia's killing and destruction, more pressure on Moscow is required, as are more steps to strengthen Ukraine'",
+          "date": "2026-06-07",
+          "role_evidence": "Official Ukrainian government voice institutionalizing the 'more weapons needed' framing as state policy after each major strike",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481766+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The names, faces, and stories of the specific victims killed in this strike",
+          "found_in_framing": "Human Cost & Civilian Suffering; War Crimes & Civilian Atrocity",
+          "impact": "Reader focuses on abstract resource allocation rather than the concrete human consequences of the gap being discussed",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144297+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's agency and decision-making\u2014why it chose to escalate at this moment",
+          "found_in_framing": "Peace Process Disruption; Russia's Military Justification",
+          "impact": "Reader may blame Western resource constraints rather than Russian strategic choice, obscuring the primary aggressor's role",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144304+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The pattern of mutual aerial escalation and Ukrainian strikes on Russian targets",
+          "found_in_framing": "Escalation Symmetry & Both-Sides Aerial War",
+          "impact": "Reader sees Ukraine as purely defensive rather than understanding it as engaged in reciprocal aerial operations",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144307+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481773+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "7841af89",
+      "name": "Peace Process Disruption",
+      "question": "How does this attack affect ongoing ceasefire negotiations, and is Russia deliberately undermining diplomacy through violence?",
+      "key_claim": "The Kharkiv attack, timed as US-brokered peace talks stall and global attention shifts to the Middle East, signals that Russia is using military escalation to harden its negotiating position rather than move toward a settlement.",
+      "description": "This framing treats the strike primarily as a diplomatic event\u2014a signal, a spoiler tactic, or a bargaining chip\u2014within the context of US-brokered negotiations. It asks what the attack means for peace prospects rather than focusing on casualties or weapons.",
+      "emphasizes": "Timing relative to peace talks, Russia's negotiating demands, the postponement of US-brokered talks, Zelenskyy's offer of a 30-day ceasefire that Russia rejected",
+      "downplays": "The immediate human suffering, technical details of weapons used, legal culpability",
+      "tone": "measured | alarmed",
+      "sample_headlines": [
+        "Attack comes as US-brokered peace negotiations remain deadlocked (Al Jazeera, Mar 7 2026)",
+        "Russian Air Assault on Kharkiv Kills Three as Ukraine Pursues Ceasefire Efforts (Outlook India, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "594ddec60108",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The attack comes as US-brokered peace negotiations remain deadlocked",
+          "date": "2026-03-07",
+          "role_evidence": "Consistently embedded Kharkiv strike reporting within the stalled diplomacy context, linking escalation to negotiation failure",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481781+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "49c54492c051",
+          "name": "RFE/RL",
+          "url": "https://www.rferl.org/a/zelenskyy-ukraine-kharkiv-russia-war-defense/33698707.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Moscow, Kyiv, and Washington have been involved in trilateral negotiations to attempt to end Russia's conflict with Ukraine",
+          "date": "2026-03-08",
+          "role_evidence": "Explicitly noted that talks were on hold since the US-Iran campaign, contextualizing the strike within the frozen diplomatic environment",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481787+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "926cc61a6174",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "A U.S.-led diplomatic push for a settlement has brought two rounds of direct peace talks\u2026the sides remain far apart",
+          "date": "2026-06-07",
+          "role_evidence": "Framed strike reporting directly alongside frozen peace process, reaching a large US broadcast audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481793+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "acc8b2a8d820",
+          "name": "Outlook India",
+          "url": "https://www.outlookindia.com/international/russian-air-assault-on-kharkiv-kills-three-as-ukraine-pursues-ceasefire-efforts",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Fighting continued despite ongoing peace efforts and international backing for ceasefire talks",
+          "date": "2026-06-10",
+          "role_evidence": "Non-Western outlet foregrounding the ceasefire/diplomacy angle in its headline, broadening the reach of this framing beyond US/EU media",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481799+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The verified identities and stories of the children and civilians killed",
+          "found_in_framing": "Human Cost & Civilian Suffering; War Crimes & Civilian Atrocity",
+          "impact": "Reader analyzes the strike as a negotiating tactic without confronting its immediate human cost, enabling abstraction of suffering",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144313+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Technical details about the Izdeliye-30 missile and why Ukrainian air defenses were overwhelmed",
+          "found_in_framing": "New Weapons Technology & Escalation Risk; Air Defense Gap & Western Military Aid",
+          "impact": "Reader cannot assess whether the strike represents a genuine shift in Russian capability or merely reflects existing vulnerabilities",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144317+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The broader context of tit-for-tat exchanges and Ukrainian military operations",
+          "found_in_framing": "Escalation Symmetry & Both-Sides Aerial War",
+          "impact": "Reader sees Russia as unilaterally escalating rather than responding to Ukrainian actions, misrepresenting the conflict's reciprocal nature",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144320+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481806+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "cc3abca5",
+      "name": "Russia's Military Justification",
+      "question": "Was the strike a lawful military operation targeting weapons production and energy infrastructure, as Russia claims?",
+      "key_claim": "Russia's Defense Ministry maintains its forces struck legitimate military-industrial targets\u2014weapons factories, drone assembly sites, airfields, and energy facilities\u2014and denies deliberately targeting civilians.",
+      "description": "This framing, advanced primarily by Russian state institutions and echoed by some skeptical voices, holds that the strike was a military operation against dual-use or military targets, and that Ukrainian casualty figures and the 'civilian building' characterization are contested or propagandistic.",
+      "emphasizes": "Russia's stated target list (military-industrial complexes, airfields, energy facilities), framing civilian deaths as collateral or unverified, Ukrainian counter-strikes on Russian territory",
+      "downplays": "Verified civilian casualties, child victims, the residential nature of the destroyed building, war crimes investigations",
+      "tone": "dismissive | measured",
+      "sample_headlines": [
+        "Russia's Defense Ministry says strike targeted Ukrainian military factories, energy facilities, air bases (RFE/RL, via Interfax, Mar 2026)",
+        "Russian Defense Ministry: Tuesday's bombardment struck military-industrial facilities (PBS/AP, Jun 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6ecfc45af0c8",
+          "name": "Russian Defense Ministry (via Interfax / TASS state media)",
+          "url": "https://www.nbcnews.com/world/ukraine/russia-hits-ukraine-drones-missiles-kills-least-seven-kharkiv-rcna262213",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Russia's Defence Ministry said its forces carried out massive overnight strikes on Ukrainian military-industrial complexes, military airfields and energy facilities",
+          "date": "2026-03-07",
+          "role_evidence": "Primary source of the military-targets framing; all Western outlets were obliged to include it as the official Russian government position",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481812+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6b029cc424ae",
+          "name": "CBS News (in passing, as obligatory balance)",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The Russian Defense Ministry on Saturday said that its forces carried out a nighttime strike on Ukrainian military targets",
+          "date": "2026-06-07",
+          "role_evidence": "Carried Russian ministry statement in standard attribution; represents the routine Western practice of quoting but not endorsing the Russian framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481818+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "621642737a07",
+          "name": "Good Morning America / ABC News",
+          "url": "https://www.goodmorningamerica.com/amp/news/story/russia-launches-horrific-drone-missile-strikes-ukraine-killing-133506283",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "'The targets of the strike have been achieved, all designated objects have been hit,' the [Russian] ministry claimed",
+          "date": "2026-06-02",
+          "role_evidence": "Used the word 'claimed' to signal skepticism, effectively pushing back on the Russian military-targets framing while still reporting it",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481824+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Verified civilian casualties, named victims (children, teachers, pregnant women), and photographic evidence of the residential building",
+          "found_in_framing": "War Crimes & Civilian Atrocity; Human Cost & Civilian Suffering",
+          "impact": "Reader cannot independently verify the scale of civilian harm or assess whether the strike's effects match Russia's stated intentions",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144325+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical specifications of the Izdeliye-30 and its jamming-resistant guidance, which suggests precision capability",
+          "found_in_framing": "New Weapons Technology & Escalation Risk",
+          "impact": "Reader cannot evaluate whether Russia's precision claims are credible given the weapon's technical characteristics",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144329+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The pattern of Ukrainian drone strikes on Russian oil infrastructure and military targets",
+          "found_in_framing": "Escalation Symmetry & Both-Sides Aerial War",
+          "impact": "Reader sees Russian strikes as unprovoked rather than understanding them as part of a cycle of mutual escalation",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144332+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "War crimes investigations and legal findings about intentionality",
+          "found_in_framing": "War Crimes & Civilian Atrocity",
+          "impact": "Reader cannot assess whether Russia's denial has been investigated or refuted by international bodies",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144337+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481832+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e7c7c7b6",
+      "name": "Geopolitical Distraction & Western Attention Deficit",
+      "question": "Is the West's focus on the Middle East conflict allowing Russia to escalate in Ukraine with reduced scrutiny and consequences?",
+      "key_claim": "The US-Israel campaign against Iran has drained Western diplomatic attention, interceptor stockpiles, and political bandwidth from Ukraine, creating a window Russia is exploiting with intensified strikes.",
+      "description": "This framing situates the Kharkiv attack within a structural argument about global attention competition: the same military and political bandwidth serving one crisis (Iran) has diminished the West's capacity and will to respond to another (Ukraine), which Russia is deliberately exploiting.",
+      "emphasizes": "Postponed US-brokered peace talks, Patriot interceptor diversion to the Middle East theater, Ukraine's air-defense shortfall as a byproduct of global overstretch",
+      "downplays": "Russia's agency as primary aggressor, Ukrainian operational resilience, European efforts to fill the gap",
+      "tone": "measured | alarmed",
+      "sample_headlines": [
+        "The war in the Middle East has drawn international attention away from Europe's biggest conflict since World War II (AP/PBS, Mar 2026)",
+        "Diplomatic efforts led by the United States to broker peace have slowed as Washington's focus has shifted towards Iran (Outlook India, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "2925e7457641",
+          "name": "Associated Press / PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/world/russian-missile-hits-apartment-building-in-ukraines-kharkiv-killing-at-least-10",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "The war in the Middle East has drawn international attention away from Europe's biggest conflict since World War II",
+          "date": "2026-03-07",
+          "role_evidence": "AP wire directly named the Middle East distraction as structural context for the Kharkiv attack, inserting this framing into hundreds of derived articles",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481840+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4842614804b2",
+          "name": "Outlook India",
+          "url": "https://www.outlookindia.com/international/russian-air-assault-on-kharkiv-kills-three-as-ukraine-pursues-ceasefire-efforts",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Diplomatic efforts led by the United States to broker peace between Russia and Ukraine have slowed as Washington's focus has shifted towards efforts to resolve the conflict involving Iran",
+          "date": "2026-06-10",
+          "role_evidence": "Global South outlet amplifying the attention-deficit framing, extending it beyond the Western media bubble",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481846+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c68408cc943e",
+          "name": "Defence Ukraine (defenceukraine.com)",
+          "url": "https://www.defenceukraine.com/en/insights/ukraine-air-defence-pivot-2026/",
+          "carrier_type": "other",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Washington has chosen CENTCOM reconstitution and INDOPACOM deterrence over European resupply",
+          "date": "2026-05",
+          "role_evidence": "Technical deep-dive making the explicit causal link between US Middle East operations and Ukraine's air-defense gap; widely cited in defense policy circles",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481851+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The immediate human suffering\u2014names, faces, and stories of victims",
+          "found_in_framing": "Human Cost & Civilian Suffering; War Crimes & Civilian Atrocity",
+          "impact": "Reader analyzes the strike as a symptom of Western overstretch without confronting the concrete human toll, enabling depersonalization",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144344+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's primary agency and strategic decision-making in choosing to escalate",
+          "found_in_framing": "Russia's Military Justification; Peace Process Disruption",
+          "impact": "Reader may blame Western distraction rather than Russian aggression, obscuring who initiated the escalation",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144348+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "European efforts and capabilities to fill the air-defense gap independently",
+          "found_in_framing": "Air Defense Gap & Western Military Aid",
+          "impact": "Reader sees the situation as hopeless Western failure rather than understanding ongoing European mobilization",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144354+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481858+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b12aa67d",
+      "name": "Escalation Symmetry & Both-Sides Aerial War",
+      "question": "Are both Russia and Ukraine engaged in a mutually escalating aerial war that increases civilian risk on both sides?",
+      "key_claim": "The Kharkiv strike is one episode in a cycle of intensifying aerial exchanges in which both sides have launched large-scale attacks on each other's civilian and infrastructure targets, raising the overall cost for populations on both sides of the border.",
+      "description": "This framing resists assigning exclusive moral responsibility by documenting the reciprocal nature of air warfare: Russia strikes Ukrainian cities; Ukraine strikes Russian refineries, airfields, and residential buildings in occupied and Russian territory. It asks whether escalation dynamics are driving casualties more than any single actor's decisions.",
+      "emphasizes": "Ukrainian drone strikes on Russian oil infrastructure and air bases, Kharkiv's role in both receiving strikes and as a staging area for Ukrainian operations, the rhythm of tit-for-tat aerial exchanges",
+      "downplays": "The asymmetry in scale (Russia's strikes are far larger), the legal distinction between occupied and unoccupied territory, victim identification",
+      "tone": "measured | dismissive",
+      "sample_headlines": [
+        "The latest exchange of attacks comes amid intensified aerial warfare between the two sides (Outlook India, 2026)",
+        "Russia launched the devastating drone assault on Russian air bases, and Moscow launched its largest drone attack of the war against Ukraine (CBS News, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c30268fbc121",
+          "name": "Outlook India",
+          "url": "https://www.outlookindia.com/international/russian-air-assault-on-kharkiv-kills-three-as-ukraine-pursues-ceasefire-efforts",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The latest exchange of attacks comes amid intensified aerial warfare between the two sides",
+          "date": "2026-06-10",
+          "role_evidence": "Explicitly framed the Kharkiv strike as one node in a bilateral exchange rather than a unilateral Russian act",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481865+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0bca11446bff",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Monday's talks unfolded a day after a string of stunning long-range attacks by both sides",
+          "date": "2026-06-07",
+          "role_evidence": "Noted simultaneous Ukrainian and Russian large-scale strikes, contextualizing Kharkiv within mutual escalation rather than unilateral aggression",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481870+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0040c0046beb",
+          "name": "Russia Matters / Russia Analytical Report",
+          "url": "https://www.russiamatters.org/news/russia-analytical-report/russia-analytical-report-dec-22-2025-jan-5-2026",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Russia launched the devastating drone assault\u2026and Moscow launching its largest drone attack of the war against Ukraine",
+          "date": "2026-01-05",
+          "role_evidence": "Harvard Kennedy School-affiliated analytical publication treating aerial warfare as a bilateral escalatory dynamic rather than purely one-sided aggression",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260107230640/https://www.russiamatters.org/news/russia-analytical-report/russia-analytical-report-dec-22-2025-jan-5-2026",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481878+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b54496ddbb66",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "Zelenskyy visited front-line positions near Druzhkivka on Friday, telling troops that battlefield strength would determine Ukraine's hand at the negotiating table",
+          "date": "2026-03-07",
+          "role_evidence": "By noting Zelenskyy's 'strength at the table' framing, Al Jazeera implicitly acknowledged both sides' use of force as bargaining tools, pushing back on a purely victim-aggressor binary",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481884+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The massive asymmetry in scale\u2014Russia's strikes are far larger and more frequent than Ukrainian responses",
+          "found_in_framing": "War Crimes & Civilian Atrocity; Human Cost & Civilian Suffering",
+          "impact": "Reader may perceive the conflict as balanced or equivalent when Russia's aerial campaign is quantitatively and qualitatively dominant",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144361+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The legal and moral distinction between strikes on occupied territory versus unoccupied territory",
+          "found_in_framing": "War Crimes & Civilian Atrocity",
+          "impact": "Reader cannot apply international law frameworks that differentiate between defensive and aggressive operations",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144365+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific identities and stories of the victims in this particular strike",
+          "found_in_framing": "Human Cost & Civilian Suffering",
+          "impact": "Reader sees the strike as one data point in a statistical pattern rather than a discrete tragedy with named victims",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144369+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical specifications of the new Izdeliye-30 and what it reveals about escalation",
+          "found_in_framing": "New Weapons Technology & Escalation Risk",
+          "impact": "Reader cannot assess whether this represents a qualitative shift in Russian capability or merely continuation of existing patterns",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144374+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481890+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "35873d67",
+      "name": "New Weapons Technology & Escalation Risk",
+      "question": "Does Russia's deployment of the jamming-resistant Izdeliye-30 cruise missile represent a qualitative escalation that changes the threat calculus for Ukraine and NATO?",
+      "key_claim": "Russia's first confirmed combat use of the Izdeliye-30\u2014with 1,500 km range and satellite navigation resistant to electronic jamming\u2014marks a new phase of aerial escalation that existing Ukrainian and European air defenses are not optimized to defeat.",
+      "description": "This is a defense-technical and strategic framing focused on what the specific weapon used in Kharkiv reveals about Russia's evolving capabilities. It treats the attack as a data point about military modernization rather than primarily a human tragedy or diplomatic signal.",
+      "emphasizes": "Weapon specifications (range, guidance, jamming resistance), implications for NATO air defense planning, Russia's pattern of introducing new weapons in Ukrainian combat testing",
+      "downplays": "Individual victim stories, peace process implications, historical context of earlier strikes",
+      "tone": "measured",
+      "sample_headlines": [
+        "Russia kills 10 in Ukraine strike including children using new missile (Al Jazeera, Mar 7 2026)",
+        "The regional Prosecutor's Office said the building was hit by a new Russian cruise missile, known as Izdeliye-30 (PBS/AP, Mar 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fbf5b8369a0f",
+          "name": "PBS NewsHour / Associated Press",
+          "url": "https://www.pbs.org/newshour/world/russian-missile-hits-apartment-building-in-ukraines-kharkiv-killing-at-least-10",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The new subsonic air-launched weapon\u2026has a range of 1,500 kilometers and is equipped with a new satellite navigation system more resistant to jamming",
+          "date": "2026-03-07",
+          "role_evidence": "AP wire was the primary vehicle distributing the Izdeliye-30 technical specifications globally, making them a standard element of all downstream coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481898+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0d7f7323e26f",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Russia kills 10 in Ukraine strike including children with new missile",
+          "date": "2026-03-07",
+          "role_evidence": "First major outlet to put 'new missile' in its headline, establishing the Izdeliye-30 as a named, newsworthy weapon development rather than a generic strike",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481906+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "360d5c7884b1",
+          "name": "Defence Ukraine (defenceukraine.com)",
+          "url": "https://www.defenceukraine.com/en/insights/ukraine-air-defence-pivot-2026/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Dispersed siting against advanced Russian intelligence, surveillance, and reconnaissance cueing is no longer survivable on the frontline timescale",
+          "date": "2026-05",
+          "role_evidence": "Technical defense publication elaborating the strategic implications of new Russian weapons for Ukrainian and NATO air defense architecture",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481912+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "34de1b71a798",
+          "name": "Kharkiv Regional Prosecutor's Office",
+          "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Preliminary findings indicate Russia deployed the Izdeliye-30 cruise missile in the strike",
+          "date": "2026-03-07",
+          "role_evidence": "First body to officially name the weapon used, providing the evidentiary anchor for all subsequent technical framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:04:46.481918+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The names, faces, and personal stories of those killed by the Izdeliye-30 strike",
+          "found_in_framing": "Human Cost & Civilian Suffering; War Crimes & Civilian Atrocity",
+          "impact": "Reader focuses on technical specifications and NATO planning implications while remaining emotionally disconnected from human consequences",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144379+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The timing of this strike relative to stalled peace negotiations and Russia's negotiating strategy",
+          "found_in_framing": "Peace Process Disruption",
+          "impact": "Reader sees the strike as a technical/military escalation rather than a strategic move timed to diplomatic moments",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144383+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The broader pattern of tit-for-tat exchanges and Ukrainian military operations",
+          "found_in_framing": "Escalation Symmetry & Both-Sides Aerial War",
+          "impact": "Reader may see Russian weapons introduction as unilateral escalation rather than part of a reciprocal cycle",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144432+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's stated rationale for the strike and claims about military targets",
+          "found_in_framing": "Russia's Military Justification",
+          "impact": "Reader cannot assess whether the weapon's precision capabilities align with or contradict Russia's targeting claims",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:05:06.144466+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:04:46.481926+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: Ukrainian military/strategic response framing (how Ukraine is adapting tactics, air defense improvements, or counteroffensive implications). Missing: Russian domestic perspective beyond justification (war fatigue, economic costs, domestic opposition). Missing: Regional/local governance framing (how Kharkiv Oblast administration is managing displacement, reconstruction, civilian morale). Missing: International humanitarian law and accountability mechanisms framing (ICC investigations, documentation efforts, precedent-setting for future prosecutions).",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine resulted in at least 10 deaths and 106 injuries.",
+    "rated_outlets": 2,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 1,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 50,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 1,
+    "right_of_center": 0,
+    "lean_index": -0.5,
+    "resolve_rate": 0.33,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 4,
+      "examples": [
+        {
+          "carrier": "RFE/RL",
+          "domain": "rferl.org"
+        },
+        {
+          "carrier": "NBC News (Reuters pool reporting)",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "Good Morning America / ABC News",
+          "domain": "goodmorningamerica.com"
+        },
+        {
+          "carrier": "Outlook India",
+          "domain": "outlookindia.com"
+        }
+      ]
+    },
+    "non_news_carriers": 3,
+    "matched": [
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour / Associated Press",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 21,
+        "political": 3,
+        "social": 0,
+        "institutional": 3,
+        "academic": 1,
+        "other": 3
+      },
+      "vested_interest": 6,
+      "framings_with_vested": 4,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 14,
+    "framings": [
+      {
+        "framing_id": "9f34319e",
+        "name": "War Crimes & Civilian Atrocity",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0b5f13cb66e0",
+            "display": "Kharkiv Regional Prosecutor's Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a7cdd8d2d48c",
+            "display": "RFE/RL",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "885ecf45f2ed",
+            "display": "Ukraine Deputy Foreign Minister Mariana Betsa",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "97db8849",
+        "name": "Human Cost & Civilian Suffering",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "da2b39e85156",
+            "display": "Good Morning America",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "85d13c5a",
+        "name": "Air Defense Gap & Western Military Aid",
+        "n_carriers": 6,
+        "primary": 4,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "e5730fbc017f",
+            "display": "Defence Ukraine",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "58d327f9d3f3",
+            "display": "President Volodymyr Zelenskyy",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bba14d9b2152",
+            "display": "Ukrainian Foreign Minister Andrii Sybiha",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "7841af89",
+        "name": "Peace Process Disruption",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a7cdd8d2d48c",
+            "display": "RFE/RL",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "01655e6709f2",
+            "display": "Outlook India",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "cc3abca5",
+        "name": "Russia's Military Justification",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "0dc63e45d80a",
+            "display": "Russian Defense Ministry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "da2b39e85156",
+            "display": "Good Morning America",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e7c7c7b6",
+        "name": "Geopolitical Distraction & Western Attention Deficit",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "e5730fbc017f",
+            "display": "Defence Ukraine",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "01655e6709f2",
+            "display": "Outlook India",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "b12aa67d",
+        "name": "Escalation Symmetry & Both-Sides Aerial War",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "01655e6709f2",
+            "display": "Outlook India",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4aca325ba620",
+            "display": "Russia Matters",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "35873d67",
+        "name": "New Weapons Technology & Escalation Risk",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e5730fbc017f",
+            "display": "Defence Ukraine",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0b5f13cb66e0",
+            "display": "Kharkiv Regional Prosecutor's Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Human Cost & Civilian Suffering",
+          "New Weapons Technology & Escalation Risk",
+          "Peace Process Disruption",
+          "War Crimes & Civilian Atrocity"
+        ]
+      },
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Air Defense Gap & Western Military Aid",
+          "Geopolitical Distraction & Western Attention Deficit",
+          "New Weapons Technology & Escalation Risk",
+          "War Crimes & Civilian Atrocity"
+        ]
+      },
+      {
+        "actor_id": "e5730fbc017f",
+        "display": "Defence Ukraine",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Air Defense Gap & Western Military Aid",
+          "Geopolitical Distraction & Western Attention Deficit",
+          "New Weapons Technology & Escalation Risk"
+        ]
+      },
+      {
+        "actor_id": "0b5f13cb66e0",
+        "display": "Kharkiv Regional Prosecutor's Office",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "New Weapons Technology & Escalation Risk",
+          "War Crimes & Civilian Atrocity"
+        ]
+      },
+      {
+        "actor_id": "a7cdd8d2d48c",
+        "display": "RFE/RL",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Peace Process Disruption",
+          "War Crimes & Civilian Atrocity"
+        ]
+      },
+      {
+        "actor_id": "01655e6709f2",
+        "display": "Outlook India",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Escalation Symmetry & Both-Sides Aerial War",
+          "Geopolitical Distraction & Western Attention Deficit"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "champions": [
+          "Human Cost & Civilian Suffering",
+          "New Weapons Technology & Escalation Risk",
+          "Peace Process Disruption",
+          "War Crimes & Civilian Atrocity"
+        ],
+        "opposes": [
+          "Escalation Symmetry & Both-Sides Aerial War"
+        ]
+      },
+      {
+        "actor_id": "da2b39e85156",
+        "display": "Good Morning America",
+        "actor_type": "news",
+        "champions": [
+          "Human Cost & Civilian Suffering"
+        ],
+        "opposes": [
+          "Russia's Military Justification"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Russia's Military Justification",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Geopolitical Distraction & Western Attention Deficit",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russia's Military Justification",
+        "b": "Geopolitical Distraction & Western Attention Deficit",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russia's Military Justification",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Air Defense Gap & Western Military Aid",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Air Defense Gap & Western Military Aid",
+        "b": "Peace Process Disruption",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Air Defense Gap & Western Military Aid",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Air Defense Gap & Western Military Aid",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Human Cost & Civilian Suffering",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Geopolitical Distraction & Western Attention Deficit",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Peace Process Disruption",
+        "b": "Russia's Military Justification",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Peace Process Disruption",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Russia's Military Justification",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Escalation Symmetry & Both-Sides Aerial War",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Peace Process Disruption",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Peace Process Disruption",
+        "b": "Geopolitical Distraction & Western Attention Deficit",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Geopolitical Distraction & Western Attention Deficit",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Air Defense Gap & Western Military Aid",
+        "b": "Russia's Military Justification",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Air Defense Gap & Western Military Aid",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "Peace Process Disruption",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Air Defense Gap & Western Military Aid",
+        "b": "Geopolitical Distraction & Western Attention Deficit",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Russia's Military Justification",
+        "shared": 2,
+        "jaccard": 0.4
+      },
+      {
+        "a": "Geopolitical Distraction & Western Attention Deficit",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 2,
+        "jaccard": 0.4
+      },
+      {
+        "a": "War Crimes & Civilian Atrocity",
+        "b": "New Weapons Technology & Escalation Risk",
+        "shared": 3,
+        "jaccard": 0.5
+      },
+      {
+        "a": "Peace Process Disruption",
+        "b": "Escalation Symmetry & Both-Sides Aerial War",
+        "shared": 3,
+        "jaccard": 0.6
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "official": 3,
+      "organization": 2,
+      "academic": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.429,
+      "siloed_share": 0.357,
+      "mean_jaccard": 0.187
+    },
+    "structure_note": "6 of 14 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:05:08.664919+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

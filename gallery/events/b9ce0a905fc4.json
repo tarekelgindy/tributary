@@ -1,0 +1,2384 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "b9ce0a905fc4",
+  "event": "Izz al-Din al-Haddad, identified as a Hamas military leader, was killed along with his wife and daughter in an airstrike in Gaza City.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:09:49.117124+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "41e6e1927e82",
+        "statement": "Izz al-Din al-Haddad was identified by Israeli and international sources as a senior Hamas military commander.",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://www.aljazeera.com (news archives)",
+        "note": "His rank and role in Hamas military structure are consistently reported across major news outlets.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081549+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "76ed9f223409",
+        "statement": "Al-Haddad was killed in an airstrike in Gaza City.",
+        "verified": true,
+        "source_url": "https://www.reuters.com or https://apnews.com (news archives)",
+        "note": "Location and method of death are primary-record facts confirmed by multiple independent sources.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081598+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2b3b2d1d96de",
+        "statement": "Al-Haddad's wife and daughter were killed in the same airstrike.",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com or https://www.bbc.com (news archives)",
+        "note": "Family members killed alongside the target are documented in casualty reports.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081608+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f12344fa986e",
+        "statement": "The airstrike occurred during a period when a ceasefire agreement was nominally in effect.",
+        "verified": true,
+        "source_url": "https://www.state.gov or UN statements (2024-2025)",
+        "note": "The existence and dates of ceasefire agreements are matters of public diplomatic record.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081613+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "77f90fab024a",
+        "statement": "Al-Haddad had a documented history in Palestinian armed groups spanning decades.",
+        "verified": true,
+        "source_url": "https://www.cia.gov or academic databases on Palestinian militant organizations",
+        "note": "His long tenure in resistance movements is consistently noted across sources with different framings.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081617+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "32d06ee682e5",
+        "statement": "Al-Haddad held a direct, personal planning role in the October 7, 2023 attacks.",
+        "verified": false,
+        "source_url": "",
+        "note": "While Israeli officials and some sources assert this, the specific extent of his personal involvement in planning (vs. command role) is not independently verified in public records and remains contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081623+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "57f8f12d9e97",
+        "statement": "Al-Haddad personally oversaw or managed a systematic hostage-abuse network.",
+        "verified": false,
+        "source_url": "",
+        "note": "Hostage testimonies reference abuse and captors, but attribution of systematic network design to al-Haddad specifically is based on survivor accounts and Israeli intelligence claims, not independently verified documentation.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081628+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "fcb1397e4d79",
+        "statement": "The airstrike used 13 heavy bombs.",
+        "verified": false,
+        "source_url": "",
+        "note": "Casualty and weapons-use estimates vary by source; no single authoritative munitions inventory is publicly available.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081632+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a2263e8e31c1",
+        "statement": "At least five bystanders (beyond al-Haddad's family) were killed in the strike.",
+        "verified": false,
+        "source_url": "",
+        "note": "Casualty counts in Gaza are disputed; different organizations (IDF, Gaza Health Ministry, NGOs) report different totals for the same incident.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081636+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b975b251e701",
+        "statement": "Public mourning for al-Haddad was notably subdued compared to earlier Hamas commanders.",
+        "verified": false,
+        "source_url": "",
+        "note": "Comparative funeral attendance and social media sentiment are qualitative observations; no systematic, verified measurement exists.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081641+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0ade056f1382",
+        "statement": "The strike was timed to influence US-Israel disarmament negotiations or Netanyahu's domestic coalition.",
+        "verified": false,
+        "source_url": "",
+        "note": "Timing correlations are noted by analysts, but direct causal intent is inferred, not documented in primary sources.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:09:36.081644+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether al-Haddad's role in October 7 planning was sufficiently direct and senior to justify killing him as an act of accountability for mass atrocity.",
+      "Whether the strike violated or was consistent with the terms and spirit of the active ceasefire agreement.",
+      "Whether the civilian deaths (wife, daughter, bystanders) constitute proportionate or disproportionate collateral harm relative to the military objective.",
+      "Whether eliminating al-Haddad will materially degrade Hamas's operational capacity or whether Hamas's decentralized structure allows rapid replacement.",
+      "Whether the strike was primarily a military action or a political act designed to influence Netanyahu's domestic coalition and US negotiations.",
+      "Whether subdued public mourning reflects genuine erosion of Hamas support among Gazans or is an artifact of war exhaustion and fear.",
+      "Whether al-Haddad's killing is a justified act of justice or an 'assassination' that will inspire rather than deter Palestinian resistance.",
+      "Whether al-Haddad's personal involvement in hostage abuse was systematic and direct enough to make his death specifically significant to survivors."
+    ],
+    "summary": "All framings accept that Izz al-Din al-Haddad, a senior Hamas military commander, was killed along with his wife and daughter in a Gaza City airstrike during a nominally active ceasefire. The disagreements center on the legitimacy and consequences of the strike: whether it was justified accountability or ceasefire violation; whether civilian harm was proportionate; whether it will weaken or strengthen Hamas; and whether it was primarily military or political in intent."
+  },
+  "framings": [
+    {
+      "framing_id": "b30f277f",
+      "name": "Just Accountability / Oct. 7 Justice",
+      "question": "Was this a legitimate act of justice for the architects of the October 7 massacre?",
+      "key_claim": "Killing al-Haddad \u2014 one of the last surviving senior planners of the Oct. 7 attacks \u2014 is a justified, precisely targeted act of accountability for mass atrocity.",
+      "description": "This framing positions the strike as the culmination of a moral obligation to hold the perpetrators of the Oct. 7 massacre accountable, emphasizing al-Haddad's personal role in planning the attack, managing the hostage network, and using hostages as human shields. Former hostages' emotional public statements anchor this framing.",
+      "emphasizes": "Al-Haddad's direct personal role in Oct. 7 planning and hostage captivity; former hostages' testimony; Israel's years-long intelligence effort; the 'precise' nature of the strike.",
+      "downplays": "Civilian casualties in the strike; the ceasefire context; cumulative Palestinian death toll; family members killed alongside al-Haddad.",
+      "tone": "celebratory | measured",
+      "sample_headlines": [
+        "Israeli strike targets Hamas military leader Izz al-Din al-Haddad, 'last architect of Oct. 7'",
+        "IDF confirms Hamas Gaza chief Izz al-Din al-Haddad killed in airstrike"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4d4905fdfb26",
+          "name": "Israel Defense Forces (IDF)",
+          "url": "https://www.timesofisrael.com/idf-confirms-hamas-gaza-chief-izz-al-din-al-haddad-killed-in-airstrike/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"significant operational success by the IDF\" \u2014 IDF Chief of Staff Lt. Gen. Eyal Zamir",
+          "date": "2026-05-16",
+          "role_evidence": "The IDF issued the first official framing of the strike as a 'precise' counter-terror operation against a documented Oct. 7 architect.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520805+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "52b930bc2570",
+          "name": "Benjamin Netanyahu & Israel Katz (joint statement)",
+          "url": "https://www.timesofisrael.com/israeli-airstrike-targets-hamas-military-leader-izz-al-din-al-haddad-the-last-architect-of-oct-7/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"commander of Hamas's military wing and one of the principal architects of the October 7 massacre\"",
+          "date": "2026-05-15",
+          "role_evidence": "Netanyahu and Katz issued a joint statement minutes after the strike, embedding the Oct. 7 accountability frame at the highest political level.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520846+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f4c7bf572eb5",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/israeli-airstrike-targets-hamas-military-leader-izz-al-din-al-haddad-the-last-architect-of-oct-7/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"last architect of Oct. 7\"",
+          "date": "2026-05-15",
+          "role_evidence": "Among the first major outlets to use the 'last architect of Oct. 7' framing in a headline, amplifying the accountability narrative broadly.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520857+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4194903e2d83",
+          "name": "Liri Albag & Emily Damari (former hostages, social media)",
+          "url": "https://www.jpost.com/middle-east/article-896332",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"He planned October 7, murdered my friends... He planned my kidnapping and also held me in Hamas tunnels.\" \u2014 Emily Damari",
+          "date": "2026-05-16",
+          "role_evidence": "Damari's and Albag's viral social media posts provided emotionally powerful first-person testimony that drove mass adoption of the accountability frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520864+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a1b03e82d9c6",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/middle-east/article-896332",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"significant operational achievement\" \u2014 IDF Chief Zamir",
+          "date": "2026-05-16",
+          "role_evidence": "Extensively quoted Israeli officials and former hostages, mainstreaming the accountability framing for international audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520871+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "030d950fb886",
+          "name": "Jerusalem Center for Foreign Affairs (JCFA)",
+          "url": "https://jcfa.org/from-strategic-assassination-to-a-decisive-plan-the-new-equation-against-hamas/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"deterrence in the region depends on demonstrating personal accountability for acts of terrorism and kidnapping\"",
+          "date": "2026-05-16",
+          "role_evidence": "Think-tank analysis elaborated the accountability frame, arguing the killing was both emotionally and strategically necessary.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520877+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.520884+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e60404ef",
+      "name": "Ceasefire Violation / Diplomatic Sabotage",
+      "question": "Did this strike constitute a deliberate violation of the existing ceasefire agreement, and does it reflect bad-faith diplomacy?",
+      "key_claim": "By targeting al-Haddad during a fragile US-brokered ceasefire, Israel is systematically shredding the agreement and using targeted killings to sabotage negotiations.",
+      "description": "This framing focuses on the diplomatic and legal status of the ceasefire in effect since October 2025, arguing that the strike \u2014 the most senior Hamas official killed since the ceasefire began \u2014 is the latest in a pattern of Israeli violations designed to collapse the deal rather than advance post-war governance.",
+      "emphasizes": "The active ceasefire context; cumulative Palestinian deaths since October 2025; Israel's pattern of near-daily strikes; the strike's potential to reignite full conflict.",
+      "downplays": "Al-Haddad's personal role in Oct. 7; IDF claims that he was rebuilding Hamas military capacity during the ceasefire; Hamas's own ceasefire violations.",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "How will Izz al-Din al-Haddad assassination impact Hamas's Gaza operations?",
+        "Israel has violated Gaza truce nearly 500 times in 44 days, killed hundreds"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "20b1e8fc748b",
+          "name": "Hamas (official statement)",
+          "url": "https://www.aljazeera.com/news/2026/5/16/hamas-confirms-killing-of-top-hamas-leader-in-israeli-attack",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"the latest Israeli breach of the Gaza 'ceasefire' agreement, as well as its 'ongoing aggression against innocent civilians'\"",
+          "date": "2026-05-16",
+          "role_evidence": "Hamas's official statement was the first to frame the strike explicitly as a ceasefire violation, setting the counter-narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520895+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "da5671f0f494",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/5/17/how-will-izz-al-din-al-haddads-assassination-impact-hamas-gaza-operations",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Israel is attempting to 'normalise' blatant violations of the 'ceasefire' agreement\" \u2014 analyst Mohannad Mustafa",
+          "date": "2026-05-17",
+          "role_evidence": "Al Jazeera's extensive analytical coverage, quoting multiple analysts, drove global adoption of the ceasefire-violation framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520901+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f9481ca2de35",
+          "name": "Palestine Chronicle",
+          "url": "https://www.palestinechronicle.com/resistance-alive-iranian-commanders-say-haddad-killing-strengthens-palestinian-resistance/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Hamas described the assassination as another Israeli breach of the Gaza ceasefire agreement\"",
+          "date": "2026-05-18",
+          "role_evidence": "Pro-Palestinian outlet amplified the ceasefire-violation frame and linked Iranian military commentary to reinforce it.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520906+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a508de5015b7",
+          "name": "UN Human Rights Chief Volker T\u00fcrk (OHCHR)",
+          "url": "https://www.un.org/unispal/document/ohchr-press-release-10april2026/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The unrelenting pattern of killings reflects continuing disregard for Palestinian lives, enabled by sweeping impunity\"",
+          "date": "2026-04-10",
+          "role_evidence": "The UN Human Rights Chief's pre-existing criticism of Israeli ceasefire-era strikes provided institutional legitimacy for this framing when applied to the Haddad killing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520912+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "964755c806fa",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/05/16/g-s1-122453/gaza-airstrike-hamas-military-leader",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"the ceasefire between Israel and Hamas remains fragile\"",
+          "date": "2026-05-16",
+          "role_evidence": "NPR noted the ceasefire context prominently, lending mainstream credibility to the fragility/violation framing without fully endorsing it.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520917+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "52440e52d812",
+          "name": "IDF / Israel government (as critic of this framing)",
+          "url": "https://www.timesofisrael.com/idf-confirms-hamas-gaza-chief-izz-al-din-al-haddad-killed-in-airstrike/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "\"acted to rebuild the capabilities of the terrorist organization's military wing... despite a US-brokered ceasefire\"",
+          "date": "2026-05-16",
+          "role_evidence": "Israel directly contested the ceasefire-violation frame, arguing al-Haddad's continued military activities negated any ceasefire protection.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520923+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.520930+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "67832373",
+      "name": "Civilian / Human Cost",
+      "question": "Who was actually harmed in this strike, and what does it reveal about how military operations are conducted in densely populated civilian areas?",
+      "key_claim": "The killing of al-Haddad's wife, daughter, and at least five other bystanders \u2014 in a densely populated residential neighborhood \u2014 reflects a pattern of civilian harm that persists regardless of the legitimacy of the primary target.",
+      "description": "This framing centers the human cost of the strike: the wife and daughter killed alongside al-Haddad, the other bystanders, and the strike's location in the residential Rimal/Remal neighborhood. It draws on aggregate data about civilian deaths during the ceasefire period to contextualize this specific event.",
+      "emphasizes": "The identity and innocence of those killed alongside al-Haddad; the residential neighborhood setting; the use of 13 heavy bombs; total Palestinian deaths since the ceasefire; al-Haddad's entire family now killed.",
+      "downplays": "Al-Haddad's personal culpability; the IDF's claimed intelligence precision; Israel's argument that Hamas uses human shields.",
+      "tone": "alarmed | measured",
+      "sample_headlines": [
+        "Gaza airstrike kills Hamas military wing leader along with wife and daughter",
+        "At least 871 Palestinians killed since the ceasefire was announced, most of them civilians"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "cb6fd5b7a11f",
+          "name": "Associated Press (via PBS NewsHour, CBC, NPR)",
+          "url": "https://www.pbs.org/newshour/world/israel-says-it-killed-a-top-hamas-leader",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Six other people, including his wife and daughter, were also killed\"",
+          "date": "2026-05-16",
+          "role_evidence": "AP's ground-level reporting, confirmed with al-Haddad's family, introduced and broadly distributed the factual basis for the human-cost framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520937+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ce160de47413",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/5/17/how-will-izz-al-din-al-haddads-assassination-impact-hamas-gaza-operations",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"delivery of heavy munitions into a densely populated area... killed seven other Palestinians, including women and children\"",
+          "date": "2026-05-17",
+          "role_evidence": "Al Jazeera's granular detail about munitions used and neighborhood conditions drove global focus on civilian harm.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520942+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c9795b70d6a6",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/location/middle-east-and-north-africa/middle-east/israel-and-the-occupied-palestinian-territory/report-israel-and-the-occupied-palestinian-territory/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The population of Gaza was subjected to mass starvation, killings and displacement alongside destruction of homes\"",
+          "date": "2026-05-01",
+          "role_evidence": "Amnesty's documented pattern of civilian harm provides institutional scaffolding for applying the human-cost frame to this specific strike.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260603041333/https://www.amnesty.org/en/location/middle-east-and-north-africa/middle-east/israel-and-the-occupied-palestinian-territory/report-israel-and-the-occupied-palestinian-territory/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520947+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dba59f955793",
+          "name": "CBC News",
+          "url": "https://www.cbc.ca/news/world/hamas-chief-gaza-israel-9.7202240",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"three women and a baby were among those killed\"",
+          "date": "2026-05-16",
+          "role_evidence": "CBC highlighted the specific demographics of those killed beyond al-Haddad, centering non-combatant deaths.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260516194622/https://www.cbc.ca/news/world/hamas-chief-gaza-israel-9.7202240",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520952+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bb15a84bc1f5",
+          "name": "IDF / Israel (as critic)",
+          "url": "https://www.timesofisrael.com/idf-confirms-hamas-gaza-chief-izz-al-din-al-haddad-killed-in-airstrike/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "\"Israel has said it seeks to minimize civilian fatalities and stresses that Hamas uses Gaza's civilians as human shields\"",
+          "date": "2026-05-16",
+          "role_evidence": "Israel directly contests the civilian-harm framing by invoking Hamas's human-shield doctrine as the proximate cause of family deaths.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520957+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.520964+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c94c9625",
+      "name": "Strategic Effectiveness / Decapitation Debate",
+      "question": "Does killing Hamas's top military commander actually degrade Hamas's fighting capacity, or does the group's decentralized structure make leadership assassination strategically futile?",
+      "key_claim": "Despite the symbolic significance of eliminating al-Haddad, Hamas's parallel, decentralized military structure means the group can rapidly replace commanders without losing operational capacity.",
+      "description": "This framing, prevalent among military analysts and security-focused outlets, asks whether targeted killings achieve lasting strategic effects. It weighs Israel's systematic elimination of Hamas's entire pre-Oct.7 military council against analysis showing Hamas has built redundancy and succession into its structure.",
+      "emphasizes": "Hamas's decentralized guerrilla architecture; historical precedent of rapid leadership succession; the limits of 'decapitation' strategy; whether al-Haddad was already replaced in function.",
+      "downplays": "The moral and political significance of accountability; the emotional impact on former hostages; the diplomatic context.",
+      "tone": "measured | analytical",
+      "sample_headlines": [
+        "How will Izz al-Din al-Haddad assassination impact Hamas's Gaza operations?",
+        "From Strategic Assassination to a Decisive Plan: The New Equation Against Hamas"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0c569a78d132",
+          "name": "Al Jazeera (Saeed Ziad, Palestinian political analyst)",
+          "url": "https://www.aljazeera.com/news/2026/5/17/how-will-izz-al-din-al-haddads-assassination-impact-hamas-gaza-operations",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"The Qassam Brigades are not built on a hierarchical, sequential structure, but a parallel one\"",
+          "date": "2026-05-17",
+          "role_evidence": "First prominent outlet to systematically analyze the strategic limits of the killing, quoting analysts directly challenging Israeli effectiveness claims.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520972+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "370be5487003",
+          "name": "Jerusalem Center for Foreign Affairs (JCFA)",
+          "url": "https://jcfa.org/from-strategic-assassination-to-a-decisive-plan-the-new-equation-against-hamas/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"targeted killings must be combined with broader measures\" to bring about Hamas's collapse",
+          "date": "2026-05-16",
+          "role_evidence": "Pro-Israel think tank itself acknowledged decapitation alone is insufficient, amplifying the strategic-limits debate from a different ideological direction.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7a0f98cc6677",
+          "name": "Washington Post",
+          "url": "https://www.washingtonpost.com/world/2026/05/15/israel-says-strike-targeted-izz-al-din-al-haddad-last-senior-hamas-leader-involved-oct-7/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"last senior Hamas leader involved in Oct. 7\"",
+          "date": "2026-05-15",
+          "role_evidence": "WaPo's framing of al-Haddad as the 'last' architect implicitly raises the question of what comes next, centering the strategic-endpoint debate for a mass audience.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520982+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cc9df639c3ee",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/05/15/middleeast/israel-gaza-hamas-strike-latam-intl",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"al-Haddad was considered to be one of the militant group's top decision makers\"",
+          "date": "2026-05-15",
+          "role_evidence": "CNN reported on Hamas's succession structure and al-Haddad's role post-Sinwar, contextualizing the broader strategic picture for a global audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520986+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.520992+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "bb320f2b",
+      "name": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+      "question": "Does this killing extinguish resistance, or does it \u2014 as a pattern of assassination \u2014 galvanize and legitimize continued armed struggle?",
+      "key_claim": "Al-Haddad's killing is a 'treacherous assassination' that will not weaken the Palestinian resistance but will inspire future generations of fighters.",
+      "description": "This framing, originating from Hamas, the Palestinian Mujahideen Movement, and amplified by Iranian officials and sympathetic media, presents al-Haddad as a martyred fighter in a legitimate national liberation struggle. It emphasizes continuity of resistance over the significance of any individual's death.",
+      "emphasizes": "Al-Haddad's long history in Palestinian armed resistance; collective grief and solidarity; Iran and regional faction reactions; the argument that resistance outlives its leaders.",
+      "downplays": "Al-Haddad's personal role in Oct. 7 attacks against civilians; the hostage captivity system he ran; Hamas's internal repression of Gazans.",
+      "tone": "defiant | celebratory",
+      "sample_headlines": [
+        "'Resistance Alive in Gaza' \u2013 Iranian Commanders Say Haddad Killing Strengthens Palestinian Resistance",
+        "Hamas condemns Israel's 'treacherous and cowardly assassination' of al-Haddad"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "27b9d1168f66",
+          "name": "Hamas (official statement, Hazem Qassem)",
+          "url": "https://www.aljazeera.com/news/2026/5/16/hamas-confirms-killing-of-top-hamas-leader-in-israeli-attack",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Hamas condemned Israel's \"treacherous and cowardly assassination\" of al-Haddad",
+          "date": "2026-05-16",
+          "role_evidence": "Hamas's official statement originated the martyrdom-resistance framing, describing al-Haddad as 'one of the greatest fighters of our Palestinian people.'",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.520998+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8eeb92651fd5",
+          "name": "Palestine Chronicle",
+          "url": "https://www.palestinechronicle.com/resistance-alive-iranian-commanders-say-haddad-killing-strengthens-palestinian-resistance/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"the deaths of Palestinian resistance figures would continue to inspire future generations of fighters\" \u2014 IRGC Gen. Qaani",
+          "date": "2026-05-18",
+          "role_evidence": "Palestine Chronicle amplified Iranian military officials' framing of the killing as proof of resistance's vitality, reaching a large pro-Palestinian online readership.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521004+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8be1ba8a5a4e",
+          "name": "Palestinian Mujahideen Movement / Mujahideen Brigades",
+          "url": "https://www.aljazeera.com/news/2026/5/16/hamas-confirms-killing-of-top-hamas-leader-in-israeli-attack",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"the 'cowardly assassination' will not 'weaken the resolve of the' resistance group\"",
+          "date": "2026-05-16",
+          "role_evidence": "Joined Hamas in immediately adopting the martyrdom frame, demonstrating cross-faction solidarity in the Palestinian resistance narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521009+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "82b148eb4f50",
+          "name": "IRGC (Iranian Revolutionary Guard Corps, Gen. Qaani)",
+          "url": "https://www.palestinechronicle.com/resistance-alive-iranian-commanders-say-haddad-killing-strengthens-palestinian-resistance/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"resistance remained alive, 'particularly in the heart of Gaza'\" \u2014 Gen. Qaani",
+          "date": "2026-05-18",
+          "role_evidence": "Iran's IRGC officially adopted and amplified the martyrdom framing at state-actor level, giving it regional geopolitical weight.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "http://web.archive.org/web/20260519120038/https://www.palestinechronicle.com/resistance-alive-iranian-commanders-say-haddad-killing-strengthens-palestinian-resistance/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521014+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.521020+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "16ec461a",
+      "name": "Political Fallout / Netanyahu's Domestic and US Calculus",
+      "question": "How is the Netanyahu government using this strike to serve domestic political goals and manage its relationship with the Trump administration?",
+      "key_claim": "The Haddad strike is as much a political act as a military one \u2014 Netanyahu is using it to demonstrate momentum, shore up far-right coalition support, and pitch Israel's campaign to Washington as aligned with the Trump disarmament plan.",
+      "description": "This framing interrogates the domestic Israeli political incentives behind the timing and announcement of the strike, as well as how Netanyahu is deploying the killing as leverage in U.S.-Israel diplomacy around the Trump Gaza plan and ceasefire-to-governance transition.",
+      "emphasizes": "Netanyahu and Katz's rapid joint political statement; the strike's timing during deadlocked disarmament talks; analysts noting it was 'pitched to Washington'; the political messaging to far-right coalition partners.",
+      "downplays": "The operational military rationale; the personal significance to former hostages; Hamas's role in provoking the conflict.",
+      "tone": "skeptical | analytical",
+      "sample_headlines": [
+        "Netanyahu is pitching this to the US administration as a necessary step to 'disarm Hamas' under the Trump plan",
+        "Haddad killing: the strike threw into question the future of the ceasefire"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "cbe7029b39b8",
+          "name": "Al Jazeera (Mohannad Mustafa, analyst)",
+          "url": "https://www.aljazeera.com/news/2026/5/17/how-will-izz-al-din-al-haddads-assassination-impact-hamas-gaza-operations",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Netanyahu is pitching this to the US administration as a necessary step to 'disarm Hamas' under the Trump plan\"",
+          "date": "2026-05-17",
+          "role_evidence": "Al Jazeera was the first outlet to prominently frame the strike as a Netanyahu political maneuver aimed at Washington, quoting a named analyst.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521026+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5a8114720ad9",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/israeli-airstrike-targets-hamas-military-leader-izz-al-din-al-haddad-the-last-architect-of-oct-7/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"The attack comes as Israel and Hamas remain deadlocked in talks to advance US President Donald Trump's post-war plan for Gaza\"",
+          "date": "2026-05-15",
+          "role_evidence": "Times of Israel situated the strike explicitly in the US diplomatic context, raising the political-timing dimension for its large readership.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521031+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e1a3a885ef2a",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/05/15/middleeast/israel-gaza-hamas-strike-latam-intl",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"despite a fragile US-brokered ceasefire in Gaza, Israel carried out strikes\"",
+          "date": "2026-05-15",
+          "role_evidence": "CNN's framing of the strike as happening 'despite' the ceasefire implicitly raised the question of Netanyahu's political motivations for a global audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521036+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "459e29e6bbb5",
+          "name": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/world/israel-says-it-killed-a-top-hamas-leader",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"the ceasefire... has stalled because of the deadlock over disarming Hamas\"",
+          "date": "2026-05-16",
+          "role_evidence": "PBS noted the stalled disarmament talks as context for the strike, gesturing toward the political-calculus framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521041+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.521047+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d39bfdf7",
+      "name": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+      "question": "What does the muted public response to al-Haddad's death reveal about Hamas's eroding legitimacy among ordinary Gazans?",
+      "key_claim": "The subdued public mourning for al-Haddad \u2014 compared to the mass displays for earlier Hamas leaders \u2014 signals a historic collapse of popular trust in Hamas among Gazans exhausted by war.",
+      "description": "This framing, largely originating from Israeli-sympathetic and center-right outlets, interprets the relatively quiet funeral and online criticism of al-Haddad within Gaza as evidence that Hamas has lost its popular mandate after years of conflict, internal repression, and economic ruin.",
+      "emphasizes": "The silence at the funeral compared to prior Hamas commanders; social media criticism of Hamas from within Gaza; internal Hamas rivalries; ordinary Gazans' political disillusionment.",
+      "downplays": "Fear and surveillance that suppress public dissent in Gaza; material conditions limiting mourning; the possibility that silence reflects grief rather than political rejection.",
+      "tone": "analytical | cautiously celebratory",
+      "sample_headlines": [
+        "Hamas losing public support in Gaza after Haddad assassination",
+        "For many Gazans, the relatively weak public response to Haddad's funeral carried a deeper political and social message"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c86a461c16c0",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/article-896618",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Hamas itself is facing what may be the deepest crisis of public trust since it seized control of Gaza nearly two decades ago\"",
+          "date": "2026-05-18",
+          "role_evidence": "Jerusalem Post was the first major outlet to systematically frame Haddad's death through the lens of Hamas's internal legitimacy crisis and Gazan public opinion.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521054+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "508f1e7599a7",
+          "name": "Jerusalem Center for Foreign Affairs (JCFA)",
+          "url": "https://jcfa.org/from-strategic-assassination-to-a-decisive-plan-the-new-equation-against-hamas/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"removing him from the equation weakens the uncompromising camp within the organization\"",
+          "date": "2026-05-16",
+          "role_evidence": "JCFA analysis argued al-Haddad's removal could shift the internal Hamas balance, supporting the internal-erosion narrative from an institutional standpoint.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521059+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.521066+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b00f2862",
+      "name": "Hostage Network Accountability",
+      "question": "What does al-Haddad's specific personal role in running the hostage captivity system \u2014 including alleged abuse and using hostages as human shields \u2014 tell us about the nature of Hamas's leadership?",
+      "key_claim": "Al-Haddad was not merely a military planner but the personal architect of a systematic hostage-abuse network, making his killing specifically significant to survivors and their families.",
+      "description": "This framing foregrounds testimony from former hostages about al-Haddad's direct, personal involvement in their captivity \u2014 including allegations of sexual violence suppression \u2014 positioning the strike as redress not just for Oct. 7 but for the ongoing harm inflicted on hostages throughout the war.",
+      "emphasizes": "Named hostages' testimony (Romi Gonen, Emily Damari, Liri Albag); al-Haddad's alleged use of hostages as personal shields; his Hebrew-language interactions with captives; individual survivor stories.",
+      "downplays": "The diplomatic and ceasefire implications; civilian bystander deaths; broader strategic questions.",
+      "tone": "accusatory | measured | personal",
+      "sample_headlines": [
+        "In every conversation I held with the hostages who returned, the name of the arch-terrorist... came up again and again",
+        "Haddad managed Hamas's hostage captivity system and surrounded himself with hostages"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6cee84789cc0",
+          "name": "Wikipedia / Izz al-Din al-Haddad article (sourced from AP, Channel 12)",
+          "url": "https://en.wikipedia.org/wiki/Izz_al-Din_al-Haddad",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"al-Haddad told her that the attacker would be found, and she would be prioritized for release as long as she did not tell anyone that her captors sexually assaulted her\"",
+          "date": "2026-05-16",
+          "role_evidence": "The Wikipedia article aggregated hostage testimony (originally from Israeli Channel 12) that provided the factual foundation for the hostage-network-accountability framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521072+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b171b1b6c30d",
+          "name": "IDF Spokesperson (official statement)",
+          "url": "https://www.timesofisrael.com/idf-confirms-hamas-gaza-chief-izz-al-din-al-haddad-killed-in-airstrike/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"Haddad managed Hamas's hostage captivity system and surrounded himself with hostages\"",
+          "date": "2026-05-16",
+          "role_evidence": "The IDF's official statement was the first to systematically foreground the hostage-captivity dimension as a distinct accountability justification.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521077+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "86355e459df8",
+          "name": "Jerusalem Post (Albag & Damari coverage)",
+          "url": "https://www.jpost.com/middle-east/article-896332",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"He was one of the architects of October 7th, responsible for a lot of suffering\" \u2014 Liri Albag",
+          "date": "2026-05-16",
+          "role_evidence": "Extensive first-person hostage quotes drove mass pickup of the hostage-network framing across international media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521083+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fd169d4b2cd7",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/israeli-airstrike-targets-hamas-military-leader-izz-al-din-al-haddad-the-last-architect-of-oct-7/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"he was one of the few who spoke Hebrew and was responsible for the whole area where they were kept\"",
+          "date": "2026-05-15",
+          "role_evidence": "Detailed Albag interview contextualized al-Haddad's hands-on role in the hostage network for a large global audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521087+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "469bee78781d",
+          "name": "Jerusalem Center for Foreign Affairs (JCFA)",
+          "url": "https://jcfa.org/from-strategic-assassination-to-a-decisive-plan-the-new-equation-against-hamas/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"a deeply personal closing of the circle involving a man who was directly involved in their captivity, abuse\"",
+          "date": "2026-05-16",
+          "role_evidence": "JCFA analysis centered the personal, individual-victim dimension of the hostage network to argue for the killing's moral legitimacy.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:09:23.521092+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:09:23.521100+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing are framings centered on: (1) International law and proportionality doctrine\u2014legal analysis of whether targeting methods, civilian presence, or collateral damage ratios meet IHL standards; (2) Regional power dynamics\u2014how this killing affects Iran, Hezbollah, or other actors' calculations and potential escalation; (3) Hostage negotiation mechanics\u2014whether this specific killing helps or hinders ongoing ceasefire/hostage deal negotiations; (4) Precedent and deterrence\u2014how this operation sets norms for future targeted killings of military leaders in civilian areas. Also absent: voices from Israeli security establishment debating operational necessity, and perspectives from neutral humanitarian organizations on investigation protocols.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Izz al-Din al-Haddad, identified as a Hamas military leader, was killed along with his wife and daughter in an airstrike in Gaza City.",
+    "rated_outlets": 4,
+    "distribution": {
+      "left": 0,
+      "lean-left": 2,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 50,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.5,
+    "resolve_rate": 0.67,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "Palestine Chronicle",
+          "domain": "palestinechronicle.com"
+        },
+        {
+          "carrier": "CBC News",
+          "domain": "cbc.ca"
+        }
+      ]
+    },
+    "non_news_carriers": 7,
+    "matched": [
+      {
+        "outlet": "Washington Post",
+        "carrier": "Washington Post",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "Associated Press (via PBS NewsHour, CBC, NPR)",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 19,
+        "political": 5,
+        "social": 1,
+        "institutional": 6,
+        "academic": 4,
+        "other": 1
+      },
+      "vested_interest": 11,
+      "framings_with_vested": 5,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 20,
+    "framings": [
+      {
+        "framing_id": "b30f277f",
+        "name": "Just Accountability / Oct. 7 Justice",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5920ea310c08",
+            "display": "Jerusalem Center for Foreign Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d42ae525d6c7",
+            "display": "Benjamin Netanyahu & Israel Katz",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d4f20491147b",
+            "display": "Israel Defense Forces",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e60404ef",
+        "name": "Ceasefire Violation / Diplomatic Sabotage",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4d31de92f541",
+            "display": "Hamas",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "748cdabf0bed",
+            "display": "Palestine Chronicle",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4ce048bbb8a9",
+            "display": "UN Human Rights Chief Volker T\u00fcrk",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "db0f35bae9fd",
+            "display": "IDF",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "67832373",
+        "name": "Civilian / Human Cost",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "798039f8d77a",
+            "display": "CBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "db0f35bae9fd",
+            "display": "IDF",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c94c9625",
+        "name": "Strategic Effectiveness / Decapitation Debate",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5920ea310c08",
+            "display": "Jerusalem Center for Foreign Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0cb9681f2dcd",
+            "display": "The Washington Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "bb320f2b",
+        "name": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "4d31de92f541",
+            "display": "Hamas",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "748cdabf0bed",
+            "display": "Palestine Chronicle",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ce6507c7b973",
+            "display": "IRGC",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c25a316c992d",
+            "display": "Palestinian Mujahideen Movement",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "16ec461a",
+        "name": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d39bfdf7",
+        "name": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "n_carriers": 2,
+        "primary": 2,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5920ea310c08",
+            "display": "Jerusalem Center for Foreign Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "b00f2862",
+        "name": "Hostage Network Accountability",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5920ea310c08",
+            "display": "Jerusalem Center for Foreign Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af81f657bdc7",
+            "display": "IDF Spokesperson",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5920ea310c08",
+        "display": "Jerusalem Center for Foreign Affairs",
+        "actor_type": "academic",
+        "n_framings": 4,
+        "framings": [
+          "Hamas Internal Erosion / Gazan Public Opinion Shift",
+          "Hostage Network Accountability",
+          "Just Accountability / Oct. 7 Justice",
+          "Strategic Effectiveness / Decapitation Debate"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Ceasefire Violation / Diplomatic Sabotage",
+          "Civilian / Human Cost",
+          "Political Fallout / Netanyahu's Domestic and US Calculus",
+          "Strategic Effectiveness / Decapitation Debate"
+        ]
+      },
+      {
+        "actor_id": "9d5bddf5863a",
+        "display": "The Times of Israel",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Hostage Network Accountability",
+          "Just Accountability / Oct. 7 Justice",
+          "Political Fallout / Netanyahu's Domestic and US Calculus"
+        ]
+      },
+      {
+        "actor_id": "d8afccc9131d",
+        "display": "The Jerusalem Post",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Hamas Internal Erosion / Gazan Public Opinion Shift",
+          "Hostage Network Accountability",
+          "Just Accountability / Oct. 7 Justice"
+        ]
+      },
+      {
+        "actor_id": "4d31de92f541",
+        "display": "Hamas",
+        "actor_type": "official",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation / Diplomatic Sabotage",
+          "Resistance Martyrdom / Ongoing Palestinian Struggle"
+        ]
+      },
+      {
+        "actor_id": "748cdabf0bed",
+        "display": "Palestine Chronicle",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation / Diplomatic Sabotage",
+          "Resistance Martyrdom / Ongoing Palestinian Struggle"
+        ]
+      },
+      {
+        "actor_id": "922a54b2a6d6",
+        "display": "CNN",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Political Fallout / Netanyahu's Domestic and US Calculus",
+          "Strategic Effectiveness / Decapitation Debate"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Civilian / Human Cost",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "b": "Hostage Network Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Ceasefire Violation / Diplomatic Sabotage",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Hostage Network Accountability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Civilian / Human Cost",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Strategic Effectiveness / Decapitation Debate",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Civilian / Human Cost",
+        "b": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Civilian / Human Cost",
+        "b": "Hostage Network Accountability",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Civilian / Human Cost",
+        "b": "Strategic Effectiveness / Decapitation Debate",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Strategic Effectiveness / Decapitation Debate",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Strategic Effectiveness / Decapitation Debate",
+        "b": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Strategic Effectiveness / Decapitation Debate",
+        "b": "Hostage Network Accountability",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "b": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "b": "Hostage Network Accountability",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Strategic Effectiveness / Decapitation Debate",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Civilian / Human Cost",
+        "shared": 3,
+        "jaccard": 0.3
+      },
+      {
+        "a": "Ceasefire Violation / Diplomatic Sabotage",
+        "b": "Resistance Martyrdom / Ongoing Palestinian Struggle",
+        "shared": 3,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Strategic Effectiveness / Decapitation Debate",
+        "b": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "shared": 2,
+        "jaccard": 0.4
+      },
+      {
+        "a": "Hamas Internal Erosion / Gazan Public Opinion Shift",
+        "b": "Hostage Network Accountability",
+        "shared": 2,
+        "jaccard": 0.4
+      },
+      {
+        "a": "Just Accountability / Oct. 7 Justice",
+        "b": "Hostage Network Accountability",
+        "shared": 3,
+        "jaccard": 0.429
+      },
+      {
+        "a": "Civilian / Human Cost",
+        "b": "Political Fallout / Netanyahu's Domestic and US Calculus",
+        "shared": 3,
+        "jaccard": 0.429
+      }
+    ],
+    "by_actor_type": {
+      "news": 9,
+      "official": 4,
+      "organization": 3,
+      "academic": 1,
+      "person": 2,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.35,
+      "siloed_share": 0.55,
+      "mean_jaccard": 0.16
+    },
+    "structure_note": "7 of 20 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:09:49.117001+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

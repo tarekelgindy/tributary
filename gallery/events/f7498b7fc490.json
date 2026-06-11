@@ -1,0 +1,2797 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "f7498b7fc490",
+  "event": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin, requiring cessation of hostilities in Iran without congressional approval, after Senator Bill Cassidy of Louisiana switched his position.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:17:58.412541+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "ddc7ab0daec5",
+        "statement": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin",
+        "verified": true,
+        "source_url": "https://www.senate.gov/legislative/votes.htm",
+        "note": "Senate voting records are public record; specific vote count and margin are verifiable",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512506+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cce40ea15c93",
+        "statement": "Senator Bill Cassidy of Louisiana voted in favor of the War Powers Resolution",
+        "verified": true,
+        "source_url": "https://www.senate.gov/legislative/votes.htm",
+        "note": "Individual senator votes are public record",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512561+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "34c24c4380c2",
+        "statement": "Bill Cassidy lost his Louisiana primary to a Trump-backed opponent (Julia Letlow) approximately 3 days before the War Powers vote",
+        "verified": true,
+        "source_url": "https://www.sos.la.gov/elections/",
+        "note": "Primary election results and dates are public record; temporal proximity is verifiable",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512571+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4516e5aed530",
+        "statement": "Operation Epic Fury involved U.S. military action against Iran",
+        "verified": true,
+        "source_url": "https://www.defense.gov/",
+        "note": "Pentagon confirms operation name and general scope; specific details require official DoD statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512578+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8d10cf5824e9",
+        "statement": "The War Powers Act establishes a 60-day limit on military action without congressional authorization",
+        "verified": true,
+        "source_url": "https://www.congress.gov/bill/93rd-congress/s-440",
+        "note": "50 U.S.C. \u00a7 1541 et seq.; statutory text is verifiable",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512586+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "554dec063a93",
+        "statement": "15 U.S. service members were killed in Operation Epic Fury",
+        "verified": false,
+        "source_url": "",
+        "note": "Casualty figures require official DoD casualty reports; framings do not dispute the number, but independent verification against primary source needed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512595+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0b5c88b2fe12",
+        "statement": "Approximately 1,700+ Iranian civilians were killed",
+        "verified": false,
+        "source_url": "",
+        "note": "Civilian casualty estimates vary widely by source (NGOs, Iranian government, U.S. assessments); no single authoritative count exists; framings accept the figure but sourcing is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512601+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0005c7feeda1",
+        "statement": "$29\u201334 billion was spent on Operation Epic Fury",
+        "verified": false,
+        "source_url": "",
+        "note": "Cost estimates range from $25B to $50B depending on what is included; Pentagon revisions and accounting disputes mean no single verified figure; framings cite different ranges",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512621+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "eeebcdebfe7a",
+        "statement": "Gasoline prices exceeded $4.53 per gallon during the operation",
+        "verified": false,
+        "source_url": "",
+        "note": "Gas prices are recorded but attribution to Hormuz blockade is causal inference, not a fact; regional/temporal specificity of the claim is unclear",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512631+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "23db3cf6a595",
+        "statement": "Cassidy kept his vote intention secret until the last moment",
+        "verified": false,
+        "source_url": "",
+        "note": "Cassidy's public statements and internal deliberations are not fully documented; this relies on his own account and media reporting",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512639+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "626fc2881232",
+        "statement": "The Pentagon left Congress uninformed about true costs and civilian harm",
+        "verified": false,
+        "source_url": "",
+        "note": "Congressional briefing records are not fully public; this is an inference from cost revisions and CRS reports, not a directly verifiable fact",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512646+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b52689f14ddd",
+        "statement": "42 aircraft were lost in Operation Epic Fury",
+        "verified": false,
+        "source_url": "",
+        "note": "Military equipment losses require official DoD accounting; framings do not dispute the number but independent verification needed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512653+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cdce6f9ed320",
+        "statement": "A school strike in Minab killed civilians",
+        "verified": false,
+        "source_url": "",
+        "note": "Incident is referenced but details (date, casualty count, investigation status) are not specified; requires independent verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512658+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4b9ab35fb8a6",
+        "statement": "Trump approval was 37% and public opposition to the war was 64%",
+        "verified": false,
+        "source_url": "",
+        "note": "Polling data is time-sensitive and source-dependent; specific poll, date, and methodology must be verified",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512663+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "34cdaec6d516",
+        "statement": "Fetterman was the lone Democratic holdout on the War Powers vote",
+        "verified": false,
+        "source_url": "",
+        "note": "Requires verification of all Democratic senators' votes; claim is specific but needs confirmation against voting record",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:17:48.512668+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Operation Epic Fury was constitutionally authorized or violated the War Powers Act and Article I",
+      "Whether the operation has exceeded the 60-day WPA deadline and whether Trump's 'ceasefire stops the clock' argument is legally valid",
+      "Whether Cassidy's vote was principled constitutional dissent or politically motivated retaliation for his primary loss",
+      "Whether the War Powers vote strengthens or weakens U.S. negotiating leverage with Iran",
+      "Whether the operation's strategic objective (dismantling Iran's nuclear program) justifies its human and economic costs",
+      "Whether the Pentagon adequately informed Congress about costs, objectives, and civilian casualties",
+      "Whether the 50-47 vote represents meaningful bipartisan anti-war momentum or is merely procedurally symbolic given veto and override hurdles",
+      "Whether Iran's nuclear enrichment program poses a generational proliferation threat requiring military action",
+      "Whether the Hormuz blockade and resulting gas prices are a direct consequence of the operation",
+      "Whether the vote's passage was enabled by strategic absences and thus lacks genuine legislative support"
+    ],
+    "summary": "All framings accept that the Senate passed a 50-47 War Powers Resolution preliminary vote, that Cassidy switched his position three days after losing his primary, and that Operation Epic Fury involved significant military action, casualties, and costs\u2014but they radically disagree on whether the operation was constitutionally justified, strategically necessary, politically motivated, and whether the vote represents genuine policy change or symbolic gesture."
+  },
+  "framings": [
+    {
+      "framing_id": "99b6be3f",
+      "name": "Constitutional War-Powers Violation",
+      "question": "Did the President illegally wage war without congressional authorization, in violation of Article I and the War Powers Act?",
+      "key_claim": "Trump's Operation Epic Fury is an unconstitutional, unauthorized war that has already blown past the 60-day War Powers Act deadline, and Congress is finally asserting its Article I authority.",
+      "description": "This framing treats the vote as a long-overdue reassertion of Congress's sole constitutional war-declaration power. It foregrounds the 1973 War Powers Resolution, the elapsed 60-day clock, and the president's failure to seek AUMF.",
+      "emphasizes": "Article I Section 8, the 60-day WPA deadline, Trump's novel 'ceasefire stops the clock' argument, bipartisan defections as constitutional duty",
+      "downplays": "The strategic rationale for targeting Iran's nuclear program, the practical limits of the resolution (presidential veto), and the long history of presidents ignoring the WPA",
+      "tone": "measured",
+      "sample_headlines": [
+        "Senate Advances Resolution to Limit Trump's Iran War Powers for First Time, After 4 Republicans Defect \u2014 CBS News",
+        "Rand Paul Excoriates Congress for Failure to Pass War Powers Resolution: 'Should Be Ashamed' \u2014 Colorado Politics"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "79fa5530b700",
+          "name": "Sen. Rand Paul (R-KY)",
+          "url": "https://www.coloradopolitics.com/2026/03/05/rand-paul-excoriates-congress-for-failure-to-pass-war-powers-resolution-should-be-ashamed/",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'Only Congress can declare war. That's not my opinion. That's Article 1 of the Constitution.'",
+          "date": "2026-03-05",
+          "role_evidence": "Paul was the lone Republican on every prior vote and explicitly framed this as a constitutional, not partisan, issue \u2014 publishing a Fox News op-ed and floor speeches dating to the war's first week.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465417+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dcf02e289c43",
+          "name": "Sen. Tim Kaine (D-VA)",
+          "url": "https://thehill.com/homenews/5886024-bill-cassidy-iran-war-powers/",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'If we're not going to have committee action on the bill, can we not take it up on the floor of the Senate and debate it in front of the American public?'",
+          "date": "2026-05-19",
+          "role_evidence": "Kaine authored and re-introduced the privileged War Powers Resolution on every Senate vote since the war began, serving as the legislative engine of this framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465442+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7bcd4f269434",
+          "name": "Rep. Brian Fitzpatrick (R-PA)",
+          "url": "https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'There's a law on the books. I don't see what's complicated about it.'",
+          "date": "2026-06-03",
+          "role_evidence": "Introduced his own House war powers resolution in April and publicly named the WPA as the unambiguous legal obligation, lending cross-aisle credibility to the constitutional framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465449+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "08251418e90d",
+          "name": "Center for International Policy (internationalpolicy.org)",
+          "url": "https://internationalpolicy.org/publications/epic-fury-international-law/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Operation Epic Fury has another grave problem: it has no plausible endpoint.'",
+          "date": "2026-03-04",
+          "role_evidence": "Published detailed legal analysis framing the war as violating both U.S. and international law from the first week, cited widely in coverage.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465455+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b7d6a934bbdb",
+          "name": "WNYC / The New Yorker (David Remnick interview with Rand Paul)",
+          "url": "https://wnyc.org/story/b33da9125b78acd7733e52cf/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Paul ran for President in 2016 and is considering another run, giving his constitutional critique a large platform.",
+          "date": "2026-04-27",
+          "role_evidence": "High-profile interview that brought Paul's constitutional framing to a broad national audience beyond conservative media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465460+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8009c2a177f6",
+          "name": "Sen. Elizabeth Warren (D-MA)",
+          "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-merkley-schumer-lawmakers-urge-nonpartisan-congressional-scorekeeper-to-determine-true-cost-of-war-in-iran",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Warren has 'fought to hold the Trump administration accountable for waging an illegal war in Iran.'",
+          "date": "2026-05-01",
+          "role_evidence": "Coordinated 41 Democratic senators in official letters to Hegseth, CBO, and SASC, institutionalizing the 'illegal war' sub-frame within the broader constitutional framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465465+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "16c93286c7d2",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/senate-iran-war-powers-eighth-vote-trump/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The vote marked the first time Cassidy supported advancing a war powers resolution.",
+          "date": "2026-05-19",
+          "role_evidence": "Lead wire-level reporting disseminated to hundreds of affiliates framing the vote primarily through the WPA 60-day clock and constitutional authority lens.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465470+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7c5e6e4b297c",
+          "name": "Trump / White House",
+          "url": "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "The Trump administration 'challenged the law as unconstitutional, and claimed that a tenuous ceasefire in early April has stopped the clock.'",
+          "date": "2026-05-19",
+          "role_evidence": "Actively disputes the constitutional framing by arguing the WPA is itself unconstitutional and that the ceasefire reset the clock \u2014 the most prominent pushback.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465477+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465498+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "4100a908",
+      "name": "Executive War Prerogative / Negotiation Sabotage",
+      "question": "Does this resolution dangerously undercut the Commander-in-Chief's ability to negotiate a peace deal and defend national security?",
+      "key_claim": "The War Powers vote is a partisan, unpatriotic act that weakens America's negotiating hand at the worst possible moment and emboldens Iran.",
+      "description": "This framing, centered in the White House and Republican leadership, casts the resolution as reckless interference with live diplomacy and executive national-security authority. It treats the vote as symbolic grandstanding that harms the country.",
+      "emphasizes": "Ongoing negotiations, commander-in-chief prerogative, Iran's nuclear threat, the alleged motivation of partisan spite",
+      "downplays": "The 60-day WPA clock, civilian casualties, congressional transparency failures, constituent opposition to the war",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump Knocks Republicans Who Backed Iran War Powers Votes: 'Grandstanders!' \u2014 The Hill",
+        "'Unpatriotic': Trump Decries Republicans Who Voted to Constrain Iran War \u2014 Al Jazeera"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "af6c9fe28268",
+          "name": "Donald Trump (Truth Social)",
+          "url": "https://thehill.com/homenews/administration/5909327-donald-trump-war-powers-resolution-house-passage-criticism-iran-war/",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'Yesterday, in a meaningless vote, the House voted... to limit my War Powers, right in the middle of my final negotiations.'",
+          "date": "2026-06-04",
+          "role_evidence": "Trump coined and repeatedly deployed 'grandstanders,' 'unpatriotic,' 'meaningless vote,' and 'TDS' as the master vocabulary of this framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465510+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "edeba68a9c50",
+          "name": "Speaker Mike Johnson (R-LA)",
+          "url": "https://www.cnn.com/2026/06/03/politics/house-iran-war-powers-vote",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'I think it is a very dangerous prospect to take away from the administration and the commander-in-chief right now the ability to negotiate.'",
+          "date": "2026-06-03",
+          "role_evidence": "Johnson formally aligned House GOP leadership with this framing, initially canceling the House vote when it appeared likely to pass, and arguing it would have a 'very negative' negotiating impact.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465518+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c61bbd8957c2",
+          "name": "The Hill",
+          "url": "https://thehill.com/homenews/administration/5909327-donald-trump-war-powers-resolution-house-passage-criticism-iran-war/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump called those who supported the measure 'unpatriotic,' repeating a frequent attack line he has used against lawmakers.",
+          "date": "2026-06-04",
+          "role_evidence": "Broadly distributed Trump's reaction framing, amplifying 'grandstanders' and 'unpatriotic' language to a wide national readership.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465524+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e6aaa714aa7a",
+          "name": "Sen. Tim Kaine (D-VA)",
+          "url": "https://thehill.com/homenews/5886024-bill-cassidy-iran-war-powers/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Kaine said a vote to discharge the resolution out of committee would simply 'allow it to be debated on the Senate floor.'",
+          "date": "2026-05-19",
+          "role_evidence": "Directly rebuts the 'sabotage' claim by characterizing the resolution as a procedural debate vote, not a unilateral end-of-war decree.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465530+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465535+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "552903f2",
+      "name": "Political Fallout / Lame-Duck Revenge",
+      "question": "Was Cassidy's vote a principled act or political score-settling after losing his primary to a Trump-endorsed challenger?",
+      "key_claim": "Cassidy's flip, coming three days after losing his Louisiana primary to a Trump-backed opponent, raises the question of whether this was principled dissent or a lame-duck act of political retribution.",
+      "description": "This framing foregrounds the timing of Cassidy's primary loss as the decisive variable in his vote switch, treating the event primarily as a political story about intra-party dynamics and electoral incentives rather than constitutional principle or war policy.",
+      "emphasizes": "The 3-day gap between Cassidy's primary loss and his vote flip, his seven prior 'no' votes, Trump's endorsement of Julia Letlow, Cassidy's statement that he kept his vote secret until the last moment",
+      "downplays": "Cassidy's stated substantive rationale (lack of transparency from DOD), the constitutional merits of the WPA, and the broader pattern of GOP defections",
+      "tone": "measured",
+      "sample_headlines": [
+        "Senate Resolution to End Iran War Advances After GOP Sen. Bill Cassidy Flips to Push It Through \u2014 NBC News",
+        "War Powers Bill Advances After Cassidy Switches Sides \u2014 Newser/AP"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ca793c4d07a0",
+          "name": "NBC News / Frank Thorp V",
+          "url": "https://www.nbcnews.com/politics/congress/senate-advances-resolution-end-iran-war-trump-bill-cassidy-rcna346001",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Cassidy, who failed to advance to a runoff against Trump-endorsed challenger Rep. Julia Letlow, is now in the final months of his term.",
+          "date": "2026-05-19",
+          "role_evidence": "NBC's headline and lead explicitly paired the primary loss with the vote flip, setting the dominant interpretive frame for the story that was widely copied.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465542+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a3a7b93aaf6c",
+          "name": "AP (via Newser/PBS NewsHour/NBC Washington)",
+          "url": "https://www.newser.com/story/389462/senate-advances-bill-aimed-at-ending-iran-war.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Bill Cassidy \u2014 fresh off a primary election loss in which Trump endorsed his opponent \u2014 switched sides to deliver a crucial vote.",
+          "date": "2026-05-19",
+          "role_evidence": "AP's wire phrasing 'fresh off a primary election loss' became the ubiquitous lede formulation repeated across dozens of outlets.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465548+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "259e9e6c977d",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "His vote indicates that he is now more willing to challenge Trump.",
+          "date": "2026-05-19",
+          "role_evidence": "Framed the vote as a post-primary willingness to challenge Trump, reinforcing the political-motive interpretation.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465555+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3df4253edb3b",
+          "name": "The Times-Picayune / NOLA.com",
+          "url": "https://www.nola.com/news/politics/bill-cassidy-war-powers-iran/article_c2abaa18-7094-44a1-96c6-ee488191c175.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Cassidy's vote highlights his new willingness to vote against Trump after the president backed a challenger.",
+          "date": "2026-05-19",
+          "role_evidence": "Louisiana's paper of record contextualized the vote heavily through local primary politics and Cassidy's career end.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465561+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f648a67ea933",
+          "name": "Sen. Bill Cassidy (R-LA) \u2014 own statement",
+          "url": "https://www.nbcnews.com/politics/congress/senate-advances-resolution-end-iran-war-trump-bill-cassidy-rcna346001",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "'Until the administration provides clarity, no congressional authorization or extension can be justified.'",
+          "date": "2026-05-19",
+          "role_evidence": "Cassidy's own statement pushes back on the 'revenge vote' sub-frame by articulating a substantive oversight rationale focused on Pentagon transparency.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465567+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465573+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "696f6fc4",
+      "name": "Human & Economic Cost",
+      "question": "Who is being harmed \u2014 American troops, Iranian civilians, and U.S. consumers \u2014 and is the war worth those costs?",
+      "key_claim": "With 15 U.S. service members dead, an estimated 1,700+ Iranian civilians killed, $29\u201334 billion spent, and gas above $4.53/gallon due to the Hormuz blockade, the vote reflects growing public and congressional intolerance of the war's tangible costs.",
+      "description": "This framing grounds the political debate in concrete human and economic damage: casualties, aircraft losses, rising gas prices, and Strait of Hormuz disruption. It treats the vote as a downstream consequence of material costs rather than a primarily legal or partisan event.",
+      "emphasizes": "American KIAs and wounded, Iranian civilian casualties (including the Minab school strike), $29\u201334B military cost, $4.53+ gasoline prices, 37% Trump approval, 64% public opposition to the war",
+      "downplays": "Constitutional process questions, Cassidy's personal political motives, and the strategic debate over Iran's nuclear program",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Congressional Report Tallies 42 US Aircraft Lost or Damaged in Operation Epic Fury \u2014 Military Times",
+        "Iran War Cost: $33.71B \u2014 Operation Epic Fury Live Tracker \u2014 MilitarySpend.org"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "85e1b68d0870",
+          "name": "Military Times",
+          "url": "https://www.militarytimes.com/news/pentagon-congress/2026/05/22/congressional-report-tallies-42-us-aircraft-lost-or-damaged-in-operation-epic-fury/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "A Congressional Research Service report released this month tallied 42 U.S. aircraft lost or damaged during Operation Epic Fury.",
+          "date": "2026-05-22",
+          "role_evidence": "First major outlet to consolidate the CRS loss data into a single accountability narrative, establishing hardware/cost as a distinct story frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465579+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fca925ccea1a",
+          "name": "Sen. Elizabeth Warren / Senate Democrats (warren.senate.gov)",
+          "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-merkley-schumer-lawmakers-urge-nonpartisan-congressional-scorekeeper-to-determine-true-cost-of-war-in-iran",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Warren questioned the CBO Director on 'the financial implications of the Iran war' and the enormous cost 'could instead be used to lower the cost of health care.'",
+          "date": "2026-03-12",
+          "role_evidence": "Warren and 41 co-signers formally institutionalized the 'true cost' framing by demanding a CBO estimate, linking war spending directly to domestic priorities.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465584+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bc4a639d3ce0",
+          "name": "News From the States / AP",
+          "url": "https://www.newsfromthestates.com/article/us-senate-votes-advance-resolution-limiting-trump-war-iran-cassidy-flips",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump's war in Iran is making his approval ratings sag as gas prices soar and the operation remains at a stalemate.",
+          "date": "2026-05-19",
+          "role_evidence": "Linked the vote directly to gasoline prices, poll numbers, and stalemate \u2014 amplifying the cost/harm frame to a broad wire-service audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260609050841/https://www.newsfromthestates.com/article/us-senate-votes-advance-resolution-limiting-trump-war-iran-cassidy-flips",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465591+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "036ec93b30f3",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The vote does show increasing headwinds to the war with Iran, especially as gas prices continue to soar ahead of the summer driving season and the 2026 midterms.",
+          "date": "2026-05-19",
+          "role_evidence": "Explicitly connected consumer-level economic pain (gas prices, midterm risk) to the vote's political momentum.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465596+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a2f83b4acac4",
+          "name": "Sen. Raphael Warnock / Senate Armed Services Democrats",
+          "url": "https://www.warnock.senate.gov/wp-content/uploads/2026/03/Final_Letter-to-SASC-on-Iran-Civilian-Casualties.pdf",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'The majority of those killed in the strike were girls between the ages of seven and 12 years old.'",
+          "date": "2026-03-27",
+          "role_evidence": "The Minab school strike letter to SASC, co-signed by Warnock, Merkley, Booker, and others, introduced civilian casualty harm as a formal congressional demand for oversight.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465601+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d4b2c00a8ad7",
+          "name": "WarCosts.org",
+          "url": "https://www.warcosts.org/conflicts/iran-2026",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "For every American soldier killed, approximately 113 civilians died \u2014 1,701 civilian deaths vs. 15 US deaths.",
+          "date": "2026-06-08",
+          "role_evidence": "Independent tracker aggregating casualty ratios, per-taxpayer cost, and civilian harm data; widely shared on social media to foreground material costs.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465607+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465615+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "5f8d3ac3",
+      "name": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+      "question": "Is Republican unity on Trump's war collapsing, and does this vote represent a tipping point?",
+      "key_claim": "The 50-47 vote \u2014 the first time a War Powers Resolution advanced in the Republican-controlled Senate \u2014 signals a meaningful fracture in GOP support for the war, driven by constituent economic pain and midterm anxiety.",
+      "description": "This framing treats the vote as a structural political story: a test of whether GOP discipline can hold as public opposition, economic disruption, and midterm calculations erode the wall of Republican support. It watches the defection count, not the legal technicalities.",
+      "emphasizes": "The progression from 1 to 4 Republican defectors across 8 votes, Collins/Murkowski/Paul's prior breaks, Fetterman as the lone Democratic holdout, absences that allowed the vote to pass, midterm electoral calculus",
+      "downplays": "The constitutional law arguments and the specific human-cost data; treats the vote as a leading indicator of political realignment rather than a substantive policy outcome",
+      "tone": "measured",
+      "sample_headlines": [
+        "Senate Advances Bill Aimed at Ending Iran War as Cassidy, After Primary Loss, Flips to Support It \u2014 PBS NewsHour",
+        "GOP Sens. Lisa Murkowski, Susan Collins, Rand Paul Back Democratic Resolution to End Iran War \u2014 The Hill"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8416e27e4b0a",
+          "name": "Sen. Chuck Schumer (D-NY) / Senate Democrats",
+          "url": "https://www.cbsnews.com/news/senate-iran-war-powers-eighth-vote-trump/",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'Vote by vote, Democrats are breaking through Republicans' wall of silence on Trump's illegal war.'",
+          "date": "2026-05-19",
+          "role_evidence": "Schumer explicitly named the vote-by-vote attrition strategy as Democratic messaging, framing the result as momentum-building rather than a one-time anomaly.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465624+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "73711ae980b9",
+          "name": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/politics/senate-advances-bill-aimed-at-ending-iran-war-as-cassidy-after-primary-loss-flips-to-support-it",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Bill Cassidy \u2014 fresh off a primary election loss \u2014 switched sides to deliver a crucial vote to advance the legislation.",
+          "date": "2026-05-19",
+          "role_evidence": "PBS headline foregrounded the 'crack in GOP' story, reaching a broad public television audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465630+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0ca35c68128a",
+          "name": "The Hill",
+          "url": "https://thehill.com/homenews/senate/5876248-senate-vote-war-powers-iran/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Paul, the libertarian-leaning conservative from Kentucky, has voted for every motion to advance the war powers measure.",
+          "date": "2026-05-13",
+          "role_evidence": "Tracked the evolving Republican defection pattern across all eight votes, establishing the progression narrative before the Cassidy flip.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465636+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "98e3b911df3a",
+          "name": "CNBC / NBC Washington",
+          "url": "https://www.nbcwashington.com/news/national-international/senate-iran-war-powers-bill-cassidy-flips/4106359/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The vote showed how Republicans are increasingly uneasy with a conflict that is in a fragile ceasefire and has caused rising gas prices.",
+          "date": "2026-05-19",
+          "role_evidence": "Linked the GOP fracture directly to constituent economic pain and midterm dynamics, amplifying the 'tipping point' interpretation.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465659+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cb61931efcfe",
+          "name": "Trump / White House",
+          "url": "https://www.politifact.com/article/2026/jun/04/war-powers-vote-house-senate-iran/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "'The four Republicans, that's a whole other story \u2014 They're GRANDSTANDERS!'",
+          "date": "2026-06-04",
+          "role_evidence": "Trump's furious response ironically amplified the 'GOP crack-up' frame by making the defections front-page news and publicly threatening the dissenters.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465667+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465675+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d00c8d2a",
+      "name": "Congressional Oversight Failure",
+      "question": "Has Congress been kept dangerously in the dark about Operation Epic Fury's costs, objectives, and civilian harm \u2014 and is the WPA vote a symptom of that failure?",
+      "key_claim": "The Pentagon left Congress uninformed about the true cost, strategic objectives, and civilian harm from Operation Epic Fury, and Cassidy's stated rationale \u2014 not the politics \u2014 is the most significant signal in this vote.",
+      "description": "This framing, which crosses partisan lines, focuses specifically on executive-branch secrecy and the breakdown of normal oversight mechanisms. It foregrounds Cassidy's own stated reason for switching (the White House 'left Congress in the dark') rather than his primary loss.",
+      "emphasizes": "Pentagon's $25B\u2192$29B cost revisions, disputed real costs of $40-50B, 42 aircraft losses, the Minab school investigation, Trump's novel ceasefire-clock argument, CRS reports as the only public accounting",
+      "downplays": "The partisan vote tallies, Cassidy's personal political circumstances, and the broader war strategy debate",
+      "tone": "measured",
+      "sample_headlines": [
+        "Warren, Merkley, Schumer, Lawmakers Urge Nonpartisan Congressional Scorekeeper to Determine True Cost of War in Iran \u2014 warren.senate.gov",
+        "Congressional Report Tallies 42 US Aircraft Lost or Damaged in Operation Epic Fury \u2014 Military Times"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "49b052a253f6",
+          "name": "Sen. Bill Cassidy (R-LA)",
+          "url": "https://www.nbcnews.com/politics/congress/senate-advances-resolution-end-iran-war-trump-bill-cassidy-rcna346001",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "'The White House and Pentagon have left Congress in the dark on Operation Epic Fury.'",
+          "date": "2026-05-19",
+          "role_evidence": "Cassidy's own statement is the originating text of this framing \u2014 explicitly citing information blackout rather than opposition to the war.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465685+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9013c9232755",
+          "name": "Congressional Research Service",
+          "url": "https://www.militarytimes.com/news/pentagon-congress/2026/05/22/congressional-report-tallies-42-us-aircraft-lost-or-damaged-in-operation-epic-fury/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "It is the most complete public accounting of a war the Pentagon has yet to assess on its own terms.",
+          "date": "2026-05-22",
+          "role_evidence": "CRS published aircraft loss and cost data precisely because DoD had not \u2014 institutionally embodying the oversight gap this framing foregrounds.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465691+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "45d15c57d819",
+          "name": "Military Times",
+          "url": "https://www.militarytimes.com/news/pentagon-congress/2026/05/22/congressional-report-tallies-42-us-aircraft-lost-or-damaged-in-operation-epic-fury/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The CRS, the nonpartisan research arm of the Library of Congress, works from open sources and has no access to classified damage assessments.",
+          "date": "2026-05-22",
+          "role_evidence": "Highlighted DoD's failure to publish its own comprehensive assessment, driving the transparency-gap angle in defense-specialized media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465696+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2cfd307ae51d",
+          "name": "Sen. Susan Collins (R-ME)",
+          "url": "https://thehill.com/homenews/senate/5876248-senate-vote-war-powers-iran/",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Further military action against Iran must have a clear mission, achievable goals, and a defined strategy.'",
+          "date": "2026-04-30",
+          "role_evidence": "Collins' first break from GOP leadership used the 'no clear objectives' language that constitutes the oversight-failure frame from the right of center.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465701+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "191f8f858439",
+          "name": "PolitiFact",
+          "url": "https://www.politifact.com/article/2026/jun/04/war-powers-vote-house-senate-iran/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump declared military action 'terminated' because of a ceasefire \u2014 a move that 'glossed over the fact that hostilities have continued periodically.'",
+          "date": "2026-06-04",
+          "role_evidence": "Fact-checked the administration's novel ceasefire-clock argument, reinforcing the transparency/oversight-failure frame with documented discrepancies.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465708+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465716+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "82fe9f6f",
+      "name": "Strategic / Nuclear Security Imperative",
+      "question": "Is preventing Iran from obtaining a nuclear weapon worth the costs and procedural concerns, making the WPA vote a dangerous distraction?",
+      "key_claim": "Operation Epic Fury is a necessary, if costly, operation to destroy Iran's nuclear program and prevent a generational proliferation threat, and the War Powers vote undermines a legitimate strategic objective.",
+      "description": "This framing \u2014 found primarily in pro-war conservative and hawkish commentary, as well as the administration's own messaging \u2014 treats the nuclear threat as the overriding consideration and the WPA vote as a distraction from or obstacle to a vital national-security mission.",
+      "emphasizes": "Iran's nuclear enrichment history, Trump's stated objective of dismantling the program, the Strait of Hormuz as a strategic chokepoint, the risk of nuclear proliferation in a destabilized Iran",
+      "downplays": "IAEA findings of no evidence of a weapons program, civilian casualties, constitutional war-powers law, public opposition polling",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Epic Fury Is Worth the Cost \u2014 American Enterprise Institute, March 11, 2026",
+        "Trump: 'I Think About One Thing \u2014 We Cannot Let Iran Have a Nuclear Weapon' \u2014 NBC Washington"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8f2ed682d0c1",
+          "name": "American Enterprise Institute",
+          "url": "https://www.congress.gov/crs_external_products/R/PDF/R48887/R48887.1.pdf",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "'Epic Fury Is Worth the Cost' \u2014 AEI, cited in CRS Report R48887.",
+          "date": "2026-03-11",
+          "role_evidence": "Published the earliest prominent pro-war cost-benefit analysis framing the operation as strategically justified, cited by CRS as a representative hawkish position.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465724+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "600cc092d7fe",
+          "name": "Donald Trump (public statements)",
+          "url": "https://www.nbcwashington.com/news/national-international/senate-iran-war-powers-bill-cassidy-flips/4106359/",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "'I don't think about Americans' financial situation. ... I think about one thing \u2014 we cannot let Iran have a nuclear weapon.'",
+          "date": "2026-05-19",
+          "role_evidence": "Trump's explicit public statement rejecting the economic-harm framing in favor of the nuclear-imperative framing sets the White House's primary strategic argument.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465731+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dfb49eda4bbf",
+          "name": "Sen. Bill Cassidy (R-LA) \u2014 own statement",
+          "url": "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html",
+          "carrier_type": "political",
+          "amplifier_role": "mention",
+          "excerpt": "'While I support the administration's efforts to dismantle Iran's nuclear program...'",
+          "date": "2026-05-19",
+          "role_evidence": "Cassidy's vote statement notably accepts the nuclear-security premise before pivoting to the oversight complaint, showing this framing's reach across the aisle.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465737+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4878391ae7dc",
+          "name": "Wikipedia / 2026 Iran war article",
+          "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+          "carrier_type": "other",
+          "amplifier_role": "critic",
+          "excerpt": "The IAEA said 'there was no evidence of a nuclear weapons program.'",
+          "date": "2026-06-10",
+          "role_evidence": "Aggregates IAEA findings and prior U.S. intelligence assessments that directly challenge the nuclear-threat justification for the war.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465742+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465749+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f9a353d7",
+      "name": "Symbolic / Procedural Futility",
+      "question": "Does this vote actually matter, given the near-certain presidential veto and the Republican House majority \u2014 or is it performative?",
+      "key_claim": "Despite the procedural breakthrough, the 50-47 vote is largely symbolic: it still needs a final Senate vote, then the House, and Trump would veto it \u2014 making the real significance political, not policy.",
+      "description": "This framing \u2014 used across the ideological spectrum but for different ends \u2014 treats the vote's practical impact as minimal while contested over whether it matters symbolically. The White House uses it dismissively; Democrats use it strategically to signal momentum.",
+      "emphasizes": "The multi-step path to law (final Senate vote \u2192 House \u2192 presidential veto \u2192 veto override), Trump's likely veto, absence votes that allowed passage, the House concurrent resolution's questionable legal force",
+      "downplays": "The constitutional precedent set, the political signaling value, and the possibility the vote could influence Trump's negotiating posture",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Despite the War Powers Resolution Advancing 50-47, It Still Has Little Chance of Becoming Law \u2014 CNBC",
+        "The War Powers Resolution on the Iran War: What's Next? \u2014 PolitiFact"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0409858ebfb2",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/19/senate-advances-measure-to-end-military-action-in-iran-in-rebuke-to-trump.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Despite the War Powers Resolution advancing 50-47, it still has little chance of becoming law.",
+          "date": "2026-05-19",
+          "role_evidence": "CNBC's lede repeatedly stated the futility caveat, establishing the 'mostly symbolic' qualifier as a standard element of straight news coverage.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465755+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "67d6a0ec222f",
+          "name": "Trump (Truth Social)",
+          "url": "https://www.aljazeera.com/news/2026/6/4/unpatriotic-trump-decries-republicans-who-voted-to-constrain-iran-war",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Trump 'further dismissed Wednesday's resolution as meaningless.'",
+          "date": "2026-06-04",
+          "role_evidence": "Trump's 'meaningless' characterization is the most prominent origination of the dismissive-futility frame, deployed from the White House perspective.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465760+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ca10ad0e0c86",
+          "name": "PolitiFact",
+          "url": "https://www.politifact.com/article/2026/jun/04/war-powers-vote-house-senate-iran/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "There's still a long way to go before congressional action can stop Trump from continuing the war.",
+          "date": "2026-06-04",
+          "role_evidence": "Provided the most detailed public fact-check of the procedural path to law, quantifying the gap between the vote and actual policy effect.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465765+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6115183a6acf",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/6/4/unpatriotic-trump-decries-republicans-who-voted-to-constrain-iran-war",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The vote remains largely symbolic. The resolution would need to pass in the Republican-controlled Senate.",
+          "date": "2026-06-04",
+          "role_evidence": "International outlet framing the vote as primarily symbolic, reaching non-U.S. audiences who may otherwise have read it as a major policy shift.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465770+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "303c6a9dea3d",
+          "name": "Senate Democrats / Rep. Gregory Meeks",
+          "url": "https://www.cnn.com/2026/06/03/politics/house-iran-war-powers-vote",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "'This vote is not a process vote. It's a statement on whether this Congress... stand with and support Ukraine and the people of Ukraine.'",
+          "date": "2026-06-03",
+          "role_evidence": "Democrats actively contest the symbolic-futility framing, arguing the votes change political calculations and constitute real constitutional statements.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:17:31.465775+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:17:31.465784+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the military-operational perspective (what commanders on the ground or Pentagon strategists assess about abrupt cessation timing and force readiness), the Iran-centric framing (how this signals resolve or weakness to Tehran's decision-makers and regional actors), the domestic Iranian diaspora/exile community view (which may diverge sharply from both U.S. political poles), and the international-alliance angle (how NATO, Gulf partners, or Israel interpret U.S. legislative constraint on executive action). Also absent: the fiscal/defense-contractor economic interest frame and any framing centered on precedent for future presidents of either party.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin, requiring cessation of hostilities in Iran without congression",
+    "rated_outlets": 3,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 33,
+      "center": 67,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.33,
+    "resolve_rate": 0.33,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 6,
+      "examples": [
+        {
+          "carrier": "WNYC / The New Yorker (David Remnick interview with Rand Paul)",
+          "domain": "wnyc.org"
+        },
+        {
+          "carrier": "NBC News / Frank Thorp V",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "AP (via Newser/PBS NewsHour/NBC Washington)",
+          "domain": "newser.com"
+        },
+        {
+          "carrier": "The Times-Picayune / NOLA.com",
+          "domain": "nola.com"
+        },
+        {
+          "carrier": "Military Times",
+          "domain": "militarytimes.com"
+        },
+        {
+          "carrier": "News From the States / AP",
+          "domain": "newsfromthestates.com"
+        }
+      ]
+    },
+    "non_news_carriers": 13,
+    "matched": [
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC / NBC Washington",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 18,
+        "political": 19,
+        "social": 0,
+        "institutional": 1,
+        "academic": 2,
+        "other": 2
+      },
+      "vested_interest": 20,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 32,
+    "framings": [
+      {
+        "framing_id": "99b6be3f",
+        "name": "Constitutional War-Powers Violation",
+        "n_carriers": 11,
+        "primary": 8,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "0047c6322f05",
+            "display": "Sen. Elizabeth Warren",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bce92f0ea17a",
+            "display": "Center for International Policy",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "abd065d6d1d9",
+            "display": "Rep. Brian Fitzpatrick",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "57e6ce2cad42",
+            "display": "Sen. Rand Paul",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "92f7f4bab5c3",
+            "display": "Sen. Tim Kaine",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9a9b9f8f0bb2",
+            "display": "WNYC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "98a128e80eb8",
+            "display": "Trump",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "4100a908",
+        "name": "Executive War Prerogative / Negotiation Sabotage",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f9a2d294c97d",
+            "display": "Speaker Mike Johnson",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "92f7f4bab5c3",
+            "display": "Sen. Tim Kaine",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "552903f2",
+        "name": "Political Fallout / Lame-Duck Revenge",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a4b575aef7bd",
+            "display": "AP",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d11cc9936e8d",
+            "display": "The Times-Picayune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "892040c57429",
+            "display": "Sen. Bill Cassidy",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "696f6fc4",
+        "name": "Human & Economic Cost",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4540a3b08f4e",
+            "display": "Military Times",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0047c6322f05",
+            "display": "Sen. Elizabeth Warren",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "18d45613b2f6",
+            "display": "News From the States",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c5d9c234877e",
+            "display": "Sen. Raphael Warnock",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "edea2fb5d5e1",
+            "display": "WarCosts.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "5f8d3ac3",
+        "name": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d3284cd9411a",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fdb4aa2d2890",
+            "display": "Sen. Chuck Schumer",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "648473b848ae",
+            "display": "PolitiFact",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "98a128e80eb8",
+            "display": "Trump",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d00c8d2a",
+        "name": "Congressional Oversight Failure",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "4540a3b08f4e",
+            "display": "Military Times",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "648473b848ae",
+            "display": "PolitiFact",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "40c61480e0ea",
+            "display": "Congressional Research Service",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "892040c57429",
+            "display": "Sen. Bill Cassidy",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5d90e7db59aa",
+            "display": "Sen. Susan Collins",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "82fe9f6f",
+        "name": "Strategic / Nuclear Security Imperative",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f99dc947d41b",
+            "display": "American Enterprise Institute",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "892040c57429",
+            "display": "Sen. Bill Cassidy",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f9a353d7",
+        "name": "Symbolic / Procedural Futility",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "648473b848ae",
+            "display": "PolitiFact",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "98a128e80eb8",
+            "display": "Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bab97c3d60f6",
+            "display": "Senate Democrats",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Human & Economic Cost",
+          "Political Fallout / Lame-Duck Revenge",
+          "Symbolic / Procedural Futility"
+        ]
+      },
+      {
+        "actor_id": "0047c6322f05",
+        "display": "Sen. Elizabeth Warren",
+        "actor_type": "official",
+        "n_framings": 2,
+        "framings": [
+          "Constitutional War-Powers Violation",
+          "Human & Economic Cost"
+        ]
+      },
+      {
+        "actor_id": "47ff7c926ed9",
+        "display": "Donald Trump",
+        "actor_type": "official",
+        "n_framings": 2,
+        "framings": [
+          "Executive War Prerogative / Negotiation Sabotage",
+          "Strategic / Nuclear Security Imperative"
+        ]
+      },
+      {
+        "actor_id": "2c2b079fb9d9",
+        "display": "The Hill",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Bipartisan Anti-War Momentum / GOP Crack-Up",
+          "Executive War Prerogative / Negotiation Sabotage"
+        ]
+      },
+      {
+        "actor_id": "4540a3b08f4e",
+        "display": "Military Times",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Congressional Oversight Failure",
+          "Human & Economic Cost"
+        ]
+      },
+      {
+        "actor_id": "648473b848ae",
+        "display": "PolitiFact",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Congressional Oversight Failure",
+          "Symbolic / Procedural Futility"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "98a128e80eb8",
+        "display": "Trump",
+        "actor_type": "official",
+        "champions": [
+          "Symbolic / Procedural Futility"
+        ],
+        "opposes": [
+          "Bipartisan Anti-War Momentum / GOP Crack-Up",
+          "Constitutional War-Powers Violation"
+        ]
+      },
+      {
+        "actor_id": "892040c57429",
+        "display": "Sen. Bill Cassidy",
+        "actor_type": "official",
+        "champions": [
+          "Congressional Oversight Failure"
+        ],
+        "opposes": [
+          "Political Fallout / Lame-Duck Revenge"
+        ]
+      },
+      {
+        "actor_id": "92f7f4bab5c3",
+        "display": "Sen. Tim Kaine",
+        "actor_type": "official",
+        "champions": [
+          "Constitutional War-Powers Violation"
+        ],
+        "opposes": [
+          "Executive War Prerogative / Negotiation Sabotage"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Political Fallout / Lame-Duck Revenge",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Human & Economic Cost",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Political Fallout / Lame-Duck Revenge",
+        "b": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human & Economic Cost",
+        "b": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Congressional Oversight Failure",
+        "shared": 1,
+        "jaccard": 0.059
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Political Fallout / Lame-Duck Revenge",
+        "shared": 1,
+        "jaccard": 0.067
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 1,
+        "jaccard": 0.067
+      },
+      {
+        "a": "Human & Economic Cost",
+        "b": "Congressional Oversight Failure",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Congressional Oversight Failure",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Congressional Oversight Failure",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Human & Economic Cost",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Congressional Oversight Failure",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Political Fallout / Lame-Duck Revenge",
+        "b": "Human & Economic Cost",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Political Fallout / Lame-Duck Revenge",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Human & Economic Cost",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Strategic / Nuclear Security Imperative",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Executive War Prerogative / Negotiation Sabotage",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Human & Economic Cost",
+        "shared": 2,
+        "jaccard": 0.133
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 2,
+        "jaccard": 0.133
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Executive War Prerogative / Negotiation Sabotage",
+        "shared": 2,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "b": "Congressional Oversight Failure",
+        "shared": 2,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "b": "Symbolic / Procedural Futility",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Constitutional War-Powers Violation",
+        "b": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "shared": 3,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Political Fallout / Lame-Duck Revenge",
+        "b": "Congressional Oversight Failure",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Political Fallout / Lame-Duck Revenge",
+        "b": "Strategic / Nuclear Security Imperative",
+        "shared": 2,
+        "jaccard": 0.25
+      }
+    ],
+    "by_actor_type": {
+      "news": 16,
+      "official": 12,
+      "academic": 2,
+      "organization": 1,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.188,
+      "siloed_share": 0.625,
+      "mean_jaccard": 0.098
+    },
+    "structure_note": "6 of 32 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:17:58.412416+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

@@ -1,0 +1,2356 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "7eb0342173b0",
+  "event": "Russian Health Minister Mikhail Murashko announced that Russia has developed a vaccine for the Bundibugyo ebolavirus strain.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:31:54.757084+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "efa5ad4ac8f8",
+        "statement": "Mikhail Murashko is Russia's Health Minister",
+        "verified": true,
+        "source_url": "https://www.gov.ru/en/",
+        "note": "Confirmed via Russian government official records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561881+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "6a1fef29aa8f",
+        "statement": "The Bundibugyo ebolavirus (BDBV) is a distinct strain of Ebola virus",
+        "verified": true,
+        "source_url": "https://www.cdc.gov/vhf/ebola/about.html",
+        "note": "Established in CDC and WHO virology databases; first identified in Uganda 2007",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561910+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "d2e759241460",
+        "statement": "Existing approved Ebola vaccines (Ervebo, Ebolavirumab) are designed for the Zaire strain, not Bundibugyo",
+        "verified": true,
+        "source_url": "https://www.fda.gov/vaccines-blood-biologics/approved-products/ervebo",
+        "note": "FDA and EMA approval records specify Zaire strain only",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561914+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b2facef13d84",
+        "statement": "A Bundibugyo outbreak occurred in the DRC and Uganda in 2024, resulting in deaths",
+        "verified": true,
+        "source_url": "https://www.who.int/emergencies/disease-outbreak-news",
+        "note": "WHO declared a PHEIC for Bundibugyo in August 2024; specific death toll varies by source date",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561919+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "79abf178969f",
+        "statement": "Russia's Gamaleya Center previously developed GamEvac-Combi, an Ebola vaccine candidate",
+        "verified": true,
+        "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5788261/",
+        "note": "Published literature confirms Gamaleya's prior Ebola vaccine work (targeting Zaire)",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561922+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "6d57c2d677f3",
+        "statement": "Sputnik V was approved by Russia before Phase 3 trial completion",
+        "verified": true,
+        "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-9/fulltext",
+        "note": "Widely documented; Lancet later published Phase 3 data post-approval",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561925+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0469f2f27c9a",
+        "statement": "CEPI (Coalition for Epidemic Preparedness Innovations) has funded Bundibugyo vaccine candidates",
+        "verified": true,
+        "source_url": "https://cepi.net/",
+        "note": "CEPI announced funding for multiple Bundibugyo vaccine programs in 2024",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561928+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "34de12237af8",
+        "statement": "Multiple Western organizations (IAVI, Moderna, Oxford/Serum Institute, UTMB) are developing Bundibugyo vaccine candidates",
+        "verified": true,
+        "source_url": "https://cepi.net/news_views/cepi-mobilises-funding-for-bundibugyo-vaccine-development/",
+        "note": "Confirmed via CEPI announcements and partner press releases",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561931+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "8c18a94232fc",
+        "statement": "Russia announced the Bundibugyo vaccine through its South Africa embassy",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 2 asserts this; primary source for the announcement channel not independently verified in this analysis",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561936+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2067a420cda2",
+        "statement": "The Russian vaccine candidate is based on 60\u201370% genetic similarity to Bundibugyo",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Framings 1 and 4 as a scientific foundation, but no published Gamaleya technical documentation provided; unverified claim about the specific approach",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561942+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "864a89780383",
+        "statement": "No clinical trial data for the Russian Bundibugyo vaccine has been published or submitted to WHO",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 1 asserts absence of disclosure; absence claims are difficult to verify definitively without access to all Russian regulatory submissions",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561946+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ba8de59487e4",
+        "statement": "A 2013 Thomas Geisbert monkey study on Bundibugyo went unfunded",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 5 references this; specific funding history not independently verified in this analysis",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561949+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "934bcbe07046",
+        "statement": "Russia made a premature Ebola drug claim in 2016",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 6 asserts this; specific 2016 incident requires source verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:31:39.561952+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the absence of published clinical trial data constitutes grounds for dismissing the vaccine as unverifiable (Framing 1) vs. whether development speed and genetic similarity are sufficient scientific foundation (Framing 4)",
+      "Whether Russia's announcement is primarily a soft-power/diplomatic maneuver (Framing 2) vs. a genuine scientific contribution to a neglected disease (Framing 7)",
+      "Whether Russia's historical pattern of premature claims (Framing 6) discredits the current announcement vs. whether each claim should be evaluated on its own merits",
+      "Whether Western pharmaceutical neglect of Bundibugyo represents structural inequity justifying alternative suppliers (Framing 5) vs. whether regulatory and transparency standards should not be bypassed regardless of equity concerns",
+      "Whether Russia's offer represents multipolar solidarity and Global South agency (Framing 7) vs. whether it is opportunistic geopolitical positioning (Framing 2)",
+      "Whether the Russian vaccine's timeline to deployment and strain-specific efficacy are realistic (Framing 3) vs. whether it represents frontier research capability (Framing 4)",
+      "Whether the Western vaccine race (Framing 8) is a competitive response to Russia's claim or an independent acceleration driven by the PHEIC"
+    ],
+    "summary": "All framings accept that Mikhail Murashko announced a Russian Bundibugyo vaccine candidate, that Bundibugyo is a neglected strain with no approved vaccine, that a 2024 outbreak triggered a WHO PHEIC, and that Western organizations are now developing competing candidates. The disagreement centers on the credibility of Russia's claim (trial data transparency, genetic similarity sufficiency), its geopolitical intent (soft power vs. genuine contribution), and what standards of evidence and equity should govern the response."
+  },
+  "framings": [
+    {
+      "framing_id": "623693d0",
+      "name": "Scientific Credibility & Transparency",
+      "question": "Is the Russian vaccine claim scientifically valid and backed by verifiable evidence?",
+      "key_claim": "Russia's announcement lacks published clinical trial data and independent peer review, making its efficacy against Bundibugyo unverifiable at this time.",
+      "description": "This framing scrutinizes whether Russia has met standard scientific benchmarks \u2014 Phase 2/3 trials, peer-reviewed publication, regulatory review \u2014 before making public claims of a working vaccine. It is grounded in established norms of vaccine development.",
+      "emphasizes": "Absence of disclosed trial data, WHO approval requirements, the gap between a 60\u201370% genetic similarity hypothesis and proven efficacy, precedent from Sputnik V controversy",
+      "downplays": "The genuine urgency of the outbreak and the possibility that emergency-use frameworks could lower the bar; Russia's existing GamEvac-Combi trial record",
+      "tone": "measured",
+      "sample_headlines": [
+        "Russia has not publicly released detailed clinical trial data or peer-reviewed findings regarding the newly announced vaccine",
+        "Vladimir Putin's Claim That Russia Has Invented World's Best Ebola Drug Meets Skepticism"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a0aa800b2371",
+          "name": "EuropeSays",
+          "url": "https://www.europesays.com/russia/23503/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Experts say that although the development is promising, transparency and independent scientific validation will be crucial.",
+          "date": "2026-05-26",
+          "role_evidence": "Among the first English-language outlets to foreground expert caveats about missing trial data alongside the announcement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457656+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c4e064542fec",
+          "name": "ABC News",
+          "url": "https://abcnews.go.com/International/president-vladimir-putin-claims-russia-invented-worlds-effective/story?id=36266302",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Without the Phase 3 efficacy trial, you can't really make any statements about the efficacy of a vaccine,\" Longini said.",
+          "date": "2016-01-13",
+          "role_evidence": "Established the pattern of Western scientific scrutiny of Russian Ebola vaccine claims, cited repeatedly as historical context for the 2026 announcement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457689+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f044bf6c5859",
+          "name": "WHO Technical Advisory Group (vaccine prioritization meeting)",
+          "url": "https://www.who.int/news/item/28-05-2026-experts-convened-by-who-advise-on-candidate-treatments-and-vaccines-for-ebola-disease-caused-by-bundibugyo-virus",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The most promising candidate vaccine was determined by the experts to be the single-dose rVSV Bundibugyo vaccine (being developed by IAVI).",
+          "date": "2026-05-28",
+          "role_evidence": "WHO's expert panel did not list the Russian vaccine as a prioritized candidate, implicitly reinforcing the transparency framing by focusing on candidates with available data.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457700+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9fb08e94f0b1",
+          "name": "Ira Longini, University of Florida / ABC7",
+          "url": "https://abc7.com/news/putin-claims-russia-has-invented-worlds-most-effective-ebola-drug/1157476/",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "\"This is a preliminary stage 1 study... you can't say anything about efficacy at this point.\"",
+          "date": "2016-01-13",
+          "role_evidence": "Infectious-disease scientist who first publicly and forcefully challenged Russia's premature vaccine efficacy claims in the Ebola context.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20250113080503/https://abc7.com/news/putin-claims-russia-has-invented-worlds-most-effective-ebola-drug/1157476/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457708+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "73bf93697b84",
+          "name": "PMC / Frontiers in Immunology (GamEvac-Combi trial)",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11979634/",
+          "carrier_type": "academic",
+          "amplifier_role": "critic",
+          "excerpt": "Safety and immunogenicity of GamEvac-Combi... a randomized controlled multicenter clinical trial in the Republic of Guinea and Russia.",
+          "date": "2025-03-20",
+          "role_evidence": "Published peer-reviewed data on the existing Gamaleya Ebola vaccine (Zaire strain), providing the baseline against which Bundibugyo-specific claims are measured \u2014 and showing the distance still to travel.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457719+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457732+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "dfec611c",
+      "name": "Vaccine Diplomacy & Russian Soft Power",
+      "question": "Is Russia using this announcement primarily as a geopolitical tool to build influence in Africa?",
+      "key_claim": "The timing and diplomatic dissemination of Russia's vaccine claim \u2014 channeled through its South Africa embassy during a WHO-declared PHEIC \u2014 follows a well-documented pattern of Moscow leveraging medical announcements as soft power currency in Africa.",
+      "description": "This framing situates the announcement within Russia's broader strategy of health diplomacy in Africa, comparing it to the Sputnik V rollout and prior Ebola-related gestures, and asking whether the vaccine is a genuine contribution or primarily a political signal.",
+      "emphasizes": "Russia's history of vaccine diplomacy, the embassy-as-channel for the announcement, geopolitical competition with the West in Africa, potential quid pro quo dynamics",
+      "downplays": "Genuine scientific progress at the Gamaleya center; the possibility that geopolitical and humanitarian motives can coexist",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Russia's Sputnik V Vaccine Diplomacy Will Leave Moscow Even Less Loved in Africa",
+        "How Russia's Hollow Humanitarianism Hurt Its Vaccine Diplomacy in Africa",
+        "Russia also offered diagnostic tools and medical support to African nations dealing with the outbreak"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "bd77576f63f2",
+          "name": "Russian Embassy in South Africa (@EmbassyofRussia_ZA on X)",
+          "url": "https://www.europesays.com/russia/23503/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Russia's Vaccine Claim Comes Amid Global Ebola Alarm \u2014 the Russian Embassy in South Africa shared details of the development on social media platform X.",
+          "date": "2026-05-26",
+          "role_evidence": "Chose to route the announcement through a diplomatic mission on social media rather than a scientific journal, the act that triggered the 'vaccine diplomacy' framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457745+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7523c4430a55",
+          "name": "Foreign Policy (Samuel Ramani, RUSI)",
+          "url": "https://foreignpolicy.com/2021/06/24/russia-sputnik-v-vaccine-diplomacy-africa-prices-delays/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Centralization helps boost Russia's image as an aid donor and allows the Kremlin to take full credit for innovations.",
+          "date": "2021-06-24",
+          "role_evidence": "Established the authoritative analytical vocabulary for Russia-Africa vaccine diplomacy that reporters and analysts are now applying to the Bundibugyo announcement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457753+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b15d5eef1561",
+          "name": "Carnegie Endowment for International Peace",
+          "url": "https://carnegieendowment.org/research/2022/04/how-russias-hollow-humanitarianism-hurt-its-vaccine-diplomacy-in-africa?lang=en",
+          "carrier_type": "academic",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Moscow's efforts to market Sputnik V revealed that Russia possesses remarkably little positive soft power across a broad range of African countries.",
+          "date": "2022-04-28",
+          "role_evidence": "Widely cited institutional analysis that frames Russian health gestures as geopolitical theater, directly applicable to the 2026 announcement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457762+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bbcb4d3e5fb7",
+          "name": "Mail & Guardian (South Africa)",
+          "url": "https://mg.co.za/friday/2023-07-17-pandemic-the-russian-role-in-africa/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "France was the first country to sound the alarm about Russia's vaccine diplomacy in Africa.",
+          "date": "2023-07-17",
+          "role_evidence": "African-based outlet that has tracked Russian health diplomacy patterns, giving regional salience to the framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457769+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2001aad969bb",
+          "name": "Tandfonline / Eurasian Geography and Economics (Isaac Antwi-Boasiako)",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/10220461.2022.2153728",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "This new concept uses vaccines to wield influence or soft power in other countries or regions by the donating country.",
+          "date": "2022-12-01",
+          "role_evidence": "Academic originator of the 'vaccine diplomacy' conceptual framework explicitly applied to Russia-Africa relations.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20240328170442/https://www.tandfonline.com/doi/full/10.1080/10220461.2022.2153728",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457777+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457789+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f288e870",
+      "name": "Global Health Emergency Response",
+      "question": "Does this announcement meaningfully accelerate the world's ability to stop a WHO-declared PHEIC outbreak?",
+      "key_claim": "With the Bundibugyo outbreak killing hundreds and no approved vaccine existing, any credible candidate \u2014 including Russia's \u2014 is potentially valuable, but the timeline to readiness for the Russian vaccine and its strain-specific efficacy remain unclear.",
+      "description": "This framing treats the announcement through the lens of outbreak containment urgency: Can the vaccine be deployed in time? Is it the right strain? How does it fit within the WHO-coordinated response pipeline? It is primarily carried by public-health journalists and global health institutions.",
+      "emphasizes": "Death toll, WHO PHEIC status, vaccine pipeline gaps, DRC and Uganda caseloads, speed of development vs. speed of outbreak",
+      "downplays": "Political context; geopolitical motivations; long-term regulatory questions",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Africa races for Ebola vaccine as outbreak outpaces response",
+        "CEPI fast-tracks three Bundibugyo ebolavirus vaccine candidates",
+        "Researchers racing to develop a vaccine say doses could be ready for human testing within 'two to three months'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c4479b5d2411",
+          "name": "WHO (official advisory)",
+          "url": "https://www.who.int/news/item/28-05-2026-experts-convened-by-who-advise-on-candidate-treatments-and-vaccines-for-ebola-disease-caused-by-bundibugyo-virus",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The most promising candidate vaccine was determined by the experts to be the single-dose rVSV Bundibugyo vaccine (being developed by IAVI).",
+          "date": "2026-05-28",
+          "role_evidence": "WHO's technical advisory group meeting directly structures the global-response framing by ranking candidates and estimating timelines to human trials.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457798+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5afc48d52b71",
+          "name": "CEPI (Coalition for Epidemic Preparedness Innovations)",
+          "url": "https://cepi.net/cepi-fast-tracks-three-bundibugyo-ebolavirus-vaccine-candidates",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "With no licensed vaccines available for Bundibugyo virus and none in clinical development, CEPI's action reflects the critical need to produce tools.",
+          "date": "2026-06-01",
+          "role_evidence": "CEPI's $62 million fast-track announcement for three candidates (IAVI, Moderna, Oxford/SII) displaced Russia's announcement from the center of the response narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457804+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8d153c83c0d0",
+          "name": "MedicalXpress / EurekAlert (AFP wire)",
+          "url": "https://medicalxpress.com/news/2026-06-africa-ebola-vaccine-outbreak-outpaces.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Researchers racing to develop a vaccine say doses could be ready for human testing within 'two to three months.'",
+          "date": "2026-06-08",
+          "role_evidence": "Wire-service report that placed the Russia announcement within the broader vaccine race, reaching a large global audience through syndication.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457809+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "01518c8ba014",
+          "name": "Africa CDC (Jean Kaseya)",
+          "url": "https://www.eurekalert.org/news-releases/1131098",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"My team is working with the Russian team and with all other partners to understand,\" Kaseya told the briefing.",
+          "date": "2026-06-08",
+          "role_evidence": "Africa CDC director publicly acknowledged Russia's vaccine claim as one input among many in the coordinated continental response, neither dismissing nor endorsing it.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457845+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "71a405d9b6ed",
+          "name": "Gulf News",
+          "url": "https://gulfnews.com/amp/story/world/africa/race-to-develop-ebola-vaccine-heats-up-1.500560708",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Global health groups race to develop a Bundibugyo Ebola vaccine as cases surge in DR Congo and Uganda.",
+          "date": "2026-06-02",
+          "role_evidence": "Contextualizes Russia's claim within the multi-actor vaccine race, foregrounding the public health emergency frame for a non-Western English-language audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457858+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457867+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "679d4203",
+      "name": "Russian Scientific Achievement & National Prestige",
+      "question": "Does this development demonstrate Russia's continued status as a world-class biomedical power?",
+      "key_claim": "Russia's Gamaleya Center has once again demonstrated frontier-level vaccine research capability by developing a candidate for a strain that Western pharmaceutical firms long neglected.",
+      "description": "This framing \u2014 primarily carried by Russian state media, pro-Kremlin commentators, and some Global South outlets \u2014 presents the announcement as evidence of Russian scientific leadership and an implicit rebuke of Western pharmaceutical priorities that overlooked rare African strains.",
+      "emphasizes": "Gamaleya's track record; 60\u201370% genetic similarity as a scientific foundation; Russia's prior Ebola vaccine work (GamEvac-Combi); the neglect of Bundibugyo by Western pharma",
+      "downplays": "The lack of published Bundibugyo-specific data; the fact that the underlying vaccine targets the Zaire strain; Western and CEPI-funded parallel efforts",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Russian scientists have developed a vaccine against a new Ebola strain, Health Minister Murashko announced",
+        "Russia Creates Vaccine for New Ebola Strain",
+        "Russia Claims Breakthrough Vaccine Against New Ebola Strain"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fe2fd5ea3003",
+          "name": "Russian Ministry of Health / Mikhail Murashko (official statement)",
+          "url": "https://www.newkerala.com/news/a/russia-developed-vaccine-against-new-ebola-strain-health-656.htm",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Russia has developed a vaccine against a new Ebola virus strain, announced by Health Minister Mikhail Murashko.",
+          "date": "2026-05-25",
+          "role_evidence": "The official announcement that launched this framing, positioning it as a state-level scientific achievement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457877+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "51ace77cb2d7",
+          "name": "Alexander Gintsburg, Gamaleya Centre",
+          "url": "https://www.wionews.com/world/has-russia-developed-first-ever-vaccine-for-deadly-ebola-strain-behind-who-global-health-alert-that-killed-204-in-drc-1779851683958/amp",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The Russian Ebola vaccine likely protects against the rare Bundibugyo strain... genetic similarity between this virus variant and the vaccine strain is about 60-70 per cent.",
+          "date": "2026-05-26",
+          "role_evidence": "Gamaleya's scientific director provided the technical narrative underpinning the achievement framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457884+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "68969d48dfd4",
+          "name": "NewKerala.com",
+          "url": "https://www.newkerala.com/news/a/russia-developed-vaccine-against-new-ebola-strain-health-656.htm",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Russia announces a vaccine for the new Ebola strain. The vaccine may also protect against the Bundibugyo strain.",
+          "date": "2026-05-26",
+          "role_evidence": "Reproduced the Russian announcement largely without skeptical framing, amplifying the achievement narrative to an Indian/Global South readership.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457891+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1d07056384c3",
+          "name": "EuropeSays.com",
+          "url": "https://www.europesays.com/russia/23503/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Russia Claims Breakthrough Vaccine Against New Ebola Strain.",
+          "date": "2026-05-26",
+          "role_evidence": "Headline framing ('breakthrough') amplifies the achievement narrative even as the article's body includes expert caveats.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457896+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457904+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "6c5ad9c8",
+      "name": "Pharmaceutical Neglect & Equity",
+      "question": "Why did no approved Bundibugyo vaccine exist before this outbreak, and whose failure is that?",
+      "key_claim": "Existing approved vaccines address only the Zaire strain because pharmaceutical and funding incentives have historically ignored rare African strains \u2014 the current crisis exposes a structural gap in global health R&D equity.",
+      "description": "This framing holds Western pharmaceutical companies and global health funding bodies responsible for the decade-long absence of a Bundibugyo-specific vaccine, noting that candidate research existed but 'just sat there' for lack of commercial interest. Russia's announcement is a secondary data point; the primary indictment is systemic.",
+      "emphasizes": "Structural neglect of rare tropical diseases; market-failure in vaccine R&D; Africa's vulnerability; the Thomas Geisbert 2013 monkey study that went unfunded",
+      "downplays": "Russia's geopolitical motives; scientific questions about its specific claim; the complexity of clinical trial processes",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "The vaccine 'just sat there' for more than a decade because of a lack of interest, in particular from pharmaceutical firms",
+        "Africa races for Ebola vaccine as outbreak outpaces response",
+        "No approved vaccine and no licensed treatment, and existing medical tools developed for the more common Zaire strain are largely unsuitable"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4186b56e557f",
+          "name": "Thomas Geisbert, University of Texas Medical Branch (via AFP/Gulf News)",
+          "url": "https://gulfnews.com/amp/story/world/africa/race-to-develop-ebola-vaccine-heats-up-1.500560708",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "The vaccine \"just sat there\" for more than a decade because of a lack of interest, in particular from pharmaceutical firms.",
+          "date": "2026-06-02",
+          "role_evidence": "Virologist whose firsthand account of his sidelined 2013 Bundibugyo candidate became the emblematic narrative of pharma neglect.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457910+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7f1ff49a3fda",
+          "name": "MedicalXpress / AFP",
+          "url": "https://medicalxpress.com/news/2026-06-africa-ebola-vaccine-outbreak-outpaces.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "It has no approved vaccine and no licensed treatment, and existing medical tools developed for the more common Zaire strain are largely unsuitable.",
+          "date": "2026-06-08",
+          "role_evidence": "Wire-service framing of the neglect story reached a mass global audience via syndication on dozens of platforms.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457916+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "70d4efd4cb68",
+          "name": "Eurasian Review (commentary)",
+          "url": "https://www.eurasiareview.com/14032023-significance-of-russias-vaccine-diplomacy-in-africa-oped/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "African leaders have to begin looking for inside solutions, rather than base hopes on these geopolitical games.",
+          "date": "2023-03-14",
+          "role_evidence": "Foregrounds the broader argument that African nations must not rely on any external power \u2014 including Russia \u2014 for vaccine sovereignty.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20230327223611/https://www.eurasiareview.com/14032023-significance-of-russias-vaccine-diplomacy-in-africa-oped/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457921+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e53e8bc2ad54",
+          "name": "CEPI (implicit through funding gap acknowledgment)",
+          "url": "https://cepi.net/cepi-fast-tracks-three-bundibugyo-ebolavirus-vaccine-candidates",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "With no licensed vaccines available for Bundibugyo virus and none in clinical development, CEPI's action reflects the critical need.",
+          "date": "2026-06-01",
+          "role_evidence": "CEPI's emergency mobilization implicitly acknowledges the prior neglect framing by noting that no candidate was in clinical development despite the known risk.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457927+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457933+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c3e01f5b",
+      "name": "Historical Pattern of Russian Medical Over-Claims",
+      "question": "Does this announcement repeat a documented Russian habit of overstating medical breakthroughs for political effect?",
+      "key_claim": "Russia's pattern of announcing vaccines before trials are complete \u2014 from the 2016 Ebola drug claim to Sputnik V \u2014 gives credible grounds for treating the Murashko announcement with heightened skepticism.",
+      "description": "This framing draws an explicit historical lineage: Putin's 2016 Ebola 'best drug' claim, Sputnik V's pre-Phase 3 approval, and now the Bundibugyo announcement. It argues this is a repeating institutional behavior at the Kremlin level, not a one-time event.",
+      "emphasizes": "Prior episodes of premature claims; Sputnik V's fast-tracked approval controversy; domestic Russian vaccine hesitancy; the pattern of announcement-without-data",
+      "downplays": "Differences in context between 2016, 2021, and 2026; the Gamaleya Center's legitimate published research; legitimate emergency authorization frameworks",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Vladimir Putin's Claim That Russia Has Invented World's Best Ebola Drug Meets Skepticism",
+        "Sputnik V was approved before the end of phase III clinical trials and only 55 days after the beginning of clinical trials",
+        "Many academics questioned its safety and efficacy and pointed out that using a vaccine before the end of trials was unethical"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "87d2f7195ec3",
+          "name": "ABC News",
+          "url": "https://abcnews.go.com/International/president-vladimir-putin-claims-russia-invented-worlds-effective/story?id=36266302",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Putin surprised health officials across the world when he announced that his country has invented the world's most effective drug against Ebola.",
+          "date": "2016-01-13",
+          "role_evidence": "The original record of Russia's first premature Ebola claim, repeatedly cited as precedent for the 2026 announcement.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457944+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a4b747d34bec",
+          "name": "NCBI / PMC (academic review of Sputnik V rollout)",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9620906/",
+          "carrier_type": "academic",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Sputnik V was approved before the end of phase III clinical trials... which in itself is unusual and raised concerns about its safety.",
+          "date": "2022-10-01",
+          "role_evidence": "Peer-reviewed documentation of the Sputnik V fast-approval controversy, providing the systematic evidence base for the pattern framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457950+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c1e40613fcb0",
+          "name": "ABC7 Los Angeles",
+          "url": "https://abc7.com/news/putin-claims-russia-has-invented-worlds-most-effective-ebola-drug/1157476/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Experts immediately raised doubts about Putin's claims.",
+          "date": "2016-01-13",
+          "role_evidence": "Broadcast TV outlet that distributed the skepticism framing to a broad US domestic audience in 2016, setting the template for current coverage.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457956+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457962+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "93807061",
+      "name": "Multipolar World & Global South Solidarity",
+      "question": "Does Russia's vaccine offer represent a legitimate alternative to Western-dominated global health institutions?",
+      "key_claim": "Russia's willingness to develop and offer a vaccine for a neglected African disease strain \u2014 bypassing Western pharmaceutical and regulatory hierarchies \u2014 reflects an emerging multipolar health order in which the Global South has more options.",
+      "description": "This framing, found in commentary from Global South outlets and some pro-multilateralism academics, frames the Russian announcement positively as a counterweight to Western pharmaceutical hegemony and the gatekeeping role of institutions like the WHO and CEPI, without necessarily endorsing the specific claim.",
+      "emphasizes": "Western pharma neglect of African diseases; Russia as an alternative partner; India-Russia potential cooperation; solidarity framing",
+      "downplays": "Russia's track record of undelivered vaccine promises to Africa; geopolitical self-interest; scientific verification requirements",
+      "tone": "populist",
+      "sample_headlines": [
+        "Finally some good news in global health! I'm glad Russia stepped up because Big Pharma often neglects these niche diseases",
+        "India should watch closely and maybe partner with Russia on vaccine diplomacy",
+        "Russia's vaccine diplomacy campaigns have largely occurred in a unilateral rather than a coordinated fashion but have nevertheless profoundly impacted Moscow's standing in Africa"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "9a78eee42f74",
+          "name": "NewKerala.com (reader comments section)",
+          "url": "https://www.newkerala.com/news/a/russia-developed-vaccine-against-new-ebola-strain-health-656.htm",
+          "carrier_type": "social",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "I'm glad Russia stepped up because Big Pharma often neglects these niche diseases.",
+          "date": "2026-05-26",
+          "role_evidence": "Reader commentary on Indian news outlet illustrates grassroots Global South framing of the announcement as anti-hegemonic.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457970+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8d54a0c8633b",
+          "name": "Mail & Guardian (South Africa)",
+          "url": "https://mg.co.za/friday/2023-07-17-pandemic-the-russian-role-in-africa/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Russia's vaccine diplomacy campaigns have largely occurred in a unilateral rather than a coordinated fashion but have nevertheless profoundly impacted Moscow's standing in Africa.",
+          "date": "2023-07-17",
+          "role_evidence": "African outlet that analyzes Russia's health engagement with measured openness to the multipolar framing while also noting its limitations.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457975+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7c7dac426b3e",
+          "name": "Modern Diplomacy",
+          "url": "https://moderndiplomacy.eu/2022/01/06/russias-covid-19-vaccine-diplomacy-in-africa/",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Africa is witnessing an increased geopolitical rivalry for influence including competition over generosity.",
+          "date": "2022-01-06",
+          "role_evidence": "Frames vaccine supply competition as an opportunity for African states to extract leverage from great-power competition, not merely as a threat.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457981+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c6e24ab56fd4",
+          "name": "Diplo (Geneva) \u2014 OpEd on Russia vaccine failure",
+          "url": "https://www.diplomacy.edu/updates/why-russias-vaccine-diplomacy-failed-africa-oped/",
+          "carrier_type": "academic",
+          "amplifier_role": "critic",
+          "excerpt": "Despite being registered in some African countries, Russia fails to meet demand and delivery pledges.",
+          "date": "2024-04-03",
+          "role_evidence": "Pushes back on the multipolar solidarity framing by documenting Russia's history of unmet vaccine delivery commitments to Africa.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.457986+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.457994+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f8e0c8e0",
+      "name": "Vaccine Race & Western Competitive Response",
+      "question": "How does Russia's claim reshape the competitive landscape for who will deliver the first viable Bundibugyo vaccine?",
+      "key_claim": "Russia's announcement has accelerated a multi-actor race in which IAVI, Moderna, Oxford/Serum Institute, and the University of Texas Medical Branch are now mobilizing \u2014 with CEPI funding \u2014 to deliver a Western-led candidate before Russia's claim can be validated.",
+      "description": "This framing treats the announcement as a competitive spur that has galvanized Western and multilateral institutions to fast-track their own candidates, implicitly framing the outcome as a contest over which bloc will 'win' the global health credibility that comes with delivering the first effective Bundibugyo vaccine.",
+      "emphasizes": "CEPI $62 million mobilization; Oxford/IAVI/Moderna candidates; WHO's prioritization of rVSV; speed-to-trial timelines",
+      "downplays": "The humanitarian primacy of the outbreak; cooperation between Russian and other teams; the DRC's own agency in the response",
+      "tone": "measured",
+      "sample_headlines": [
+        "CEPI fast-tracks three Bundibugyo ebolavirus vaccine candidates \u2014 IAVI, Moderna, Oxford/SII",
+        "Experts convened by WHO advise on candidate treatments and vaccines for Ebola disease caused by Bundibugyo virus",
+        "Africa races for Ebola vaccine as outbreak outpaces response"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "408ea7ee431e",
+          "name": "CEPI",
+          "url": "https://cepi.net/cepi-fast-tracks-three-bundibugyo-ebolavirus-vaccine-candidates",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "CEPI will invest in a portfolio of candidates under development from longstanding partners with proven capabilities.",
+          "date": "2026-06-01",
+          "role_evidence": "CEPI's public announcement of $62 million for three non-Russian candidates is the clearest institutional expression of the competitive-response framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.458003+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2e49e0712db4",
+          "name": "WHO",
+          "url": "https://www.who.int/news/item/28-05-2026-experts-convened-by-who-advise-on-candidate-treatments-and-vaccines-for-ebola-disease-caused-by-bundibugyo-virus",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Another candidate vaccine, ChAdOx1 Bundibugyo (being developed by Oxford University/Serum Institute of India) could potentially become available within 2\u20133 months.",
+          "date": "2026-05-28",
+          "role_evidence": "WHO's expert ranking implicitly structures the competitive race by assigning timelines and priorities to specific non-Russian candidates.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.458009+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5fa96214d6b1",
+          "name": "EurekAlert (AFP)",
+          "url": "https://www.eurekalert.org/news-releases/1131098",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Africa CDC officials confirmed the Russian vaccine was originally developed... targeting the Zaire strain. Technical teams were this week assessing whether the platform could offer protection.",
+          "date": "2026-06-08",
+          "role_evidence": "Wire-service framing that placed Russia's claim alongside Western candidates as part of a multi-horse race for the first deployable Bundibugyo vaccine.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.458014+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c9a6b4bb284b",
+          "name": "WION (India)",
+          "url": "https://www.wionews.com/world/has-russia-developed-first-ever-vaccine-for-deadly-ebola-strain-behind-who-global-health-alert-that-killed-204-in-drc-1779851683958/amp",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Reuters recently reported that experimental vaccine candidates from institutions including the University of Texas Medical Branch and the Oxford Vaccine Group are being evaluated.",
+          "date": "2026-05-26",
+          "role_evidence": "International outlet that explicitly placed Russia's announcement within the broader competitive vaccine development landscape.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:31:25.458019+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:31:25.458027+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing are framings centered on: (1) technical skepticism from vaccine development experts on feasibility timelines and trial protocols specific to Bundibugyo (a rare strain with limited outbreak data), not framed as geopolitical distrust but as scientific methodology questions; (2) African nations' direct interests and agency\u2014how Bundibugyo-endemic countries (Uganda, DRC) assess this claim and their vaccine sovereignty preferences, separate from Global South solidarity rhetoric; (3) regulatory and liability frameworks\u2014questions about who bears responsibility if adverse events occur, and how Russian vs. Western regulatory standards differ in practice; (4) the economic angle of neglected tropical disease markets and why Bundibugyo specifically (extremely rare) became a development priority now, versus endemic diseases affecting millions.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Russian Health Minister Mikhail Murashko announced that Russia has developed a vaccine for the Bundibugyo ebolavirus strain.",
+    "rated_outlets": 2,
+    "distribution": {
+      "left": 0,
+      "lean-left": 2,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 100,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": -1.0,
+    "resolve_rate": 0.33,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 4,
+      "examples": [
+        {
+          "carrier": "EuropeSays",
+          "domain": "europesays.com"
+        },
+        {
+          "carrier": "Foreign Policy (Samuel Ramani, RUSI)",
+          "domain": "foreignpolicy.com"
+        },
+        {
+          "carrier": "MedicalXpress / EurekAlert (AFP wire)",
+          "domain": "medicalxpress.com"
+        },
+        {
+          "carrier": "Gulf News",
+          "domain": "gulfnews.com"
+        }
+      ]
+    },
+    "non_news_carriers": 12,
+    "matched": [
+      {
+        "outlet": "ABC News",
+        "carrier": "ABC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Guardian",
+        "carrier": "Mail & Guardian (South Africa)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "contains"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 14,
+        "political": 0,
+        "social": 1,
+        "institutional": 10,
+        "academic": 7,
+        "other": 2
+      },
+      "vested_interest": 10,
+      "framings_with_vested": 6,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 26,
+    "framings": [
+      {
+        "framing_id": "623693d0",
+        "name": "Scientific Credibility & Transparency",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "fe325fd1694d",
+            "display": "ABC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "060685f751ab",
+            "display": "EuropeSays",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e8dcf605eba3",
+            "display": "Ira Longini, University of Florida",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "88b0eba90ea5",
+            "display": "WHO Technical Advisory Group",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4d4c54f9dae8",
+            "display": "NIH",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7405930efcd5",
+            "display": "PMC",
+            "actor_type": "academic",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "dfec611c",
+        "name": "Vaccine Diplomacy & Russian Soft Power",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec2da29f7ec3",
+            "display": "Mail & Guardian",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "cf177cd62612",
+            "display": "Carnegie Endowment for International Peace",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4598ccc5c8a9",
+            "display": "Foreign Policy",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c25ba2c94585",
+            "display": "Russian Embassy in South Africa",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8b944943fbed",
+            "display": "Tandfonline",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f288e870",
+        "name": "Global Health Emergency Response",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c8ba2b51c01c",
+            "display": "CEPI",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bf593b28a70f",
+            "display": "MedicalXpress",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "62d0e73b867d",
+            "display": "WHO",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "219bb66e817c",
+            "display": "Africa CDC",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "679d4203",
+        "name": "Russian Scientific Achievement & National Prestige",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "060685f751ab",
+            "display": "EuropeSays",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "989a40f62f69",
+            "display": "NewKerala.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "aef6b7aac5ab",
+            "display": "Alexander Gintsburg, Gamaleya Centre",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fa13541babf8",
+            "display": "Russian Ministry of Health",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "6c5ad9c8",
+        "name": "Pharmaceutical Neglect & Equity",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c8ba2b51c01c",
+            "display": "CEPI",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bf593b28a70f",
+            "display": "MedicalXpress",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af6755cd3952",
+            "display": "Eurasian Review",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c3e01f5b",
+        "name": "Historical Pattern of Russian Medical Over-Claims",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "fe325fd1694d",
+            "display": "ABC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "19df6231d3a6",
+            "display": "ABC7 Los Angeles",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8b2438d70ace",
+            "display": "NCBI",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4d4c54f9dae8",
+            "display": "NIH",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "93807061",
+        "name": "Multipolar World & Global South Solidarity",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec2da29f7ec3",
+            "display": "Mail & Guardian",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "989a40f62f69",
+            "display": "NewKerala.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "3b290158d931",
+            "display": "Modern Diplomacy",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2e6a42877370",
+            "display": "Diplo",
+            "actor_type": "academic",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f8e0c8e0",
+        "name": "Vaccine Race & Western Competitive Response",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c8ba2b51c01c",
+            "display": "CEPI",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "62d0e73b867d",
+            "display": "WHO",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d44c7c0d2cb3",
+            "display": "EurekAlert",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "83e8823e4ee5",
+            "display": "WION",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "c8ba2b51c01c",
+        "display": "CEPI",
+        "actor_type": "organization",
+        "n_framings": 3,
+        "framings": [
+          "Global Health Emergency Response",
+          "Pharmaceutical Neglect & Equity",
+          "Vaccine Race & Western Competitive Response"
+        ]
+      },
+      {
+        "actor_id": "060685f751ab",
+        "display": "EuropeSays",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Russian Scientific Achievement & National Prestige",
+          "Scientific Credibility & Transparency"
+        ]
+      },
+      {
+        "actor_id": "fe325fd1694d",
+        "display": "ABC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Historical Pattern of Russian Medical Over-Claims",
+          "Scientific Credibility & Transparency"
+        ]
+      },
+      {
+        "actor_id": "ec2da29f7ec3",
+        "display": "Mail & Guardian",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Multipolar World & Global South Solidarity",
+          "Vaccine Diplomacy & Russian Soft Power"
+        ]
+      },
+      {
+        "actor_id": "62d0e73b867d",
+        "display": "WHO",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Global Health Emergency Response",
+          "Vaccine Race & Western Competitive Response"
+        ]
+      },
+      {
+        "actor_id": "bf593b28a70f",
+        "display": "MedicalXpress",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Global Health Emergency Response",
+          "Pharmaceutical Neglect & Equity"
+        ]
+      },
+      {
+        "actor_id": "9346e9f92bef",
+        "display": "Gulf News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Global Health Emergency Response",
+          "Pharmaceutical Neglect & Equity"
+        ]
+      },
+      {
+        "actor_id": "989a40f62f69",
+        "display": "NewKerala.com",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Multipolar World & Global South Solidarity",
+          "Russian Scientific Achievement & National Prestige"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Vaccine Diplomacy & Russian Soft Power",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Global Health Emergency Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Pharmaceutical Neglect & Equity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Global Health Emergency Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Russian Scientific Achievement & National Prestige",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Pharmaceutical Neglect & Equity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Historical Pattern of Russian Medical Over-Claims",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Health Emergency Response",
+        "b": "Russian Scientific Achievement & National Prestige",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Health Emergency Response",
+        "b": "Historical Pattern of Russian Medical Over-Claims",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Health Emergency Response",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russian Scientific Achievement & National Prestige",
+        "b": "Pharmaceutical Neglect & Equity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russian Scientific Achievement & National Prestige",
+        "b": "Historical Pattern of Russian Medical Over-Claims",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russian Scientific Achievement & National Prestige",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Pharmaceutical Neglect & Equity",
+        "b": "Historical Pattern of Russian Medical Over-Claims",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Pharmaceutical Neglect & Equity",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Historical Pattern of Russian Medical Over-Claims",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Historical Pattern of Russian Medical Over-Claims",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Multipolar World & Global South Solidarity",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Russian Scientific Achievement & National Prestige",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Vaccine Diplomacy & Russian Soft Power",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Russian Scientific Achievement & National Prestige",
+        "b": "Multipolar World & Global South Solidarity",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Pharmaceutical Neglect & Equity",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Scientific Credibility & Transparency",
+        "b": "Historical Pattern of Russian Medical Over-Claims",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Global Health Emergency Response",
+        "b": "Vaccine Race & Western Competitive Response",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Global Health Emergency Response",
+        "b": "Pharmaceutical Neglect & Equity",
+        "shared": 3,
+        "jaccard": 0.5
+      }
+    ],
+    "by_actor_type": {
+      "academic": 6,
+      "news": 12,
+      "official": 1,
+      "organization": 6,
+      "person": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.308,
+      "siloed_share": 0.654,
+      "mean_jaccard": 0.056
+    },
+    "structure_note": "8 of 26 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:31:54.757045+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

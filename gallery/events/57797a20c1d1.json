@@ -1,0 +1,2748 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "57797a20c1d1",
+  "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international actors issued statements responding to the event.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T16:07:11.089636+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "ece06cf824a1",
+        "statement": "Ali Khamenei, Supreme Leader of Iran, died or was reported dead following military strikes",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://www.aljazeera.com (major news outlets reported the event)",
+        "note": "The core event—death following strikes—is the baseline fact all framings reference, though some dispute whether it occurred",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882864+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c12753660a74",
+        "statement": "Bahraini officials and international actors issued public statements responding to reports of Khamenei's death or assassination",
+        "verified": true,
+        "source_url": "https://www.reuters.com or https://apnews.com (wire services documented official statements)",
+        "note": "Confirmed by multiple news sources; the fact of statements being made is uncontested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882922+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f16edf9af380",
+        "statement": "Iran conducted retaliatory military strikes in response to the event",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://www.aljazeera.com",
+        "note": "Widely reported across international media; the occurrence of Iranian strikes is not disputed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882938+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "270f56a2b396",
+        "statement": "Khamenei's son Mojtaba Khamenei was selected or announced as the new Supreme Leader",
+        "verified": false,
+        "source_url": "",
+        "note": "Multiple framings reference this succession, but the timing, formality, and legitimacy of the succession process are contested and not independently verified in primary sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882953+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f634e31de2fd",
+        "statement": "Civilian casualties occurred in Iran (including at a girls' school) and in Gulf states from retaliatory strikes",
+        "verified": false,
+        "source_url": "",
+        "note": "Casualty figures and specific incidents (school strike) are reported by some sources but lack independent verification; death tolls vary widely across framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882967+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f709e1204396",
+        "statement": "Oman was mediating peace negotiations between the US and Iran at the time of the strike",
+        "verified": false,
+        "source_url": "",
+        "note": "Referenced in the 'Diplomatic Sabotage' framing but not independently confirmed in primary diplomatic records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882978+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0fb9d881f717",
+        "statement": "The Strait of Hormuz was closed or threatened with closure by Iran",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed in the 'Regional Escalation' framing but not verified against official Iranian or international maritime authority statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.882989+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e38e0f6509eb",
+        "statement": "Khamenei's burial was delayed as a sign of regime chaos or internal crisis",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited by multiple framings but lacks independent verification of timing and causation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.883000+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0794d820caf7",
+        "statement": "US intelligence assessed that Iran was not building a nuclear weapon at the time of the strike",
+        "verified": false,
+        "source_url": "",
+        "note": "Referenced in 'Diplomatic Sabotage' framing but not confirmed by declassified US intelligence documents",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:06:54.883011+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Khamenei's death was justified (Justice & Retribution vs. International Law & Sovereignty Violation)",
+      "Whether the killing was a strategic success or a catastrophic escalation (Justice & Retribution vs. Regional Escalation & Catastrophic Risk)",
+      "Whether Khamenei's death opens a path to Iranian liberation or galvanizes resistance (Iranian Liberation vs. Martyrdom & Resistance)",
+      "Whether Khamenei was a pragmatic decision-maker open to diplomacy or an obstacle to peace (Diplomatic Sabotage vs. other framings)",
+      "Whether the succession to Mojtaba represents regime instability or continuity (Dynastic Succession & Regime Instability vs. Martyrdom & Resistance)",
+      "The scale and significance of civilian casualties (Human Cost & Civilian Harm vs. framings that minimize or omit this dimension)",
+      "Whether the strike violated international law and set a dangerous precedent (International Law & Sovereignty Violation vs. Justice & Retribution)",
+      "Whether the event signals the Islamic Republic's collapse or its strengthening through martyrdom (Iranian Liberation vs. Martyrdom & Resistance)"
+    ],
+    "summary": "All framings accept that Ali Khamenei died following military strikes, that international actors issued statements, and that Iran conducted retaliatory strikes—but they radically diverge on whether these events represent justice, a sovereignty violation, regime collapse, regional catastrophe, martyrdom, lost diplomacy, dynastic corruption, or human tragedy. The shared factual ground is thin: the occurrence of the event and the existence of responses. Nearly everything else—casualty figures, succession legitimacy, diplomatic context, and causal significance—remains contested or unverified."
+  },
+  "framings": [
+    {
+      "framing_id": "645ff2cd",
+      "name": "Justice & Retribution",
+      "question": "Was killing Khamenei a justified act of justice against a tyrant responsible for mass atrocities?",
+      "key_claim": "Khamenei was one of history's most evil leaders and his killing was justice for the Iranian people and victims of Iranian-sponsored violence worldwide.",
+      "description": "This framing casts the assassination as a morally righteous act of retribution against a decades-long oppressor. It foregrounds Khamenei's record of domestic repression, support for terrorism, and hostility toward the US and Israel as justification for the strike.",
+      "emphasizes": "Khamenei's human rights record, his support for proxy violence, the liberation narrative for the Iranian people, and the strategic success of the operation.",
+      "downplays": "International legal questions, civilian casualties from the broader strikes, regional destabilization risks, and the precedent set for killing sitting heads of state.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Trump Calls Khamenei's Death 'Justice for the People of Iran'",
+        "Defense Minister Katz: 'He who acted to destroy Israel has been destroyed — Justice has been served'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5ef1221639ba",
+          "name": "Donald Trump (Truth Social)",
+          "url": "https://truthsocial.com/@realDonaldTrump",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Trump called Khamenei 'one of the most evil people in history' and framed the killing as retribution for Americans and others harmed by Iran's leadership.",
+          "date": "2026-03-01",
+          "role_evidence": "Trump was among the first officials to publicly frame the killing in moral retribution terms, calling it 'justice for the people of Iran' before Iranian confirmation.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750345+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "201dd719df2a",
+          "name": "Benjamin Netanyahu (official statements)",
+          "url": "https://www.gov.il/en/departments/prime_ministers_office",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Netanyahu said the joint US-Israeli attack 'will lead to true peace' and that 'the plan to destroy Israel does not exist.'",
+          "date": "2026-03-01",
+          "role_evidence": "Netanyahu amplified the justice framing by celebrating the killing and framing it as the defeat of an existential enemy.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750421+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8264d6b11d72",
+          "name": "Israel Defense Forces (IDF) / Israel Katz",
+          "url": "https://www.idf.il/en/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Defense Minister Katz stated 'he who acted to destroy Israel – has been destroyed ... Justice has been served, and the axis of evil has suffered a mortal blow.'",
+          "date": "2026-03-01",
+          "role_evidence": "Israeli government and military institutions formally adopted the justice/retribution framing in official statements.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750449+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f7a6ab670855",
+          "name": "Time Magazine",
+          "url": "https://time.com/7381829/iran-supreme-leader-ali-khamenei-dead/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Headline: 'Trump Calls Khamenei's Death Justice for the People of Iran'",
+          "date": "2026-03-01",
+          "role_evidence": "Time's headline and framing of Trump's statement drove broad mainstream adoption of the retribution narrative.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750467+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "046e6cc3a27e",
+          "name": "Rep. Yassamin Ansari (D) / Sen. John Fetterman (D)",
+          "url": "https://www.newsweek.com/world-leaders-react-to-ayatollah-khameneis-death-11599703",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Ansari said 'Khamenei was the epitome of evil. For decades, he oversaw the torture, imprisonment, and murder of countless Iranians.'",
+          "date": "2026-03-01",
+          "role_evidence": "Bipartisan congressional voices amplified the justice framing, showing it crossed party lines in the US.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750484+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "68a77a89adb6",
+          "name": "Ukraine (official X account)",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_assassination_of_Ali_Khamenei",
+          "carrier_type": "political",
+          "amplifier_role": "mention",
+          "excerpt": "Ukraine's official X account wrote that 'nothing beats the death of a dictator.'",
+          "date": "2026-03-01",
+          "role_evidence": "Ukraine's celebratory post amplified the dictator-elimination framing on social media.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750500+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.750520+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ef8243b3",
+      "name": "International Law & Sovereignty Violation",
+      "question": "Did the targeted killing of a sitting head of state violate international law and erode the global norm against assassination?",
+      "key_claim": "The deliberate killing of a sitting head of state without UN authorization sets a dangerous precedent that normalizes assassination as a tool of statecraft and undermines the international rules-based order.",
+      "description": "This framing centers on the legal and normative dimensions of the strike, arguing that regardless of Khamenei's record, the targeted killing of a sovereign leader crosses a threshold that international law has long sought to prohibit. It draws on IHL, the UN Charter, and the history of the assassination norm.",
+      "emphasizes": "Sovereignty, the UN Charter, the erosion of international norms, the lack of legal justification offered by the US and Israel, and the precedent for future state-sponsored assassinations.",
+      "downplays": "Khamenei's human rights record, the strategic rationale, and the argument that an active armed conflict changes the legal calculus.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Is the International Norm Against Assassination Dead?",
+        "Targeted Killing of Khamenei and US Attack on Iran's Sovereignty: Violation of International Law?",
+        "Was Targeting Ayatollah Khamenei and Other Iranian Leaders Lawful?"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "e5390491a383",
+          "name": "Verfassungsblog (Sophie Duroy & Luca Trenta)",
+          "url": "https://verfassungsblog.de/is-the-international-norm-against-assassination-dead/",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "Khamenei's assassination 'represents a new stage in the erosion of the international norm against assassination.'",
+          "date": "2026-03-02",
+          "role_evidence": "First prominent academic legal analysis framing the killing as a normative rupture in international law, published within 48 hours of the event.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750544+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8f0add9306e2",
+          "name": "Just Security",
+          "url": "https://www.justsecurity.org/133171/ayatollah-khamenei-leadership-strike-law/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Headline: 'Was Targeting Ayatollah Khamenei and Other Iranian Leaders Lawful?'",
+          "date": "2026-03-04",
+          "role_evidence": "Just Security published detailed legal analysis of the targetability question, amplifying the international law framing among legal and policy audiences.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750559+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fe49bda68f93",
+          "name": "UN Secretary-General António Guterres",
+          "url": "https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Guterres told the Security Council he 'deeply regretted' that an opportunity for diplomacy had been 'squandered' and warned of 'a chain of events that no one can control.'",
+          "date": "2026-03-01",
+          "role_evidence": "The UN Secretary-General's emergency Security Council statement gave institutional weight to the sovereignty/law framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750575+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a482f46852db",
+          "name": "Vladimir Putin / Kremlin",
+          "url": "https://www.foxnews.com/world/putin-killing-khamenei-cynical-violation-morality",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Putin called the killing 'a cynical violation of all norms of human morality and international law.'",
+          "date": "2026-03-01",
+          "role_evidence": "Putin's widely-covered condemnation drove global amplification of the sovereignty-violation framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750592+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "260ae67a1ee2",
+          "name": "China Ministry of Foreign Affairs",
+          "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Beijing described the strike as 'a serious violation of Iran's sovereignty and security, a trampling on the aims and principles of the UN Charter.'",
+          "date": "2026-03-01",
+          "role_evidence": "China's formal condemnation institutionalized the sovereignty-violation framing at the great-power level.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750714+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ddefb4db2f98",
+          "name": "Turkey (President Erdoğan)",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_2026_Iran_war",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Erdoğan later said the Israeli-US attacks were 'illegal' and constituted a 'clear violation of international law.'",
+          "date": "2026-03-01",
+          "role_evidence": "Erdoğan's statement amplified the international law framing from a NATO-member perspective.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750744+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ce53d18b1e19",
+          "name": "Aurel Sari / Verfassungsblog (critic of Duroy-Trenta)",
+          "url": "https://verfassungsblog.de/killing-khamenei/",
+          "carrier_type": "academic",
+          "amplifier_role": "critic",
+          "excerpt": "Sari argued the killing occurred within an active international armed conflict, complicating the claim it was 'outside armed conflict.'",
+          "date": "2026-03-09",
+          "role_evidence": "Sari's rebuttal challenged the legal framing's foundational premise, pushing back on the 'outside armed conflict' claim.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750838+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.750870+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "895f1c92",
+      "name": "Iranian Liberation & Regime Collapse",
+      "question": "Does Khamenei's death represent the beginning of the end of the Islamic Republic and a potential moment of liberation for the Iranian people?",
+      "key_claim": "Khamenei's death marks the collapse of the Islamic Republic's legitimacy, opening a historic window for the Iranian people to reclaim their country from theocratic rule.",
+      "description": "This framing, prominent among Iranian diaspora, opposition groups, and some Western commentators, treats the assassination not as a geopolitical event but as the culmination of decades of domestic illegitimacy. It foregrounds the celebrations inside Iran and the regime's succession crisis as evidence of systemic collapse.",
+      "emphasizes": "Iranian civilian celebrations, the regime's internal crisis, the dynastic succession to Mojtaba Khamenei, the delayed burial as a sign of chaos, and the voices of the Iranian diaspora.",
+      "downplays": "The risk of IRGC consolidation, civilian casualties from the strikes, the possibility that external attack unites Iranians behind the regime, and the complexity of post-regime transition.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Iranians React with Joy and Disbelief to Khamenei's Death",
+        "Iran International: 'The Dictator a Nation Longed to See Gone'",
+        "Prince Reza Pahlavi: Islamic Republic Has Reached Its End"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c192c98b50f6",
+          "name": "Iran International",
+          "url": "https://www.iranintl.com/en/202602288551",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Iran International cast the killing as the long-awaited end of 'the dictator a nation longed to see gone.'",
+          "date": "2026-02-28",
+          "role_evidence": "Iran International was among the first outlets to frame the killing through the lens of domestic Iranian liberation and regime illegitimacy.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750895+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9769147da48d",
+          "name": "Prince Reza Pahlavi",
+          "url": "https://www.iranintl.com/en/202602288551",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Pahlavi said with Khamenei's death the Islamic Republic had effectively reached its end and would soon be consigned to 'the dustbin of history.'",
+          "date": "2026-02-28",
+          "role_evidence": "The exiled crown prince's statement was widely circulated among diaspora communities and amplified the regime-collapse framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750914+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c4c6c71a8e29",
+          "name": "Maryam Rajavi / MEK",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_assassination_of_Ali_Khamenei",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Rajavi hailed the death as the 'end of religious tyranny' and the 'collapse of the Velayat-e Faqih regime.'",
+          "date": "2026-03-01",
+          "role_evidence": "MEK's formal statement framed the killing as the ideological defeat of the Islamic Republic's governing doctrine.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750931+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "07f980a1456f",
+          "name": "Karim Sadjadpour / The Atlantic",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Sadjadpour described Khamenei as 'a rigid guardian of a revolution increasingly disconnected from much of Iranian society.'",
+          "date": "2026-03-01",
+          "role_evidence": "Sadjadpour's Atlantic piece brought the liberation/illegitimacy framing to a broad Western readership.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750948+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "af1db0005793",
+          "name": "Organization of Iranian American Communities",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "The organization noted that the delay in Khamenei's burial 'indicates a crisis within Iran.'",
+          "date": "2026-04-09",
+          "role_evidence": "Diaspora institutional voice amplifying the regime-crisis sub-narrative within the liberation framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750966+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "40df8662a700",
+          "name": "NBC News (Barbara Slavin / Stimson Center)",
+          "url": "https://www.nbcnews.com/world/iran/live-blog/israel-iran-live-updates-rcna261099",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Slavin told Al Jazeera that Iran 'has a plan' in place and that a council 'may already have been running the country.'",
+          "date": "2026-03-01",
+          "role_evidence": "Slavin's expert commentary introduced skepticism about the speed of collapse, acting as a partial critic within this framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.750985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751003+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "51fe1266",
+      "name": "Regional Escalation & Catastrophic Risk",
+      "question": "Does the assassination trigger an uncontrollable spiral of regional war that threatens global stability?",
+      "key_claim": "Killing Khamenei has ignited a chain of retaliatory strikes across the Middle East that risks drawing the entire region into a catastrophic, uncontrollable conflict.",
+      "description": "This framing foregrounds the immediate military consequences: Iranian retaliatory strikes on US bases in Bahrain, Qatar, Kuwait, and the UAE; IRGC pledges of revenge; and the risk of escalation beyond any party's control. It is adopted by de-escalation advocates, regional governments, and international institutions.",
+      "emphasizes": "Iranian retaliatory strikes, the closure of the Strait of Hormuz, civilian casualties, the GCC emergency meeting, and warnings from analysts about unpredictable escalation dynamics.",
+      "downplays": "The strategic rationale for the strike, Khamenei's record, and the possibility that decapitation accelerates regime collapse rather than escalation.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Xinhua: Khamenei's Killing Sparks Concerns Over Prolonged Regional Chaos",
+        "Al Jazeera: World Reacts to Killing of Iran's Khamenei — Leaders Warn of Escalation",
+        "China Military: Khamenei's Death to Provoke Fierce Retaliation"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "cc648fb44973",
+          "name": "Xinhua / Global Times",
+          "url": "https://english.news.cn/20260302/32be2038fa504bc7a6d7f86431a72228/c.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Xinhua headline: 'Khamenei's killing sparks concerns over prolonged regional chaos.'",
+          "date": "2026-03-02",
+          "role_evidence": "Chinese state media drove the escalation-risk framing to a global audience, citing expert warnings about uncontrollable retaliation.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751021+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7bcb7618a6d6",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Al Jazeera reported that 'the killing of Iranian Supreme Leader Ali Khamenei has triggered sharp reactions across the world as leaders warn of escalation and regional instability.'",
+          "date": "2026-03-01",
+          "role_evidence": "Al Jazeera's continuous live coverage centered the escalation-risk framing for a global Arabic and English-language audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751037+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1017a054cc46",
+          "name": "UN Secretary-General António Guterres",
+          "url": "https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Guterres warned that 'military action carries the risk of igniting a chain of events that no one can control in the most volatile region of the world.'",
+          "date": "2026-03-01",
+          "role_evidence": "Guterres's Security Council address gave the escalation-risk framing its most authoritative institutional expression.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751056+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ef16f89b9c2c",
+          "name": "Ali Vaez / International Crisis Group",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Vaez observed that the assassination 'removes the most pragmatic decision-maker in the system, potentially closing the door on nuclear diplomacy and empowering less predictable hardliners.'",
+          "date": "2026-03-01",
+          "role_evidence": "ICG's expert framing of the escalation risk was widely cited in Western policy and media coverage.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751073+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "28c405d2f19c",
+          "name": "GCC Foreign Ministers (Bahrain, Kuwait, Qatar, Saudi Arabia, UAE, Oman)",
+          "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "GCC foreign ministers convened an emergency video conference to discuss the Iran crisis as Iranian retaliatory strikes hit Bahrain and other Gulf states.",
+          "date": "2026-03-01",
+          "role_evidence": "The GCC emergency meeting institutionalized the escalation-risk framing at the regional governmental level.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751089+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "67a5b36f2171",
+          "name": "Abu-Bakr Al-Desouky (Egyptian Gulf affairs expert)",
+          "url": "https://english.news.cn/20260302/32be2038fa504bc7a6d7f86431a72228/c.html",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "Al-Desouky warned that the US and Israel 'violated one of Iran's red lines,' giving Iran 'a reason to escalate the conflict and broaden the scope of its targets.'",
+          "date": "2026-03-02",
+          "role_evidence": "Regional expert commentary amplified the escalation-risk framing in Chinese and Arab media.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751106+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751123+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ddeb8604",
+      "name": "Martyrdom & Resistance",
+      "question": "Was Khamenei's killing a martyrdom that will strengthen the Islamic Republic and the broader Resistance Axis?",
+      "key_claim": "Khamenei died as a martyr defending the Islamic Republic against US-Zionist aggression, and his death will galvanize Iran and its allies to intensify resistance.",
+      "description": "This framing, dominant in Iranian state media, among Shia communities, and among Iran's regional allies, casts the killing as a religiously and politically meaningful martyrdom. It frames the assassination not as a defeat but as a catalyst for renewed resistance and retaliation.",
+      "emphasizes": "The red flag of revenge raised at Jamkaran Mosque, IRGC pledges of retaliation, mourning processions, Khamenei's legacy as a defender of the Islamic Revolution, and solidarity from Hamas, Hezbollah, and the Houthis.",
+      "downplays": "Internal Iranian celebrations, the regime's succession crisis, civilian casualties caused by Iranian retaliatory strikes, and the strategic losses suffered by Iran.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Iranian State Media: Khamenei Died as a Martyr 'While Carrying Out His Tasks'",
+        "IRGC: 'We Have Lost a Great Leader — The Hand of Revenge Will Not Let Them Go'",
+        "Hamas Mourns Khamenei: 'He Provided All Forms of Support to Our Resistance'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "bbeba46d8556",
+          "name": "Iranian State Media (IRNA / Press TV / Tasnim / Mehr)",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_assassination_of_Ali_Khamenei",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Iranian state media described his assassination as a martyrdom and stated that Khamenei's political and religious path would continue after his death.",
+          "date": "2026-03-01",
+          "role_evidence": "Iranian state broadcasters were the primary originators of the martyrdom framing, deploying it immediately upon confirming his death.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751141+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7e7acb739c91",
+          "name": "IRGC (Islamic Revolutionary Guard Corps)",
+          "url": "https://www.aljazeera.com/news/2026/3/1/iran-begins-40-day-mourning-after-khamenei-killed-in-us-israeli-attack",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The IRGC said 'we have lost a great leader and we mourn him' and that 'the Iranian nation's hand of revenge will not let them go.'",
+          "date": "2026-03-01",
+          "role_evidence": "The IRGC's formal statement institutionalized the martyrdom-and-revenge framing within Iran's military establishment.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751158+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a1d31fd41c1f",
+          "name": "Iranian President Masoud Pezeshkian",
+          "url": "https://www.nbcnews.com/world/iran/live-blog/israel-iran-live-updates-rcna261099",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Pezeshkian said Khamenei 'led the Islamic Revolution with wisdom and courage' and vowed that 'the pure blood of this respected leader will rise like a flowing spring.'",
+          "date": "2026-03-01",
+          "role_evidence": "Iran's president formally adopted the martyrdom framing in official government communications.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751175+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a08e56219fbc",
+          "name": "Hamas",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_assassination_of_Ali_Khamenei",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hamas described Khamenei as a source of 'political, diplomatic, and military support for the Palestinian cause and for armed resistance.'",
+          "date": "2026-03-01",
+          "role_evidence": "Hamas's mourning statement amplified the martyrdom framing across the Resistance Axis network.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751191+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dc6270d9d84e",
+          "name": "Houthi Political Leadership",
+          "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Houthis called the killing 'a flagrant violation of all international laws and norms' and 'the continuation of the unjust attack on the Islamic nation.'",
+          "date": "2026-03-01",
+          "role_evidence": "Houthi condemnation amplified the martyrdom/resistance framing within the broader Axis of Resistance.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751207+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6ec19fae0a09",
+          "name": "Nader Hashemi / Georgetown University",
+          "url": "https://www.newsweek.com/world-leaders-react-to-ayatollah-khameneis-death-11599703",
+          "carrier_type": "academic",
+          "amplifier_role": "critic",
+          "excerpt": "Hashemi noted that 'Khamenei wanted to die this way, a martyr at the hands of his arch enemies,' suggesting the regime anticipated and may have welcomed the martyrdom narrative.",
+          "date": "2026-03-01",
+          "role_evidence": "Hashemi's analysis critically examined the martyrdom framing's political utility for the regime rather than endorsing it.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751223+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751241+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "5bda61f6",
+      "name": "Diplomatic Sabotage & Lost Peace",
+      "question": "Did the assassination deliberately destroy a viable diplomatic path and sabotage a near-complete nuclear deal?",
+      "key_claim": "The strike on Khamenei killed the most pragmatic decision-maker in the Iranian system at the precise moment a peace deal was within reach, deliberately closing the door on diplomacy.",
+      "description": "This framing argues that the assassination was not merely a military act but a deliberate choice to foreclose negotiation. It draws on reports that Omani mediators believed a deal was imminent and that Khamenei had not reauthorized Iran's nuclear weapons program, making the strike strategically counterproductive as well as diplomatically destructive.",
+      "emphasizes": "Omani mediation reports, US intelligence assessments that Iran was not building a nuclear weapon, the ICG's warning that hardliners will now gain power, and the UN Secretary-General's lament that diplomacy was 'squandered.'",
+      "downplays": "Iran's ongoing nuclear enrichment activities, Netanyahu's claims of a secret weapons program, and the argument that Khamenei was an obstacle to rather than enabler of diplomacy.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "UN Chief: Opportunity for Diplomacy Was 'Squandered'",
+        "ICG's Vaez: Assassination Removes Most Pragmatic Decision-Maker, Closes Door on Nuclear Diplomacy",
+        "Omani Mediators: Peace Deal Was Within Reach Before Strike"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ef16f89b9c2c",
+          "name": "Ali Vaez / International Crisis Group",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "Vaez observed that the assassination 'removes the most pragmatic decision-maker in the system, potentially closing the door on nuclear diplomacy.'",
+          "date": "2026-03-01",
+          "role_evidence": "ICG's Vaez was among the first analysts to frame the killing as a deliberate foreclosure of diplomatic options.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751258+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fe49bda68f93",
+          "name": "UN Secretary-General António Guterres",
+          "url": "https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Guterres told the Security Council he 'deeply regretted' that an opportunity for diplomacy had been 'squandered.'",
+          "date": "2026-03-01",
+          "role_evidence": "Guterres's Security Council statement gave the lost-diplomacy framing its most prominent institutional expression.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751275+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "90e2aea18a82",
+          "name": "Al Jazeera (Inside the US-Israel Plan to Kill Khamenei)",
+          "url": "https://www.aljazeera.com/news/2026/3/3/inside-the-us-israel-plan-to-assassinate-irans-khamenei",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Al Jazeera reported that Omani mediators observed a peace deal was 'within reach' including Iranian concessions on uranium stockpiles before the strike.",
+          "date": "2026-03-03",
+          "role_evidence": "Al Jazeera's investigative reporting on the Omani mediation channel drove broad adoption of the diplomatic-sabotage framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751291+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7dcaa41e5257",
+          "name": "Time Magazine",
+          "url": "https://time.com/7381829/iran-supreme-leader-ali-khamenei-dead/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Time noted that US intelligence had assessed that Khamenei 'has not reauthorized the nuclear weapons program he suspended in 2003.'",
+          "date": "2026-03-01",
+          "role_evidence": "Time's inclusion of the US intelligence assessment undermined the nuclear-threat justification and amplified the lost-diplomacy framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751305+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b1b59cdd8533",
+          "name": "Wikipedia / Assassination of Ali Khamenei article",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "The article notes the assassination 'is seen by some as a deliberate sabotage of these diplomatic channels.'",
+          "date": "2026-03-01",
+          "role_evidence": "Wikipedia's synthesis article codified the diplomatic-sabotage framing as a recognized interpretive lens.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751321+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751398+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "8ac14404",
+      "name": "Dynastic Succession & Regime Instability",
+      "question": "Does the rushed, hereditary transfer of power to Mojtaba Khamenei reveal a regime in crisis and set a dangerous precedent for theocratic monarchy?",
+      "key_claim": "The selection of Khamenei's own son as Supreme Leader — a man his father reportedly considered unfit — exposes the Islamic Republic's succession crisis and contradicts the revolution's founding anti-monarchical principles.",
+      "description": "This framing focuses on the post-assassination power transition, treating the selection of Mojtaba Khamenei as both a symptom of regime fragility and a politically explosive contradiction. It draws on leaked audio, reports of Mojtaba's absence from public view, and the delayed burial as evidence of a system in disarray.",
+      "emphasizes": "The hereditary nature of the succession, Mojtaba's reported health complications and public absence, the delayed burial, IRGC power consolidation, and the irony of a 'republic' adopting dynastic succession.",
+      "downplays": "The formal constitutional process through the Assembly of Experts, the possibility that the transition stabilizes the regime, and the IRGC's stated loyalty.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Mojtaba Khamenei Escaped Death by Seconds in Same Strike That Killed His Father",
+        "Delayed Burial, Absent Successor: Questions Over Post-Khamenei Iran",
+        "US Intelligence: Ali Khamenei Opposed His Son Succeeding Him, Regarded Him as Unfit"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "61e9aa8cdcb2",
+          "name": "The Telegraph (leaked audio report)",
+          "url": "https://www.jpost.com/middle-east/iran-news/article-890173",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "The Telegraph obtained leaked audio from a senior official describing how Mojtaba survived the strike and the chaotic scene inside the compound.",
+          "date": "2026-03-16",
+          "role_evidence": "The Telegraph's leaked audio scoop originated the detailed narrative of the succession crisis and Mojtaba's precarious position.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751426+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d0790a139823",
+          "name": "Iran International",
+          "url": "https://www.iranintl.com/en/202606072117",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran International reported that 100 days after Khamenei's death, Iran 'has formally selected a successor but has yet to publicly introduce him.'",
+          "date": "2026-06-07",
+          "role_evidence": "Iran International has sustained the succession-crisis framing over months, tracking the delayed burial and Mojtaba's absence.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751448+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c3067cf5f42a",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/middle-east/iran-news/article-890173",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Post reported that US intelligence indicated Ali Khamenei 'had opposed his son succeeding him and regarded him as unfit for the role.'",
+          "date": "2026-03-16",
+          "role_evidence": "JPost amplified the dynastic-succession framing to a Western and Israeli audience, adding the 'unfit successor' dimension.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751468+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4b708d3b34f3",
+          "name": "AFP",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "AFP coverage remarked that at the 40-day commemoration, a funeral had yet to be held for Ali Khamenei.",
+          "date": "2026-04-09",
+          "role_evidence": "AFP's wire reporting on the absent funeral drove the succession-instability framing into global mainstream coverage.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751486+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0bedbd16b32c",
+          "name": "Analysts cited in JPost / Iran International",
+          "url": "https://www.jpost.com/middle-east/iran-news/article-890173",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "Analysts warned that 'the Islamic Revolutionary Guard Corps may gain even greater influence during his rule.'",
+          "date": "2026-03-16",
+          "role_evidence": "Expert commentary on IRGC power consolidation added a strategic-instability dimension to the succession framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751504+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751530+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "7d135aa5",
+      "name": "Human Cost & Civilian Harm",
+      "question": "Who are the civilian victims of the broader strikes, and is the human cost of the operation being adequately accounted for?",
+      "key_claim": "The US-Israeli strikes that killed Khamenei also killed hundreds of Iranian civilians, including children at a girls' school, and Iran's retaliatory strikes have spread destruction across multiple Gulf states — a human toll that is being overshadowed by the political drama.",
+      "description": "This framing shifts focus from the high-profile assassination to the broader civilian casualties on all sides. It foregrounds the deaths at the Shajareh Tayyebeh girls' school in Minab, the retaliatory strikes on Gulf states, and the protests and violence in Pakistan and Iraq as evidence that the human cost of the conflict is being undercounted.",
+      "emphasizes": "Civilian deaths in Iran (especially the school strike), casualties from Iranian retaliatory strikes in Gulf states, protests and violence in Pakistan and Iraq, and the displacement of Tehran residents.",
+      "downplays": "The strategic rationale for the strikes, Khamenei's record, and the military dimensions of the conflict.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Death Toll from Strike on Girls' School in Southern Iran Rises to 165",
+        "Iran Launches Retaliatory Strikes on Bahrain, Qatar, Kuwait, UAE, Jordan, Saudi Arabia, Iraq",
+        "Protesters Smash US Consulate Windows in Karachi After Khamenei Killing"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0d9fff0eca62",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Al Jazeera reported that Israel struck two schools in Iran, killing at least 108 people at the Shajareh Tayyebeh girls' elementary school in Minab.",
+          "date": "2026-02-28",
+          "role_evidence": "Al Jazeera was among the first outlets to foreground civilian casualties, particularly the school strike, as a central element of the story.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751556+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6a4eca8239df",
+          "name": "Xinhua",
+          "url": "https://english.news.cn/20260302/32be2038fa504bc7a6d7f86431a72228/c.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Xinhua reported that the death toll from the attack on a girls' elementary school in Hormozgan province 'has risen to 165, with dozens more injured.'",
+          "date": "2026-03-02",
+          "role_evidence": "Chinese state media amplified the civilian-harm framing globally, centering the school strike as the most visceral symbol of civilian cost.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751574+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "913d5abc92b1",
+          "name": "IRNA (Iranian state news agency)",
+          "url": "https://english.news.cn/20260302/32be2038fa504bc7a6d7f86431a72228/c.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "IRNA reported the school death toll and the broader civilian casualties from strikes across 24 Iranian provinces.",
+          "date": "2026-02-28",
+          "role_evidence": "Iranian state media originated the civilian-harm data, which was then picked up by international outlets.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751590+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "79dfe0df1371",
+          "name": "Pakistan Today / The Daily Guardian",
+          "url": "https://thedailyguardian.com/opinion/targeted-killing-of-khamenei-and-us-attack-on-irans-sovereignty-violation-of-international-law-695277/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Daily Guardian noted that 'a US-Israeli missile hit a girls' school in southern Iran, killing over 150 civilians, most of them children.'",
+          "date": "2026-03-04",
+          "role_evidence": "South Asian outlets amplified the civilian-harm framing, connecting it to broader anti-war sentiment in the region.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751607+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f4060b18e53e",
+          "name": "US anti-war protesters (Washington DC, NYC, LA, Chicago, Boston)",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Ali_Khamenei",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Hundreds of demonstrators gathered in US cities to protest the US-Israeli strikes, with protests also occurring in Pakistan, Iraq, Greece, Bangladesh, and India.",
+          "date": "2026-03-01",
+          "role_evidence": "Street protests in the US and globally amplified the civilian-harm and anti-war framing on social media and in news coverage.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:06:44.751624+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:06:44.751646+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing framings include: (1) Internal Iranian factional/succession competition perspectives—how different power centers (IRGC, clergy, technocrats) might view this as opportunity or threat to their own position; (2) Economic/sanctions angle—how markets, oil prices, and international business respond independent of geopolitical framing; (3) Skepticism/information warfare lens—questioning the event's authenticity, who benefits from the narrative, and media manipulation by multiple actors; (4) Religious/theological framings from Shia scholarship on legitimate authority and succession that don't reduce to 'martyrdom' or 'liberation'; (5) Bahraini domestic politics angle—why Bahrain specifically responded and what this reveals about Gulf state internal pressures rather than just regional alignment.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T16:07:11.089590+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international ac",
+    "rated_outlets": 3,
+    "distribution": {
+      "left": 1,
+      "lean-left": 1,
+      "center": 0,
+      "lean-right": 1,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 33,
+      "lean-left": 33,
+      "center": 0,
+      "lean-right": 33,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 0,
+    "right_of_center": 1,
+    "lean_index": -0.67,
+    "resolve_rate": 0.5,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "NBC News (Barbara Slavin / Stimson Center)",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "Xinhua / Global Times",
+          "domain": "english.news.cn"
+        },
+        {
+          "carrier": "Pakistan Today / The Daily Guardian",
+          "domain": "thedailyguardian.com"
+        }
+      ]
+    },
+    "non_news_carriers": 9,
+    "matched": [
+      {
+        "outlet": "The Nation",
+        "carrier": "Iran International",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "contains"
+      },
+      {
+        "outlet": "Time Magazine",
+        "carrier": "Time Magazine",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "The Telegraph - UK",
+        "carrier": "The Telegraph (leaked audio report)",
+        "bucket": "lean-right",
+        "lean_num": 1,
+        "source": "allsides",
+        "matched_by": "contains"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 17,
+        "political": 11,
+        "social": 1,
+        "institutional": 8,
+        "academic": 8,
+        "other": 1
+      },
+      "vested_interest": 19,
+      "framings_with_vested": 6,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 34,
+    "framings": [
+      {
+        "framing_id": "645ff2cd",
+        "name": "Justice & Retribution",
+        "n_carriers": 8,
+        "primary": 6,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "3f67acc3f8f6",
+            "display": "Benjamin Netanyahu",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "26b0ce328d87",
+            "display": "Donald Trump",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d4f20491147b",
+            "display": "Israel Defense Forces",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "50d76bd4310f",
+            "display": "Rep. Yassamin Ansari",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "74d0045381d7",
+            "display": "Ukraine",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ef8243b3",
+        "name": "International Law & Sovereignty Violation",
+        "n_carriers": 10,
+        "primary": 7,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "103f8e423b5f",
+            "display": "UN Secretary-General António Guterres",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "dad8028d980b",
+            "display": "China Ministry of Foreign Affairs",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ea4186f72b9e",
+            "display": "Just Security",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d3ed2a2b2981",
+            "display": "Turkey",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "e92ce7ee92f0",
+            "display": "Verfassungsblog",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ee5ce802964c",
+            "display": "Vladimir Putin",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7f77602aba55",
+            "display": "Fox News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bdf218f90a6e",
+            "display": "Aurel Sari",
+            "actor_type": "academic",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "895f1c92",
+        "name": "Iranian Liberation & Regime Collapse",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "29891ac52b1b",
+            "display": "Iran International",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "609cc8d095f2",
+            "display": "Maryam Rajavi",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c6aca7b0f8df",
+            "display": "Prince Reza Pahlavi",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "462cd859dd8e",
+            "display": "Organization of Iranian American Communities",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "51fe1266",
+        "name": "Regional Escalation & Catastrophic Risk",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f8693299caeb",
+            "display": "Ali Vaez",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "103f8e423b5f",
+            "display": "UN Secretary-General António Guterres",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5d64640b987a",
+            "display": "Xinhua",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d7ef23123570",
+            "display": "GCC Foreign Ministers",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "007e439c658b",
+            "display": "Abu-Bakr Al-Desouky",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "ddeb8604",
+        "name": "Martyrdom & Resistance",
+        "n_carriers": 9,
+        "primary": 6,
+        "secondary": 4,
+        "carriers": [
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4d31de92f541",
+            "display": "Hamas",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "af36d4f52db4",
+            "display": "Houthi Political Leadership",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cc938caf892a",
+            "display": "Iranian President Masoud Pezeshkian",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ce6507c7b973",
+            "display": "IRGC",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "02af81e4b51f",
+            "display": "Nader Hashemi",
+            "actor_type": "academic",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "5bda61f6",
+        "name": "Diplomatic Sabotage & Lost Peace",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f8693299caeb",
+            "display": "Ali Vaez",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "103f8e423b5f",
+            "display": "UN Secretary-General António Guterres",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "8ac14404",
+        "name": "Dynastic Succession & Regime Instability",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "29891ac52b1b",
+            "display": "Iran International",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8abb54bc5d12",
+            "display": "Analysts cited in JPost",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "7d135aa5",
+        "name": "Human Cost & Civilian Harm",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5d64640b987a",
+            "display": "Xinhua",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "97fd3e39aaad",
+            "display": "Pakistan Today",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "103f8e423b5f",
+        "display": "UN Secretary-General António Guterres",
+        "actor_type": "person",
+        "n_framings": 3,
+        "framings": [
+          "Diplomatic Sabotage & Lost Peace",
+          "International Law & Sovereignty Violation",
+          "Regional Escalation & Catastrophic Risk"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Diplomatic Sabotage & Lost Peace",
+          "Human Cost & Civilian Harm",
+          "Regional Escalation & Catastrophic Risk"
+        ]
+      },
+      {
+        "actor_id": "5357eb44eda0",
+        "display": "TIME",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Diplomatic Sabotage & Lost Peace",
+          "Justice & Retribution"
+        ]
+      },
+      {
+        "actor_id": "29891ac52b1b",
+        "display": "Iran International",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Dynastic Succession & Regime Instability",
+          "Iranian Liberation & Regime Collapse"
+        ]
+      },
+      {
+        "actor_id": "5d64640b987a",
+        "display": "Xinhua",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost & Civilian Harm",
+          "Regional Escalation & Catastrophic Risk"
+        ]
+      },
+      {
+        "actor_id": "f8693299caeb",
+        "display": "Ali Vaez",
+        "actor_type": "academic",
+        "n_framings": 2,
+        "framings": [
+          "Diplomatic Sabotage & Lost Peace",
+          "Regional Escalation & Catastrophic Risk"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Justice & Retribution",
+        "b": "International Law & Sovereignty Violation",
+        "shared": 1,
+        "jaccard": 0.059
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Iranian Liberation & Regime Collapse",
+        "shared": 1,
+        "jaccard": 0.067
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Regional Escalation & Catastrophic Risk",
+        "shared": 1,
+        "jaccard": 0.071
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Iranian Liberation & Regime Collapse",
+        "shared": 1,
+        "jaccard": 0.077
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 1,
+        "jaccard": 0.077
+      },
+      {
+        "a": "Iranian Liberation & Regime Collapse",
+        "b": "Regional Escalation & Catastrophic Risk",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Martyrdom & Resistance",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Iranian Liberation & Regime Collapse",
+        "b": "Diplomatic Sabotage & Lost Peace",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Regional Escalation & Catastrophic Risk",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Iranian Liberation & Regime Collapse",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Martyrdom & Resistance",
+        "shared": 2,
+        "jaccard": 0.118
+      },
+      {
+        "a": "Diplomatic Sabotage & Lost Peace",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Martyrdom & Resistance",
+        "shared": 2,
+        "jaccard": 0.133
+      },
+      {
+        "a": "Regional Escalation & Catastrophic Risk",
+        "b": "Martyrdom & Resistance",
+        "shared": 2,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Dynastic Succession & Regime Instability",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Iranian Liberation & Regime Collapse",
+        "b": "Martyrdom & Resistance",
+        "shared": 2,
+        "jaccard": 0.154
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 2,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Martyrdom & Resistance",
+        "b": "Diplomatic Sabotage & Lost Peace",
+        "shared": 2,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Justice & Retribution",
+        "b": "Diplomatic Sabotage & Lost Peace",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Martyrdom & Resistance",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Regional Escalation & Catastrophic Risk",
+        "shared": 3,
+        "jaccard": 0.214
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Diplomatic Sabotage & Lost Peace",
+        "shared": 3,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Iranian Liberation & Regime Collapse",
+        "b": "Dynastic Succession & Regime Instability",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Diplomatic Sabotage & Lost Peace",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Regional Escalation & Catastrophic Risk",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 3,
+        "jaccard": 0.375
+      },
+      {
+        "a": "Regional Escalation & Catastrophic Risk",
+        "b": "Diplomatic Sabotage & Lost Peace",
+        "shared": 4,
+        "jaccard": 0.5
+      }
+    ],
+    "by_actor_type": {
+      "news": 9,
+      "organization": 4,
+      "social": 1,
+      "official": 10,
+      "reference": 1,
+      "person": 2,
+      "academic": 7
+    },
+    "connectivity": {
+      "bridge_ratio": 0.176,
+      "siloed_share": 0.735,
+      "mean_jaccard": 0.157
+    },
+    "structure_note": "6 of 34 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

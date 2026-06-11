@@ -1,0 +1,2305 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "d1cdc06874ec",
+  "event": "Kuwait's civil aviation authority filed a second protest complaint with the International Civil Aviation Organization regarding attacks on Kuwait, including its international airport.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T16:33:29.210855+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "07795a91432c",
+        "statement": "Kuwait's civil aviation authority filed a complaint with the International Civil Aviation Organization regarding attacks on Kuwait, including its international airport.",
+        "verified": true,
+        "source_url": "https://www.icao.int/",
+        "note": "This is the core event; ICAO maintains public records of state complaints.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037051+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a5ce271817a7",
+        "statement": "Kuwait International Airport sustained damage in an attack or incident.",
+        "verified": true,
+        "source_url": "https://www.icao.int/",
+        "note": "Confirmed by multiple framings and Kuwait's complaint filing; the specific cause is disputed.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037157+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "cfab073bb553",
+        "statement": "Kuwait is a non-belligerent state not formally at war with Iran or the United States.",
+        "verified": true,
+        "source_url": "https://www.un.org/",
+        "note": "Kuwait's official status at the UN; no declaration of war by or against Kuwait.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037182+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "d904866df678",
+        "statement": "This is Kuwait's second protest complaint to ICAO on this matter.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 8 asserts this; requires verification against ICAO complaint records. No independent confirmation in provided framings.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037199+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "7db288d54d3a",
+        "statement": "Civilians, including foreign workers, were killed or injured in the airport attack.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 5 emphasizes this; specific casualty figures and identities are not provided and would require primary sources (hospital records, official statements).",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037213+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1d3fccf318a4",
+        "statement": "IATA warned of a year-long recovery period and cited airline losses exceeding $450 million.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 6 cites these figures; requires verification against IATA official statements.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037225+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "04e9706c3f88",
+        "statement": "A US Patriot interceptor failed and struck the terminal, rather than an Iranian missile.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framing 4 (Iran's counter-narrative) claims this; disputed by other framings. No independent technical verification provided.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037237+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0e2e26ddecd5",
+        "statement": "A ceasefire between the US and Iran was in effect at the time of the airport attack.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framings 3 and 4 reference a ceasefire; its existence, terms, and status are contested and require official US/Iranian statements.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:33:15.037248+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "WHO ATTACKED THE AIRPORT: Iran denies striking Kuwait's civilian airport and claims a failed US Patriot interceptor caused the damage (Framing 4), while other framings attribute the attack to Iran.",
+      "CEASEFIRE STATUS: Framing 3 argues the ceasefire is a 'fiction' with ongoing violations; Framing 4 claims Iran is honoring it and the US violated it first; Trump administration claims the ceasefire holds (Framing 7).",
+      "INTENT & RESPONSIBILITY: Framing 2 emphasizes deliberate Iranian aggression against a neutral state; Framing 4 frames Iranian actions as lawful self-defense against US provocation.",
+      "TRUMP'S ACCOUNTABILITY: Framing 7 criticizes Trump for dismissing the attack and lacking war authorization; implicit in other framings is whether the US bears responsibility for the broader conflict.",
+      "ICAO'S ROLE: Framing 8 questions whether ICAO has enforcement power; other framings assume it should act (Framing 1) or focus on other consequences.",
+      "SEVERITY CHARACTERIZATION: Framing 3 treats the attack as evidence of ceasefire collapse; Framing 7 treats Trump's response as inadequate; Framing 6 emphasizes economic/aviation disruption; Framing 1 emphasizes legal violation."
+    ],
+    "summary": "All framings agree that Kuwait's airport was attacked/damaged, that Kuwait filed an ICAO complaint, and that Kuwait is a non-belligerent state. The fundamental disagreement is over WHO attacked the airport (Iran vs. failed US interceptor), WHETHER a ceasefire exists and who violated it, and HOW to characterize the incident's significance (legal violation, aggression, ceasefire collapse, economic disruption, or institutional failure). These disputes reflect deeper disagreements about US-Iran conflict responsibility and the credibility of stated truces."
+  },
+  "framings": [
+    {
+      "framing_id": "4d9f1990",
+      "name": "International Law & Sovereignty Violation",
+      "question": "Did Iran's attacks on Kuwait's airport violate international civil aviation law and Kuwaiti sovereignty, and what must ICAO do about it?",
+      "key_claim": "Iran's repeated strikes on Kuwait International Airport constitute a grave breach of international civil aviation conventions and Kuwaiti sovereign airspace, demanding urgent ICAO enforcement action.",
+      "description": "This framing centers on Kuwait's formal legal standing under international aviation treaties and its right to demand accountability through multilateral institutions. It treats the ICAO complaint as the primary mechanism for redress and frames the attacks as violations of codified global norms.",
+      "emphasizes": "The legal character of the breach, ICAO's institutional responsibility, Kuwait's reserved rights under international law, and the precedent-setting danger of attacking protected civilian aviation infrastructure.",
+      "downplays": "The broader US-Iran war context that triggered the attacks, Iran's denial of responsibility, and the political limitations of ICAO as an enforcement body.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Kuwait Files Second ICAO Protest Over Repeated Iranian Airspace Violations and Kuwait Airport Attacks",
+        "Kuwait Submits Second Protest to ICAO Over Airspace Violations and Airport Attacks"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ce3278eb5c2c",
+          "name": "Kuwait Public Authority of Civil Aviation (PACA/DGCA)",
+          "url": "https://timeskuwait.com/kuwait-files-second-formal-protest-against-iran-urges-icao-to-take-action/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "PACA called on ICAO to take urgent and decisive measures to safeguard civil aviation, protect sovereign airspace, and prevent the recurrence of similar violations",
+          "date": "2026-06-07",
+          "role_evidence": "Kuwait's civil aviation authority authored and filed the ICAO protest, originating the legal-framing narrative through official diplomatic channels.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.063226+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1033a019181c",
+          "name": "Gulf News",
+          "url": "https://gulfnews.com/world/gulf/kuwait/kuwait-lodges-second-icao-protest-over-iran-airspace-violations-1.500566412",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Kuwait Files Second ICAO Protest Over Repeated Iranian Airspace Violations and Kuwait Airport Attacks",
+          "date": "2026-06-07",
+          "role_evidence": "Gulf News was among the first regional English-language outlets to publish the full ICAO protest framing with institutional sourcing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.063328+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f322b8ea9a9c",
+          "name": "Arab Times Online",
+          "url": "https://www.arabtimesonline.com/news/kuwait-submits-second-protest-to-icao-over-airspace-violations-and-airport-attacks/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Kuwait called for urgent and decisive international action to safeguard civil aviation, prevent further violations, and ensure accountability under international law",
+          "date": "2026-06-07",
+          "role_evidence": "Kuwait-based outlet amplified the ICAO legal framing directly from KUNA state news agency sourcing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.063365+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "69762c132ed2",
+          "name": "Khaleej Times",
+          "url": "https://www.khaleejtimes.com/business/aviation/kuwait-file-second-complaint-icao-iranian-attacks-airport-airspace",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Kuwait accused Iran of repeatedly violating its sovereignty and endangering civil aviation",
+          "date": "2026-06-07",
+          "role_evidence": "Major UAE-based English daily with wide Gulf readership amplified the sovereignty/ICAO framing to a broad regional and diaspora audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.063386+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0095e58818b5",
+          "name": "Times Kuwait",
+          "url": "https://timeskuwait.com/kuwait-files-second-formal-protest-against-iran-urges-icao-to-take-action/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Authority affirmed that Kuwait reserves all its rights under international law to take appropriate measures to protect its sovereignty, airspace, and civil aviation infrastructure",
+          "date": "2026-06-07",
+          "role_evidence": "Kuwait-focused English outlet relayed the official ICAO protest framing verbatim from KUNA.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.063404+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064289+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b0ecba40",
+      "name": "Iranian Aggression Against a Neutral State",
+      "question": "Is Iran deliberately targeting a non-belligerent Gulf state's civilian infrastructure, and what does that say about Iran's conduct in the war?",
+      "key_claim": "Iran is deliberately and repeatedly striking Kuwait's civilian airport despite Kuwait's non-combatant status, constituting unprovoked aggression against a neutral country.",
+      "description": "This framing positions Kuwait as an innocent bystander being punished for hosting US military assets, emphasizing Iran's moral and strategic culpability for attacking a country that did not initiate hostilities. It foregrounds Kuwait's diplomatic expulsions and condemnations as evidence of Iranian bad faith.",
+      "emphasizes": "Kuwait's non-belligerent status, the deliberateness of Iranian targeting of civilian infrastructure, the expulsion of Iranian diplomats, and the human cost to Kuwaiti civilians and workers.",
+      "downplays": "The US military operations launched from Kuwaiti territory that Iran cites as justification, and the broader US-Iran war escalation cycle.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Kuwait files second complaint with ICAO over Iranian attacks on airport, airspace",
+        "Kuwait releases footage of deadly airport attack after Iran denies responsibility",
+        "Iranian attack on Kuwait airport puts deadly dent into ceasefire"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fd2d7f95b8ef",
+          "name": "Kuwait Ministry of Foreign Affairs",
+          "url": "https://www.cbsnews.com/live-updates/trump-iran-war-attacks-kuwait-airport-israel-hezbollah-ceasefire/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Kuwait's Deputy Foreign Minister reiterated Kuwait's strong condemnation of what it described as 'Iran's criminal attacks'",
+          "date": "2026-06-03",
+          "role_evidence": "Kuwait's government originated the 'Iranian aggression against a neutral state' framing by summoning Iran's envoy, expelling diplomats, and issuing formal condemnations.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064335+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "22253720cd01",
+          "name": "Kuwait Ministry of Defence / CENTCOM",
+          "url": "https://www.thenationalnews.com/news/mena/2026/06/04/kuwait-releases-footage-of-deadly-airport-attack-after-iran-denies-responsibility/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "US Central Command: 'Iran struck the civilian airport with drones in a deliberate, calculated, and unjustified attack'",
+          "date": "2026-06-04",
+          "role_evidence": "CENTCOM officially adopted and amplified the 'deliberate Iranian aggression' framing, lending US military authority to Kuwait's characterization.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064357+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2394616b0a7b",
+          "name": "Arab News",
+          "url": "https://www.arabnews.com/node/2637265/middle-east",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Kuwait files ICAO complaint over Iran-linked airspace attacks",
+          "date": "2026-03-22",
+          "role_evidence": "Saudi-owned pan-Arab English outlet with large international reach amplified the Iranian-aggression framing from the first ICAO complaint onward.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064374+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d60c80a79a49",
+          "name": "Washington Times",
+          "url": "https://www.washingtontimes.com/news/2026/jun/3/iranian-attack-kuwait-airport-puts-deadly-dent-ceasefire/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran escalated tensions in the Middle East on Wednesday by bombing a Kuwaiti airport",
+          "date": "2026-06-03",
+          "role_evidence": "Conservative US outlet framed the event primarily as Iranian escalation and aggression, amplifying this narrative to a US domestic audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064390+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6e7be938fa5a",
+          "name": "The National News",
+          "url": "https://www.thenationalnews.com/news/mena/2026/06/04/kuwait-releases-footage-of-deadly-airport-attack-after-iran-denies-responsibility/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Kuwaiti authorities described the incident as 'Iranian aggression' and presented the footage as evidence of a direct strike",
+          "date": "2026-06-04",
+          "role_evidence": "UAE-based English outlet published CCTV footage and Kuwait's official characterization, reinforcing the Iranian-aggression framing with visual evidence.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064405+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064422+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a6cf471b",
+      "name": "Ceasefire Collapse & Diplomatic Failure",
+      "question": "Is the US-Iran ceasefire effectively dead, and does the Kuwait airport attack prove that diplomacy has failed?",
+      "key_claim": "The attack on Kuwait's airport is the clearest sign yet that the US-Iran ceasefire is a fiction, with both sides continuing to trade strikes while claiming the truce holds.",
+      "description": "This framing uses the Kuwait airport attack as a diagnostic of the broader US-Iran diplomatic situation, asking whether the ceasefire announced in April 2026 has any real meaning. It focuses on the contradiction between official claims of ongoing negotiations and the reality of continued military exchanges.",
+      "emphasizes": "The fragility of the ceasefire, Trump's contradictory statements about the truce, stalled peace talks, and the escalating cycle of US and Iranian strikes.",
+      "downplays": "Kuwait's specific legal grievances, the human cost to Kuwaiti civilians, and Iran's stated justifications for its actions.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "U.S., Iran intensify attacks as ceasefire frays, peace talks stall",
+        "Iran attacks Kuwait, trades strikes with U.S. in test to ceasefire",
+        "Kuwait says Iranian drones hit airport and killed 1 as ceasefire is tested again"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "31e1d1643fd1",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/03/us-iran-war-escalates-peace-talks-stalemate-.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "While the Trump administration says the ceasefire remains in place, attacks have escalated as the war proceeds into its fourth month",
+          "date": "2026-06-03",
+          "role_evidence": "CNBC was among the first major US financial/news outlets to frame the Kuwait attack explicitly as evidence of ceasefire collapse and diplomatic stalemate.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064441+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "129fde3727cc",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/03/g-s1-125566/iran-war-updates",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Kuwait says Iranian drones hit airport and killed 1 as ceasefire is tested again",
+          "date": "2026-06-03",
+          "role_evidence": "NPR's headline explicitly framed the attack as a 'test' of the ceasefire, amplifying this lens to a large US public radio audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064457+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3348b61aaba9",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/iran-attacks-kuwait-strikes-us-ceasefire-peace-talks-trump-rcna348213",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Repeated military exchanges between Washington and Tehran have added strain to efforts to end the war",
+          "date": "2026-06-03",
+          "role_evidence": "NBC News framed the Kuwait attack as part of a broader pattern of ceasefire erosion, reaching a large mainstream US audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064473+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dd4c6d1849a9",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/trump-iran-war-attacks-kuwait-airport-israel-hezbollah-ceasefire/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Kuwait said Wednesday that an Iranian missile and drone attack hit its international airport... as the ceasefire between Iran and the U.S. looked increasingly fragile",
+          "date": "2026-06-03",
+          "role_evidence": "CBS News live-blog framed the Kuwait attack as a key data point in the ceasefire's fragility, amplifying the diplomatic-failure narrative to a broad US audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064488+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "695d17cdc2de",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/06/02/world/live-news/iran-trump-israel-lebanon-war-intl-hnk",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Secretary of State Marco Rubio also said this week that the United States' war with Iran is 'over,' even though the US and Iran have continued to trade missile and drone attacks",
+          "date": "2026-06-03",
+          "role_evidence": "CNN highlighted the contradiction between official US claims and ongoing military exchanges, amplifying the ceasefire-collapse framing to a global audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064503+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064519+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3f034835",
+      "name": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+      "question": "Was Iran's action a legitimate military response to prior US aggression, and is the airport damage actually Iran's fault?",
+      "key_claim": "Iran denies striking Kuwait's civilian airport, claiming the terminal was damaged by a failed US Patriot interceptor, and frames its broader military actions as lawful self-defense against US aggression.",
+      "description": "This framing, advanced by Iranian state actors and echoed in some international coverage, contests the factual attribution of the airport damage to Iran and reframes the entire exchange as a US-initiated escalation to which Iran is responding defensively. It also disputes the ceasefire's terms.",
+      "emphasizes": "Iran's denial of responsibility for the terminal strike, the US military operations that preceded Iranian responses, Iran's framing of its strikes as self-defense, and the claim that the US violated the ceasefire first.",
+      "downplays": "Kuwait's CCTV footage, CENTCOM's denial of the Patriot-missile claim, and the broader pattern of Iranian strikes on Gulf civilian infrastructure.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Iran denies attacking the airport, arguing that the damage was caused by a US interceptor missile",
+        "IRGC: Aerospace Division had not fired at the passenger terminal"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ba6d573dadfc",
+          "name": "IRGC / IRIB (Iranian state broadcaster)",
+          "url": "https://www.thenationalnews.com/news/mena/2026/06/04/kuwait-releases-footage-of-deadly-airport-attack-after-iran-denies-responsibility/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Iran denied attacking the airport, arguing that the damage was caused by a US interceptor missile",
+          "date": "2026-06-03",
+          "role_evidence": "The IRGC and its state broadcaster IRIB originated the counter-narrative denying responsibility and attributing damage to a US Patriot missile failure.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064536+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "542dcfdb635e",
+          "name": "Iranian Foreign Ministry / FM Araghchi",
+          "url": "https://www.washingtontimes.com/news/2026/jun/3/iranian-attack-kuwait-airport-puts-deadly-dent-ceasefire/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Our Armed Forces are conducting self-defense strikes on sites the U.S. is permitted to use to attack civilian shipping and violate the ceasefire",
+          "date": "2026-06-03",
+          "role_evidence": "Iran's Foreign Minister officially adopted the self-defense framing in public statements, providing diplomatic cover for the military actions.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064551+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f817622fe6fa",
+          "name": "Al Jazeera (Tehran correspondent)",
+          "url": "https://www.aljazeera.com/news/2026/6/3/iranian-drone-hits-kuwaits-main-airport-after-us-strikes-qeshm-island",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The latest tensions and clashes in the Gulf have been framed in Iran as a response to what they call 'the US aggression' against the country",
+          "date": "2026-06-03",
+          "role_evidence": "Al Jazeera's Tehran correspondent relayed the Iranian self-defense framing to an international English-language audience without endorsing it.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064567+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "39aab7fe6e78",
+          "name": "CENTCOM (as critic)",
+          "url": "https://www.thenationalnews.com/news/mena/2026/06/04/kuwait-releases-footage-of-deadly-airport-attack-after-iran-denies-responsibility/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "US Central Command denied that damage at Kuwait's airport was caused by a US missile interceptor",
+          "date": "2026-06-04",
+          "role_evidence": "CENTCOM directly rebutted Iran's Patriot-missile claim, calling it 'Totally FALSE,' acting as the primary institutional critic of this framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064731+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064769+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c5ec8621",
+      "name": "Human Cost & Civilian Harm",
+      "question": "Who are the real victims of this attack, and what does it mean for ordinary people — passengers, workers, and residents — caught in a geopolitical conflict?",
+      "key_claim": "The attack on Kuwait's airport killed and injured civilians including foreign workers, disrupted the lives of thousands of travelers, and exposed the human price paid by non-combatants in the US-Iran war.",
+      "description": "This framing foregrounds the individual human toll: the Indian national killed, the 63 injured, the airport workers caught in the blast, and the passengers stranded by flight suspensions. It treats the ICAO complaint as secondary to the lived experience of those harmed.",
+      "emphasizes": "Fatalities, injuries, the identities of victims (including migrant workers), flight disruptions affecting ordinary travelers, and the fear experienced by Kuwaiti residents.",
+      "downplays": "The legal and diplomatic machinery, the military-strategic logic of the attack, and the broader US-Iran war framework.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Iranian drone attack kills Indian citizen in Kuwait after US strikes Qeshm Island",
+        "Kuwaitis mired in fear and anger after deadly attack on airport",
+        "One killed, several injured in Kuwait after Iran targets airport, civilian facilities"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "08aae5a1716d",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/6/3/iranian-drone-hits-kuwaits-main-airport-after-us-strikes-qeshm-island",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "At least 63 people were injured in Iran's attack, including airport workers and passengers",
+          "date": "2026-06-03",
+          "role_evidence": "Al Jazeera led with the human toll — injuries, identities of victims, and civilian disruption — foregrounding the human-cost framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064800+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0364a2f29fd8",
+          "name": "India's Ministry of External Affairs",
+          "url": "https://www.aljazeera.com/news/2026/6/3/iranian-drone-hits-kuwaits-main-airport-after-us-strikes-qeshm-island",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "We condemn the attack on the Kuwait International Airport today in which an Indian national has died and several of our nationals are injured",
+          "date": "2026-06-03",
+          "role_evidence": "India's foreign ministry adopted the human-cost framing by centering the death of an Indian national, internationalizing the civilian-harm narrative.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064821+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7ffa85714e14",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/03/g-s1-125566/iran-war-updates",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The strike reinforced the risks to residents and travelers in Gulf countries that had considered themselves relative havens",
+          "date": "2026-06-03",
+          "role_evidence": "NPR highlighted the human vulnerability of Gulf residents and travelers, amplifying the civilian-harm dimension to a large US audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064839+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ad12317dc567",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/iran-attacks-kuwait-strikes-us-ceasefire-peace-talks-trump-rcna348213",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Videos published online and geolocated by NBC News showed a blazing fire inside the airport, surrounded by debris and heavy smoke as people ran for cover",
+          "date": "2026-06-03",
+          "role_evidence": "NBC News used geolocated video of people fleeing to viscerally amplify the human-cost framing for a mainstream US audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064855+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064876+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2992cbf9",
+      "name": "Gulf Aviation & Economic Disruption",
+      "question": "What does the repeated targeting of Kuwait's airport mean for the Gulf's aviation industry, global air travel, and regional economic stability?",
+      "key_claim": "Repeated strikes on Kuwait International Airport threaten to permanently damage the Gulf's reputation as a safe aviation hub, with recovery potentially taking over a year and cascading effects on airlines, airfares, and regional commerce.",
+      "description": "This framing, led by aviation industry voices and business media, treats the ICAO complaint as a symptom of a deeper structural threat to Gulf aviation. It focuses on infrastructure damage, airline losses, passenger confidence, and the long-term economic consequences of conflict spilling into civilian airports.",
+      "emphasizes": "IATA's warning of a year-long recovery, airline losses exceeding $450 million, the displacement of foreign carriers, rising airfares, and the erosion of passenger confidence in Gulf hubs.",
+      "downplays": "The geopolitical and legal dimensions, the human casualties, and the question of Iranian vs. US responsibility.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Kuwait Airport Terminal Faces Year-Long Recovery After Strike Damage, IATA Warns as Gulf Aviation Feels Conflict Impact",
+        "Kuwait Airport Reopens, But Can Airlines Trust A Gateway Iran Keeps Targeting?"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b19e29ce4f86",
+          "name": "IATA (Kamil Alawadhi, Regional VP)",
+          "url": "https://gulfnews.com/business/aviation/kuwait-airport-terminal-may-need-year-long-recovery-after-strikes-warns-iata-1.500565865",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "My guess is that recovery could take at least a year. The roof is gone",
+          "date": "2026-06-07",
+          "role_evidence": "IATA's regional VP originated the year-long recovery estimate at the WATS summit in Rio, setting the terms of the aviation-disruption framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064895+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d7f8214fb699",
+          "name": "Gulf News (Business/Aviation desk)",
+          "url": "https://gulfnews.com/business/aviation/kuwait-airport-terminal-may-need-year-long-recovery-after-strikes-warns-iata-1.500565865",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Kuwait airport's main terminal may face a year-long recovery after strike damage, IATA warns, disrupting foreign airlines and pushing regional airfares higher",
+          "date": "2026-06-07",
+          "role_evidence": "Gulf News amplified IATA's economic-disruption framing to a large regional business and aviation readership.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064911+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b534a1037ecc",
+          "name": "Live and Let's Fly (Matthew Klint)",
+          "url": "https://liveandletsfly.com/kuwait-airport-reopens-drone-strike-iran/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Gulf has built its global aviation model on safe, reliable hubs. Once airport terminals become targets, will customers have the confidence to travel through them?",
+          "date": "2026-06-04",
+          "role_evidence": "Aviation-specialist blog with dedicated frequent-flyer readership framed the attack as an existential threat to Gulf hub aviation confidence.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064927+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b20e008a64b5",
+          "name": "CNBC (Markets/Geopolitics desk)",
+          "url": "https://www.cnbc.com/2026/06/03/us-iran-war-escalates-peace-talks-stalemate-.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Oil prices rose overnight, with the international benchmark Brent crude up by 2% to $98 a barrel",
+          "date": "2026-06-03",
+          "role_evidence": "CNBC embedded the Kuwait attack in a market-impact frame, linking it to oil price movements and investor uncertainty.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064943+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "673c6bfbb07d",
+          "name": "Wikipedia / 2026 Kuwait International Airport drone strikes article",
+          "url": "https://en.wikipedia.org/wiki/2026_Kuwait_International_Airport_drone_strikes",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Kuwait Airways and Jazeera Airways have reported combined losses exceeding $450 million",
+          "date": "2026-06-07",
+          "role_evidence": "Wikipedia's aggregated article documents the cumulative economic losses, serving as a reference point for the economic-disruption framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064959+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.064977+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f505041e",
+      "name": "Trump Administration Accountability & War Powers",
+      "question": "Is the Trump administration managing this conflict responsibly, and does its dismissive response to the Kuwait attack reveal a failure of US leadership?",
+      "key_claim": "Trump's casual dismissal of the Kuwait airport attack as part of a 'moderate' exchange of fire, while claiming the ceasefire holds, reveals a US administration that is either unable or unwilling to protect its Gulf allies or end the war it started.",
+      "description": "This framing scrutinizes the US executive branch's handling of the conflict, focusing on Trump's contradictory statements, the lack of congressional authorization for the war, and the gap between official claims of a ceasefire and the reality of ongoing strikes. It treats the Kuwait attack as evidence of US policy failure.",
+      "emphasizes": "Trump's Oval Office comments redefining 'ceasefire,' the absence of congressional war authorization, the contradiction between Rubio saying the war is 'over' and ongoing strikes, and the political cost to Gulf allies.",
+      "downplays": "Iran's agency and responsibility for the attacks, Kuwait's own diplomatic actions, and the ICAO legal process.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "U.S., Iran intensify attacks as ceasefire frays, peace talks stall",
+        "Iran attacks Kuwait, trades strikes with U.S. in test to ceasefire"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "695d17cdc2de",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/06/02/world/live-news/iran-trump-israel-lebanon-war-intl-hnk",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Secretary of State Marco Rubio also said this week that the United States' war with Iran is 'over,' even though the US and Iran have continued to trade missile and drone attacks",
+          "date": "2026-06-03",
+          "role_evidence": "CNN highlighted the Rubio contradiction as evidence of administration credibility failure, amplifying the accountability framing to a large audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.064994+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "342266d3453e",
+          "name": "Rep. Thomas Massie (R-KY) / Congressional critics",
+          "url": "https://www.cnn.com/2026/06/02/world/live-news/iran-trump-israel-lebanon-war-intl-hnk",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "People are tired of this. They're tired of $5 gallon gas and $6 gallon diesel",
+          "date": "2026-06-03",
+          "role_evidence": "Massie, a long-standing critic of unauthorized war powers, originated the congressional-accountability framing, citing the Kuwait escalation as evidence of a war the public did not sanction.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065010+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5c8a3fcad50",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/iran-attacks-kuwait-strikes-us-ceasefire-peace-talks-trump-rcna348213",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The two sides offered mixed messages on the status of talks, with President Donald Trump insisting they were ongoing after Iran signaled it may walk away",
+          "date": "2026-06-03",
+          "role_evidence": "NBC News framed the Kuwait attack as exposing the gap between Trump's optimistic diplomatic claims and the reality on the ground.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065025+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d54e726f3bdd",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/trump-iran-war-attacks-kuwait-airport-israel-hezbollah-ceasefire/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump brushed off Iran's attack on Kuwait, saying it was part of a 'moderate' exchange of fire in the region",
+          "date": "2026-06-03",
+          "role_evidence": "CBS News foregrounded Trump's dismissive Oval Office response to the Kuwait attack, amplifying the accountability framing to a broad US audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065040+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.065057+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "45bf0221",
+      "name": "ICAO Institutional Effectiveness",
+      "question": "Can ICAO actually do anything meaningful to protect civilian aviation in an active war zone, or is Kuwait's complaint a symbolic gesture?",
+      "key_claim": "Kuwait's second ICAO protest, following a first that produced no visible deterrence, raises fundamental questions about whether international aviation governance bodies have any real enforcement power in wartime.",
+      "description": "This framing, emerging primarily in aviation-specialist and policy-adjacent commentary, questions the utility of the ICAO complaint mechanism itself. It asks whether multilateral institutions designed for peacetime aviation safety can function as accountability tools during active interstate conflict.",
+      "emphasizes": "The fact that this is Kuwait's second complaint (the first produced no deterrence), ICAO's lack of enforcement mechanisms, and the gap between international legal norms and wartime realities.",
+      "downplays": "The symbolic and diplomatic value of the complaint, Kuwait's other bilateral actions (diplomat expulsions), and the human and economic dimensions of the attack.",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Kuwait Civil Aviation Urges ICAO to Act Following Attacks on Civil Infrastructure",
+        "Kuwait files second formal protest against Iran, urges ICAO to take action"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "22fcb7424001",
+          "name": "Alwast News",
+          "url": "https://en.alwast.net/arab/kuwait-civil-aviation-urges-icao/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The authority called on ICAO to fulfill its legal and regulatory responsibilities by imposing strict protective measures",
+          "date": "2026-06-07",
+          "role_evidence": "Alwast News framed the ICAO appeal as a demand for institutional action, implicitly raising the question of whether ICAO can deliver.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065073+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "10d983b05420",
+          "name": "Live and Let's Fly (Matthew Klint)",
+          "url": "https://liveandletsfly.com/kuwait-airport-reopens-drone-strike-iran/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Kuwait may keep flights moving, but confidence is harder to restore than schedules",
+          "date": "2026-06-04",
+          "role_evidence": "Aviation blog questioned whether institutional responses (ICAO complaints, diplomatic protests) can restore the practical confidence that airlines and passengers need.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065089+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8001051d709a",
+          "name": "Arab Times Online",
+          "url": "https://www.arabtimesonline.com/news/kuwait-submits-second-protest-to-icao-over-airspace-violations-and-airport-attacks/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The severity of the incident is further heightened as it occurred just 48 hours after Terminal 1 was reopened following repair and rehabilitation work on earlier damage caused by a previous attack",
+          "date": "2026-06-07",
+          "role_evidence": "By noting the attack came 48 hours after reopening — itself following a prior attack — Arab Times implicitly highlighted the futility of the first ICAO complaint.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:33:05.065107+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:33:05.065125+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing framings include: (1) Kuwait's own strategic positioning and potential complicity—why it hosts US military assets and how this shapes regional perceptions of its 'neutrality'; (2) Saudi Arabia and UAE's role as regional power brokers and their interests in the conflict's trajectory; (3) the technical/military perspective on airport vulnerability and air defense systems; (4) domestic Kuwaiti political divisions over foreign policy alignment; and (5) the precedent-setting implications for other small states caught between major powers, including whether ICAO complaints create meaningful accountability or merely performative responses.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T16:33:29.210813+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "Kuwait's civil aviation authority filed a second protest complaint with the International Civil Aviation Organization regarding attacks on Kuwait, including its",
+    "rated_outlets": 5,
+    "distribution": {
+      "left": 0,
+      "lean-left": 2,
+      "center": 2,
+      "lean-right": 1,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 40,
+      "center": 40,
+      "lean-right": 20,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 2,
+    "right_of_center": 1,
+    "lean_index": -0.2,
+    "resolve_rate": 0.45,
+    "skew": "balanced across the spectrum",
+    "coverage_gap": {
+      "unrated_news_carriers": 6,
+      "examples": [
+        {
+          "carrier": "Gulf News",
+          "domain": "gulfnews.com"
+        },
+        {
+          "carrier": "Arab Times Online",
+          "domain": "arabtimesonline.com"
+        },
+        {
+          "carrier": "Khaleej Times",
+          "domain": "khaleejtimes.com"
+        },
+        {
+          "carrier": "Arab News",
+          "domain": "arabnews.com"
+        },
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "Alwast News",
+          "domain": "en.alwast.net"
+        }
+      ]
+    },
+    "non_news_carriers": 5,
+    "matched": [
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera (Tehran correspondent)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Washington Times",
+        "carrier": "Washington Times",
+        "bucket": "lean-right",
+        "lean_num": 1,
+        "source": "allsides",
+        "matched_by": "domain"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 23,
+        "political": 1,
+        "social": 0,
+        "institutional": 8,
+        "academic": 0,
+        "other": 3
+      },
+      "vested_interest": 9,
+      "framings_with_vested": 6,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 25,
+    "framings": [
+      {
+        "framing_id": "4d9f1990",
+        "name": "International Law & Sovereignty Violation",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bd24e3792d29",
+            "display": "Arab Times Online",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3a71d0da7854",
+            "display": "Khaleej Times",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "82586582a607",
+            "display": "Kuwait Public Authority of Civil Aviation",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5b6beb8b91f4",
+            "display": "Times Kuwait",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b0ecba40",
+        "name": "Iranian Aggression Against a Neutral State",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "9a6979d23176",
+            "display": "Arab News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "45ac0593569f",
+            "display": "Kuwait Ministry of Defence",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "f15fce2f571c",
+            "display": "Kuwait Ministry of Foreign Affairs",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cbb5ae7d543a",
+            "display": "The National News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "a29d32870140",
+            "display": "Washington Times",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "a6cf471b",
+        "name": "Ceasefire Collapse & Diplomatic Failure",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "3f034835",
+        "name": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b600a3952955",
+            "display": "Iranian Foreign Ministry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ce6507c7b973",
+            "display": "IRGC",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "a29d32870140",
+            "display": "Washington Times",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cbe02f28f080",
+            "display": "CENTCOM",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c5ec8621",
+        "name": "Human Cost & Civilian Harm",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "fc6325379a09",
+            "display": "India's Ministry of External Affairs",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2992cbf9",
+        "name": "Gulf Aviation & Economic Disruption",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f54532743f5d",
+            "display": "Live and Let's Fly",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "841ece7770a9",
+            "display": "IATA",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f505041e",
+        "name": "Trump Administration Accountability & War Powers",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "995e7811f6da",
+            "display": "Rep. Thomas Massie",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "45bf0221",
+        "name": "ICAO Institutional Effectiveness",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "f54532743f5d",
+            "display": "Live and Let's Fly",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7f43c7bae4e6",
+            "display": "Alwast News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bd24e3792d29",
+            "display": "Arab Times Online",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Human Cost & Civilian Harm",
+          "Trump Administration Accountability & War Powers"
+        ]
+      },
+      {
+        "actor_id": "9346e9f92bef",
+        "display": "Gulf News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Gulf Aviation & Economic Disruption",
+          "International Law & Sovereignty Violation"
+        ]
+      },
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Gulf Aviation & Economic Disruption"
+        ]
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Human Cost & Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "ca1dd6e7ff48",
+        "display": "CBS News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Trump Administration Accountability & War Powers"
+        ]
+      },
+      {
+        "actor_id": "922a54b2a6d6",
+        "display": "CNN",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse & Diplomatic Failure",
+          "Trump Administration Accountability & War Powers"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost & Civilian Harm",
+          "Iran's Counter-Narrative: Self-Defense & US Provocation"
+        ]
+      },
+      {
+        "actor_id": "f54532743f5d",
+        "display": "Live and Let's Fly",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Gulf Aviation & Economic Disruption",
+          "ICAO Institutional Effectiveness"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Iranian Aggression Against a Neutral State",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Ceasefire Collapse & Diplomatic Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "Gulf Aviation & Economic Disruption",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "b": "Gulf Aviation & Economic Disruption",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Gulf Aviation & Economic Disruption",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Gulf Aviation & Economic Disruption",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Administration Accountability & War Powers",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "Ceasefire Collapse & Diplomatic Failure",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "Gulf Aviation & Economic Disruption",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Iranian Aggression Against a Neutral State",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Gulf Aviation & Economic Disruption",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Iran's Counter-Narrative: Self-Defense & US Provocation",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "International Law & Sovereignty Violation",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Gulf Aviation & Economic Disruption",
+        "b": "ICAO Institutional Effectiveness",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Ceasefire Collapse & Diplomatic Failure",
+        "b": "Trump Administration Accountability & War Powers",
+        "shared": 3,
+        "jaccard": 0.5
+      }
+    ],
+    "by_actor_type": {
+      "news": 15,
+      "organization": 8,
+      "reference": 1,
+      "official": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.32,
+      "siloed_share": 0.6,
+      "mean_jaccard": 0.067
+    },
+    "structure_note": "8 of 25 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

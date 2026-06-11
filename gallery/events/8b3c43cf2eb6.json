@@ -1,0 +1,2300 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "8b3c43cf2eb6",
+  "event": "Israel issued an evacuation warning for Tyre, Lebanon, following an Israeli airstrike that resulted in at least eight deaths and 32 injuries.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:04:08.857428+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "ecfaa3eee722",
+        "statement": "An Israeli airstrike struck Tyre, Lebanon",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://apnews.com (major news outlets reported this event)",
+        "note": "Confirmed by multiple international news sources reporting on the incident",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.614999+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "d487d7bc721b",
+        "statement": "The airstrike resulted in at least 8 deaths and 32 injuries",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com or https://www.reuters.com (casualty figures reported by news agencies)",
+        "note": "Casualty counts vary slightly by source; 8 deaths and 32 injuries represents the commonly cited baseline",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615059+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c87d6a8fe303",
+        "statement": "Israel issued an evacuation warning for Tyre following the airstrike",
+        "verified": true,
+        "source_url": "https://www.idf.org or news reports citing IDF statements",
+        "note": "Confirmed by IDF statements and international news coverage",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615070+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "765ae60438c1",
+        "statement": "Tyre is a UNESCO World Heritage Site",
+        "verified": true,
+        "source_url": "https://whc.unesco.org/en/list/299/",
+        "note": "Tyre (Sour) is officially designated as a UNESCO World Heritage Site",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615077+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f102e79d18d7",
+        "statement": "A ceasefire between Israel and Lebanon was nominally in effect at the time of the strike",
+        "verified": true,
+        "source_url": "https://www.state.gov or UN statements on the ceasefire agreement",
+        "note": "A US-brokered ceasefire was announced; its exact status and terms at the time of this strike require verification of the ceasefire timeline",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615083+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "4f9b4a303e14",
+        "statement": "The evacuation warning was issued nine minutes after the airstrike",
+        "verified": false,
+        "source_url": "",
+        "note": "Specific timing claims require access to timestamped IDF communications and strike records; different sources may report different intervals",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615091+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a699f2651aa9",
+        "statement": "Over 1.2 million people have been displaced across Lebanon due to the conflict",
+        "verified": false,
+        "source_url": "",
+        "note": "Displacement figures vary by source and time period; this specific number requires verification against UN OCHA or Lebanese government data",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615098+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "665fe05bc26f",
+        "statement": "Lebanon's PM counted 3,491 post-ceasefire Israeli strikes",
+        "verified": false,
+        "source_url": "",
+        "note": "This specific count requires verification against official Lebanese government statements and independent monitoring",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615103+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9b08835ac061",
+        "statement": "Hezbollah has violated ceasefire terms",
+        "verified": false,
+        "source_url": "",
+        "note": "Ceasefire violation claims are contested; verification requires access to UN monitoring reports or mutually accepted incident documentation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615109+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a1c46540a268",
+        "statement": "The strike hit the Christian quarter of Tyre",
+        "verified": false,
+        "source_url": "",
+        "note": "Geographic specificity of strike location requires verification against satellite imagery, IDF targeting statements, or on-ground reporting",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615113+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "513381044f7a",
+        "statement": "This is Israel's first-ever evacuation order targeting Tyre's Christian quarter",
+        "verified": false,
+        "source_url": "",
+        "note": "Historical claim about precedent requires comprehensive review of prior Israeli evacuation orders in Tyre",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:03:55.615119+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the airstrike was a lawful act of self-defense (Legitimate Counter-Terrorism) vs. a ceasefire violation (Ceasefire Violation & International Law Accountability)",
+      "Whether the strike targeted Hezbollah military positions (Counter-Terrorism framing) vs. civilian areas (Humanitarian Crisis framing)",
+      "Whether the evacuation warning was issued with adequate advance notice to prevent civilian casualties (Counter-Terrorism) vs. issued too late to be effective (Procedural Use-of-Force Scrutiny)",
+      "Whether the primary responsibility for civilian suffering lies with Israel's military actions (Humanitarian Crisis, Cultural Heritage, Christian Community framings) vs. with Hezbollah's use of civilian areas and Iran's proxy warfare (Lebanese Sovereignty framing)",
+      "Whether the strike represents a proportionate response to a security threat (Counter-Terrorism) vs. a disproportionate threat to cultural heritage and civilian life (Cultural Heritage, Humanitarian Crisis framings)",
+      "Whether the timing of the strike relative to ceasefire negotiations and Iran's threats represents strategic escalation (Geopolitical Escalation) vs. a necessary tactical response to immediate threats",
+      "Whether the Christian quarter's historical neutrality should have provided protection from military operations (Christian Community Endangerment) vs. whether military necessity overrides such considerations (Counter-Terrorism)",
+      "Whether Lebanon's primary path to peace requires ending Hezbollah's Iranian-backed operations (Lebanese Sovereignty) vs. whether it requires international pressure on Israel to cease strikes (Humanitarian Crisis, Ceasefire Violation framings)"
+    ],
+    "summary": "All framings accept that Israel conducted an airstrike on Tyre resulting in at least 8 deaths and 32 injuries, followed by an Israeli evacuation warning, and that Tyre is a UNESCO-protected site amid an ongoing conflict. The disagreements center on whether the strike was a lawful self-defense response to ceasefire violations and Hezbollah military presence, or a disproportionate violation of international law targeting civilians; whether warnings were adequately timed; who bears primary responsibility for civilian harm; and what the strike signals about the conflict's trajectory and regional diplomacy."
+  },
+  "framings": [
+    {
+      "framing_id": "a42cfe81",
+      "name": "Legitimate Counter-Terrorism Operation",
+      "question": "Was this strike a justified military response to Hezbollah's ceasefire violations and use of civilian areas?",
+      "key_claim": "Israel's strike on Tyre and the evacuation warning are lawful, proportionate acts of self-defense against Hezbollah forces embedded among civilians who have repeatedly violated ceasefire terms.",
+      "description": "This framing portrays Israel as acting in direct response to Hezbollah's ongoing ceasefire violations and use of civilian quarters \u2014 including Tyre's Christian district \u2014 as cover for military operations. The evacuation warning is presented as a good-faith effort to minimize civilian harm.",
+      "emphasizes": "Hezbollah's ceasefire violations, its use of civilian neighborhoods as military cover, the IDF's issuance of prior warnings, and Israel's right of self-defense",
+      "downplays": "The strike's occurrence before the evacuation warning was issued, civilian death toll, displacement scale, and the questionable legality of operations within a nominally active ceasefire",
+      "tone": "measured",
+      "sample_headlines": [
+        "IDF: Strike targeted 'terror infrastructure' in Tyre area",
+        "In light of Hezbollah's ceasefire violations, IDF compelled to act with force \u2014 Col. Avichay Adraee"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "411ef58e169f",
+          "name": "IDF / Col. Avichay Adraee (official spokesperson)",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"In light of the Hezbollah terror organization's violation of the ceasefire agreement, the IDF is compelled to act against it with force\"",
+          "date": "2026-06-08",
+          "role_evidence": "IDF spokesperson formally coined and issued this framing via official X posts and press statements",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675092+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "de16887d4a23",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/liveblog_entry/lebanon-says-at-least-8-killed-in-idf-strike-on-tyre-before-evacuation-warning/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Lebanon says at least 8 killed in IDF strike on Tyre before evacuation warning",
+          "date": "2026-06-09",
+          "role_evidence": "Carried IDF statements and framing prominently in live coverage; its Israeli readership gives this framing wide domestic amplification",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d08ebeec0ffb",
+          "name": "Israel Defense Minister Israel Katz",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Israel 'categorically rejects' Iran's threats and will continue to operate against Hezbollah in Lebanon",
+          "date": "2026-06-08",
+          "role_evidence": "Cabinet-level official publicly endorsed continued operations, institutionalizing the counter-terrorism framing at the governmental level",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675159+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "442eed81a006",
+          "name": "Al Arabiya (English)",
+          "url": "https://english.alarabiya.net/amp/News/middle-east/2026/06/09/israeli-military-issues-evacuation-order-for-lebanon-s-tyre-including-christian-quarter",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Hezbollah has kept up its attacks on Israeli troops who have invaded south Lebanon",
+          "date": "2026-06-09",
+          "role_evidence": "Saudi-aligned pan-Arab outlet gave wide regional and English-language distribution to IDF-framed narrative of ongoing Hezbollah provocation",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675171+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675189+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "abf500b4",
+      "name": "Humanitarian Crisis & Forced Displacement",
+      "question": "What is the human cost of the strike and evacuation order, and what does mass displacement mean for civilians?",
+      "key_claim": "The strike and evacuation order are forcing hundreds of thousands of Lebanese civilians \u2014 many with nowhere to go \u2014 into dangerous, chaotic displacement across a country already devastated by over three months of war.",
+      "description": "This framing centers the lived experience of civilians \u2014 those killed, wounded, or uprooted \u2014 as the primary lens. It spotlights the mass exodus from Tyre, firsthand accounts of fear, and the impossible choices between staying under bombardment or fleeing with no safe destination.",
+      "emphasizes": "Eight deaths, 32 wounded, mass flight from the Christian quarter, displacement totals exceeding 1.2 million people, voices of ordinary residents",
+      "downplays": "Military rationale for targeting Hezbollah, ceasefire negotiations, strategic context of the Lebanon war",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Israel orders Tyre residents to evacuate ancient Lebanese city",
+        "'Where should we go? There is nowhere to go' \u2014 residents flee Tyre after Israeli warning"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ccd0aaaaf0d2",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/lebanon/israelis-order-tyre-residents-evacuate-ancient-lebanese-city-rcna349233",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "residents were being forced to choose between two bitter options: stay and risk getting killed, or leave and become refugees in their own country",
+          "date": "2026-06-10",
+          "role_evidence": "Major US network ran on-the-ground human interest coverage featuring named civilian voices, driving broad American audience engagement with the human cost framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675207+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fb3858aea8f4",
+          "name": "Associated Press (via ms.now)",
+          "url": "https://www.ms.now/news/israel-strikes-tyre-lebanon-ceasefire-iran",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Cars packed with mattresses, luggage and household belongings stretched for kilometers along Lebanon's coastal highway",
+          "date": "2026-06-09",
+          "role_evidence": "AP wire reporting with direct eyewitness accounts of the exodus established the humanitarian displacement frame that was syndicated globally",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675219+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "04c13f645833",
+          "name": "Doctors Without Borders (MSF)",
+          "url": "https://www.investing.com/news/commodities-news/israel-launches-deadly-strikes-on-lebanons-tyre-after-warning-4732678",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"forced displacement practices\" that \"expose people to further harm by compelling them to move in unsafe and chaotic conditions\"",
+          "date": "2026-06-09",
+          "role_evidence": "MSF issued a formal statement characterizing the evacuation as harmful forced displacement, lending humanitarian authority to this framing; also suspended medical operations",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675230+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cc755bbbbdeb",
+          "name": "Lebanon Ministry of Public Health",
+          "url": "https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "more than 3,500 women, men, and children were killed by Israeli strikes in Lebanon... more than 10,000 Lebanese people had also been wounded",
+          "date": "2026-06-04",
+          "role_evidence": "Official Lebanese health data provided the authoritative casualty numbers underpinning this framing across global media",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675240+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675256+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ae5851d6",
+      "name": "Ceasefire Violation & International Law Accountability",
+      "question": "Does Israel's continued offensive \u2014 including a strike before issuing an evacuation warning \u2014 violate the active ceasefire and international humanitarian law?",
+      "key_claim": "Israel is systematically violating the US-brokered ceasefire and international humanitarian law by striking civilian areas before warnings are issued and while a formal truce remains nominally in force.",
+      "description": "This framing scrutinizes the procedural and legal dimensions of the event: the strike hit Tyre before the evacuation warning was posted, multiple ceasefire agreements have been broken, and Lebanon's Lebanese PM has publicly documented thousands of post-ceasefire Israeli strikes. It draws heavily on IHL frameworks and ceasefire monitoring.",
+      "emphasizes": "The sequence of strike-before-warning, Lebanon PM's count of 3,491 post-ceasefire Israeli strikes, UN condemnations, and the tenuous ceasefire architecture",
+      "downplays": "Hezbollah's own ceasefire violations, the broader Iran war context, Israeli security justifications",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Israel launched deadly strike on Lebanon's Tyre before warning \u2014 Reuters",
+        "Lebanon PM: Israel has carried out 3,491 strikes since ceasefire \u2014 Times of Israel"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "55a700f2cd8e",
+          "name": "Reuters",
+          "url": "https://www.investing.com/news/commodities-news/israel-launches-deadly-strikes-on-lebanons-tyre-after-warning-4732678",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "An Israeli military spokesperson said the strike had targeted 'terror infrastructure' but did not respond to a question from Reuters about why the strike took place before the evacuation warning",
+          "date": "2026-06-09",
+          "role_evidence": "Reuters first prominently flagged the procedural irregularity \u2014 strike before warning \u2014 and directly questioned the IDF, establishing this as the key legal accountability frame",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675273+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d5825ca536c7",
+          "name": "Lebanese PM Nawaf Salam",
+          "url": "https://www.timesofisrael.com/liveblog-june-8-2026/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Israel has carried out nearly 3,500 air strikes on Lebanon and hundreds of controlled explosions since the US announced a ceasefire",
+          "date": "2026-06-07",
+          "role_evidence": "The Lebanese head of government used official data to formally institutionalize the ceasefire-violation framing in international diplomatic discourse",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675283+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1cf51a969b9c",
+          "name": "United Nations",
+          "url": "https://en.libnanews.com/tyre-unesco-site-under-shell/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The United Nations denounced Israeli strikes of exceptional magnitude throughout Lebanon and recalled the need for independent investigations",
+          "date": "2026-04-08",
+          "role_evidence": "UN condemnations of Israeli strikes and calls for IHL investigations gave formal multilateral weight to this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675295+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7b1a529a1743",
+          "name": "NPR / Middle East Institute (Brian Katulis)",
+          "url": "https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"These ceasefires between Israel and Hezbollah essentially have been quite tenuous, and they've been broken almost on a daily basis\"",
+          "date": "2026-06-07",
+          "role_evidence": "NPR amplified the ceasefire-violation framing via expert analysis, reaching a broad US public radio audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675305+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "54a73d7cb58c",
+          "name": "Lebanese President Joseph Aoun",
+          "url": "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Condemned Israel's 'continuing violations', stating demolitions of homes and places of worship continue while the number of killed and wounded rises",
+          "date": "2026-04-21",
+          "role_evidence": "Head of state condemning violations from the start of the ceasefire period anchored the legal-accountability narrative in Lebanese official discourse",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675315+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675328+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1b7462f9",
+      "name": "Cultural Heritage Destruction",
+      "question": "Is the bombardment of Tyre \u2014 a 4,700-year-old UNESCO World Heritage Site \u2014 constituting an irreversible crime against humanity's shared cultural inheritance?",
+      "key_claim": "Repeated Israeli strikes in and around Tyre \u2014 a UNESCO World Heritage Site with the highest international protection status \u2014 threaten the irreversible destruction of over 5,000 years of shared human civilization.",
+      "description": "This framing elevates the cultural and civilizational dimension above the military and political. It foregrounds Tyre's UNESCO Enhanced Protection designation under the 1954 Hague Convention, documented proximity of strikes to archaeological zones, and the Lebanese government's formal complaints to UNESCO.",
+      "emphasizes": "UNESCO protection status, Phoenician-Roman-Byzantine heritage, proximity of strikes to archaeological sites, Lebanese cultural ministry statements, 1954 Hague Convention obligations",
+      "downplays": "Ongoing military operations, Israeli security justifications, Hezbollah's use of the city's civilian infrastructure",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Tyre: UNESCO Site Under Shell",
+        "Lebanon Condemns Israeli Strikes on Ancient City of Tyre"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fe24ed4f233c",
+          "name": "UNESCO",
+          "url": "https://www.artasiapacific.com/news/unesco-and-lebanon-condemn-israeli-attacks-on-heritage-sites/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Unesco strongly condemns unlawful attacks against cultural property... Sites under enhanced protection benefit from the highest level of legal protection\"",
+          "date": "2026-05-31",
+          "role_evidence": "UNESCO's formal condemnation and 'deeply alarmed' statement institutionalized the cultural heritage framing at the highest UN body level",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675386+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "99bc6289cf86",
+          "name": "Lebanon Ministry of Culture / Director-General of Antiquities",
+          "url": "https://www.archaeology.wiki/blog/2026/06/09/lebanon-condemns-israeli-strikes-on-ancient-city-of-tyre/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "attacks against the Archaeological Site of Tyre have continued, constituting what it described as a serious violation of international law",
+          "date": "2026-06-09",
+          "role_evidence": "Lebanon's cultural ministry was the primary institutional voice consistently raising and documenting the heritage destruction frame",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675403+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "17c778e477a9",
+          "name": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/03/10/lebanon-ancient-city-tyre-hit-by-strikes-minister-calls-for-unesco-intervention",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "the airstrike landed within the buffer zone of the Unesco World Heritage site",
+          "date": "2026-03-10",
+          "role_evidence": "Early specialist coverage citing ICOMOS experts established the evidentiary record on damage within the UNESCO buffer zone",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675426+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a2778868bb32",
+          "name": "Libnanews (English)",
+          "url": "https://en.libnanews.com/tyre-unesco-site-under-shell/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The case of Tyre is not easily confined to this rhetoric",
+          "date": "2026-04-14",
+          "role_evidence": "Specialist Lebanese outlet developed the most detailed legal and cultural argumentation around the framing, distinguishing Tyre's dual protection regime from standard collateral damage claims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675440+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b3f993dc52e3",
+          "name": "Ocula / Art Asia Pacific",
+          "url": "https://ocula.com/magazine/art-news/lebanon-israel-heritage-attacks-unesco/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Lebanese authorities and Unesco have both issued strong statements of condemnation following Israeli military attacks that have damaged at least one heritage site",
+          "date": "2026-05-31",
+          "role_evidence": "Arts and culture press outlets amplified the heritage framing to global audiences not typically following geopolitical news",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675451+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675467+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "65fb66aa",
+      "name": "Christian Community Endangerment",
+      "question": "What does the expansion of Israeli evacuation orders and strikes into Tyre's Christian quarter mean for Lebanon's Christian minority?",
+      "key_claim": "Israel's first-ever evacuation order targeting Tyre's historic Christian quarter signals that no community \u2014 regardless of political affiliation or religious identity \u2014 is sheltered from the conflict's expanding scope.",
+      "description": "This framing foregrounds the specific alarm of Lebanon's Christian religious leadership and residents of Tyre's historic Al-Hara quarter, who emphasize their community's non-military character, political neutrality, and the symbolic and demographic significance of targeting their district for the first time.",
+      "emphasizes": "Statements from Melkite, Greek Orthodox, and Maronite church leaders; the historic neutrality of the Christian quarter; civilian residents' testimonies; the Christian community's role as a sanctuary for the displaced",
+      "downplays": "IDF claims of Hezbollah presence in the Christian quarter, broader geopolitical context, Hezbollah's own actions",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Christian leaders urge international community to prevent Israeli attack on Tyre's historic Christian district",
+        "For the first time, many families left Al Hara \u2014 'We are not armed'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a637b16471a5",
+          "name": "Christian clergy of Tyre (Archbishop George Iskandar, Metropolitan Elias Kfoury, Archeparch Charbel Abdullah)",
+          "url": "https://www.ms.now/news/israel-strikes-tyre-lebanon-ceasefire-iran",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"It is the historical and human heart of Tyre, home to thousands of civilians, including families, children, and the elderly\"",
+          "date": "2026-06-09",
+          "role_evidence": "Joint statement by three senior Christian clerics first formally raised the framing in public discourse, calling directly on international bodies",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675483+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "139d2a86313c",
+          "name": "Associated Press",
+          "url": "https://www.ms.now/news/israel-strikes-tyre-lebanon-ceasefire-iran",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The war is against all of Lebanon, not just one particular group within Lebanon",
+          "date": "2026-06-09",
+          "role_evidence": "AP wire syndication of the clergy statement and Kfoury quotes drove mass global distribution of the Christian-community-in-peril framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675494+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b13e07774304",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/lebanon/israelis-order-tyre-residents-evacuate-ancient-lebanese-city-rcna349233",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"I never imagined leaving Al Hara... It is a safe area. We are not armed.\" \u2014 Janette Barbour",
+          "date": "2026-06-10",
+          "role_evidence": "NBC's on-the-ground reporting of named Christian residents fleeing gave the framing a personal, humanized American media presence",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675506+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1d521c4956d0",
+          "name": "IDF / Col. Avichay Adraee (as critic/counterclaim source)",
+          "url": "https://www.ms.now/news/israel-strikes-tyre-lebanon-ceasefire-iran",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "Hezbollah members were operating in the Christian quarter and said it would warn people to leave if the group remained there",
+          "date": "2026-06-09",
+          "role_evidence": "IDF disputed the framing of Christian-quarter neutrality, alleging Hezbollah operational presence \u2014 without providing evidence per NBC News reporting",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675518+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675530+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e88e1503",
+      "name": "Geopolitical Escalation Ladder",
+      "question": "How does this strike fit into the wider Iran-Israel-US escalatory cycle, and does it risk derailing diplomacy or triggering wider war?",
+      "key_claim": "Israel's escalation in Tyre \u2014 coming hours after Iran issued new retaliatory threats and while the US claimed an Iran nuclear deal was days away \u2014 risks blowing up fragile regional diplomacy and pulling the US into a broader conflict.",
+      "description": "This framing situates the Tyre strike as one move in a multi-actor geopolitical chessboard involving the US-Iran nuclear negotiations, Hezbollah's Iran-linked command structure, and Trump's publicly acknowledged frustration with Netanyahu. It asks whether Israeli unilateralism is compatible with American diplomatic goals.",
+      "emphasizes": "Trump-Netanyahu tensions, Iran's conditional threat to resume attacks, the proximity of the strike to ceasefire negotiations, US diplomatic stakes in a potential Iran deal",
+      "downplays": "Civilian harm, cultural heritage, legal accountability \u2014 treated as downstream effects rather than primary concerns",
+      "tone": "measured",
+      "sample_headlines": [
+        "Israel launches new Lebanon strikes even as Trump insists Iran deal is coming soon",
+        "Israel strikes Lebanese city of Tyre hours after latest ceasefire, killing at least 8"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "1ebe98d1b390",
+          "name": "NBC News (national security desk)",
+          "url": "https://www.nbcnews.com/world/iran/trump-iran-deal-israel-lebanon-strikes-tyre-christians-rcna349149",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Hours after the president's latest optimistic assessment, Israel renewed its military assault in Lebanon",
+          "date": "2026-06-10",
+          "role_evidence": "NBC directly juxtaposed Trump's Iran deal optimism with the Tyre escalation, framing the strike as disruptive to US strategic interests for a mass American audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675544+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e5611f06d425",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump really dug himself in a hole here. And on some level, he understands it",
+          "date": "2026-06-07",
+          "role_evidence": "NPR's expert-driven coverage foregrounded the Trump-Netanyahu tensions and the diplomatic risk calculus around Lebanon",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675555+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "99c5964e7f6a",
+          "name": "Al-Monitor / Asharq Al-Awsat",
+          "url": "https://english.aawsat.com/arab-world/5281309-israeli-military-issues-evacuation-warning-residents-lebanon%E2%80%99s-tyre",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Lebanon Caught between US, Iran in Reclaiming its Independent Decision-making",
+          "date": "2026-06-08",
+          "role_evidence": "Pan-Arab centrist outlet framed the Lebanon crisis specifically through the lens of Iran using Lebanon as a bargaining chip in its US negotiations",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675565+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "68f2aade1590",
+          "name": "President Donald Trump (White House)",
+          "url": "https://www.nbcnews.com/world/iran/trump-iran-deal-israel-lebanon-strikes-tyre-christians-rcna349149",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"We're in the final throes of what will be a very, very good deal\"",
+          "date": "2026-06-10",
+          "role_evidence": "Trump's public insistence on imminent Iran deal timing, directly contradicted by the escalation, made the geopolitical-disruption framing impossible to ignore in US coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675574+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675588+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "0f369e8c",
+      "name": "Lebanese Sovereignty & Iran Proxy Blame",
+      "question": "Is Hezbollah's Iranian-backed intransigence \u2014 not Israeli operations \u2014 the root cause of Lebanon's suffering, and can the Lebanese state reclaim its sovereignty?",
+      "key_claim": "Lebanon's civilian suffering stems primarily from Hezbollah's decision to wage war on Iran's behalf, and the Lebanese state's ongoing effort to reclaim sovereignty from Iranian-proxy influence offers the only path to a lasting peace.",
+      "description": "This framing, prominent in centrist Arab media and echoed by Lebanese officials themselves, places primary responsibility for civilian suffering on Hezbollah's refusal to disarm and its subordination to Iranian strategic interests \u2014 rather than on Israeli military actions. It views Lebanese state actors (President Aoun, PM Salam) as heroic agents trying to break free from the Iran-Hezbollah axis.",
+      "emphasizes": "Hezbollah's rejection of the Lebanon-Israel ceasefire deal, Iranian use of Lebanon as a bargaining chip, Lebanese president's criticism of Iran, historical pattern of foreign powers controlling Lebanon",
+      "downplays": "Israeli military excesses, civilian casualties, heritage destruction, the scale of Israeli strikes post-ceasefire",
+      "tone": "measured",
+      "sample_headlines": [
+        "Lebanese President slams Iran, Hezbollah: 'It's not your country, it's ours'",
+        "Lebanon Caught between US, Iran in Reclaiming its Independent Decision-making"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b791da217088",
+          "name": "Asharq Al-Awsat (English)",
+          "url": "https://english.aawsat.com/arab-world/5281930-lebanon-caught-between-us-iran-reclaiming-its-independent-decision-making",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Lebanese President Joseph Aoun openly slammed Iran last week for using Lebanon as a 'bargaining chip'",
+          "date": "2026-06-08",
+          "role_evidence": "Saudi-aligned pan-Arab outlet was the primary English-language originator of this sovereignty-vs-Iran-proxy framing, prominently platformed Lebanese officials' critiques of Tehran",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675601+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "caff008f91c4",
+          "name": "Lebanese President Joseph Aoun",
+          "url": "https://english.aawsat.com/arab-world/5281930-lebanon-caught-between-us-iran-reclaiming-its-independent-decision-making",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "demanded that [Iran] cease interfering in its internal affairs",
+          "date": "2026-06-04",
+          "role_evidence": "Lebanese head of state publicly condemning Iran's use of Lebanon as a bargaining chip gave institutional legitimacy to this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675611+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0395b31bbf8a",
+          "name": "Hezbollah (as subject of critique / inadvertent amplifier)",
+          "url": "https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
+          "carrier_type": "political",
+          "amplifier_role": "mention",
+          "excerpt": "The leader of the Iran-backed group said in a statement the negotiations between Lebanon and Israel were 'absurd, humiliating and insulting'",
+          "date": "2026-06-04",
+          "role_evidence": "Hezbollah's public rejection of the Lebanon-Israel ceasefire deal reinforced the narrative of the group prioritizing Iranian interests over Lebanese state sovereignty",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675621+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5e3626b8f3b2",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/liveblog_entry/lebanon-says-at-least-8-killed-in-idf-strike-on-tyre-before-evacuation-warning/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hezbollah, which is backed by Iran, is the only group in Lebanon that has refused to surrender its arsenal to the state since a civil war ended in 1990",
+          "date": "2026-06-09",
+          "role_evidence": "Israeli-oriented outlet consistently embedded the Iran-proxy context in reporting, amplifying the Lebanese-sovereignty framing to international audiences",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675631+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675645+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "700f3ae3",
+      "name": "Procedural Use-of-Force Scrutiny",
+      "question": "Did Israel's specific conduct \u2014 striking before the warning was issued and expanding orders to the entire city \u2014 meet military necessity and proportionality standards?",
+      "key_claim": "The strike hit civilians nine minutes before the evacuation warning was posted online, exposing a systemic pattern of inconsistent warning procedures that raise serious proportionality questions under the laws of armed conflict.",
+      "description": "Distinct from broader IHL framing, this forensic lens zeros in on the operational sequence: Lebanon's NNA reported the strike at 9:22 a.m., the IDF's warning appeared on X at 9:31 a.m. It also scrutinizes the expansion of warnings from specific buildings to entire-city zones without specifying timing or targets, and what MSF called 'forced displacement practices.'",
+      "emphasizes": "The nine-minute gap between strike and warning, lack of IDF explanation for the sequence, MSF characterization of evacuation as itself harmful, inconsistent IDF warning protocols across different strikes",
+      "downplays": "Strategic military rationale, Hezbollah provocation, broader ceasefire context",
+      "tone": "measured",
+      "sample_headlines": [
+        "Israel launched deadly strike on Lebanon's Tyre before warning \u2014 Reuters",
+        "MSF 'deeply concerned' by Israeli 'forced displacement practices' in Tyre"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "9e546526f264",
+          "name": "Reuters",
+          "url": "https://www.investing.com/news/commodities-news/israel-launches-deadly-strikes-on-lebanons-tyre-after-warning-4732678",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "The strike... was first reported by Lebanon's state media agency at 9:22 a.m. local time... Israel issued an evacuation warning... at 9:31 a.m. local time",
+          "date": "2026-06-09",
+          "role_evidence": "Reuters established the timestamped factual record of the procedural gap, documented the IDF's non-response to a direct question about sequencing, and laid out warning protocol inconsistencies",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675656+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9495941179d7",
+          "name": "Doctors Without Borders (MSF)",
+          "url": "https://www.investing.com/news/commodities-news/israel-launches-deadly-strikes-on-lebanons-tyre-after-warning-4732678",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "MSF said it was deeply concerned by what it called 'forced displacement practices'",
+          "date": "2026-06-09",
+          "role_evidence": "MSF's operational statement \u2014 including suspending nearby hospital services \u2014 gave on-the-ground institutional credibility to the use-of-force scrutiny framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675667+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7adc5d2e2cf0",
+          "name": "Libnanews / ICOMOS Lebanon",
+          "url": "https://en.libnanews.com/tyre-unesco-site-under-shell/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A military operation in an old, dense and classified city requires a very high level of precaution",
+          "date": "2026-04-14",
+          "role_evidence": "Specialist legal-heritage analysis elaborated the proportionality argument in detail, distinguishing military necessity claims from the actual level of precaution taken",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:03:43.675676+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:03:43.675688+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing framings include: (1) Hezbollah operational presence/military infrastructure perspectives that might justify targeting rationale from Israeli security doctrine; (2) Lebanese state capacity and responsibility framing\u2014examining whether Lebanon's government inability to control armed groups in its territory shapes accountability; (3) Civilian warning effectiveness analysis\u2014technical/operational assessment of evacuation procedures and their actual protective value; (4) Regional Sunni-Shia sectarian dynamics beyond Christian endangerment, including how Tyre's mixed demographics and Hezbollah's specific role there complicate the narrative; (5) Economic/infrastructure impact on Lebanon's already-collapsed economy and reconstruction timelines; (6) Comparative precedent framing\u2014how this strike compares to previous Israeli operations in Lebanon or similar regional incidents in terms of proportionality claims.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Israel issued an evacuation warning for Tyre, Lebanon, following an Israeli airstrike that resulted in at least eight deaths and 32 injuries.",
+    "rated_outlets": 1,
+    "distribution": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 1,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 100,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 0,
+    "center": 1,
+    "right_of_center": 0,
+    "lean_index": 0.0,
+    "resolve_rate": 0.17,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 5,
+      "examples": [
+        {
+          "carrier": "Al Arabiya (English)",
+          "domain": "english.alarabiya.net"
+        },
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "The Art Newspaper",
+          "domain": "theartnewspaper.com"
+        },
+        {
+          "carrier": "Ocula / Art Asia Pacific",
+          "domain": "ocula.com"
+        },
+        {
+          "carrier": "Al-Monitor / Asharq Al-Awsat",
+          "domain": "english.aawsat.com"
+        }
+      ]
+    },
+    "non_news_carriers": 7,
+    "matched": [
+      {
+        "outlet": "Associated Press",
+        "carrier": "Associated Press (via ms.now)",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 18,
+        "political": 6,
+        "social": 0,
+        "institutional": 9,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 15,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 23,
+    "framings": [
+      {
+        "framing_id": "a42cfe81",
+        "name": "Legitimate Counter-Terrorism Operation",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "89ecf9a1c46e",
+            "display": "Al Arabiya",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "db0f35bae9fd",
+            "display": "IDF",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0417d452a7c5",
+            "display": "Israel Defense Minister Israel Katz",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "abf500b4",
+        "name": "Humanitarian Crisis & Forced Displacement",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "d300797e5c62",
+            "display": "Associated Press",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7ab7d7af2ea3",
+            "display": "Doctors Without Borders",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "85ed1da1b063",
+            "display": "Lebanon Ministry of Public Health",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "ae5851d6",
+        "name": "Ceasefire Violation & International Law Accountability",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "645671d49eb9",
+            "display": "Lebanese President Joseph Aoun",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "edf5337df044",
+            "display": "Reuters",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "305961eb395c",
+            "display": "Lebanese PM Nawaf Salam",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "73d44c990f17",
+            "display": "United Nations",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "1b7462f9",
+        "name": "Cultural Heritage Destruction",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "16ee15397906",
+            "display": "Libnanews",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "447c5cf95f5a",
+            "display": "Lebanon Ministry of Culture",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9f400eb6c7a6",
+            "display": "Ocula",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2cfc484e52a5",
+            "display": "The Art Newspaper",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "987d92743097",
+            "display": "UNESCO",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "65fb66aa",
+        "name": "Christian Community Endangerment",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d300797e5c62",
+            "display": "Associated Press",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c222ddbf9f17",
+            "display": "Christian clergy of Tyre",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "db0f35bae9fd",
+            "display": "IDF",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e88e1503",
+        "name": "Geopolitical Escalation Ladder",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "7c9d681e789f",
+            "display": "Asharq Al-Awsat",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d62b0fd3ce1c",
+            "display": "President Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "0f369e8c",
+        "name": "Lebanese Sovereignty & Iran Proxy Blame",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "7c9d681e789f",
+            "display": "Asharq Al-Awsat",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "645671d49eb9",
+            "display": "Lebanese President Joseph Aoun",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "256d4083f5d6",
+            "display": "Hezbollah",
+            "actor_type": "official",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "700f3ae3",
+        "name": "Procedural Use-of-Force Scrutiny",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "7ab7d7af2ea3",
+            "display": "Doctors Without Borders",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "16ee15397906",
+            "display": "Libnanews",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "edf5337df044",
+            "display": "Reuters",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Christian Community Endangerment",
+          "Geopolitical Escalation Ladder",
+          "Humanitarian Crisis & Forced Displacement"
+        ]
+      },
+      {
+        "actor_id": "9d5bddf5863a",
+        "display": "The Times of Israel",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Lebanese Sovereignty & Iran Proxy Blame",
+          "Legitimate Counter-Terrorism Operation"
+        ]
+      },
+      {
+        "actor_id": "d300797e5c62",
+        "display": "Associated Press",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Christian Community Endangerment",
+          "Humanitarian Crisis & Forced Displacement"
+        ]
+      },
+      {
+        "actor_id": "7ab7d7af2ea3",
+        "display": "Doctors Without Borders",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "Humanitarian Crisis & Forced Displacement",
+          "Procedural Use-of-Force Scrutiny"
+        ]
+      },
+      {
+        "actor_id": "edf5337df044",
+        "display": "Reuters",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation & International Law Accountability",
+          "Procedural Use-of-Force Scrutiny"
+        ]
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation & International Law Accountability",
+          "Geopolitical Escalation Ladder"
+        ]
+      },
+      {
+        "actor_id": "645671d49eb9",
+        "display": "Lebanese President Joseph Aoun",
+        "actor_type": "official",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation & International Law Accountability",
+          "Lebanese Sovereignty & Iran Proxy Blame"
+        ]
+      },
+      {
+        "actor_id": "16ee15397906",
+        "display": "Libnanews",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Cultural Heritage Destruction",
+          "Procedural Use-of-Force Scrutiny"
+        ]
+      },
+      {
+        "actor_id": "7c9d681e789f",
+        "display": "Asharq Al-Awsat",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Geopolitical Escalation Ladder",
+          "Lebanese Sovereignty & Iran Proxy Blame"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "db0f35bae9fd",
+        "display": "IDF",
+        "actor_type": "organization",
+        "champions": [
+          "Legitimate Counter-Terrorism Operation"
+        ],
+        "opposes": [
+          "Christian Community Endangerment"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Humanitarian Crisis & Forced Displacement",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Cultural Heritage Destruction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Cultural Heritage Destruction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation & International Law Accountability",
+        "b": "Cultural Heritage Destruction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation & International Law Accountability",
+        "b": "Christian Community Endangerment",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Cultural Heritage Destruction",
+        "b": "Christian Community Endangerment",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Cultural Heritage Destruction",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Cultural Heritage Destruction",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Christian Community Endangerment",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Christian Community Endangerment",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Geopolitical Escalation Ladder",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Lebanese Sovereignty & Iran Proxy Blame",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Ceasefire Violation & International Law Accountability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Ceasefire Violation & International Law Accountability",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Ceasefire Violation & International Law Accountability",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Ceasefire Violation & International Law Accountability",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Legitimate Counter-Terrorism Operation",
+        "b": "Christian Community Endangerment",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Cultural Heritage Destruction",
+        "b": "Procedural Use-of-Force Scrutiny",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Christian Community Endangerment",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Christian Community Endangerment",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Humanitarian Crisis & Forced Displacement",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Geopolitical Escalation Ladder",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Ceasefire Violation & International Law Accountability",
+        "b": "Lebanese Sovereignty & Iran Proxy Blame",
+        "shared": 3,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 10,
+      "official": 5,
+      "organization": 5,
+      "person": 2,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.391,
+      "siloed_share": 0.565,
+      "mean_jaccard": 0.086
+    },
+    "structure_note": "9 of 23 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:04:08.857353+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

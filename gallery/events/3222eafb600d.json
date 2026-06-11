@@ -1,0 +1,2435 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "3222eafb600d",
+  "event": "Israeli drone strikes resulted in two deaths in Rafah and Gaza City.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:25:46.652264+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "dc0d5b1a6a63",
+        "statement": "Israeli drone strikes occurred in Rafah and Gaza City resulting in two deaths",
+        "verified": true,
+        "source_url": "event_statement",
+        "note": "Core event claim; specific locations and casualty count stated in event",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760120+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "626502b5bc1a",
+        "statement": "Hamas carried out an attack on October 7, 2023",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news/world-middle-east-67039975",
+        "note": "Widely documented historical fact; referenced in multiple framings as context",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760224+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c41551b53cd6",
+        "statement": "Gaza has a high population density",
+        "verified": true,
+        "source_url": "https://www.worldbank.org/en/country/gaza",
+        "note": "Demographic fact accepted across framings; relevant to civilian casualty context",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760233+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e34d4c9b79dc",
+        "statement": "The International Court of Justice has received a case alleging genocide under the Genocide Convention",
+        "verified": true,
+        "source_url": "https://www.icj-cij.org/case/192",
+        "note": "South Africa v. Israel case filed January 2024; factual procedural status",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760240+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "aab6e1b536a2",
+        "statement": "The United States has provided military aid to Israel",
+        "verified": true,
+        "source_url": "https://www.state.gov/u-s-security-cooperation-with-israel/",
+        "note": "Long-standing documented policy; referenced in US political fallout framing",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760246+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "ddd2bc9a4c15",
+        "statement": "Over 200 Palestinian journalists have been killed in Israeli strikes during this conflict",
+        "verified": false,
+        "source_url": "",
+        "note": "Press Freedom framing cites this; Committee to Protect Journalists maintains a tally, but exact number and attribution to Israeli strikes specifically requires verification against CPJ database",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760255+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b91e833b624e",
+        "statement": "Nearly 2 million Palestinians have been displaced from their homes",
+        "verified": false,
+        "source_url": "",
+        "note": "Genocide/Ethnic Cleansing framing emphasizes this; UN agencies report displacement figures, but precise number and timeframe require current source verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760262+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f66fabe06a8b",
+        "statement": "Hamas embeds military infrastructure in civilian areas including UN and civilian facilities",
+        "verified": false,
+        "source_url": "",
+        "note": "IDF Operational Precision framing asserts this; some documentation exists (UN reports on weapons caches), but extent and systematic nature are contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760269+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "337479f287a7",
+        "statement": "Israel has deployed AI-assisted or autonomous targeting systems in Gaza drone strikes",
+        "verified": false,
+        "source_url": "",
+        "note": "Autonomous Drone Technology framing claims this; no official Israeli confirmation; based on eyewitness testimony and inference from drone deployment patterns",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760275+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "24f213b6fe85",
+        "statement": "Israel has banned independent foreign press access to Gaza",
+        "verified": false,
+        "source_url": "",
+        "note": "Press Freedom framing states this; press organizations have documented restrictions, but characterization as total ban vs. severe limitation is debated",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:25:27.760281+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the two deaths (and broader drone strike pattern) constitute war crimes / IHL violations vs. lawful military operations under self-defense doctrine",
+      "Whether civilian deaths result primarily from Israeli targeting decisions vs. Hamas's deliberate use of human shields and civilian infrastructure",
+      "Whether the cumulative scale of strikes and displacement constitutes genocide/ethnic cleansing vs. proportionate counter-terrorism response",
+      "Whether Israeli drone strikes systematically target journalists to suppress documentation vs. incidental casualties in legitimate military operations",
+      "Whether Israel's drone technology deployment represents a test case for autonomous lethal weapons governance vs. standard precision military practice",
+      "Whether the US should leverage military aid to constrain Israeli operations vs. maintain support for Israeli security needs",
+      "The moral and legal weight of Israeli security concerns (Oct. 7 aftermath, ongoing Hamas threat) vs. Palestinian civilian protection obligations"
+    ],
+    "summary": "All framings accept that Israeli drone strikes killed two people in Rafah and Gaza City, that Gaza is densely populated, that the US provides military aid to Israel, and that the ICJ is hearing a genocide case. The disagreements are entirely interpretive: whether these strikes are lawful self-defense or war crimes; whether civilian deaths reflect Israeli targeting choices or Hamas's use of shields; and what legal, moral, and political consequences should follow."
+  },
+  "framings": [
+    {
+      "framing_id": "970d15f2",
+      "name": "International Law & War Crimes Accountability",
+      "question": "Did this drone strike violate IHL \u2014 specifically the principles of distinction, proportionality, and precaution \u2014 and who should be held accountable?",
+      "key_claim": "Israeli drone strikes in densely populated Gaza constitute a pattern of IHL violations that may amount to war crimes and demand ICC investigation.",
+      "description": "This framing applies international humanitarian law to the strike, asking whether the IDF distinguished between combatants and civilians, took feasible precautions, and whether civilian harm was proportionate to any military gain. It centers accountability mechanisms \u2014 ICC, UN bodies, domestic investigations \u2014 as the appropriate response.",
+      "emphasizes": "Civilian death tolls, IHL principles (distinction/proportionality), absence of Israeli investigations, ICC jurisdiction, UN resolutions, historical pattern of drone-strike casualties",
+      "downplays": "The military intelligence basis for the strike, Hamas's role in embedding fighters among civilians, the Oct. 7 context, Israeli security obligations",
+      "tone": "measured | alarmed",
+      "sample_headlines": [
+        "Israeli Air Strikes That Killed 44 Civilians Further Evidence of War Crimes \u2013 New Investigation (Amnesty International, May 2024)",
+        "Gaza Exposes the Limits and Dangers of IHL's Proportionality Rule (JURIST, Dec. 2025)",
+        "Precisely Wrong: Gaza Civilians Killed by Israeli Drone-Launched Missiles (HRW, June 2009/updated)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d67d367f90db",
+          "name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/latest/news/2024/05/israel-opt-israeli-air-strikes-that-killed-44-civilians-further-evidence-of-war-crimes-new-investigation/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The ICC should investigate as war crimes three Israeli air strikes that killed 44 Palestinian civilians, including 32 children",
+          "date": "2024-05-29",
+          "role_evidence": "Amnesty's detailed field investigations originated the legal war-crimes framing applied to specific Rafah/Gaza drone and air strikes",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260527083303/https://www.amnesty.org/en/latest/news/2024/05/israel-opt-israeli-air-strikes-that-killed-44-civilians-further-evidence-of-war-crimes-new-investigation/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176498+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "82eaaaa9af3a",
+          "name": "Human Rights Watch",
+          "url": "https://www.hrw.org/report/2009/06/30/precisely-wrong/gaza-civilians-killed-by-israeli-drone-launched-missiles",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Israeli forces failed to take all feasible precautions to verify that these targets were combatants, as required by the laws of war",
+          "date": "2009-06-30",
+          "role_evidence": "HRW coined the IHL-accountability framing for Israeli drone strikes on civilians as early as 2009, establishing the analytical template reused throughout the 2023-2026 war",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176527+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4da5a9ede371",
+          "name": "UN OHCHR",
+          "url": "https://www.un.org/unispal/document/thematic-report-ohchr-19jun24/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The pattern of Israeli strikes\u2026indicates that the IDF may have systematically violated the principles of distinction, proportionality, and precautions",
+          "date": "2024-06-19",
+          "role_evidence": "OHCHR's formal thematic report gave official UN institutional weight to the IHL-violation framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176539+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "37a115edb545",
+          "name": "Lawfare Media",
+          "url": "https://www.lawfaremedia.org/article/assessing-israel-s-approach-to-proportionality-in-the-conduct-of-hostilities-in-gaza",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israel's tolerance for civilian casualties is now completely out of step with that employed by the U.S. and its coalition partners",
+          "date": "2023-11-16",
+          "role_evidence": "Lawfare's legal analysis reached national-security and legal practitioner audiences early, amplifying the proportionality-focused accountability frame",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176549+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "49e1838a5619",
+          "name": "Georgetown Journal of International Affairs",
+          "url": "https://gjia.georgetown.edu/2025/09/26/infanticide-in-the-name-of-proportionality-gaza-as-a-world-order-problem/",
+          "carrier_type": "academic",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel's distortions of IHL proportionality to legalize unlimited child casualties violate the general rule imposing special protection of children",
+          "date": "2025-09-26",
+          "role_evidence": "Academic journal article arguing the proportionality distortion threatens IHL's global framework, amplifying the frame into scholarly and policy circles",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176556+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f311fc6abd85",
+          "name": "UN Human Rights Council Commission of Inquiry",
+          "url": "https://www.lawfaremedia.org/article/un-human-rights-council-releases-report-on-israel-hamas-war-international-law-violations",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Israel's operations in Gaza have constituted war crimes, crimes against humanity, and violations of IHL and IHRL",
+          "date": "2024-06-12",
+          "role_evidence": "UN HRC commission formally found war crimes by both Israel and Hamas, giving the accountability framing authoritative multilateral institutional backing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176564+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176576+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "717ad197",
+      "name": "Legitimate Military Self-Defense",
+      "question": "Were these strikes a lawful exercise of Israel's right to self-defense against a terrorist organization that initiated the conflict?",
+      "key_claim": "Israeli drone strikes in Rafah and Gaza City are necessary and legally justified counter-terrorism operations against Hamas, which is responsible for the Oct. 7 massacre and continues to use civilians as shields.",
+      "description": "This framing places the strikes within the broader context of Israel's post-Oct. 7 campaign, arguing the IDF is exercising a sovereign right of self-defense under UN Charter Article 51. It foregrounds Hamas's culpability for civilian suffering by embedding fighters in civilian areas.",
+      "emphasizes": "Oct. 7 Hamas attack, Israeli military's stated targeting of armed operatives, Hamas's use of civilian infrastructure, IDF claims of precision and prior warnings, Israeli soldier casualties",
+      "downplays": "Palestinian civilian death toll and suffering, questions of proportionality, displacement and humanitarian crisis, independent verification failures",
+      "tone": "measured | accusatory (toward Hamas)",
+      "sample_headlines": [
+        "IDF Strikes Senior Hamas Operative in Gaza City Responsible for 2002 Beersheba Bombing (The Media Line, 2024)",
+        "Israel's Struggle with the Information Dimension during the Gaza War (Army University Press, 2024)",
+        "IDF: Troops Eliminated Militant Cell, Destroyed Launcher Used to Attack Israeli Soldiers (various IDF statements)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "cc59f50ae1be",
+          "name": "IDF Spokesperson / Israeli Government",
+          "url": "https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Israel's military said it had spotted suspects who were operating a drone that posed a threat to its troops",
+          "date": "2026-01-21",
+          "role_evidence": "The IDF's official statements after each strike consistently originate the self-defense/targeted-militant framing used by pro-Israel media",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260609201503/https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176588+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bd6efe296a2a",
+          "name": "BESA Center for Strategic Studies",
+          "url": "https://besacenter.org/the-gaza-terror-offensive-18-january-3-february-2024/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "To protect themselves, the terrorist launching teams operate from within the safe haven declared by Israel, near the road on which the humanitarian supply convoys travel",
+          "date": "2024-08-01",
+          "role_evidence": "Israeli think-tank providing detailed analytical amplification of the human-shields/self-defense framing to English-language policy audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176595+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fe434d87d551",
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "IDF kills moneyman who it says transferred millions to military wing",
+          "date": "2024-ongoing",
+          "role_evidence": "Leading English-language Israeli outlet that mass-amplifies the IDF's framing of individual strikes as targeted counter-terrorism operations",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260609201503/https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176602+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7eb7f3828a3f",
+          "name": "Army University Press (U.S. Army)",
+          "url": "https://www.armyupress.army.mil/journals/military-review/online-exclusive/2024-ole/dr-dostri-israel-gaza-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "Israel has implemented various strategies and platforms to counter adversary information operations during its ongoing fight against Hamas",
+          "date": "2024-ongoing",
+          "role_evidence": "U.S. military academic publication that contextualizes Israeli operations within a counter-terrorism information-war frame, lending institutional U.S. credibility",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176609+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176617+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "016f9e21",
+      "name": "Human Cost & Civilian Suffering",
+      "question": "Who are the specific people killed and injured, and what does their suffering tell us about the human reality of these strikes?",
+      "key_claim": "Each Israeli drone strike represents identifiable Palestinian lives \u2014 families, children, journalists \u2014 destroyed in a densely populated enclave with no safe refuge.",
+      "description": "This framing centers the named and unnamed victims: their identities, last moments, family members left behind, and the overcrowded conditions (Rafah as a 'last refuge') that make every strike catastrophic. It foregrounds the human and emotional texture of loss rather than legal or military abstractions.",
+      "emphasizes": "Named victims, family grief, children killed, medical testimony, displacement context, survivor and eyewitness accounts, total cumulative death toll",
+      "downplays": "Military objectives, Hamas's role, legal frameworks, political dimensions, Israeli casualties and suffering",
+      "tone": "alarmed | measured",
+      "sample_headlines": [
+        "'People Were Literally Burned Alive in Their Tents' \u2014 Doctor Describes Rafah Airstrike Scene (NPR, May 2024)",
+        "Eyewitnesses in Gaza Say Israel Is Using Sniper Drones to Shoot Palestinians (NPR, Nov. 2024)",
+        "Israeli Strikes on Rafah Kill 22, Including 18 Children (NPR/AP, April 2024)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d9dddd136de8",
+          "name": "NPR",
+          "url": "https://www.npr.org/2024/05/27/nx-s1-4982690/rafah-encampment-israeli-airstrike-hamas",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "'People [were] literally burned alive in their tents,' Smith told NPR",
+          "date": "2024-05-27",
+          "role_evidence": "NPR's on-the-ground correspondents and eyewitness/medical accounts consistently drive the human-cost framing to a broad US public audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176625+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "55f3815511fe",
+          "name": "WAFA (Palestine News Agency)",
+          "url": "https://english.wafa.ps/Pages/Details/150232",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "PRCS paramedics saying they evacuated the bodies of four victims after an Israeli army drone targeted a group of people",
+          "date": "2024-10-10",
+          "role_evidence": "Palestinian official wire service that first reports individual strike deaths, naming victims and locations, originating the human-cost factual record",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176632+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "43dd31c44fdb",
+          "name": "Associated Press",
+          "url": "https://www.npr.org/2024/04/21/1246134887/israeli-strikes-on-southern-gaza-city-of-rafah-kill-13-including-nine-children",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The second strike killed 17 children and two women, all from the same extended family, according to hospital records",
+          "date": "2024-04-21",
+          "role_evidence": "AP's sourcing from named hospitals and specific family accounts makes it a leading mass-amplifier of individual-victim human-cost framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176639+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a67ae91b7c4a",
+          "name": "Airwars",
+          "url": "https://airwars.org/conflict/israel-and-gaza/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Documented allegations of civilians killed and injured\u2026spotlighting often under-reported cases of harm",
+          "date": "2023-ongoing",
+          "role_evidence": "Conflict-monitoring NGO that systematically documents and archives individual civilian-harm incidents, giving the human-cost framing evidentiary depth",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176647+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "79c254a72ef8",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2024/12/12/israeli-drone-attack-on-gaza-aid-convoy-kills-12-as-hunger-crisis-deepens",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "At least 10 Palestinian people were killed while lining up to buy flour in an Israeli attack on Rafah",
+          "date": "2024-12-12",
+          "role_evidence": "Al Jazeera's Gaza-embedded correspondents provide consistent high-volume amplification of civilian-victim stories to a global English-language audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176655+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176663+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "7215ce3b",
+      "name": "Press Freedom & Journalistic Targeting",
+      "question": "Are Israeli drone strikes systematically eliminating Palestinian journalists, and what does this mean for accountability and the flow of information from Gaza?",
+      "key_claim": "Israeli drone strikes have killed over 200 Palestinian journalists covering Gaza, constituting what press-freedom groups call a systematic effort to suppress independent documentation of the war.",
+      "description": "This framing focuses specifically on the targeting \u2014 deliberate or negligent \u2014 of journalists by Israeli drones, and the resulting information blackout. It connects individual strikes to the broader closure of Gaza to international press, framing journalism deaths as an attack on democratic accountability.",
+      "emphasizes": "Named journalist victims, Committee to Protect Journalists tallies, Israel's ban on independent foreign press access, the chilling effect on documentation, AFP/AP/Al Jazeera organizational responses",
+      "downplays": "IDF's stated military justifications for specific strikes, Hamas's own restrictions on reporting, non-journalism civilian casualties",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "Israeli Drone Strike on Vehicle Kills 3 Journalists in Gaza (CPJ, Jan. 2026)",
+        "Israeli Drone Strike Kills Al Jazeera Correspondent Mohammed Wishah in Gaza City (Democracy Now!, April 2026)",
+        "More Than 200 Palestinian Journalists and Media Workers Have Been Killed in Gaza Since the War Began (CPJ/AP, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8f00b2a2af08",
+          "name": "Committee to Protect Journalists (CPJ)",
+          "url": "https://cpj.org/2026/01/israeli-drone-strike-on-vehicle-kills-3-journalists-in-gaza/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "CPJ rejects characterization of the strike that killed Reuters journalist Issam Abdallah as a 'mistake'",
+          "date": "2026-01-21",
+          "role_evidence": "CPJ is the primary institutional originator of the press-freedom framing, documenting and naming every journalist killed by Israeli fire in Gaza",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176674+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0e6f13594fc1",
+          "name": "Democracy Now!",
+          "url": "https://www.democracynow.org/2026/4/9/headlines/israeli_drone_strike_kills_al_jazeera_correspondent_mohammed_wishah_in_gaza_city",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Gaza's Media Office says Wishah's killing reflects a 'systematic targeting and assassination' of Palestinian journalists by Israel",
+          "date": "2026-04-09",
+          "role_evidence": "Democracy Now! amplifies the systematic-targeting narrative to a left-progressive US audience with high repetition",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176680+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a6de100bf5c0",
+          "name": "PBS NewsHour / NPR",
+          "url": "https://www.pbs.org/newshour/world/israeli-fire-strikes-journalists-and-children-on-one-of-gazas-deadliest-days-since-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Among the dead were three Palestinian journalists who were killed while filming near a displacement camp",
+          "date": "2026-01-21",
+          "role_evidence": "PBS/NPR brought the journalist-targeting framing to mainstream US broadcast audiences with named victims and AFP organizational response",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176687+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3de4a4ebb74c",
+          "name": "Agence France-Presse (AFP)",
+          "url": "https://www.pbs.org/newshour/world/israeli-fire-strikes-journalists-and-children-on-one-of-gazas-deadliest-days-since-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Abdul was much loved by the AFP team covering Gaza. They remember him as a kind-hearted colleague'",
+          "date": "2026-01-21",
+          "role_evidence": "AFP's institutional statement demanding investigation for its killed contributor gave the press-freedom framing wire-service authority and global reach",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176694+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d0124a17d4a4",
+          "name": "Al Jazeera",
+          "url": "https://www.democracynow.org/2026/4/9/headlines/israeli_drone_strike_kills_al_jazeera_correspondent_mohammed_wishah_in_gaza_city",
+          "carrier_type": "news",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Al Jazeera says it will pursue legal action against those responsible",
+          "date": "2026-04-09",
+          "role_evidence": "Al Jazeera's announcement of legal action formalized the press-freedom framing into a litigation-backed institutional posture",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176702+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176711+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b11b670a",
+      "name": "IDF Operational Precision & Human-Shield Complexity",
+      "question": "Did the IDF follow its stated rules of engagement, and were civilian deaths unavoidable given Hamas's deliberate use of densely populated civilian areas?",
+      "key_claim": "Civilian deaths in Israeli drone strikes, while tragic, result from Hamas's deliberate embedding of military infrastructure in civilian areas, forcing the IDF into impossible targeting decisions.",
+      "description": "This framing accepts that civilians were killed but attributes primary moral and legal responsibility to Hamas's tactical choice to operate from schools, mosques, hospitals, and residential buildings. It foregrounds IDF claims of precision targeting, advance warnings, and intelligence-based operations while contesting the framing of strikes as indiscriminate.",
+      "emphasizes": "Hamas's use of civilian human shields, weapons caches in UN/civilian facilities, IDF advance warning procedures, claimed precision and intelligence verification, IDF soldier casualties",
+      "downplays": "IHL scholars' arguments that human-shield presence does not negate proportionality obligations, independent inability to verify IDF targeting claims, scale of civilian casualties",
+      "tone": "measured | dismissive (of war-crimes framing)",
+      "sample_headlines": [
+        "Weapons Found in UNRWA Compound: Rockets, Remote-Controlled Bombs, Drone Being Assembled (BESA Center, 2024)",
+        "IDF: Strike Targeted Militants Using Convoy as Cover; No NGO Personnel Hurt (BESA Center, 2024)",
+        "IDF Uses Tanks and Intelligence Information; Claimed Militants Eliminated at Site Used for Attacks Against IDF (Times of Israel, 2024)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "cb1e1a7144ba",
+          "name": "IDF Spokesperson (official statements)",
+          "url": "https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "IDF claims it took measures to reduce civilian harm, including precision-guided munitions, aerial surveillance, and advanced intelligence assessments",
+          "date": "2024-12-22",
+          "role_evidence": "IDF's post-strike statements systematically originate the precision-targeting/human-shield complexity framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260609201503/https://www.timesofisrael.com/topic/2023-2024-israel-hamas-war/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176720+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c41f131df688",
+          "name": "BESA Center for Strategic Studies",
+          "url": "https://besacenter.org/the-gaza-terror-offensive-18-january-3-february-2024/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hamas operates from within the safe haven declared by Israel, near the road on which humanitarian supply convoys travel, or inside schools, mosques, and UNRWA facilities",
+          "date": "2024-08-01",
+          "role_evidence": "Bar-Ilan University think-tank that provides detailed English-language analytical amplification of the human-shield complexity framing to Western policy audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176727+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f9f067ca9ae8",
+          "name": "Drone Wars UK (critic role)",
+          "url": "https://dronewars.net/category/israel-and-drones/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "While advocates present drones in humanitarian terms as effectively minimising civilian casualties\u2026serious concerns have been raised by human rights organisations",
+          "date": "2024-ongoing",
+          "role_evidence": "UK-based drone-monitoring group explicitly challenges the 'precision' framing, documenting the gap between IDF precision claims and documented civilian harm",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176735+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4af9ff681ea3",
+          "name": "Duke University / Judicature (legal scholarship)",
+          "url": "https://judicature.duke.edu/articles/israel-hamas-conflict-international-law/",
+          "carrier_type": "academic",
+          "amplifier_role": "critic",
+          "excerpt": "IHL violations by one party do not relieve the opposing party's obligation to comply, and cannot be used to justify similar violations in response",
+          "date": "2025-06-12",
+          "role_evidence": "Duke legal scholars explicitly rebut the human-shield framing as an excuse, clarifying that IHL obligations are non-reciprocal",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176743+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176750+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3e4b051c",
+      "name": "Genocide / Ethnic Cleansing",
+      "question": "Do the pattern and scale of Israeli strikes \u2014 including in Rafah, the 'last refuge' \u2014 constitute genocide or ethnic cleansing of Palestinians under international law?",
+      "key_claim": "Systematic Israeli drone and air strikes across all of Gaza, including the final refuge of Rafah, combined with displacement of nearly 2 million people, constitute genocide or ethnic cleansing that the ICJ has begun to address.",
+      "description": "This is the most expansive framing, moving beyond individual-strike accountability to claim that the cumulative pattern of violence, displacement, and destruction meets the legal or political threshold for genocide. It explicitly references the ICJ's Genocide Convention proceedings and invokes the 1948 Nakba as historical context.",
+      "emphasizes": "Scale of cumulative destruction, ICJ Genocide Convention proceedings, mass displacement ('largest since 1948 Nakba'), near-total population displacement, destruction of civilian infrastructure, famine conditions",
+      "downplays": "Hamas's military activities, Oct. 7 causation, the legal specificity required for a genocide finding, distinctions between individual strikes and a broader policy",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "Israel Has Proceeded with Its Genocidal Offensive in Complete Disregard of the ICJ (WAFA, Oct. 2024)",
+        "UN Commission: Israel's Ensuing Offensive Killed More Than 67,000 Palestinians, Displaced 90% of Gaza's Population (Snopes citing UN, Feb. 2026)",
+        "Israeli Aggression Has Resulted in Forceful Displacement \u2014 Palestine's Largest Mass Exodus Since the 1948 Nakba (WAFA, 2024)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "388b67590610",
+          "name": "WAFA (Palestine News Agency)",
+          "url": "https://english.wafa.ps/Pages/Details/150232",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Israel has proceeded with its genocidal offensive on the war-torn Strip in complete disregard of the International Court of Justice",
+          "date": "2024-10-10",
+          "role_evidence": "Palestinian Authority's official wire service consistently originates the genocide/Nakba framing in its coverage of every individual strike",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176759+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fad03fd53a4c",
+          "name": "Democracy Now!",
+          "url": "https://www.democracynow.org/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "His death brings the total number of journalists killed in Gaza since October 2023 to 262",
+          "date": "2026-04-09",
+          "role_evidence": "Democracy Now! regularly frames cumulative killing statistics within a genocide narrative, amplifying it to a US progressive audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176765+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a6199d7cb7db",
+          "name": "International Court of Justice (ICJ)",
+          "url": "https://english.wafa.ps/Pages/Details/150232",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The ICJ ordered Israel in a legally binding decision to halt its military offensive in Rafah, which may violate its obligations under the Genocide Convention",
+          "date": "2024-05-24",
+          "role_evidence": "The ICJ's provisional measures ruling formally institutionalized the genocide-convention framing, giving it unprecedented legal weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176772+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a19406ee5d8d",
+          "name": "UN Commission of Inquiry (via Snopes/reporting)",
+          "url": "https://www.snopes.com/fact-check/trump-israel-hamas-ceasefire-biden/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Israel's ensuing offensive killed more than 67,000 Palestinians and displaced an estimated 90% of Gaza's population in what a United Nations commission declared a\u2026",
+          "date": "2026-02-12",
+          "role_evidence": "UN commission's characterization of the scale of displacement as historically unprecedented gives genocide-adjacent framing authoritative multilateral grounding",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176780+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7c04480b3585",
+          "name": "Pro-Palestinian protest movement / social media",
+          "url": "https://edition.cnn.com/2024/01/28/politics/us-troops-hostages-gaza-ceasefire/index.html",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Protesters march to denounce the Biden administration's support of Israel, which has killed thousands of Palestinian civilians",
+          "date": "2023-12-08",
+          "role_evidence": "US street protest movement and social-media accounts drove mass adoption of the genocide framing in American political discourse, pressuring the Democratic Party",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176787+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176795+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ff574516",
+      "name": "US Political Fallout & Foreign Policy Leverage",
+      "question": "How do Israeli drone strikes in Gaza affect US domestic politics, American credibility, and the Biden/Trump administrations' ability to broker peace?",
+      "key_claim": "Each Israeli strike that kills Palestinian civilians deepens US political divisions, strains the administration's credibility with Arab American voters and allies, and complicates hostage-deal diplomacy.",
+      "description": "This framing treats the strikes primarily as inputs into American political calculations \u2014 how they affect the ceasefire negotiations, US arms-supply debates, electoral politics (Michigan, Arab American vote), and the bipartisan competition between Biden and Trump for credit on the Gaza file.",
+      "emphasizes": "US arms transfers, White House pressure on Netanyahu, bipartisan hostage-deal politics, electoral consequences, Trump vs. Biden credit-claiming, US diplomatic leverage",
+      "downplays": "Palestinian human suffering as a primary concern, IHL compliance questions, the interests of Gazans themselves",
+      "tone": "measured | populist",
+      "sample_headlines": [
+        "Biden Risks Deepening Middle East Conflict as Pressure Mounts to Respond (CNN, Jan. 2024)",
+        "Gaza Ceasefire-Hostage Deal Is a Rare Bipartisan Victory in US Politics (The Forward, Jan. 2025)",
+        "Israel Launches Renewed Strikes in Gaza Less Than 3 Weeks Into Trump's Ceasefire Deal (NPR, Oct. 2025)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a9da401f2f29",
+          "name": "CNN Politics",
+          "url": "https://edition.cnn.com/2024/01/28/politics/us-troops-hostages-gaza-ceasefire/index.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Biden risks deepening Middle East conflict with pressure to respond to deadly troop attack",
+          "date": "2024-01-28",
+          "role_evidence": "CNN's White House-focused coverage consistently frames Gaza strikes primarily through the lens of US political and diplomatic consequences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176803+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5f47cf2e1a74",
+          "name": "The Forward",
+          "url": "https://forward.com/fast-forward/688885/ceasefire-gaza-israel-hamas-trump-biden/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Republicans and Democrats are uniting in support of the newly announced ceasefire-hostage deal, with both sides claiming their approach helped advance the agreement",
+          "date": "2025-01-16",
+          "role_evidence": "The Forward's coverage of bipartisan credit-claiming for the ceasefire crystallizes the US-political-fallout framing for the American Jewish readership",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176816+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a95abeb13fa7",
+          "name": "NPR",
+          "url": "https://www.npr.org/2025/10/28/g-s1-95372/netanyahu-israel-strikes-gaza-hamas",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The Israeli military began carrying out renewed strikes in the Gaza Strip, less than three weeks after President Trump brokered a ceasefire",
+          "date": "2025-10-28",
+          "role_evidence": "NPR's ceasefire-violation coverage frames each resumed Israeli strike primarily as a diplomatic crisis for the Trump administration",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176825+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1d07f221f038",
+          "name": "Brookings Institution",
+          "url": "https://www.brookings.edu/articles/the-impact-of-irans-attack-on-israel/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "As Israel struggles to settle on a plan to successfully end the war in Gaza, the last thing it needs is a wider regional conflict \u2014 the same is true for President Biden",
+          "date": "2024-04-16",
+          "role_evidence": "Brookings' analysis consistently frames Israeli military action through coinciding US-Israeli political interests and diplomatic constraints",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176832+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "91dd0bcd1fde",
+          "name": "Snopes / PolitiFact",
+          "url": "https://www.snopes.com/fact-check/trump-israel-hamas-ceasefire-biden/",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "An online rumor alleged that Trump used Biden's 'exact deal' to end the war in Gaza \u2014 that's not true",
+          "date": "2026-02-12",
+          "role_evidence": "Fact-checkers push back on the most partisan versions of the US-political-credit framing, distinguishing actual policy differences from partisan narrative",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176838+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176847+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "669ee61d",
+      "name": "Autonomous Drone Technology & Oversight",
+      "question": "What do these strikes reveal about the legal and ethical governance of drone warfare, AI-assisted targeting, and the global proliferation of armed unmanned systems?",
+      "key_claim": "Israel's widespread deployment of armed drones \u2014 including potentially AI-assisted targeting systems \u2014 in Gaza is a test case for the legality and global governance of autonomous lethal weapons technology.",
+      "description": "This framing zooms out from the individual strike to the technology enabling it: the role of AI-assisted targeting ('Lavender,' 'Gospel' systems), sniper drones, the history of Israeli drone development, and what Gaza's use of these systems means for international norms on autonomous weapons. It is primarily driven by investigative journalists, arms-control researchers, and drone-monitoring NGOs.",
+      "emphasizes": "AI/algorithmic targeting systems, sniper-drone eyewitness testimony, Israeli arms export model using Gaza as a 'test zone,' opacity of drone strike authorization, international norms vacuum",
+      "downplays": "Geopolitical cause of the conflict, Hamas's actions, legal frameworks already addressing drone use, humanitarian law principles that do apply",
+      "tone": "alarmed | measured",
+      "sample_headlines": [
+        "Eyewitnesses in Gaza Say Israel Is Using Sniper Drones to Shoot Palestinians (NPR, Nov. 2024)",
+        "Israel's Drone Use Is Shrouded in Secrecy \u2014 DWUK Research Pieces Together the Evidence (Drone Wars UK)",
+        "Precise Strikes: Fractured Bodies, Fractured Lives \u2014 Israeli Drone Use 2014\u20132019 (Drone Wars UK)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "721141aa6b1f",
+          "name": "NPR Investigations",
+          "url": "https://www.npr.org/2024/11/26/g-s1-35437/israel-sniper-drones-gaza-eyewitnesses",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Sniper drone technology \u2014 distinct from that of other armed drones, which often carry bombs \u2014 does exist, and videos indicate the Israeli military has acquired it",
+          "date": "2024-11-26",
+          "role_evidence": "NPR's investigative report on sniper drones \u2014 with named eyewitnesses and medical testimony \u2014 drove this technology-governance framing to a mainstream US audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176855+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f726e244553c",
+          "name": "Drone Wars UK",
+          "url": "https://dronewars.net/category/israel-and-drones/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Israel's use of drones to launch attacks continues to be shrouded in secrecy and denial despite clear evidence",
+          "date": "2019-ongoing",
+          "role_evidence": "Drone Wars UK originated the 'Gaza as test zone for drone warfare' framing and has maintained the most comprehensive English-language audit of Israeli drone use since 2009",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176861+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "597afca13f8c",
+          "name": "Human Rights Watch",
+          "url": "https://www.hrw.org/report/2009/06/30/precisely-wrong/gaza-civilians-killed-by-israeli-drone-launched-missiles",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Each and every Israeli missile strike during Operation Cast Lead would be registered on video \u2014 drone operators record everything viewed",
+          "date": "2009-06-30",
+          "role_evidence": "HRW's 'Precisely Wrong' report pioneered the transparency-and-oversight angle on Israeli drone targeting, calling for video records to be used in accountability proceedings",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176867+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6da265552fc3",
+          "name": "Airwars",
+          "url": "https://airwars.org/conflict/israel-and-gaza/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Matching Israeli military strike footage to civilian casualties on the ground to reveal full human cost of 'precise' campaign",
+          "date": "2023-ongoing",
+          "role_evidence": "Airwars systematically cross-references IDF strike footage against civilian-harm records, amplifying the technology-accountability framing with empirical data",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:25:17.176873+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:25:17.176883+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: Palestinian armed group operational tactics and civilian proximity decisions; Israeli domestic security concerns and threat assessment specifics; regional geopolitical actors (Iran, Hezbollah, Egypt) and their strategic interests; technical/forensic analysis of strike accuracy and intelligence sourcing; humanitarian aid disruption and economic consequences; victim family/community perspectives and local accountability mechanisms separate from international frameworks.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Israeli drone strikes resulted in two deaths in Rafah and Gaza City.",
+    "rated_outlets": 4,
+    "distribution": {
+      "left": 1,
+      "lean-left": 1,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 25,
+      "lean-left": 25,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.75,
+    "resolve_rate": 0.67,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "WAFA (Palestine News Agency)",
+          "domain": "english.wafa.ps"
+        },
+        {
+          "carrier": "The Forward",
+          "domain": "forward.com"
+        }
+      ]
+    },
+    "non_news_carriers": 15,
+    "matched": [
+      {
+        "outlet": "Democracy Now",
+        "carrier": "Democracy Now!",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour / NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 16,
+        "political": 0,
+        "social": 1,
+        "institutional": 16,
+        "academic": 5,
+        "other": 0
+      },
+      "vested_interest": 16,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 25,
+    "framings": [
+      {
+        "framing_id": "970d15f2",
+        "name": "International Law & War Crimes Accountability",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9b38021f1212",
+            "display": "Human Rights Watch",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bf93da688637",
+            "display": "Georgetown Journal of International Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc7acf3b98e1",
+            "display": "Lawfare Media",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "e2498fee2b17",
+            "display": "UN Human Rights Council Commission of Inquiry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3c0e5f9371fd",
+            "display": "UN OHCHR",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "717ad197",
+        "name": "Legitimate Military Self-Defense",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "b0e0f929ed2f",
+            "display": "BESA Center for Strategic Studies",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af81f657bdc7",
+            "display": "IDF Spokesperson",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d705ea9c032e",
+            "display": "Army University Press",
+            "actor_type": "person",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "016f9e21",
+        "name": "Human Cost & Civilian Suffering",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "544457d9b838",
+            "display": "Airwars",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "44ae8c177f7b",
+            "display": "WAFA",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "7215ce3b",
+        "name": "Press Freedom & Journalistic Targeting",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "25858a22ffd1",
+            "display": "democracynow.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "63ea2facf3fa",
+            "display": "Committee to Protect Journalists",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b11b670a",
+        "name": "IDF Operational Precision & Human-Shield Complexity",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "b0e0f929ed2f",
+            "display": "BESA Center for Strategic Studies",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af81f657bdc7",
+            "display": "IDF Spokesperson",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9d5bddf5863a",
+            "display": "The Times of Israel",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1ef402ac54e4",
+            "display": "Drone Wars UK",
+            "actor_type": "person",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "166964f0dd05",
+            "display": "Duke University",
+            "actor_type": "academic",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3e4b051c",
+        "name": "Genocide / Ethnic Cleansing",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "25858a22ffd1",
+            "display": "democracynow.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "44ae8c177f7b",
+            "display": "WAFA",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6192ccec800a",
+            "display": "International Court of Justice",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bdde1d0835dd",
+            "display": "UN Commission of Inquiry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fcad1d501913",
+            "display": "Snopes",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ff574516",
+        "name": "US Political Fallout & Foreign Policy Leverage",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "25de00d6eeeb",
+            "display": "Brookings Institution",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "01d744930146",
+            "display": "The Forward",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fcad1d501913",
+            "display": "Snopes",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "669ee61d",
+        "name": "Autonomous Drone Technology & Oversight",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "544457d9b838",
+            "display": "Airwars",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9b38021f1212",
+            "display": "Human Rights Watch",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1ef402ac54e4",
+            "display": "Drone Wars UK",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Autonomous Drone Technology & Oversight",
+          "Human Cost & Civilian Suffering",
+          "US Political Fallout & Foreign Policy Leverage"
+        ]
+      },
+      {
+        "actor_id": "9b38021f1212",
+        "display": "Human Rights Watch",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Autonomous Drone Technology & Oversight",
+          "International Law & War Crimes Accountability"
+        ]
+      },
+      {
+        "actor_id": "af81f657bdc7",
+        "display": "IDF Spokesperson",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "IDF Operational Precision & Human-Shield Complexity",
+          "Legitimate Military Self-Defense"
+        ]
+      },
+      {
+        "actor_id": "b0e0f929ed2f",
+        "display": "BESA Center for Strategic Studies",
+        "actor_type": "academic",
+        "n_framings": 2,
+        "framings": [
+          "IDF Operational Precision & Human-Shield Complexity",
+          "Legitimate Military Self-Defense"
+        ]
+      },
+      {
+        "actor_id": "44ae8c177f7b",
+        "display": "WAFA",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Genocide / Ethnic Cleansing",
+          "Human Cost & Civilian Suffering"
+        ]
+      },
+      {
+        "actor_id": "544457d9b838",
+        "display": "Airwars",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Autonomous Drone Technology & Oversight",
+          "Human Cost & Civilian Suffering"
+        ]
+      },
+      {
+        "actor_id": "25858a22ffd1",
+        "display": "democracynow.org",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Genocide / Ethnic Cleansing",
+          "Press Freedom & Journalistic Targeting"
+        ]
+      },
+      {
+        "actor_id": "922a54b2a6d6",
+        "display": "CNN",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Genocide / Ethnic Cleansing",
+          "US Political Fallout & Foreign Policy Leverage"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "1ef402ac54e4",
+        "display": "Drone Wars UK",
+        "actor_type": "person",
+        "champions": [
+          "Autonomous Drone Technology & Oversight"
+        ],
+        "opposes": [
+          "IDF Operational Precision & Human-Shield Complexity"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Legitimate Military Self-Defense",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Human Cost & Civilian Suffering",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Press Freedom & Journalistic Targeting",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "IDF Operational Precision & Human-Shield Complexity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "Human Cost & Civilian Suffering",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "Press Freedom & Journalistic Targeting",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Press Freedom & Journalistic Targeting",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "IDF Operational Precision & Human-Shield Complexity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Press Freedom & Journalistic Targeting",
+        "b": "IDF Operational Precision & Human-Shield Complexity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Press Freedom & Journalistic Targeting",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Press Freedom & Journalistic Targeting",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "IDF Operational Precision & Human-Shield Complexity",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "IDF Operational Precision & Human-Shield Complexity",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Genocide / Ethnic Cleansing",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & War Crimes Accountability",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Press Freedom & Journalistic Targeting",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "IDF Operational Precision & Human-Shield Complexity",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "US Political Fallout & Foreign Policy Leverage",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Genocide / Ethnic Cleansing",
+        "b": "US Political Fallout & Foreign Policy Leverage",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Human Cost & Civilian Suffering",
+        "b": "Autonomous Drone Technology & Oversight",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Legitimate Military Self-Defense",
+        "b": "IDF Operational Precision & Human-Shield Complexity",
+        "shared": 3,
+        "jaccard": 0.5
+      }
+    ],
+    "by_actor_type": {
+      "person": 6,
+      "academic": 4,
+      "organization": 6,
+      "news": 9
+    },
+    "connectivity": {
+      "bridge_ratio": 0.32,
+      "siloed_share": 0.56,
+      "mean_jaccard": 0.063
+    },
+    "structure_note": "8 of 25 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:25:46.652220+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

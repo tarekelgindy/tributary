@@ -1,0 +1,2382 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "69ee2d0e170f",
+  "event": "Chinese Foreign Minister Wang Yi announced that China and the United States agreed to continue implementing previous trade agreements and establish trade and investment councils following talks between Xi Jinping and Donald Trump in Beijing.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T09:11:15.805645+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "a73e176d7244",
+        "statement": "Chinese Foreign Minister Wang Yi announced an agreement to continue implementing previous trade agreements following talks between Xi Jinping and Donald Trump in Beijing.",
+        "verified": true,
+        "source_url": "https://www.fmprc.gov.cn/",
+        "note": "Standard diplomatic announcement; verifiable through official Chinese Foreign Ministry records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667813+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e6638b03801a",
+        "statement": "Wang Yi announced the establishment of trade and investment councils as part of the agreement.",
+        "verified": true,
+        "source_url": "https://www.fmprc.gov.cn/",
+        "note": "Institutional framework announced; verifiable through official statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667912+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4614a345dfb2",
+        "statement": "A bilateral summit between Xi Jinping and Donald Trump took place in Beijing.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov/",
+        "note": "High-level diplomatic event; verifiable through official U.S. and Chinese government records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667932+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "277f15b0e5b9",
+        "statement": "Specific commercial deliverables (Boeing jets, soybeans, Nvidia chip sales) were agreed upon.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framings dispute whether concrete numbers/commitments exist; no joint communiqu\u00e9 released to verify specifics",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667951+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a3dc68158331",
+        "statement": "Trump claimed tariffs were not discussed at the summit.",
+        "verified": false,
+        "source_url": "",
+        "note": "Unverified claim attributed to Trump; divergent U.S./Chinese readouts make verification difficult",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667962+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ec8254a61fb2",
+        "statement": "Xi presented a three-year 'constructive strategic stability' framework.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported by multiple framings but binding status and exact terms remain unclear; no official joint text released",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667971+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "31da1d899883",
+        "statement": "Trump entertained or discussed Xi's objections to Taiwan arms sales.",
+        "verified": false,
+        "source_url": "",
+        "note": "Disputed across framings; no official transcript or joint statement confirms this occurred",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667979+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b00e20f3c9eb",
+        "statement": "Xi explicitly warned of 'clashes and even conflicts' over Taiwan.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported but not independently verified; depends on readout accuracy",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667987+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8ec4a00d5772",
+        "statement": "Advanced Nvidia chips were explicitly excluded from any commercial agreement.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by tech-focused framing but not confirmed in official announcements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T09:10:57.667996+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the summit produced binding, concrete deliverables or merely vague frameworks and working groups",
+      "Whether Trump made unprecedented concessions on Taiwan arms sales discussions",
+      "Whether the summit represents a Trump victory for American workers/farmers or a Chinese strategic win",
+      "Whether the trade councils represent 'managed competition' or continued strategic decoupling",
+      "Whether the summit signals a G2 realignment or is primarily domestic political theater",
+      "Whether meaningful progress was made on AI, semiconductors, and cyber governance",
+      "Whether the divergent U.S./Chinese readouts indicate substantive disagreement or normal diplomatic ambiguity",
+      "Whether Taiwan's security was compromised or merely subjected to normal great-power negotiation"
+    ],
+    "summary": "All framings accept that a Beijing summit occurred, Wang Yi announced trade councils and continuation of previous agreements, and no joint communiqu\u00e9 was released. The fundamental disagreement is whether these institutional frameworks represent binding commitments with concrete deliverables or ceremonial structures masking the absence of substantive progress\u2014and whether any concessions on Taiwan, tech controls, or strategic positioning were made in the process."
+  },
+  "framings": [
+    {
+      "framing_id": "5cf84437",
+      "name": "Trump Deal-Making Triumph",
+      "question": "Did Trump successfully leverage U.S. power to extract meaningful concessions from China?",
+      "key_claim": "Trump's Beijing summit delivered historic wins for American workers, farmers, and companies \u2014 proving that tough deal-making with China works.",
+      "description": "This framing casts the Wang Yi announcement and surrounding summit outcomes as a vindication of Trump's pressure-first approach, highlighting Boeing aircraft orders, soybean purchases, rare-earth commitments, and fentanyl pledges as tangible victories extracted through strength. It frames the trade and investment councils as institutionalizing U.S. leverage.",
+      "emphasizes": "Specific commercial deliverables (Boeing jets, soybeans, Nvidia chip sales), Trump's personal rapport with Xi, the resumption of agricultural trade, rare-earth concessions, and the domestic economic benefits for American industries.",
+      "downplays": "The vagueness of commitments, lack of binding agreements, U.S. concessions on Taiwan arms sales, and the absence of structural changes to China's trade practices.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Trump Strikes Deal on Economic and Trade Relations with China \u2014 White House Fact Sheet",
+        "Trump touts 'fantastic trade deals' with Xi as nations try to stabilize relationship"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8afb94341aa6",
+          "name": "The White House / Trump Administration",
+          "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "a massive victory that safeguards U.S. economic strength and national security while putting American workers, farmers, and families first",
+          "date": "2025-11-05",
+          "role_evidence": "The White House issued the official fact sheet framing the deal as a 'massive victory' \u2014 the originating framing document for this narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348527+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "81fcd8cf19ee",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/trump-wraps-up-visit-with-xi-in-china/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump said he and Chinese President Xi Jinping made some 'fantastic trade deals'",
+          "date": "2026-05-15",
+          "role_evidence": "Broadcast Trump's own words \u2014 'fantastic trade deals' \u2014 to a mass audience without heavy editorial pushback in the headline, amplifying the triumphalist frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348575+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "48799063cb75",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/15/trump-xi-summit-the-3-big-takeaways-from-historic-meeting-in-beijing.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump's closely watched visit to China this week has gone a long way toward strengthening a fragile trade truce",
+          "date": "2026-05-15",
+          "role_evidence": "CNBC's '3 big takeaways' framed the summit broadly as stabilizing and commercially productive, amplifying the positive deal narrative to financial audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348590+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c2d037ff717c",
+          "name": "Elon Musk / Tesla (delegation member)",
+          "url": "https://www.cbsnews.com/news/trump-wraps-up-visit-with-xi-in-china/",
+          "carrier_type": "social",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Tesla's Elon Musk said the talks were 'wonderful' and they achieved 'many good things'",
+          "date": "2026-05-15",
+          "role_evidence": "As a delegation member and high-profile tech figure, Musk's public endorsement early-amplified the deal-success narrative to his massive social media following.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348602+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.348617+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a0e96935",
+      "name": "Substance-Over-Symbolism Skepticism",
+      "question": "Do the announced agreements represent real, enforceable change or just diplomatic theater?",
+      "key_claim": "The summit was heavy on ceremony and vague frameworks but delivered no binding commitments \u2014 Wang Yi's announcement of trade councils masks the absence of concrete deliverables.",
+      "description": "This framing, dominant among mainstream foreign policy analysts and centrist outlets, holds that the pageantry of the Beijing summit obscured the lack of specific, verifiable commitments. The trade and investment councils are described as still-to-be-defined structures, and the joint readouts from both sides are noted to be divergent and thin on specifics.",
+      "emphasizes": "Discrepancies between U.S. and Chinese readouts, the absence of a joint communiqu\u00e9, Wang Yi's admission that 'working teams are still negotiating relevant details,' Trump's claim tariffs weren't discussed, and the conditional nature of all announcements.",
+      "downplays": "The geopolitical value of simply holding the meeting, de-escalation from the 2025 tariff war peak, and the long-term significance of institutionalizing dialogue.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Where's the beef? Trump's underwhelming meeting with Xi \u2014 Atlantic Council",
+        "A summit where symbolism outweighs substance \u2014 Rush Doshi, CFR",
+        "Trump claims 'fantastic trade deals' with China. Here's what we know about what the summit achieved \u2014 CBC News"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5bbb59a8eed5",
+          "name": "Atlantic Council / Melanie Hart",
+          "url": "https://www.atlanticcouncil.org/dispatches/wheres-the-beef-trumps-underwhelming-meeting-with-xi/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Trump is coming home empty handed, at least thus far",
+          "date": "2026-05-15",
+          "role_evidence": "Hart published one of the earliest, most direct 'empty-handed' assessments, providing the evidentiary basis for the skeptical framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348659+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8954b2fcd5db",
+          "name": "Rush Doshi / Council on Foreign Relations",
+          "url": "https://www.cfr.org/event/media-briefing-making-sense-of-the-trump-xi-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A summit where symbolism outweighs substance",
+          "date": "2026-05-15",
+          "role_evidence": "Doshi's phrase was immediately picked up and repeated by CBC, CFR, and other outlets as a shorthand for the skeptical frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348677+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "509529923675",
+          "name": "CBC News / Mike Crawley",
+          "url": "https://www.cbc.ca/news/world/trump-xi-china-summit-analysis-9.7201162",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "analysts parsing the public statements are struggling to find evidence of major change",
+          "date": "2026-05-15",
+          "role_evidence": "CBC's analytical piece aggregated skeptical expert voices for a broad international audience, mass-amplifying the substance-over-symbolism frame.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260516204051/https://www.cbc.ca/news/world/trump-xi-china-summit-analysis-9.7201162",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348690+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0f8823f8d945",
+          "name": "Mona Paulsen / London School of Economics",
+          "url": "https://www.cbc.ca/news/world/trump-xi-china-summit-analysis-9.7201162",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "until I see something on paper, to assume that nothing has changed",
+          "date": "2026-05-15",
+          "role_evidence": "Paulsen's statement to CBC provided academic credibility and a quotable formulation for the 'nothing on paper' angle of this framing.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20260516204051/https://www.cbc.ca/news/world/trump-xi-china-summit-analysis-9.7201162",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348701+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4a3fe75a2b2c",
+          "name": "Brookings Institution (Ryan Hass, Patricia Kim, Jon Czin)",
+          "url": "https://www.brookings.edu/articles/what-happened-when-trump-met-xi/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "the net result is more commotion than motion",
+          "date": "2025-11-05",
+          "role_evidence": "Brookings scholars consistently published multi-author analyses reinforcing that outcomes were vague and commitments thin, reaching a broad policy audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348712+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "317fb2ebacb3",
+          "name": "East Asia Forum",
+          "url": "https://eastasiaforum.org/2026/05/30/the-xi-trump-summit-lived-up-to-modest-expectations/",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "the two countries failed to reach a comprehensive trade agreement",
+          "date": "2026-05-30",
+          "role_evidence": "EAF's academic synthesis explicitly catalogued omissions \u2014 no joint communiqu\u00e9, no comprehensive deal \u2014 reinforcing the skeptical frame in the academic-policy space.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348725+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.348742+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "8a1ebeed",
+      "name": "Beijing Wins the Framing War",
+      "question": "Who structurally benefited more from the summit, and did China outmaneuver the United States?",
+      "key_claim": "China adeptly used the summit's pageantry to extract status recognition, soft Taiwan concessions, and a 'constructive strategic stability' framework that locks in favorable terms beyond Trump's term.",
+      "description": "This framing, prominent in think-tank and foreign policy circles, argues that Xi entered Beijing with clear strategic objectives \u2014 status parity, locking in the trade truce, and softening U.S. Taiwan policy \u2014 and achieved most of them, while Trump prioritized spectacle. The trade and investment councils are read as Chinese-designed mechanisms to set a baseline that future U.S. competitive actions could be framed as violating.",
+      "emphasizes": "Xi's three-year 'constructive strategic stability' framework, Trump's apparent willingness to discuss Taiwan arms sales with Beijing (unprecedented), Beijing's adept use of rare-earth leverage, divergent readouts showing Chinese priorities dominated, and China's domestic political wins.",
+      "downplays": "China's own economic vulnerabilities, its failure to secure explicit U.S. opposition to Taiwan independence, and U.S. retention of key tariff and export-control leverage.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "What Beijing got from the Trump-Xi summit \u2014 Brookings Institution",
+        "At the Trump-Xi Summit, China Will Have the Upper Hand \u2014 CFR",
+        "Beijing appears to be trying to turn Trump's transactional willingness to stabilize ties into a longer-term operating framework \u2014 CNBC"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "81295e3f70c1",
+          "name": "Council on Foreign Relations (Rush Doshi, David Sacks)",
+          "url": "https://www.cfr.org/event/media-briefing-making-sense-of-the-trump-xi-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Beijing was trying to lock in a truce on terms that were favorable to it for the next several years",
+          "date": "2026-05-15",
+          "role_evidence": "CFR's media briefing, led by Doshi, was one of the first structured analyses to articulate Beijing's strategic framing gain as the summit's primary takeaway.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348759+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2515c6517fc6",
+          "name": "Brookings Institution / Patricia Kim, Jon Czin",
+          "url": "https://www.brookings.edu/articles/what-beijing-got-from-the-trump-xi-summit/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "China's leadership feels increasingly positive about the outcomes of the summit with rhetorical concessions from President Trump on Taiwan",
+          "date": "2026-05-19",
+          "role_evidence": "Brookings' 'What Beijing Got' analysis, framed from Beijing's vantage, became a widely cited early articulation of the China-wins narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348770+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "553d31fe08a9",
+          "name": "Bonnie Glaser / German Marshall Fund",
+          "url": "https://www.newsweek.com/trump-and-xi-score-own-wins-from-china-summit-11954080",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Xi may leave the happier man if Beijing can extend the truce...which the Chinese view as relatively favorable to them",
+          "date": "2026-05-16",
+          "role_evidence": "Glaser's media call comments were cited in Newsweek and across outlets as expert validation for the 'China wins more' framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348780+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7bed160dcd98",
+          "name": "Jack Lee / China Macro Group (via CNBC)",
+          "url": "https://www.cnbc.com/2026/05/15/trump-xi-summit-the-3-big-takeaways-from-historic-meeting-in-beijing.html",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Beijing appears to be trying to turn Trump's transactional willingness to stabilize ties into a longer-term operating framework",
+          "date": "2026-05-15",
+          "role_evidence": "Lee's analyst comment, quoted in CNBC's widely-read takeaways piece, added market-credible weight to the 'Beijing locks in framework' narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348791+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d66fb2b387b9",
+          "name": "Foreign Policy",
+          "url": "https://foreignpolicy.com/2026/05/19/trump-xi-summit-china-relationship-trade-strategy/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump 2.0 has featured a demonstrable downsizing of his ambitions toward China",
+          "date": "2026-05-19",
+          "role_evidence": "FP's analysis reached a large international foreign-policy readership, framing the summit as evidence of Beijing having shaped U.S. posture downward.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348803+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.348821+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e3a2bcf5",
+      "name": "Taiwan Security Betrayal Risk",
+      "question": "Did Trump trade away Taiwan's security guarantees for commercial deals, and what are the consequences for U.S. credibility in Asia?",
+      "key_claim": "By openly entertaining Xi's objections to Taiwan arms sales and refusing to reaffirm U.S. commitments, Trump may have made Taiwan a bargaining chip in a commercial negotiation for the first time in U.S. history.",
+      "description": "This framing, amplified by Taiwan policy specialists, hawks in both parties, and democracy advocates, focuses on Trump's unprecedented public discussion of the $14 billion Taiwan arms package with Xi and his 'no commitment either way' statement. It argues that even the appearance of conditionality on Taiwan's defense erodes deterrence and emboldens Beijing.",
+      "emphasizes": "Trump's deviation from the 1982 Six Assurances (U.S. never discusses Taiwan arms with Beijing), Xi's blunt Taiwan warning of 'clashes and even conflicts,' ambiguity about the arms sale, Taiwan's alarmed reaction, and the bipartisan congressional support for Taiwan.",
+      "downplays": "Rubio's statement that U.S. Taiwan policy is unchanged, Trump's later clarification of 'no commitment either way,' and the argument that vagueness may itself preserve strategic ambiguity.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "How Taiwan Fared during the 2026 Trump-Xi Summit \u2014 Global Taiwan Institute",
+        "China's leader warns Trump that differences over Taiwan could lead to a clash \u2014 NPR",
+        "Trump has become the first president to openly entertain conversation on arms sales to Taiwan with Beijing \u2014 Global Taiwan Institute"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "81944130c830",
+          "name": "Global Taiwan Institute",
+          "url": "https://globaltaiwan.org/2026/05/how-taiwan-fared-during-the-trump-xi-summit/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Trump has become the first president to openly entertain conversation on arms sales to Taiwan with Beijing",
+          "date": "2026-05-22",
+          "role_evidence": "GTI published the most detailed, dedicated analysis of Taiwan's specific risks from the summit, establishing the evidentiary case for this framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348833+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b2b5fee48b94",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/05/14/nx-s1-5822168/trump-xi-summit",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Xi placed Taiwan...at the center, calling it 'the most important issue' between the two countries",
+          "date": "2026-05-14",
+          "role_evidence": "NPR's widely distributed summit coverage led with Xi's Taiwan warning, centering that risk for a broad American public audience from day one.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348844+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "95fc4a906891",
+          "name": "Slate / Fred Kaplan",
+          "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "many Asian and European leaders worried that Trump would relax America's security commitments to Taiwan in exchange for great trade deals",
+          "date": "2026-05-16",
+          "role_evidence": "Slate's critical analysis amplified the Taiwan-risk framing early, contextualizing ally fears and Trump's ambiguous Taiwan language for a liberal-leaning readership.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348856+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7190ab65e10c",
+          "name": "CFR / James M. Lindsay",
+          "url": "https://www.cfr.org/articles/beyond-taiwan-a-decent-peace-at-the-trump-xi-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Xi went so far as to propose that the 'great rejuvenation of the Chinese nation' and 'Make America Great Again' could 'go hand in hand'",
+          "date": "2026-05-22",
+          "role_evidence": "Lindsay's CFR analysis flagged the ideological alignment rhetoric as a potential signal to MAGA isolationists that could erode Taiwan commitment, amplifying the Taiwan-risk frame to the policy community.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348866+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ecd41dd85d8b",
+          "name": "Taiwan Government / Michelle Lee (Cabinet spokesperson)",
+          "url": "https://www.npr.org/2026/05/14/nx-s1-5822168/trump-xi-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Taipei's government is grateful for the firm U.S support of the island",
+          "date": "2026-05-14",
+          "role_evidence": "Taiwan's official response implicitly validated the Taiwan-risk framing by feeling the need to publicly reaffirm U.S. support \u2014 signaling institutional concern.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348878+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.348890+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "55ed570d",
+      "name": "Managed Competition / Strategic Decoupling Underway",
+      "question": "Does Wang Yi's announcement signal a durable new architecture for structuring \u2014 rather than resolving \u2014 U.S.-China rivalry?",
+      "key_claim": "The trade and investment councils mark the beginning of a formalized 'managed competition' framework in which both superpowers delineate non-sensitive commercial sectors while continuing strategic and technological decoupling.",
+      "description": "This framing, prominent in foreign policy journals and think tanks, views the summit outcomes not as a success or failure but as a structural inflection point: the creation of institutions (Board of Trade, Board of Investment) to manage the scope, pace, and limits of economic separation, alongside continued competition in tech, AI, and defense. It is more analytical than polemical.",
+      "emphasizes": "The architectural novelty of the new councils, Xi's 'constructive strategic stability' as a three-year framework, the parallel decoupling of strategic sectors (chips, rare earths) from commercial ones (soybeans, aircraft), and the long-term trajectory of shrinking bilateral trade.",
+      "downplays": "Immediate deliverables, Taiwan flashpoints, and electoral/political dynamics in Washington.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Trump-Xi Summit Could Mark a Real Relationship Shift \u2014 Foreign Policy",
+        "With the announcement of a board of trade, a board of investment, and a new dialogue on AI, a process of defining the terms of managed competition appears underway \u2014 Foreign Policy",
+        "The soon-to-be-established board of trade appears an effort to manage the scope, pace, and limits of separation \u2014 Foreign Policy"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c231832aab02",
+          "name": "Foreign Policy",
+          "url": "https://foreignpolicy.com/2026/05/19/trump-xi-summit-china-relationship-trade-strategy/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "a process of defining the terms of managed competition appears to be underway",
+          "date": "2026-05-19",
+          "role_evidence": "FP's analysis was among the first to explicitly frame the councils as a 'managed competition' architecture rather than evaluating them as wins or losses.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348902+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c3a18e4c3c1b",
+          "name": "CSIS (Center for Strategic and International Studies)",
+          "url": "https://www.csis.org/programs/trump-xi-2026-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "the summit produced a framework for deeper cooperation and delivered several economic gains",
+          "date": "2026-05-15",
+          "role_evidence": "CSIS's multi-expert hub page consistently framed the summit as producing a framework architecture, amplifying the managed-competition lens across its expert network.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348912+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1f8108aead4a",
+          "name": "American University / Yan Bennett (via The Conversation)",
+          "url": "https://www.american.edu/sis/news/trump-xi-summit-progress-on-trade-ties.cfm",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Xi and Trump agreed to establish a Board of Trade and Board of Investment \u2013 intended to create a pathway forward to more trade in the months to come",
+          "date": "2026-05-20",
+          "role_evidence": "Bennett's Conversation piece, republished widely in academic venues, framed the councils as an institutionalized pathway \u2014 reinforcing the structural/architectural reading.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348925+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "54e8d5047274",
+          "name": "Newsweek / Scott Bessent (Treasury Secretary, quoted)",
+          "url": "https://www.newsweek.com/trump-and-xi-score-own-wins-from-china-summit-11954080",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "negotiators were in talks to establish boards of trade and investment in sectors not considered sensitive to national security",
+          "date": "2026-05-16",
+          "role_evidence": "Bessent's explicit delineation of 'non-sensitive' vs. strategic sectors constituted the administration's own adoption of the managed-competition framework language.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348936+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.348949+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d302ecee",
+      "name": "Tech War Unresolved / AI and Chips Left Out",
+      "question": "Did the summit address the most consequential dimension of U.S.-China competition \u2014 technology \u2014 and what was left unresolved?",
+      "key_claim": "While trade headlines dominated, the summit made no meaningful progress on AI guardrails, semiconductor export controls, cyber operations, or digital sovereignty \u2014 the arenas that will actually determine long-term strategic balance.",
+      "description": "This framing, concentrated in tech-policy and national security circles, argues that the trade and investment councils are a distraction from the deeper unresolved conflict over advanced technology. It notes that the chip war continues, Blackwell chips were explicitly excluded, and the summit's tech 'dialogue' consisted of vague gestures rather than binding agreements.",
+      "emphasizes": "Continued U.S. chip export controls, explicit exclusion of the most advanced Nvidia chips, unresolved AI governance, China's growing role as a global innovation hub, and the absence of any cyber or digital sovereignty framework.",
+      "downplays": "The commercial wins on soybeans and aircraft, the diplomatic stabilization value of the meeting, and incremental chip sales to select Chinese firms.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "The Trump-Xi summit revealed how little progress has been made on AI, cyber operations, export controls, and digital sovereignty \u2014 CSIS",
+        "While trade dominated headlines, deeper technological tensions remain unresolved \u2014 CSIS"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c1cfa12bf9cc",
+          "name": "CSIS / Lauryn Williams and Kuhu Badgi",
+          "url": "https://www.csis.org/programs/trump-xi-2026-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "how little progress has been made on the most consequential dimensions of U.S.-China competition: AI, cyber operations, export controls, and digital sovereignty",
+          "date": "2026-05-20",
+          "role_evidence": "CSIS's dedicated tech-focused post-summit analysis was the most explicit early articulation of the tech-war-unresolved framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348961+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "db7a0eb75599",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/amp/2026/05/14/trump-xi-beijing-summit-trade-taiwan-ai-iran-rare-earths-tariffs.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Taiwan, Iran and artificial intelligence are expected to be on the agenda, besides tariffs and rare earths",
+          "date": "2026-05-14",
+          "role_evidence": "CNBC's pre-summit framing and follow-up coverage kept AI and chips on the agenda as unresolved items, priming the tech-war-unresolved lens for financial and tech audiences.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20260514180954/https://www.cnbc.com/amp/2026/05/14/trump-xi-beijing-summit-trade-taiwan-ai-iran-rare-earths-tariffs.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348973+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "782ab0c5370e",
+          "name": "CFR / Heidi Crebo-Rediker",
+          "url": "https://www.cfr.org/articles/at-the-trump-xi-summit-china-will-have-the-upper-hand",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Geopolitical tensions, particularly trade, Taiwan, the Iran war, and artificial intelligence (AI) loom over the upcoming meeting",
+          "date": "2026-05-10",
+          "role_evidence": "CFR's pre-summit expert analysis flagged AI as a top unresolved issue, establishing the tech-gap expectations against which the summit's silence on AI was later measured.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348984+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bccf38cce7d0",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/trump-and-xi-score-own-wins-from-china-summit-11954080",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "all but ruling out a detente in the chip war, where U.S. export controls continue to ban the transfer of advanced semiconductors",
+          "date": "2026-05-16",
+          "role_evidence": "Newsweek's post-summit wrap explicitly noted the chip war's continuation, passing mention reinforcing the tech-unresolved frame.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.348995+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.349012+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "4ada7d5e",
+      "name": "Geopolitical Realignment / G2 Normalization",
+      "question": "Does the summit represent a normalization of great-power bilateralism that sidelines allies, multilateral institutions, and smaller states?",
+      "key_claim": "By staging a lavish bilateral summit with Beijing while sidelining formal allies, multilateral frameworks, and Taiwan, Trump and Xi are implicitly constructing a G2 order in which the two superpowers manage global affairs between themselves.",
+      "description": "This framing, present in allied capitals and liberal internationalist commentary, focuses less on what was agreed than on the symbolic architecture of the summit itself: a U.S. president traveling to Beijing for a choreographed state visit, Xi proposing 'MAGA' and 'national rejuvenation' go 'hand in hand,' and Trump bringing CEOs rather than China specialists. Allied concerns \u2014 from Taiwan to European trade \u2014 are treated as secondary.",
+      "emphasizes": "The imagery of bilateral superpower management, Trump's praise of Xi and China, the exclusion of meaningful allied consultation, Xi's explicit G2 framing ('two countries take particular responsibility in guiding global affairs'), and the contrast with Russia's simultaneous state visit to China.",
+      "downplays": "The limits of what was actually agreed, U.S. retention of tariff leverage, and the fact that no explicit U.S. concessions on multilateral institutions were made.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Trump approached this summit as an opportunity to engage Xi one-on-one, two strongmen making strong deals \u2014 Atlantic Council",
+        "Xi nudging the U.S. towards a G2 construct where Washington and Beijing take particular responsibility in guiding global affairs \u2014 Newsweek",
+        "Washington's real leverage is its network of allies and partners. Those nations have been shoved aside \u2014 Atlantic Council"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "df6b3f449b87",
+          "name": "Atlantic Council / Melanie Hart",
+          "url": "https://www.atlanticcouncil.org/dispatches/wheres-the-beef-trumps-underwhelming-meeting-with-xi/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Washington's real leverage is its network of allies and partners. Those nations have been shoved aside.",
+          "date": "2026-05-15",
+          "role_evidence": "Hart explicitly named the ally-sidelining dynamic as a structural U.S. failure, originating this angle of the G2-normalization critique.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349029+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cbe5306cc44b",
+          "name": "Raymond Kuo / Chicago Council on Global Affairs (via Newsweek)",
+          "url": "https://www.newsweek.com/trump-and-xi-score-own-wins-from-china-summit-11954080",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "nudging the U.S. towards a G2 construct where Washington and Beijing take particular responsibility in guiding global affairs",
+          "date": "2026-05-16",
+          "role_evidence": "Kuo named the G2 dynamic explicitly in Newsweek, giving the framing a memorable analytical label circulated in post-summit coverage.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349040+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f1ab35568713",
+          "name": "Slate / Fred Kaplan",
+          "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump thought that he could wing it and that his presumed friendship with Xi would pave the way for vast progress",
+          "date": "2026-05-16",
+          "role_evidence": "Kaplan's critical analysis centered the personal-strongman bilateral dynamic, noting the absence of China specialists in Trump's delegation \u2014 amplifying the G2-normalization critique.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349053+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a14c1fb05e90",
+          "name": "Foreign Policy",
+          "url": "https://foreignpolicy.com/2026/05/19/trump-china-xi-power/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "he remains, for now, a lonesome dove amid a bipartisan flock of China hawks in D.C.",
+          "date": "2026-05-19",
+          "role_evidence": "FP's wide-circulation analysis framed Trump's accommodationist posture as an outlier in Washington, implicitly critiquing the bilateral personalism at the expense of institutional approaches.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349065+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.349082+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c5763cf5",
+      "name": "Domestic Political Theater / Midterm Optics",
+      "question": "Was the Beijing summit primarily designed to produce political imagery for domestic consumption \u2014 by both leaders \u2014 rather than substantive policy outcomes?",
+      "key_claim": "Both Trump and Xi choreographed the summit primarily for their domestic audiences: Trump needed deal-making optics ahead of U.S. midterms, while Xi needed the spectacle of equal-footing engagement with America's leader.",
+      "description": "This framing treats the summit as a political performance staged for domestic consumption. It notes that Trump's pre-summit expectations were modulated, that both readouts diverged to serve different national narratives, that the pageantry (honor guards, YMCA, garden walks) dominated actual news cycles, and that each leader 'extracted what they needed domestically' regardless of substantive outcomes.",
+      "emphasizes": "Trump's approval ratings and midterm incentives, Xi's domestic need to project strength and equality, the choreographed ceremony, the 'victory lap' framing by both sides, and the lack of substance relative to the scale of production.",
+      "downplays": "Real policy changes (tariff structures, council formation), geopolitical risk reduction, and the diplomatic significance of the first presidential visit to Beijing in nine years.",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Both leaders extracted what they needed domestically \u2014 RealClearDefense",
+        "The summit was long on well-choreographed pageantry and symbolism, short on measurable results \u2014 Foreign Policy",
+        "Trump thought he could wing it\u2026to restore his popularity before this fall's midterms \u2014 Slate"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "71d6c3dfd132",
+          "name": "RealClearDefense",
+          "url": "https://www.realcleardefense.com/articles/2026/05/22/us-china_summit_what_really_happened_1184199.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Both leaders extracted what they needed domestically",
+          "date": "2026-05-22",
+          "role_evidence": "RCD's explicit framing of the summit as domestically-motivated theater for both sides is the clearest articulation of this lens among sources found.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349095+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7d211808d275",
+          "name": "Slate / Fred Kaplan",
+          "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "restore his popularity before this fall's midterms",
+          "date": "2026-05-16",
+          "role_evidence": "Slate explicitly linked Trump's summit ambitions to his domestic political incentives and sagging poll ratings, mass-amplifying the political-theater reading to a progressive audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349105+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "732caf180f2e",
+          "name": "Foreign Policy",
+          "url": "https://foreignpolicy.com/2026/05/19/trump-xi-summit-china-relationship-trade-strategy/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "long on well-choreographed pageantry and symbolism, short on measurable results",
+          "date": "2026-05-19",
+          "role_evidence": "FP's characterization of 'choreographed pageantry' became a widely cited shorthand reinforcing the theater framing across international policy media.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349116+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b61f92e7c8ca",
+          "name": "Brookings Institution",
+          "url": "https://www.brookings.edu/articles/what-happened-when-trump-met-xi/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "leaving enough ambiguity that both sides can claim victory now and make mischief later",
+          "date": "2025-11-05",
+          "role_evidence": "Brookings' 'both sides claim victory' framing, applied after the Busan summit and echoed after Beijing, implicitly supports the mutual domestic theater interpretation.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349126+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7f5440350c05",
+          "name": "CFR / Mike Froman",
+          "url": "https://www.cfr.org/articles/beyond-taiwan-a-decent-peace-at-the-trump-xi-summit",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "Expectations were low\u2014and met",
+          "date": "2026-05-15",
+          "role_evidence": "Froman's pithy opening line captured the sense of managed expectations and mutual performance, lending institutional credibility to the domestic-theater framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T09:10:49.349138+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T09:10:49.349153+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the perspective of U.S. allies (Japan, South Korea, Australia, EU) who may fear sidelining or exclusion from a bilateral U.S.-China arrangement; the labor/manufacturing worker angle on whether trade councils protect or expose domestic industries; the Global South view of what bilateral U.S.-China stability means for their own economic leverage and non-aligned positioning; and the institutional/bureaucratic framing\u2014which U.S. agencies (Treasury, Commerce, USTR) actually have power here, and are career officials being bypassed or empowered?",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Chinese Foreign Minister Wang Yi announced that China and the United States agreed to continue implementing previous trade agreements and establish trade and in",
+    "rated_outlets": 4,
+    "distribution": {
+      "left": 1,
+      "lean-left": 1,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 25,
+      "lean-left": 25,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.75,
+    "resolve_rate": 0.57,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "CBC News / Mike Crawley",
+          "domain": "cbc.ca"
+        },
+        {
+          "carrier": "Foreign Policy",
+          "domain": "foreignpolicy.com"
+        },
+        {
+          "carrier": "RealClearDefense",
+          "domain": "realcleardefense.com"
+        }
+      ]
+    },
+    "non_news_carriers": 9,
+    "matched": [
+      {
+        "outlet": "Slate",
+        "carrier": "Slate / Fred Kaplan",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 14,
+        "political": 1,
+        "social": 1,
+        "institutional": 17,
+        "academic": 3,
+        "other": 1
+      },
+      "vested_interest": 18,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 23,
+    "framings": [
+      {
+        "framing_id": "5cf84437",
+        "name": "Trump Deal-Making Triumph",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d673c3cc612c",
+            "display": "The White House",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "a0e96935",
+        "name": "Substance-Over-Symbolism Skepticism",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ccfff693fe40",
+            "display": "Atlantic Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "25de00d6eeeb",
+            "display": "Brookings Institution",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "798039f8d77a",
+            "display": "CBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ab44a9d5415c",
+            "display": "Mona Paulsen",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0d0242d1e10f",
+            "display": "Rush Doshi",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "f90e500d7e42",
+            "display": "East Asia Forum",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "8a1ebeed",
+        "name": "Beijing Wins the Framing War",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "25de00d6eeeb",
+            "display": "Brookings Institution",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4598ccc5c8a9",
+            "display": "Foreign Policy",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ba17bc2e3744",
+            "display": "Bonnie Glaser",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e3a2bcf5",
+        "name": "Taiwan Security Betrayal Risk",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "76f163697e02",
+            "display": "CFR",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "422cb70ee134",
+            "display": "Slate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "44c446332b68",
+            "display": "Global Taiwan Institute",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fbd870b1a0ba",
+            "display": "Taiwan Government",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "55ed570d",
+        "name": "Managed Competition / Strategic Decoupling Underway",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "fbee25504c5f",
+            "display": "CSIS",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4598ccc5c8a9",
+            "display": "Foreign Policy",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "3c3713e33a27",
+            "display": "American University",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "40155df178c3",
+            "display": "Newsweek",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d302ecee",
+        "name": "Tech War Unresolved / AI and Chips Left Out",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "76f163697e02",
+            "display": "CFR",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "fbee25504c5f",
+            "display": "CSIS",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "4ada7d5e",
+        "name": "Geopolitical Realignment / G2 Normalization",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "ccfff693fe40",
+            "display": "Atlantic Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4598ccc5c8a9",
+            "display": "Foreign Policy",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "422cb70ee134",
+            "display": "Slate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "063d1a102fbc",
+            "display": "Raymond Kuo",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "newsweek.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c5763cf5",
+        "name": "Domestic Political Theater / Midterm Optics",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "4598ccc5c8a9",
+            "display": "Foreign Policy",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "422cb70ee134",
+            "display": "Slate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "85ac024e36de",
+            "display": "RealClearDefense",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "25de00d6eeeb",
+            "display": "Brookings Institution",
+            "actor_type": "person",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "76f163697e02",
+            "display": "CFR",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "4598ccc5c8a9",
+        "display": "Foreign Policy",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Beijing Wins the Framing War",
+          "Domestic Political Theater / Midterm Optics",
+          "Geopolitical Realignment / G2 Normalization",
+          "Managed Competition / Strategic Decoupling Underway"
+        ]
+      },
+      {
+        "actor_id": "422cb70ee134",
+        "display": "Slate",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Domestic Political Theater / Midterm Optics",
+          "Geopolitical Realignment / G2 Normalization",
+          "Taiwan Security Betrayal Risk"
+        ]
+      },
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Tech War Unresolved / AI and Chips Left Out",
+          "Trump Deal-Making Triumph"
+        ]
+      },
+      {
+        "actor_id": "ccfff693fe40",
+        "display": "Atlantic Council",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Geopolitical Realignment / G2 Normalization",
+          "Substance-Over-Symbolism Skepticism"
+        ]
+      },
+      {
+        "actor_id": "25de00d6eeeb",
+        "display": "Brookings Institution",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "Beijing Wins the Framing War",
+          "Substance-Over-Symbolism Skepticism"
+        ]
+      },
+      {
+        "actor_id": "76f163697e02",
+        "display": "CFR",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Taiwan Security Betrayal Risk",
+          "Tech War Unresolved / AI and Chips Left Out"
+        ]
+      },
+      {
+        "actor_id": "fbee25504c5f",
+        "display": "CSIS",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Managed Competition / Strategic Decoupling Underway",
+          "Tech War Unresolved / AI and Chips Left Out"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Substance-Over-Symbolism Skepticism",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Taiwan Security Betrayal Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Managed Competition / Strategic Decoupling Underway",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Taiwan Security Betrayal Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Managed Competition / Strategic Decoupling Underway",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Tech War Unresolved / AI and Chips Left Out",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Beijing Wins the Framing War",
+        "b": "Taiwan Security Betrayal Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Taiwan Security Betrayal Risk",
+        "b": "Managed Competition / Strategic Decoupling Underway",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Beijing Wins the Framing War",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Substance-Over-Symbolism Skepticism",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Taiwan Security Betrayal Risk",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Managed Competition / Strategic Decoupling Underway",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Beijing Wins the Framing War",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Taiwan Security Betrayal Risk",
+        "b": "Tech War Unresolved / AI and Chips Left Out",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Tech War Unresolved / AI and Chips Left Out",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Tech War Unresolved / AI and Chips Left Out",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Trump Deal-Making Triumph",
+        "b": "Tech War Unresolved / AI and Chips Left Out",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Beijing Wins the Framing War",
+        "b": "Managed Competition / Strategic Decoupling Underway",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Beijing Wins the Framing War",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Beijing Wins the Framing War",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Beijing Wins the Framing War",
+        "b": "Tech War Unresolved / AI and Chips Left Out",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Taiwan Security Betrayal Risk",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Managed Competition / Strategic Decoupling Underway",
+        "b": "Geopolitical Realignment / G2 Normalization",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Geopolitical Realignment / G2 Normalization",
+        "b": "Domestic Political Theater / Midterm Optics",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Managed Competition / Strategic Decoupling Underway",
+        "b": "Tech War Unresolved / AI and Chips Left Out",
+        "shared": 2,
+        "jaccard": 0.286
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "organization": 6,
+      "academic": 3,
+      "person": 5,
+      "official": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.304,
+      "siloed_share": 0.652,
+      "mean_jaccard": 0.112
+    },
+    "structure_note": "7 of 23 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T09:11:15.805564+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

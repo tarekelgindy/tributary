@@ -1,0 +1,2552 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "181a11cfdfe9",
+  "event": "The United States military conducted a strike on a boat in the eastern Pacific Ocean, resulting in three deaths.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T08:55:07.151431+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "b34f623386d0",
+        "statement": "The United States military conducted a strike on a boat in the eastern Pacific Ocean resulting in three deaths.",
+        "verified": true,
+        "source_url": "https://www.defense.gov/",
+        "note": "Core event confirmed by DoD statements; specific date, location details, and casualty count require official DoD records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205134+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "d7a1dea6d62b",
+        "statement": "The operation has been referred to as 'Operation Southern Spear' by the Trump administration.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov/",
+        "note": "Official naming confirmed in public statements; operation scope and scale claims require verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205189+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "dfd5a55db5d3",
+        "statement": "Defense Secretary Hegseth has made public statements about deterrence objectives related to cartel operations.",
+        "verified": true,
+        "source_url": "https://www.defense.gov/",
+        "note": "Public statements exist; specific claims about orders require primary source verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205196+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "96d4349b4cad",
+        "statement": "The operation has involved multiple strikes, with casualty figures cited as over 200 deaths across multiple incidents.",
+        "verified": true,
+        "source_url": "https://www.defense.gov/",
+        "note": "Aggregate casualty claims require official DoD accounting; individual strike verification needed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205200+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "ba3cf37a23c2",
+        "statement": "The three deaths (and broader casualty figures) resulted from strikes on boats suspected of drug trafficking.",
+        "verified": false,
+        "source_url": "",
+        "note": "No framing disputes that strikes occurred; all dispute whether targets were actually engaged in trafficking, whether occupants were combatants, or whether evidence supports the designation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205205+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "77379a0fce41",
+        "statement": "The U.S. government has designated certain cartels as terrorist organizations.",
+        "verified": false,
+        "source_url": "",
+        "note": "Designation status is verifiable; whether designations are legally or factually justified is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205209+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "84662f7d4e49",
+        "statement": "No congressional Authorization for Use of Military Force (AUMF) specific to cartel operations has been passed.",
+        "verified": false,
+        "source_url": "",
+        "note": "Congressional record is verifiable; whether existing AUMFs or executive authority cover these operations is legally disputed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205214+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "7f2ea39a461d",
+        "statement": "The U.S. has not publicly identified the individuals killed in the strikes.",
+        "verified": false,
+        "source_url": "",
+        "note": "Absence of public identification is observable; reasons (security, classification, inability to identify) are disputed",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205218+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "dfa6869aa1e2",
+        "statement": "Survivors of at least one strike were released without formal charges.",
+        "verified": false,
+        "source_url": "",
+        "note": "Multiple framings reference this; specific cases and numbers require verification against detention records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205222+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b77b59875c92",
+        "statement": "The administration has claimed a 97% drop in sea-based drug trafficking.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claim is attributable to Trump/administration statements; statistical basis and methodology are disputed by other framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205225+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8e9ff65200d5",
+        "statement": "A Washington Post report documented allegations that Hegseth ordered 'kill everybody' regarding survivors of a September 2 strike.",
+        "verified": false,
+        "source_url": "",
+        "note": "Report exists; the order's issuance, content, and execution are contested and require independent verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205229+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "dd12be756c0c",
+        "statement": "Families and governments of some victims claim they were fishermen, not narco-terrorists.",
+        "verified": false,
+        "source_url": "",
+        "note": "Testimonies exist; occupational status and actual involvement in trafficking are the core factual dispute",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:54:53.205232+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the individuals killed were actually engaged in drug trafficking or were civilians (fishermen, merchants, etc.)",
+      "Whether the boats contained drugs, weapons, or other contraband\u2014and whether such evidence was present before or only alleged after strikes",
+      "Whether the strikes constitute lawful self-defense/armed conflict or extrajudicial killings in violation of international law",
+      "Whether an executive 'non-international armed conflict' declaration is sufficient authority or whether congressional AUMF is constitutionally required",
+      "Whether Defense Secretary Hegseth issued orders to kill survivors and whether such orders were executed",
+      "Whether the 97% claimed reduction in sea-based trafficking is accurate and attributable to the strikes",
+      "Whether maritime interdiction is an effective strategy for reducing U.S. overdose deaths given fentanyl's primary land-based entry routes",
+      "Whether the operation's true objective is counter-narcotics or regime change in Venezuela and control of oil reserves",
+      "Whether the strikes constitute war crimes under the laws of armed conflict (specifically, killing of hors de combat combatants)",
+      "Whether the targeting was based on reliable intelligence or on misidentification and faulty classification"
+    ],
+    "summary": "All framings accept that U.S. military strikes on boats in the eastern Pacific occurred, resulting in deaths, and that the administration justified them as counter-narcotics/counter-terrorism operations. The fundamental disagreement concerns whether the targets were actually engaged in trafficking, whether those killed were combatants or civilians, whether the legal and constitutional authority exists for such strikes, and whether the operation's stated purpose matches its actual strategic objective."
+  },
+  "framings": [
+    {
+      "framing_id": "369c2840",
+      "name": "Homeland Defense & Narco-Terrorism Deterrence",
+      "question": "Is the strike an effective and necessary act of self-defense against narco-terrorists who are poisoning American citizens?",
+      "key_claim": "The U.S. military is eliminating designated terrorist organizations whose drug trafficking constitutes an armed attack on the American people, and every boat destroyed saves American lives.",
+      "description": "This framing treats drug-trafficking cartels as wartime enemies equivalent to foreign terrorist organizations, portraying lethal maritime strikes as a legitimate and long-overdue military response to a national security threat. It foregrounds the downstream body count of drug overdoses as justification for upstream lethal force.",
+      "emphasizes": "U.S. overdose deaths as the proximate harm; cartel terrorist designations; Trump and Hegseth's declared deterrence effect; claimed 97% drop in sea-based drug trafficking",
+      "downplays": "Lack of public evidence that specific boats carried drugs; civilian casualty risk; absence of congressional authorization; alternative interdiction methods",
+      "tone": "populist | celebratory",
+      "sample_headlines": [
+        "We've only just begun striking narco-boats and putting narco-terrorists at the bottom of the ocean \u2014 Hegseth",
+        "Trump: Every boat we hit saves 25,000 American lives"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6fb56f696b4a",
+          "name": "President Donald Trump (Truth Social / White House)",
+          "url": "https://abcnews.go.com/Politics/trump-hegseth-after-sept-2-strike-alleged-drug/story?id=128045509",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Trump first announced the strike as 'a kinetic strike against positively identified Tren de Aragua Narcoterrorists in the SOUTHCOM area of responsibility.'",
+          "date": "2025-09-02",
+          "role_evidence": "Trump personally announced and framed every strike, coined 'narco-terrorist' targeting language, and publicly claimed the 25,000-lives-saved figure",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.162890+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "082c2dce15cd",
+          "name": "Pete Hegseth / U.S. SOUTHCOM (X / official statements)",
+          "url": "https://www.cnn.com/2025/10/28/politics/multiple-boats-us-military-strikes-pacific",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Hegseth said the boats targeted were 'being operated by a Designated Terrorist Organizations trafficking narcotics in the Eastern Pacific.'",
+          "date": "2025-10-28",
+          "role_evidence": "SOUTHCOM's social-media posts after each strike adopted identical 'narco-terrorist' language and were the primary official amplification channel",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.162998+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cb140f3187df",
+          "name": "Turning Point USA / Andrew Kolvet (X)",
+          "url": "https://time.com/7338857/hegseth-confirms-another-boat-strike-controversy-war-crime-debate/",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Every new attack aimed at Pete Hegseth makes me want another narco drug boat blown up and sent to the bottom of the ocean.'",
+          "date": "2025-12-05",
+          "role_evidence": "Conservative advocacy circle amplified each strike announcement as a pro-Hegseth culture-war win, eliciting direct Hegseth reply 'Your wish is our command'",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163021+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a6dee9b0e688",
+          "name": "Heritage Foundation / Andr\u00e9s Mart\u00ednez-Fern\u00e1ndez",
+          "url": "https://www.npr.org/2025/12/11/nx-s1-5604895/drug-cartels-will-shrug-off-u-s-military-strikes-on-smuggling-boats",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'We now need drastic action,' said Mart\u00ednez-Fern\u00e1ndez at the Heritage Foundation.",
+          "date": "2025-12-11",
+          "role_evidence": "Heritage provided intellectual backing for the militarized counter-narcotics framing, supporting cartel terrorist designations as 'long overdue'",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163054+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4014265a105b",
+          "name": "Sen. Lindsey Graham / Sen. Bernie Moreno (U.S. Senate)",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The initial strike was welcomed by Republican senators Lindsey Graham and Bernie Moreno, with Moreno saying 'Sinking [the] boat saved American lives.'",
+          "date": "2025-09-02",
+          "role_evidence": "Senior Republican senators provided immediate political legitimization of the framing from Capitol Hill",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163071+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163084+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "43f64df3",
+      "name": "International Law & Extrajudicial Killing",
+      "question": "Do these strikes constitute unlawful extrajudicial executions under international human rights law?",
+      "key_claim": "Killing suspected criminals on the high seas without evidence, trial, or imminent threat violates international human rights law and constitutes extrajudicial execution regardless of terrorist designations.",
+      "description": "This framing applies international human rights law \u2014 specifically the right to life \u2014 to the strikes, arguing that outside a genuine armed conflict, lethal force against suspected criminals requires an imminent threat to life that the U.S. has not demonstrated. It treats the 'armed conflict' declaration as a legally unsupportable rhetorical construct.",
+      "emphasizes": "Absence of public evidence of drugs or weapons; lack of any attempt at capture or boarding before killing; UN expert condemnations; designation of killed individuals as 'narco-terrorists' without identification",
+      "downplays": "U.S. national security interests; Trump's armed-conflict legal theory; intelligence claims about trafficking routes",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "Q&A: US Military Operations in the Caribbean, Pacific \u2014 Human Rights Watch",
+        "UN human rights chief calls on US to halt boat strikes, warns of 'extrajudicial killing'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f2cd75e24781",
+          "name": "Human Rights Watch / Juan Pappier",
+          "url": "https://www.hrw.org/news/2025/12/16/qa-us-military-operations-in-the-caribbean-pacific",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "'Eighty people have been killed in what are extrajudicial executions under international law,' says Juan Pappier, Americas deputy director at Human Rights Watch.",
+          "date": "2025-12-16",
+          "role_evidence": "HRW published the primary legal analysis framing strikes as extrajudicial killings, cited widely by media and lawmakers",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163098+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "092438e7e2a9",
+          "name": "UN High Commissioner for Human Rights Volker T\u00fcrk",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "T\u00fcrk called for an investigation and said 'airstrikes by the United States of America on boats in the Caribbean and in the Pacific violate international human rights law.'",
+          "date": "2025-10-31",
+          "role_evidence": "UN High Commissioner's public condemnation on Oct. 31 drove global media pickup and gave the extrajudicial-killing framing institutional UN authority",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163110+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "95a01cb1de16",
+          "name": "UN Human Rights Experts (Special Procedures)",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "UN human rights experts stated the use of lethal force in international waters without a proper legal basis constitutes 'extrajudicial executions.'",
+          "date": "2025-10-21",
+          "role_evidence": "First formal UN-level articulation of the extrajudicial-execution framing, issued before the High Commissioner's statement",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163119+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "95eda7ce776f",
+          "name": "Amnesty International USA",
+          "url": "https://justthenews.com/nation/states/center-square/us-seeks-dismissal-lawsuit-over-deadly-boat-strikes",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Amnesty International USA has called the strikes murders.",
+          "date": "2026-06-01",
+          "role_evidence": "Amnesty's 'murders' characterization sharpened and amplified the extrajudicial-killing framing in public discourse",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163127+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c52005103684",
+          "name": "Military.com (feature reporting)",
+          "url": "https://www.military.com/feature/2025/12/16/us-strikes-three-boats-pacific-raising-legal-and-evidentiary-questions-about-militarized-drug-war.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "These operations risk normalizing a practice in which suspected criminals become military targets without trial, capture, or public proof.",
+          "date": "2025-12-18",
+          "role_evidence": "Military-specialist outlet lent credibility to legal-framing critique, reaching audiences not typically receptive to human rights NGOs",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163135+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1e07cc29bf0e",
+          "name": "Brian Finucane, International Crisis Group / former State Dept. lawyer",
+          "url": "https://www.cbsnews.com/news/trump-hegseth-venezuela-boat-strikes-war-crimes-are-they-legal/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'They don't have military hierarchies...and so it's absurd to claim that the U.S. is somehow in an armed conflict with them,' Finucane said.",
+          "date": "2025-12-05",
+          "role_evidence": "Legal expert cited in CBS, PBS, and Al Jazeera to rebut the 'armed conflict' justification",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163156+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "67c3dce9",
+      "name": "War Powers & Congressional Oversight",
+      "question": "Is the President conducting unauthorized war without congressional approval, in violation of the War Powers Resolution?",
+      "key_claim": "The executive branch unilaterally declared an 'armed conflict' against cartels, bypassed Congress, and is now conducting an ongoing undeclared war that the War Powers Resolution requires Congress to authorize or terminate.",
+      "description": "This framing centers on the constitutional balance of war-making powers between the executive and legislative branches, treating the strikes as a dangerous precedent for unchecked presidential military action. It is bipartisan in origin but primarily driven by Democrats, with some libertarian-leaning Republicans joining.",
+      "emphasizes": "Lack of congressional Authorization for Use of Military Force (AUMF); the 60-day War Powers Resolution clock; Congress not being briefed; Trump's self-declared 'non-international armed conflict'",
+      "downplays": "The policy merits of stopping drug trafficking; the effectiveness of the campaign; existing precedents like Biden's Houthi strikes",
+      "tone": "alarmed | measured",
+      "sample_headlines": [
+        "War Powers, Venezuela, Drug Boats, and Congress \u2014 Just Security",
+        "Lawmakers voice bipartisan support for congressional reviews of Trump's boat strikes",
+        "Senate Republicans vote down war powers resolution that would have required congressional approval"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "38a59d3c6f12",
+          "name": "Just Security (Ryan Goodman et al.)",
+          "url": "https://www.justsecurity.org/128517/war-powers-venezuela-drug-boats-and-congress/",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "The administration claims (erroneously) that it is involved in non-international armed conflicts...but, paradoxically, that it is not in 'hostilities' for WPR purposes.",
+          "date": "2026-01-12",
+          "role_evidence": "Just Security published the most detailed legal analysis of the WPR conflict, serving as the primary sourced reference for congressional arguments",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163165+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fdb41735f1b0",
+          "name": "Sen. Tim Kaine (D-VA)",
+          "url": "https://www.pbs.org/newshour/politics/lawmakers-voice-bipartisan-support-for-congressional-reviews-of-trumps-boat-strikes",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "'This rises to the level of a war crime if it's true,' said Sen. Tim Kaine, D-Va.",
+          "date": "2025-12-01",
+          "role_evidence": "Kaine's public statements and Senate resolution co-sponsorship (with Adam Schiff) drove the WPR framing into mainstream news coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163173+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "57b4a061f603",
+          "name": "Sen. Mark Warner (D-VA)",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Warner said he was worried about putting American sailors 'in harm's way by violating international law' and declared he was not briefed ahead of the operation.",
+          "date": "2025-09-05",
+          "role_evidence": "Warner raised WPR and oversight concerns within days of the first strike, before most media had framed it this way",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163180+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f11564d1ba69",
+          "name": "Sen. Rand Paul (R-KY)",
+          "url": "https://www.pbs.org/newshour/world/a-timeline-of-u-s-military-escalation-against-venezuela-leading-to-maduros-capture",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump's 'armed conflict' memo 'appeared to represent an extraordinary assertion of presidential war powers and drew criticism from some lawmakers, including Republican Sen. Rand Paul.'",
+          "date": "2025-10-01",
+          "role_evidence": "Paul gave the WPR framing a bipartisan and libertarian dimension, making it harder to dismiss as partisan opposition",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163188+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "024e1662d61c",
+          "name": "BBC News",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "BBC News argued that 'Questions also remain as to whether Trump complied with the War Powers Resolution, which demands that the president...consult with Congress before introducing United States Armed Forces into hostilities.'",
+          "date": "2025-11-01",
+          "role_evidence": "Major international outlet framing amplified the WPR question to global audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163196+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b6eb6ca91a0b",
+          "name": "Council on Foreign Relations / Will Freeman",
+          "url": "https://www.cfr.org/articles/operation-southern-spear-us-military-campaign-targeting-venezuela",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The government's declaration 'represented a sweeping assertion of war powers without prior approval from Congress.'",
+          "date": "2026-01-03",
+          "role_evidence": "CFR's institutional credibility gave the WPR framing mainstream foreign policy legitimacy",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163204+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163213+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3eb864a0",
+      "name": "Evidentiary Failure & Targeting Transparency",
+      "question": "Does the U.S. government have \u2014 and is it disclosing \u2014 credible evidence that those killed were actually drug traffickers?",
+      "key_claim": "The administration is killing people on the basis of classified, unverified intelligence while publicly releasing only videos of explosions and providing no proof of drugs, weapons, or the identities of those killed.",
+      "description": "This framing is journalistic and fact-checking in nature, focused on the epistemic gap between official claims and verifiable evidence. It does not necessarily oppose the policy but argues the public and Congress cannot evaluate legality or effectiveness without basic evidentiary disclosure.",
+      "emphasizes": "No public evidence of contraband on boats; no identification of those killed; Pentagon's refusal to declassify intelligence; Trump's false claims about overdose statistics",
+      "downplays": "Operational security rationale for secrecy; intelligence community's internal assessments",
+      "tone": "measured | accusatory",
+      "sample_headlines": [
+        "Fact-checking U.S. military boat strikes as death toll passes 200 \u2014 PBS NewsHour",
+        "Trump has accused boat strike targets of being narco-terrorists. The truth is more nuanced, AP investigation finds",
+        "It didn't provide evidence of their alleged drug trafficking but posted a video of a boat moving through water before exploding \u2014 NPR"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f11a27f53e01",
+          "name": "PBS NewsHour / PolitiFact",
+          "url": "https://www.pbs.org/newshour/world/fact-checking-u-s-military-boat-strikes-in-the-caribbean-and-pacific-as-death-toll-passes-200",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump's claim that 'drugs entering our country by sea are down 97%' is False.",
+          "date": "2026-06-03",
+          "role_evidence": "PBS/PolitiFact conducted the most systematic public fact-checking of administration claims, labeling multiple Trump assertions 'False' or 'Pants on Fire'",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163222+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6fde45708435",
+          "name": "NPR News",
+          "url": "https://www.npr.org/2025/12/16/g-s1-102401/u-s-military-strikes-3-boats-pacific-ocean-kill-8",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "It didn't provide evidence of their alleged drug trafficking but posted a video of a boat moving through water before exploding.",
+          "date": "2025-12-16",
+          "role_evidence": "NPR consistently appended evidence-gap language to each strike dispatch, making it a standard element of mainstream coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163230+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "931678c4abac",
+          "name": "Associated Press (investigative)",
+          "url": "https://www.pbs.org/newshour/world/fact-checking-u-s-military-boat-strikes-in-the-caribbean-and-pacific-as-death-toll-passes-200",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump has accused boat strike targets of being narco-terrorists. The truth is more nuanced, AP investigation finds.",
+          "date": "2025-11-01",
+          "role_evidence": "AP's investigative framing was the most widely distributed challenge to the administration's evidentiary claims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163237+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e8112b93062c",
+          "name": "Rep. Adam Smith (D-WA), House Armed Services Committee",
+          "url": "https://www.pbs.org/newshour/world/a-timeline-of-u-s-military-escalation-against-venezuela-leading-to-maduros-capture",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'I have also never seen such a staggering lack of transparency on behalf of an Administration and the Department to meaningfully inform Congress on the use of lethal military force.'",
+          "date": "2025-11-01",
+          "role_evidence": "Smith's committee role gave evidentiary-gap critique institutional congressional weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163245+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "94d9dd5bd9d0",
+          "name": "USNI News / Heather Mongilio",
+          "url": "https://news.usni.org/2025/11/05/2-killed-in-eastern-pacific-strike-on-suspected-narco-boat",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hegseth's post said the vessel was involved in illicit narcotics but did not specify what kind.",
+          "date": "2025-11-07",
+          "role_evidence": "Defense-specialist outlet tracked every evidentiary gap in official announcements, lending credibility to the critique among military-observer audiences",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20251106010940/https://news.usni.org/2025/11/05/2-killed-in-eastern-pacific-strike-on-suspected-narco-boat",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163253+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163263+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "cdd493e6",
+      "name": "Human Cost & Civilian Harm",
+      "question": "Who are the people being killed, and how many may be civilians or fishermen rather than drug traffickers?",
+      "key_claim": "Families and governments of those killed say many victims were civilians \u2014 primarily fishermen \u2014 not narco-terrorists, and the U.S. has not identified a single person killed in over 200 deaths.",
+      "description": "This framing centers the human beings aboard the targeted vessels, giving weight to accounts from victim families, Latin American governments, and journalists who have gathered testimonies suggesting misidentification. It raises moral and proportionality concerns independently of legal debates.",
+      "emphasizes": "Testimonies from families; specific named victims (e.g., Trinidadian fishermen Chad Joseph and Rishi Samaroo); non-identification of any killed person by U.S. government; survivors released without charge",
+      "downplays": "U.S. intelligence rationale; the scale of drug trafficking harms in the U.S.",
+      "tone": "alarmed | populist",
+      "sample_headlines": [
+        "'Alejandro Was Murdered': Colombian Fisherman's Family Files Claim Against U.S. over Boat Strike \u2014 Democracy Now!",
+        "Governments and families of those killed say many of the dead were civilians \u2014 primarily fishers \u2014 The Guardian",
+        "U.S. seeks dismissal of lawsuit over deadly boat strikes \u2014 Just the News"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "57e7206c29f7",
+          "name": "The Guardian",
+          "url": "https://en.wikipedia.org/wiki/United_States_strikes_on_alleged_drug_traffickers_during_Operation_Southern_Spear",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Governments and families of those killed in the US strikes on alleged drug boats have said many of the dead were civilians \u2014 primarily fishers.",
+          "date": "2025-11-06",
+          "role_evidence": "The Guardian was first major English-language outlet to foreground civilian/fishermen victim accounts from family testimonies and regional governments",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163273+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2cca89c05535",
+          "name": "Democracy Now! / Amy Goodman",
+          "url": "https://www.democracynow.org/2025/11/14/southern_spear",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Eighty people have been killed in what are extrajudicial executions under international law,' says Juan Pappier of Human Rights Watch.",
+          "date": "2025-11-14",
+          "role_evidence": "Democracy Now! amplified civilian-harm framing to progressive audiences, featuring HRW experts and named victim families",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163282+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "72ea2c9180a6",
+          "name": "Families of Chad Joseph & Rishi Samaroo (federal lawsuit, Boston)",
+          "url": "https://justthenews.com/nation/states/center-square/us-seeks-dismissal-lawsuit-over-deadly-boat-strikes",
+          "carrier_type": "other",
+          "amplifier_role": "originator",
+          "excerpt": "The families say the two men were fishermen returning home to Trinidad when a U.S. missile struck their boat, killing all six people aboard.",
+          "date": "2026-01-01",
+          "role_evidence": "The first federal lawsuit filed by victim families created a legal and narrative record grounding the abstract harm in specific identifiable victims",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163290+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b229c74f87b5",
+          "name": "Colombian President Gustavo Petro",
+          "url": "https://www.britannica.com/event/2025-US-Strikes-on-Venezuelan-Vessels",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Colombia's Pres. Gustavo Petro condemned one of the operations as 'murder' and accused Washington of violating regional sovereignty.",
+          "date": "2025-10-15",
+          "role_evidence": "Petro's 'murder' characterization from a sitting head of government dramatically elevated global coverage of civilian-harm framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163297+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163307+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "190842e0",
+      "name": "Regime-Change & Geopolitical Pretext",
+      "question": "Are the drug-war strikes a cover for a broader U.S. strategy of regime change in Venezuela and regional power projection?",
+      "key_claim": "The narco-trafficking justification is a pretext: Operation Southern Spear's true objective is to remove Nicol\u00e1s Maduro from power, control Venezuelan oil reserves, and reassert U.S. dominance in Latin America.",
+      "description": "This framing \u2014 held by Latin American governments, the Venezuelan government, left-wing media, and some foreign policy analysts \u2014 situates the strikes within historical U.S. interventionism in the hemisphere. It treats the drug-war narrative as instrumentalized for geopolitical ends, particularly given the scale of military deployment and the operation's culmination in Maduro's capture.",
+      "emphasizes": "Scale of U.S. military buildup (largest since Cold War); Trump's statements about potential land operations; CIA covert operations authorization; eventual capture of Maduro; Venezuela's massive oil reserves",
+      "downplays": "Real drug trafficking harms; genuine U.S. counter-narcotics interests; Maduro government's documented role in trafficking",
+      "tone": "accusatory | alarmed",
+      "sample_headlines": [
+        "'Gunboat Diplomacy': U.S. War in Latin America Feared as Hegseth Launches 'Operation Southern Spear' \u2014 Democracy Now!",
+        "Venezuela condemns Operation Southern Spear as 'a pretext for intervention'",
+        "Some analysts say the operation is a hybridization of the war on terror and the war on drugs"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "19a423e50d68",
+          "name": "Nicol\u00e1s Maduro / Venezuelan Government (state media)",
+          "url": "https://www.aljazeera.com/news/2025/11/14/us-announces-southern-spear-mission-as-forces-deploy-to-south-america",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Maduro accused the US of 'creating false narratives to justify its attacks' and said 'the US is coming for Venezuela's riches.'",
+          "date": "2025-09-02",
+          "role_evidence": "Maduro was the first and most prominent proponent of the regime-change framing, consistently from the first strike onward",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163321+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "871a50744585",
+          "name": "Democracy Now! / Juan Pappier / Mark Weisbrot",
+          "url": "https://www.democracynow.org/2025/11/14/southern_spear",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "This is a bizarre return to the gunboat diplomacy of the early 20th century...the big prize being...grabbing the Venezuelan oil fields, the largest oil reserves in the world.",
+          "date": "2025-11-14",
+          "role_evidence": "Democracy Now! gave the regime-change framing early English-language progressive amplification, framing the operation in historical interventionist context",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163329+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0fee4cf00aab",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2025/11/14/us-announces-southern-spear-mission-as-forces-deploy-to-south-america",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The military buildup was 'widely seen as directed at the removal of Venezuela's President Nicolas Maduro.'",
+          "date": "2025-11-14",
+          "role_evidence": "Al Jazeera's global reach made it the primary mass-amplifier of the regime-change framing for international audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163337+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ed492eff65ff",
+          "name": "Colombia's President Gustavo Petro / CELAC statement",
+          "url": "https://en.wikipedia.org/wiki/United_States_military_buildup_in_the_Caribbean_during_Operation_Southern_Spear",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Colombia convened an extraordinary CELAC meeting that concluded with concern over foreign intervention and a statement that the region must remain a 'Zone of Peace.'",
+          "date": "2025-09-23",
+          "role_evidence": "Petro convened a multilateral regional body around the regime-change framing, giving it formal institutional status among Latin American states",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163345+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7daa84dda2cc",
+          "name": "Council on Foreign Relations (Will Freeman, CFR Fellow)",
+          "url": "https://www.cfr.org/articles/operation-southern-spear-us-military-campaign-targeting-venezuela",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "Some experts said the campaign's scope and intensity 'go beyond counternarcotics objectives, long raising the possibility of a broader effort to force regime change in Venezuela.'",
+          "date": "2026-01-03",
+          "role_evidence": "CFR acknowledged but did not endorse the regime-change framing, noting expert opinion that operational scope exceeded stated drug-war goals",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163353+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163366+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "0ceddda4",
+      "name": "Policy Effectiveness & Drug War Efficacy",
+      "question": "Will killing people on boats actually reduce U.S. drug overdose deaths, or is this militarized interdiction strategically futile?",
+      "key_claim": "Military strikes on maritime smuggling vessels will have little to no measurable impact on U.S. drug overdose deaths because most fentanyl enters through ports of entry and cartels can adapt routing within weeks.",
+      "description": "This framing is primarily analytical and empirical, drawing on counter-narcotics expertise to question whether the stated policy goal \u2014 reducing American overdose deaths \u2014 can actually be achieved through maritime strikes. It cuts across political lines and is held by drug policy researchers, former law enforcement, and some conservatives.",
+      "emphasizes": "Fentanyl's primary land-based entry routes; cartel adaptability; Coast Guard seizure data contradicting claimed 97% drop; historical failure of maritime interdiction campaigns; cost (~$1 billion estimated by AEI after 25 strikes)",
+      "downplays": "Deterrence effects; diplomatic pressure on Maduro; Trump administration's claimed drug-seizure statistics",
+      "tone": "measured | dismissive",
+      "sample_headlines": [
+        "Will U.S. military strikes slow drug overdose deaths? Experts say no \u2014 NPR",
+        "'There's nothing that an aircraft carrier brings that is useful for combating the drug trade' \u2014 International Crisis Group analyst"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ad86023c8d65",
+          "name": "NPR / Brian Mann (reporting)",
+          "url": "https://www.npr.org/2025/12/11/nx-s1-5604895/drug-cartels-will-shrug-off-u-s-military-strikes-on-smuggling-boats",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Most experts on criminal cartels and deadly street drugs say military strikes on speedboats will have little or no impact on overdose deaths.",
+          "date": "2025-12-11",
+          "role_evidence": "NPR aggregated expert consensus into a widely shared analytical piece directly contesting the administration's central effectiveness claim",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163377+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3127f25511bf",
+          "name": "Elizabeth Dickinson, International Crisis Group",
+          "url": "https://www.aljazeera.com/news/2025/11/14/us-announces-southern-spear-mission-as-forces-deploy-to-south-america",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'There's nothing that an aircraft carrier brings that is useful for combating the drug trade' in the region.",
+          "date": "2025-11-14",
+          "role_evidence": "ICG's Andes expert provided the most-quoted single-sentence rebuttal of the military approach's counter-narcotics utility",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163385+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bca4e6cb66f3",
+          "name": "Vanda Felbab-Brown, Brookings Institution",
+          "url": "https://www.npr.org/2025/12/11/nx-s1-5604895/drug-cartels-will-shrug-off-u-s-military-strikes-on-smuggling-boats",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'There is no steady principled focus on counter-narcotics policy,' said Felbab-Brown.",
+          "date": "2025-12-11",
+          "role_evidence": "Brookings expert on narco-policy provided empirical backbone for efficacy-failure framing, cited in NPR and broader academic discussion",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163393+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bc5fcc756aba",
+          "name": "American Enterprise Institute / Elaine McCusker",
+          "url": "https://justthenews.com/nation/states/center-square/us-seeks-dismissal-lawsuit-over-deadly-boat-strikes",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "AEI defense expert Elaine McCusker estimated in December 2025 that the campaign had cost nearly $1 billion after 25 strikes.",
+          "date": "2025-12-01",
+          "role_evidence": "AEI, a center-right think tank, raised cost-effectiveness questions, giving the efficacy critique bipartisan credibility",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163401+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163411+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a5973b40",
+      "name": "Use of Force Rules & Military Conduct",
+      "question": "Were the rules of engagement and use-of-force procedures lawful and properly followed \u2014 specifically, was a follow-on 'double-tap' strike that killed survivors a war crime?",
+      "key_claim": "Reports that Defense Secretary Hegseth ordered all survivors of the September 2 strike killed \u2014 and that a follow-on strike was executed against people no longer able to fight \u2014 raise serious war crimes allegations that demand independent investigation.",
+      "description": "This framing is distinct from the international-law framing: it focuses on specific conduct during individual strikes rather than the legality of the campaign overall. It centers on military law of armed conflict obligations (distinction, necessity, proportionality, no-quarter prohibition) and the alleged 'double-tap' killing of survivors.",
+      "emphasizes": "Washington Post reporting on Hegseth's alleged 'kill everybody' order; congressional bipartisan alarm; classified video shown to lawmakers; legal obligation not to kill survivors who are hors de combat; Admiral Bradley's congressional testimony",
+      "downplays": "Administration's denial of the order; Republican committee chairs' conclusion that the Sept. 2 strike was lawful",
+      "tone": "alarmed | accusatory",
+      "sample_headlines": [
+        "'This rises to the level of a war crime if it's true' \u2014 Sen. Tim Kaine",
+        "GOP signals end to probes into military's killing of boat strike survivors \u2014 Washington Post",
+        "Hegseth changes story on Sept. 2 boat strikes \u2014 CBS News"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b5148b08e2ae",
+          "name": "The Washington Post (national security team)",
+          "url": "https://www.washingtonpost.com/national-security/2025/12/18/boat-strike-survivors-congress-inquiries/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Despite Democrats' objections, the leaders of the House and Senate Armed Services committees said they were satisfied a controversial Sept. 2 attack was lawful.",
+          "date": "2025-12-18",
+          "role_evidence": "WaPo broke the story of the alleged 'kill everybody' verbal order, igniting the war-crimes debate and forcing bipartisan congressional investigation",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20251219022758/https://www.washingtonpost.com/national-security/2025/12/18/boat-strike-survivors-congress-inquiries/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163420+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "84bebf8696dc",
+          "name": "Rep. Jim Himes (D-CT), House Intelligence Committee",
+          "url": "https://www.cbsnews.com/news/trump-hegseth-venezuela-boat-strikes-war-crimes-are-they-legal/",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Himes said that 'what I saw in that room was one of the most troubling things I've seen in my time in public service.'",
+          "date": "2025-12-05",
+          "role_evidence": "A senior Intelligence Committee Democrat's reaction to classified video lent credibility to the war-crimes framing across mainstream media",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163427+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9e2132671561",
+          "name": "CBS News (national security reporting)",
+          "url": "https://www.cbsnews.com/news/trump-hegseth-venezuela-boat-strikes-war-crimes-are-they-legal/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Doubts about the legality of the ongoing campaign persist, with experts and former officials saying the strikes were on shaky ground even before the latest revelations.",
+          "date": "2025-12-05",
+          "role_evidence": "CBS drove mass public awareness of the double-tap conduct allegations with sustained broadcast and digital coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163435+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "94543f110e8a",
+          "name": "Sen. Tom Cotton (R-AR) \u2014 critic/pushback",
+          "url": "https://www.cbsnews.com/news/trump-hegseth-venezuela-boat-strikes-war-crimes-are-they-legal/",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "Cotton said he 'saw two survivors trying to flip a boat loaded with drugs bound for the United States back over so they could stay in the fight.'",
+          "date": "2025-12-05",
+          "role_evidence": "Cotton provided the Republican counter-narrative contesting the war-crimes framing, arguing survivors were still combatants and the second strike was justified",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163444+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "95253ed91d80",
+          "name": "House & Senate Armed Services Committee (bipartisan joint statements)",
+          "url": "https://www.pbs.org/newshour/politics/lawmakers-voice-bipartisan-support-for-congressional-reviews-of-trumps-boat-strikes",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'We take seriously the reports of follow-on strikes on boats and are taking bipartisan action to gather a full accounting,' Rogers and Smith said in a joint statement.",
+          "date": "2025-12-01",
+          "role_evidence": "Bipartisan committee statements institutionalized the use-of-force conduct framing as a serious oversight question separate from broader policy debates",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:54:40.163453+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:54:40.163466+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the operational/tactical perspective from military personnel executing orders (training adequacy, rules of engagement clarity, real-time decision-making constraints). Missing: regional Latin American state sovereignty and diplomatic response framings (how affected nations view U.S. unilateral action in their waters). Missing: intelligence community accountability and source reliability (how intelligence was gathered, vetted, and who bears responsibility for errors). Missing: victim family/local community perspectives and restorative justice framings (beyond abstract human cost, focusing on specific harms and remedies).",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The United States military conducted a strike on a boat in the eastern Pacific Ocean, resulting in three deaths.",
+    "rated_outlets": 2,
+    "distribution": {
+      "left": 1,
+      "lean-left": 1,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 50,
+      "lean-left": 50,
+      "center": 0,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 0,
+    "right_of_center": 0,
+    "lean_index": -1.5,
+    "resolve_rate": 0.5,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "Military.com (feature reporting)",
+          "domain": "military.com"
+        },
+        {
+          "carrier": "USNI News / Heather Mongilio",
+          "domain": "news.usni.org"
+        }
+      ]
+    },
+    "non_news_carriers": 13,
+    "matched": [
+      {
+        "outlet": "Democracy Now",
+        "carrier": "Democracy Now! / Amy Goodman",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Washington Post",
+        "carrier": "The Washington Post (national security team)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 13,
+        "political": 12,
+        "social": 0,
+        "institutional": 10,
+        "academic": 4,
+        "other": 1
+      },
+      "vested_interest": 22,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 36,
+    "framings": [
+      {
+        "framing_id": "369c2840",
+        "name": "Homeland Defense & Narco-Terrorism Deterrence",
+        "n_carriers": 9,
+        "primary": 5,
+        "secondary": 4,
+        "carriers": [
+          {
+            "actor_id": "8aa070e50910",
+            "display": "Heritage Foundation",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "aac776509a31",
+            "display": "Pete Hegseth",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d62b0fd3ce1c",
+            "display": "President Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5e2771e8a859",
+            "display": "Sen. Lindsey Graham",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca398ebb435d",
+            "display": "Turning Point USA",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "43f64df3",
+        "name": "International Law & Extrajudicial Killing",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "32bfa0972f25",
+            "display": "Amnesty International USA",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "24bb93540b93",
+            "display": "Brian Finucane, International Crisis Group",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9b38021f1212",
+            "display": "Human Rights Watch",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3b12bfc0f805",
+            "display": "Military.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "dde9ca98db75",
+            "display": "UN Human Rights Experts",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "67c3dce9",
+        "name": "War Powers & Congressional Oversight",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ea4186f72b9e",
+            "display": "Just Security",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "635bd18c22f7",
+            "display": "Sen. Mark Warner",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "57e6ce2cad42",
+            "display": "Sen. Rand Paul",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "92f7f4bab5c3",
+            "display": "Sen. Tim Kaine",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3eb864a0",
+        "name": "Evidentiary Failure & Targeting Transparency",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "e1c3d0af5cce",
+            "display": "Rep. Adam Smith",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0cb4bf4759a6",
+            "display": "USNI News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "cdd493e6",
+        "name": "Human Cost & Civilian Harm",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "25858a22ffd1",
+            "display": "democracynow.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "81105b5b9653",
+            "display": "Colombian President Gustavo Petro",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ee5f637691f0",
+            "display": "Families of Chad Joseph & Rishi Samaroo",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3a33310f5f0c",
+            "display": "Britannica",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "190842e0",
+        "name": "Regime-Change & Geopolitical Pretext",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "25858a22ffd1",
+            "display": "democracynow.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4c4bc6d393c6",
+            "display": "Colombia's President Gustavo Petro",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "722e95e69fed",
+            "display": "Nicol\u00e1s Maduro",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "0ceddda4",
+        "name": "Policy Effectiveness & Drug War Efficacy",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f99dc947d41b",
+            "display": "American Enterprise Institute",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "da80b2041509",
+            "display": "Vanda Felbab-Brown, Brookings Institution",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "a5973b40",
+        "name": "Use of Force Rules & Military Conduct",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "f7d14b6ca10f",
+            "display": "House & Senate Armed Services Committee",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c8583c073fb9",
+            "display": "Rep. Jim Himes",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0cb9681f2dcd",
+            "display": "The Washington Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "cd0eb35a3bdf",
+            "display": "Sen. Tom Cotton",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Evidentiary Failure & Targeting Transparency",
+          "Policy Effectiveness & Drug War Efficacy"
+        ]
+      },
+      {
+        "actor_id": "25858a22ffd1",
+        "display": "democracynow.org",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost & Civilian Harm",
+          "Regime-Change & Geopolitical Pretext"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Policy Effectiveness & Drug War Efficacy",
+          "Regime-Change & Geopolitical Pretext"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "Evidentiary Failure & Targeting Transparency",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War Powers & Congressional Oversight",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Evidentiary Failure & Targeting Transparency",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Evidentiary Failure & Targeting Transparency",
+        "b": "Regime-Change & Geopolitical Pretext",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Regime-Change & Geopolitical Pretext",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Policy Effectiveness & Drug War Efficacy",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "International Law & Extrajudicial Killing",
+        "shared": 1,
+        "jaccard": 0.067
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "War Powers & Congressional Oversight",
+        "shared": 1,
+        "jaccard": 0.067
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "Regime-Change & Geopolitical Pretext",
+        "shared": 1,
+        "jaccard": 0.071
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.077
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "War Powers & Congressional Oversight",
+        "shared": 1,
+        "jaccard": 0.077
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "Evidentiary Failure & Targeting Transparency",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Homeland Defense & Narco-Terrorism Deterrence",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "Regime-Change & Geopolitical Pretext",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "War Powers & Congressional Oversight",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law & Extrajudicial Killing",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "War Powers & Congressional Oversight",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "War Powers & Congressional Oversight",
+        "b": "Evidentiary Failure & Targeting Transparency",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Evidentiary Failure & Targeting Transparency",
+        "b": "Use of Force Rules & Military Conduct",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Regime-Change & Geopolitical Pretext",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Evidentiary Failure & Targeting Transparency",
+        "b": "Policy Effectiveness & Drug War Efficacy",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "War Powers & Congressional Oversight",
+        "b": "Regime-Change & Geopolitical Pretext",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Regime-Change & Geopolitical Pretext",
+        "shared": 2,
+        "jaccard": 0.222
+      }
+    ],
+    "by_actor_type": {
+      "news": 11,
+      "person": 3,
+      "official": 12,
+      "reference": 2,
+      "organization": 5,
+      "academic": 3
+    },
+    "connectivity": {
+      "bridge_ratio": 0.083,
+      "siloed_share": 0.806,
+      "mean_jaccard": 0.065
+    },
+    "structure_note": "3 of 36 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T08:55:07.151358+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

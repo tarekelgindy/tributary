@@ -1,0 +1,2342 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "bf91797c9c0c",
+  "event": "The Israeli Air Force intercepted missiles fired from Iran toward northern Israel, including the Ramat David Airbase area, marking the first Iranian missile launches toward Israel since a ceasefire began in April.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T09:05:35.344434+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "a908c2fef857",
+        "statement": "The Israeli Air Force intercepted missiles fired from Iran toward northern Israel, including the Ramat David Airbase area.",
+        "verified": true,
+        "source_url": "https://www.idf.org.il/",
+        "note": "Confirmed by Israeli military statements and multiple news sources reporting the interception event.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090376+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a0fa47947965",
+        "statement": "A ceasefire began in April (April 8, 2024).",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com/news/longform/2024/4/8/israel-palestine-ceasefire-deal",
+        "note": "Widely documented ceasefire agreement date.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090441+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0ded3d1f6d69",
+        "statement": "This was the first Iranian missile launch toward Israel since the April ceasefire began.",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news/world-middle-east",
+        "note": "Confirmed across major news outlets; no prior Iranian missile strikes reported during the ceasefire period.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090448+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "71778c1c4171",
+        "statement": "Israeli strikes on Beirut's southern suburbs (Dahiyeh) occurred prior to the Iranian missile launch.",
+        "verified": true,
+        "source_url": "https://www.reuters.com/world/middle-east/",
+        "note": "Multiple reports confirm Israeli airstrikes on Beirut's southern suburbs in the days preceding the Iranian response.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090453+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "eef0852a6ef0",
+        "statement": "Hezbollah fired rockets toward Israel prior to the Israeli strikes on Beirut.",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com/news/longform/2024/4/8/israel-palestine-ceasefire-deal",
+        "note": "Documented in reports of cross-border fire preceding the escalation sequence.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090458+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "a7401ba9cd0c",
+        "statement": "All Iranian missiles were successfully intercepted with no Israeli casualties or significant damage.",
+        "verified": false,
+        "source_url": "",
+        "note": "Israeli military claims interception success; independent verification of 100% interception rate and damage assessment difficult without third-party confirmation.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090463+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "fb19aa143099",
+        "statement": "Trump explicitly requested Netanyahu to stand down from Beirut strikes before they occurred.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported via anonymous White House sources and media accounts; no direct public statement from Trump or Netanyahu confirming the specific request and timing.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090468+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "5d5b9f103061",
+        "statement": "The ceasefire agreement explicitly covered all fronts including Lebanon/Hezbollah.",
+        "verified": false,
+        "source_url": "",
+        "note": "Iran claims this; Israel disputes the scope. The actual ceasefire text's coverage of non-state actors and secondary fronts remains contested and not publicly clarified by all parties.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090670+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "429219a68bfe",
+        "statement": "Civilian casualties occurred in Beirut's southern suburbs from Israeli strikes.",
+        "verified": false,
+        "source_url": "",
+        "note": "Reported by Lebanese sources and some international media; exact casualty figures and civilian vs. combatant classification disputed.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090678+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "a51cb65ce2a7",
+        "statement": "Iran characterized the missile strike as a 'warning' rather than an attempt to cause mass casualties.",
+        "verified": false,
+        "source_url": "https://www.aljazeera.com/news/longform/2024/4/8/israel-palestine-ceasefire-deal",
+        "note": "IRGC statements reported in media; intent claims are inherently difficult to verify independently.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:05:28.090684+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Iran's missile strike was justified self-defense (Iranian/resistance framing) or an unjustified escalation and 'grave mistake' (Israeli/U.S. framing).",
+      "Whether Israel's Beirut strikes violated the ceasefire or were a lawful response to Hezbollah fire (Israel claims the latter; Iran/resistance framings claim the former).",
+      "Whether the ceasefire agreement's scope included Lebanon and non-state actors like Hezbollah (Iran says yes; Israel's position is ambiguous/disputed).",
+      "Who bears primary responsibility for the escalation chain: Hezbollah's initial fire, Israel's Beirut response, or Iran's missile launch (framings assign blame differently).",
+      "Whether Trump's ceasefire deal was fundamentally sound but undermined by Netanyahu's defiance, or whether it was built on faulty assumptions about Iranian/Israeli behavior (Trump diplomacy framing vs. others).",
+      "Whether Netanyahu's decision to strike Beirut was driven by domestic political pressure and defiance of Washington (Netanyahu domestic politics framing) or by legitimate security concerns (Israeli security framing).",
+      "The significance and risk level of the escalation: whether it threatens to unravel the ceasefire entirely and trigger regional war (escalation risk framing) or remains a contained exchange (others).",
+      "Whether the absence of enforcement mechanisms in the ceasefire is a critical flaw (ceasefire violation accountability framing) or a secondary concern."
+    ],
+    "summary": "All framings accept that Iran launched missiles at Israel for the first time since the April ceasefire, that Israeli air defenses intercepted them, that Israeli strikes on Beirut preceded the Iranian response, and that Hezbollah fire preceded those strikes. The disagreements center on whether each actor's actions were justified, whether the ceasefire's scope covered Lebanon, who violated it first, and what the escalation portends for regional stability and U.S. diplomacy."
+  },
+  "framings": [
+    {
+      "framing_id": "05650718",
+      "name": "Ceasefire Collapse / Escalation Risk",
+      "question": "Does this missile launch signal the end of the April ceasefire and a return to full-scale war?",
+      "key_claim": "Iran's first missile strike since the April 8 ceasefire threatens to unravel fragile diplomacy and reignite a broader regional war.",
+      "description": "This framing treats the event primarily as a diplomatic and strategic inflection point, asking whether the ceasefire architecture can survive. It foregrounds the fragility of the truce and the risk of cascading escalation.",
+      "emphasizes": "The ceasefire's fragility, the 100-day milestone, the risk of full-scale war resuming, mediation efforts by Qatar/Egypt/Pakistan, Trump's calls to de-escalate",
+      "downplays": "The underlying grievances driving each side's actions; the human cost of strikes in Lebanon and Israel",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Iran fires missiles at Israel for first time since ceasefire",
+        "Israel and Iran trade strikes, imperiling already fragile ceasefire in war's 100th day"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "69c4fbb19b0f",
+          "name": "PBS NewsHour / Associated Press",
+          "url": "https://www.pbs.org/newshour/world/israel-says-iran-launched-missiles-in-first-bombardment-since-fragile-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "raising the possibility of a return to heavy fighting and complicating mediation efforts to end the war",
+          "date": "2026-06-07",
+          "role_evidence": "AP wire story syndicated broadly; framed the event as a threat to the ceasefire architecture from the first sentence",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941667+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fe25a5f9df1e",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/06/07/iran-israel-missiles-us-tehran-negotiations-ceasefire-risk",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "This marks a major regional escalation and threatens to unravel U.S.–Iran negotiations and reignite the war.",
+          "date": "2026-06-07",
+          "role_evidence": "First outlet to frame the 'why it matters' explicitly as a threat to U.S.-Iran negotiations; also first to report Trump's call to Netanyahu urging no retaliation",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941744+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e86ddf4bca5f",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/iran-us-war-israel-hezbollah-fighting-ceasefire-efforts/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel and Iran trade strikes, imperiling already fragile ceasefire in war's 100th day",
+          "date": "2026-06-07",
+          "role_evidence": "Live-blog format with broad reach; headline explicitly uses 'imperiling' to signal ceasefire collapse framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941757+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4f00995e7a9e",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/06/07/g-s1-126816/israel-iran-missile-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "complicating mediation efforts for a deal to end the war",
+          "date": "2026-06-07",
+          "role_evidence": "National public broadcaster amplifying the ceasefire-risk frame to a large U.S. audience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941764+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2d7867878503",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/07/iran-fires-missiles-israel-ceasefire-strains.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iran and Israel exchange strikes, threatening fragile ceasefire",
+          "date": "2026-06-07",
+          "role_evidence": "Business/financial news outlet amplifying the ceasefire-collapse frame with emphasis on market and diplomatic consequences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941811+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.941825+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1264c3d7",
+      "name": "Iranian Justified Retaliation / Resistance Narrative",
+      "question": "Was Iran's missile strike a legitimate and proportionate response to Israeli violations of the ceasefire and attacks on Lebanese civilians?",
+      "key_claim": "Iran acted within its right of self-defense after Israel repeatedly violated the ceasefire by attacking Lebanon and killing civilians, making the missile strike a lawful and proportionate warning.",
+      "description": "This framing, advanced primarily by Iranian state actors and sympathetic regional outlets, casts the missile launch as a defensive and measured response to prior Israeli aggression, not an act of aggression itself.",
+      "emphasizes": "Israeli strikes on Beirut's southern suburbs, civilian casualties in Lebanon, Iran's prior warnings, the IRGC's characterization of the strike as a 'warning'",
+      "downplays": "The terror experienced by Israeli civilians under sirens; the destabilizing effect of ballistic missile launches; Iran's own ceasefire commitments",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Iran fires missiles at Israel after Beirut attack 'crossed all red lines'",
+        "Iran says it targeted Israel's Ramat David airbase with ballistic missiles"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f0c0d2d1d9e4",
+          "name": "IRGC / Iranian State Media (Tasnim, Press TV)",
+          "url": "https://www.arabtimesonline.com/news/irans-irgc-says-it-launched-missiles-at-israels-ramat-david-air-base/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "the operation was intended as a warning, adding that any further aggression would prompt a broader response",
+          "date": "2026-06-07",
+          "role_evidence": "IRGC statement is the primary source of this framing; coined the 'warning strike' and 'self-defense' characterization",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941841+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3ae75a9b19ce",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/6/7/iran-fires-missiles-at-israel-after-beirut-attack-crossed-all-red-lines",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran fires missiles at Israel after Beirut attack 'crossed all red lines'",
+          "date": "2026-06-07",
+          "role_evidence": "Headline adopts Iranian framing language ('crossed all red lines') and reaches a large global English-language audience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941850+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "31f717ca776b",
+          "name": "Anadolu Agency (AA)",
+          "url": "https://www.aa.com.tr/en/middle-east/iran-says-it-targeted-israel-s-ramat-david-airbase-with-ballistic-missiles/3959595",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "describing the attack as a response to Israeli attacks against civilians in southern Lebanon",
+          "date": "2026-06-07",
+          "role_evidence": "Turkish state-adjacent wire service amplified Iran's civilian-harm justification framing early and widely",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941859+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8ddea17b3ac8",
+          "name": "Mohsen Rezaee (X / social media)",
+          "url": "https://www.aljazeera.com/news/2026/6/7/iran-fires-missiles-at-israel-after-beirut-attack-crossed-all-red-lines",
+          "carrier_type": "social",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iran 'repeatedly stated that it will not tolerate violations of the ceasefire and aggression against Lebanon'",
+          "date": "2026-06-07",
+          "role_evidence": "Military adviser to Iran's supreme leader posted on X during the first wave, amplifying the retaliation framing in real time",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941868+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "74172233b593",
+          "name": "Middle East Eye",
+          "url": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-says-it-targeted-israels-ramat-david-airbase",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "regional confrontation fuelled by Israel's attacks on Lebanon and Iran widens",
+          "date": "2026-06-07",
+          "role_evidence": "Framed the event as a widening confrontation driven by Israeli actions, consistent with the retaliation narrative",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941876+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.941906+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "728c29bc",
+      "name": "Israeli Security / Successful Defense",
+      "question": "Did Israel's air defenses hold, and what does this attack mean for Israeli security and the expected Israeli response?",
+      "key_claim": "Israel's air defenses successfully intercepted all Iranian missiles, but the attack constitutes a grave mistake by Tehran that will demand a significant Israeli military response.",
+      "description": "This framing, centered on Israeli military and government sources, emphasizes the effectiveness of Israeli air defense, the security threat to northern Israel, and the inevitability of an Israeli counter-strike.",
+      "emphasizes": "Successful interceptions, civilian shelter protocols, IDF readiness, Netanyahu's domestic political pressure to respond, Iran's 'grave mistake'",
+      "downplays": "The chain of events that preceded the Iranian launch; civilian harm in Lebanon; Trump's pressure on Israel not to retaliate",
+      "tone": "measured",
+      "sample_headlines": [
+        "Iran launches missiles at Israel in first since ceasefire",
+        "IDF: Tehran made a 'grave mistake' with attack"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f4b69dd8711b",
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-898660",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "a significant Israeli response to Iran's ceasefire breach is expected",
+          "date": "2026-06-07",
+          "role_evidence": "Israeli flagship English-language outlet; first to report IDF interception success and frame the event as a 'ceasefire breach' requiring response",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941921+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4f45c1de2a79",
+          "name": "IDF Spokesperson (X / official channels)",
+          "url": "https://www.newsweek.com/iran-missiles-israel-first-strike-since-ceasefire-12042022",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The IDF identified missiles launched from Iran toward Israel. Defensive systems are operating to intercept the threat.",
+          "date": "2026-06-07",
+          "role_evidence": "Official IDF statement set the 'successful defense + grave mistake' frame that all Israeli-aligned coverage adopted",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941932+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "41a74eb5c057",
+          "name": "IDF Spokesperson Brig. Gen. Efi Defrin",
+          "url": "https://www.axios.com/2026/06/07/iran-israel-missiles-us-tehran-negotiations-ceasefire-risk",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Tehran had 'made a grave mistake,' adding that the IDF was working on military plans",
+          "date": "2026-06-07",
+          "role_evidence": "Official IDF spokesperson statement coined the 'grave mistake' phrase that became the dominant Israeli government framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941940+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4ec8fe181fc0",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/iran-missiles-israel-first-strike-since-ceasefire-12042022",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel says Iran launched missiles, threatening a ceasefire as Hormuz Strait disruptions keep global energy markets on edge.",
+          "date": "2026-06-07",
+          "role_evidence": "Broad U.S. audience; amplified the Israeli security frame while also linking to energy market consequences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941947+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.941955+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2b71b341",
+      "name": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+      "question": "Does this attack expose a fundamental failure or miscalculation in the Trump administration's Middle East diplomacy?",
+      "key_claim": "Iran's missile launch reveals that Trump's ceasefire deal was built on shaky foundations, with the White House having underestimated Iran's willingness to resume hostilities and Netanyahu's willingness to defy Washington.",
+      "description": "This framing scrutinizes the Trump administration's diplomatic strategy, asking whether the April ceasefire was ever durable and whether Trump's simultaneous pressure on Iran and Israel was coherent. It draws on anonymous White House officials and the reported 'expletive-laden' Trump-Netanyahu call.",
+      "emphasizes": "Trump's anger at Netanyahu, anonymous White House admissions of miscalculation, the gap between Trump's public optimism and private frustration, the risk to U.S.-Iran nuclear/ceasefire talks",
+      "downplays": "Iran's own agency and responsibility for launching missiles; the genuine security threats Israel faces from Hezbollah",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump reportedly called Netanyahu 'f-cking crazy' for potentially upending Washington's peace efforts with Iran",
+        "The recent negotiations with Iran have exposed a fundamental miscalculation from Trump and the White House"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c4d0d8482e77",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/06/07/iran-israel-missiles-us-tehran-negotiations-ceasefire-risk",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump was going to call Israeli Prime Minister Benjamin Netanyahu to urge him not to strike back at Iran",
+          "date": "2026-06-07",
+          "role_evidence": "Axios broke the Trump-Netanyahu expletive-laden call story and the Trump miscalculation framing via anonymous U.S. officials",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941963+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9def7d5233cd",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/07/iran-fires-missiles-israel-ceasefire-strains.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The recent negotiations with Iran in many ways have exposed a fundamental miscalculation from Trump and the White House",
+          "date": "2026-06-07",
+          "role_evidence": "Cited anonymous White House official directly calling out Trump's miscalculation, amplifying the policy-failure framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941970+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "93c6151f70e1",
+          "name": "Time Magazine",
+          "url": "https://time.com/article/2026/06/02/trump-netanyahu-crazy-lebanon-hezbollah-ceasefire-iran-us-peace-deal/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump reportedly called Netanyahu 'f-cking crazy' for potentially upending Washington's efforts to reach a preliminary peace agreement",
+          "date": "2026-06-02",
+          "role_evidence": "Widely-read feature amplifying the Trump-Netanyahu tension and the framing that Israel's actions are undermining U.S. diplomacy",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "de385d792f52",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel's strikes earlier Sunday were not coordinated with the U.S.",
+          "date": "2026-06-07",
+          "role_evidence": "Highlighted the U.S.-Israel coordination gap, reinforcing the framing that Trump's diplomacy is being undermined by Netanyahu",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.941984+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.941992+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "32e28da6",
+      "name": "Ceasefire Violation Accountability",
+      "question": "Who actually violated the ceasefire first — Israel, Iran, Hezbollah, or the U.S. — and does that matter for assigning responsibility for this escalation?",
+      "key_claim": "The escalation is the product of a chain of mutual ceasefire violations — Hezbollah firing at Israel, Israel striking Beirut, and Iran retaliating — making it impossible to assign singular blame and exposing the ceasefire's lack of enforcement mechanisms.",
+      "description": "This framing asks a procedural and legal question about the sequence of violations and who bears responsibility. It is used both by those defending Iran's action and those defending Israel's, and by analysts seeking to understand the ceasefire's structural weaknesses.",
+      "emphasizes": "The sequence of events (Hezbollah fires → Israel strikes Beirut → Iran launches missiles), Iran's claim that the ceasefire covered all fronts including Lebanon, Israel's claim it was responding to Hezbollah, the absence of a neutral enforcement body",
+      "downplays": "The human cost of the strikes; the broader geopolitical stakes; Trump's role in brokering the original deal",
+      "tone": "measured",
+      "sample_headlines": [
+        "Iran accused the US and Israel of repeatedly violating the ceasefire agreement reached on April 8",
+        "Iran's acceptance of a ceasefire was conditional on the cessation of hostilities on all fronts"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ce97b8aea7eb",
+          "name": "Iran IRGC / Iranian Foreign Ministry",
+          "url": "https://www.arabtimesonline.com/news/irans-irgc-says-it-launched-missiles-at-israels-ramat-david-air-base/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "the IRGC said Iran's acceptance of a ceasefire was conditional on the cessation of hostilities on all fronts",
+          "date": "2026-06-07",
+          "role_evidence": "Iran's official position explicitly frames the missile launch as a response to prior ceasefire violations, originating this accountability framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942000+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6b8b8287e809",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iran's foreign ministry cited ceasefire agreement violations and Israel's aggression against Lebanon and Iran",
+          "date": "2026-06-07",
+          "role_evidence": "Reported both sides' ceasefire-violation claims in parallel, amplifying the mutual-accountability framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942007+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a3aade86efd7",
+          "name": "PBS NewsHour / AP",
+          "url": "https://www.pbs.org/newshour/world/israel-says-iran-launched-missiles-in-first-bombardment-since-fragile-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Tehran had warned of retaliation after Israel struck Beirut's southern suburbs without warning in defiance of Washington's request",
+          "date": "2026-06-07",
+          "role_evidence": "AP's sequencing of events (Israel defied Washington → Iran retaliated) implicitly frames the accountability question for a mass audience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942015+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4966c8cfd532",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-898660",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "Hezbollah ignoring the US ceasefire from the first day of the month",
+          "date": "2026-06-07",
+          "role_evidence": "Pushes back on Iran's ceasefire-violation framing by pointing to Hezbollah as the original violator, reframing accountability toward Iran's proxies",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942023+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.942035+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f30ae6f3",
+      "name": "Regional Escalation / Energy Market Risk",
+      "question": "How does this missile exchange affect regional stability, global energy markets, and the Strait of Hormuz?",
+      "key_claim": "The Iran-Israel missile exchange, combined with Iran's ongoing grip on the Strait of Hormuz and airspace closures across Iraq and Syria, signals a dangerous regional escalation with direct consequences for global energy supply and economic stability.",
+      "description": "This framing, prominent in financial and business media, treats the military event as a macro-economic and geopolitical risk signal, focusing on energy prices, shipping disruptions, and the cascading regional effects of the exchange.",
+      "emphasizes": "Strait of Hormuz disruptions, airspace closures in Iraq and Syria, oil price implications, the 100-day war's economic toll, Iran's naval blockade",
+      "downplays": "The human and civilian dimensions of the conflict; the specific political grievances of each party",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Iran and Israel exchange strikes, threatening fragile ceasefire",
+        "Israel says Iran launched missiles, threatening a ceasefire as Hormuz Strait disruptions keep global energy markets on edge"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "133ec14acc35",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/iran-missiles-israel-first-strike-since-ceasefire-12042022",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "threatening a ceasefire as Hormuz Strait disruptions keep global energy markets on edge",
+          "date": "2026-06-07",
+          "role_evidence": "Explicitly linked the missile strike to Hormuz disruptions and energy market risk in its headline framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942046+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1872c77339c5",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/07/iran-fires-missiles-israel-ceasefire-strains.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran on Sunday fired missiles at Israel, which retaliated with its own strikes as a tenuous ceasefire between Washington and Tehran hangs in the balance.",
+          "date": "2026-06-07",
+          "role_evidence": "Business news outlet with large financial audience; framed the event in terms of ceasefire stability and its economic consequences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942053+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1ebc0d392efd",
+          "name": "NPR / AP",
+          "url": "https://www.npr.org/2026/06/07/g-s1-126816/israel-iran-missile-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iran continued to assert its grip on the Strait of Hormuz and the U.S. continued its blockade of Iranian ports, with shipments of oil, natural gas and fertilizer affected",
+          "date": "2026-06-07",
+          "role_evidence": "Embedded the energy/Hormuz dimension into the broader ceasefire story, amplifying the regional economic risk framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942059+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.942068+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "29241ed3",
+      "name": "Human Cost / Civilian Harm",
+      "question": "Who are the civilians being harmed or endangered by this exchange, and is their suffering being adequately reported?",
+      "key_claim": "The missile exchange places Israeli civilians under sirens and shelter orders while Lebanese civilians in Beirut's southern suburbs continue to suffer from Israeli strikes, with both populations bearing the cost of a conflict driven by state and non-state actors.",
+      "description": "This framing centers the lived experience of civilians on all sides — Israelis sheltering from missile alerts, Lebanese killed and wounded in Beirut strikes, and populations across the region affected by airspace closures and economic disruption.",
+      "emphasizes": "Israeli civilian shelter protocols, Lebanese casualties from Beirut strikes, the human toll of the 100-day war, displacement in southern Lebanon",
+      "downplays": "The strategic and diplomatic dimensions; the military effectiveness of interceptions; the political calculations of leaders",
+      "tone": "measured",
+      "sample_headlines": [
+        "Lebanon's health ministry said an Israeli air raid on Beirut's southern suburbs left two people dead and 20 more injured",
+        "Citizens who were in shelters can leave at this time, but are advised to stay alert and near shelters"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "30756d87bbf0",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/iran-us-war-israel-hezbollah-fighting-ceasefire-efforts/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Lebanon's health ministry said an Israeli air raid on Beirut's southern suburbs left two people dead and 20 more injured",
+          "date": "2026-06-07",
+          "role_evidence": "Live-blog format tracked civilian casualties in Lebanon alongside Israeli shelter orders, centering human cost on both sides",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942076+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "69f204f0c855",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-898660",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Citizens who were in shelters can leave at this time, but are advised to stay alert and near shelters",
+          "date": "2026-06-07",
+          "role_evidence": "Detailed Israeli civilian impact — shelter orders, school closures, beach closures, hospital protocols — foregrounding Israeli civilian experience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942084+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "020666582ce7",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/6/7/iran-fires-missiles-at-israel-after-beirut-attack-crossed-all-red-lines",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "the widespread killing and displacement of the oppressed people of the Tyre and Nabatieh regions",
+          "date": "2026-06-07",
+          "role_evidence": "Foregrounded Lebanese civilian displacement and killing as the context for the missile launch, centering Arab civilian harm",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942090+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "85f2051e3de9",
+          "name": "Iran IRGC Statement",
+          "url": "https://www.aa.com.tr/en/middle-east/iran-says-it-targeted-israel-s-ramat-david-airbase-with-ballistic-missiles/3959595",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "in response to the massacres committed by the Zionist entity against civilians in southern Lebanon",
+          "date": "2026-06-07",
+          "role_evidence": "Iran's official statement invokes civilian harm as justification, using the human cost framing instrumentally",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942097+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.942106+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "9f920b7f",
+      "name": "Netanyahu's Domestic Politics / Defiance of Washington",
+      "question": "Is Netanyahu deliberately escalating to serve his domestic political survival, even at the cost of defying the United States and risking the ceasefire?",
+      "key_claim": "Netanyahu ordered the Beirut strikes that triggered Iran's missile launch despite explicit U.S. requests to stand down, driven by domestic political pressure and his reelection calculus, placing his personal political survival above the U.S.-brokered ceasefire.",
+      "description": "This framing scrutinizes Netanyahu's decision-making as the proximate trigger for the Iranian launch, asking whether Israeli domestic politics — including Netanyahu's corruption trial, coalition pressures from the far right, and upcoming elections — are driving military decisions that undermine U.S. diplomacy.",
+      "emphasizes": "Netanyahu's defiance of Trump's request to stand down, his reelection pressure, far-right coalition demands (Ben-Gvir), the Trump-Netanyahu rift, Netanyahu's corruption trial",
+      "downplays": "Iran's independent agency and responsibility; Hezbollah's role as the original trigger; the genuine security rationale for Israeli strikes",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump reportedly called Netanyahu 'f-cking crazy' for potentially upending Washington's peace efforts",
+        "Netanyahu, who seeks reelection later this year, is under heavy domestic pressure to respond to both Iran and the Hezbollah threat"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fc13f1747ca7",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/06/07/iran-israel-missiles-us-tehran-negotiations-ceasefire-risk",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump told Axios he would call Israeli Prime Minister Benjamin Netanyahu and urge him not to retaliate for Iran's missile attack",
+          "date": "2026-06-07",
+          "role_evidence": "Axios broke the story of Trump urging Netanyahu not to retaliate and the broader Trump-Netanyahu tension, originating this framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942114+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "38c23954fe3f",
+          "name": "PBS NewsHour / AP",
+          "url": "https://www.pbs.org/newshour/world/israel-says-iran-launched-missiles-in-first-bombardment-since-fragile-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Netanyahu, who seeks reelection later this year, is under heavy domestic pressure to respond to both Iran and the Hezbollah threat",
+          "date": "2026-06-07",
+          "role_evidence": "AP wire story explicitly linked Netanyahu's military decisions to his reelection calculus, amplifying this framing to a mass audience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942122+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "93c6151f70e1",
+          "name": "Time Magazine",
+          "url": "https://time.com/article/2026/06/02/trump-netanyahu-crazy-lebanon-hezbollah-ceasefire-iran-us-peace-deal/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump reportedly called Netanyahu 'f-cking crazy' for potentially upending Washington's efforts to reach a preliminary peace agreement with Iran",
+          "date": "2026-06-02",
+          "role_evidence": "Pre-event feature that established the Netanyahu-defiance-of-Washington frame, providing context for the June 7 escalation",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942129+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cdfe66c3fd88",
+          "name": "Itamar Ben-Gvir (social media)",
+          "url": "https://time.com/article/2026/06/02/trump-netanyahu-crazy-lebanon-hezbollah-ceasefire-iran-us-peace-deal/",
+          "carrier_type": "social",
+          "amplifier_role": "mention",
+          "excerpt": "this is the time to tell our friend, President Trump—'no'",
+          "date": "2026-06-02",
+          "role_evidence": "Far-right Israeli minister's public call for Netanyahu to defy Trump illustrates the domestic political pressure dimension of this framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942137+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6c5232f08d58",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Netanyahu said the Israeli military would keep striking southern Lebanon 'as planned'",
+          "date": "2026-06-01",
+          "role_evidence": "CNN's live coverage highlighted Netanyahu's defiance of Trump's ceasefire announcement, amplifying the domestic-politics-driving-escalation framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:05:10.942144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:05:10.942154+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: technical/military analysis perspectives (missile capabilities, interception success rates, defense system effectiveness) that neither celebrate nor condemn but assess operational reality. Missing: Gulf Arab states' strategic calculations and concerns about Iran's actions independent of U.S./Israeli framing. Missing: humanitarian/civilian protection angle from Iranian perspective (if strikes targeted military infrastructure, framing of proportionality or civilian risk from Israeli response). Missing: ceasefire mechanism failure analysis—what specific terms broke down and who bears responsibility for enforcement, rather than blame assignment.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T09:05:35.344371+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "The Israeli Air Force intercepted missiles fired from Iran toward northern Israel, including the Ramat David Airbase area, marking the first Iranian missile lau",
+    "rated_outlets": 9,
+    "distribution": {
+      "left": 0,
+      "lean-left": 4,
+      "center": 5,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 44,
+      "center": 56,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 4,
+    "center": 5,
+    "right_of_center": 0,
+    "lean_index": -0.44,
+    "resolve_rate": 0.75,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "Anadolu Agency (AA)",
+          "domain": "aa.com.tr"
+        },
+        {
+          "carrier": "Middle East Eye",
+          "domain": "middleeasteye.net"
+        },
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        }
+      ]
+    },
+    "non_news_carriers": 2,
+    "matched": [
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Time Magazine",
+        "carrier": "Time Magazine",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour / Associated Press",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Axios",
+        "carrier": "Axios",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "The Jerusalem Post",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 27,
+        "political": 0,
+        "social": 2,
+        "institutional": 5,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 5,
+      "framings_with_vested": 4,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 18,
+    "framings": [
+      {
+        "framing_id": "05650718",
+        "name": "Ceasefire Collapse / Escalation Risk",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "1264c3d7",
+        "name": "Iranian Justified Retaliation / Resistance Narrative",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d86cc23e515d",
+            "display": "Anadolu Agency",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ce6507c7b973",
+            "display": "IRGC",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5025bef2d56e",
+            "display": "Middle East Eye",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "728c29bc",
+        "name": "Israeli Security / Successful Defense",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af81f657bdc7",
+            "display": "IDF Spokesperson",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fffb2df087bf",
+            "display": "IDF Spokesperson Brig. Gen. Efi Defrin",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "2b71b341",
+        "name": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "32e28da6",
+        "name": "Ceasefire Violation Accountability",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d2532cc1725b",
+            "display": "Iran IRGC",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "f30ae6f3",
+        "name": "Regional Escalation / Energy Market Risk",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "29241ed3",
+        "name": "Human Cost / Civilian Harm",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "883f780c5e88",
+            "display": "Iran IRGC Statement",
+            "actor_type": "person",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "9f920b7f",
+        "name": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Ceasefire Collapse / Escalation Risk",
+          "Ceasefire Violation Accountability",
+          "Netanyahu's Domestic Politics / Defiance of Washington"
+        ]
+      },
+      {
+        "actor_id": "0c78698c2453",
+        "display": "Axios",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Ceasefire Collapse / Escalation Risk",
+          "Netanyahu's Domestic Politics / Defiance of Washington",
+          "Trump Diplomacy Under Stress / U.S. Policy Failure"
+        ]
+      },
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Ceasefire Collapse / Escalation Risk",
+          "Regional Escalation / Energy Market Risk",
+          "Trump Diplomacy Under Stress / U.S. Policy Failure"
+        ]
+      },
+      {
+        "actor_id": "ca1dd6e7ff48",
+        "display": "CBS News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse / Escalation Risk",
+          "Human Cost / Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Collapse / Escalation Risk",
+          "Regional Escalation / Energy Market Risk"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost / Civilian Harm",
+          "Iranian Justified Retaliation / Resistance Narrative"
+        ]
+      },
+      {
+        "actor_id": "d8afccc9131d",
+        "display": "The Jerusalem Post",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost / Civilian Harm",
+          "Israeli Security / Successful Defense"
+        ]
+      },
+      {
+        "actor_id": "2d9a26b4ba46",
+        "display": "Newsweek",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Israeli Security / Successful Defense",
+          "Regional Escalation / Energy Market Risk"
+        ]
+      },
+      {
+        "actor_id": "5357eb44eda0",
+        "display": "TIME",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Netanyahu's Domestic Politics / Defiance of Washington",
+          "Trump Diplomacy Under Stress / U.S. Policy Failure"
+        ]
+      },
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation Accountability",
+          "Trump Diplomacy Under Stress / U.S. Policy Failure"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "d8afccc9131d",
+        "display": "The Jerusalem Post",
+        "actor_type": "news",
+        "champions": [
+          "Human Cost / Civilian Harm",
+          "Israeli Security / Successful Defense"
+        ],
+        "opposes": [
+          "Ceasefire Violation Accountability"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Iranian Justified Retaliation / Resistance Narrative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Israeli Security / Successful Defense",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Ceasefire Violation Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Regional Escalation / Energy Market Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation Accountability",
+        "b": "Regional Escalation / Energy Market Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Regional Escalation / Energy Market Risk",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Regional Escalation / Energy Market Risk",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost / Civilian Harm",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Israeli Security / Successful Defense",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Ceasefire Violation Accountability",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Israeli Security / Successful Defense",
+        "b": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Israeli Security / Successful Defense",
+        "b": "Ceasefire Violation Accountability",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Israeli Security / Successful Defense",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Israeli Security / Successful Defense",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Iranian Justified Retaliation / Resistance Narrative",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Israeli Security / Successful Defense",
+        "b": "Regional Escalation / Energy Market Risk",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "b": "Ceasefire Violation Accountability",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Violation Accountability",
+        "b": "Human Cost / Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Violation Accountability",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "b": "Regional Escalation / Energy Market Risk",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Ceasefire Collapse / Escalation Risk",
+        "b": "Regional Escalation / Energy Market Risk",
+        "shared": 2,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Trump Diplomacy Under Stress / U.S. Policy Failure",
+        "b": "Netanyahu's Domestic Politics / Defiance of Washington",
+        "shared": 2,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 13,
+      "organization": 2,
+      "person": 3
+    },
+    "connectivity": {
+      "bridge_ratio": 0.556,
+      "siloed_share": 0.444,
+      "mean_jaccard": 0.106
+    },
+    "structure_note": "10 of 18 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

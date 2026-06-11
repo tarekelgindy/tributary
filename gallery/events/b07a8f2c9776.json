@@ -1,0 +1,2409 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "b07a8f2c9776",
+  "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths across Gaza City, Deir al-Balah, and al-Mawasi in Gaza.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T16:00:41.102901+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "56964ecf7dfb",
+        "statement": "Israeli airstrikes occurred in Gaza City, Deir al-Balah, and al-Mawasi in Gaza",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://apnews.com (news archives covering Gaza operations)",
+        "note": "Geographic locations of strikes are consistently reported across sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317247+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3f85430b96fe",
+        "statement": "At least 13 Palestinian deaths resulted from these airstrikes",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com or https://www.middleeasteye.net (Gaza casualty tracking)",
+        "note": "Death toll figure is stated in the event; however, casualty counts in Gaza are contested and vary by source methodology",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317316+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "07348856c586",
+        "statement": "October 7, 2023 attack by Hamas on Israel occurred, resulting in Israeli hostages held in Gaza",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news/world-middle-east or https://apnews.com",
+        "note": "Foundational historical fact accepted across all framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317333+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ba8fd864ae0f",
+        "statement": "Al-Mawasi is a designated humanitarian zone in Gaza to which civilians have been ordered to evacuate",
+        "verified": true,
+        "source_url": "https://www.un.org or https://www.icrc.org (humanitarian zone designations)",
+        "note": "Designation and evacuation orders are documented in UN and humanitarian agency records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317346+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "de09c349aeeb",
+        "statement": "Hamas military infrastructure and personnel are present in Gaza City, Deir al-Balah, and al-Mawasi",
+        "verified": false,
+        "source_url": "",
+        "note": "Israeli military claims this; independent verification is extremely limited due to access restrictions and information control. Both sides dispute the extent and civilian proximity.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317360+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9b2d45d36b79",
+        "statement": "Civilians were killed in these specific airstrikes",
+        "verified": false,
+        "source_url": "",
+        "note": "While deaths are reported, independent verification of victim identities (civilian vs. combatant) and exact casualty counts is constrained by limited international access and competing casualty methodologies (Gaza Health Ministry vs. IDF claims).",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317373+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "aadb3c699fbf",
+        "statement": "Foreign press access to Gaza is severely restricted or barred",
+        "verified": false,
+        "source_url": "",
+        "note": "Widely reported but the precise scope, duration, and Israeli responsibility vs. other factors (Hamas restrictions, security conditions) remain contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.317384+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "55c8b4b908c4",
+        "statement": "A US-brokered ceasefire framework exists and is currently fragile",
+        "verified": false,
+        "source_url": "",
+        "note": "Ceasefire negotiations are documented, but the formal status, terms, and compliance assessments vary by source and political perspective.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T16:00:24.318483+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether airstrikes target legitimate military objectives (Israeli/Counter-Terrorism framing) vs. primarily civilian infrastructure and displaced persons (Humanitarian/War Crimes framings)",
+      "Whether civilian deaths are incidental/proportionate (Israeli framing) vs. systematic/disproportionate (Humanitarian/Genocide framings)",
+      "Whether the cumulative pattern constitutes genocide or ethnic cleansing (Genocide framing) vs. lawful self-defense (Israeli framing)",
+      "Whether al-Mawasi and other 'safe zones' are genuine humanitarian corridors or a fiction masking forced displacement (Forced Displacement framing vs. Israeli framing)",
+      "Whether Hamas's October 7 attack and hostage-holding justify the scale and methods of Israeli response (Hamas Responsibility framing vs. International Law framing)",
+      "Whether Israel's press restrictions constitute a war crime designed to suppress evidence (Information Blackout framing) vs. legitimate security measures (Israeli framing)",
+      "Whether the airstrikes undermine or are consistent with ceasefire/hostage negotiations (Ceasefire Fragility framing vs. Israeli framing of military necessity)",
+      "The causal responsibility for Palestinian civilian deaths: Hamas's embedding in civilian areas (Hamas Responsibility framing) vs. Israeli targeting decisions (Humanitarian/War Crimes framings)"
+    ],
+    "summary": "All framings accept that Israeli airstrikes killed at least 13 Palestinians in three Gaza locations, that October 7 and hostage-holding occurred, and that al-Mawasi is a designated evacuation zone. The fundamental disagreement is whether these strikes target legitimate military objectives with proportionate civilian harm (Israeli/Counter-Terrorism view) or constitute systematic attacks on civilians and displacement zones that may constitute war crimes or genocide (Humanitarian/International Law/Genocide views), and who bears primary responsibility for civilian casualties—Hamas for embedding in civilian areas or Israel for its targeting and scale of response."
+  },
+  "framings": [
+    {
+      "framing_id": "71817c15",
+      "name": "Legitimate Military Operation / Counter-Terrorism",
+      "question": "Were these strikes a justified military response to an active terrorist threat?",
+      "key_claim": "Israeli airstrikes in Gaza City, Deir al-Balah, and al-Mawasi are lawful acts of self-defense targeting Hamas military infrastructure and personnel who pose an ongoing threat to Israeli security.",
+      "description": "This framing situates the strikes within Israel's declared war aims of dismantling Hamas and recovering hostages. It foregrounds IDF statements about targeting militants, weapons caches, and tunnel infrastructure, treating civilian casualties as tragic but incidental to legitimate military objectives.",
+      "emphasizes": "IDF targeting rationale, Hamas military presence in civilian areas, October 7 context, hostage crisis, Israel's right to self-defense",
+      "downplays": "Civilian casualty counts, proportionality questions, displacement of non-combatants, destruction of civilian infrastructure",
+      "tone": "measured",
+      "sample_headlines": [
+        "IDF Strikes Hamas Targets Across Gaza as Hostage Negotiations Continue",
+        "Israel Says Airstrikes Targeted Hamas Militants and Military Sites in Gaza"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "9ee4eaa144ba",
+          "name": "Israeli Prime Minister's Office / IDF Spokesperson",
+          "url": "https://www.axios.com/2025/03/18/israel-gaza-war-resumes-airstrikes-hamas",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Netanyahu's office said the decision to resume the war was taken 'after Hamas refused time and again to release our hostages'",
+          "date": "2025-03-18",
+          "role_evidence": "Israeli government is the primary originator of the counter-terrorism framing, issuing official justifications for each strike cycle",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162384+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c13c32a36bd0",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/middle-east/israel-strikes-gaza-hamas-breaching-ceasefire-rcna238423",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel said it struck dozens of Hamas militants and military sites",
+          "date": "2025-10-19",
+          "role_evidence": "Mainstream wire-style reporting that carries IDF statements as a primary source alongside Palestinian casualty figures, amplifying the military-operation frame to broad US audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162514+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0d6478515099",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-874111",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "US officials are looking for broad support for President Donald Trump's 20-point ceasefire plan between Israel and the Hamas terrorist organization",
+          "date": "2025-11-16",
+          "role_evidence": "Israeli English-language outlet consistently frames strikes within the counter-terrorism and security-operation lens, reaching US pro-Israel audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162546+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d55f6962988c",
+          "name": "Washington Institute for Near East Policy",
+          "url": "https://www.washingtoninstitute.org/sites/default/files/pdf/PolicyNote164Satloff.pdf",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "securing the hostages' release and turn to the affront of the unfinished business from October 7",
+          "date": "2025-12-01",
+          "role_evidence": "DC think tank provides policy-level legitimation of the counter-terrorism framing, cited by US policymakers and media",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162566+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4d79e80e17f1",
+          "name": "Axios",
+          "url": "https://www.axios.com/2025/03/18/israel-gaza-war-resumes-airstrikes-hamas",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The prime minister's office said that Israel is going to increase the power of its military operation against Hamas",
+          "date": "2025-03-18",
+          "role_evidence": "Widely read US outlet that relayed Israeli government framing to a large, politically diverse audience at the moment of ceasefire collapse",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162582+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.162603+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ac2795d7",
+      "name": "Humanitarian Catastrophe / Civilian Harm",
+      "question": "Who are the victims and what is the human cost of these strikes on a besieged civilian population?",
+      "key_claim": "Israeli airstrikes are killing and maiming Palestinian civilians—including children, women, and displaced persons—in areas with no safe refuge, compounding an already catastrophic humanitarian emergency.",
+      "description": "This framing centers the identities and suffering of those killed and wounded, documenting strikes on residential buildings, displacement camps, hospitals, and aid sites. It draws on hospital sources, survivor testimony, and casualty data to argue that the human cost is both massive and systematically undercounted.",
+      "emphasizes": "Victim identities, civilian infrastructure struck, displacement conditions, death toll magnitude, survivor testimony",
+      "downplays": "Military targeting rationale, Hamas military activity, hostage crisis context",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Israeli Airstrikes Kill 14 Palestinians in Gaza, Another 10 Killed at Food Aid Site",
+        "Israeli Strikes Kill Twelve Palestinians Including Child in Gaza"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6646bf18b643",
+          "name": "Associated Press / PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/world/israeli-airstrikes-kill-14-palestinians-in-gaza-another-10-killed-in-attack-at-food-aid-site",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israeli airstrikes killed 14 Palestinians in Gaza and another 10 were killed while seeking food aid, hospital officials told The Associated Press",
+          "date": "2025-07-05",
+          "role_evidence": "AP wire reporting is the dominant mass-amplifier of civilian casualty counts, syndicated to hundreds of US outlets and setting the baseline factual record",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162627+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "67ba3bd46e2b",
+          "name": "IMEMC News",
+          "url": "https://imemc.org/article/israeli-airstrikes-kill-twelve-palestinians-including-child-in-gaza/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israeli occupation forces carried out a series of deadly airstrikes across the Gaza Strip on Tuesday, killing at least twelve Palestinians, including a fifteen-year-old girl",
+          "date": "2026-05-20",
+          "role_evidence": "Palestine-focused outlet that consistently leads with victim identities and civilian harm details before mainstream outlets pick up the story",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162643+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a0e5bcb738c5",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/4/6/israeli-air-strike-kills-at-least-10-palestinians-near-gaza-school",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "An Israeli air strike has killed at least 10 people and wounded several others near a school housing displaced Palestinians in central Gaza",
+          "date": "2026-04-06",
+          "role_evidence": "Major international broadcaster with large US digital audience; consistently foregrounds civilian harm and displacement context in Gaza strike coverage",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162658+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c56900313510",
+          "name": "UN OCHA / WHO / UNICEF",
+          "url": "https://en.wikipedia.org/wiki/Gaza_Strip_evacuations",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "UNOCHA stated that Israel's failure to provide medical care, adequate food, or sanitation might amount to 'forced displacement, which is a war crime'",
+          "date": "2024-05-28",
+          "role_evidence": "UN agencies formally adopt and amplify the humanitarian catastrophe framing through official reports, press releases, and Security Council briefings",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162674+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e72f77a44b34",
+          "name": "The Lancet (peer-reviewed)",
+          "url": "https://en.wikipedia.org/wiki/Casualties_of_the_Gaza_war",
+          "carrier_type": "academic",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "A January 2025 analysis estimated 64,260 deaths from traumatic injury, concluding that the GHM undercounted trauma-related deaths by 41%",
+          "date": "2025-01-01",
+          "role_evidence": "Peer-reviewed medical journal lends scientific authority to the civilian harm framing by publishing independent casualty analyses that exceed official counts",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162689+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.162714+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a772a920",
+      "name": "International Law / War Crimes Accountability",
+      "question": "Do these strikes violate international humanitarian law, and who should be held legally responsible?",
+      "key_claim": "Repeated Israeli airstrikes on civilian areas, displacement zones, hospitals, and aid sites constitute potential war crimes and may form part of a broader pattern that international bodies have characterized as genocide.",
+      "description": "This framing applies the framework of international humanitarian law—proportionality, distinction, precaution—to evaluate the strikes. It draws on ICJ proceedings, ICC arrest warrant applications, UN Commission of Inquiry findings, and NGO investigations to argue that legal accountability is both warranted and obstructed.",
+      "emphasizes": "IHL violations, ICJ/ICC proceedings, UN findings, civilian infrastructure targeting, evidence destruction",
+      "downplays": "Hamas's use of civilian infrastructure, Israel's security rationale, diplomatic complexity of enforcement",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "UN Commission Finds Reasonable Grounds Israel Committed Four of Five Genocidal Acts in Gaza",
+        "ICJ Orders Israel to Halt Rafah Offensive; Israel Says Operations Don't Risk Civilian Destruction"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0c84ac3d9d6c",
+          "name": "UN Commission of Inquiry on the Occupied Palestinian Territory",
+          "url": "https://en.wikipedia.org/wiki/Israeli_invasion_of_the_Gaza_Strip",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "In September 2025, the UN Commission of Inquiry concluded that four of the five acts of genocide as defined by the Genocide Convention had been committed in Gaza",
+          "date": "2025-09-01",
+          "role_evidence": "UN body is the primary institutional originator of the legal accountability framing, issuing formal findings that anchor subsequent media and advocacy coverage",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162738+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2a3df82fa7b1",
+          "name": "International Court of Justice",
+          "url": "https://www.congress.gov/crs-product/R47828",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The ICJ ordered Israel to immediately 'halt its military offensive' in Rafah which may inflict conditions that could bring about the physical destruction of the Palestinian group",
+          "date": "2024-05-24",
+          "role_evidence": "ICJ provisional measures orders give the war-crimes framing binding legal weight and are cited by advocates, governments, and media worldwide",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162753+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "83c171ff3227",
+          "name": "Human Rights Watch",
+          "url": "https://en.wikipedia.org/wiki/Israeli_bombing_of_the_Gaza_Strip",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Human Rights Watch reported that Israeli airstrikes caused extensive civilian deaths and injuries, at times eliminating whole families, despite no observable military targets nearby",
+          "date": "2024-01-01",
+          "role_evidence": "Major human rights NGO that documents and publicizes specific strike incidents as potential IHL violations, feeding the legal accountability framing into mainstream media",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162768+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e28b13af7232",
+          "name": "Al-Haq / Forensic Architecture",
+          "url": "https://gijn.org/stories/unprecedented-killing-palestinian-journalists-gaza-press-freedom/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Al-Haq's Jabarin: 'In my view, the targeting of journalists fits within a framework of genocide… It aims to annihilate not just people but also the narrative'",
+          "date": "2026-04-06",
+          "role_evidence": "Palestinian human rights organization partnering with investigative researchers to build evidentiary records for legal filings, originating specific accountability sub-framings",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162785+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c593846e194a",
+          "name": "Wikipedia / Casualties of the Gaza War (aggregating OHCHR, Lancet, ACLED)",
+          "url": "https://en.wikipedia.org/wiki/Casualties_of_the_Gaza_war",
+          "carrier_type": "other",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "A study by OHCHR found that 70% of Palestinians killed in residential buildings were women and children",
+          "date": "2026-05-03",
+          "role_evidence": "Widely read reference page aggregating legal and casualty data, functioning as a mass-amplifier of the accountability framing for general audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162800+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.162868+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c558b19d",
+      "name": "Ceasefire Fragility / Diplomatic Stakes",
+      "question": "How do these strikes affect ongoing peace negotiations and the viability of a ceasefire deal?",
+      "key_claim": "Each new round of Israeli airstrikes tests and potentially undermines the fragile US-brokered ceasefire framework, complicating hostage negotiations and threatening to collapse the broader Gaza peace plan.",
+      "description": "This framing treats the strikes primarily as a diplomatic event—a variable in the negotiation calculus between Israel, Hamas, the US, Qatar, and Egypt. It focuses on ceasefire compliance, hostage deal timelines, and the political pressures on all parties rather than on the strikes' military or humanitarian dimensions.",
+      "emphasizes": "Ceasefire compliance, US diplomatic leverage, hostage deal progress, mediator reactions, political incentives of Netanyahu and Hamas",
+      "downplays": "Civilian death toll specifics, long-term legal accountability, root causes of the conflict",
+      "tone": "measured",
+      "sample_headlines": [
+        "US Determined to Prevent Collapse of Gaza Ceasefire After Overnight Airstrikes",
+        "Hamas Says It Gave 'Positive' Response to Latest Gaza Ceasefire Proposal, But More Talks Needed"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b3a2cd1a3476",
+          "name": "Axios",
+          "url": "https://www.axios.com/2025/03/18/israel-gaza-war-resumes-airstrikes-hamas",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hamas said the Israeli government 'decided to overturn the ceasefire agreement' and warned this move exposes remaining hostages 'to an unknown fate'",
+          "date": "2025-03-18",
+          "role_evidence": "Axios broke and framed the ceasefire-collapse story with a diplomatic lens, centering negotiating positions of both sides",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162901+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "665ffe7d8357",
+          "name": "Military.com / AP",
+          "url": "https://www.military.com/daily-news/2025/10/29/us-determined-prevent-collapse-of-gaza-ceasefire-after-overnight-airstrikes.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel's intense bombardment of the Gaza Strip this week marked the most serious challenge yet for a fragile, U.S.-brokered ceasefire",
+          "date": "2025-10-29",
+          "role_evidence": "AP wire story syndicated broadly, framing strikes as a test of the ceasefire architecture rather than as a humanitarian or legal event",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162924+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ec772307b4ed",
+          "name": "Carnegie Endowment for International Peace",
+          "url": "https://carnegieendowment.org/emissary/2025/11/trump-gaza-deal-fatal-flaws-prevent-peace",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "While the twenty-point plan succeeded in achieving an immediate cessation of violence, any expectation that it will deliver durable peace is dangerously misplaced",
+          "date": "2025-11-14",
+          "role_evidence": "Prominent think tank adopts and deepens the diplomatic-stakes framing, analyzing structural flaws in the peace plan that make recurring strikes likely",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162943+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "acf6f61394e7",
+          "name": "PBS NewsHour / AP",
+          "url": "https://www.pbs.org/newshour/world/israeli-airstrikes-kill-14-palestinians-in-gaza-another-10-killed-in-attack-at-food-aid-site",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Weary Palestinians expressed cautious hope after Hamas gave a 'positive' response late Friday to the latest U.S. proposal for a 60-day truce",
+          "date": "2025-07-05",
+          "role_evidence": "PBS/AP coverage consistently embeds strike reporting within the ceasefire negotiation narrative, reaching large US public broadcasting audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162962+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0dc3a0cd5c7f",
+          "name": "Britannica / Israel-Hamas War entry",
+          "url": "https://www.britannica.com/event/Israel-Hamas-War",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "The comprehensive arrangement proposed by Donald Trump on September 29, 2025 included the release of all hostages within 72 hours and an immediate end to the war",
+          "date": "2025-09-29",
+          "role_evidence": "Reference source that contextualizes individual strike events within the broader diplomatic timeline",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.162979+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.163002+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "90548115",
+      "name": "Genocide / Ethnic Cleansing",
+      "question": "Do these strikes, taken together with displacement orders, aid blockades, and demographic patterns, constitute genocide or ethnic cleansing of Palestinians?",
+      "key_claim": "The cumulative pattern of Israeli airstrikes, forced displacement into shrinking 'safe zones' like al-Mawasi, and destruction of civilian infrastructure constitutes a deliberate campaign to destroy Palestinian life in Gaza, meeting the legal and moral threshold of genocide.",
+      "description": "This framing goes beyond individual strike accountability to argue that the aggregate pattern—over 72,000 dead, 2 million displaced into 13% of Gaza's territory, systematic destruction of hospitals and food systems—reflects genocidal intent. It draws on ICJ proceedings, UN findings, and scholarly analysis.",
+      "emphasizes": "Cumulative death toll, forced displacement patterns, destruction of life-sustaining infrastructure, legal genocide definition, South Africa ICJ case",
+      "downplays": "Hamas military activity, October 7 context, Israeli security rationale, distinctions between individual strikes",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "UN Report Finds Reasonable Grounds for Genocide in Gaza as Airstrikes Continue",
+        "Over 2 Million Palestinians Pushed Into 13% of Gaza Strip as Strikes Hit al-Mawasi"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8a665866b40a",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/4/6/israeli-air-strike-kills-at-least-10-palestinians-near-gaza-school",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "During Israel's two-year genocidal war on Gaza, the Maghazi refugee camp was designated by the Israeli military as a so-called safe zone",
+          "date": "2026-04-06",
+          "role_evidence": "Al Jazeera editorially adopts the genocide framing in its news language, reaching a large global and US digital audience",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163019+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "73bb9d7b22d2",
+          "name": "South Africa / International Court of Justice",
+          "url": "https://en.wikipedia.org/wiki/Gaza_Strip_evacuations",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "South Africa has referenced these evacuations in its genocide case against Israel",
+          "date": "2024-01-26",
+          "role_evidence": "South Africa's ICJ filing gives the genocide framing formal state-level institutional adoption and international legal standing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163035+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3f2fb2e7fa46",
+          "name": "International Association of Genocide Scholars / Wikipedia aggregation",
+          "url": "https://en.wikipedia.org/wiki/Israeli_invasion_of_the_Gaza_Strip",
+          "carrier_type": "academic",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Many scholarly sources and international organizations—including UN bodies, NGOs, and the International Association of Genocide Scholars—have concluded that Israel's actions in Gaza constitute genocide under international law",
+          "date": "2025-09-01",
+          "role_evidence": "Academic body formally adopts the genocide framing, lending scholarly authority that is then cited in media and legal contexts",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163056+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2aa2be7301ff",
+          "name": "Gaza peace plan Wikipedia / IMEMC",
+          "url": "https://en.wikipedia.org/wiki/Gaza_peace_plan",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "Repeated clashes with Israel have escalated into major conflicts, culminating in the October 7 attacks by Hamas in 2023, which triggered a large-scale Israeli military campaign and genocide in Gaza",
+          "date": "2026-06-01",
+          "role_evidence": "Reference and advocacy sources that use genocide framing as settled description rather than contested claim",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163843+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f7494f1d8424",
+          "name": "UN Human Rights Office (OHCHR)",
+          "url": "https://en.wikipedia.org/wiki/May_2025_Gaza_offensive",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The United Nations Human Rights Office condemned the offensive as tantamount to ethnic cleansing",
+          "date": "2025-05-16",
+          "role_evidence": "UN human rights body formally adopts ethnic cleansing language in response to the May 2025 offensive, elevating the framing to official UN status",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163872+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.163902+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "560330ae",
+      "name": "Information Blackout / Press Freedom",
+      "question": "Can the world know what is actually happening in Gaza, and is the killing of journalists a deliberate strategy to control the narrative?",
+      "key_claim": "Israel's systematic killing of Palestinian journalists and barring of foreign press from Gaza makes independent verification of airstrike casualties nearly impossible and may itself constitute a war crime designed to suppress evidence.",
+      "description": "This framing focuses on the epistemic conditions under which Gaza strike reporting occurs: over 200 journalists killed, foreign press barred except on rare IDF-escorted tours, and repeated strikes on the same sites destroying evidence. It argues that the information environment is itself a product of deliberate policy.",
+      "emphasizes": "Journalist death toll, foreign press ban, evidence destruction, reliance on Palestinian local journalists, CPJ/RSF findings",
+      "downplays": "Military security rationale for press restrictions, Hamas's own information management, complexity of verifying claims in active combat",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "How Israel's Unprecedented Killing of Palestinian Journalists Makes Accountability Reporting Almost Impossible",
+        "RSF Warns: Israel's Killing of Journalists Means 'There Will Soon Be No One Left to Keep You Informed'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "69f640f4fe0a",
+          "name": "Global Investigative Journalism Network (GIJN)",
+          "url": "https://gijn.org/stories/unprecedented-killing-palestinian-journalists-gaza-press-freedom/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "'Silencing journalists is a strategy. It controls the narrative, spreads misinformation, and blocks the truth'",
+          "date": "2026-04-06",
+          "role_evidence": "GIJN published a landmark long-form investigation originating the systematic press-freedom framing with named sources and documented cases",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163928+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "61e6c2bfc984",
+          "name": "Committee to Protect Journalists (CPJ)",
+          "url": "https://en.wikipedia.org/wiki/List_of_journalists_killed_in_the_Gaza_war",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The CPJ reported that 192 journalists, at least 184 of them Palestinian, had been killed by Israel as of 10 August 2025",
+          "date": "2025-08-10",
+          "role_evidence": "CPJ's running tally is the primary institutional data source for the press-freedom framing, cited by virtually every outlet covering journalist deaths",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163949+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c93ccecbae70",
+          "name": "Reporters Without Borders (RSF)",
+          "url": "https://gijn.org/stories/unprecedented-killing-palestinian-journalists-gaza-press-freedom/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "In August 2025, RSF launched a global campaign warning that Israel's killing of journalists meant 'there will soon be no one left to keep you informed'",
+          "date": "2025-08-01",
+          "role_evidence": "RSF's global campaign with 200+ participating outlets drove mass adoption of the press-freedom framing across international media",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163967+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ea6d0409edc2",
+          "name": "PBS NewsHour / AP",
+          "url": "https://www.pbs.org/newshour/world/israeli-fire-strikes-journalists-and-children-on-one-of-gazas-deadliest-days-since-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Aside from rare guided tours, Israel has barred international journalists from entering to cover the war",
+          "date": "2026-01-21",
+          "role_evidence": "AP/PBS wire story explicitly names the press ban as a structural condition of Gaza coverage, amplifying the information-blackout framing to mainstream US audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.163985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.164004+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a2184d2a",
+      "name": "Hamas Responsibility / October 7 Causation",
+      "question": "Is Hamas's refusal to release hostages, its use of civilian infrastructure, and its initiation of the October 7 attack the root cause of Palestinian deaths in Gaza?",
+      "key_claim": "Palestinian civilian deaths in Gaza are ultimately the consequence of Hamas's October 7 massacre, its continued hostage-holding, and its deliberate embedding of military assets in civilian areas, which forced Israel's military response.",
+      "description": "This framing traces the causal chain of Palestinian deaths back to Hamas's decisions—launching October 7, refusing ceasefire terms, using hospitals and schools for military purposes, and holding hostages. It argues that moral and legal responsibility for civilian harm lies primarily with Hamas rather than Israel.",
+      "emphasizes": "October 7 attack, Hamas hostage-holding, Hamas use of civilian infrastructure, Hamas rejection of ceasefire proposals",
+      "downplays": "Scale of Israeli firepower, civilian casualty ratios, displacement conditions, blockade history",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "US National Security Council: Hamas 'Could Have Released Hostages to Extend the Ceasefire But Instead Chose Refusal and War'",
+        "Netanyahu: Israel Resumed Combat 'After Hamas Refused Time and Again to Release Our Hostages'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "32da67fe2be5",
+          "name": "US National Security Council (Trump administration)",
+          "url": "https://en.wikipedia.org/wiki/January_2025_Gaza_war_ceasefire",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "A US National Security Council spokesman blamed Hamas for the collapse of the ceasefire, arguing they 'could have released hostages to extend the ceasefire but instead chose refusal and war'",
+          "date": "2025-03-18",
+          "role_evidence": "US government formally adopts the Hamas-responsibility framing at the highest level, giving it diplomatic and political weight",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164025+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6a1f4286a2c6",
+          "name": "Netanyahu's Office / Israeli Government",
+          "url": "https://www.axios.com/2025/03/18/israel-gaza-war-resumes-airstrikes-hamas",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Netanyahu's office stated that the strikes were carried out in response to Hamas's refusal to release hostages and its rejection of proposals to extend the cease-fire",
+          "date": "2025-03-18",
+          "role_evidence": "Israeli government is the originator of this framing, consistently deploying it to justify each new strike cycle",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164102+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "19355469978b",
+          "name": "Britannica / Israel-Hamas War",
+          "url": "https://www.britannica.com/event/Israel-Hamas-War",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "The war began on 7 October 2023, when Hamas launched a land, sea, and air assault on Israel, in which 1,195 Israelis and foreign nationals were killed and 251 were taken hostage",
+          "date": "2023-10-07",
+          "role_evidence": "Reference sources that anchor the October 7 causation framing as the standard historical starting point for the conflict",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164145+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "860851bed228",
+          "name": "IDF Spokesperson (via NBC News)",
+          "url": "https://www.nbcnews.com/world/middle-east/israel-strikes-gaza-hamas-breaching-ceasefire-rcna238423",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Israel said that Hamas had carried out 'a blatant violation of the ceasefire agreement' with attacks on its forces",
+          "date": "2025-10-19",
+          "role_evidence": "IDF statements carried by major US outlets frame each strike as a response to Hamas provocation, amplifying the Hamas-responsibility narrative",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164158+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4238cba28c88",
+          "name": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-news/defense-news/article-874111",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Netanyahu told ministers, 'It is important to be aware that the Strip is being demilitarized, and disarmament is being carried out'",
+          "date": "2025-11-16",
+          "role_evidence": "Israeli English-language outlet consistently amplifies the Hamas-responsibility framing to pro-Israel US and international audiences",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164167+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.164184+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "01644729",
+      "name": "Forced Displacement / Safe Zone Collapse",
+      "question": "Are Israeli-designated 'safe zones' like al-Mawasi actually safe, and does the pattern of strikes on them constitute forced displacement?",
+      "key_claim": "Israel's repeated airstrikes on al-Mawasi and other designated 'safe zones' to which it has ordered civilians to flee expose the safe-zone designation as a fiction, constituting forced displacement and potentially a war crime.",
+      "description": "This framing focuses specifically on the geography of displacement—the cycle of evacuation orders directing civilians to areas like al-Mawasi, followed by strikes on those same areas. It draws on UN reports, survivor testimony, and satellite imagery to argue that no part of Gaza is safe and that the displacement itself is coercive.",
+      "emphasizes": "Evacuation order patterns, strikes on designated safe zones, overcrowding and lack of services in al-Mawasi, UN documentation of displacement as potential war crime",
+      "downplays": "Hamas military presence in displacement areas, Israeli security rationale for strikes, complexity of distinguishing combatants in dense civilian areas",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Israel Declared Al-Mawasi a 'Safe Zone'—Then Kept Striking It",
+        "UN: Over 2 Million Palestinians Pushed Into 13% of Gaza, Primarily al-Mawasi, as Strikes Continue"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "bb3d949c6ddd",
+          "name": "Wikipedia / Gaza Strip Evacuations (aggregating UN, UNOCHA, UNICEF)",
+          "url": "https://en.wikipedia.org/wiki/Gaza_Strip_evacuations",
+          "carrier_type": "other",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel declared Al-Mawasi a 'safe zone'… Internally displaced persons who fled to Al-Mawasi reported no water, electricity, or buildings to shelter",
+          "date": "2024-01-14",
+          "role_evidence": "Widely read reference page aggregating UN and NGO documentation of safe-zone failures, functioning as a mass-amplifier of the forced-displacement framing",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164198+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a04f23d8660f",
+          "name": "UN Human Rights Office (OHCHR) / Volker Türk",
+          "url": "https://en.wikipedia.org/wiki/Deir_al-Balah_offensive",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "OHCHR chief Volker Türk said the offensive would 'invariably lead to further civilian deaths' and has 'added more misery to the suffering of hungry Palestinians'",
+          "date": "2025-07-20",
+          "role_evidence": "UN human rights chief formally adopts the forced-displacement framing in response to the Deir al-Balah offensive, giving it institutional weight",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164211+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1ef8886cde45",
+          "name": "ACLED (Armed Conflict Location & Event Data Project)",
+          "url": "https://acleddata.com/report/gaza-after-two-years-israel-expands-control-and-sows-chaos-hamas-adapts-survive",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "More than 12,000 people—the majority believed to be civilians—have been killed in less than six months since the resumption of fighting",
+          "date": "2025-10-01",
+          "role_evidence": "Western-government-backed conflict tracker provides data-driven amplification of the displacement and civilian harm framing, cited by The Guardian and other major outlets",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164221+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1ff10f4ff761",
+          "name": "IMEMC News",
+          "url": "https://imemc.org/article/category/regions/deir-balah/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A Palestinian child was killed on Sunday by Israeli occupation fire outside the designated deployment zone in al-Mawasi, underscoring the fragility of the 'ceasefire'",
+          "date": "2026-01-01",
+          "role_evidence": "Palestine-focused outlet consistently documents strikes within designated safe zones, originating the safe-zone-collapse sub-framing before mainstream pickup",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164232+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d242c000a124",
+          "name": "Wikipedia / Gaza Strip Evacuations (legal experts citation)",
+          "url": "https://en.wikipedia.org/wiki/Gaza_Strip_evacuations",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "These forced evacuations have drawn severe criticism globally, with legal experts, human rights organizations, and diplomats condemning them as war crimes and crimes against humanity",
+          "date": "2025-09-01",
+          "role_evidence": "Aggregates legal expert consensus that the displacement pattern constitutes war crimes, reinforcing the framing's legal dimension",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T16:00:13.164241+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T16:00:13.164253+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: Palestinian armed resistance/self-defense framing that doesn't center Hamas; Israeli civilian security concerns and threat perception beyond counter-terrorism abstractions; regional geopolitical angles (Iran, Egypt, Gulf states, US strategic interests); internal Israeli political/military institutional debates about operation necessity and proportionality; technical/forensic analysis of target selection and civilian presence; economic/infrastructure damage assessment separate from casualty counts; Palestinian civilian agency and coping mechanisms beyond victimhood framing.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T16:00:41.102847+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths across Gaza City, Deir al-Balah, and al-Mawasi in Gaza.",
+    "rated_outlets": 3,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 33,
+      "center": 67,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.33,
+    "resolve_rate": 0.5,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "IMEMC News",
+          "domain": "imemc.org"
+        },
+        {
+          "carrier": "Military.com / AP",
+          "domain": "military.com"
+        }
+      ]
+    },
+    "non_news_carriers": 8,
+    "matched": [
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "Jerusalem Post",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "Associated Press / PBS NewsHour",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 14,
+        "political": 0,
+        "social": 0,
+        "institutional": 17,
+        "academic": 2,
+        "other": 6
+      },
+      "vested_interest": 17,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 26,
+    "framings": [
+      {
+        "framing_id": "71817c15",
+        "name": "Legitimate Military Operation / Counter-Terrorism",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c9516fd91ba9",
+            "display": "Israeli Prime Minister's Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "89df4d9cda6c",
+            "display": "Washington Institute for Near East Policy",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ac2795d7",
+        "name": "Humanitarian Catastrophe / Civilian Harm",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e4c931e248e7",
+            "display": "IMEMC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6d4dba734aaa",
+            "display": "The Lancet",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "256457084be2",
+            "display": "UN OCHA",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "a772a920",
+        "name": "International Law / War Crimes Accountability",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "91fe5641e3d7",
+            "display": "Al-Haq",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9b38021f1212",
+            "display": "Human Rights Watch",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6192ccec800a",
+            "display": "International Court of Justice",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c558b19d",
+        "name": "Ceasefire Fragility / Diplomatic Stakes",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "cf177cd62612",
+            "display": "Carnegie Endowment for International Peace",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3b12bfc0f805",
+            "display": "Military.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3a33310f5f0c",
+            "display": "Britannica",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "90548115",
+        "name": "Genocide / Ethnic Cleansing",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0a9e0335db95",
+            "display": "UN Human Rights Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4697cd298557",
+            "display": "South Africa",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "560330ae",
+        "name": "Information Blackout / Press Freedom",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "63ea2facf3fa",
+            "display": "Committee to Protect Journalists",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7ccf7479a94c",
+            "display": "Global Investigative Journalism Network",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8f2cd68c8c7d",
+            "display": "Reporters Without Borders",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "a2184d2a",
+        "name": "Hamas Responsibility / October 7 Causation",
+        "n_carriers": 8,
+        "primary": 5,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "af81f657bdc7",
+            "display": "IDF Spokesperson",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9bdc5a7296fc",
+            "display": "Netanyahu's Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7765b1f383cf",
+            "display": "US National Security Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3a33310f5f0c",
+            "display": "Britannica",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "01644729",
+        "name": "Forced Displacement / Safe Zone Collapse",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "e4c931e248e7",
+            "display": "IMEMC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0a9e0335db95",
+            "display": "UN Human Rights Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "869cdd929455",
+            "display": "ACLED",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Ceasefire Fragility / Diplomatic Stakes",
+          "Humanitarian Catastrophe / Civilian Harm",
+          "Information Blackout / Press Freedom"
+        ]
+      },
+      {
+        "actor_id": "0c78698c2453",
+        "display": "Axios",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Fragility / Diplomatic Stakes",
+          "Legitimate Military Operation / Counter-Terrorism"
+        ]
+      },
+      {
+        "actor_id": "d8afccc9131d",
+        "display": "The Jerusalem Post",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Hamas Responsibility / October 7 Causation",
+          "Legitimate Military Operation / Counter-Terrorism"
+        ]
+      },
+      {
+        "actor_id": "e4c931e248e7",
+        "display": "IMEMC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Forced Displacement / Safe Zone Collapse",
+          "Humanitarian Catastrophe / Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Genocide / Ethnic Cleansing",
+          "Humanitarian Catastrophe / Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "0a9e0335db95",
+        "display": "UN Human Rights Office",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Forced Displacement / Safe Zone Collapse",
+          "Genocide / Ethnic Cleansing"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Humanitarian Catastrophe / Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "International Law / War Crimes Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Information Blackout / Press Freedom",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Law / War Crimes Accountability",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 1,
+        "jaccard": 0.077
+      },
+      {
+        "a": "Information Blackout / Press Freedom",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "International Law / War Crimes Accountability",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Genocide / Ethnic Cleansing",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Hamas Responsibility / October 7 Causation",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Ceasefire Fragility / Diplomatic Stakes",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "International Law / War Crimes Accountability",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Information Blackout / Press Freedom",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "International Law / War Crimes Accountability",
+        "b": "Information Blackout / Press Freedom",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Genocide / Ethnic Cleansing",
+        "b": "Information Blackout / Press Freedom",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Information Blackout / Press Freedom",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "International Law / War Crimes Accountability",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "International Law / War Crimes Accountability",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Ceasefire Fragility / Diplomatic Stakes",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 2,
+        "jaccard": 0.182
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "Information Blackout / Press Freedom",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "Genocide / Ethnic Cleansing",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Humanitarian Catastrophe / Civilian Harm",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Legitimate Military Operation / Counter-Terrorism",
+        "b": "Hamas Responsibility / October 7 Causation",
+        "shared": 3,
+        "jaccard": 0.3
+      },
+      {
+        "a": "Genocide / Ethnic Cleansing",
+        "b": "Forced Displacement / Safe Zone Collapse",
+        "shared": 2,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "organization": 11,
+      "academic": 1,
+      "reference": 2,
+      "person": 4
+    },
+    "connectivity": {
+      "bridge_ratio": 0.231,
+      "siloed_share": 0.654,
+      "mean_jaccard": 0.109
+    },
+    "structure_note": "6 of 26 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

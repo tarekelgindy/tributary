@@ -1,0 +1,2609 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "5032466f2624",
+  "event": "The IRGC Navy intercepted a U.S. oil tanker in the Strait of Hormuz and directed it to change course, according to Tasnim News Agency.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T08:50:20.884801+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "1867c6983f9b",
+        "statement": "The IRGC Navy intercepted a U.S. oil tanker in the Strait of Hormuz and directed it to change course",
+        "verified": true,
+        "source_url": "Tasnim News Agency (Iranian state media)",
+        "note": "Primary claim from the event; reported by Iranian official source. Specific tanker identity, date, and coordinates would require additional verification.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715578+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "46b1a1e4cb06",
+        "statement": "The Strait of Hormuz is a critical global chokepoint for oil transit",
+        "verified": true,
+        "source_url": "IEA, EIA, UNCLOS documentation",
+        "note": "Uncontested geographic and economic fact; approximately 20-30% of global seaborne oil passes through the strait.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715673+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "662d1c1f22c7",
+        "statement": "UNCLOS Article 34-45 establish transit-passage rights through straits used for international navigation",
+        "verified": true,
+        "source_url": "UN Convention on the Law of the Sea (1982)",
+        "note": "Legal text is verifiable; interpretation of its application to this incident is contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715681+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "64ed587a9006",
+        "statement": "A U.S.-Israeli military campaign resulted in the assassination of Iran's Supreme Leader",
+        "verified": false,
+        "source_url": "",
+        "note": "Asserted in 'Iranian Sovereign' and 'US Policy Failure' framings but not independently verified in this event summary; would require confirmation of casualty and attribution.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715687+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "95f9bf99e6d6",
+        "statement": "The tanker's radar was switched off at the time of interception",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited as evidence in 'Iranian Sovereign' framing; requires vessel tracking data verification.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715691+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "09c7bd8dff30",
+        "statement": "A 'Persian Gulf Strait Authority' (PGSA) toll-and-clearance system has been formally created",
+        "verified": false,
+        "source_url": "",
+        "note": "Asserted in 'New Maritime Order' framing; requires documentation of official Iranian decree or institutional establishment.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715695+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "80a4e06e6d49",
+        "statement": "The Joint Chiefs of Staff warned Trump that attacking Iran would close the Strait of Hormuz",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in 'US Policy Failure' framing; requires declassified or on-the-record military assessment.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715710+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4fa1804e045f",
+        "statement": "Brent crude prices have spiked and LNG shortages have occurred as a result of IRGC restrictions",
+        "verified": false,
+        "source_url": "",
+        "note": "Asserted in 'Global Economic Catastrophe' framing; correlation vs. causation requires commodity market analysis.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715717+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "443d2afddf3b",
+        "statement": "IRGC enforcement is selective by nationality",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed in 'Negotiating Leverage' framing; requires systematic data on interceptions by flag state.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715722+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1e258bede583",
+        "statement": "Seafarers have been killed or injured in tanker interceptions",
+        "verified": false,
+        "source_url": "",
+        "note": "Asserted in 'Human Cost' framing; requires IMO incident reports or crew testimony.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:50:08.715726+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the interception violates international law (UNCLOS transit-passage rights) or falls within Iran's lawful territorial enforcement",
+      "Whether the Strait of Hormuz falls within Iranian territorial waters or is international waters subject to transit-passage rights",
+      "Whether the interception is primarily a military/aggressive act, a diplomatic signal, or a retaliatory measure",
+      "Whether the U.S. or Iran initiated the current conflict and bears responsibility for escalation",
+      "Whether the interception is part of a systematic strategy to institutionalize a new toll system or a tactical response to specific threats",
+      "Whether the primary harm is to global energy security, to seafarers and developing nations, or to ceasefire stability",
+      "Whether the interception increases or decreases the risk of full-scale war resumption",
+      "Whether the U.S. naval presence in the region constitutes a blockade equivalent to Iranian tanker interceptions",
+      "Whether the interception is timed to influence ongoing ceasefire negotiations or is independent of diplomatic processes"
+    ],
+    "summary": "All framings accept that an IRGC interception of a U.S. tanker occurred in the Strait of Hormuz, a critical global oil chokepoint. The disagreement is not about the fact but about its legal status (lawful enforcement vs. violation), its strategic purpose (aggression, retaliation, negotiating leverage, precedent-setting, or escalation risk), and its consequences (energy crisis, human suffering, ceasefire instability, or geopolitical realignment)."
+  },
+  "framings": [
+    {
+      "framing_id": "bba3cbf2",
+      "name": "Iranian Aggression / Freedom of Navigation Violation",
+      "question": "Did the IRGC's interception of a US oil tanker constitute an unlawful act of aggression against international shipping?",
+      "key_claim": "The IRGC's forced redirection of a US oil tanker is a deliberate act of aggression that violates UNCLOS transit-passage rights and the foundational principle that the Strait of Hormuz must remain open to all nations.",
+      "description": "This framing treats the interception as a clear violation of international maritime law and freedom of navigation, situating it within a pattern of IRGC coercion that threatens the global order. It insists the US and allies have not just the right but the obligation to push back.",
+      "emphasizes": "UNCLOS transit-passage rights, illegality of IRGC 'toll booth' system, the history of Iranian maritime aggression, Western alliance consensus, risk of setting dangerous precedents for other chokepoints.",
+      "downplays": "The broader US/Israeli military campaign that preceded Iran's restrictions, Iran's own legal arguments about territorial waters, the symmetry of dual US-Iranian naval blockades.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Iran Must Not Rule the Strait of Hormuz (AEI)",
+        "Defying Maritime Law: Iran Imposes New Shipping Rules in Strait of Hormuz (Gulf News)",
+        "EU Imposes Sanctions on IRGC Unit for Threatening Freedom of Navigation in Hormuz (Baird Maritime)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "83cba20a6291",
+          "name": "US CENTCOM",
+          "url": "https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Continued Iranian harassment and threats in international waters and airspace will not be tolerated\"",
+          "date": "2026-03-01",
+          "role_evidence": "CENTCOM's repeated official statements framing every IRGC maritime action as unprofessional, unsafe, and intolerable anchor this framing institutionally.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260526062232/https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925040+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "51befc03ed1a",
+          "name": "American Enterprise Institute (AEI)",
+          "url": "https://www.aei.org/articles/iran-must-not-rule-the-strait-of-hormuz/",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "\"Iran is now positioning itself to emerge from the war in a stronger strategic position, with veto power over one of the most critical maritime chokepoints in the world.\"",
+          "date": "2026-05-07",
+          "role_evidence": "AEI published a detailed early argument that defeating Iran's Hormuz control claims must be a non-negotiable condition of any peace deal, coining the framing's core thesis.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925081+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2b539b976b56",
+          "name": "Gulf News",
+          "url": "https://gulfnews.com/amp/story/world/mena/defying-maritime-law-iran-imposes-new-shipping-rules-in-strait-of-hormuz-1.500532868",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Iran's new procedures appear to challenge that framework directly.\"",
+          "date": "2026-05-08",
+          "role_evidence": "Regional English-language outlet amplifying the legal-violation frame to a broad Gulf and international audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925089+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0425f3bfd3d4",
+          "name": "European Union",
+          "url": "https://www.bairdmaritime.com/shipping/iranians-and-irgc-unit-face-eu-sanctions-for-threatening-freedom-of-navigation-in-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The first time the bloc has used new powers to sanction Iran for restricting freedom of navigation.\"",
+          "date": "2026-06-08",
+          "role_evidence": "EU formally sanctioned IRGC Navy unit for Hormuz freedom-of-navigation violations, institutionally endorsing this framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925094+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "db577ead08a4",
+          "name": "Lawfare Media",
+          "url": "https://www.lawfaremedia.org/article/the-strait-of-hormuz-and-the-limits-of-maritime-law",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Ships of all nations have the right of 'transit passage' through such waterways without requiring permission from coastal states.\"",
+          "date": "2026-03-23",
+          "role_evidence": "Lawfare's detailed legal analysis early in the crisis established the UNCLOS framework used by most subsequent freedom-of-navigation framers.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925100+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a9386041631e",
+          "name": "EU foreign policy chief Kaja Kallas",
+          "url": "https://www.euronews.com/2026/04/10/overlooked-irgc-institution-holds-key-to-irans-hormuz-approach-expert-warns",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"We are really focusing on the freedom of navigation in these waters.\"",
+          "date": "2026-04-09",
+          "role_evidence": "Senior EU official explicitly adopted freedom-of-navigation framing during Abu Dhabi visit, giving it European institutional weight.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925105+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925113+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "0245a728",
+      "name": "Iranian Sovereign / Retaliatory Right",
+      "question": "Was the IRGC's interception a legitimate exercise of Iranian sovereignty and lawful retaliation against an aggressor that started the war?",
+      "key_claim": "Iran is rightfully enforcing control over waters that fall within its territorial jurisdiction as a defensive and retaliatory measure against an unprovoked US-Israeli war that assassinated its Supreme Leader.",
+      "description": "This framing presents the IRGC interception not as aggression but as sovereign enforcement: Iran is a coastal state whose territorial waters encompass the strait, and the tanker was attempting an 'illegal transit' with its tracking system disabled after the US imposed its own blockade.",
+      "emphasizes": "Iran's 1993 maritime law, geographic reality that Hormuz falls within Iranian territorial waters, the US-Israeli initiation of the war, symmetry of the US naval blockade, the tanker's switched-off radar as evidence of bad faith.",
+      "downplays": "UNCLOS transit-passage protections, wider global harm to neutral shipping, the IRGC's history of tanker seizures predating the war.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Iran Forces Trespassing US Tanker Back After Illegal Attempt at Crossing Strait of Hormuz (Press TV)",
+        "IRGC Navy Halts US Oil Tanker in Strait of Hormuz After Firing Warning Shots (Tasnim / Press TV)",
+        "'Iran is Not Giving Up Its Sovereignty Over the Strait of Hormuz' (Al Jazeera, quoting Iranian officials)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "66c63b01c0ad",
+          "name": "Tasnim News Agency",
+          "url": "https://www.presstv.ir/Detail/2026/05/28/769397/Iran-forces-American-tanker-Strait-of-Hormuz-IRGC",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Following a swift and decisive response by the IRGC Navy, including warning fire directed towards the vessel, the tanker was forced to stop and retreat.\"",
+          "date": "2026-05-28",
+          "role_evidence": "IRGC-affiliated Tasnim was the first to publish the intercept report and framed it as a legitimate enforcement action against an illegal transit.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925122+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "de51fe31469f",
+          "name": "Press TV",
+          "url": "https://www.presstv.ir/Detail/2026/05/28/769397/Iran-forces-American-tanker-Strait-of-Hormuz-IRGC",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"It began exercising far stricter controls after Donald Trump announced an illegal blockade of Iranian vessels and ports.\"",
+          "date": "2026-05-28",
+          "role_evidence": "Iranian state broadcaster amplified Tasnim's framing to a global English-language audience, characterizing US blockade as illegal and IRGC action as defensive.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925127+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a018f819c59a",
+          "name": "Iranian Supreme National Security Council (Ali Bagheri Kani)",
+          "url": "https://www.iranintl.com/en/202605286995",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The conditions and procedures for passage through the Strait of Hormuz will be completely different from the conditions before the start of the conflict involving Iran.\"",
+          "date": "2026-05-28",
+          "role_evidence": "Iranian state security body formally articulated a new post-war sovereignty claim over the strait, institutionalizing the framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925132+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7882a465793f",
+          "name": "Fars News Agency",
+          "url": "https://www.aljazeera.com/news/2026/5/8/iran-says-it-has-seized-oil-tanker-over-attempts-to-disrupt-its-oil-exports",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Iran's navy had seized the Ocean Koi because it had attempted to 'disrupt oil exports and the interests of the Iranian nation'.\"",
+          "date": "2026-05-08",
+          "role_evidence": "Semi-official Iranian outlet consistently framed all IRGC tanker actions as protective enforcement of national interests, amplifying the sovereignty narrative early.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925138+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ba4076dfa37a",
+          "name": "Iran's Foreign Ministry",
+          "url": "https://gulfnews.com/world/mena/us-iran-tensions-escalate-irgc-hits-oil-tanker-in-strait-of-hormuz-missiles-target-kuwait-and-bahrain-1.500565195",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"An attack on the national sovereignty and territorial integrity of the Islamic republic.\"",
+          "date": "2026-06-06",
+          "role_evidence": "Iranian foreign ministry repeatedly framed US naval actions as sovereignty violations, providing official government backing for the retaliatory-rights narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925358+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925370+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e3508e5a",
+      "name": "Global Economic Catastrophe / Energy Security Crisis",
+      "question": "What is the magnitude of harm to the global economy, energy supplies, and vulnerable populations caused by the Hormuz standoff?",
+      "key_claim": "The IRGC's systematic restriction of the Strait of Hormuz \u2014 of which tanker interceptions are the operational tool \u2014 has triggered the largest oil supply disruption in history, threatening stagflation, food insecurity, and recession worldwide.",
+      "description": "This framing centers neither on legality nor on war aims but on the cascading economic and humanitarian damage of the Hormuz closure. It is adopted broadly across institutions, financial media, and development bodies to argue that every incident at the strait has global consequence far beyond the belligerents.",
+      "emphasizes": "Brent crude price spikes, LNG shortages, fertilizer disruption, food insecurity in developing countries, shipping insurance collapse, GDP forecasts, the IEA's 'greatest energy security threat in history' assessment.",
+      "downplays": "Political responsibility for the war's origins, international legal disputes, crew safety, the military balance of power.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "How High Could Oil Prices Get with Strait of Hormuz Closure? (Bloomberg)",
+        "Strait of Hormuz Disruptions: Implications for Global Trade and Development (UNCTAD)",
+        "What the Closure of the Strait of Hormuz Means for the Global Economy (Dallas Fed)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "261e2b873d25",
+          "name": "International Energy Agency (IEA)",
+          "url": "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The IEA's Executive Director has said the combined impacts amount to 'the greatest threat to global energy security in history.'\"",
+          "date": "2026-03-13",
+          "role_evidence": "IEA's authoritative 'greatest threat in history' assessment became the defining institutional anchor for the economic catastrophe framing globally.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260608121020/https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925380+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fff2deb151a0",
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/graphics/2026-iran-war-hormuz-closure-oil-shock/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"At $170 a barrel, the impact on inflation and growth roughly doubles \u2014 a stagflationary shock.\"",
+          "date": "2026-03-30",
+          "role_evidence": "Bloomberg's widely-read oil-shock explainer, drawing on dozens of industry sources, mainstreamed $200/barrel fear and stagflation scenarios for global financial audiences.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260413064033/https://www.bloomberg.com/graphics/2026-iran-war-hormuz-closure-oil-shock/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925389+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c60149976ce1",
+          "name": "IMF (Gourinchas et al.)",
+          "url": "https://www.imf.org/en/blogs/articles/2026/03/30/how-the-war-in-the-middle-east-is-affecting-energy-trade-and-finance",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Energy importers are more exposed than exporters, poorer countries more than richer ones.\"",
+          "date": "2026-03-30",
+          "role_evidence": "IMF blog post by senior economists formally adopted the economic-harm frame, emphasizing asymmetric impact on developing countries.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925396+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "462ac3d9116a",
+          "name": "UNCTAD",
+          "url": "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Higher energy, fertilizer and transport costs may increase food costs and intensify cost-of-living pressures, particularly for the most vulnerable.\"",
+          "date": "2026-03-10",
+          "role_evidence": "UNCTAD was among the first multilateral bodies to publish a formal assessment of global trade and development implications, establishing the development-harm dimension early.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925402+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cc1a7de7c132",
+          "name": "Dallas Federal Reserve",
+          "url": "https://www.dallasfed.org/research/economics/2026/0320",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Global real GDP growth in 2026 could fall 0.2 percentage points if the oil supply disruption remains limited to one quarter.\"",
+          "date": "2026-03-20",
+          "role_evidence": "Dallas Fed's quantitative scenario analysis gave the economic framing credibility with financial markets and policymakers early in the crisis.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925407+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9140e680eab1",
+          "name": "Congressional Research Service (CRS)",
+          "url": "https://www.congress.gov/crs-product/R45281",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "\"Iranian attacks and disruption efforts sometimes have brought Iran into direct conflict with the United States.\"",
+          "date": "2026-03-10",
+          "role_evidence": "CRS briefed Congress on economic and energy dimensions, incorporating the economic harm frame into US legislative deliberations.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925412+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925420+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c019337b",
+      "name": "Negotiating Leverage / Diplomatic Coercion",
+      "question": "Is the IRGC using tanker interceptions as a deliberate bargaining chip to extract concessions in peace negotiations?",
+      "key_claim": "Iran's tanker interceptions are not primarily military operations but calibrated diplomatic signals \u2014 proof-of-leverage actions timed to shift the balance of ongoing US-Iran ceasefire negotiations.",
+      "description": "Defense analysts, diplomatic correspondents, and regional observers frame each Hormuz incident not as warfighting but as deliberate signaling: Iran controls an escalation dial it can turn up or down to pressure the US toward a favorable deal on nuclear terms, sanctions relief, and post-war Hormuz governance.",
+      "emphasizes": "Timing of incidents relative to negotiation rounds, IRGC's selective enforcement (some nationalities allowed through), Iran's demand for US acknowledgment of Hormuz control as a negotiation precondition, the ceasefire's fragility.",
+      "downplays": "Direct humanitarian harm to crews and global consumers, the legal dimension, the military capacity differential.",
+      "tone": "measured",
+      "sample_headlines": [
+        "How Iran Raised Hormuz Stakes by Capturing Ships (Al Jazeera)",
+        "Overlooked IRGC Institution Holds Key to Iran's Hormuz Approach, Expert Warns (Euronews)",
+        "Iran War Day 100: US Claims Degradation Success, Iran Claims Survival (Iran SITREP)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "9115b3a66f60",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/4/23/how-iran-raised-hormuz-stakes-by-capturing-ships",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"If the US is unwilling to compromise on the terms of a potential deal, then this is the kind of thing the IRGC would do to tip the balance of things in their favour.\"",
+          "date": "2026-04-23",
+          "role_evidence": "Al Jazeera's extensive explainer featuring defence analyst Alex Alfirraz Scheers was widely cited as the canonical articulation of the 'leverage' framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925430+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "45dbdf9b3b4a",
+          "name": "Euronews (Prof. Mehran Kamrava, Georgetown-Qatar)",
+          "url": "https://www.euronews.com/2026/04/10/overlooked-irgc-institution-holds-key-to-irans-hormuz-approach-expert-warns",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Most likely Iran's Hormuz Strait strategy and its broader strategy is shaped and influenced by the headquarters of Khatam al-Anbiya.\"",
+          "date": "2026-04-10",
+          "role_evidence": "Georgetown scholar's expert framing gave the negotiation-leverage hypothesis academic credibility early in the post-ceasefire period.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925436+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4a075e7e9b08",
+          "name": "Iran SITREP (globalsecurity.org / independent analysts)",
+          "url": "https://www.iransitrep.com/",
+          "carrier_type": "other",
+          "amplifier_role": "originator",
+          "excerpt": "\"Iran's deliberate calibration aimed at preserving the Pakistani mediation channel while demonstrating continued capacity and will.\"",
+          "date": "2026-06-07",
+          "role_evidence": "Daily analytical SITREP consistently framed every Hormuz incident as part of Iran's calibrated escalation ladder, providing granular evidence for the leverage narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925442+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3aca852bdfe3",
+          "name": "Iran International",
+          "url": "https://www.iranintl.com/en/202605286995",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Shipping procedures in the Strait of Hormuz will change following recent regional conflict.\"",
+          "date": "2026-05-28",
+          "role_evidence": "Iran International consistently embedded each interception in the context of stalled peace talks, amplifying the diplomatic-coercion framing to diaspora and Western audiences.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925447+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6fb93c389ded",
+          "name": "International Crisis Group",
+          "url": "https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Iran continues to try to frame the Islamic Revolutionary Guards Corps 'management' of transit through the Strait of Hormuz as the new status quo.\"",
+          "date": "2026-03-10",
+          "role_evidence": "ICG's live flashpoint tracker framed IRGC naval actions through the lens of wartime bargaining and escalation management, reaching policymakers and diplomatic audiences.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260526062232/https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925452+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925460+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c1ddb955",
+      "name": "New Maritime Order / Precedent-Setting",
+      "question": "Is Iran successfully establishing a permanent new regime of control over the Strait, and what does that mean for global shipping governance long after the war?",
+      "key_claim": "Iran's tanker interceptions are part of a deliberate strategy to institutionalize a new 'Persian Gulf Strait Authority' toll-and-clearance system that, if it acquires de facto legitimacy, will permanently reshape global maritime governance.",
+      "description": "This framing looks beyond the immediate incident to the structural and precedential implications: that Iran is not just fighting a war but building a new administrative and legal architecture for the strait. European governments, shipping industry analysts, and maritime law scholars warn that even partial acceptance of this regime \u2014 by compliant shippers or neutral states \u2014 could normalize state chokepoint extortion globally.",
+      "emphasizes": "The PGSA (Persian Gulf Strait Authority) creation, toll payments in yuan/digital assets, Lloyd's List reporting on compliance, Oman's negotiations, EU foreign policy chief's warning that 'we will see this elsewhere in the world.'",
+      "downplays": "Iran's military weaknesses and inability to sustain enforcement, the war's human toll, near-term ceasefire negotiations.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Iran Imposes New Strait of Hormuz Shipping Rules, Defies Maritime Law and Threatens Global Oil Trade (Gulf News)",
+        "'If We Go Down This Slippery Slope of Giving Rights to Ask Tolls Over These Waters' \u2013 EU's Kallas (Euronews)",
+        "The Strait of Hormuz and the Limits of Maritime Law (Lawfare)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b8b19461ebe5",
+          "name": "EU Foreign Policy Chief Kaja Kallas",
+          "url": "https://www.euronews.com/2026/04/10/overlooked-irgc-institution-holds-key-to-irans-hormuz-approach-expert-warns",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"If we go down that slippery slope of giving the right to ask tolls or taxes over these waters that have been open before, then I think we will see this elsewhere in the world.\"",
+          "date": "2026-04-09",
+          "role_evidence": "Kallas's explicit precedent warning gave this framing high-level institutional adoption and framed it as a threat to the entire global maritime commons.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925468+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a95e67978c0d",
+          "name": "Lawfare Media",
+          "url": "https://www.lawfaremedia.org/article/the-strait-of-hormuz-and-the-limits-of-maritime-law",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "\"The crisis in the Strait of Hormuz demonstrates how the legal frameworks governing maritime chokepoints face limits when military coercion targets the infrastructure of global trade.\"",
+          "date": "2026-03-23",
+          "role_evidence": "Lawfare's deep-dive legal analysis was the first prominent English-language piece to frame the Hormuz situation as a challenge to the entire UNCLOS-based maritime governance order.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925473+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "26af496220b5",
+          "name": "Lloyd's List / Richard Meade",
+          "url": "https://www.cnbc.com/2026/06/04/iran-war-strait-hormuz-persian-gulf-oil-tanker-transit.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"The new system appeared designed to 'formalize' Iranian authority over transits through the strait.\"",
+          "date": "2026-03-26",
+          "role_evidence": "Lloyd's List, the authoritative shipping trade publication, first documented compliant toll payments in yuan and named the system 'formalization,' crystallizing the new-order framing for the industry.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925478+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "70e58d2b2408",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/5/8/iran-says-it-has-seized-oil-tanker-over-attempts-to-disrupt-its-oil-exports",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Iran is coming up with a 'new maritime regime,' which will see the country place 'new rules, new regulations and new protocols.'\"",
+          "date": "2026-05-08",
+          "role_evidence": "Al Jazeera's reporting from Tehran on the 'Persian Gulf Strait Authority' and its new clearance requirements brought the new-order framing to a global mass audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925483+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1d08936f602a",
+          "name": "French FM Jean-No\u00ebl Barrot",
+          "url": "https://www.euronews.com/2026/04/10/overlooked-irgc-institution-holds-key-to-irans-hormuz-approach-expert-warns",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Freedom of navigation in international waters is a common good of humanity that should not be hindered by any obstacles or passage rights.\"",
+          "date": "2026-04-10",
+          "role_evidence": "France's explicit rejection of the PGSA toll system as a threat to the global commons, combined with French leadership of a 15-nation maritime escort mission, institutionalized the new-order-resistance framing in European policy.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925488+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7a1f01662e4c",
+          "name": "US Treasury Secretary Scott Bessent",
+          "url": "https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The U.S. would 'not tolerate any effort to impose a tolling system in the Strait of Hormuz.'\"",
+          "date": "2026-05-01",
+          "role_evidence": "Bessent's explicit sanctions threat against any entity paying IRGC tolls formalized US government adoption of the precedent-danger framing at the Treasury level.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260526062232/https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925493+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925502+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "43f22b8d",
+      "name": "Human Cost / Seafarer and Civilian Harm",
+      "question": "Who is actually being harmed \u2014 crews, civilian mariners, and populations in developing countries \u2014 and is the world paying enough attention to them?",
+      "key_claim": "The real victims of the Hormuz standoff are the thousands of stranded seafarers, civilian tanker crews fired upon, and populations in Asia and Africa facing fuel and food shortages \u2014 people whose suffering is largely invisible in the geopolitical coverage.",
+      "description": "This framing, carried primarily by humanitarian organizations, labor groups, development bodies, and some international media, insists on centering the human dimension: crew members killed, sailors missing, 20,000+ seafarers stranded, oil spills, food insecurity in low-income countries, and rising costs devastating the world's poorest.",
+      "emphasizes": "IMO data on stranded seafarers, crew deaths and injuries, oil spill environmental damage, food and fertilizer insecurity in developing nations, the ILO's maritime labor dimensions.",
+      "downplays": "Military strategy, legal arguments over UNCLOS, political responsibility attribution, superpower competition.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Ships Stranded in Persian Gulf Quietly Coordinate with US Navy to Exit Hormuz (CNBC)",
+        "Approximately 20,000 Seafarers Stranded on Roughly 2,000 Vessels in the Hormuz Area (IMO, cited in GlobalSecurity)",
+        "Low-Income Countries Are Especially at Risk of Food Insecurity (IMF Blog)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6ceafa928c5b",
+          "name": "International Maritime Organization (IMO)",
+          "url": "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Approximately 20,000 seafarers are stranded on roughly 2,000 vessels in the Hormuz area.\"",
+          "date": "2026-06-01",
+          "role_evidence": "IMO's formal assessment of stranded seafarers gave the human-cost framing an authoritative institutional baseline cited across subsequent reporting.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925507+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "59dc421f0b86",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/04/iran-war-strait-hormuz-persian-gulf-oil-tanker-transit.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Nearly 40 ships previously stranded in the Persian Gulf have exited through the Strait of Hormuz over the past three weeks as vessels quietly coordinate with the US Navy.\"",
+          "date": "2026-06-04",
+          "role_evidence": "CNBC's reporting on stranded vessels and crew coordination brought the seafarer dimension to a major financial and general news audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925513+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3d20fb0079f8",
+          "name": "IMF Senior Economists",
+          "url": "https://www.imf.org/en/blogs/articles/2026/03/30/how-the-war-in-the-middle-east-is-affecting-energy-trade-and-finance",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Low-income countries are especially at risk of food insecurity; some may need more external support.\"",
+          "date": "2026-03-30",
+          "role_evidence": "IMF's public blog post centered the disproportionate burden on the world's poorest populations, giving institutional credibility to the humanitarian dimension.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925519+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2d63296866ca",
+          "name": "UNCTAD",
+          "url": "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Reducing risks to global trade and development requires de-escalation and safeguarding maritime transport, ports and seafarers.\"",
+          "date": "2026-03-10",
+          "role_evidence": "UNCTAD's early policy brief explicitly named seafarers and civilian infrastructure as protected parties, framing the Hormuz crisis in humanitarian terms for UN member states.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925524+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "483a6f8d69da",
+          "name": "Wikipedia / 2026 Iran War Fuel Crisis (aggregate sourcing)",
+          "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "\"Much of the world has been affected by panic buying and severe disruption to the distribution of petroleum products, liquefied natural gas (LNG), and urea used for fertiliser.\"",
+          "date": "2026-04-01",
+          "role_evidence": "Aggregates diverse sourcing on the civilian and humanitarian economic impact, functioning as a widely-read clearinghouse for the human-cost framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925558+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925570+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "5e24a5c9",
+      "name": "US Policy Failure / Blowback",
+      "question": "Did the US-Israeli military campaign that started the war bear responsibility for creating the conditions that make Hormuz incidents inevitable?",
+      "key_claim": "The IRGC's tanker interceptions are a foreseeable consequence of the US-Israeli decision to launch an aggressive war against Iran \u2014 a decision the Joint Chiefs warned would close the strait \u2014 making each Hormuz incident partly a self-inflicted crisis.",
+      "description": "This framing, found in anti-war commentary, progressive and realist outlets, and some international news analysis, argues that the Hormuz standoff is fundamentally a blowback crisis: the US and Israel initiated hostilities, killed Iran's Supreme Leader, and are now confronting a predictable retaliatory strategy that the military itself anticipated and warned against.",
+      "emphasizes": "The Joint Chiefs' pre-war warnings to Trump that attacking Iran would close the strait, the symmetry of US and Iranian naval blockades, the war's origins in US-Israeli strikes, the political use of the crisis domestically.",
+      "downplays": "Iran's own agency and responsibility for humanitarian harm, the IRGC's pre-existing pattern of tanker harassment, legal arguments about UNCLOS.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "In Briefings Held Before the February 2026 Attacks, the Joint Chiefs Warned President Trump That an Attack Could Prompt Iran to Close the Strait (Wikipedia / sourced from news reporting)",
+        "US-Iran Tensions Escalate; Pakistan Pushes Ceasefire Talks (Gulf News)",
+        "Iran Reimposes Control of Strait of Hormuz and Fires on Tankers (TIME)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "63d291376540",
+          "name": "Wikipedia / 2026 Strait of Hormuz Crisis (aggregate)",
+          "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+          "carrier_type": "other",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"In briefings held before the February 2026 attacks, the Joint Chiefs of Staff warned President Trump that an attack could prompt Iran to close the strait.\"",
+          "date": "2026-02-28",
+          "role_evidence": "The aggregated Wikipedia entry, sourced from mainstream news outlets, widely spread the 'the military warned this would happen' framing to a mass-readership audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925579+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "53ad73071af7",
+          "name": "TIME Magazine",
+          "url": "https://time.com/article/2026/04/18/iran-strait-of-hormuz-trump-attacks-blockade-lebanon-ceasefire/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Iran said it has reimposed 'strict control' over the Strait of Hormuz as gunboats linked to the IRGC fired on at least three commercial vessels.\"",
+          "date": "2026-04-18",
+          "role_evidence": "TIME's coverage consistently embedded Hormuz incidents in the context of US blockade escalation and ceasefire fragility, implicitly framing events as reciprocal escalation rather than unprovoked Iranian aggression.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925584+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b1ba1d52e09b",
+          "name": "Radio Free Europe / Radio Liberty (RFE/RL)",
+          "url": "https://www.rferl.org/a/iran-war-us-hormuz-oil-blockade-gulf-israel/33640284.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"The United States has imposed a naval blockade on Iran since April 13, and Iranian military forces have opened fire on some vessels to prevent ships from passing through the Strait of Hormuz.\"",
+          "date": "2026-06-05",
+          "role_evidence": "RFE/RL's structurally symmetric reporting \u2014 placing US and Iranian blockade actions in the same sentence \u2014 implicitly supports the mutual-escalation / blowback framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925590+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "50fbf764c784",
+          "name": "Iran's Military Command (official statements)",
+          "url": "https://www.newsnationnow.com/politics/iran-retaliation-ceasefire-trump-ayatollah-khamenei/amp/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"The United States committed a gross violation of the ceasefire in the Hormozgan region\u2026 Iran holds the U.S. regime responsible for all the consequences.\"",
+          "date": "2026-05-27",
+          "role_evidence": "Iran's military formally attributed all Hormuz incidents to prior US aggression, institutionally anchoring the blowback framing from the Iranian government side.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925596+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b3e535de8e2b",
+          "name": "National Security Journal",
+          "url": "https://nationalsecurityjournal.org/iran-has-turned-the-strait-of-hormuz-into-a-death-trap-and-its-why-the-u-s-navy-keeps-its-warships-out/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"The Navy has intermittently conducted escort operations, such as 'Project Freedom,' to protect commercial and neutral vessels navigating the Strait.\"",
+          "date": "2026-06-05",
+          "role_evidence": "Notes the US military's own operational constraints and strategic contradictions \u2014 the difficulty of protecting the very conditions its war created \u2014 providing implicit evidence for the blowback framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925602+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925609+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "e1e7a0d6",
+      "name": "Ceasefire Stability / Escalation Ladder",
+      "question": "Does this tanker interception represent a dangerous rung on the escalation ladder that could collapse the fragile ceasefire and reignite full-scale war?",
+      "key_claim": "Each IRGC tanker interception is a potentially ceasefire-breaking event: its interaction with US self-defense strikes and retaliatory missile launches creates a tit-for-tat dynamic that could rapidly spiral into the full resumption of war, regardless of either side's stated intentions.",
+      "description": "Conflict-monitoring organizations, military analysts, and diplomatic correspondents track Hormuz incidents in real time as leading indicators of ceasefire breakdown. Each event is assessed for whether it crosses 'below-threshold' or 'above-threshold' criteria that either side might use to justify resuming hostilities.",
+      "emphasizes": "Ceasefire clause interpretations, CENTCOM and IRGC red-lines, missile exchange sequences, negotiation timelines, Chairman Caine's 'below threshold' assessments, Pakistani mediation.",
+      "downplays": "The economic dimensions, legal arguments, underlying war aims, long-term structural changes to Hormuz governance.",
+      "tone": "measured",
+      "sample_headlines": [
+        "US Forces Hit Iranian Coastal Sites After Tehran Launches Drones Toward Strait (RFE/RL)",
+        "Iran War Day 100: Ceasefire Holds Tactically but Strategic Objectives Diverge (Iran SITREP)",
+        "Latest Claims Come Hours After US and Iran Exchanged Fire in Strait of Hormuz, Threatening Ongoing Push for Ceasefire (Al Jazeera)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fb1f8a4cba5d",
+          "name": "International Crisis Group",
+          "url": "https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"U.S. Central Command denounced an Iranian ballistic launch toward Kuwait as 'an egregious ceasefire violation.'\"",
+          "date": "2026-06-06",
+          "role_evidence": "ICG's live 'Strait of Hormuz Trigger List' flashpoint tracker was the first systematic effort to map every Hormuz incident to escalation thresholds, originating the escalation-ladder analytical framing.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260526062232/https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925616+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e7786ec19ef6",
+          "name": "Iran SITREP / GlobalSecurity.org",
+          "url": "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"The ceasefire agreed April 8 persists only because both sides lack the operational capacity to sustain full-scale war.\"",
+          "date": "2026-06-09",
+          "role_evidence": "Daily operational reporting situating each incident on an escalation matrix, providing granular below/above-threshold analysis for defense analysts and journalists.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925621+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "26f4bd2b74f1",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/5/8/iran-says-it-has-seized-oil-tanker-over-attempts-to-disrupt-its-oil-exports",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"The statements came just hours after the US and Iran traded fire in the Strait of Hormuz, threatening a fragile pause in fighting and ongoing efforts to reach a lasting ceasefire deal.\"",
+          "date": "2026-05-08",
+          "role_evidence": "Al Jazeera's near-real-time reporting consistently framed each Hormuz incident as a potential ceasefire-breaking trigger, reaching a global mass audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925626+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1629e5329143",
+          "name": "US Chairman of the Joint Chiefs Gen. Dan Caine",
+          "url": "https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Since the ceasefire was announced, Iran has fired at commercial vessels nine times\u2026 all below the threshold of restarting full-scale conflict.\"",
+          "date": "2026-05-15",
+          "role_evidence": "Caine's explicit 'below threshold' framing in congressional testimony institutionalized the escalation-ladder analytical framework within the US military and policy establishment.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260526062232/https://www.crisisgroup.org/trigger-list/iran-usisrael-trigger-list/flashpoints/strait-hormuz",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925633+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "16e53991ed74",
+          "name": "NewsNation",
+          "url": "https://www.newsnationnow.com/politics/iran-retaliation-ceasefire-trump-ayatollah-khamenei/amp/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"Iran's military said it reserves the 'legitimate and definite' right to retaliate against any U.S. ceasefire violations.\"",
+          "date": "2026-05-27",
+          "role_evidence": "Reported on Iranian retaliation thresholds alongside US self-defense claims, amplifying the mutual-escalation-ladder framing to a US domestic audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:55.925637+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:55.925642+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the technical/operational maritime perspective (shipping industry standards, insurance implications, route alternatives, actual risk assessment vs. perceived risk), the regional state perspective beyond Iran-US (Gulf Arab states' security concerns, their economic exposure, their diplomatic preferences), the historical precedent framing (how this compares to past intercepts, whether this is routine or genuinely novel), and the domestic Iranian political economy angle (IRGC institutional interests, factional competition, revenue/sanctions-busting motivations separate from state strategy).",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The IRGC Navy intercepted a U.S. oil tanker in the Strait of Hormuz and directed it to change course, according to Tasnim News Agency.",
+    "rated_outlets": 5,
+    "distribution": {
+      "left": 1,
+      "lean-left": 2,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 20,
+      "lean-left": 40,
+      "center": 40,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 3,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.8,
+    "resolve_rate": 0.62,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "Gulf News",
+          "domain": "gulfnews.com"
+        },
+        {
+          "carrier": "Tasnim News Agency",
+          "domain": "presstv.ir"
+        },
+        {
+          "carrier": "Radio Free Europe / Radio Liberty (RFE/RL)",
+          "domain": "rferl.org"
+        }
+      ]
+    },
+    "non_news_carriers": 15,
+    "matched": [
+      {
+        "outlet": "The Nation",
+        "carrier": "National Security Journal",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "contains"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Fars News Agency",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Time Magazine",
+        "carrier": "TIME Magazine",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "Bloomberg",
+        "carrier": "Bloomberg",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "Lloyd's List / Richard Meade",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 16,
+        "political": 0,
+        "social": 0,
+        "institutional": 20,
+        "academic": 3,
+        "other": 4
+      },
+      "vested_interest": 20,
+      "framings_with_vested": 8,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 33,
+    "framings": [
+      {
+        "framing_id": "bba3cbf2",
+        "name": "Iranian Aggression / Freedom of Navigation Violation",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "857475d89c76",
+            "display": "EU foreign policy chief Kaja Kallas",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc7acf3b98e1",
+            "display": "Lawfare Media",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f99dc947d41b",
+            "display": "American Enterprise Institute",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5510dd5e2c06",
+            "display": "European Union",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2ab70cc94acf",
+            "display": "US CENTCOM",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "0245a728",
+        "name": "Iranian Sovereign / Retaliatory Right",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a62ddfdde6d1",
+            "display": "Iran's Foreign Ministry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1299eba2de6b",
+            "display": "Iranian Supreme National Security Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7e4f9896b335",
+            "display": "Tasnim News Agency",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e3508e5a",
+        "name": "Global Economic Catastrophe / Energy Security Crisis",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "1b751b88b999",
+            "display": "UNCTAD",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d57395e314a5",
+            "display": "Bloomberg",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6606e242f3ce",
+            "display": "Dallas Federal Reserve",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d16ba3518086",
+            "display": "IMF",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "21c05aa58eb0",
+            "display": "International Energy Agency",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "40c61480e0ea",
+            "display": "Congressional Research Service",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c019337b",
+        "name": "Negotiating Leverage / Diplomatic Coercion",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b722c06d9268",
+            "display": "International Crisis Group",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a8a203efe806",
+            "display": "Euronews",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "29891ac52b1b",
+            "display": "Iran International",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fbc074830fa7",
+            "display": "Iran SITREP",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c1ddb955",
+        "name": "New Maritime Order / Precedent-Setting",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "857475d89c76",
+            "display": "EU foreign policy chief Kaja Kallas",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc7acf3b98e1",
+            "display": "Lawfare Media",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4f893fe55c8b",
+            "display": "French FM Jean-No\u00ebl Barrot",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "e54e6a8aa491",
+            "display": "US Treasury Secretary Scott Bessent",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "43f22b8d",
+        "name": "Human Cost / Seafarer and Civilian Harm",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1b751b88b999",
+            "display": "UNCTAD",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "db3879de0dac",
+            "display": "IMF Senior Economists",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d22f821cdffa",
+            "display": "International Maritime Organization",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "5e24a5c9",
+        "name": "US Policy Failure / Blowback",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ffb5c31997ae",
+            "display": "Iran's Military Command",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "a7cdd8d2d48c",
+            "display": "Radio Free Europe",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5357eb44eda0",
+            "display": "TIME",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1163f6b633a4",
+            "display": "National Security Journal",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "e1e7a0d6",
+        "name": "Ceasefire Stability / Escalation Ladder",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b722c06d9268",
+            "display": "International Crisis Group",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1f459e94e51d",
+            "display": "crisisgroup.org",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bd4e13183123",
+            "display": "Iran SITREP",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "8f1397a4159a",
+            "display": "NewsNation",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 4,
+        "framings": [
+          "Ceasefire Stability / Escalation Ladder",
+          "Iranian Sovereign / Retaliatory Right",
+          "Negotiating Leverage / Diplomatic Coercion",
+          "New Maritime Order / Precedent-Setting"
+        ]
+      },
+      {
+        "actor_id": "bc7acf3b98e1",
+        "display": "Lawfare Media",
+        "actor_type": "academic",
+        "n_framings": 2,
+        "framings": [
+          "Iranian Aggression / Freedom of Navigation Violation",
+          "New Maritime Order / Precedent-Setting"
+        ]
+      },
+      {
+        "actor_id": "857475d89c76",
+        "display": "EU foreign policy chief Kaja Kallas",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Iranian Aggression / Freedom of Navigation Violation",
+          "New Maritime Order / Precedent-Setting"
+        ]
+      },
+      {
+        "actor_id": "1b751b88b999",
+        "display": "UNCTAD",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Global Economic Catastrophe / Energy Security Crisis",
+          "Human Cost / Seafarer and Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "b722c06d9268",
+        "display": "International Crisis Group",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Stability / Escalation Ladder",
+          "Negotiating Leverage / Diplomatic Coercion"
+        ]
+      },
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost / Seafarer and Civilian Harm",
+          "New Maritime Order / Precedent-Setting"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "Iranian Sovereign / Retaliatory Right",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "Global Economic Catastrophe / Energy Security Crisis",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "Negotiating Leverage / Diplomatic Coercion",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "Human Cost / Seafarer and Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "US Policy Failure / Blowback",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "Global Economic Catastrophe / Energy Security Crisis",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "Human Cost / Seafarer and Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "US Policy Failure / Blowback",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic Catastrophe / Energy Security Crisis",
+        "b": "Negotiating Leverage / Diplomatic Coercion",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic Catastrophe / Energy Security Crisis",
+        "b": "New Maritime Order / Precedent-Setting",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic Catastrophe / Energy Security Crisis",
+        "b": "US Policy Failure / Blowback",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic Catastrophe / Energy Security Crisis",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Negotiating Leverage / Diplomatic Coercion",
+        "b": "Human Cost / Seafarer and Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Negotiating Leverage / Diplomatic Coercion",
+        "b": "US Policy Failure / Blowback",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "New Maritime Order / Precedent-Setting",
+        "b": "US Policy Failure / Blowback",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost / Seafarer and Civilian Harm",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "US Policy Failure / Blowback",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic Catastrophe / Energy Security Crisis",
+        "b": "Human Cost / Seafarer and Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Negotiating Leverage / Diplomatic Coercion",
+        "b": "New Maritime Order / Precedent-Setting",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "New Maritime Order / Precedent-Setting",
+        "b": "Human Cost / Seafarer and Civilian Harm",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "New Maritime Order / Precedent-Setting",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "New Maritime Order / Precedent-Setting",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Human Cost / Seafarer and Civilian Harm",
+        "b": "US Policy Failure / Blowback",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "Negotiating Leverage / Diplomatic Coercion",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Iranian Sovereign / Retaliatory Right",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Iranian Aggression / Freedom of Navigation Violation",
+        "b": "New Maritime Order / Precedent-Setting",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Negotiating Leverage / Diplomatic Coercion",
+        "b": "Ceasefire Stability / Escalation Ladder",
+        "shared": 2,
+        "jaccard": 0.25
+      }
+    ],
+    "by_actor_type": {
+      "person": 6,
+      "academic": 2,
+      "organization": 11,
+      "news": 13,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.182,
+      "siloed_share": 0.788,
+      "mean_jaccard": 0.047
+    },
+    "structure_note": "6 of 33 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T08:50:20.884735+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

@@ -1,0 +1,2757 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "c70462cd7199",
+  "event": "U.S. President Trump stated that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-08T09:02:44.972908+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "9d98e463c65e",
+        "statement": "President Trump made a public statement that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov/",
+        "note": "Direct presidential statement; date and exact wording require confirmation from official transcript or press release",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327110+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9dc1708efa8e",
+        "statement": "Iran possesses a stockpile of uranium enriched to 60% U-235, as confirmed by IAEA inspections.",
+        "verified": true,
+        "source_url": "https://www.iaea.org/",
+        "note": "IAEA Board of Governors reports document Iran's enrichment levels and stockpile quantities as of recent inspections",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327198+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "5b7925d08a40",
+        "statement": "The Strait of Hormuz is a critical global energy chokepoint through which approximately 20% of globally traded oil passes.",
+        "verified": true,
+        "source_url": "https://www.eia.gov/",
+        "note": "Standard geopolitical and energy infrastructure fact; widely documented by U.S. Energy Information Administration",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327270+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0138eed8cde6",
+        "statement": "Iran is a signatory to the Nuclear Non-Proliferation Treaty (NPT).",
+        "verified": true,
+        "source_url": "https://www.un.org/disarmament/wmd/nuclear/npt/",
+        "note": "Iran acceded to the NPT in 1970; verifiable in UN treaty database",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327278+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "6342508b64cb",
+        "statement": "The U.S. War Powers Act requires congressional authorization for military operations lasting beyond 60 days.",
+        "verified": true,
+        "source_url": "https://www.congress.gov/",
+        "note": "Statutory law; 50 U.S.C. § 1541 et seq.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327287+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3ef97dceffbc",
+        "statement": "Article 2(4) of the UN Charter prohibits the threat or use of force against the territorial integrity or political independence of any state.",
+        "verified": true,
+        "source_url": "https://www.un.org/en/about-us/un-charter",
+        "note": "Foundational international law; text of the Charter",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327292+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "1dc12ea0a94e",
+        "statement": "Iran's uranium stockpile is stored in deeply buried, rubble-entombed facilities that would be difficult to access militarily.",
+        "verified": false,
+        "source_url": "",
+        "note": "Specific location, depth, and structural details are not publicly confirmed; IAEA has limited site access; exact configuration disputed or classified",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327327+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c9e1e6bd2706",
+        "statement": "Trump has stated that uranium seizure may not be 'necessary' for a deal, or that it is a negotiating demand rather than a firm operational prerequisite.",
+        "verified": false,
+        "source_url": "",
+        "note": "Trump's shifting public statements on this point exist but exact quotes and timeline require careful documentary verification; framing interprets intent",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327364+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ecc3af75b784",
+        "statement": "Recent oil price movements are causally linked to negotiation signals and war-related uncertainty in the Strait of Hormuz.",
+        "verified": false,
+        "source_url": "",
+        "note": "Oil prices respond to multiple factors; isolating the causal contribution of this specific event requires econometric analysis not universally agreed upon",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327377+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "09d79b1df475",
+        "statement": "Trump has claimed the U.S. has 'obliterated' Iran's nuclear program or that an Iranian bomb is imminent.",
+        "verified": false,
+        "source_url": "",
+        "note": "Specific statements exist but require exact quote verification; interpretation of 'obliterated' and 'imminent' varies; intelligence assessments on timelines are contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327384+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "66bf276c322e",
+        "statement": "A military operation to seize Iran's uranium would require earth-moving equipment, a runway, and would face hostile fire risk.",
+        "verified": false,
+        "source_url": "",
+        "note": "Military analysts assess this, but exact operational requirements are not publicly detailed; feasibility assessments are expert opinion, not confirmed fact",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-08T09:02:32.327390+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Iran's 60%-enriched uranium stockpile constitutes an 'existential' or imminent proliferation threat, or a manageable technical problem within diplomatic reach",
+      "Whether a forced seizure is militarily feasible, and what the probability of success and collateral damage would be",
+      "Whether Trump's statement is a firm operational plan or a negotiating tactic designed to coerce Iran to the bargaining table",
+      "Whether a forced seizure would be legal under the War Powers Act, the U.S. Constitution, and international law (UN Charter Article 2(4))",
+      "Whether Iran's NPT right to peaceful nuclear enrichment is being violated by the U.S. ultimatum, or whether Iran's non-compliance and concealment history forfeits that right",
+      "Whether recent oil price shocks and economic pain are primarily attributable to this uranium ultimatum and associated military tensions, or to other market factors",
+      "Whether Trump's public statements about Iran's nuclear program are factually accurate or systematically overstated",
+      "Whether a ceasefire or deal that permits Iran to retain some enriched uranium represents a dangerous concession or a pragmatic compromise",
+      "Whether the human and civilian cost of U.S.-Israeli strikes on nuclear infrastructure is justified by nonproliferation imperatives"
+    ],
+    "summary": "All framings accept that Trump made a public statement about seizing Iran's uranium, that Iran possesses 60%-enriched uranium confirmed by IAEA inspections, that the Strait of Hormuz is a critical energy chokepoint, and that international law (War Powers Act, UN Charter) imposes constraints on unilateral military action. The disagreements are entirely about interpretation: whether the threat is operationally feasible, legally permissible, diplomatically necessary, factually justified, and whether it serves U.S. interests or inflicts unacceptable costs."
+  },
+  "framings": [
+    {
+      "framing_id": "8799ce0f",
+      "name": "Nonproliferation Imperative",
+      "question": "Is seizing or destroying Iran's highly enriched uranium necessary to prevent a nuclear-armed Iran?",
+      "key_claim": "Iran's stockpile of near-weapons-grade uranium poses an existential proliferation threat that the U.S. is justified — even obligated — to eliminate by any means necessary.",
+      "description": "This framing treats the uranium stockpile as the central danger and Trump's ultimatum as a logical extension of longstanding U.S. nonproliferation policy. It foregrounds the technical proximity of Iran's 60%-enriched uranium to weapons-grade material and the risk of Iran reconstituting its program.",
+      "emphasizes": "The quantity and enrichment level of Iran's HEU stockpile; IAEA non-compliance findings; Iran's history of concealment; the risk of a nuclear breakout.",
+      "downplays": "The operational difficulty and legality of a forced seizure; the distinction between enriched uranium and an actual weapon; Iran's stated civilian purposes.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Trump vows US will seize and destroy Iran's enriched uranium (Israel National News)",
+        "Trump: U.S. Will Seize or Destroy Iran's Enriched Uranium Stockpile (NaturalNews)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "eff781c8c786",
+          "name": "Israel National News (Arutz Sheva)",
+          "url": "https://www.israelnationalnews.com/news/427455",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump vows US will seize and destroy Iran's enriched uranium",
+          "date": "2026-05-21",
+          "role_evidence": "Prominently framed Trump's statement as a security imperative, quoting his Oval Office remarks in full with no counterbalancing expert skepticism.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697891+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ebf1152ca845",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/policy_briefs/2026/03/11/trump-points-to-irans-resumption-of-nuclear-activities-at-a-new-deeper-site/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iran's ability to retrieve its HEU stocks — enough to produce up to 11 nuclear bombs — remains uncertain.",
+          "date": "2026-03-11",
+          "role_evidence": "FDD policy brief foregrounded the bomb-production potential of Iran's HEU and Iran's resumed nuclear activities, reinforcing the urgency of seizure.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697936+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cdb31aa512b6",
+          "name": "Donald Trump / White House",
+          "url": "https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"We will go with them, or without them. But we won't have people shooting at us.\"",
+          "date": "2026-06-07",
+          "role_evidence": "Trump originated and repeatedly restated the core claim across Truth Social, Oval Office remarks, and NBC Meet the Press.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697942+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fd40ccfa2472",
+          "name": "Pete Hegseth / Department of Defense",
+          "url": "https://www.naturalnews.com/2026-05-22-trump-seize-destroy-iran-enriched-uranium.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Hegseth Demands Iran Turn Over Uranium Stockpiles (New York Times, April 9, 2026)",
+          "date": "2026-04-09",
+          "role_evidence": "Defense Secretary Hegseth formally adopted and amplified the demand, signaling institutional U.S. government backing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697948+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e78ebf695fad",
+          "name": "Benjamin Netanyahu / Israeli Government",
+          "url": "https://www.pbs.org/newshour/world/trump-calls-irans-response-to-ceasefire-proposal-unacceptable",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Trump has said to me, 'I want to go in there,' and I think it can be done physically.\"",
+          "date": "2026-05-04",
+          "role_evidence": "Netanyahu publicly endorsed the physical seizure framing in a CBS interview, lending allied institutional weight.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697952+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The operational and logistical impossibility of extracting deeply buried, rubble-entombed uranium under hostile fire without guaranteed success",
+          "found_in_framing": "Operational Feasibility & Military Risk",
+          "impact": "Reader cannot assess whether the stated objective is actually achievable, leading to uncritical acceptance of a demand that may be militarily unfeasible",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941693+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The absence of congressional authorization, UN sanction, or legal basis for forced seizure of another nation's sovereign material",
+          "found_in_framing": "Legality & Constitutional Authority",
+          "impact": "Reader cannot evaluate whether the proposed action violates U.S. constitutional constraints and international law, obscuring the legal jeopardy of the demand",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941744+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence that Trump's threat is primarily a negotiating tactic rather than an operational plan, and his own statements that seizure may not be 'necessary'",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader treats the threat as a firm commitment rather than a coercive bargaining chip, misunderstanding the actual intent behind the ultimatum",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941750+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Trump's repeated false claims that Iran's program has been 'obliterated' and the gap between 60%-enriched uranium and a deployable weapon",
+          "found_in_framing": "Factual Accuracy & Intelligence Credibility",
+          "impact": "Reader accepts the factual premise of an imminent threat without knowing the administration has systematically overstated the danger",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941753+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.697961+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2e311acf",
+      "name": "Operational Feasibility & Military Risk",
+      "question": "Can the U.S. actually seize or destroy Iran's buried uranium stockpile, and at what cost?",
+      "key_claim": "A forced seizure of Iran's deeply buried, rubble-entombed uranium would be an unprecedented and extraordinarily dangerous military operation with no guarantee of success.",
+      "description": "This framing shifts focus from the political goal to the physical and logistical reality of the operation. Scientists, former weapons lab officials, and military analysts question whether the mission is executable, noting the uranium is buried under bombing rubble, requires weeks of heavy equipment, and carries radiation and combat risks.",
+      "emphasizes": "The technical complexity of extracting buried UF6 cylinders; the need for earth-moving equipment and a runway; the risk of hostile fire; IAEA uncertainty about the stockpile's exact location.",
+      "downplays": "The strategic rationale for the demand; Iran's nuclear threat level; the diplomatic leverage the threat provides.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Trump wants Iran's 'nuclear dust.' Here's how the U.S. could remove the uranium (Scientific American)",
+        "Risky commando plan to seize Iran's uranium came at Trump's request (Washington Post)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "832c9185c4cb",
+          "name": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/trump-wants-irans-nuclear-dust-heres-how-the-u-s-could-remove-the-uranium/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"If you have unfriendly people around you that are shooting at you, that's going to make it a whole lot harder.\"",
+          "date": "2026-04-28",
+          "role_evidence": "First major outlet to publish a detailed technical breakdown of the seizure operation's feasibility, quoting nuclear materials experts from NTI and Los Alamos.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697972+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b0704ee7101c",
+          "name": "Washington Post",
+          "url": "https://www.washingtonpost.com/national-security/2026/04/01/trump-commando-plan-seize-iran-uranium/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Risky commando plan to seize Iran's uranium came at Trump's request",
+          "date": "2026-04-01",
+          "role_evidence": "High-circulation national security scoop detailing the military's excavation-and-runway plan, driving broad public awareness of the operational complexity.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cf90b90a0fdd",
+          "name": "Scott Roecker / Nuclear Threat Initiative (NTI)",
+          "url": "https://www.scientificamerican.com/article/trump-wants-irans-nuclear-dust-heres-how-the-u-s-could-remove-the-uranium/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "A military operation would be \"unlike any mission the U.S. military has tried before.\"",
+          "date": "2026-04-28",
+          "role_evidence": "NTI vice president provided the key expert quote anchoring the feasibility-skeptic framing across multiple outlets.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697981+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a7a3c045480b",
+          "name": "Bulletin of the Atomic Scientists",
+          "url": "https://thebulletin.org/2026/05/why-congress-and-senior-officials-must-deny-trump-a-nuclear-escape-in-iran/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Strait of Hormuz has become a continuing strategic and economic crisis; Iran's missile and nuclear assets remain central to its bargaining position.",
+          "date": "2026-05-01",
+          "role_evidence": "Extended the feasibility framing to include escalation risk, warning that a failed seizure mission could trigger nuclear-use pressure.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The genuine proliferation danger posed by near-weapons-grade uranium and Iran's history of concealment and IAEA non-compliance",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader cannot weigh the security rationale against operational risk, treating the demand as purely technical rather than strategically motivated",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941776+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The legal and constitutional violations that would accompany a forced seizure without congressional or UN authorization",
+          "found_in_framing": "Legality & Constitutional Authority",
+          "impact": "Reader focuses only on military feasibility while ignoring the legal jeopardy and constitutional constraints that shape what is actually permissible",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941781+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence that the threat is primarily a negotiating tactic designed to extract concessions, not a firm operational plan",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader may overestimate the likelihood of military action, missing that the threat's primary function is coercive bargaining",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941784+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.697990+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "75408462",
+      "name": "Legality & Constitutional Authority",
+      "question": "Does the U.S. have the legal authority — domestic and international — to seize or destroy another nation's sovereign nuclear material?",
+      "key_claim": "A forced seizure of Iran's uranium without congressional authorization or UN sanction would violate the War Powers Act, the U.S. Constitution, and Article 2(4) of the UN Charter.",
+      "description": "This framing centers on the rule-of-law dimensions of the threat: whether the president can unilaterally order a military operation to seize sovereign material, and whether such an act constitutes an act of war requiring congressional approval. Arms control and international law experts are the primary carriers.",
+      "emphasizes": "War Powers Act constraints; UN Charter prohibitions on the use of force; the absence of congressional authorization; Iran's sovereign rights over its own nuclear material.",
+      "downplays": "The proliferation danger posed by the stockpile; the precedent set by Iran's own IAEA non-compliance; the diplomatic leverage the threat creates.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump's Chaotic and Reckless Iran Nuclear Policy (Arms Control Association)",
+        "Iran deputy FM warns French-British vessels against cooperating with 'illegal U.S. actions' (PBS NewsHour)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b0c700d3cf39",
+          "name": "Arms Control Association",
+          "url": "https://www.armscontrol.org/act/2026-03/focus/trumps-chaotic-and-reckless-iran-nuclear-policy",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Such a war of choice against Iran, without congressional approval, would violate the Constitution and the 1973 War Powers Act.",
+          "date": "2026-03-01",
+          "role_evidence": "First prominent institutional voice to frame the Iran uranium policy explicitly through the lens of constitutional and international law violations.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697995+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0b283c42ca3b",
+          "name": "Iran Deputy FM Kazem Gharibabadi",
+          "url": "https://www.pbs.org/newshour/world/trump-calls-irans-response-to-ceasefire-proposal-unacceptable",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Cooperation with illegal U.S. actions in the Strait of Hormuz that violate international law will be met with a decisive and immediate response.\"",
+          "date": "2026-05-04",
+          "role_evidence": "Iranian government formally adopted the international-law-violation framing in official statements, giving it state-level institutional weight.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.697999+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bdf1b4023bb3",
+          "name": "Bulletin of the Atomic Scientists",
+          "url": "https://thebulletin.org/2026/05/why-congress-and-senior-officials-must-deny-trump-a-nuclear-escape-in-iran/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Congress and senior officials must deny Trump a 'nuclear escape' in Iran",
+          "date": "2026-05-01",
+          "role_evidence": "Called on Congress to assert its constitutional authority to block an unauthorized uranium-seizure operation.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698005+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The genuine proliferation threat posed by Iran's stockpile and the strategic rationale for the demand",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader cannot assess whether the legal constraints are proportionate to the security threat, treating legality as an absolute barrier rather than a constraint on justified action",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941789+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The operational and technical impossibility of executing a forced seizure, which makes the legal question partly moot",
+          "found_in_framing": "Operational Feasibility & Military Risk",
+          "impact": "Reader focuses on legal authority for an action that may be militarily unfeasible, missing that operational reality constrains what is legally relevant",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941792+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence that the threat is a negotiating tactic rather than a firm operational plan, which affects the legal analysis of intent and imminence",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader analyzes the legality of a hypothetical military operation without knowing whether the threat is genuine or primarily coercive",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941795+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698010+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b9992a50",
+      "name": "Diplomatic Leverage & Deal-Making",
+      "question": "Is Trump's uranium ultimatum a genuine military commitment or a negotiating tactic to extract concessions from Tehran?",
+      "key_claim": "Trump's threat to seize Iran's uranium is primarily a coercive bargaining chip designed to force Iran to the table and accept U.S. terms, not a firm operational plan.",
+      "description": "This framing reads the uranium threat through the lens of Trump's transactional negotiating style. Analysts and diplomatic reporters note that Trump has repeatedly softened or walked back the demand when deal-making appeared close, suggesting the threat is instrumental rather than absolute.",
+      "emphasizes": "Trump's shifting statements on whether uranium seizure is a prerequisite for a deal; the role of Qatari and other mediators; the use of military threats as leverage; Trump's own admission that seizure may not be 'necessary.'",
+      "downplays": "The genuine security rationale; the operational planning that has actually occurred; Iran's own red lines.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Why Trump's flip-flop on Iran's uranium stockpile is a big deal (MSNBC Opinion)",
+        "Exclusive: What's inside the Iran deal Trump is close to signing (Axios)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6fc96963a7f8",
+          "name": "MSNBC / ms.now Opinion",
+          "url": "https://www.ms.now/opinion/trump-iran-uranium-necessary-public-relations",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "When Trump told Hannity that 'I don't think it's necessary' to get the enriched uranium, he suggested he has a soft commitment to it.",
+          "date": "2026-05-15",
+          "role_evidence": "First outlet to explicitly frame Trump's uranium demand as a negotiating posture rather than a firm policy, citing his own contradictory statements.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698015+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9160258e2293",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The draft MOU includes commitments from Iran to never pursue nuclear weapons and to negotiate over a suspension of its uranium enrichment program.",
+          "date": "2026-05-24",
+          "role_evidence": "Exclusive scoop on the draft deal's structure showed uranium seizure deferred to a 60-day negotiation window, reinforcing the leverage framing.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698020+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d685e573077f",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump said the U.S. will work with Iran to retrieve and destroy its highly enriched uranium if he is able to cut a deal.",
+          "date": "2026-06-07",
+          "role_evidence": "Meet the Press interview in which Trump himself framed the uranium demand as conditional on deal-making, amplified to a mass audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698024+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "de4dd71d1517",
+          "name": "Iran International",
+          "url": "https://www.iranintl.com/en/202605253062",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Iranian officials continue to insist that the country's nuclear program and stockpile of highly enriched uranium should only be addressed in later stages of a broader agreement.",
+          "date": "2026-05-25",
+          "role_evidence": "Detailed reporting on the sequencing dispute in negotiations framed the uranium demand as one chip in a larger transactional exchange.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698028+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The genuine proliferation danger posed by the stockpile and Iran's history of concealment, which provides the strategic rationale for the threat",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader may dismiss the threat as pure bluff, missing that it is anchored in a real security concern that gives it credibility",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941799+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The operational and technical impossibility of executing the threat, which undermines its credibility as a coercive tool",
+          "found_in_framing": "Operational Feasibility & Military Risk",
+          "impact": "Reader may overestimate the threat's bargaining power, not knowing that Iran can reasonably assess the demand as militarily unfeasible",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941801+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own red lines and stated conditions for a deal, which constrain what leverage the threat can actually extract",
+          "found_in_framing": "Iranian Sovereignty & Resistance Narrative",
+          "impact": "Reader cannot assess whether the threat is likely to produce a deal or instead harden Iranian resistance and escalate the conflict",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941804+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698033+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3d7a95c3",
+      "name": "Global Economic & Energy Shock",
+      "question": "How is the uranium standoff — and the broader U.S.-Iran war — disrupting global energy markets and the world economy?",
+      "key_claim": "The uranium ultimatum and the associated war have closed the Strait of Hormuz, triggering an oil price shock that is inflicting real economic pain on American consumers and global markets.",
+      "description": "This framing connects Trump's uranium demand to its macroeconomic consequences: the Strait of Hormuz closure, spiking oil prices, and the IEA's warning of a summer 'red zone.' Financial media and energy analysts are the primary carriers, treating the uranium standoff as a variable in commodity markets.",
+      "emphasizes": "Oil price movements tied to negotiation signals; the Strait of Hormuz as a chokepoint for 20% of global energy; consumer price impacts; the IEA's supply warnings.",
+      "downplays": "The nuclear security rationale; the human cost of the war; the legal and constitutional dimensions.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Oil prices post weekly loss as U.S. and Iran signal progress toward a deal (CNBC)",
+        "Oil market could enter 'red zone' by July as stocks dwindle ahead of summer travel season: IEA chief (CNBC)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "3568b7f12ee8",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The warring sides remain at loggerheads over Tehran's enriched uranium stockpile and tolls on the strategically vital Strait of Hormuz.",
+          "date": "2026-05-22",
+          "role_evidence": "Consistently linked uranium negotiation signals to same-day oil price movements, making the economic framing the dominant lens for financial audiences.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698038+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2077b52f32f4",
+          "name": "International Energy Agency (IEA)",
+          "url": "https://www.cnbc.com/2026/05/21/oil-price-today-iran-war-strait-hormuz-trump.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The oil market will reach a 'red zone' this summer if Hormuz does not reopen.",
+          "date": "2026-05-21",
+          "role_evidence": "IEA's formal warning gave institutional credibility to the economic-shock framing and was widely cited across financial media.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698042+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0b788666d3aa",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/donald-trump-final-determination-iran-deal-pending-strait-hormuz-12009530",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Opening the Strait is the most important thing, so this deal is worth doing.",
+          "date": "2026-05-30",
+          "role_evidence": "Quoted analyst framing that subordinated the uranium question to the economic imperative of reopening the Strait.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698046+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The nuclear security rationale for the uranium ultimatum and the proliferation danger that motivates the demand",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader sees only economic pain without understanding the security logic that justifies the risk, leading to incomplete cost-benefit analysis",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941807+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human cost of the war itself—casualties, displacement, infrastructure destruction—beyond consumer price impacts",
+          "found_in_framing": "Iranian Sovereignty & Resistance Narrative",
+          "impact": "Reader focuses on economic shock to American consumers while missing the humanitarian toll on Iranian civilians",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941814+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence that the threat is primarily a negotiating tactic that could be resolved through diplomacy, rather than a firm commitment to war",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader may assume the economic shock is inevitable and permanent, missing that a deal could restore energy markets",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941817+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698051+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "28bd844c",
+      "name": "Factual Accuracy & Intelligence Credibility",
+      "question": "Are Trump's claims about Iran's nuclear capabilities and the success of prior strikes accurate, and do they justify the uranium seizure demand?",
+      "key_claim": "Trump has repeatedly overstated the destruction of Iran's nuclear program and the imminence of an Iranian bomb, undermining the factual basis for the uranium ultimatum.",
+      "description": "This framing scrutinizes the evidentiary claims underpinning the uranium demand: whether prior strikes truly 'obliterated' Iran's program, whether Iran is actually 'a week' from a bomb, and whether the IAEA has verified any of the administration's assertions. Fact-checkers and independent analysts are the primary carriers.",
+      "emphasizes": "Contradictions between Trump's 'obliterated' claim and intelligence assessments; the gap between 60%-enriched uranium and a deployable weapon; IAEA's lack of site access; expert timelines vs. administration timelines.",
+      "downplays": "The genuine proliferation concern; the strategic logic of the demand; the IAEA's own pre-war concerns about Iran's stockpile.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Assessing Trump's Claims on Iran's Nuclear and Missile Capabilities (FactCheck.org)",
+        "FactChecking Trump's Prime-Time Address on Iran (FactCheck.org)",
+        "Trump said he 'obliterated' Iran's nuclear program. Now he's threatening to bomb Iran again. (NBC News)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7bb0b9b3fd28",
+          "name": "FactCheck.org",
+          "url": "https://www.factcheck.org/2026/03/assessing-trumps-claims-on-irans-nuclear-and-missile-capabilities/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Experts told us it would likely take months for Iran to enrich uranium to that level and then much longer before the 'bomb-making material' could be made into a weapon.",
+          "date": "2026-03-03",
+          "role_evidence": "Systematic fact-check of Trump's nuclear claims, first to document the gap between administration assertions and expert/intelligence assessments.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698056+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6b2cea1f0d14",
+          "name": "FactCheck.org (April)",
+          "url": "https://www.factcheck.org/2026/04/factchecking-trumps-prime-time-address-on-iran/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The operation didn't 'remove or help account for 400 kilograms of uranium enriched to 60 percent U-235 that Iran already had stockpiled.'",
+          "date": "2026-04-02",
+          "role_evidence": "Second major fact-check tied to Trump's prime-time address, reaching a broad audience and directly challenging the 'obliterated' narrative.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698060+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cc9c69c16179",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/iran/trump-said-obliterated-irans-nuclear-program-now-says-us-may-bomb-iran-rcna260383",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Having highly enriched uranium does not mean having a weapon — it's just one step in a complex chain.",
+          "date": "2026-02-26",
+          "role_evidence": "High-traffic news article juxtaposing Trump's 'obliterated' claim with new bombing threats, amplifying the credibility-gap framing to a mass audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698065+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f7be71b9c4c0",
+          "name": "Daryl Kimball / Arms Control Association",
+          "url": "https://www.armscontrol.org/act/2026-03/focus/trumps-chaotic-and-reckless-iran-nuclear-policy",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "It is clear that it would take Iran years to fully rebuild its enrichment plants.",
+          "date": "2026-03-01",
+          "role_evidence": "Repeatedly cited by fact-checkers as the authoritative expert voice pushing back on administration timeline claims.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698070+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The genuine proliferation concern that underlies the demand, even if Trump has overstated the imminence and severity",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader may dismiss the entire demand as baseless, missing that there is a real security rationale beneath the rhetorical exaggeration",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941820+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The IAEA's own pre-war concerns about Iran's stockpile and the agency's assessment of proliferation risk",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader attributes all concern to Trump's dishonesty, missing that international nuclear experts shared genuine proliferation worries",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941823+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The operational planning that has actually occurred and the military capability that has been deployed, which suggests the threat may be more than rhetorical",
+          "found_in_framing": "Operational Feasibility & Military Risk",
+          "impact": "Reader may underestimate the seriousness of the threat, treating it as pure bluster rather than backed by actual military preparation",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941826+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698075+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a3dd0b2e",
+      "name": "Hard-Right Betrayal / Deal Too Soft",
+      "question": "Is Trump's willingness to negotiate a deal that defers or softens the uranium demand a capitulation that betrays the original war aims?",
+      "key_claim": "Any ceasefire or deal that does not immediately and verifiably eliminate Iran's uranium stockpile and enrichment capability represents a dangerous concession to a terror-sponsoring regime.",
+      "description": "This framing comes from hawkish Republicans and pro-Israel voices who supported the war but fear Trump is settling for a weak deal. They argue that a 60-day negotiation window on uranium, combined with sanctions relief, repeats the mistakes of the Obama-era JCPOA and leaves Iran's nuclear infrastructure intact.",
+      "emphasizes": "The risk of Iran reconstituting its program during a ceasefire; the precedent of the JCPOA's failure; Iran's continued 'death to America' posture; the cost to U.S. credibility.",
+      "downplays": "The economic and human cost of continued war; the operational difficulty of forced seizure; the diplomatic progress achieved.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump's emerging plan to end Iran war draws criticism from hard-line Republicans (PBS NewsHour)",
+        "Sen. Cruz: Outcome allowing Iran to enrich uranium would be 'a disastrous mistake' (X/PBS)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7b0006c76190",
+          "name": "Sen. Ted Cruz (R-TX)",
+          "url": "https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"If the result of all that is to be an Iranian regime... able to enrich uranium & develop nuclear weapons... that outcome would be a disastrous mistake.\"",
+          "date": "2026-05-25",
+          "role_evidence": "Cruz was the first prominent Republican to publicly break with Trump over the softening uranium demand, originating the 'betrayal' framing on X.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698080+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9beec428acbe",
+          "name": "Sen. Lindsey Graham (R-SC)",
+          "url": "https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Graham panned any deal that would leave Iran perceived as being a dominant force in the region.",
+          "date": "2026-05-25",
+          "role_evidence": "Graham amplified the betrayal framing through media appearances, warning against any deal leaving Iran with regional dominance.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698086+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6ec96beaf0fa",
+          "name": "Sen. Roger Wicker (R-MS) / Senate Armed Services Committee",
+          "url": "https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Wicker questioned the merit of a proposed 60-day ceasefire, saying it would be a 'disaster.'",
+          "date": "2026-05-25",
+          "role_evidence": "As Armed Services Committee chair, Wicker's opposition gave the 'deal too soft' framing institutional congressional weight.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698090+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The economic and human cost of continued war, including casualties, displacement, and global economic disruption",
+          "found_in_framing": "Global Economic & Energy Shock",
+          "impact": "Reader sees only the risk of Iranian reconstitution without weighing the cost of the war needed to prevent it",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941828+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The operational difficulty of forced seizure and the military risk that makes complete elimination of the stockpile unfeasible",
+          "found_in_framing": "Operational Feasibility & Military Risk",
+          "impact": "Reader may demand an outcome (complete elimination) that is militarily impossible, leading to unrealistic negotiating positions",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941831+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The diplomatic progress that has been achieved and the terms that Iran has accepted, which may represent genuine security gains",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader dismisses any ceasefire as capitulation without evaluating whether it actually constrains Iran's program",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941833+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own red lines and the limits of what coercion can extract, which constrain what a 'complete' deal can realistically achieve",
+          "found_in_framing": "Iranian Sovereignty & Resistance Narrative",
+          "impact": "Reader may demand concessions that Iran will never accept, making a deal impossible and perpetuating the war",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941836+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698095+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2ab83b9a",
+      "name": "Iranian Sovereignty & Resistance Narrative",
+      "question": "Does the U.S. demand to seize or destroy Iran's uranium constitute an illegal act of imperial aggression against a sovereign nation?",
+      "key_claim": "The U.S. ultimatum to seize Iran's uranium is an act of imperial coercion that violates Iranian sovereignty, international law, and Iran's right to peaceful nuclear energy under the NPT.",
+      "description": "This framing, carried primarily by Iranian state media, Al Jazeera, and some international left-leaning outlets, casts the uranium demand as the latest episode in a pattern of U.S. and Israeli aggression. It foregrounds Iran's stated civilian nuclear rights and frames the seizure threat as theft of sovereign property.",
+      "emphasizes": "Iran's NPT right to peaceful enrichment; the illegality of the war under international law; Iran's framing of the demand as 'surrender'; the human cost of U.S.-Israeli strikes on civilian nuclear infrastructure.",
+      "downplays": "Iran's IAEA non-compliance record; the weapons-proximity of 60%-enriched uranium; Iran's own threats and proxy activities.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "'Wipe it out faster': Trump again threatens Iran over nuclear enrichment (Al Jazeera)",
+        "Iranian state TV: Tehran rejected U.S. proposal as amounting to surrender (PBS NewsHour)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "757038380f07",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2025/7/28/wipe-it-out-faster-trump-again-threatens-iran-over-nuclear-enrichment",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran will 'never respond to the language of threat and intimidation,' Araghchi said.",
+          "date": "2025-07-28",
+          "role_evidence": "Al Jazeera consistently foregrounded Iranian officials' sovereignty arguments and framed U.S. threats as coercive, reaching a large international audience.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698099+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ab50390dc755",
+          "name": "Iranian Foreign Minister Abbas Araghchi",
+          "url": "https://www.aljazeera.com/news/2025/7/28/wipe-it-out-faster-trump-again-threatens-iran-over-nuclear-enrichment",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Iran needs uranium enrichment for medical and civilian purposes.",
+          "date": "2025-07-28",
+          "role_evidence": "Araghchi was the primary Iranian government voice articulating the sovereignty and civilian-rights framing in international media.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698103+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3d25d72c555a",
+          "name": "Iranian State Television / IRNA",
+          "url": "https://www.pbs.org/newshour/world/trump-calls-irans-response-to-ceasefire-proposal-unacceptable",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Tehran rejected the U.S. proposal as amounting to surrender, insisting on 'full Iranian sovereignty over the Strait of Hormuz.'",
+          "date": "2026-05-04",
+          "role_evidence": "Iranian state media formally institutionalized the sovereignty-violation framing as the official government counter-narrative.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698108+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2abd67d33180",
+          "name": "RT (Russia Today)",
+          "url": "https://www.naturalnews.com/2026-05-22-trump-seize-destroy-iran-enriched-uranium.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Removing Iran's uranium mostly about 'PR' – Trump (RT, May 15, 2026)",
+          "date": "2026-05-15",
+          "role_evidence": "RT amplified the framing that the uranium demand is performative coercion rather than genuine security policy, aligning with the sovereignty narrative.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:19.698113+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The genuine proliferation danger posed by near-weapons-grade uranium and the legitimate security rationale for the demand",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader sees only imperial coercion without understanding the security concern that motivates the demand, leading to one-sided analysis",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941840+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's IAEA non-compliance record, including concealment of nuclear sites and weapons-related research",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader may accept Iran's framing as a peaceful nuclear program without knowing about documented violations and deception",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941859+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own threats, proxy activities, and regional aggression that provide context for why the U.S. views its nuclear program as a threat",
+          "found_in_framing": "Nonproliferation Imperative",
+          "impact": "Reader sees the U.S. demand as unprovoked imperialism without understanding Iran's own destabilizing behavior",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941865+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence that the threat is primarily a negotiating tactic rather than a firm commitment to war, which affects the framing of 'surrender'",
+          "found_in_framing": "Diplomatic Leverage & Deal-Making",
+          "impact": "Reader may overstate the coerciveness of the demand, missing that it is designed to extract concessions through negotiation rather than force",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-08T09:02:41.941869+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-08T09:02:19.698118+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing are framings centered on: (1) domestic U.S. political theater and Trump's rhetorical positioning relative to his base versus establishment Republicans; (2) the perspective of U.S. allies (Israel, Gulf states, Europe) who have distinct security interests and may view unilateral action as either necessary or destabilizing; (3) technical/scientific framings on uranium enrichment timelines, verification methods, and whether the stated objective is technically achievable; (4) historical precedent analysis comparing this to past U.S. military interventions or threats (Iraq WMD claims, Libya, etc.) and lessons learned; (5) the humanitarian dimension—potential civilian casualties, regional destabilization, or refugee impacts. These gaps span left-to-right and technical-to-human dimensions.",
+  "fingerprints": [],
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-08T09:02:44.972868+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "coverage_lean": {
+    "event": "U.S. President Trump stated that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
+    "rated_outlets": 9,
+    "distribution": {
+      "left": 3,
+      "lean-left": 3,
+      "center": 3,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 33,
+      "lean-left": 33,
+      "center": 33,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 6,
+    "center": 3,
+    "right_of_center": 0,
+    "lean_index": -1.0,
+    "resolve_rate": 1.0,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 0,
+      "examples": []
+    },
+    "non_news_carriers": 7,
+    "matched": [
+      {
+        "outlet": "The Nation",
+        "carrier": "Israel National News (Arutz Sheva)",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "contains"
+      },
+      {
+        "outlet": "MSNBC",
+        "carrier": "MSNBC / ms.now Opinion",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "The Nation",
+        "carrier": "Iran International",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "contains"
+      },
+      {
+        "outlet": "Washington Post",
+        "carrier": "Washington Post",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Newsweek",
+        "carrier": "Newsweek",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Scientific American",
+        "carrier": "Scientific American",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Axios",
+        "carrier": "Axios",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 12,
+        "political": 7,
+        "social": 0,
+        "institutional": 11,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 18,
+      "framings_with_vested": 7,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 29,
+    "framings": [
+      {
+        "framing_id": "8799ce0f",
+        "name": "Nonproliferation Imperative",
+        "n_carriers": 7,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "3f67acc3f8f6",
+            "display": "Benjamin Netanyahu",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "eb9cb3deab94",
+            "display": "Israel National News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "aac776509a31",
+            "display": "Pete Hegseth",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2e311acf",
+        "name": "Operational Feasibility & Military Risk",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "15397572e6db",
+            "display": "Bulletin of the Atomic Scientists",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "56d675bb130f",
+            "display": "Scientific American",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "697c8565619f",
+            "display": "Scott Roecker",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0cb9681f2dcd",
+            "display": "The Washington Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "75408462",
+        "name": "Legality & Constitutional Authority",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "15397572e6db",
+            "display": "Bulletin of the Atomic Scientists",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b6cfa06a52f3",
+            "display": "Arms Control Association",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "93b3a277a11b",
+            "display": "Iran Deputy FM Kazem Gharibabadi",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b9992a50",
+        "name": "Diplomatic Leverage & Deal-Making",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "29891ac52b1b",
+            "display": "Iran International",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d300797e5c62",
+            "display": "MSNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3d7a95c3",
+        "name": "Global Economic & Energy Shock",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "21c05aa58eb0",
+            "display": "International Energy Agency",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "28bd844c",
+        "name": "Factual Accuracy & Intelligence Credibility",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6ed3ebf2d358",
+            "display": "FactCheck.org",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "37d930024f30",
+            "display": "FactCheck.org",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "22bfee43a40c",
+            "display": "Daryl Kimball",
+            "actor_type": "person",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "a3dd0b2e",
+        "name": "Hard-Right Betrayal / Deal Too Soft",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5e2771e8a859",
+            "display": "Sen. Lindsey Graham",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5ff3bf9b69b3",
+            "display": "Sen. Roger Wicker",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d2dcbd16199e",
+            "display": "Sen. Ted Cruz",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2ab83b9a",
+        "name": "Iranian Sovereignty & Resistance Narrative",
+        "n_carriers": 5,
+        "primary": 4,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "5d2f4c4222d4",
+            "display": "Iranian Foreign Minister Abbas Araghchi",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "f0de61d68336",
+            "display": "Iranian State Television",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0e62c7c7991c",
+            "display": "RT",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "15397572e6db",
+        "display": "Bulletin of the Atomic Scientists",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Legality & Constitutional Authority",
+          "Operational Feasibility & Military Risk"
+        ]
+      },
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Diplomatic Leverage & Deal-Making",
+          "Factual Accuracy & Intelligence Credibility"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Operational Feasibility & Military Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Global Economic & Energy Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Diplomatic Leverage & Deal-Making",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Global Economic & Energy Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Factual Accuracy & Intelligence Credibility",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legality & Constitutional Authority",
+        "b": "Diplomatic Leverage & Deal-Making",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legality & Constitutional Authority",
+        "b": "Global Economic & Energy Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legality & Constitutional Authority",
+        "b": "Factual Accuracy & Intelligence Credibility",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Diplomatic Leverage & Deal-Making",
+        "b": "Global Economic & Energy Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Diplomatic Leverage & Deal-Making",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Diplomatic Leverage & Deal-Making",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic & Energy Shock",
+        "b": "Factual Accuracy & Intelligence Credibility",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic & Energy Shock",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Economic & Energy Shock",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Factual Accuracy & Intelligence Credibility",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Factual Accuracy & Intelligence Credibility",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Legality & Constitutional Authority",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Diplomatic Leverage & Deal-Making",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Factual Accuracy & Intelligence Credibility",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Nonproliferation Imperative",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Legality & Constitutional Authority",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Hard-Right Betrayal / Deal Too Soft",
+        "b": "Iranian Sovereignty & Resistance Narrative",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Operational Feasibility & Military Risk",
+        "b": "Legality & Constitutional Authority",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Legality & Constitutional Authority",
+        "b": "Hard-Right Betrayal / Deal Too Soft",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Diplomatic Leverage & Deal-Making",
+        "b": "Factual Accuracy & Intelligence Credibility",
+        "shared": 1,
+        "jaccard": 0.143
+      }
+    ],
+    "by_actor_type": {
+      "person": 4,
+      "organization": 5,
+      "news": 13,
+      "official": 7
+    },
+    "connectivity": {
+      "bridge_ratio": 0.069,
+      "siloed_share": 0.897,
+      "mean_jaccard": 0.042
+    },
+    "structure_note": "2 of 29 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  }
+}

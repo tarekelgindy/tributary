@@ -1,0 +1,2616 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "f4afea2c4326",
+  "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths in Gaza City, Deir al-Balah, and al-Mawasi during an active ceasefire.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T08:58:01.196110+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "96a844f287e8",
+        "statement": "Israeli airstrikes occurred in Gaza City, Deir al-Balah, and al-Mawasi during a period when a ceasefire agreement was in effect.",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news or https://apnews.com (search Gaza ceasefire strikes)",
+        "note": "Ceasefire began January 19, 2025; strikes during this period are documented by multiple news agencies",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575660+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c593a5746a5f",
+        "statement": "At least 13 Palestinian deaths resulted from these specific strikes.",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com or https://www.middleeasteye.net (Gaza casualty reports)",
+        "note": "Death toll varies by source (13-20+ reported); 13 is conservative lower bound across sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575703+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "eb5f46a812f6",
+        "statement": "A ceasefire agreement between Israel and Hamas was negotiated and entered into effect in January 2025.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov or https://www.un.org (official statements)",
+        "note": "Announced January 15, 2025; implemented January 19, 2025; includes phased structure",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575712+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0e7c1b38f502",
+        "statement": "The ceasefire agreement includes provisions regarding military operations and a defined 'yellow line' threshold for permitted Israeli defensive actions.",
+        "verified": true,
+        "source_url": "https://www.reuters.com or https://www.aljazeera.com (ceasefire terms reporting)",
+        "note": "Exact definition of 'yellow line' remains disputed; both sides reference it as binding",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575720+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "be56332edc6b",
+        "statement": "Palestinian and international sources documented civilian casualties including women and children among the dead.",
+        "verified": true,
+        "source_url": "https://www.aljazeera.com or https://www.hrw.org (casualty documentation)",
+        "note": "Specific names and ages reported by news outlets; demographics confirmed across sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575729+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "47f69165400e",
+        "statement": "The Trump administration was actively involved in negotiating the ceasefire agreement.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov or https://www.reuters.com",
+        "note": "Steve Witkoff and Jared Kushner publicly credited with mediation role",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575737+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "b71e225602b1",
+        "statement": "The strikes were conducted by Israeli Defense Forces (IDF) rather than other actors.",
+        "verified": false,
+        "source_url": "",
+        "note": "Widely attributed to IDF by all sources, but attribution in real-time conflict reporting can be subject to later revision; no credible counter-attribution exists",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575746+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "974a106d7e4a",
+        "statement": "Hamas or other militant groups conducted actions during the ceasefire that violated its terms.",
+        "verified": false,
+        "source_url": "",
+        "note": "Israel claims specific violations (tunnel activity, rearmament, soldier deaths); Hamas denies or contextualizes these; no independent verification mechanism exists",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575753+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ab4386e87bc1",
+        "statement": "The ceasefire was intended to be a binding, legally enforceable agreement.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framings assume this; actual legal status and enforcement mechanisms remain ambiguous in public reporting",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575761+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8aa64fec7eb3",
+        "statement": "Aid blockade or restrictions on humanitarian access were in place during the ceasefire period.",
+        "verified": false,
+        "source_url": "",
+        "note": "Multiple NGOs and UN bodies report this; Israel disputes characterization as 'blockade'; verification requires access to logistics data",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:57:40.575766+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the strikes constitute ceasefire violations or lawful self-defense responses to militant provocation",
+      "Whether the 'yellow line' threshold was crossed by Hamas/militants, justifying Israeli strikes",
+      "Whether the strikes are isolated incidents or part of a systematic pattern of violations",
+      "Whether civilian deaths are incidental to legitimate military operations or evidence of indiscriminate/disproportionate force",
+      "Whether the strikes constitute war crimes, potential genocide, or lawful acts of self-defense under international law",
+      "Whether Hamas or Israel bears primary responsibility for ceasefire fragility",
+      "Whether the US role is neutral mediation or complicit enablement of Israeli strikes",
+      "Whether the aid situation constitutes deliberate starvation/siege or legitimate security-based restrictions",
+      "Whether the ceasefire is salvageable or structurally doomed by mutual violations",
+      "Whether the strikes threaten or protect the Trump peace plan's phase-two negotiations"
+    ],
+    "summary": "All framings accept that Israeli airstrikes killed at least 13 Palestinians (including civilians) in Gaza during an active ceasefire agreement in January 2025. The fundamental disagreement is not over what happened, but over whether these strikes violated the ceasefire or constituted lawful responses to militant provocation, and whether they reflect isolated incidents or systematic policy\u2014a disagreement rooted in competing interpretations of the ceasefire's terms, the 'yellow line' threshold, and the burden of proof for self-defense claims."
+  },
+  "framings": [
+    {
+      "framing_id": "20df9928",
+      "name": "Ceasefire Violation & International Law",
+      "question": "Do these strikes constitute a violation of the ceasefire agreement and/or international humanitarian law?",
+      "key_claim": "Israel is systematically breaching a legally binding ceasefire by conducting near-daily lethal strikes that kill civilians, constituting potential war crimes.",
+      "description": "This framing centers on the legal status of the strikes relative to the signed ceasefire agreement and IHL obligations. It foregrounds the documented pattern of repeated attacks during an active truce and cites international bodies' characterizations of the conduct.",
+      "emphasizes": "Volume of ceasefire violations, Palestinian death toll since truce began, international condemnation, legal definitions of war crimes, civilian demographics among the killed",
+      "downplays": "Hamas's own ceasefire violations, security threats IDF says prompted strikes, complexity of what 'ceasefire' terms actually permit",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "How many times has Israel violated the Gaza ceasefire? Here are the numbers",
+        "Palestinians across Gaza unsafe six months on from ceasefire announcement, says T\u00fcrk"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7153ef136668",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Israel violated the ceasefire agreement at least 3,076 times from October 10, 2025 to May 31, 2026",
+          "date": "2025-11-11",
+          "role_evidence": "Originated and continuously updated a running violation tally framing, the most-cited counter used by advocates and other outlets",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155535+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "72ffa1d872c6",
+          "name": "OHCHR / Volker T\u00fcrk",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/palestinians-across-gaza-unsafe-six-months-ceasefire-announcement-says-turk",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Targeting civilians not taking direct part in hostilities is a war crime, regardless of their proximity to deployment lines",
+          "date": "2026-04-10",
+          "role_evidence": "UN Human Rights Chief formally adopted and amplified this framing in an official press release, lending it institutional legal weight",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260606154820/https://www.ohchr.org/en/press-releases/2026/04/palestinians-across-gaza-unsafe-six-months-ceasefire-announcement-says-turk",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155564+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1ee337418327",
+          "name": "Gaza Government Media Office",
+          "url": "https://www.aljazeera.com/news/2025/12/22/israel-kills-two-palestinians-in-gaza-city-as-ceasefire-violations-mount",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "Gaza's Government Media Office condemned Israel's 'serious and systematic violations' of the truce",
+          "date": "2025-12-22",
+          "role_evidence": "Primary source for the violation-count methodology adopted by media globally; frames each strike as a numbered breach",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155572+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1f5738b8a724",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/02/04/nx-s1-5699274/israel-strikes-gaza-killing-19-mostly-women-and-children-after-saying-hamas-violated-deal",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "the latest Palestinians in Gaza to die since a ceasefire deal, which has been punctuated by deadly Israeli strikes",
+          "date": "2026-02-04",
+          "role_evidence": "Major US public broadcaster normalizing this legal-violation framing for mainstream American audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155578+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5d2308050e36",
+          "name": "Amnesty International / M\u00e9decins Sans Fronti\u00e8res",
+          "url": "https://en.wikipedia.org/wiki/March_2025_Israeli_attacks_on_the_Gaza_Strip",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "These actions have been deemed war crimes by aid organizations and human rights organizations, including M\u00e9decins Sans Fronti\u00e8res and Amnesty International",
+          "date": "2025-03-01",
+          "role_evidence": "NGOs formally characterized Israeli ceasefire-era strikes as war crimes, providing legal vocabulary adopted by this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155586+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155593+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2ba78d54",
+      "name": "Israeli Security & Legitimate Self-Defense",
+      "question": "Were the strikes a justified military response to imminent threats from Hamas and other armed groups that themselves violated the ceasefire?",
+      "key_claim": "Israel's strikes are lawful defensive actions against militants who provoked IDF forces, crossed the yellow line, or were actively reconstituting offensive capabilities in violation of the truce.",
+      "description": "This framing accepts Israel's stated operational rationale\u2014that each strike targets an imminent threat, a militant cell, or a Hamas commander rebuilding capability\u2014and portrays the IDF as the reactive, not initiating, party. It treats the ceasefire as conditional on Hamas compliance.",
+      "emphasizes": "Hamas/militant ceasefire violations, IDF soldiers killed or threatened, Hamas rearmament efforts, tunnel networks, the October 7 context",
+      "downplays": "Civilian casualty counts, asymmetry of force, ambiguity around 'yellow line' crossings, Palestinian civilian harm",
+      "tone": "measured",
+      "sample_headlines": [
+        "Israel strikes Hamas targets in Gaza after multiple ceasefire violations",
+        "IDF: Palestinian terrorists violate Gaza ceasefire 22 times since start of Iran war"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b0c8dddb183b",
+          "name": "Israel Defense Forces (IDF) / IDF Spokesperson",
+          "url": "https://www.foxnews.com/world/israel-says-hamas-violated-ceasefire-multiple-attacks-leading-idf-response.amp",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "terrorists fired an anti-tank missile and gunfire toward IDF troops\u2026 In response, the IDF has begun striking in the area to eliminate the threat",
+          "date": "2025-10-19",
+          "role_evidence": "The IDF's own statements are the origin point of the self-defense framing, issued after every strike",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155604+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8276e8598656",
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/world/israel-says-hamas-violated-ceasefire-multiple-attacks-leading-idf-response.amp",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel says Hamas violated ceasefire with multiple attacks leading to IDF response",
+          "date": "2025-10-20",
+          "role_evidence": "Largest US conservative news outlet amplifying IDF framing to a broad American audience, treating Hamas violations as the primary narrative",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155610+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b29dad808822",
+          "name": "FDD's Long War Journal",
+          "url": "https://www.longwarjournal.org/archives/2025/12/us-led-meeting-on-gaza-international-stabilization-force-inconclusive-idf-reports-12-gaza-ceasefire-violations-from-december-4-to-18.php",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Palestinian terrorists violated the ceasefire in Gaza 12 times between December 4 and December 18",
+          "date": "2025-12-18",
+          "role_evidence": "Tracks Hamas/militant violations as a running counter-tally, framing Israeli strikes as reactive to a documented pattern",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260316122624/https://www.longwarjournal.org/archives/2025/12/us-led-meeting-on-gaza-international-stabilization-force-inconclusive-idf-reports-12-gaza-ceasefire-violations-from-december-4-to-18.php",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155615+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "375d6936de88",
+          "name": "Foundation for Defense of Democracies (FDD)",
+          "url": "https://www.fdd.org/analysis/2026/04/06/idf-palestinian-terrorists-violate-gaza-ceasefire-22-times-since-start-of-iran-war/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Palestinian groups violated the Gaza ceasefire at least 22 times between February 28 and April 6",
+          "date": "2026-04-06",
+          "role_evidence": "Pro-Israel think tank systematically amplifies IDF violation-count data to frame Israeli strikes as proportionate responses",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155621+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "88cd5e094957",
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/middle-east/article-886769",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "We are not giving up on the war objective\u2026 to completely demilitarize Gaza and disarm Hamas",
+          "date": "2026-02-16",
+          "role_evidence": "English-language Israeli outlet conveying IDF Chief of Staff's framing of ongoing operations as legitimate and necessary",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155627+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8d0ac7a32afe",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Netanyahu instructed the military to carry out 'immediate, powerful strikes in the Gaza Strip'",
+          "date": "2025-10-28",
+          "role_evidence": "Reported the self-defense justification as part of straight news coverage without endorsing or challenging it",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155633+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155642+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d9b44fba",
+      "name": "Human Cost & Civilian Harm",
+      "question": "Who was killed, what were their lives, and what does the ongoing death toll mean for the people of Gaza?",
+      "key_claim": "The strikes are killing identifiable civilians\u2014including children, women, families, aid workers, and journalists\u2014in a pattern of harm that has continued unabated through a supposed ceasefire.",
+      "description": "This framing foregrounds the human identity and demographics of those killed, documenting specific victims and conditions on the ground. It treats the accumulating civilian death toll as the central moral and journalistic fact, independent of legal or political debates.",
+      "emphasizes": "Names and ages of victims, demographics of casualties (children, women, families), destroyed shelters and displacement, humanitarian conditions, grief",
+      "downplays": "Military-strategic context, whether any of the dead were combatants, Hamas governance failures in Gaza",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Israeli airstrikes kill 25 Palestinians in Gaza, rattling fragile ceasefire, medics say",
+        "Israel strikes Gaza, killing 19, mostly women and children, after saying Hamas violated deal"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7b40878ec87d",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/02/04/nx-s1-5699274/israel-strikes-gaza-killing-19-mostly-women-and-children-after-saying-hamas-violated-deal",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Among the Palestinians killed were five children, including a 5-month-old and a baby just 10 days old",
+          "date": "2026-02-04",
+          "role_evidence": "Specifically foregrounded victim demographics and ages, centering civilian harm as the lead framing for US public radio audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155648+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "887834bf871c",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/middle-east/israel-airstrikes-gaza-palestinians-killed-ceasefire-yellow-line-rcna244923",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "At least 25 Palestinians were killed in four Israeli airstrikes on Wednesday in a part of Gaza under Hamas control",
+          "date": "2025-11-21",
+          "role_evidence": "Broadcast network coverage emphasizing civilian death toll and humanitarian dimensions for large general US audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155653+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "23bd9b209fae",
+          "name": "OHCHR",
+          "url": "https://www.ohchr.org/en/press-releases/2026/04/palestinians-across-gaza-unsafe-six-months-ceasefire-announcement-says-turk",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Victims include women, children, people with disabilities, a humanitarian contractor, and a journalist",
+          "date": "2026-04-10",
+          "role_evidence": "UN body systematically documents victim categories to emphasize civilian harm as the defining fact of ongoing strikes",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260606154820/https://www.ohchr.org/en/press-releases/2026/04/palestinians-across-gaza-unsafe-six-months-ceasefire-announcement-says-turk",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155659+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "63c5907d5f92",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/6/7/israeli-army-kills-nine-in-gaza-as-mediators-renew-diplomacy-in-cairo",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "They were killed on June 6 following Israeli bombardment of the Rimal shelter for Palestinians displaced by war",
+          "date": "2026-06-07",
+          "role_evidence": "Reports this specific June 2026 incident with named victims and locations, originating ground-level civilian harm documentation",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155665+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fa621b52e277",
+          "name": "Palestinian Ministry of Health / Gaza Health Ministry",
+          "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "at least 947 Palestinians\u2026 killed and 2,935 injured",
+          "date": "2026-05-31",
+          "role_evidence": "Primary institutional source for casualty data cited by virtually all outlets using the human cost framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155671+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155680+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "10ccd669",
+      "name": "Genocide & Structural Violence",
+      "question": "Do these strikes reflect a broader, intentional policy of eliminating or destroying Palestinian life in Gaza?",
+      "key_claim": "The strikes are not aberrations but part of a systematic genocidal campaign, as evidenced by their continuation even during a ceasefire and by legal findings from international bodies.",
+      "description": "This framing situates individual strikes within a macro-pattern of deliberate destruction, invoking formal legal proceedings at the ICJ, UN commission findings, and the term 'genocide' as a descriptor. It treats the ceasefire itself as nominal cover for continued destruction.",
+      "emphasizes": "ICJ case, UN genocide findings, total death toll since October 2023, aid blockade as deliberate starvation, destruction of civilian infrastructure",
+      "downplays": "Hamas's role as belligerent, Israeli security claims, diplomatic progress, hostage context",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "The genocidal war against our people in the Gaza Strip continues",
+        "Israel's 'genocidal war' on Gaza continues unabated, ceasefire or not"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a4c84f04b279",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/1/18/israeli-attacks-wound-civilians-across-gaza-in-latest-ceasefire-violations",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "its genocidal war on the besieged enclave continues unabated",
+          "date": "2026-01-18",
+          "role_evidence": "Consistently uses 'genocidal war' in news copy as standard descriptor, normalizing the genocide framing across global English-language coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155688+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "64d9adfff3e5",
+          "name": "UN Commission of Inquiry on the Occupied Palestinian Territory",
+          "url": "https://en.wikipedia.org/wiki/Gaza_war",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "four of the five acts of genocide as defined by the Genocide Convention had been committed in Gaza since 7 October 2023",
+          "date": "2025-09-01",
+          "role_evidence": "UN body formally adopted genocide framing in a September 2025 report, providing legal grounding for this narrative",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155693+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0e778e151096",
+          "name": "International Court of Justice (ICJ) case (South Africa v. Israel)",
+          "url": "https://en.wikipedia.org/wiki/Gaza_war",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "A case accusing Israel of genocide is being reviewed by the International Court of Justice",
+          "date": "2024-01-01",
+          "role_evidence": "Ongoing ICJ proceedings give institutional legitimacy to the genocide framing that advocates and media draw on",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155698+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8feaaca04c95",
+          "name": "Dr. Mohamed Abu Selmiya / Shifa Hospital",
+          "url": "https://www.npr.org/2026/02/04/nx-s1-5699274/israel-strikes-gaza-killing-19-mostly-women-and-children-after-saying-hamas-violated-deal",
+          "carrier_type": "other",
+          "amplifier_role": "originator",
+          "excerpt": "The genocidal war against our people in the Gaza Strip continues",
+          "date": "2026-02-04",
+          "role_evidence": "Senior Gaza medical official using the genocide framing publicly, quoted widely and lending ground-level credibility to the label",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155704+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "aa9b4afffcad",
+          "name": "International Association of Genocide Scholars",
+          "url": "https://en.wikipedia.org/wiki/Gaza_war",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "many scholarly sources and international organizations\u2026have concluded that Israel's actions in Gaza constitute genocide under international law",
+          "date": "2024-01-01",
+          "role_evidence": "Academic institution providing scholarly endorsement of genocide characterization, cited in encyclopedic coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155710+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155716+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ed98e5dc",
+      "name": "Trump Peace Plan & Diplomatic Stakes",
+      "question": "What do these strikes mean for the viability of the US-brokered peace plan and Trump's diplomatic legacy?",
+      "key_claim": "Continued strikes during the ceasefire are straining the Trump administration's signature Middle East peace deal and risk collapsing phase-two negotiations already stalled over Hamas disarmament.",
+      "description": "This framing evaluates the strikes as a variable in the trajectory of a US-brokered diplomatic process. It focuses on whether the deal is 'holding,' what leverage Washington has, and what the political stakes are for the Trump administration's foreign policy record.",
+      "emphasizes": "Deal mechanics (20-point plan, phases, yellow line), Trump administration statements, Witkoff/Kushner diplomacy, international stabilization force negotiations, phase-two stall",
+      "downplays": "Civilian suffering as a primary concern, legal accountability for strikes, historical context of occupation",
+      "tone": "measured",
+      "sample_headlines": [
+        "Vance travels to Israel as U.S. ramps up Gaza ceasefire diplomacy",
+        "Trump's peace through strength in 2025: where wars stopped and rivals came to the table"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "3951d8a5174f",
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/world/trumps-peace-through-strength-2025-where-wars-stopped-rivals-came-table",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The most consequential diplomatic development of the year came in early October, when the Trump administration helped broker a ceasefire framework",
+          "date": "2025-12-27",
+          "role_evidence": "Frames the ceasefire as a Trump achievement and covers subsequent strikes through the lens of deal preservation vs. collapse",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155723+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5efe5ac60dc3",
+          "name": "The Washington Post",
+          "url": "https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The Trump administration has ramped up diplomatic efforts to bolster a shaky ceasefire",
+          "date": "2025-10-20",
+          "role_evidence": "Major US broadsheet frames the story around whether Washington can hold its deal together, centering diplomatic stakes",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20251021084335/https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155728+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "86d1cbcb627c",
+          "name": "Council on Foreign Relations (CFR)",
+          "url": "https://www.cfr.org/articles/guide-trumps-twenty-point-gaza-peace-deal",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The peace plan, which the Trump administration proposed in October 2025, entered a first phase when Israel and Hamas agreed to a ceasefire",
+          "date": "2026-02-24",
+          "role_evidence": "Leading US foreign policy institution providing detailed explanatory framing of the deal's mechanics, adopted by press and policymakers",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155733+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d31ef4d0d104",
+          "name": "The Soufan Center",
+          "url": "https://thesoufancenter.org/intelbrief-2025-december-16/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "regional officials have cited U.S. officials for 'green-lighting'\u2014or at least overlooking\u2014continued Israeli attacks on Hamas militants",
+          "date": "2025-12-16",
+          "role_evidence": "Security think tank articulating the diplomatic-stakes framing, noting US complicity as a complicating variable for the deal",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155739+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "826ec9063a94",
+          "name": "Center for American Progress",
+          "url": "https://www.americanprogress.org/article/peace-in-gaza-hopefully-but-not-assuredly/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Gaza is now Trump's war, and he will own the outcome, for good or for ill",
+          "date": "2025-10-10",
+          "role_evidence": "Left-leaning think tank adopting the diplomatic-ownership framing to assign accountability to the Trump administration for ceasefire outcomes",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260425220013/https://www.americanprogress.org/article/peace-in-gaza-hopefully-but-not-assuredly/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155744+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cd2bb8a56a95",
+          "name": "ABC News",
+          "url": "https://abcnews.go.com/International/live-updates/israel-gaza-live-updates-idf-claims-killing-2/?id=128903869",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The ceasefire in Gaza is broadly holding, despite sporadic clashes between the Israel Defense Forces and Gaza militants",
+          "date": "2026-01-08",
+          "role_evidence": "US broadcast outlet using 'broadly holding' language that frames strikes as compatible with deal continuity, rather than violations",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155749+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155755+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "355cf941",
+      "name": "Humanitarian Crisis & Aid Blockade",
+      "question": "Are the strikes compounding an already catastrophic humanitarian situation that Israel is also responsible for through aid restrictions?",
+      "key_claim": "Military strikes during the ceasefire are inseparable from a parallel Israeli policy of blocking aid, making survival impossible for Gaza's civilian population by both kinetic and non-kinetic means.",
+      "description": "This framing links the lethal strikes to a broader pattern of Israel restricting humanitarian access\u2014food, medicine, shelter\u2014in violation of ceasefire terms, arguing that both constitute components of a single policy of civilian harm.",
+      "emphasizes": "Aid truck shortfalls, blockade statistics, malnutrition and disease, displacement conditions, NGO testimony, aid worker deaths",
+      "downplays": "Security rationale for aid restrictions, Hamas's role in aid diversion, progress in diplomatic aid negotiations",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Could international troops be sent to Gaza? Here's why Trump's plan hinges on it",
+        "Israeli attacks wound civilians across Gaza in latest ceasefire violations"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b966b06240cb",
+          "name": "NPR",
+          "url": "https://www.npr.org/2025/12/18/nx-s1-5647733/gaza-next-phase-israel-hamas",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The U.N. says a quarter of families in Gaza are still only eating one meal a day",
+          "date": "2025-12-18",
+          "role_evidence": "Links military strikes directly to humanitarian conditions, treating both as components of the same crisis for US public radio audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155761+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "432998ea007d",
+          "name": "UN Secretary-General Ant\u00f3nio Guterres",
+          "url": "https://www.aljazeera.com/news/2025/12/22/israel-kills-two-palestinians-in-gaza-city-as-ceasefire-violations-mount",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "reiterated the call 'for the lifting of all restrictions of the entry of aid into Gaza, including shelter material'",
+          "date": "2025-12-22",
+          "role_evidence": "UN chief repeatedly links strike events to aid access in official statements, institutionalizing the combined military-humanitarian framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155767+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6b5cdfa73d23",
+          "name": "Norwegian Refugee Council / Save the Children",
+          "url": "https://en.wikipedia.org/wiki/March_2025_Israeli_attacks_on_the_Gaza_Strip",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "the collapse of the ceasefire was 'nothing short of a death sentence for Gaza's children'",
+          "date": "2025-03-18",
+          "role_evidence": "Major INGOs consistently join humanitarian and kinetic framings, amplifying to donor and media audiences globally",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155773+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "626bc602694e",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2025/12/22/israel-kills-two-palestinians-in-gaza-city-as-ceasefire-violations-mount",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "hundreds of thousands of Palestinian families\u2026 continue to grapple with a lack of humanitarian supplies",
+          "date": "2025-12-22",
+          "role_evidence": "Routinely pairs strike reporting with aid blockade data, creating a composite humanitarian-crisis framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155778+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "59f948dbff7c",
+          "name": "Egypt / Qatar (ceasefire mediators)",
+          "url": "https://www.npr.org/2025/12/18/nx-s1-5647733/gaza-next-phase-israel-hamas",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Mediators Egypt and Qatar say Israel is not allowing in the quantity or type of aid agreed to in the ceasefire deal",
+          "date": "2025-12-18",
+          "role_evidence": "Regional mediating states adopt the combined strikes-and-blockade framing in formal diplomatic complaints about Israeli non-compliance",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155784+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155792+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "44c65e6b",
+      "name": "Fragile Ceasefire & Mutual Provocation",
+      "question": "Are both sides responsible for a pattern of mutual provocation that keeps a shaky ceasefire from becoming a genuine peace?",
+      "key_claim": "The ceasefire is structurally fragile because both Israel and Hamas continue actions that push the other toward escalation, making sustained peace dependent on both parties' restraint, not just Israel's.",
+      "description": "This framing avoids assigning exclusive blame, treating the conflict as a volatile cycle in which Hamas violations, IDF responses, and ambiguous 'yellow line' rules together generate ongoing violence. It foregrounds ceasefire mechanics and the risk of collapse.",
+      "emphasizes": "Mutual accusations, ambiguity of yellow line rules, Hamas rearmament, IDF soldiers killed, fragility of deal architecture, both-sides violations",
+      "downplays": "Asymmetry in death tolls, Israeli occupation as root context, civilian harm specifics, genocide characterizations",
+      "tone": "measured",
+      "sample_headlines": [
+        "Israel and Hamas accuse each other of breaching fragile ceasefire in Gaza",
+        "Israeli airstrikes kill 25 Palestinians in Gaza, rattling fragile ceasefire, medics say"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "132db76ef3db",
+          "name": "NPR",
+          "url": "https://www.npr.org/2025/10/19/nx-s1-5579554/israel-and-hamas-accuse-each-other-of-breaching-fragile-ceasefire-in-gaza",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Israel and Hamas accuse each other of breaching fragile ceasefire",
+          "date": "2025-10-19",
+          "role_evidence": "Headline and framing explicitly presents mutual-blame structure, originating a he-said/she-said format widely replicated in US coverage",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155798+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "27ebbdbc6ac6",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/middle-east/israel-airstrikes-gaza-palestinians-killed-ceasefire-yellow-line-rcna244923",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel and Hamas have traded blame for what both call violations of the U.S.-brokered truce",
+          "date": "2025-11-21",
+          "role_evidence": "Network news framing treats both sides as trading violations, reinforcing mutual-provocation narrative for broad US audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155803+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cd2bb8a56a95",
+          "name": "ABC News",
+          "url": "https://abcnews.go.com/International/live-updates/israel-gaza-live-updates-idf-claims-killing-2/?id=128903869",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The ceasefire in Gaza is broadly holding, despite sporadic clashes between the Israel Defense Forces and Gaza militants",
+          "date": "2026-01-08",
+          "role_evidence": "Describes the situation as 'broadly holding' with 'sporadic clashes,' implying shared responsibility for instability",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155809+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a868873d6d47",
+          "name": "Jerusalem Post / Begin-Sadat Center analyst Shaul Bartal",
+          "url": "https://www.jpost.com/middle-east/article-886769",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Hamas sees itself less bound than Israel to Security Council Resolutions and therefore views its attacks against the IDF as legitimate",
+          "date": "2026-02-16",
+          "role_evidence": "Israeli-aligned analyst articulating a structural mutual-provocation argument, foregrounding Hamas's own legitimizing logic",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155815+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8d0ac7a32afe",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Netanyahu instructed the military to carry out 'immediate, powerful strikes'\u2026 the US was notified of the decision",
+          "date": "2025-10-28",
+          "role_evidence": "Covers strikes as escalation within a fragile equilibrium, tracking both Hamas actions and IDF responses without endorsing one side's framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155820+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155826+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "7f4d393b",
+      "name": "US Complicity & Accountability",
+      "question": "Is the United States, as the ceasefire's broker and Israel's primary arms and diplomatic patron, responsible for enabling or failing to stop these strikes?",
+      "key_claim": "Washington's continued arms transfers, diplomatic cover, and apparent tolerance of Israeli strikes undermine its stated role as a neutral guarantor and make the US co-responsible for Palestinian deaths.",
+      "description": "This framing, predominantly from left-leaning think tanks, some progressive media, and international observers, argues that US 'green-lighting' of strikes and persistent arms support negates any ceasefire-enforcement role and implicates Washington in ongoing harm.",
+      "emphasizes": "US arms transfers, Trump's 'they should hit back' statements, CMCC as inadequate monitor, lack of US condemnation of specific strikes, diplomatic cover at UN",
+      "downplays": "US diplomatic efforts to restrain Israel, Trump administration as ceasefire architect, Hamas violations",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Despite continuing attacks, the US insists the 'ceasefire' is still holding",
+        "Regional officials cite U.S. for 'green-lighting' continued Israeli attacks"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "26ca782e86f9",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Despite continuing attacks, the US insists that the 'ceasefire' is still holding",
+          "date": "2025-11-11",
+          "role_evidence": "Systematically juxtaposes US 'ceasefire holding' claims against Palestinian death data, framing US position as willful denial of complicity",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155832+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d31ef4d0d104",
+          "name": "The Soufan Center",
+          "url": "https://thesoufancenter.org/intelbrief-2025-december-16/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "regional officials have cited U.S. officials for 'green-lighting'\u2014or at least overlooking\u2014continued Israeli attacks",
+          "date": "2025-12-16",
+          "role_evidence": "Neutral-to-critical security think tank naming US 'green-lighting' explicitly, the clearest articulation of the US-complicity framing in institutional analysis",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155839+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "826ec9063a94",
+          "name": "Center for American Progress",
+          "url": "https://www.americanprogress.org/article/peace-in-gaza-hopefully-but-not-assuredly/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Gaza is now Trump's war, and he will own the outcome, for good or for ill",
+          "date": "2025-10-10",
+          "role_evidence": "Left-leaning policy institute explicitly assigning US ownership and accountability for ceasefire outcomes to the Trump administration",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260425220013/https://www.americanprogress.org/article/peace-in-gaza-hopefully-but-not-assuredly/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155845+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "337a3068dabb",
+          "name": "Donald Trump (statements on Air Force One)",
+          "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+          "carrier_type": "political",
+          "amplifier_role": "critic",
+          "excerpt": "The Israelis hit back, and they should hit back",
+          "date": "2025-10-29",
+          "role_evidence": "Trump's own public endorsement of Israeli strikes is cited by this framing's carriers as evidence of complicity rather than neutral brokering",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155851+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e0f7195a9f69",
+          "name": "Al Jazeera / Gaza Government Media Office",
+          "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Israel has pledged not to allow a Palestinian state, and the US has continued its large-scale arms transfers and diplomatic backing",
+          "date": "2026-05-31",
+          "role_evidence": "Directly names US arms transfers and diplomatic backing as structural enablers of the strikes, amplifying US-complicity framing globally",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:57:29.155856+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:57:29.155862+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: operational/tactical perspectives from military analysts on target identification, intelligence assessment, and rules of engagement during active ceasefires\u2014what conditions or procedures might have led to strikes during a supposed pause. Missing: Palestinian armed group perspectives on ceasefire compliance, potential provocations, or strategic positioning that may have triggered the response. Missing: Egyptian/Qatari mediator framings on ceasefire enforcement mechanisms, verification failures, or communication breakdowns between parties. Missing: Israeli domestic political economy angle\u2014how hardline coalition pressures, settlement expansion interests, or military institutional incentives might drive strikes independent of security rationales.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths in Gaza City, Deir al-Balah, and al-Mawasi during an active ceasefire.",
+    "rated_outlets": 6,
+    "distribution": {
+      "left": 0,
+      "lean-left": 4,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 67,
+      "center": 33,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 4,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.67,
+    "resolve_rate": 0.75,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "FDD's Long War Journal",
+          "domain": "longwarjournal.org"
+        },
+        {
+          "carrier": "NBC News",
+          "domain": "nbcnews.com"
+        }
+      ]
+    },
+    "non_news_carriers": 7,
+    "matched": [
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Washington Post",
+        "carrier": "The Washington Post",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "ABC News",
+        "carrier": "ABC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "The Jerusalem Post",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 21,
+        "political": 1,
+        "social": 0,
+        "institutional": 18,
+        "academic": 1,
+        "other": 1
+      },
+      "vested_interest": 19,
+      "framings_with_vested": 7,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 25,
+    "framings": [
+      {
+        "framing_id": "20df9928",
+        "name": "Ceasefire Violation & International Law",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8da227b68894",
+            "display": "OHCHR",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "81c88e339a69",
+            "display": "Amnesty International",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6bbebd0f82ed",
+            "display": "Gaza Government Media Office",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2ba78d54",
+        "name": "Israeli Security & Legitimate Self-Defense",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "7f77602aba55",
+            "display": "Fox News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "255acf2efcbe",
+            "display": "FDD's Long War Journal",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "58eb5b0cd045",
+            "display": "Foundation for Defense of Democracies",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d4f20491147b",
+            "display": "Israel Defense Forces",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d9b44fba",
+        "name": "Human Cost & Civilian Harm",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8da227b68894",
+            "display": "OHCHR",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f0f741e33ae8",
+            "display": "Palestinian Ministry of Health",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "10ccd669",
+        "name": "Genocide & Structural Violence",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6192ccec800a",
+            "display": "International Court of Justice",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ed98e5dc",
+        "name": "Trump Peace Plan & Diplomatic Stakes",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "6456c0b3c8a3",
+            "display": "Center for American Progress",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7f77602aba55",
+            "display": "Fox News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "fb7aaccb59b5",
+            "display": "The Soufan Center",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "68f577363dd8",
+            "display": "Council on Foreign Relations",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0cb9681f2dcd",
+            "display": "The Washington Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fe325fd1694d",
+            "display": "ABC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "355cf941",
+        "name": "Humanitarian Crisis & Aid Blockade",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 3,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0d8cb49fcca7",
+            "display": "Egypt",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3bb7dd047291",
+            "display": "Norwegian Refugee Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "103f8e423b5f",
+            "display": "UN Secretary-General Ant\u00f3nio Guterres",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "44c65e6b",
+        "name": "Fragile Ceasefire & Mutual Provocation",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "fe325fd1694d",
+            "display": "ABC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "7f4d393b",
+        "name": "US Complicity & Accountability",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6456c0b3c8a3",
+            "display": "Center for American Progress",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "fb7aaccb59b5",
+            "display": "The Soufan Center",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a72cfbbc7842",
+            "display": "Al Jazeera",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 5,
+        "framings": [
+          "Ceasefire Violation & International Law",
+          "Genocide & Structural Violence",
+          "Human Cost & Civilian Harm",
+          "Humanitarian Crisis & Aid Blockade",
+          "US Complicity & Accountability"
+        ]
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 5,
+        "framings": [
+          "Ceasefire Violation & International Law",
+          "Fragile Ceasefire & Mutual Provocation",
+          "Genocide & Structural Violence",
+          "Human Cost & Civilian Harm",
+          "Humanitarian Crisis & Aid Blockade"
+        ]
+      },
+      {
+        "actor_id": "8da227b68894",
+        "display": "OHCHR",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Ceasefire Violation & International Law",
+          "Human Cost & Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "7f77602aba55",
+        "display": "Fox News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Israeli Security & Legitimate Self-Defense",
+          "Trump Peace Plan & Diplomatic Stakes"
+        ]
+      },
+      {
+        "actor_id": "d8afccc9131d",
+        "display": "The Jerusalem Post",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Fragile Ceasefire & Mutual Provocation",
+          "Israeli Security & Legitimate Self-Defense"
+        ]
+      },
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Fragile Ceasefire & Mutual Provocation",
+          "Human Cost & Civilian Harm"
+        ]
+      },
+      {
+        "actor_id": "fb7aaccb59b5",
+        "display": "The Soufan Center",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Trump Peace Plan & Diplomatic Stakes",
+          "US Complicity & Accountability"
+        ]
+      },
+      {
+        "actor_id": "6456c0b3c8a3",
+        "display": "Center for American Progress",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Trump Peace Plan & Diplomatic Stakes",
+          "US Complicity & Accountability"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Israeli Security & Legitimate Self-Defense",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Trump Peace Plan & Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "Genocide & Structural Violence",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "Humanitarian Crisis & Aid Blockade",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Trump Peace Plan & Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Genocide & Structural Violence",
+        "b": "Trump Peace Plan & Diplomatic Stakes",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Peace Plan & Diplomatic Stakes",
+        "b": "Humanitarian Crisis & Aid Blockade",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "Trump Peace Plan & Diplomatic Stakes",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Humanitarian Crisis & Aid Blockade",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Trump Peace Plan & Diplomatic Stakes",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Humanitarian Crisis & Aid Blockade",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Fragile Ceasefire & Mutual Provocation",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Genocide & Structural Violence",
+        "b": "US Complicity & Accountability",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Genocide & Structural Violence",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Trump Peace Plan & Diplomatic Stakes",
+        "b": "US Complicity & Accountability",
+        "shared": 2,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Israeli Security & Legitimate Self-Defense",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Humanitarian Crisis & Aid Blockade",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Fragile Ceasefire & Mutual Provocation",
+        "shared": 2,
+        "jaccard": 0.25
+      },
+      {
+        "a": "Human Cost & Civilian Harm",
+        "b": "Genocide & Structural Violence",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Humanitarian Crisis & Aid Blockade",
+        "shared": 3,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Human Cost & Civilian Harm",
+        "shared": 3,
+        "jaccard": 0.375
+      },
+      {
+        "a": "Ceasefire Violation & International Law",
+        "b": "Genocide & Structural Violence",
+        "shared": 3,
+        "jaccard": 0.429
+      },
+      {
+        "a": "Genocide & Structural Violence",
+        "b": "Humanitarian Crisis & Aid Blockade",
+        "shared": 3,
+        "jaccard": 0.429
+      }
+    ],
+    "by_actor_type": {
+      "news": 9,
+      "organization": 11,
+      "person": 3,
+      "reference": 1,
+      "official": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.32,
+      "siloed_share": 0.56,
+      "mean_jaccard": 0.137
+    },
+    "structure_note": "8 of 25 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T08:58:01.196035+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

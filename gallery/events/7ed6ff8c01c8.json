@@ -1,0 +1,2464 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "7ed6ff8c01c8",
+  "event": "The U.S. Office of Foreign Assets Control announced sanctions against Iran's Persian Gulf Strait Authority under Executive Order 13224.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-06-10T08:49:39.929807+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "5df96f8c08cb",
+        "statement": "The U.S. Office of Foreign Assets Control (OFAC) announced sanctions against Iran's Persian Gulf Strait Authority under Executive Order 13224.",
+        "verified": true,
+        "source_url": "https://home.treasury.gov/news/press-releases",
+        "note": "OFAC maintains official SDN (Specially Designated Nationals) list and press releases documenting all designations.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.997268+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "500941062a42",
+        "statement": "The Strait of Hormuz carries approximately 20% of global oil trade.",
+        "verified": true,
+        "source_url": "https://www.eia.gov/",
+        "note": "U.S. Energy Information Administration regularly publishes Hormuz chokepoint data; figure is widely cited in energy security literature.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998004+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "fa52dfc01f55",
+        "statement": "Iran's Persian Gulf Strait Authority has demanded transit fees/permissions from vessels transiting the Strait of Hormuz.",
+        "verified": true,
+        "source_url": "https://www.irgcnews.ir/",
+        "note": "Iranian state media and shipping industry reports document the fee regime; amounts and payment methods vary by source.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998037+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3237ba96719e",
+        "statement": "OFAC has explicitly warned against cryptocurrency payments (including Bitcoin and USDT) to sanctioned Iranian entities.",
+        "verified": true,
+        "source_url": "https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-compliance",
+        "note": "OFAC publishes guidance on crypto compliance; specific warnings on Iran crypto payments are documented in advisory materials.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998050+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "69e11d5aa498",
+        "statement": "The United Nations Convention on the Law of the Sea (UNCLOS) establishes a right of transit passage through international straits.",
+        "verified": true,
+        "source_url": "https://www.un.org/depts/los/convention_agreements/texts/unclos/unclos_e.pdf",
+        "note": "UNCLOS Article 38 codifies transit passage; this is primary international law text.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998060+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "007d3badd7f0",
+        "statement": "The PGSA is operationally linked to or controlled by the Islamic Revolutionary Guard Corps (IRGC).",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by Maximum Pressure framing; Iranian Sovereign Rights framing does not dispute but frames differently; no independent verification of organizational structure or command authority available in open sources.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998076+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f9be29015973",
+        "statement": "Iran's transit-fee demands constitute a violation of UNCLOS Article 38 transit passage rights.",
+        "verified": false,
+        "source_url": "",
+        "note": "International Maritime Law Violation framing asserts this; Iranian Sovereign Rights framing invokes wartime exception; no international court has adjudicated this specific dispute.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998111+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "da73ba31f62b",
+        "statement": "Shippers face a genuine compliance dilemma: paying Iran's tolls risks U.S. secondary sanctions; refusing risks IRGC action.",
+        "verified": false,
+        "source_url": "",
+        "note": "Sanctions Compliance Trap framing emphasizes this; shipping industry reports suggest real operational pressure, but no systematic audit of actual enforcement outcomes exists.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998131+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "532bb6441b48",
+        "statement": "The PGSA sanction is part of a broader 'Economic Fury' campaign designed to strangle the Iranian regime.",
+        "verified": false,
+        "source_url": "",
+        "note": "Maximum Pressure framing uses this language; no official U.S. government document uses this exact phrase or confirms this as stated policy objective.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998143+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1c865d4175ea",
+        "statement": "Iran's Hormuz toll regime is a wartime response to U.S.-Israeli military action.",
+        "verified": false,
+        "source_url": "",
+        "note": "Iranian Sovereign Rights framing asserts this causality; timeline and causal chain are contested and not independently verified.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998151+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4d73137b2f36",
+        "statement": "The PGSA designation materially increases the likelihood of a U.S.-Iran military escalation.",
+        "verified": false,
+        "source_url": "",
+        "note": "Geopolitical Escalation Ladder framing claims this; no predictive model or expert consensus quantifies this risk.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-06-10T08:49:26.998161+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the PGSA is a legitimate sovereign regulatory mechanism (Iranian Sovereign Rights) vs. an IRGC front for terrorism financing (Maximum Pressure) vs. an unlawful toll scheme violating UNCLOS (International Maritime Law Violation).",
+      "Whether Iran's transit-fee regime is a wartime exception to peacetime maritime law (Iranian Sovereign Rights) or a violation of non-suspendable transit passage rights (International Maritime Law Violation).",
+      "Whether the sanction is an effective counterterrorism/pressure tool (Maximum Pressure) or a destabilizing escalation that makes diplomacy harder (Geopolitical Escalation Ladder).",
+      "Whether the primary harm is to Iran's regime (Maximum Pressure) or to global energy security and shipping industry compliance (Global Energy Security & Economic Shock, Sanctions Compliance Trap).",
+      "Whether the sanction is primarily a strategic tool (Maximum Pressure, International Maritime Law Violation) or a domestic political performance ahead of midterms (Political Fallout & Domestic Pressure).",
+      "Whether crypto payment prohibitions represent necessary sanctions enforcement (Digital Assets & Crypto Enforcement Frontier) or an overreach into decentralized finance (implied by Sanctions Compliance Trap).",
+      "Whether the U.S. is the aggressor (Iranian Sovereign Rights) or Iran is the aggressor (Maximum Pressure, International Maritime Law Violation)."
+    ],
+    "summary": "All framings accept that OFAC designated the PGSA under EO 13224, that Iran has imposed transit fees/permissions in the Strait of Hormuz (which carries ~20% of global oil), that UNCLOS establishes transit passage rights, and that shippers now face compliance pressure from both Iran and U.S. sanctions. The disagreements are entirely about legitimacy (Is the PGSA lawful? Is it a wartime exception?), causality (Who escalated first?), and consequences (Does this strengthen U.S. pressure, weaken global energy security, or both?)."
+  },
+  "framings": [
+    {
+      "framing_id": "71e52530",
+      "name": "Maximum Pressure / Anti-Terror Enforcement",
+      "question": "Does this designation successfully neutralize an IRGC-linked extortion scheme and advance U.S. national security goals?",
+      "key_claim": "The PGSA is an IRGC front operation laundering terrorism financing as maritime tolls, and sanctioning it is a necessary and effective step in the 'Economic Fury' campaign to strangle the Iranian regime.",
+      "description": "This framing treats the PGSA designation as a straightforward and successful counterterrorism enforcement action under E.O. 13224, directly tying transit fees to IRGC revenue and weapons programs. It foregrounds the Trump administration's 'Economic Fury' brand and frames sanctions as proof of Iranian desperation.",
+      "emphasizes": "IRGC linkage, illegality of tolls, terrorism financing nexus, demonstrated pressure campaign success, secondary sanctions teeth",
+      "downplays": "Diplomatic complexity, shipping industry dilemma, broader war context, Iran's stated rationale, civilian human cost of the Hormuz closure",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Economic Fury Targets Iranian Maritime Extortion",
+        "Treasury Sanctions Persian Gulf Strait Authority Over IRGC Links, Warns Ships Against Dealings With Group"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "afd4a16181df",
+          "name": "U.S. Department of the Treasury / OFAC",
+          "url": "https://home.treasury.gov/news/press-releases/sb0507",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "\"The Iranian military's latest attempt to extort global maritime trade is proof that Economic Fury has left the regime desperate for cash\"",
+          "date": "2026-05-27",
+          "role_evidence": "Issued the official designation and coined the 'Economic Fury targets Iranian maritime extortion' frame in the press release",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.748977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1d2cca11fbc1",
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/international/article-897575",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "US has \"deprived the regime of revenue for their weapons programs, terrorist proxies, and nuclear ambitions\"",
+          "date": "2026-05-27",
+          "role_evidence": "Among the first outlets to amplify the Treasury's IRGC-extortion-scheme framing verbatim, reaching pro-Israel and hawkish audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751350+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "26d7fd6df171",
+          "name": "The Hill",
+          "url": "https://thehill.com/homenews/administration/5899263-iran-strait-hormuz-us-treasury-sanctions/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Treasury said the PGSA is a \"new attempt by Iran's Islamic Revolutionary Guard Corps (IRGC) to monetize its campaign of state-sponsored terror\"",
+          "date": "2026-05-27",
+          "role_evidence": "Major centrist political outlet spreading the Treasury's state-sponsored terror framing to mainstream US audience",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751367+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ce880a3e25cb",
+          "name": "GlobalSecurity.org",
+          "url": "https://www.globalsecurity.org/wmd/library/news/iran/2026/05/iran-260527-treasury01.htm",
+          "carrier_type": "other",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Starved of revenue and severely weakened by Operation Epic Fury, Iran's IRGC extorts vessels transiting the Strait of Hormuz\"",
+          "date": "2026-05-27",
+          "role_evidence": "Republished full Treasury press release, ensuring wide circulation of official government framing to security-focused audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751374+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "beb4b4b541f4",
+          "name": "White House / Trump Administration",
+          "url": "https://home.treasury.gov/news/press-releases/sb0507",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Action taken under NSPM-2, \"instituting a campaign of maximum economic pressure on Iran\"",
+          "date": "2026-05-27",
+          "role_evidence": "Presidential National Security Presidential Memorandum 2 officially underpins the 'Economic Fury' campaign that this designation is framed within",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751380+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751399+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ffe2f749",
+      "name": "International Maritime Law Violation",
+      "question": "Does Iran's PGSA regime and the U.S. sanctions response align with or violate UNCLOS and established international maritime law?",
+      "key_claim": "Iran's transit-permission scheme in the Strait of Hormuz has no basis in international law under UNCLOS, which guarantees non-suspendable transit passage through international straits, making the PGSA an illegitimate legal construct.",
+      "description": "This framing is primarily analytical and legalistic, asking whether the PGSA's permission-based transit regime, and the U.S. response to it, conform to the UN Convention on the Law of the Sea. It foregrounds Articles 37\u201344 of UNCLOS, the right of transit passage, and IMO standards. It is carrier-neutral in that both U.S. supporters and international legal scholars use it, though to different ends.",
+      "emphasizes": "UNCLOS transit passage rights, IMO norms, coastal-state limits on strait regulation, precedent-setting risk for other chokepoints",
+      "downplays": "Wartime context, practical enforcement realities, the political motivations of U.S. sanctions",
+      "tone": "measured",
+      "sample_headlines": [
+        "Countering Iran's Latest 'Smart Control' Gambit in the Strait of Hormuz",
+        "Defying Maritime Law: Iran Imposes New Shipping Rules in Strait of Hormuz, Threatens Global Oil Trade",
+        "Who Controls the Strait of Hormuz? Iran's Toll Plan Could Reshape Global Maritime Order"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "4e936c7bc5f9",
+          "name": "The Washington Institute for Near East Policy",
+          "url": "https://www.washingtoninstitute.org/policy-analysis/countering-irans-latest-smart-control-gambit-strait-hormuz",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "\"Under Articles 37\u201338 and 44 of UNCLOS, Hormuz qualifies as an international strait through which transit may not be impeded or suspended even in wartime\"",
+          "date": "2026-06-03",
+          "role_evidence": "Published the most detailed early legal analysis of the PGSA vs. UNCLOS conflict, providing the policy-wonk framework widely cited afterward",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751564+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8747bb66e274",
+          "name": "Gulf News",
+          "url": "https://gulfnews.com/amp/story/world/mena/defying-maritime-law-iran-imposes-new-shipping-rules-in-strait-of-hormuz-1.500532868",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"International straits used for global navigation are protected under UNCLOS. Ships of all nations have the right of 'transit passage'\"",
+          "date": "2026-05-08",
+          "role_evidence": "Early, widely-read regional outlet that foregrounded the UNCLOS violations framing before the formal OFAC designation",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751576+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c3305f60c359",
+          "name": "TRT World",
+          "url": "https://www.trtworld.com/article/a632f8f6753c",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran and Oman \"may not convert the strait into a permission-based corridor\" per international maritime law",
+          "date": "2026-06-09",
+          "role_evidence": "Turkish state-affiliated outlet with a wide global reach that presented both Iranian and UNCLOS-expert perspectives on the legal dispute",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751581+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5ea98e032840",
+          "name": "Sanjeet Ruhal, International Maritime Law Institute (IMLI), Malta",
+          "url": "https://www.trtworld.com/article/a632f8f6753c",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Iran and Oman retain sovereignty over their respective territorial seas, but that sovereignty is limited by the right of transit passage\"",
+          "date": "2026-06-09",
+          "role_evidence": "Academic legal expert providing the UNCLOS-based framing cited in multiple media outlets, anchoring the scholarly dimension of this narrative",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751586+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "661498e3688a",
+          "name": "UAE, Bahrain, Kuwait, Qatar, Saudi Arabia (joint IMO warning)",
+          "url": "https://www.washingtoninstitute.org/policy-analysis/countering-irans-latest-smart-control-gambit-strait-hormuz",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "UAE and Gulf partners issued joint warnings via the IMO urging commercial operators not to comply with PGSA",
+          "date": "2026-05-27",
+          "role_evidence": "Five Gulf states formally adopted the international-law-violation framing through an IMO joint warning, giving it multilateral institutional weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751592+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751626+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3f15f461",
+      "name": "Global Energy Security & Economic Shock",
+      "question": "What are the downstream consequences of the PGSA designation and Hormuz blockage for global energy markets, supply chains, and the world economy?",
+      "key_claim": "The combined effect of Iran's Hormuz transit-fee regime and U.S. sanctions criminalizing compliance has created an impossible compliance trap for shippers, deepening the worst maritime energy disruption in history and causing cascading global economic harm.",
+      "description": "This framing focuses on the real-world economic and humanitarian cost of the Hormuz crisis, treating the PGSA sanction as one node in a larger crisis threatening global oil flows, food security, and financial markets. It is adopted by maritime industry outlets, energy analysts, and international economic institutions.",
+      "emphasizes": "20% of global oil through Hormuz, IEA 'largest ever supply disruption' designation, shipping compliance dilemma, $2M/vessel tolls, energy price spikes, cascading supply shocks",
+      "downplays": "U.S. national security goals, IRGC terrorism angle, legalistic debates about UNCLOS",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "U.S. Sanctions Iran's 'Persian Gulf Strait Authority' as Hormuz Transit Fight Escalates",
+        "US Treasury Sanctions Iran's Hormuz Strait Authority",
+        "Asia and the Iran Conflict: Energy Vulnerability and the Imperative for Action"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8a83ab88caf0",
+          "name": "gCaptain",
+          "url": "https://gcaptain.com/u-s-sanctions-irans-persian-gulf-strait-authority-as-hormuz-transit-fight-escalates/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"The Strait of Hormuz normally handles roughly one-fifth of global oil and LNG trade, making the crisis one of the most consequential maritime disruptions in decades\"",
+          "date": "2026-05-27",
+          "role_evidence": "Maritime-specialist outlet that first prominently framed the OFAC action within the lens of industry disruption and the impossible shipping-compliance dilemma",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751639+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dc57bc952cea",
+          "name": "Reuters / U.S. News & World Report",
+          "url": "https://www.usnews.com/news/world/articles/2026-05-27/us-adds-persian-gulf-strait-authority-to-sanctions-list-treasury-website-shows",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Tehran's grip on the strait, the conduit for about a fifth of the global oil supply, has sent the world economy into turmoil\"",
+          "date": "2026-05-27",
+          "role_evidence": "Reuters wire report syndicated globally, driving mainstream adoption of the economic-disruption frame",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751646+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "554ac525cdc5",
+          "name": "International Energy Agency (IEA)",
+          "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "IEA characterized the Hormuz closure as the \"largest supply disruption in the history of the global oil market\"",
+          "date": "2026-03-01",
+          "role_evidence": "Key multilateral institution whose characterization of this as a record-breaking energy crisis gave this framing authoritative global weight",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751652+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8be13d872f49",
+          "name": "Seatrade Maritime News",
+          "url": "https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Control of the Strait is one of the key points of contention in ongoing peace talks between the US and Iran\"",
+          "date": "2026-05-28",
+          "role_evidence": "Specialist shipping trade publication connecting the OFAC action to broader market and peace-talks disruption for industry readers",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260529042920/https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751657+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "53013b64512f",
+          "name": "Middle East Council on Global Affairs",
+          "url": "https://mecouncil.org/publication/asia-and-the-iran-conflict-energy-vulnerability-and-the-imperative-for-action/",
+          "carrier_type": "academic",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"East Asian powers import roughly 60% of their oil from the Middle East, and risks to global energy supply chains are rising significantly\"",
+          "date": "2026-03-12",
+          "role_evidence": "Think tank analysis contextualizing how U.S. sanctions and the Hormuz crisis compound Asia's acute energy vulnerability",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751661+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6679246812fa",
+          "name": "Marine Insight",
+          "url": "https://www.marineinsight.com/u-s-sanctions-irans-persian-gulf-strait-authority-controlling-hormuz-vessel-transit/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"Restrictions in the area have increased energy prices and disrupted global shipping operations\"",
+          "date": "2026-05-28",
+          "role_evidence": "Maritime industry publication passing the energy-shock frame to professional seafarers and shipping operators",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751666+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751671+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "de594c66",
+      "name": "Sanctions Compliance Trap for Industry",
+      "question": "How do the PGSA sanctions create an impossible double-bind for shipping companies, insurers, and financial institutions caught between Iranian threats and U.S. secondary sanctions?",
+      "key_claim": "The OFAC designation puts shipowners in an untenable position: complying with Iran's transit-permission demands risks U.S. secondary sanctions, while refusing risks vessel seizure or attack by the IRGC.",
+      "description": "This framing is primarily voiced by maritime industry professionals, compliance lawyers, and trade publications. It focuses on the operational and legal dilemma facing non-U.S. shippers, banks, insurers, and port agents rather than the geopolitical merits of the sanctions themselves.",
+      "emphasizes": "Secondary sanctions exposure, compliance framework overhaul, insurance market disruption, crypto payment prohibition, vessel operator squeeze",
+      "downplays": "U.S. strategic justifications, Iran's sovereign claims, long-term geopolitical outcomes",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "US Treasury Sanctions Iran's Persian Gulf Strait Authority amid Oil Export Pressure Campaign",
+        "Iran Imposes New Strait of Hormuz Shipping Rules, Defies Maritime Law and Threatens Global Oil Trade"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "78ff23da4c46",
+          "name": "Crypto Briefing",
+          "url": "https://cryptobriefing.com/us-treasury-sanctions-iran-pgsa/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Any wallet addresses associated with the PGSA or its intermediaries will end up on OFAC's SDN list, and compliance teams will need to update their systems accordingly\"",
+          "date": "2026-05-28",
+          "role_evidence": "First to prominently frame the PGSA sanctions specifically through the lens of crypto/fintech compliance risk and secondary-sanctions ripple effects",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751677+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "42041635f54d",
+          "name": "Gulf News / Lloyd's Intelligence (Richard Meade)",
+          "url": "https://gulfnews.com/amp/story/world/mena/defying-maritime-law-iran-imposes-new-shipping-rules-in-strait-of-hormuz-1.500532868",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Shipping companies also fear complying with the Iranian process could expose them to US sanctions\"",
+          "date": "2026-05-08",
+          "role_evidence": "Lloyd's Intelligence analyst and Gulf News surfaced the compliance-trap framing for shipping industry professionals before the formal OFAC designation",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751681+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2974fe1a34a5",
+          "name": "Traders Union",
+          "url": "https://tradersunion.com/news/financial-news/show/2151885-us-treasury-sanctions-strait-hormuz/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Foreign financial institutions risk secondary sanctions for knowingly facilitating major transactions for the designated entity\"",
+          "date": "2026-05-28",
+          "role_evidence": "Financial news outlet amplifying secondary-sanctions risk for global banking and finance audiences",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751685+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "28947e4c853a",
+          "name": "India Shipping News",
+          "url": "https://indiashippingnews.com/us-sanctions-irans-persian-gulf-strait-authority-over-hormuz-traffic-control/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Washington warned companies or ship operators complying with Iranian demands could face \"US sanctions exposure\"",
+          "date": "2026-05-28",
+          "role_evidence": "Regional shipping trade outlet passing the compliance-trap narrative to South Asian maritime operators",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751689+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "82cb9985442c",
+          "name": "gCaptain (industry analyst roundup)",
+          "url": "https://gcaptain.com/u-s-sanctions-irans-persian-gulf-strait-authority-as-hormuz-transit-fight-escalates/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"Industry groups and security analysts have repeatedly warned that traffic is unlikely to normalize until shipowners receive credible guarantees on mine clearance, freedom of navigation, insurance availability and legal exposure\"",
+          "date": "2026-05-27",
+          "role_evidence": "Synthesized industry voices highlighting the multi-layered compliance and operational trap facing commercial shipping",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751694+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751699+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "86d91835",
+      "name": "Iranian Sovereign Wartime Rights",
+      "question": "Does Iran, as a coastal state engaged in an active armed conflict, have the right to regulate and restrict strait transit, rendering U.S. sanctions an unlawful interference with its sovereignty?",
+      "key_claim": "The PGSA is a legitimate wartime regulatory mechanism exercising Iran's sovereign rights over its adjacent waters, and U.S. sanctions against it are an act of economic aggression that compounds the original unlawful U.S.-Israeli attack on Iran.",
+      "description": "This framing, primarily advanced by Iranian state media and aligned international voices, frames Iran's transit management as a defensive sovereign act in wartime, and the OFAC designation as part of a pattern of unlawful U.S. coercion. It contests the U.S. legal characterization at every level.",
+      "emphasizes": "Iran's sovereign rights, wartime exception from peacetime rules, U.S. aggression as root cause, PGSA as a response not an aggression",
+      "downplays": "IRGC linkage, extortion allegations, UNCLOS constraints, global shipping harm caused by the Hormuz closure",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "US Slaps Sanctions on Iran's Strait of Hormuz Authority After Failing to Break Tehran's Control by Force",
+        "Hormuz Disruption the Result of 'Illegal' US-Israeli Attacks on Iran: China"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "5b3ec3b5a180",
+          "name": "Press TV (Iranian state media)",
+          "url": "https://www.presstv.ir/Detail/2026/05/28/769406/US-sanctions-Iran-Strait-of-Hormuz-war-PGSA-Trump-Oman",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "\"The United States has imposed unlawful sanctions on Iran's PGSA in a desperate attempt to prevent the country from exercising its sovereign rights\"",
+          "date": "2026-05-28",
+          "role_evidence": "Iranian state broadcaster that first prominently framed the OFAC action as unlawful interference with sovereign wartime rights",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751704+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c5f693fde929",
+          "name": "Iranian Foreign Ministry (Esmaeil Baghaei)",
+          "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Baghaei described U.S. statements as an attempt to \"blackmail\" an independent UN member state, calling sanctions \"illegal and contrary to the UN Charter\"",
+          "date": "2026-05-28",
+          "role_evidence": "Official Iranian government adoption of the sovereign-rights framing through a formal Foreign Ministry spokesperson statement",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751708+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ff51047fecb9",
+          "name": "Iran's Islamic Revolutionary Guard Corps (IRGC)",
+          "url": "https://www.marineinsight.com/u-s-sanctions-irans-persian-gulf-strait-authority-controlling-hormuz-vessel-transit/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "IRGC \"defended the shipping control measures, saying vessels should use transit corridors designated by Tehran\"",
+          "date": "2026-05-28",
+          "role_evidence": "IRGC formally justified the PGSA system as a legitimate wartime security measure, institutionally endorsing the sovereign-rights framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751734+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "81f6b9a3b2b1",
+          "name": "Kazem Gharibabadi, Iranian Deputy Foreign Minister",
+          "url": "https://www.trtworld.com/article/a632f8f6753c",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"We are now in a state of war, and wartime conditions cannot be governed by peacetime rules\"",
+          "date": "2026-05-08",
+          "role_evidence": "Senior Iranian official publicly articulating the wartime-sovereignty exception argument that underpins this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751740+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "55b38b790a35",
+          "name": "China Foreign Ministry",
+          "url": "https://en.wikipedia.org/wiki/Reactions_to_the_2026_Iran_war",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "\"Iranian sovereignty must be respected\" \u2014 China Foreign Ministry on U.S.-Israeli strikes",
+          "date": "2026-03-01",
+          "role_evidence": "China's formal sovereignty-respect framing provides implicit backing for the Iranian sovereign-rights narrative without directly endorsing PGSA",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751745+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751751+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "703fec3e",
+      "name": "Geopolitical Escalation Ladder",
+      "question": "Does the PGSA sanction, combined with the blockade and military strikes, push the U.S.-Iran conflict toward or away from a diplomatic resolution?",
+      "key_claim": "The PGSA designation is one rung in an escalating U.S.-Iran tit-for-tat that makes a diplomatic deal harder to reach, with sanctions, naval blockades, drone strikes, and peace-talk signals all happening simultaneously in a dangerously unstable dynamic.",
+      "description": "This framing treats the sanction not as a counterterrorism tool or legal matter but as a diplomatic chess move. It asks whether maximum-pressure tools like OFAC designations foreclose or enable negotiations, and highlights the interplay between sanctions, military action, and ongoing U.S.-Iran ceasefire talks.",
+      "emphasizes": "U.S.-Iran war backdrop, concurrent military strikes, Trump's deal-or-escalate posture, Oman mediation, peace-deal fragility",
+      "downplays": "IRGC terrorism designation specifics, UNCLOS technicalities, shipping compliance details",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "US Sanctions Iranian Agency Controlling Strait of Hormuz",
+        "Trump Tells PBS News that Iran Would Not Get Sanctions Relief in Exchange for Giving Up Highly Enriched Uranium",
+        "U.S. Imposes Sanctions on Iranian Agency Trying to Control Shipping in the Strait of Hormuz"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "2839688cc325",
+          "name": "PBS NewsHour / Associated Press",
+          "url": "https://www.pbs.org/newshour/world/u-s-imposes-sanctions-on-iranian-agency-trying-to-control-shipping-in-the-strait-of-hormuz",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"The sanctions move is the latest U.S. effort to use economic leverage on top of military action to push Iran's leadership into an agreement\"",
+          "date": "2026-05-27",
+          "role_evidence": "AP wire and PBS framing positioned the OFAC action explicitly within the war-and-negotiations escalation ladder narrative for mainstream audiences",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751757+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8be13d872f49",
+          "name": "Seatrade Maritime News",
+          "url": "https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"Control of the Strait is one of the key points of contention in ongoing peace talks between the US and Iran\"",
+          "date": "2026-05-28",
+          "role_evidence": "Specialist outlet directly linked the sanctions to contested diplomacy and peace-deal negotiations, framing it as a bargaining chip",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260529042920/https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751762+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b7fb12262004",
+          "name": "Congressional Research Service (CRS)",
+          "url": "https://www.congress.gov/crs-product/R45281",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "\"Congressional concern has risen in the wake of the February-March 2026 conflict as regional stability remains uncertain\"",
+          "date": "2026-05-01",
+          "role_evidence": "CRS report framing sanctions and potential Hormuz closure as a multi-dimensional escalation challenge requiring congressional oversight",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751766+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e8bd3fe8c83e",
+          "name": "Life News Agency",
+          "url": "https://lifenewsagency.com/us-imposes-fresh-sanctions-on-irans-persian-gulf-strait-authority-amid-ongoing-hormuz-tensions/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "\"Sanctions will persist until Iran reopens the strait, addresses its nuclear program, and makes broader concessions\"",
+          "date": "2026-05-28",
+          "role_evidence": "Linked PGSA sanctions to a multi-condition escalation framework, amplifying the coercive-diplomacy/escalation framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751771+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a5f27182e288",
+          "name": "Vanguard Tech (maritime security firm)",
+          "url": "https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "\"The continued US\u2013Iran tit-for-tat actions and competing accusations of ceasefire violations are likely to sustain elevated security risks\"",
+          "date": "2026-05-28",
+          "role_evidence": "Private maritime security firm warning about escalation dynamics as the sanctions coincided with fresh drone strikes",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260529042920/https://www.seatrade-maritime.com/security/us-sanctions-iran-s-persian-gulf-strait-authority",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751786+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751796+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "37b6dc53",
+      "name": "Digital Assets & Crypto Enforcement Frontier",
+      "question": "Does the PGSA designation signal a new phase in which crypto and digital assets become a primary vector for sanctions enforcement against state-linked entities?",
+      "key_claim": "Iran's acceptance of Bitcoin and USDT for Hormuz transit fees, and OFAC's explicit warning against crypto payments to the PGSA, represent a significant new battleground where the U.S. is extending its sanctions enforcement reach into decentralized finance.",
+      "description": "This niche but growing framing is primarily advanced by crypto and fintech media. It treats the PGSA sanction as notable less for its geopolitics than for the explicit prohibition of digital asset payments to a state-linked entity, and the compliance implications for crypto exchanges and payment processors.",
+      "emphasizes": "Bitcoin/USDT toll demands, OFAC SDN list crypto-wallet implications, exchange compliance burden, $344\u2013500M frozen Iran crypto history",
+      "downplays": "Broader military conflict, UNCLOS debate, traditional shipping industry impact, diplomatic negotiations",
+      "tone": "measured",
+      "sample_headlines": [
+        "US Treasury Sanctions Iran's Persian Gulf Strait Authority amid Oil Export Pressure Campaign",
+        "Iran Demanded Transit Fees in Bitcoin and USDT from Ships Passing Through the Strait of Hormuz"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "018b899ee39d",
+          "name": "Crypto Briefing",
+          "url": "https://cryptobriefing.com/us-treasury-sanctions-iran-persian-gulf-strait-authority/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Iran demanded transit fees in Bitcoin and USDT from ships passing through the Strait of Hormuz\"",
+          "date": "2026-05-28",
+          "role_evidence": "Crypto-specialist outlet that most prominently originated and developed the digital-assets enforcement framing of the PGSA designation",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751804+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0ffa13b1b236",
+          "name": "U.S. Treasury / OFAC (guidance text)",
+          "url": "https://home.treasury.gov/news/press-releases/sb0507",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Prohibited transactions include \"payments made via fiat currency, digital assets, offsets, informal swaps, or other in-kind payments\"",
+          "date": "2026-05-27",
+          "role_evidence": "Treasury's explicit inclusion of digital assets in the prohibited-payments list made the U.S. government itself an institutional originator of this framing",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751810+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "208a1c46f0f9",
+          "name": "The Washington Institute for Near East Policy",
+          "url": "https://www.washingtoninstitute.org/policy-analysis/countering-irans-latest-smart-control-gambit-strait-hormuz",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "Treasury built on prior guidance warning against transit fee payments \"whether in fiat currency, digital assets, or in-kind 'donations'\"",
+          "date": "2026-06-03",
+          "role_evidence": "Policy think tank noted the crypto dimension while primarily analyzing the broader UNCLOS and sanctions strategy context",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751815+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751830+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "f09791e6",
+      "name": "Political Fallout & Domestic Pressure",
+      "question": "How does the PGSA sanction fit into the Trump administration's domestic political calculus, and does Iran's Hormuz closure create electoral or congressional pressure on the President?",
+      "key_claim": "Rising energy prices from the Hormuz blockage are creating real political pressure on Trump and Republicans heading into midterms, and the PGSA sanction is as much a domestic political performance of toughness as it is a strategic tool.",
+      "description": "This framing, found mostly in U.S. mainstream political and news commentary, reads the PGSA designation as a political signal by the Trump administration and examines the domestic blowback from energy prices. It asks who benefits politically from the framing of 'Economic Fury' and who bears the cost.",
+      "emphasizes": "Midterm electoral pressure, energy-price political consequences, Trump's rhetorical posture, 'Economic Fury' as political branding",
+      "downplays": "Actual sanctions effectiveness, IRGC financing mechanics, international law nuance",
+      "tone": "populist",
+      "sample_headlines": [
+        "Rising Energy Prices from Iran's Strait Closure Heap Political Pressure on Trump Ahead of Midterms",
+        "Trump Says Iran 'Negotiating on Fumes' at Cabinet Meeting as Sanctions Are Announced"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "15413ea827c1",
+          "name": "PBS NewsHour / Associated Press",
+          "url": "https://www.pbs.org/newshour/world/u-s-imposes-sanctions-on-iranian-agency-trying-to-control-shipping-in-the-strait-of-hormuz",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"Rising energy prices and other costs stemming from Iran's effective closure of the strait have heaped political pressure on Trump and other Republicans ahead of the midterm congressional elections\"",
+          "date": "2026-05-27",
+          "role_evidence": "AP wire was the first major outlet to explicitly connect the PGSA sanctions announcement to Trump's midterm political vulnerability",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751839+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d1fdf95feb45",
+          "name": "The Hill",
+          "url": "https://thehill.com/homenews/administration/5899263-iran-strait-hormuz-us-treasury-sanctions/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Treasury Secretary Bessent said the move reflects growing financial pressure on Tehran under Trump's \"Economic Fury\" sanctions campaign",
+          "date": "2026-05-27",
+          "role_evidence": "Major political outlet that framed 'Economic Fury' as a political brand and contextualized sanctions within Trump's domestic political narrative",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751845+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fa6799934443",
+          "name": "NewKerala.com (reader commentary)",
+          "url": "https://www.newkerala.com/news/a/us-sanctions-irans-persian-gulf-strait-authority-over-416.htm",
+          "carrier_type": "other",
+          "amplifier_role": "mention",
+          "excerpt": "\"The 'Economic Fury' branding is just political theater\u2014real people's livelihoods are at stake\"",
+          "date": "2026-05-28",
+          "role_evidence": "Reader commentary on an Indian news site articulating the political-theater critique of the PGSA-as-domestic-politics framing from a non-Western perspective",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751851+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "798139e2f5e5",
+          "name": "Congressional Research Service (CRS)",
+          "url": "https://www.congress.gov/crs-product/R45281",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "\"Congressional concern has risen... this concern could prompt congressional oversight regarding possible consequences of a Strait closure\"",
+          "date": "2026-05-01",
+          "role_evidence": "CRS report signaling that Congress is watching the political and economic consequences of the Hormuz crisis, embedding the political-pressure framing institutionally",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260606222331/https://www.congress.gov/crs-product/R45281",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-06-10T08:49:13.751856+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-06-10T08:49:13.751861+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: (1) Technical shipping/logistics perspective\u2014how maritime operators, insurers, and port authorities navigate compliance without explicit guidance, and whether sanctions create perverse incentives for unsafe practices. (2) Regional allies' economic exposure\u2014impact on UAE, Saudi Arabia, Iraq, and other Gulf states' trade and financial systems, not just global energy markets. (3) Humanitarian corridor framing\u2014whether sanctions block medical supplies, food, or dual-use goods to Iranian civilians, and NGO/UN assessment of proportionality. (4) Chinese/Russian strategic positioning\u2014how non-Western powers exploit sanctions to deepen ties with Iran and challenge U.S. financial system dominance, distinct from general geopolitical escalation.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "The U.S. Office of Foreign Assets Control announced sanctions against Iran's Persian Gulf Strait Authority under Executive Order 13224.",
+    "rated_outlets": 4,
+    "distribution": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 4,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 0,
+      "center": 100,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 0,
+    "center": 4,
+    "right_of_center": 0,
+    "lean_index": 0.0,
+    "resolve_rate": 0.31,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 9,
+      "examples": [
+        {
+          "carrier": "Gulf News",
+          "domain": "gulfnews.com"
+        },
+        {
+          "carrier": "TRT World",
+          "domain": "trtworld.com"
+        },
+        {
+          "carrier": "gCaptain",
+          "domain": "gcaptain.com"
+        },
+        {
+          "carrier": "Seatrade Maritime News",
+          "domain": "seatrade-maritime.com"
+        },
+        {
+          "carrier": "Marine Insight",
+          "domain": "marineinsight.com"
+        },
+        {
+          "carrier": "Crypto Briefing",
+          "domain": "cryptobriefing.com"
+        },
+        {
+          "carrier": "Traders Union",
+          "domain": "tradersunion.com"
+        },
+        {
+          "carrier": "India Shipping News",
+          "domain": "indiashippingnews.com"
+        }
+      ]
+    },
+    "non_news_carriers": 8,
+    "matched": [
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "The Jerusalem Post",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "The Hill",
+        "carrier": "The Hill",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Reuters",
+        "carrier": "Reuters / U.S. News & World Report",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour / Associated Press",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 19,
+        "political": 2,
+        "social": 0,
+        "institutional": 10,
+        "academic": 4,
+        "other": 3
+      },
+      "vested_interest": 12,
+      "framings_with_vested": 7,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 28,
+    "framings": [
+      {
+        "framing_id": "71e52530",
+        "name": "Maximum Pressure / Anti-Terror Enforcement",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bd4e13183123",
+            "display": "GlobalSecurity.org",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bd5b29621ab9",
+            "display": "U.S. Department of the Treasury",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d673c3cc612c",
+            "display": "White House",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ffe2f749",
+        "name": "International Maritime Law Violation",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "57f6ca2d4698",
+            "display": "trtworld.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "89df4d9cda6c",
+            "display": "The Washington Institute for Near East Policy",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ffa3284033f7",
+            "display": "UAE, Bahrain, Kuwait, Qatar, Saudi Arabia",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3f15f461",
+        "name": "Global Energy Security & Economic Shock",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5ea0155c3234",
+            "display": "gCaptain",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b89ccd4af5d7",
+            "display": "Seatrade Maritime News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "21c05aa58eb0",
+            "display": "International Energy Agency",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7f46e456f86d",
+            "display": "Middle East Council on Global Affairs",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "21f65a81666f",
+            "display": "Reuters",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "e822dc33e921",
+            "display": "Marine Insight",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "de594c66",
+        "name": "Sanctions Compliance Trap for Industry",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "b19e2af55d9c",
+            "display": "Crypto Briefing",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "5ea0155c3234",
+            "display": "gCaptain",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9346e9f92bef",
+            "display": "Gulf News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "7c62fab3e5cd",
+            "display": "Traders Union",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "25cf689e014b",
+            "display": "India Shipping News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "86d91835",
+        "name": "Iranian Sovereign Wartime Rights",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "57f6ca2d4698",
+            "display": "trtworld.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6789e9e47397",
+            "display": "Iran's Islamic Revolutionary Guard Corps",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "b600a3952955",
+            "display": "Iranian Foreign Ministry",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "36e39ad71e83",
+            "display": "Press TV",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4e67bd62a43d",
+            "display": "China Foreign Ministry",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "67f4ef957e2f",
+            "display": "Wikipedia",
+            "actor_type": "reference",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "703fec3e",
+        "name": "Geopolitical Escalation Ladder",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b89ccd4af5d7",
+            "display": "Seatrade Maritime News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "40c61480e0ea",
+            "display": "Congressional Research Service",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "69e2e08db0d8",
+            "display": "Life News Agency",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "37b6dc53",
+        "name": "Digital Assets & Crypto Enforcement Frontier",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "b19e2af55d9c",
+            "display": "Crypto Briefing",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ab25abfc9992",
+            "display": "U.S. Treasury",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "89df4d9cda6c",
+            "display": "The Washington Institute for Near East Policy",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "f09791e6",
+        "name": "Political Fallout & Domestic Pressure",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "40c61480e0ea",
+            "display": "Congressional Research Service",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "989a40f62f69",
+            "display": "NewKerala.com",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "2c2b079fb9d9",
+        "display": "The Hill",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Maximum Pressure / Anti-Terror Enforcement",
+          "Political Fallout & Domestic Pressure"
+        ]
+      },
+      {
+        "actor_id": "9346e9f92bef",
+        "display": "Gulf News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "International Maritime Law Violation",
+          "Sanctions Compliance Trap for Industry"
+        ]
+      },
+      {
+        "actor_id": "57f6ca2d4698",
+        "display": "trtworld.com",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "International Maritime Law Violation",
+          "Iranian Sovereign Wartime Rights"
+        ]
+      },
+      {
+        "actor_id": "5ea0155c3234",
+        "display": "gCaptain",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Global Energy Security & Economic Shock",
+          "Sanctions Compliance Trap for Industry"
+        ]
+      },
+      {
+        "actor_id": "b89ccd4af5d7",
+        "display": "Seatrade Maritime News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Geopolitical Escalation Ladder",
+          "Global Energy Security & Economic Shock"
+        ]
+      },
+      {
+        "actor_id": "b19e2af55d9c",
+        "display": "Crypto Briefing",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Digital Assets & Crypto Enforcement Frontier",
+          "Sanctions Compliance Trap for Industry"
+        ]
+      },
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Geopolitical Escalation Ladder",
+          "Political Fallout & Domestic Pressure"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "International Maritime Law Violation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Global Energy Security & Economic Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Sanctions Compliance Trap for Industry",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Iranian Sovereign Wartime Rights",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Global Energy Security & Economic Shock",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Energy Security & Economic Shock",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Energy Security & Economic Shock",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Sanctions Compliance Trap for Industry",
+        "b": "Iranian Sovereign Wartime Rights",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Sanctions Compliance Trap for Industry",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Sanctions Compliance Trap for Industry",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign Wartime Rights",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign Wartime Rights",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Iranian Sovereign Wartime Rights",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Geopolitical Escalation Ladder",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Digital Assets & Crypto Enforcement Frontier",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Global Energy Security & Economic Shock",
+        "b": "Iranian Sovereign Wartime Rights",
+        "shared": 1,
+        "jaccard": 0.083
+      },
+      {
+        "a": "Global Energy Security & Economic Shock",
+        "b": "Sanctions Compliance Trap for Industry",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Global Energy Security & Economic Shock",
+        "b": "Geopolitical Escalation Ladder",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Iranian Sovereign Wartime Rights",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Maximum Pressure / Anti-Terror Enforcement",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Sanctions Compliance Trap for Industry",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Sanctions Compliance Trap for Industry",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "International Maritime Law Violation",
+        "b": "Digital Assets & Crypto Enforcement Frontier",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Geopolitical Escalation Ladder",
+        "b": "Political Fallout & Domestic Pressure",
+        "shared": 2,
+        "jaccard": 0.333
+      }
+    ],
+    "by_actor_type": {
+      "news": 15,
+      "organization": 8,
+      "academic": 2,
+      "reference": 1,
+      "official": 1,
+      "person": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.25,
+      "siloed_share": 0.643,
+      "mean_jaccard": 0.046
+    },
+    "structure_note": "7 of 28 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-06-10T08:49:39.929472+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
