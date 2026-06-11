@@ -580,39 +580,93 @@ def write_topics(stories: list, days: int, min_outlets: int = 3) -> Path:
 # Report: attention distributions + omissions + universe cross-check
 # ---------------------------------------------------------------------------
 
+def embed_sitemap_titles(sitemap_titles: dict) -> dict:
+    """okey -> (vec matrix, articles). Embedded once per report run and
+    shared by attention (volume) and omissions (existence)."""
+    import numpy as np
+    from matcher import embed_texts
+    out = {}
+    for okey, arts in sitemap_titles.items():
+        if arts:
+            m = np.asarray(embed_texts([a["title"] for a in arts]),
+                           dtype=np.float32)
+            out[okey] = (m, arts)
+    return out
+
+
 def attention_distributions(stories: list, items_by_outlet: dict,
-                            roster: dict, top: int = 10) -> dict:
+                            roster: dict, sitemap_vecs: dict,
+                            top: int = 10) -> dict:
     """Per-outlet attention over the story universe — the outlet's agenda
-    fingerprint. share = the outlet's items on this story / all its items in
-    the period. Purely countable (P5): no weights beyond presence + the best
-    feed position, reported separately."""
-    per = {}
+    fingerprint. VOLUME comes from the sitemap census where one exists
+    (found live: Fox's 29-item mixed 'latest' feed made its top stories
+    look like the NBA Finals, while its 284-article sitemap census is
+    politics-first — a feed slice must not stand in for an outlet's
+    output). Feed position stays as the separate prominence signal.
+    Outlets without a sitemap fall back to the front-feed sample, and the
+    row says so ('basis'). Purely countable either way (P5)."""
+    import numpy as np
     story_by_id = {s["story_id"]: s for s in stories}
-    carried = {}   # outlet -> [(story_id, items, best_pos)]
+    cent = np.vstack([s["_centroid"] for s in stories]) if stories else None
+    sids = [s["story_id"] for s in stories]
+
+    feed_carried = {}   # outlet -> {story_id: (items, best_pos)}
     for s in stories:
         for c in s["carriers"]:
-            carried.setdefault(c["outlet"], []).append(
-                (s["story_id"], c["items"], c["best_position"]))
+            feed_carried.setdefault(c["outlet"], {})[s["story_id"]] = (
+                c["items"], c["best_position"])
+
+    per = {}
     for o in roster["outlets"]:
-        items_total = len(items_by_outlet.get(o["key"], []))
-        rows = carried.get(o["key"], [])
-        rows.sort(key=lambda r: (-r[1], r[2]))
-        per[o["key"]] = {
-            "name": o["name"], "stream": o["stream"],
-            "items": items_total, "stories_carried": len(rows),
-            "top": [{
-                "story_id": sid,
-                "label": story_by_id[sid]["label"][:160],
-                "items": n, "best_position": pos,
-                "share": round(n / items_total, 4) if items_total else 0.0,
-            } for sid, n, pos in rows[:top]],
-        }
+        okey = o["key"]
+        feed_total = len(items_by_outlet.get(okey, []))
+        feed_rows = feed_carried.get(okey, {})
+        row = {"name": o["name"], "stream": o["stream"],
+               "feed_items": feed_total,
+               "stories_carried_in_feed": len(feed_rows)}
+        sm = sitemap_vecs.get(okey)
+        if sm is not None and cent is not None:
+            vecs, arts = sm
+            sims = vecs @ cent.T                      # articles x stories
+            best = sims.argmax(axis=1)
+            bsim = sims.max(axis=1)
+            counts = {}
+            for j, s_ in zip(best, bsim):
+                if s_ >= COVERED_THRESHOLD:
+                    counts[sids[int(j)]] = counts.get(sids[int(j)], 0) + 1
+            total = len(arts)
+            ranked = sorted(counts.items(), key=lambda kv: -kv[1])
+            row.update({
+                "basis": "sitemap census",
+                "sitemap_articles": total,
+                "articles_matching_stories": sum(counts.values()),
+                "top": [{
+                    "story_id": sid,
+                    "label": story_by_id[sid]["label"][:160],
+                    "articles": n,
+                    "share": round(n / total, 4) if total else 0.0,
+                    "feed_items": feed_rows.get(sid, (0, None))[0],
+                    "best_feed_position": feed_rows.get(sid, (0, None))[1],
+                } for sid, n in ranked[:top]],
+            })
+        else:
+            ranked = sorted(feed_rows.items(), key=lambda kv: (-kv[1][0], kv[1][1]))
+            row.update({
+                "basis": "front-feed sample only (no sitemap census)",
+                "top": [{
+                    "story_id": sid,
+                    "label": story_by_id[sid]["label"][:160],
+                    "feed_items": n, "best_feed_position": pos,
+                    "share": round(n / feed_total, 4) if feed_total else 0.0,
+                } for sid, (n, pos) in ranked[:top]],
+            })
+        per[okey] = row
     return per
 
 
 def omission_report(stories: list, items_by_outlet: dict, roster: dict,
                     leans: dict, sitemap_titles: dict,
-                    min_outlets: int = 8) -> dict:
+                    min_outlets: int = 8, sitemap_vecs: dict = None) -> dict:
     """For each BROAD story (>= min_outlets distinct news outlets observed
     carrying it), which news outlets show no observed coverage? EXISTENCE is
     tested against news-sitemap titles — RSS feeds only ever supply the
@@ -627,17 +681,17 @@ def omission_report(stories: list, items_by_outlet: dict, roster: dict,
       4. at/above ADJACENT_THRESHOLD -> 'adjacent coverage', not an omission;
       5. every remaining claim ships its nearest-article evidence so the
          Gate 2 audit can check it."""
-    from matcher import embed_texts
     news_keys = [o["key"] for o in roster["outlets"] if o["stream"] == "news"]
     sampled = {k: len(items_by_outlet.get(k, [])) for k in news_keys}
     broad = [s for s in stories if s["n_outlets"] >= min_outlets]
 
-    vec_cache = {}     # okey -> (matrix, [articles]) embedded on first need
+    vec_cache = dict(sitemap_vecs or {})   # okey -> (matrix, [articles])
     def outlet_vecs(k):
         if k not in vec_cache:
             arts = sitemap_titles.get(k, [])
             if arts:
                 import numpy as np
+                from matcher import embed_texts
                 m = np.asarray(embed_texts([a["title"] for a in arts]),
                                dtype=np.float32)
                 vec_cache[k] = (m, arts)
@@ -773,6 +827,7 @@ def build_report(days: int, threshold: float, min_outlets: int,
     if not sitemap_titles:
         print("[report] no sitemap captures in window — omission claims "
               "fully suppressed (run sitemaps.py --capture)", file=sys.stderr)
+    sitemap_vecs = embed_sitemap_titles(sitemap_titles)
     n_traced = attach_traces(stories)
     if n_traced:
         print(f"[report] {n_traced} stories matched an already-traced "
@@ -811,9 +866,11 @@ def build_report(days: int, threshold: float, min_outlets: int,
         "sitemap_coverage": {k: len(v) for k, v in sorted(sitemap_titles.items())},
         "stories": [{k: v for k, v in s.items() if k != "_centroid"}
                     for s in stories[:200]],
-        "attention": attention_distributions(stories, items_by_outlet, roster),
+        "attention": attention_distributions(stories, items_by_outlet, roster,
+                                             sitemap_vecs),
         "omissions": omission_report(stories, items_by_outlet, roster, leans,
-                                     sitemap_titles, min_outlets=min_outlets),
+                                     sitemap_titles, min_outlets=min_outlets,
+                                     sitemap_vecs=sitemap_vecs),
         "universe": universe_crosscheck(raw_stories, days),
     }
     if save:
