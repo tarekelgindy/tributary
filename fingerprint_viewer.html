@@ -498,6 +498,34 @@ section { animation: fadein 0.2s; }
 .cov-eco { color: #555; font-size: 0.8rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed #e3e3e3; }
 .cov-attrib { color: #999; font-size: 0.72rem; margin-top: 0.6rem; }
 
+/* Agenda report — selection & prominence across outlets (Phase 2) */
+.agenda-story { padding: 0.55rem 0; border-top: 1px solid #f1f1f1; }
+.agenda-story:first-of-type { border-top: none; }
+.agenda-story summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+.agenda-story summary::-webkit-details-marker { display: none; }
+.agenda-count { font-size: 0.74rem; color: #fff; background: #5a4b8a; border-radius: 10px; padding: 0.1rem 0.55rem; white-space: nowrap; }
+.agenda-label { font-size: 0.92rem; color: #222; flex: 1 1 18rem; }
+.agenda-minibar { display: flex; height: 12px; border-radius: 3px; overflow: hidden; flex: 0 0 90px; align-self: center; background: #eee; }
+.agenda-minibar .cov-seg { font-size: 0; }
+.agenda-minibar .other { background: #ddd; }
+.agenda-badge { font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 10px; white-space: nowrap; }
+.agenda-badge.oneside { background: #fdf3e6; color: #9a5b1f; border: 1px solid #ecd3ae; }
+.agenda-badge.factcheck { background: #eef3fb; color: #2c5fa8; border: 1px solid #c9d9f0; }
+.agenda-carriers { color: #555; font-size: 0.8rem; margin: 0.45rem 0 0.2rem 0.2rem; line-height: 1.7; }
+.agenda-caveat { background: #fbf8f1; border: 1px solid #eee3c8; border-radius: 6px; padding: 0.7rem 0.9rem; color: #6b5d33; font-size: 0.8rem; line-height: 1.5; margin-bottom: 0.9rem; }
+.agenda-omit-row { padding: 0.5rem 0; border-top: 1px solid #f1f1f1; font-size: 0.88rem; color: #333; }
+.agenda-omit-row summary { cursor: pointer; }
+.agenda-evidence { color: #777; font-size: 0.78rem; margin: 0.3rem 0 0.2rem 1rem; line-height: 1.55; }
+.agenda-att-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.7rem; }
+.agenda-att { border: 1px solid #ececec; border-radius: 6px; padding: 0.6rem 0.75rem; background: #fcfcfc; }
+.agenda-att .o-name { font-weight: 600; font-size: 0.86rem; color: #222; }
+.agenda-att .o-top { color: #555; font-size: 0.76rem; margin-top: 0.35rem; line-height: 1.5; }
+.lean-chip { display: inline-block; font-size: 0.66rem; color: #fff; border-radius: 8px; padding: 0.06rem 0.45rem; vertical-align: middle; }
+.lean-chip.left { background: #2c5fa8; } .lean-chip.lean-left { background: #6b95cf; }
+.lean-chip.center { background: #9aa3ab; } .lean-chip.lean-right { background: #cf8a6b; }
+.lean-chip.right { background: #b23b2e; }
+.lean-chip.unrated { background: #fff; color: #888; border: 1px solid #ccc; }
+
 /* Coalition — who amplifies which framing (the headline of the event view) */
 .coalition-card { margin-bottom: 1.6rem; border-left: 4px solid #5a4b8a; }
 .coal-intro { color: #555; font-size: 0.85rem; line-height: 1.5; margin: 0.5rem 0 1rem; }
@@ -667,7 +695,9 @@ function refHostName(url) {
 function isReferenceHost(url) { return !!(url && refHostName(url)); }
 
 function routeData(data) {
-  if (data.is_event_analysis) {
+  if (data.is_agenda_report) {
+    renderAgendaReport(data);
+  } else if (data.is_event_analysis) {
     renderEventAnalysis(data);
   } else if (data.is_source_analysis) {
     renderArticle(data);
@@ -953,6 +983,151 @@ function openFingerprintFromEvent(fp) {
   back.textContent = '← Back to event';
   back.onclick = () => { if (currentEvent) renderEventAnalysis(currentEvent); };
   header.insertBefore(back, header.firstChild);
+}
+
+// ---- Agenda report (Phase 2): selection & prominence across outlets ------
+// Everything here is countable/structural (P5): which stories each outlet's
+// sampled feeds carried, at what position, and what they showed no coverage
+// of. No verdicts; omission language stays inside its method caveat.
+
+function leanChip(bucket) {
+  if (!bucket) return '<span class="lean-chip unrated">unrated</span>';
+  const lbl = { 'left': 'L', 'lean-left': 'LL', 'center': 'C', 'lean-right': 'LR', 'right': 'R' }[bucket] || bucket;
+  return `<span class="lean-chip ${escapeHtml(bucket)}" title="AllSides: ${escapeHtml(bucket)}">${lbl}</span>`;
+}
+
+function agendaMinibar(spread) {
+  const order = ['left', 'lean-left', 'center', 'lean-right', 'right'];
+  const total = order.reduce((a, b) => a + (spread[b] || 0), 0) +
+    (spread.international || 0) + (spread.unrated || 0);
+  if (!total) return '';
+  const seg = (cls, n, title) => n ? `<div class="cov-seg ${cls}" style="flex:${n}" title="${title}: ${n}"></div>` : '';
+  return `<div class="agenda-minibar" title="distinct outlets by AllSides lean (gray = international/unrated)">
+    ${order.map(b => seg(b, spread[b] || 0, b)).join('')}
+    ${seg('other', (spread.international || 0) + (spread.unrated || 0), 'international/unrated')}
+  </div>`;
+}
+
+function renderAgendaReport(report) {
+  currentEvent = null;
+  currentArticle = null;
+  dropZone.hidden = true;
+  viewer.hidden = false;
+  removeBackButton();
+  document.getElementById('tabs').style.display = 'none';
+
+  const period = report.period || {};
+  const totals = report.totals || {};
+  document.getElementById('claim-phrase').textContent =
+    `Agenda report — last ${period.days || '?'} day${period.days === 1 ? '' : 's'} of feed captures`;
+  const meta = document.getElementById('meta-bar');
+  meta.innerHTML = '';
+  addMeta(meta, 'generated', (report.generated_at || '').split('T')[0]);
+  addMeta(meta, 'captures', String(totals.captures || 0));
+  addMeta(meta, 'items', String(totals.unique_items || 0));
+  addMeta(meta, 'stories', String(totals.stories || 0));
+
+  const leans = (report.roster || {}).leans || {};
+
+  // -- cross-outlet stories (top of the shared agenda) --
+  const stories = (report.stories || []).filter(s => s.n_outlets >= 2).slice(0, 25);
+  const storiesHtml = stories.map(s => {
+    const carriers = (s.carriers || []).map(c =>
+      `${escapeHtml(c.name)}${leanChip(leans[c.outlet])} ×${c.items} <span style="color:#999">(best pos ${c.best_position})</span>`
+    ).join(' · ');
+    return `<details class="agenda-story">
+      <summary>
+        <span class="agenda-count">${s.n_outlets} outlets</span>
+        <span class="agenda-label">${escapeHtml(s.label || '')}</span>
+        ${agendaMinibar(s.lean_spread || {})}
+        ${s.one_side_only ? `<span class="agenda-badge oneside" title="among rated US outlets in this sample">${escapeHtml(s.one_side_only)}</span>` : ''}
+        ${s.factcheck_attention ? `<span class="agenda-badge factcheck" title="selected for checking by ${s.factcheck_attention} fact-checker(s) — their selection, never their verdict">fact-checked ×${s.factcheck_attention}</span>` : ''}
+      </summary>
+      <div class="agenda-carriers">${carriers}</div>
+      ${s.nearest_trace ? `<div class="agenda-evidence">↗ near an already-traced narrative: “${escapeHtml(s.nearest_trace.canonical_phrase)}” (phrasing ${s.nearest_trace.l1_sim} / idea ${s.nearest_trace.l2_sim} — embedding-stage lead, unconfirmed)</div>` : ''}
+    </details>`;
+  }).join('');
+
+  // -- per-outlet attention (the outlet's agenda fingerprint) --
+  const att = report.attention || {};
+  const attCards = Object.entries(att)
+    .filter(([, a]) => a.stream === 'news' && a.items > 0)
+    .sort((a, b) => b[1].items - a[1].items)
+    .map(([key, a]) => {
+      const top = (a.top || []).slice(0, 3).map(t =>
+        `<div>${(100 * t.share).toFixed(0)}% · pos ${t.best_position} — ${escapeHtml(t.label)}</div>`
+      ).join('');
+      return `<div class="agenda-att">
+        <div class="o-name">${escapeHtml(a.name)} ${leanChip(leans[key])}</div>
+        <div style="color:#777; font-size:0.74rem;">${a.items} items · ${a.stories_carried} stories</div>
+        <div class="o-top">${top || '<em>no multi-item stories</em>'}</div>
+      </div>`;
+    }).join('');
+
+  // -- omission report (guarded; the caveat is part of the output) --
+  const om = report.omissions || {};
+  const omRows = (om.by_outlet || []).filter(r => !r.insufficient_sample && (r.missed || (r.adjacent_stories || []).length)).map(r => {
+    const missed = (r.missed_stories || []).map(m =>
+      `<div class="agenda-evidence">∅ <strong>${escapeHtml(m.label)}</strong> (carried by ${m.n_outlets} outlets) — nearest sampled item: “${escapeHtml(m.nearest_item || '(none)')}” at similarity ${m.nearest_sim}</div>`
+    ).join('');
+    const adjacent = (r.adjacent_stories || []).map(a =>
+      `<div class="agenda-evidence">≈ adjacent to <strong>${escapeHtml(a.label)}</strong> via “${escapeHtml(a.nearest_item)}” (${a.nearest_sim})</div>`
+    ).join('');
+    return `<details class="agenda-omit-row">
+      <summary>${escapeHtml(r.name)} ${leanChip(r.lean)} — <strong>${r.missed}</strong> of ${r.broad_stories} broad stories with no observed item
+        <span style="color:#999;">(${r.items_sampled} items sampled, feed scope: ${escapeHtml(r.feed_scope || '?')})</span></summary>
+      ${missed}${adjacent}
+    </details>`;
+  }).join('');
+  const omSkipped = (om.by_outlet || []).filter(r => r.insufficient_sample).map(r =>
+    `${escapeHtml(r.name)} (${r.items_sampled})`).join(', ');
+  const oneSide = (om.one_side_only || []).map(s =>
+    `<div class="agenda-omit-row">“${escapeHtml(s.label)}” — <span class="agenda-badge oneside">${escapeHtml(s.side_present)}</span> (${s.n_outlets} outlets carried it)</div>`
+  ).join('');
+
+  // -- universe cross-check --
+  const u = report.universe || {};
+  const uncovered = (u.uncovered_by_roster || []).map(e =>
+    `<div class="agenda-evidence">• ${escapeHtml(e.event)} <span style="color:#aaa">(best story similarity ${e.best_sim})</span></div>`
+  ).join('');
+
+  const main = document.querySelector('main');
+  main.innerHTML = `
+    <div class="event-intro">
+      <div class="event-statement">What did each outlet's front feed carry — and what didn't it?</div>
+      <p>Selection and prominence, counted from ${totals.captures || 0} raw RSS capture(s) across the roster.
+      Every number below is structural: which stories appeared in which outlet's sampled feeds, at what position.
+      No story content is judged, and lean labels are AllSides', not ours.</p>
+    </div>
+
+    <div class="card">
+      <h2>Shared stories across outlets</h2>
+      <p style="color:#777; font-size:0.8rem;">Headlines grouped by the local matcher (threshold ${totals.story_threshold}); each story expands to its carriers. The bar shows which leans carried it.</p>
+      ${storiesHtml || '<p class="empty">No cross-outlet stories in this window.</p>'}
+    </div>
+
+    <div class="card">
+      <h2>Outlet attention distributions</h2>
+      <p style="color:#777; font-size:0.8rem;">Each outlet's items in the window, and the stories that took the largest share of them — its agenda fingerprint.</p>
+      <div class="agenda-att-grid">${attCards}</div>
+    </div>
+
+    <div class="card">
+      <h2>Omission report</h2>
+      <div class="agenda-caveat"><strong>Read this first:</strong> ${escapeHtml(om.method_caveat || '')}</div>
+      ${omRows || '<p class="empty">No omission candidates in this window (or guards filtered them all).</p>'}
+      ${omSkipped ? `<p style="color:#888; font-size:0.78rem; margin-top:0.6rem;">Insufficient sample (no claims made): ${omSkipped}</p>` : ''}
+      ${(om.unsampled_outlets || []).length ? `<p style="color:#888; font-size:0.78rem;">Unsampled (feed unreachable or empty in window): ${om.unsampled_outlets.map(escapeHtml).join(', ')}</p>` : ''}
+      ${oneSide ? `<h2 style="margin-top:1.1rem;">One-side-only stories</h2>
+        <p style="color:#777; font-size:0.8rem;">Carried by rated US outlets on one side of center and none on the other — in this sample.</p>${oneSide}` : ''}
+    </div>
+
+    ${u.events ? `<div class="card">
+      <h2>Event universe cross-check <span style="font-weight:400; color:#999; font-size:0.75rem;">experimental</span></h2>
+      <p style="color:#777; font-size:0.8rem;">Wikipedia Current Events (${(u.days || []).join(', ')}): ${u.covered_by_some_story || 0} of ${u.events} events match some captured story; the rest had no matching story in ANY sampled feed. ${escapeHtml(u.method_caveat || '')}</p>
+      <details><summary style="cursor:pointer; font-size:0.85rem; color:#555;">Events with no observed roster coverage (${(u.uncovered_by_roster || []).length})</summary>${uncovered}</details>
+    </div>` : ''}
+  `;
 }
 
 function renderArticle(analysis) {
