@@ -74,32 +74,42 @@ STORY_THRESHOLD = 0.62
 # A universe event counts as "covered" if any headline reaches this similarity.
 # Uncalibrated until Gate 2 — the report labels this mapping experimental.
 UNIVERSE_THRESHOLD = 0.60
-# Omission guards (both uncalibrated until Gate 2; both err toward NOT
-# claiming an omission, because a false "they never covered it" is the
-# project's most damaging possible error):
-#   - an outlet with fewer in-window items than this is "insufficient
-#     sample", never "omitted" (found live: a 1-day window left WaPo's
-#     politics feed with 2 items);
-#   - an outlet with any item this close to the story centroid has
-#     "adjacent coverage", never "omitted" (found live: CS Monitor at 0.42
-#     to the Iran-strikes story with a sea-drones angle on the same war).
+# Omission guards (uncalibrated until Gate 2; all err toward NOT claiming an
+# omission, because a false "they never covered it" is the project's most
+# damaging possible error):
+#   - EXISTENCE is tested against news-sitemap titles (near-census of ~48h),
+#     never against RSS feeds — the Gate 2 pre-log showed one feed is a thin,
+#     oddly-scoped slice of an outlet, and homepage spot checks falsified
+#     RSS-based "missed" rows immediately. No sitemap evidence -> no claim.
+#   - a sitemap with fewer than OMISSION_MIN_SITEMAP in-window articles is
+#     not a census either -> "insufficient sample", no claim;
+#   - any sitemap title within ADJACENT_THRESHOLD of the story centroid is
+#     "adjacent coverage", never "omitted"; at or above COVERED_THRESHOLD it
+#     is covered outright — just not feed-featured (a prominence finding,
+#     not an omission);
+#   - OMISSION_MIN_SAMPLE still gates the RSS-side attention/prominence rows.
 OMISSION_MIN_SAMPLE = 8
+OMISSION_MIN_SITEMAP = 30
 ADJACENT_THRESHOLD = 0.42
+COVERED_THRESHOLD = STORY_THRESHOLD
 
 _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
 
 OMISSION_CAVEAT = (
-    "RSS feeds are a sample of an outlet's output, not a census. 'No observed "
-    "items' means zero items in the outlet's sampled feeds across this "
-    "period's captures; it does NOT establish that the outlet never covered "
-    "the story (site search may find coverage the feeds omitted). Feed scope "
-    "also varies by outlet — some feeds are top-stories, some politics-only, "
-    "some mixed-latest with heavy sports/lifestyle (observed live: Fox's and "
-    "Newsweek's) — so each row carries its outlet's feed_scope. Per ROADMAP "
-    "Gate 2, no omission claim is published before a manual audit of claimed "
-    "omissions against the outlet's own site; if that audit fails, "
-    "sitemap/news-sitemap capture replaces RSS before any publication."
+    "Existence is tested against the outlet's NEWS-SITEMAP — the near-census "
+    "of recent articles outlets publish for search crawlers — never against "
+    "RSS feeds (the Gate 2 pre-log showed feeds are thin, oddly-scoped "
+    "slices: homepage spot checks falsified RSS-based 'missed' rows "
+    "immediately). Outlets without a usable news-sitemap receive NO omission "
+    "claims at all. A sitemap miss still is not proof of silence — sitemaps "
+    "can lag or omit, syndicated coverage may live off-domain, and the "
+    "similarity thresholds are uncalibrated — so every claim ships its "
+    "nearest-article evidence, and per ROADMAP Gate 2 no omission claim is "
+    "published before a manual audit against the outlet's own site. A story "
+    "found in the sitemap but absent from the outlet's front feeds is "
+    "reported separately as 'covered, not feed-featured' — a prominence "
+    "observation, not an omission."
 )
 
 
@@ -601,49 +611,74 @@ def attention_distributions(stories: list, items_by_outlet: dict,
 
 
 def omission_report(stories: list, items_by_outlet: dict, roster: dict,
-                    leans: dict, vecs_by_outlet: dict,
+                    leans: dict, sitemap_titles: dict,
                     min_outlets: int = 8) -> dict:
     """For each BROAD story (>= min_outlets distinct news outlets observed
-    carrying it), which news outlets show no observed coverage? Three guards
-    stand between a non-carrying outlet and an omission claim, each erring
-    toward NOT claiming (a false "they never covered it" is the most
-    damaging error this project can make — Gate 2):
-      1. no sample, no claim (feed unreachable / nothing in window);
-      2. a sample below OMISSION_MIN_SAMPLE items is 'insufficient sample';
-      3. any item within ADJACENT_THRESHOLD of the story centroid is
-         'adjacent coverage observed', not an omission — and every omission
-         claim ships its nearest-item evidence so the audit can check it."""
+    carrying it), which news outlets show no observed coverage? EXISTENCE is
+    tested against news-sitemap titles — RSS feeds only ever supply the
+    carrier/prominence side. Guards, each erring toward NOT claiming (a
+    false "they never covered it" is the most damaging error this project
+    can make — Gate 2):
+      1. no news-sitemap (or none fetched in window) -> NO omission claims;
+      2. a sitemap with < OMISSION_MIN_SITEMAP in-window articles is not a
+         census either -> 'insufficient sample', no claims;
+      3. a sitemap title at/above COVERED_THRESHOLD -> 'covered, not
+         feed-featured' (a prominence finding, not an omission);
+      4. at/above ADJACENT_THRESHOLD -> 'adjacent coverage', not an omission;
+      5. every remaining claim ships its nearest-article evidence so the
+         Gate 2 audit can check it."""
+    from matcher import embed_texts
     news_keys = [o["key"] for o in roster["outlets"] if o["stream"] == "news"]
     sampled = {k: len(items_by_outlet.get(k, [])) for k in news_keys}
     broad = [s for s in stories if s["n_outlets"] >= min_outlets]
+
+    vec_cache = {}     # okey -> (matrix, [articles]) embedded on first need
+    def outlet_vecs(k):
+        if k not in vec_cache:
+            arts = sitemap_titles.get(k, [])
+            if arts:
+                import numpy as np
+                m = np.asarray(embed_texts([a["title"] for a in arts]),
+                               dtype=np.float32)
+                vec_cache[k] = (m, arts)
+            else:
+                vec_cache[k] = (None, [])
+        return vec_cache[k]
+
     rows = []
+    no_sitemap = []
     for k in news_keys:
-        if sampled[k] == 0:
-            continue   # no sample -> no omission claim possible
+        n_sitemap = len(sitemap_titles.get(k, []))
+        if n_sitemap == 0:
+            no_sitemap.append(k)
+            continue   # no census -> no omission claim possible
         row = {
             "outlet": k, "name": roster["by_key"][k]["name"],
             "lean": leans.get(k, ""),
-            "feed_scope": roster["by_key"][k]["scope"],
-            "items_sampled": sampled[k],
+            "sitemap_articles": n_sitemap,
+            "rss_items_sampled": sampled[k],
             "broad_stories": len(broad),
-            "insufficient_sample": sampled[k] < OMISSION_MIN_SAMPLE,
-            "missed": 0, "missed_stories": [], "adjacent_stories": [],
+            "insufficient_sample": n_sitemap < OMISSION_MIN_SITEMAP,
+            "missed": 0, "missed_stories": [],
+            "adjacent_stories": [], "covered_not_featured": [],
         }
         if not row["insufficient_sample"]:
-            vecs, titles = vecs_by_outlet.get(k, (None, []))
             for s in broad:
                 if any(c["outlet"] == k for c in s["carriers"]):
                     continue
-                near_sim, near_title = 0.0, ""
-                if vecs is not None and len(titles):
-                    sims = vecs @ s["_centroid"]
-                    i = int(sims.argmax())
-                    near_sim, near_title = round(float(sims[i]), 3), titles[i]
+                vecs, arts = outlet_vecs(k)
+                sims = vecs @ s["_centroid"]
+                i = int(sims.argmax())
+                near_sim = round(float(sims[i]), 3)
                 entry = {"story_id": s["story_id"], "label": s["label"][:160],
                          "n_outlets": s["n_outlets"],
                          "nearest_sim": near_sim,
-                         "nearest_item": near_title[:160]}
-                if near_sim >= ADJACENT_THRESHOLD:
+                         "nearest_article": arts[i]["title"][:160],
+                         "nearest_url": arts[i]["url"],
+                         "evidence_source": "news-sitemap"}
+                if near_sim >= COVERED_THRESHOLD:
+                    row["covered_not_featured"].append(entry)
+                elif near_sim >= ADJACENT_THRESHOLD:
                     row["adjacent_stories"].append(entry)
                 else:
                     row["missed_stories"].append(entry)
@@ -653,11 +688,12 @@ def omission_report(stories: list, items_by_outlet: dict, roster: dict,
     return {
         "method_caveat": OMISSION_CAVEAT,
         "min_outlets_for_broad": min_outlets,
-        "guards": {"min_sample": OMISSION_MIN_SAMPLE,
+        "guards": {"min_sitemap_articles": OMISSION_MIN_SITEMAP,
+                   "covered_threshold": COVERED_THRESHOLD,
                    "adjacent_threshold": ADJACENT_THRESHOLD,
-                   "note": "both uncalibrated until the Gate 2 audit"},
+                   "note": "thresholds uncalibrated until the Gate 2 audit"},
         "broad_stories": len(broad),
-        "unsampled_outlets": [k for k in news_keys if sampled[k] == 0],
+        "no_sitemap_no_claims": no_sitemap,
         "by_outlet": rows,
         "one_side_only": [{
             "story_id": s["story_id"], "label": s["label"][:160],
@@ -729,6 +765,14 @@ def build_report(days: int, threshold: float, min_outlets: int,
     items_by_outlet, stale_dropped = aggregate_items(snaps, days)
     raw_stories, vecs_by_outlet = cluster_stories(items_by_outlet, threshold=threshold)
     stories = describe_stories(raw_stories, leans, roster)
+    try:
+        from sitemaps import load_sitemap_titles
+        sitemap_titles = load_sitemap_titles(days)
+    except Exception:  # noqa: BLE001 — absent module/data = no claims, not a crash
+        sitemap_titles = {}
+    if not sitemap_titles:
+        print("[report] no sitemap captures in window — omission claims "
+              "fully suppressed (run sitemaps.py --capture)", file=sys.stderr)
     n_traced = attach_traces(stories)
     if n_traced:
         print(f"[report] {n_traced} stories matched an already-traced "
@@ -764,11 +808,12 @@ def build_report(days: int, threshold: float, min_outlets: int,
             # 'omitted everything'
             "stale_items_dropped": stale_dropped,
         },
+        "sitemap_coverage": {k: len(v) for k, v in sorted(sitemap_titles.items())},
         "stories": [{k: v for k, v in s.items() if k != "_centroid"}
                     for s in stories[:200]],
         "attention": attention_distributions(stories, items_by_outlet, roster),
         "omissions": omission_report(stories, items_by_outlet, roster, leans,
-                                     vecs_by_outlet, min_outlets=min_outlets),
+                                     sitemap_titles, min_outlets=min_outlets),
         "universe": universe_crosscheck(raw_stories, days),
     }
     if save:
