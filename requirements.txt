@@ -6,6 +6,9 @@ httpx>=0.27.0
 # Heavy install (pulls torch); everything else runs fine without it.
 sentence-transformers>=3.0.0
 
+# Agenda layer (agenda.py — RSS prominence capture; tolerant of feed quirks)
+feedparser>=6.0.0
+
 # Platform extractors (install what you need)
 atproto>=0.0.50            # Bluesky
 youtube-transcript-api>=1.0.0  # YouTube transcripts (no API key needed)

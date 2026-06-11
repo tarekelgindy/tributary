@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "purpose": "Curated feed roster for the agenda layer (agenda.py). Selection and prominence capture across the political spectrum plus international outlets and a fact-checker stream.",
+    "curated": "2026-06-10",
+    "curation_note": "News outlets chosen to span the AllSides spectrum; the lean itself is NEVER stored here — agenda.py resolves each outlet through bias_db (AllSides snapshot) at report time, so every lean is attributable and outlets we can't rate are reported 'unrated', not guessed. Run `python agenda.py --roster` to audit the spectrum balance. International outlets are included for coverage texture even where a US-centric ratings DB cannot rate them. The factcheck stream is used for its SELECTION only (what fact-checkers chose to check is contested-by-construction and claim-shaped); verdicts are never ingested (P1).",
+    "feed_choice_note": "Top-stories / homepage feeds preferred: item position in these feeds is the prominence signal. Section feeds are used only where no homepage feed exists.",
+    "changelog": [
+      "2026-06-11: MSNBC dropped (feed URL serves HTML, no working RSS found) -> Mother Jones (AllSides: Left) keeps the Left bucket at strength.",
+      "2026-06-11: CNN dropped — its top-stories feed is a ZOMBIE still serving April-2023 items (caught by the staleness tripwire; would have produced false omission claims) -> NBC News (AllSides: Lean Left).",
+      "2026-06-11: Washington Times dropped (403 for non-browser clients) -> The Telegraph (AllSides: Lean Right), which also pairs with The Guardian on the UK axis.",
+      "2026-06-11: CBC dropped (persistent read timeouts) -> National Post (Canada; unrated in our AllSides snapshot, counted as international).",
+      "2026-06-11: AFP Fact Check dropped (403) -> Full Fact (UK) + Lead Stories (US)."
+    ],
+    "schema": {
+      "key": "stable snake_case id used in snapshots and reports",
+      "name": "display name",
+      "domain": "registrable domain, for bias_db lookup and link matching",
+      "rss": "feed URL",
+      "stream": "news | factcheck",
+      "country": "ISO-ish country tag, US or other",
+      "scope": "feed scope: top-stories | politics | world | factchecks"
+    }
+  },
+  "outlets": [
+    {"key": "motherjones", "name": "Mother Jones", "domain": "motherjones.com", "rss": "https://www.motherjones.com/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "huffpost", "name": "HuffPost", "domain": "huffpost.com", "rss": "https://chaski.huffpost.com/us/auto/vertical/politics", "stream": "news", "country": "US", "scope": "politics"},
+    {"key": "vox", "name": "Vox", "domain": "vox.com", "rss": "https://www.vox.com/rss/index.xml", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "nytimes", "name": "The New York Times", "domain": "nytimes.com", "rss": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "washingtonpost", "name": "The Washington Post", "domain": "washingtonpost.com", "rss": "https://feeds.washingtonpost.com/rss/politics", "stream": "news", "country": "US", "scope": "politics"},
+    {"key": "npr", "name": "NPR", "domain": "npr.org", "rss": "https://feeds.npr.org/1001/rss.xml", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "nbcnews", "name": "NBC News", "domain": "nbcnews.com", "rss": "https://feeds.nbcnews.com/nbcnews/public/news", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "politico", "name": "Politico", "domain": "politico.com", "rss": "https://rss.politico.com/politics-news.xml", "stream": "news", "country": "US", "scope": "politics"},
+    {"key": "abcnews", "name": "ABC News", "domain": "abcnews.go.com", "rss": "https://abcnews.go.com/abcnews/topstories", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "bbc", "name": "BBC News", "domain": "bbc.com", "rss": "https://feeds.bbci.co.uk/news/rss.xml", "stream": "news", "country": "GB", "scope": "top-stories"},
+    {"key": "thehill", "name": "The Hill", "domain": "thehill.com", "rss": "https://thehill.com/news/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "newsweek", "name": "Newsweek", "domain": "newsweek.com", "rss": "https://www.newsweek.com/rss", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "axios", "name": "Axios", "domain": "axios.com", "rss": "https://api.axios.com/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "wsj", "name": "The Wall Street Journal", "domain": "wsj.com", "rss": "https://feeds.a.dj.com/rss/RSSWorldNews.xml", "stream": "news", "country": "US", "scope": "world"},
+    {"key": "csmonitor", "name": "Christian Science Monitor", "domain": "csmonitor.com", "rss": "https://rss.csmonitor.com/feeds/all", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "nypost", "name": "New York Post", "domain": "nypost.com", "rss": "https://nypost.com/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "washingtonexaminer", "name": "Washington Examiner", "domain": "washingtonexaminer.com", "rss": "https://www.washingtonexaminer.com/feed", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "telegraph", "name": "The Telegraph", "domain": "telegraph.co.uk", "rss": "https://www.telegraph.co.uk/rss.xml", "stream": "news", "country": "GB", "scope": "top-stories"},
+    {"key": "reason", "name": "Reason", "domain": "reason.com", "rss": "https://reason.com/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "foxnews", "name": "Fox News", "domain": "foxnews.com", "rss": "https://moxie.foxnews.com/google-publisher/latest.xml", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "dailywire", "name": "The Daily Wire", "domain": "dailywire.com", "rss": "https://www.dailywire.com/feeds/rss.xml", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "breitbart", "name": "Breitbart", "domain": "breitbart.com", "rss": "https://feeds.feedburner.com/breitbart", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "federalist", "name": "The Federalist", "domain": "thefederalist.com", "rss": "https://thefederalist.com/feed/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "newsmax", "name": "Newsmax", "domain": "newsmax.com", "rss": "https://www.newsmax.com/rss/Newsfront/16/", "stream": "news", "country": "US", "scope": "top-stories"},
+    {"key": "guardian", "name": "The Guardian", "domain": "theguardian.com", "rss": "https://www.theguardian.com/international/rss", "stream": "news", "country": "GB", "scope": "top-stories"},
+    {"key": "aljazeera", "name": "Al Jazeera English", "domain": "aljazeera.com", "rss": "https://www.aljazeera.com/xml/rss/all.xml", "stream": "news", "country": "QA", "scope": "top-stories"},
+    {"key": "dw", "name": "Deutsche Welle", "domain": "dw.com", "rss": "https://rss.dw.com/rdf/rss-en-all", "stream": "news", "country": "DE", "scope": "top-stories"},
+    {"key": "france24", "name": "France 24", "domain": "france24.com", "rss": "https://www.france24.com/en/rss", "stream": "news", "country": "FR", "scope": "top-stories"},
+    {"key": "timesofindia", "name": "The Times of India", "domain": "indiatimes.com", "rss": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms", "stream": "news", "country": "IN", "scope": "top-stories"},
+    {"key": "abcau", "name": "ABC News (Australia)", "domain": "abc.net.au", "rss": "https://www.abc.net.au/news/feed/51120/rss.xml", "stream": "news", "country": "AU", "scope": "top-stories"},
+    {"key": "nationalpost", "name": "National Post", "domain": "nationalpost.com", "rss": "https://nationalpost.com/feed/", "stream": "news", "country": "CA", "scope": "top-stories"},
+    {"key": "politifact", "name": "PolitiFact", "domain": "politifact.com", "rss": "https://www.politifact.com/rss/all/", "stream": "factcheck", "country": "US", "scope": "factchecks"},
+    {"key": "snopes", "name": "Snopes", "domain": "snopes.com", "rss": "https://www.snopes.com/feed/", "stream": "factcheck", "country": "US", "scope": "factchecks"},
+    {"key": "factcheckorg", "name": "FactCheck.org", "domain": "factcheck.org", "rss": "https://www.factcheck.org/feed/", "stream": "factcheck", "country": "US", "scope": "factchecks"},
+    {"key": "fullfact", "name": "Full Fact", "domain": "fullfact.org", "rss": "https://fullfact.org/feed/all/", "stream": "factcheck", "country": "GB", "scope": "factchecks"},
+    {"key": "leadstories", "name": "Lead Stories", "domain": "leadstories.com", "rss": "https://leadstories.com/atom.xml", "stream": "factcheck", "country": "US", "scope": "factchecks"}
+  ]
+}
