@@ -92,6 +92,13 @@ OMISSION_MIN_SAMPLE = 8
 OMISSION_MIN_SITEMAP = 30
 ADJACENT_THRESHOLD = 0.42
 COVERED_THRESHOLD = STORY_THRESHOLD
+# A story is "featured" by an outlet when it reached this feed position or
+# better. Featuring is a stronger editorial statement than volume (one
+# banner story says more than five buried ones — Tarek, 2026-06-11), and
+# persistence across captures (captures_seen) is its duration dimension.
+# Both are raw observables (P5): position and capture count, never a
+# blended importance score.
+FEATURED_POSITION = 5
 
 _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
@@ -454,9 +461,12 @@ def describe_stories(stories: list, leans: dict, roster: dict) -> list:
                 "outlet": okey, "name": by_key[okey]["name"],
                 "stream": by_key[okey]["stream"], "items": 0,
                 "best_position": it["best_position"],
+                "captures_seen": it.get("captures_seen", 1),
                 "sample_title": it["title"], "sample_link": it["link"],
             })
             rec["items"] += 1
+            rec["captures_seen"] = max(rec["captures_seen"],
+                                       it.get("captures_seen", 1))
             if it["best_position"] < rec["best_position"]:
                 rec["best_position"] = it["best_position"]
                 rec["sample_title"] = it["title"]
@@ -610,20 +620,32 @@ def attention_distributions(stories: list, items_by_outlet: dict,
     cent = np.vstack([s["_centroid"] for s in stories]) if stories else None
     sids = [s["story_id"] for s in stories]
 
-    feed_carried = {}   # outlet -> {story_id: (items, best_pos)}
+    feed_carried = {}   # outlet -> {story_id: (items, best_pos, captures_seen)}
     for s in stories:
         for c in s["carriers"]:
             feed_carried.setdefault(c["outlet"], {})[s["story_id"]] = (
-                c["items"], c["best_position"])
+                c["items"], c["best_position"], c.get("captures_seen", 1))
 
     per = {}
     for o in roster["outlets"]:
         okey = o["key"]
         feed_total = len(items_by_outlet.get(okey, []))
         feed_rows = feed_carried.get(okey, {})
+        # FEATURING: the stories this outlet put at the top of its feed —
+        # a stronger editorial statement than volume, with persistence
+        # (captures the story stayed top-of-feed) as its duration.
+        featured = sorted(((sid, pos, seen) for sid, (_, pos, seen)
+                           in feed_rows.items() if pos <= FEATURED_POSITION),
+                          key=lambda r: (r[1], -r[2]))
         row = {"name": o["name"], "stream": o["stream"],
                "feed_items": feed_total,
-               "stories_carried_in_feed": len(feed_rows)}
+               "stories_carried_in_feed": len(feed_rows),
+               "featured": [{
+                   "story_id": sid,
+                   "label": story_by_id[sid]["label"][:160],
+                   "best_feed_position": pos,
+                   "captures_seen": seen,
+               } for sid, pos, seen in featured[:5]]}
         sm = sitemap_vecs.get(okey)
         if sm is not None and cent is not None:
             vecs, arts = sm
@@ -658,7 +680,7 @@ def attention_distributions(stories: list, items_by_outlet: dict,
                     "label": story_by_id[sid]["label"][:160],
                     "feed_items": n, "best_feed_position": pos,
                     "share": round(n / feed_total, 4) if feed_total else 0.0,
-                } for sid, (n, pos) in ranked[:top]],
+                } for sid, (n, pos, _seen) in ranked[:top]],
             })
         per[okey] = row
     return per
