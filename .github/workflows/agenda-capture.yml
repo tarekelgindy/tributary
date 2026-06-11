@@ -1,0 +1,68 @@
+# Tributary agenda capture — cloud cron (Phase 2.6 durability)
+# ------------------------------------------------------------
+# The capture layer is free and keyless (RSS + Wikipedia + news-sitemaps,
+# no Anthropic calls), but the dataset must not depend on one desktop
+# staying awake: a dead week of captures silently breaks the digest cadence
+# and Gate 2's evidence base. This cron captures every 6 hours and commits
+# the raw snapshots to the `agenda-data` branch, which is checked out AS the
+# agenda/ directory (main's .gitignore keeps agenda/ untracked locally, so
+# nothing conflicts with a developer machine running the same scripts).
+#
+# Analysis (reports, clustering, framing matrices) stays local/manual — it
+# needs torch + an API key. Only the raw, public, citable captures live here
+# (P6: share results; raw captures are the evidence behind every claim).
+#
+# Retention: raw JSON accretes ~1-3 MB/day on agenda-data. Revisit pruning/
+# gzip when the branch passes ~1 GB; never rewrite already-cited history.
+
+name: agenda-capture
+
+on:
+  schedule:
+    - cron: "17 0,6,12,18 * * *"   # every 6h, offset off the top of the hour
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agenda-capture
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout code (main)
+        uses: actions/checkout@v4
+
+      - name: Checkout data branch as agenda/
+        uses: actions/checkout@v4
+        with:
+          ref: agenda-data
+          path: agenda
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install capture deps (no torch — capture is embedding-free)
+        run: pip install httpx feedparser
+
+      - name: Capture feeds, universe, sitemaps
+        run: |
+          python agenda.py --capture
+          python agenda.py --universe
+          python sitemaps.py --capture
+
+      - name: Commit snapshots to agenda-data
+        working-directory: agenda
+        run: |
+          git config user.name "tributary-capture"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "nothing new" && exit 0
+          git commit -m "capture $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
