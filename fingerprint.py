@@ -2866,6 +2866,13 @@ Output ONLY JSON:
          "excerpt": "a representative headline or quote", "date": "ISO date if known",
          "role_evidence": "one-line justification for the role"}
       ]
+
+CARRIER URL RULE: the url must point to WHERE THE NAMED CARRIER SAID IT — the
+carrier's own article, statement, post, or page (or a news article directly
+quoting them). NEVER substitute an encyclopedia/aggregator page about the
+event (Wikipedia, Britannica…) for the named source; if you only saw the
+carrier's words via such a page, leave url empty — a missing link is honest,
+a mislabeled one is not.
     }
   ],
   "search_notes": "what you searched and any coverage gaps"

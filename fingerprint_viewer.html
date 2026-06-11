@@ -516,6 +516,7 @@ section { animation: fadein 0.2s; }
 .carrier-bridge { font-size: 0.66rem; color: #5a4b8a; background: #efeaf6; border: 1px solid #ddd3ee; border-radius: 8px; padding: 0.04rem 0.4rem; margin-left: 0.3rem; white-space: nowrap; }
 .fr-carrier.is-bridge > a { font-weight: 600; }
 .carrier-oppose { font-size: 0.66rem; color: #9a3b2e; background: #f6e9e7; border: 1px solid #eed3ce; border-radius: 8px; padding: 0.04rem 0.4rem; margin-left: 0.3rem; white-space: nowrap; }
+.carrier-refhost { font-size: 0.66rem; color: #8a6d1a; background: #f8f3e2; border: 1px solid #eadfb8; border-radius: 8px; padding: 0.04rem 0.4rem; margin-left: 0.3rem; white-space: nowrap; }
 .coal-section { font-size: 0.78rem; font-weight: 600; color: #444; margin: 1rem 0 0.4rem; padding-top: 0.7rem; border-top: 1px solid #eee; }
 .coal-fchip.champ { background: #e7f1ea; color: #2c5f43; border-color: #cfe3d6; }
 .coal-fchip.oppose { background: #f6e9e7; color: #8a3326; border-color: #eed3ce; }
@@ -653,6 +654,18 @@ dropZone.addEventListener('drop', e => {
 });
 fileInput.addEventListener('change', e => { if (e.target.files.length) loadFile(e.target.files[0]); });
 
+// Reference/aggregator hosts: a carrier link to one of these is a page ABOUT
+// the event, not the named carrier's own words — flagged for transparency.
+const REFERENCE_HOSTS = ['wikipedia.org', 'britannica.com', 'wikiwand.com', 'wikidata.org', 'wikimedia.org'];
+function refHostName(url) {
+  try {
+    const h = new URL(url).hostname.toLowerCase();
+    const hit = REFERENCE_HOSTS.find(r => h === r || h.endsWith('.' + r));
+    return hit ? hit.split('.')[0].charAt(0).toUpperCase() + hit.split('.')[0].slice(1) : '';
+  } catch (e) { return ''; }
+}
+function isReferenceHost(url) { return !!(url && refHostName(url)); }
+
 function routeData(data) {
   if (data.is_event_analysis) {
     renderEventAnalysis(data);
@@ -762,10 +775,14 @@ function renderEventAnalysis(analysis) {
       const bn = Object.keys(bridgeByName).find(b => b && (c.name || '').includes(b));
       const bridgeBadge = bn ? `<span class="carrier-bridge" title="this actor champions ${bridgeByName[bn]} different framings of this event">⇄ ${bridgeByName[bn]} framings</span>` : '';
       const opposeBadge = role === 'critic' ? `<span class="carrier-oppose" title="pushes back on / rebuts this framing rather than carrying it">⊘ opposes</span>` : '';
+      // Transparency: a link to an encyclopedia/aggregator page is NOT the
+      // named carrier's own words — say so instead of letting the label imply it.
+      const refBadge = isReferenceHost(c.url)
+        ? `<span class="carrier-refhost" title="this link goes to a reference/aggregator page about the event, not to the named carrier's own statement">via ${escapeHtml(refHostName(c.url))}</span>` : '';
       return `<div class="fr-carrier${bn ? ' is-bridge' : ''}${role === 'critic' ? ' is-oppose' : ''}">
         <span class="carrier-role ${role}">${escapeHtml(role)}</span>
         ${c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.name || c.url)}</a>` : `<span>${escapeHtml(c.name || '')}</span>`}
-        ${opposeBadge}${bridgeBadge}
+        ${refBadge}${opposeBadge}${bridgeBadge}
         ${c.excerpt ? `<span class="carrier-excerpt"> — ${escapeHtml(c.excerpt)}</span>` : ''}
         ${provenanceBadge(c)}${verifyBadge(c)}${archiveBadge(c)}
       </div>`;

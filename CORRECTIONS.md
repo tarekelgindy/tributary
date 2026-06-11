@@ -8,7 +8,10 @@ A public, dated log of every substantive error found in Tributary's published ou
 
 ## Published-output corrections
 
-*None logged yet. The first precision audit (≈50 randomly sampled attestations, manually verified) is a committed roadmap item and will be recorded here, whatever it finds.*
+| Date | Output affected | Error | Fix | Root cause |
+|------|-----------------|-------|-----|------------|
+| 2026-06-10 | The entire public gallery (103 events) | Every gallery event link returned 404: the index was live but none of the event files had been deployed | `.gitignore`'s unanchored `events/` pattern also matched `gallery/events/`, so the files were silently never committed; pattern root-anchored, files deployed, live URLs verified | Unanchored ignore pattern — and a deployment check that verified the index but not the content it points to. Found by Tarek's manual QA. |
+| 2026-06-10 | ~7.5% of carrier links across the corpus (274 of 3,667) | Carrier links labeled with a named source (e.g. "UN OCHA") pointed to encyclopedia pages *about the event* rather than the named carrier's own statement — the link did not support the attribution | Viewer now flags such links ("via Wikipedia") rather than letting the label imply first-party sourcing; generation prompt now requires the carrier's own URL or none ("a missing link is honest, a mislabeled one is not") | Web search surfaces aggregator pages; the model substituted them for primary links; URL verification checked existence, not that the page belongs to the named carrier. Found by Tarek's manual QA. Existing corpus entries retain the flag rather than being silently rewritten. |
 
 ## Pipeline-level errors caught before/at publication
 

@@ -126,6 +126,14 @@ Selection and prominence are where outlet bias lives even when individual storie
 
 ---
 
+## Phase 2.5 — Presentation pass (before the first digest; from Tarek's 2026-06-10 QA)
+
+The digest links readers to traces; the traces must be readable by someone who didn't build them.
+
+- [ ] **Event view: progressive disclosure.** The framing cards carry more than most readers will absorb. Default to a compact card (name, question, key claim, carrier count); expand on click for emphases/omissions/carriers. Lead with an at-a-glance strip: N framings · the common ground in one line · who's contesting it.
+- [ ] **Upstream view: de-clutter.** Trim superfluous fields from the default fingerprint view; foreground the genealogy's *milestone* moments (origin, first amplification, institutional adoption, major mutations) over the full attestation log (keep the log behind a toggle).
+- [ ] **Amplifier-impact visualization — scoped honestly (P5).** Tarek's instinct: show the *impact* of amplification (e.g. interaction rising after an actor amplifies). A timeline of dated attestations with role-colored milestones and cumulative-spread shading is supportable from current data. A Sankey/flow diagram implying *who caused whose uptake* is NOT — temporal order isn't influence, and the attestation log is a sparse sample; flow visuals would assert causality we can't verify. Park true flow-viz until Phase 4's cross-event actor profiles (and even then, label it observed-sequence, not influence).
+
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
 
 - [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery.
