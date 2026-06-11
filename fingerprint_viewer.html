@@ -1064,23 +1064,28 @@ function renderAgendaReport(report) {
       </div>`;
     }).join('');
 
-  // -- omission report (guarded; the caveat is part of the output) --
+  // -- omission report (guarded; the caveat is part of the output;
+  //    existence comes from news-sitemaps, never RSS — Gate 2 pre-log) --
   const om = report.omissions || {};
-  const omRows = (om.by_outlet || []).filter(r => !r.insufficient_sample && (r.missed || (r.adjacent_stories || []).length)).map(r => {
+  const omRows = (om.by_outlet || []).filter(r => !r.insufficient_sample && (r.missed || (r.adjacent_stories || []).length || (r.covered_not_featured || []).length)).map(r => {
     const missed = (r.missed_stories || []).map(m =>
-      `<div class="agenda-evidence">∅ <strong>${escapeHtml(m.label)}</strong> (carried by ${m.n_outlets} outlets) — nearest sampled item: “${escapeHtml(m.nearest_item || '(none)')}” at similarity ${m.nearest_sim}</div>`
+      `<div class="agenda-evidence">∅ <strong>${escapeHtml(m.label)}</strong> (carried by ${m.n_outlets} outlets) — nearest of ${r.sitemap_articles} sitemap articles: “${escapeHtml(m.nearest_article || '(none)')}” at similarity ${m.nearest_sim}</div>`
     ).join('');
     const adjacent = (r.adjacent_stories || []).map(a =>
-      `<div class="agenda-evidence">≈ adjacent to <strong>${escapeHtml(a.label)}</strong> via “${escapeHtml(a.nearest_item)}” (${a.nearest_sim})</div>`
+      `<div class="agenda-evidence">≈ adjacent to <strong>${escapeHtml(a.label)}</strong> via “${escapeHtml(a.nearest_article)}” (${a.nearest_sim})</div>`
+    ).join('');
+    const covered = (r.covered_not_featured || []).map(c =>
+      `<div class="agenda-evidence">✓ covered, not feed-featured: <strong>${escapeHtml(c.label)}</strong> — ${c.nearest_url ? `<a href="${escapeHtml(c.nearest_url)}" target="_blank" rel="noopener">${escapeHtml(c.nearest_article)}</a>` : escapeHtml(c.nearest_article)} (${c.nearest_sim}); a prominence observation, not an omission</div>`
     ).join('');
     return `<details class="agenda-omit-row">
-      <summary>${escapeHtml(r.name)} ${leanChip(r.lean)} — <strong>${r.missed}</strong> of ${r.broad_stories} broad stories with no observed item
-        <span style="color:#999;">(${r.items_sampled} items sampled, feed scope: ${escapeHtml(r.feed_scope || '?')})</span></summary>
-      ${missed}${adjacent}
+      <summary>${escapeHtml(r.name)} ${leanChip(r.lean)} — <strong>${r.missed}</strong> of ${r.broad_stories} broad stories with no sitemap match
+        <span style="color:#999;">(${r.sitemap_articles} sitemap articles in window)</span></summary>
+      ${missed}${adjacent}${covered}
     </details>`;
   }).join('');
   const omSkipped = (om.by_outlet || []).filter(r => r.insufficient_sample).map(r =>
-    `${escapeHtml(r.name)} (${r.items_sampled})`).join(', ');
+    `${escapeHtml(r.name)} (${r.sitemap_articles} articles)`).join(', ');
+  const omNoSitemap = (om.no_sitemap_no_claims || []).map(escapeHtml).join(', ');
   const oneSide = (om.one_side_only || []).map(s =>
     `<div class="agenda-omit-row">“${escapeHtml(s.label)}” — <span class="agenda-badge oneside">${escapeHtml(s.side_present)}</span> (${s.n_outlets} outlets carried it)</div>`
   ).join('');
@@ -1116,8 +1121,8 @@ function renderAgendaReport(report) {
       <h2>Omission report</h2>
       <div class="agenda-caveat"><strong>Read this first:</strong> ${escapeHtml(om.method_caveat || '')}</div>
       ${omRows || '<p class="empty">No omission candidates in this window (or guards filtered them all).</p>'}
-      ${omSkipped ? `<p style="color:#888; font-size:0.78rem; margin-top:0.6rem;">Insufficient sample (no claims made): ${omSkipped}</p>` : ''}
-      ${(om.unsampled_outlets || []).length ? `<p style="color:#888; font-size:0.78rem;">Unsampled (feed unreachable or empty in window): ${om.unsampled_outlets.map(escapeHtml).join(', ')}</p>` : ''}
+      ${omSkipped ? `<p style="color:#888; font-size:0.78rem; margin-top:0.6rem;">Insufficient sitemap sample (no claims made): ${omSkipped}</p>` : ''}
+      ${omNoSitemap ? `<p style="color:#888; font-size:0.78rem;">No usable news-sitemap — these outlets receive no omission claims: ${omNoSitemap}</p>` : ''}
       ${oneSide ? `<h2 style="margin-top:1.1rem;">One-side-only stories</h2>
         <p style="color:#777; font-size:0.8rem;">Carried by rated US outlets on one side of center and none on the other — in this sample.</p>${oneSide}` : ''}
     </div>
