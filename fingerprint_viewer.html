@@ -145,9 +145,11 @@ section { animation: fadein 0.2s; }
 }
 .timeline-block .timeline-info { font-size: 0.82rem; color: #777; }
 .timeline-svg {
-  width: 100%; height: 90px;
+  width: 100%; height: 120px;
   background: white; border: 1px solid #e5e5e5; border-radius: 6px;
 }
+.ms-caveat { color: #999; font-size: 0.75rem; margin: 0.3rem 0 0.9rem; }
+.timeline-svg text.ms-marker-label { fill: #444; font-size: 9.5px; font-weight: 600; }
 
 .detail-card {
   background: white;
@@ -1542,14 +1544,23 @@ function switchTab(name) {
     s.hidden = s.dataset.panel !== name);
   // Redraw timelines on activation; SVG clientWidth is 0 while hidden, so
   // we have to draw after the panel is visible.
+  if (name === 'overview' && currentFP) {
+    const lex = currentFP.genealogy?.lexical?.attestation_log || [];
+    const con = currentFP.genealogy?.conceptual?.attestation_log || [];
+    const markers = milestoneMarkers(currentFP);
+    requestAnimationFrame(() => {
+      drawSpreadTimeline('spread-overview', lex.length ? lex : con, markers);
+    });
+  }
   if (name === 'lineages' && currentFP) {
     const lex = currentFP.genealogy?.lexical?.attestation_log || [];
     const con = currentFP.genealogy?.conceptual?.attestation_log || [];
     const lexStats = currentFP.genealogy?.lexical?.timeline_stats || {};
     const conStats = currentFP.genealogy?.conceptual?.timeline_stats || {};
+    const markers = milestoneMarkers(currentFP);
     requestAnimationFrame(() => {
-      drawTimeline('timeline-lexical', lex);
-      drawTimeline('timeline-conceptual', con);
+      drawSpreadTimeline('timeline-lexical', lex, markers);
+      drawSpreadTimeline('timeline-conceptual', con, markers);
       drawStatsChart('stats-lexical', lexStats);
       drawStatsChart('stats-conceptual', conStats);
     });
@@ -1974,6 +1985,13 @@ function renderOverview(fp) {
 
   panel.innerHTML = `
     <div class="card">
+      <h2>Spread over time — ${lexLog.length ? 'this phrasing' : 'the underlying idea'}</h2>
+      <svg class="timeline-svg" id="spread-overview"></svg>
+      <div class="ms-caveat">Observed sequence of dated attestations from the cited sources — a sparse sample, not a census. Order shows sequence, not influence. Shading: cumulative share of observed attestations. Click a dot for detail.</div>
+      <div id="instance-detail-overview"></div>
+    </div>
+
+    <div class="card">
       <h2>Milestones — how this narrative traveled</h2>
       <p style="color:#777; font-size:0.82rem; margin:0 0 0.8rem;">The genealogy's turning points. The full attestation log is below; dates and roles are AI-attested from the cited sources (a sample, not a census).</p>
       ${ms.length ? ms.map(milestoneHtml).join('') : '<p class="empty">No dated attestations found.</p>'}
@@ -2134,111 +2152,161 @@ function renderLineages(fp) {
   `;
 }
 
-function drawTimeline(svgId, instances) {
+// Tick labels at whatever resolution the span needs: bare years for long
+// histories (BCE-aware), month/year for multi-month spans, day-level for
+// the fresh narratives where every attestation lands in one month.
+function fracLabel(frac, spanYears) {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const y = Math.floor(frac);
+  const yLabel = y < 0 ? `${-y} BCE` : String(y);
+  if (spanYears >= 3) return yLabel;
+  const rem = (frac - y) * 12;
+  const mIdx = Math.min(11, Math.floor(rem));
+  if (spanYears * 365 >= 90) return `${months[mIdx]} ${yLabel}`;
+  const day = Math.max(1, Math.min(31, Math.round((rem - mIdx) * 31) + 1));
+  return `${months[mIdx]} ${day}`;
+}
+
+// The amplifier timeline (Phase 2.5): dated attestations as role-colored
+// dots, milestones enlarged and labeled, and a cumulative step-area showing
+// how much of the observed spread had accumulated by each moment. Counts,
+// presence, and position only (P5) — the shading asserts no causality.
+function drawSpreadTimeline(svgId, instances, milestones) {
   const svg = document.getElementById(svgId);
   if (!svg) return;
   svg.innerHTML = '';
   const ns = 'http://www.w3.org/2000/svg';
   const width = svg.clientWidth || 800;
-  const height = 90;
+  const height = 120;
   const padding = 36;
-  const axisY = height / 2;
+  const axisY = height - 30;
+  const areaTop = 12;
 
-  if (!instances.length) {
+  const dated = (instances || [])
+    .map(i => ({ inst: i, t: parseDateFrac(i.date) }))
+    .filter(d => d.t != null)
+    .sort((a, b) => a.t - b.t);
+
+  if (!dated.length) {
     const text = document.createElementNS(ns, 'text');
     text.setAttribute('x', '50%'); text.setAttribute('y', '50%');
     text.setAttribute('text-anchor', 'middle');
     text.setAttribute('fill', '#aaa');
     text.setAttribute('font-size', '12');
-    text.textContent = 'No instances';
+    text.textContent = instances && instances.length ? 'No dated instances' : 'No instances';
     svg.appendChild(text);
     return;
   }
 
-  const datedInstances = instances
-    .map(i => ({ ...i, year: parseYear(i.date) }))
-    .filter(i => i.year != null);
+  let minT = dated[0].t, maxT = dated[dated.length - 1].t;
+  if (maxT - minT < 1e-9) { minT -= 0.5; maxT += 0.5; }
+  const span = maxT - minT;
+  const xOf = t => padding + ((t - minT) / span) * (width - 2 * padding);
 
-  if (datedInstances.length === 0) {
-    const text = document.createElementNS(ns, 'text');
-    text.setAttribute('x', '50%'); text.setAttribute('y', '50%');
-    text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('fill', '#aaa');
-    text.setAttribute('font-size', '12');
-    text.textContent = 'No dated instances';
-    svg.appendChild(text);
-    return;
+  // Cumulative-spread shading: share of all dated attestations observed by
+  // time t, as a step area under the dots.
+  const total = dated.length;
+  const yOf = cum => axisY - (cum / total) * (axisY - areaTop);
+  let dPath = `M ${xOf(dated[0].t).toFixed(1)} ${axisY}`;
+  let cum = 0, prevY = axisY;
+  for (let k = 0; k < dated.length; k++) {
+    cum++;
+    if (k + 1 < dated.length && dated[k + 1].t - dated[k].t < 1e-9) continue; // same instant
+    const x = xOf(dated[k].t).toFixed(1);
+    dPath += ` L ${x} ${prevY.toFixed(1)} L ${x} ${yOf(cum).toFixed(1)}`;
+    prevY = yOf(cum);
   }
+  dPath += ` L ${xOf(maxT).toFixed(1)} ${prevY.toFixed(1)} L ${xOf(maxT).toFixed(1)} ${axisY} Z`;
+  const area = document.createElementNS(ns, 'path');
+  area.setAttribute('d', dPath);
+  area.setAttribute('fill', 'rgba(42,111,163,0.09)');
+  area.setAttribute('stroke', 'rgba(42,111,163,0.30)');
+  area.setAttribute('stroke-width', 1);
+  const areaTitle = document.createElementNS(ns, 'title');
+  areaTitle.textContent = 'Cumulative share of observed attestations — sequence, not influence';
+  area.appendChild(areaTitle);
+  svg.appendChild(area);
 
-  const years = datedInstances.map(i => i.year);
-  const minYear = Math.min(...years);
-  const maxYear = Math.max(...years);
-  const range = Math.max(1, maxYear - minYear);
-
-  // Axis line
+  // Axis + ticks
   const line = document.createElementNS(ns, 'line');
   line.setAttribute('x1', padding); line.setAttribute('x2', width - padding);
   line.setAttribute('y1', axisY); line.setAttribute('y2', axisY);
   line.setAttribute('class', 'lineage-line');
   svg.appendChild(line);
-
-  // Year ticks
   const tickCount = 5;
   for (let i = 0; i <= tickCount; i++) {
     const x = padding + ((width - 2 * padding) * i / tickCount);
-    const year = Math.round(minYear + (range * i / tickCount));
+    const t = minT + span * i / tickCount;
     const tick = document.createElementNS(ns, 'line');
     tick.setAttribute('x1', x); tick.setAttribute('x2', x);
     tick.setAttribute('y1', axisY - 4); tick.setAttribute('y2', axisY + 4);
     tick.setAttribute('stroke', '#bbb');
     svg.appendChild(tick);
     const text = document.createElementNS(ns, 'text');
-    text.setAttribute('x', x); text.setAttribute('y', axisY + 24);
+    text.setAttribute('x', x); text.setAttribute('y', axisY + 18);
     text.setAttribute('text-anchor', 'middle');
     text.setAttribute('class', 'tick');
-    text.textContent = year;
+    text.textContent = fracLabel(t, span);
     svg.appendChild(text);
   }
 
-  // Group dots by x position (within 8px) and stack vertically when overlapping
+  // Dots, bucketed by x and stacked when overlapping; milestones enlarged.
+  const msMap = milestones || new Map();
   const bucketed = {};
-  datedInstances.forEach(inst => {
-    const x = padding + ((inst.year - minYear) / range) * (width - 2 * padding);
+  dated.forEach(({ inst, t }) => {
+    const x = xOf(t);
     const key = Math.round(x / 8) * 8;
     (bucketed[key] = bucketed[key] || []).push({ inst, x });
   });
-
+  let msIdx = 0;
   Object.values(bucketed).forEach(bucket => {
     bucket.forEach(({ inst, x }, idx) => {
       const verticalOffset = (idx - (bucket.length - 1) / 2) * 12;
       const role = inst.amplifier_role || 'unknown';
       const color = ROLE_COLORS[role] || ROLE_COLORS.unknown;
+      const msLabel = msMap.get(inst);
       const circle = document.createElementNS(ns, 'circle');
       circle.setAttribute('cx', x);
-      circle.setAttribute('cy', axisY - 18 + verticalOffset);
-      circle.setAttribute('r', 5);
+      circle.setAttribute('cy', axisY - 16 + verticalOffset);
+      circle.setAttribute('r', msLabel ? 7 : 4.5);
       circle.setAttribute('fill', color);
-      circle.setAttribute('stroke', 'white');
-      circle.setAttribute('stroke-width', 1.5);
+      circle.setAttribute('stroke', msLabel ? '#444' : 'white');
+      circle.setAttribute('stroke-width', msLabel ? 2 : 1.5);
       circle.setAttribute('class', 'instance');
-      const tooltip = `${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}`;
       const title = document.createElementNS(ns, 'title');
-      title.textContent = tooltip;
+      title.textContent = `${msLabel ? msLabel + ' — ' : ''}${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}`;
       circle.appendChild(title);
       circle.addEventListener('click', () => showDetail(inst));
       svg.appendChild(circle);
+      if (msLabel) {
+        const lbl = document.createElementNS(ns, 'text');
+        // Alternate label heights so neighbors don't collide.
+        lbl.setAttribute('x', x);
+        lbl.setAttribute('y', (msIdx++ % 2 === 0) ? 24 : 38);
+        lbl.setAttribute('text-anchor', x > width - 90 ? 'end' : (x < 90 ? 'start' : 'middle'));
+        lbl.setAttribute('class', 'ms-marker-label');
+        lbl.textContent = truncate(msLabel, 26);
+        svg.appendChild(lbl);
+      }
     });
   });
 }
 
-function parseYear(dateStr) {
-  if (!dateStr) return null;
-  const m = String(dateStr).match(/^(\d{4})/);
-  return m ? parseInt(m[1], 10) : null;
+// Milestone instance -> label, for emphasis on the spread timelines.
+function milestoneMarkers(fp) {
+  const map = new Map();
+  extractMilestones(fp).ms.forEach(e => { if (e.inst) map.set(e.inst, e.label); });
+  return map;
 }
 
 function showDetail(inst) {
-  const detail = document.getElementById('instance-detail');
+  // Dots live on both the Overview spread timeline and the Lineages
+  // timelines; render the detail into whichever panel is showing.
+  const overviewPanel = document.querySelector('section[data-panel=overview]');
+  const detail = (overviewPanel && !overviewPanel.hidden)
+    ? document.getElementById('instance-detail-overview')
+    : document.getElementById('instance-detail');
+  if (!detail) return;
   detail.innerHTML = instanceDetailHtml(inst);
   detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
