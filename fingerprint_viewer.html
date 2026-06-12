@@ -652,6 +652,45 @@ details.cov-backdrop .coverage-card { margin: 0.8rem; border-left-width: 4px; }
 }
 #back-to-article:hover { background: #222; }
 
+/* Upstream milestone view (Phase 2.5): the genealogy's turning points,
+   with the full attestation log behind a toggle. */
+.role-tag { font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 999px; background: #eee; color: #555; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+.role-tag.originator { background: #fad7d1; color: #832018; }
+.role-tag.early-amplifier { background: #f7e0bb; color: #6a4308; }
+.role-tag.mass-amplifier { background: #fae7b8; color: #6a4d06; }
+.role-tag.institutional-adoption { background: #cfe0ee; color: #1b486f; }
+.role-tag.critic { background: #e2d2ec; color: #4a275a; }
+.role-tag.mention { background: #eaeaea; color: #444; }
+.role-tag.unknown { background: #eaeaea; color: #666; }
+.ms-item { border-left: 3px solid #ccc; padding: 0.15rem 0 0.6rem 0.95rem; }
+.ms-item + .ms-item { margin-top: 0.4rem; }
+.ms-item.role-originator { border-left-color: #c0392b; }
+.ms-item.role-early-amplifier { border-left-color: #d68f1a; }
+.ms-item.role-mass-amplifier { border-left-color: #f0a500; }
+.ms-item.role-institutional-adoption { border-left-color: #2a6fa3; }
+.ms-item.role-critic { border-left-color: #6f3e8e; }
+.ms-item.ms-mutation { border-left-color: #c45719; }
+.ms-head { display: flex; gap: 0.55rem; align-items: baseline; flex-wrap: wrap; }
+.ms-when { font-family: 'SF Mono', Menlo, monospace; font-size: 0.82rem; color: #555; white-space: nowrap; }
+.ms-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #444; }
+.ms-lineage { font-size: 0.66rem; color: #999; }
+.ms-who { font-size: 0.9rem; color: #333; margin-top: 0.15rem; }
+.ms-who a { color: #2a6fa3; text-decoration: none; }
+.ms-who a:hover { text-decoration: underline; }
+.ms-quote { font-size: 0.85rem; font-style: italic; color: #555; background: #faf7ef; border-radius: 4px; padding: 0.4rem 0.6rem; margin-top: 0.3rem; }
+.ms-mut { font-size: 0.84rem; color: #333; margin-top: 0.2rem; }
+.ms-mut .lbl { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.4rem; }
+.ms-mut .lbl.distorted { color: #c45719; }
+.ms-mut .lbl.added { color: #1976d2; }
+.ms-mut .lbl.dropped { color: #757575; }
+.ms-stats { font-size: 0.86rem; color: #555; line-height: 1.7; }
+.log-grp { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin: 0.8rem 0 0.3rem; }
+.log-row { font-size: 0.86rem; padding: 0.3rem 0.2rem; border-bottom: 1px solid #f3f3f3; cursor: pointer; }
+.log-row:hover { background: #faf9f4; }
+.log-row .date { font-family: 'SF Mono', Menlo, monospace; color: #555; margin-right: 0.5rem; }
+.log-row .role-tag { font-size: 0.64rem; margin-right: 0.4rem; }
+.log-detail { margin: 0.4rem 0 0.6rem; }
+
 .empty { color: #999; font-style: italic; margin: 0; }
 code { font-family: 'SF Mono', Menlo, monospace; background: #f1ede2; padding: 0.15rem 0.4rem; border-radius: 3px; }
 
@@ -1522,20 +1561,25 @@ function escapeHtml(s) {
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function instancesByRole(log) {
-  const grouped = {};
-  ROLE_ORDER.forEach(r => grouped[r] = []);
-  (log || []).forEach(i => {
-    const r = i.amplifier_role || 'unknown';
-    if (grouped[r]) grouped[r].push(i); else grouped.unknown.push(i);
-  });
-  return grouped;
+// Date strings in attestation logs range from "-0760-01-01" (BCE) through
+// "1991-10-20" to bare years. Returns a sortable fractional year, or null.
+function parseDateFrac(dateStr) {
+  const m = String(dateStr || '').match(/^(-?\d{1,6})(?:-(\d{1,2}))?(?:-(\d{1,2}))?/);
+  if (!m) return null;
+  const y = parseInt(m[1], 10);
+  if (Number.isNaN(y)) return null;
+  const mo = m[2] ? parseInt(m[2], 10) : 1;
+  const d = m[3] ? parseInt(m[3], 10) : 1;
+  return y + ((mo - 1) + (d - 1) / 31) / 12;
 }
 
-function instanceLine(i) {
-  return `<div style="margin: 0.4rem 0; font-size: 0.92rem;">
-    <strong>${escapeHtml(i.date || '?')}</strong> · ${escapeHtml(i.author || '')} — ${escapeHtml(i.source_title || '')}
-  </div>`;
+// Sort instances chronologically; undated entries sink to the end.
+function byDateAsc(a, b) {
+  const da = parseDateFrac(a.date), db = parseDateFrac(b.date);
+  if (da == null && db == null) return 0;
+  if (da == null) return 1;
+  if (db == null) return -1;
+  return da - db;
 }
 
 function truncate(s, max) {
@@ -1834,66 +1878,128 @@ function renderMutationsBlock(label, mutations, instances) {
   `;
 }
 
+// The genealogy's turning points: origin, first amplification, institutional
+// adoption, first pushback, major mutations — the story a reader actually
+// needs, with the full attestation log behind a toggle below.
+function extractMilestones(fp) {
+  const lexLog = (fp.genealogy?.lexical?.attestation_log || []).slice().sort(byDateAsc);
+  const conLog = (fp.genealogy?.conceptual?.attestation_log || []).slice().sort(byDateAsc);
+  const chosen = new Set();
+  const ms = [];
+  const pick = (label, inst, lineage) => {
+    if (!inst || chosen.has(inst)) return;
+    chosen.add(inst);
+    ms.push({ label, inst, lineage });
+  };
+  const firstRole = (log, roles) => log.find(i => roles.includes(i.amplifier_role || ''));
+
+  const lexOrigin = firstRole(lexLog, ['originator']) || lexLog[0];
+  const conRoot = conLog[0];
+  // The deep ancestor is a milestone only when it actually predates the phrase.
+  if (conRoot && (!lexOrigin || parseDateFrac(conRoot.date) < parseDateFrac(lexOrigin.date))) {
+    pick('Oldest traced ancestor of the idea', conRoot, 'conceptual');
+  }
+  pick('This phrasing first attested', lexOrigin, 'lexical');
+  pick('First amplification', firstRole(lexLog, ['early-amplifier', 'mass-amplifier']) || firstRole(conLog, ['early-amplifier', 'mass-amplifier']), lexLog.length ? 'lexical' : 'conceptual');
+  pick('Institutional adoption', firstRole(lexLog, ['institutional-adoption']) || firstRole(conLog, ['institutional-adoption']), lexLog.length ? 'lexical' : 'conceptual');
+  pick('First documented pushback', firstRole(lexLog, ['critic']) || firstRole(conLog, ['critic']), lexLog.length ? 'lexical' : 'conceptual');
+
+  // Major mutations: distortion outranks addition; cap at 3, interleaved
+  // across lineages so the phrase's own drift and the idea's deepest shift
+  // both keep a seat.
+  const byUrl = {};
+  lexLog.concat(conLog).forEach(i => { byUrl[i.source_url] = i; });
+  const muts = [];
+  [['lexical', fp.genealogy?.lexical?.mutations], ['conceptual', fp.genealogy?.conceptual?.mutations]].forEach(([lineage, list]) => {
+    (list || []).forEach(m => {
+      const rank = m.distorted ? 2 : (m.added ? 1 : 0);
+      if (rank === 0) return;
+      muts.push({ m, lineage, rank, from: byUrl[m.from_source] || {}, to: byUrl[m.to_source] || {} });
+    });
+  });
+  const rankSort = (a, b) => b.rank - a.rank || byDateAsc(a.to, b.to);
+  const lexMuts = muts.filter(x => x.lineage === 'lexical').sort(rankSort);
+  const conMuts = muts.filter(x => x.lineage === 'conceptual').sort(rankSort);
+  [lexMuts[0], conMuts[0], lexMuts[1], conMuts[1]].filter(Boolean).slice(0, 3)
+    .forEach(x => ms.push({ label: 'Major mutation', mutation: x }));
+
+  // Tell the story in order.
+  ms.sort((a, b) => byDateAsc(a.inst || a.mutation.to, b.inst || b.mutation.to));
+  return { ms, lexLog, conLog };
+}
+
+function milestoneHtml(entry) {
+  if (entry.mutation) {
+    const { m, lineage, from, to } = entry.mutation;
+    const fields = [];
+    if (m.distorted) fields.push(['distorted', m.distorted]);
+    if (m.added) fields.push(['added', m.added]);
+    if (m.dropped) fields.push(['dropped', m.dropped]);
+    return `<div class="ms-item ms-mutation">
+      <div class="ms-head"><span class="ms-when">${escapeHtml(to.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="ms-lineage">${escapeHtml(lineage)}</span></div>
+      <div class="ms-who">${escapeHtml(truncate(from.author, 48) || '?')} → ${escapeHtml(truncate(to.author, 48) || '?')}</div>
+      ${fields.map(([cls, text]) => `<div class="ms-mut"><span class="lbl ${cls}">${cls}</span>${escapeHtml(truncate(text, 220))}</div>`).join('')}
+    </div>`;
+  }
+  const i = entry.inst;
+  const role = i.amplifier_role || 'unknown';
+  return `<div class="ms-item role-${role}">
+    <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(entry.lineage)}</span></div>
+    <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}</div>
+    ${i.exact_quote ? `<div class="ms-quote">“${escapeHtml(truncate(i.exact_quote, 220))}”</div>` : ''}
+  </div>`;
+}
+
+function logRowsHtml(log, grp) {
+  return log.map((i, idx) => {
+    const role = i.amplifier_role || 'unknown';
+    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(i.date || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}</div>`;
+  }).join('');
+}
+
 function renderOverview(fp) {
   const panel = document.querySelector('[data-panel=overview]');
   const lex = fp.genealogy?.lexical || {};
   const con = fp.genealogy?.conceptual || {};
-  const lexLog = lex.attestation_log || [];
-  const conLog = con.attestation_log || [];
-  const lexByRole = instancesByRole(lexLog);
-  const conByRole = instancesByRole(conLog);
+  const { ms, lexLog, conLog } = extractMilestones(fp);
 
-  const lexOrig = lexByRole.originator[0] || lexLog[0];
-  const conOrig = conByRole.originator[0] || conLog[0];
-  const massAmps = lexByRole['mass-amplifier'].concat(conByRole['mass-amplifier']).slice(0, 5);
-  const institutional = lexByRole['institutional-adoption'].concat(conByRole['institutional-adoption']);
-  const critics = lexByRole.critic.concat(conByRole.critic);
+  // One-line stats strip instead of a stats card; the full per-year charts
+  // stay on the Lineages tab.
+  const stats = lex.timeline_stats || con.timeline_stats || {};
+  const bits = [];
+  bits.push(`${lexLog.length} lexical · ${conLog.length} conceptual attestations`);
+  if (stats.active_from) bits.push(`active ${stats.active_from} → ${stats.active_through || 'present'}`);
+  if (stats.originator_to_mass_amplifier_days != null) bits.push(`origin → mass amplifier: ${fmtDaysHuman(stats.originator_to_mass_amplifier_days)}`);
+  if (stats.originator_to_institutional_adoption_days != null) bits.push(`origin → institutional adoption: ${fmtDaysHuman(stats.originator_to_institutional_adoption_days)}`);
 
   panel.innerHTML = `
-    <div class="summary-grid">
-      <div class="card">
-        <h2>Phrase Origin</h2>
-        ${lexOrig ? `
-          <div class="title-line">${escapeHtml(lexOrig.date || '?')} · ${escapeHtml(lexOrig.author || '')}</div>
-          <p style="color:#666; font-size:0.9rem;">${escapeHtml(lexOrig.source_title || '')}</p>
-          ${lexOrig.exact_quote ? `<p class="quote" style="background:#faf7ef; padding:0.5rem 0.7rem; border-radius:4px; font-style:italic; color:#444;">"${escapeHtml(lexOrig.exact_quote.slice(0, 280))}"</p>` : ''}
-        ` : '<p class="empty">No lexical attestation found.</p>'}
-      </div>
-      <div class="card">
-        <h2>Conceptual Origin</h2>
-        ${conOrig ? `
-          <div class="title-line">${escapeHtml(conOrig.date || '?')} · ${escapeHtml(conOrig.author || '')}</div>
-          <p style="color:#666; font-size:0.9rem;">${escapeHtml(conOrig.source_title || '')}</p>
-          ${conOrig.exact_quote ? `<p class="quote" style="background:#faf7ef; padding:0.5rem 0.7rem; border-radius:4px; font-style:italic; color:#444;">"${escapeHtml(conOrig.exact_quote.slice(0, 280))}"</p>` : ''}
-        ` : '<p class="empty">No conceptual ancestor found.</p>'}
-      </div>
-    </div>
-
-    ${massAmps.length ? `<div class="card">
-      <h2>Mass Amplifiers</h2>
-      ${massAmps.map(instanceLine).join('')}
-    </div>` : ''}
-
-    ${institutional.length ? `<div class="card">
-      <h2>Institutional Adoption</h2>
-      ${institutional.map(instanceLine).join('')}
-    </div>` : ''}
-
-    ${critics.length ? `<div class="card">
-      <h2>Critics</h2>
-      ${critics.map(instanceLine).join('')}
-    </div>` : ''}
-
     <div class="card">
-      <h2>Stats</h2>
-      <div class="entity-grid">
-        <div><div class="label">Lexical instances</div><div class="value">${lexLog.length}</div></div>
-        <div><div class="label">Conceptual contributors</div><div class="value">${conLog.length}</div></div>
-        <div><div class="label">Lexical status</div><div class="value">${escapeHtml(lex.status || 'unknown')}</div></div>
-        <div><div class="label">Conceptual status</div><div class="value">${escapeHtml(con.status || 'unknown')}</div></div>
-      </div>
+      <h2>Milestones — how this narrative traveled</h2>
+      <p style="color:#777; font-size:0.82rem; margin:0 0 0.8rem;">The genealogy's turning points. The full attestation log is below; dates and roles are AI-attested from the cited sources (a sample, not a census).</p>
+      ${ms.length ? ms.map(milestoneHtml).join('') : '<p class="empty">No dated attestations found.</p>'}
+      <div class="ms-stats" style="margin-top:0.9rem; padding-top:0.7rem; border-top:1px solid #f0f0f0;">${bits.map(escapeHtml).join(' · ')}</div>
     </div>
+
+    <details class="collapse">
+      <summary>Full attestation log (${lexLog.length} lexical · ${conLog.length} conceptual)</summary>
+      <div class="body normal-text">
+        ${lexLog.length ? `<div class="log-grp">Lexical — this phrasing</div>${logRowsHtml(lexLog, 'lex')}` : ''}
+        ${conLog.length ? `<div class="log-grp">Conceptual — the underlying idea</div>${logRowsHtml(conLog, 'con')}` : ''}
+        ${!lexLog.length && !conLog.length ? '<p class="empty">Empty.</p>' : ''}
+      </div>
+    </details>
   `;
+
+  // Click a log row to unfold the full instance detail in place.
+  panel.querySelectorAll('.log-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const next = row.nextElementSibling;
+      if (next && next.classList.contains('log-detail')) { next.remove(); return; }
+      const log = row.dataset.grp === 'lex' ? lexLog : conLog;
+      const inst = log[parseInt(row.dataset.i, 10)];
+      if (inst) row.insertAdjacentHTML('afterend', `<div class="log-detail">${instanceDetailHtml(inst)}</div>`);
+    });
+  });
 }
 
 function renderLexical(fp) {
@@ -2132,9 +2238,14 @@ function parseYear(dateStr) {
 }
 
 function showDetail(inst) {
-  const role = inst.amplifier_role || 'unknown';
   const detail = document.getElementById('instance-detail');
-  detail.innerHTML = `
+  detail.innerHTML = instanceDetailHtml(inst);
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function instanceDetailHtml(inst) {
+  const role = inst.amplifier_role || 'unknown';
+  return `
     <div class="detail-card role-${role}">
       <div class="head">
         <span class="date">${escapeHtml(inst.date || '?')}</span>
@@ -2152,7 +2263,6 @@ function showDetail(inst) {
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
     </div>
   `;
-  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function renderEvidence(fp) {
