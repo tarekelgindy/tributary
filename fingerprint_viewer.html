@@ -476,6 +476,40 @@ section { animation: fadein 0.2s; }
 .fr-trace.untraced { color: #aaa; font-size: 0.82rem; }
 .event-gap-card { border-left: 4px solid #d68f1a; }
 
+/* At-a-glance strip — the first thing a digest reader sees (Phase 2.5) */
+.event-glance {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.8rem;
+  background: white; border: 1px solid #e5e5e5; border-radius: 6px;
+  padding: 0.85rem 1.1rem; margin-bottom: 1.4rem; font-size: 0.88rem;
+}
+.event-glance .glance-stat { white-space: nowrap; color: #555; }
+.event-glance .glance-stat strong { font-size: 1.3rem; font-weight: 600; color: #222; margin-right: 0.25rem; }
+.event-glance .glance-common { flex: 1 1 22rem; color: #333; line-height: 1.45; }
+.event-glance .glance-contest { flex: 0 1 auto; color: #555; }
+.glance-lbl {
+  display: block; font-size: 0.68rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em; color: #888;
+  margin-bottom: 0.1rem;
+}
+
+/* Progressive disclosure on framing cards: compact by default, expand on click */
+.framing-card .fr-head { cursor: pointer; }
+.framing-card .fr-meta {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-top: 0.55rem; font-size: 0.8rem; color: #666;
+}
+.fr-count {
+  font-size: 0.72rem; padding: 0.1rem 0.55rem; border-radius: 999px;
+  background: #efece4; color: #555; white-space: nowrap;
+}
+.fr-toggle {
+  border: none; background: none; cursor: pointer; padding: 0;
+  font-size: 0.8rem; color: #2a6fa3; font-family: inherit;
+}
+.fr-toggle:hover { text-decoration: underline; }
+.framing-card.expanded { grid-column: 1 / -1; }
+.framing-card .fr-expand { margin-top: 0.6rem; border-top: 1px solid #f0f0f0; padding-top: 0.6rem; }
+
 /* Coverage lean (AllSides cross-reference) */
 .coverage-card { margin-bottom: 1.6rem; border-left: 4px solid #5b6b7a; }
 .cov-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; }
@@ -812,6 +846,27 @@ function renderEventAnalysis(analysis) {
         ${disagreements.map(p => `<div class="sf-disagreement">${escapeHtml(p)}</div>`).join('')}` : ''}
     </div>`;
 
+  // At-a-glance strip: N framings · the common ground in one line · who's
+  // contesting it. Everything here is countable/structural (P5).
+  const nFramings = (analysis.framings || []).length;
+  const commonLine = sf.summary || (verified[0] && verified[0].statement) || '';
+  let contestLine = '';
+  if (co.n_actors) {
+    const typeline = Object.entries(co.by_actor_type || {}).sort((a, b) => b[1] - a[1])
+      .map(([t, n]) => `${n} ${t}`).join(' · ');
+    contestLine = `${co.n_actors} actors${typeline ? ' — ' + typeline : ''}`;
+  } else {
+    const names = new Set();
+    (analysis.framings || []).forEach(fr => (fr.carriers || []).forEach(c => c.name && names.add(c.name)));
+    if (names.size) contestLine = `${names.size} carriers across the framings`;
+  }
+  const glanceHtml = `
+    <div class="event-glance">
+      <div class="glance-stat"><strong>${nFramings}</strong>framing${nFramings === 1 ? '' : 's'}</div>
+      ${commonLine ? `<div class="glance-common"><span class="glance-lbl">Common ground</span>${escapeHtml(truncate(commonLine, 200))}</div>` : ''}
+      ${contestLine ? `<div class="glance-contest"><span class="glance-lbl">Who's contesting it</span>${escapeHtml(contestLine)}</div>` : ''}
+    </div>`;
+
   const framingsHtml = (analysis.framings || []).map((fr, idx) => {
     const hasFp = !!fpById[fr.fingerprint_id];
     const carriers = (fr.carriers || []).map(c => {
@@ -838,30 +893,39 @@ function renderEventAnalysis(analysis) {
     if (hasFp) trace = `<div class="fr-trace clickable" data-framing-idx="${idx}">↗ Trace this framing's origin →</div>`;
     else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced">(linked fingerprint ${escapeHtml(fr.fingerprint_id)} not embedded)</div>`;
     else trace = `<div class="fr-trace untraced">(not yet traced — run with --trace-framings)</div>`;
+    // Progressive disclosure: the compact card carries what a reader needs to
+    // pick a framing (name, question, key claim, carrier count); the rest
+    // waits behind the toggle.
+    const nCarriers = (fr.carriers || []).length;
     return `
       <div class="framing-card">
-        <div class="fr-name">${escapeHtml(fr.name || '')} ${provenanceBadge(fr)}</div>
-        ${fr.question ? `<div class="fr-question">${escapeHtml(fr.question)}</div>` : ''}
-        ${fr.key_claim ? `<div class="fr-claim">${escapeHtml(fr.key_claim)}</div>` : ''}
-        ${fr.tone ? `<span class="fr-tone">${escapeHtml(fr.tone)}</span>` : ''}
-        ${fr.emphasizes ? `<div class="fr-emph up"><span class="lbl">Emphasizes:</span> ${escapeHtml(fr.emphasizes)}</div>` : ''}
-        ${fr.downplays ? `<div class="fr-emph down"><span class="lbl">Downplays:</span> ${escapeHtml(fr.downplays)}</div>` : ''}
-        ${(fr.sample_headlines || []).length ? `<div class="fr-section">Sample headlines</div>${fr.sample_headlines.map(h => `<div class="fr-omission" style="color:#555;">“${escapeHtml(h)}”</div>`).join('')}` : ''}
-        ${carriers ? `<div class="fr-section">Carriers (who creates / amplifies)</div>${carriers}` : ''}
-        ${omissions ? `<div class="fr-section">Leaves out</div>${omissions}` : ''}
+        <div class="fr-head">
+          <div class="fr-name">${escapeHtml(fr.name || '')} ${provenanceBadge(fr)}</div>
+          ${fr.question ? `<div class="fr-question">${escapeHtml(fr.question)}</div>` : ''}
+          ${fr.key_claim ? `<div class="fr-claim">${escapeHtml(fr.key_claim)}</div>` : ''}
+          <div class="fr-meta">
+            <span class="fr-count">${nCarriers} carrier${nCarriers === 1 ? '' : 's'}</span>
+            <button class="fr-toggle" type="button" aria-expanded="false">▸ details</button>
+          </div>
+        </div>
+        <div class="fr-expand" hidden>
+          ${fr.tone ? `<span class="fr-tone">${escapeHtml(fr.tone)}</span>` : ''}
+          ${fr.emphasizes ? `<div class="fr-emph up"><span class="lbl">Emphasizes:</span> ${escapeHtml(fr.emphasizes)}</div>` : ''}
+          ${fr.downplays ? `<div class="fr-emph down"><span class="lbl">Downplays:</span> ${escapeHtml(fr.downplays)}</div>` : ''}
+          ${(fr.sample_headlines || []).length ? `<div class="fr-section">Sample headlines</div>${fr.sample_headlines.map(h => `<div class="fr-omission" style="color:#555;">“${escapeHtml(h)}”</div>`).join('')}` : ''}
+          ${carriers ? `<div class="fr-section">Carriers (who creates / amplifies)</div>${carriers}` : ''}
+          ${omissions ? `<div class="fr-section">Leaves out</div>${omissions}` : ''}
+        </div>
         ${trace}
       </div>`;
   }).join('');
 
   const main = document.querySelector('main');
   main.innerHTML = `
-    <div class="event-intro">
-      <div class="event-statement">${escapeHtml(analysis.event || '')}</div>
-      <p>${(analysis.framings || []).length} narrative framings mapped across the ecosystem. The shared common ground is what all sides accept; each framing asks a different question.</p>
-    </div>
+    ${glanceHtml}
     ${sharedHtml}
     ${renderCoalition(co)}
-    <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings</h2>
+    <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings <span style="font-weight:400; text-transform:none; letter-spacing:0; color:#888;">— each asks a different question; click a card for carriers and detail</span></h2>
     <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>
     ${renderCoverageBackdrop(analysis.coverage_lean)}
     ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
@@ -873,6 +937,22 @@ function renderEventAnalysis(analysis) {
       const fp = fpById[fr.fingerprint_id];
       if (fp) openFingerprintFromEvent(fp);
     };
+  });
+
+  // Expand/collapse framing cards. The whole compact head is the click
+  // target (it contains no links); expanded cards span the grid so the
+  // carrier list gets full reading width.
+  main.querySelectorAll('.framing-card').forEach(card => {
+    const head = card.querySelector('.fr-head');
+    const body = card.querySelector('.fr-expand');
+    const btn = card.querySelector('.fr-toggle');
+    if (!head || !body || !btn) return;
+    head.addEventListener('click', () => {
+      const open = card.classList.toggle('expanded');
+      body.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.innerHTML = open ? '▾ less' : '▸ details';
+    });
   });
 }
 
