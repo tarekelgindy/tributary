@@ -1023,31 +1023,39 @@ function renderFramingAttention(r) {
 
   const allFramings = r.framings || [];
   const totals = r.framing_totals || {};
-  // Clarity: only framings somebody actually expressed get a column; the
-  // silent ones are listed below the table (information preserved, eight
-  // columns of dots avoided).
-  const framings = allFramings.filter(f => ((totals[f.id] || {}).items || 0) > 0);
-  const silent = allFramings.filter(f => !((totals[f.id] || {}).items || 0));
+  const tCount = fid => { const t = totals[fid] || {}; return (t.expressed || 0) + (t.reported || 0) + (t.items || 0); };
+  // Clarity: only framings somebody actually used get a column; the silent
+  // ones are listed below the table (information preserved, eight columns
+  // of dots avoided).
+  const framings = allFramings.filter(f => tCount(f.id) > 0);
+  const silent = allFramings.filter(f => !tCount(f.id));
   const fIds = framings.map(f => f.id);
   const fLabel = {};
   framings.forEach((f, i) => { fLabel[f.id] = 'F' + (i + 1); });
 
   const legend = framings.map((f, i) => {
     const t = totals[f.id] || {};
+    const counts = t.expressed !== undefined
+      ? `${t.expressed} expressed / ${t.reported} reported`
+      : `${t.items || 0} headline(s)`;
     return `<div class="fa-legend"><span class="fa-fid">F${i + 1}</span>
       <strong>${escapeHtml(f.name)}</strong>
-      <span style="color:#888;">— ${t.items || 0} headline(s) across ${t.n_outlets || 0} outlet(s)</span>
+      <span style="color:#888;">— ${counts} across ${t.n_outlets || 0} outlet(s)</span>
       <div style="color:#555; margin-top:0.15rem;">${escapeHtml(f.key_claim)}</div></div>`;
   }).join('');
 
   const rows = Object.entries(r.matrix || {}).map(([okey, row]) => {
     const cells = fIds.map(fid => {
       const c = (row.framings || {})[fid];
-      const led = c && c.best_position <= 5;
-      return `<td>${c ? `<span class="fa-cell${led ? ' featured' : ''}" title="best feed position ${c.best_position}${led ? ' — this outlet LED its feed with this framing' : ''}">${c.items}</span>` : '<span class="fa-cell zero">·</span>'}</td>`;
+      if (!c) return '<td><span class="fa-cell zero">·</span></td>';
+      const led = c.best_position <= 5;
+      const e = c.expressed !== undefined ? c.expressed : (c.items || 0);
+      const rep = c.reported || 0;
+      const txt = rep ? `${e || '·'}<span style="opacity:0.65; font-weight:400;">+${rep}</span>` : `${e}`;
+      return `<td><span class="fa-cell${led ? ' featured' : ''}" title="expressed ${e}, reported ${rep}; best feed position ${c.best_position}${led ? ' — this outlet LED its feed with this framing' : ''}">${txt}</span></td>`;
     }).join('');
     const details = fIds.flatMap(fid => ((row.framings || {})[fid] || {}).headlines ? row.framings[fid].headlines.map(h =>
-      `<div class="agenda-evidence">${fLabel[fid]} (${escapeHtml(h.confidence)}) — ${h.link ? `<a href="${escapeHtml(h.link)}" target="_blank" rel="noopener">${escapeHtml(h.title)}</a>` : escapeHtml(h.title)} <span style="color:#aaa;">pos ${h.position}; ${escapeHtml(h.why || '')}</span></div>`) : []
+      `<div class="agenda-evidence">${fLabel[fid]}${h.relation === 'reports' ? ' <span style="color:#999;">(reports)</span>' : ''} (${escapeHtml(h.confidence)}) — ${h.link ? `<a href="${escapeHtml(h.link)}" target="_blank" rel="noopener">${escapeHtml(h.title)}</a>` : escapeHtml(h.title)} <span style="color:#aaa;">pos ${h.position}; ${escapeHtml(h.why || '')}</span></div>`) : []
     ).join('');
     return `<tr><td class="o-name">${escapeHtml(row.name)} ${leanChip(row.lean)}</td>
       ${cells}<td><span class="fa-cell zero">${row.none || 0}</span></td></tr>` +
@@ -1067,7 +1075,7 @@ function renderFramingAttention(r) {
     </div>
     <div class="card">
       <h2>Outlet × framing matrix</h2>
-      <p style="color:#777; font-size:0.8rem;">Counts of front-feed headlines per framing. <span class="fa-cell featured" style="font-size:0.7rem;">dark</span> = the outlet <em>led its feed</em> with this framing (position ≤ 5) — featuring is a stronger editorial statement than carrying.</p>
+      <p style="color:#777; font-size:0.8rem;">Counts of front-feed headlines per framing: <strong>bold = expressed</strong> (the headline takes the framing's perspective), <span style="opacity:0.65;">+n = reported</span> (neutrally covers that framing's subject matter). <span class="fa-cell featured" style="font-size:0.7rem;">dark</span> = the outlet <em>led its feed</em> with this framing (position ≤ 5) — featuring is a stronger editorial statement than carrying.</p>
       <div style="overflow-x:auto;"><table class="fa-table">
         <tr><th class="o-name">outlet</th>${fIds.map(fid => `<th title="${escapeHtml((framings.find(f => f.id === fid) || {}).name || '')}">${fLabel[fid]}</th>`).join('')}<th>none</th></tr>
         ${rows}
@@ -1219,15 +1227,15 @@ function renderAgendaReport(report) {
     </div>
 
     <div class="card">
-      <h2>Shared stories across outlets</h2>
-      <p style="color:#777; font-size:0.8rem;">Headlines grouped by the local matcher (threshold ${totals.story_threshold}); each story expands to its carriers. The bar shows which leans carried it.</p>
-      ${storiesHtml || '<p class="empty">No cross-outlet stories in this window.</p>'}
+      <h2>Outlet attention distributions</h2>
+      <p style="color:#777; font-size:0.8rem;">The share of each outlet's output (sitemap census of ~72h where available) devoted to each cross-outlet story — its agenda fingerprint — and what it <strong>led its feed</strong> with. "Feed pos" is the prominence signal: where the story sat in the outlet's front feed.</p>
+      <div class="agenda-att-grid">${attCards}</div>
     </div>
 
     <div class="card">
-      <h2>Outlet attention distributions</h2>
-      <p style="color:#777; font-size:0.8rem;">The share of each outlet's output (sitemap census of ~72h where available) devoted to each cross-outlet story — its agenda fingerprint. "Feed pos" is the separate prominence signal: where the story sat in the outlet's front feed.</p>
-      <div class="agenda-att-grid">${attCards}</div>
+      <h2>Shared stories across outlets</h2>
+      <p style="color:#777; font-size:0.8rem;">Headlines grouped by the local matcher (threshold ${totals.story_threshold}); each story expands to its carriers. The bar shows which leans carried it.</p>
+      ${storiesHtml || '<p class="empty">No cross-outlet stories in this window.</p>'}
     </div>
 
     <div class="card">
