@@ -48,13 +48,24 @@ OUT_DIR = _ROOT / "agenda" / "framing"
 RELEVANCE_THRESHOLD = 0.45   # generous on purpose: stage 2 filters
 BATCH_SIZE = 25
 JUDGE_MODEL = "claude-haiku-4-5-20251001"
-PROMPT_VERSION = "fa-1"
+# fa-2: the Gate 2.6b first run FAILED at 57% — not because the judge was
+# loose but because the construct was underspecified: the human labeled
+# factual strike-report headlines into "Escalation Spiral" (the narrative
+# the facts belong to) while fa-1's prompt sent them to "none" (no
+# perspective taken). Both readings were right; the label was wrong. fa-2
+# splits the relation: EXPRESSES (takes the framing's perspective) vs
+# REPORTS (neutrally covers that framing's subject matter) vs none.
+PROMPT_VERSION = "fa-2"
 
-JUDGE_SYSTEM = """You classify which FRAMING a news headline expresses, given an event and its competing framings.
-A headline expresses a framing when its emphasis, word choice, or asserted significance matches that framing's perspective — not merely its topic. A purely factual headline that takes no perspective is "none". A headline about an aspect no framing covers is "none". When torn between two framings, pick the closer one and say confidence "low".
-Never judge whether any framing or headline is true, fair, or good journalism. You describe perspective, not quality.
+JUDGE_SYSTEM = """You classify how a news headline relates to an event's competing framings.
+For each headline, pick the single closest framing (or "none") and a relation:
+- "expresses": the headline's emphasis, word choice, or asserted significance takes that framing's perspective.
+- "reports": the headline neutrally reports facts that are the subject matter of that framing's narrative, without adopting its perspective. Choose the framing whose narrative those facts most belong to.
+- "none": the headline is unrelated to every framing's narrative (mere topic overlap with the event is not enough). For "none", set framing to "none".
+When torn between two framings, pick the closer one and say confidence "low".
+Never judge whether any framing or headline is true, fair, or good journalism. You describe perspective and subject matter, not quality.
 Input JSON: {"event": "...", "framings": [{"id", "name", "key_claim"}], "headlines": [{"id", "text"}]}
-Output ONLY JSON: {"assignments": [{"id": <headline id>, "framing": "<framing id or none>", "confidence": "high|medium|low", "why": "<= 10 words"}]}"""
+Output ONLY JSON: {"assignments": [{"id": <headline id>, "framing": "<framing id or none>", "relation": "expresses|reports|none", "confidence": "high|medium|low", "why": "<= 10 words"}]}"""
 
 MATRIX_CAVEAT = (
     "Counts are over headlines captured from each outlet's sampled front "
@@ -137,7 +148,11 @@ def align(candidates: list, event: dict,
             for a in (_parse_json_safe(text) or {}).get("assignments", []):
                 i = a.get("id")
                 if isinstance(i, int) and 0 <= i < len(out):
+                    rel = str(a.get("relation", "")).lower()
+                    if rel not in ("expresses", "reports", "none"):
+                        rel = "expresses"   # fa-1 compatibility
                     out[i] = {"framing": str(a.get("framing", "none")),
+                              "relation": rel,
                               "confidence": str(a.get("confidence", "")),
                               "why": str(a.get("why", ""))}
         except Exception as e:  # noqa: BLE001 — unlabeled is honest
@@ -154,7 +169,8 @@ def build_matrix(event: dict, candidates: list, labels: list,
     fids = {f["id"] for f in event["framings"]}
 
     matrix = {}
-    totals = {f["id"]: {"items": 0, "outlets": set()} for f in event["framings"]}
+    totals = {f["id"]: {"expressed": 0, "reported": 0, "outlets": set()}
+              for f in event["framings"]}
     unlabeled = 0
     for (okey, it, rel), lab in zip(candidates, labels):
         o = roster["by_key"].get(okey, {})
@@ -170,7 +186,8 @@ def build_matrix(event: dict, candidates: list, labels: list,
             unlabeled += 1
             continue
         fid = lab["framing"] if lab["framing"] in fids else "none"
-        if fid == "none":
+        relation = lab.get("relation", "expresses")
+        if fid == "none" or relation == "none":
             row["none"] += 1
             # kept (capped) so the Gate 2.6b audit can test "none" labels —
             # a judge that over-assigns framings to neutral headlines is a
@@ -181,14 +198,16 @@ def build_matrix(event: dict, candidates: list, labels: list,
                     "why": lab["why"]})
             continue
         cell = row["framings"].setdefault(fid, {
-            "items": 0, "best_position": it["best_position"], "headlines": []})
-        cell["items"] += 1
+            "expressed": 0, "reported": 0,
+            "best_position": it["best_position"], "headlines": []})
+        cell[relation == "reports" and "reported" or "expressed"] += 1
         cell["best_position"] = min(cell["best_position"], it["best_position"])
         cell["headlines"].append({
             "title": it["title"], "link": it.get("link", ""),
             "position": it["best_position"], "relevance": rel,
+            "relation": relation,
             "confidence": lab["confidence"], "why": lab["why"]})
-        totals[fid]["items"] += 1
+        totals[fid]["expressed" if relation == "expresses" else "reported"] += 1
         totals[fid]["outlets"].add(okey)
 
     return {
@@ -201,7 +220,9 @@ def build_matrix(event: dict, candidates: list, labels: list,
         "n_candidate_headlines": len(candidates),
         "n_unlabeled": unlabeled,
         "framings": event["framings"],
-        "framing_totals": {fid: {"items": t["items"], "n_outlets": len(t["outlets"])}
+        "framing_totals": {fid: {"expressed": t["expressed"],
+                                 "reported": t["reported"],
+                                 "n_outlets": len(t["outlets"])}
                            for fid, t in totals.items()},
         "matrix": dict(sorted(matrix.items(),
                               key=lambda kv: -kv[1]["relevant_items"])),
@@ -221,31 +242,128 @@ def write_audit_sample(result: dict, n: int) -> tuple:
         for fid, cell in row["framings"].items():
             for h in cell["headlines"]:
                 rows.append({"headline": h["title"], "model_framing": fid,
+                             "model_relation": h.get("relation", "expresses"),
                              "model_confidence": h["confidence"]})
         for h in row.get("none_headlines", []):
             rows.append({"headline": h["title"], "model_framing": "none",
+                         "model_relation": "none",
                          "model_confidence": h["confidence"]})
     random.seed(26)                      # reproducible sample
     random.shuffle(rows)
     rows = rows[:n]
     blind = {
-        "instructions": "For each headline pick the framing id whose "
-                        "perspective it expresses, or 'none'. Don't consult "
-                        "the answer key until done.",
+        "instructions": "For each headline: your_framing = the closest "
+                        "framing (id, name, or F<n>), or 'none' if unrelated "
+                        "to every framing's narrative. your_relation = "
+                        "'expresses' (the headline takes that framing's "
+                        "perspective via emphasis/word choice), 'reports' "
+                        "(neutrally covers facts belonging to that framing's "
+                        "narrative), or 'none'. Don't consult the answer key "
+                        "until done.",
         "event": result["event"],
         "framings": result["framings"],
-        "items": [{"i": i, "headline": r["headline"], "your_framing": ""}
+        "items": [{"i": i, "headline": r["headline"], "your_framing": "",
+                   "your_relation": ""}
                   for i, r in enumerate(rows)],
     }
     key = {"items": [{"i": i, "model_framing": r["model_framing"],
+                      "model_relation": r.get("model_relation", "expresses"),
                       "model_confidence": r["model_confidence"]}
                      for i, r in enumerate(rows)]}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    bpath = OUT_DIR / f"audit_{result['event_id']}_blind.json"
-    kpath = OUT_DIR / f"audit_{result['event_id']}_key.json"
+    # Versioned by judge prompt so a re-audit never overwrites the labeled
+    # files of a previous round (the fa-1 audit is part of the gate record).
+    bpath = OUT_DIR / f"audit_{result['event_id']}_{PROMPT_VERSION}_blind.json"
+    kpath = OUT_DIR / f"audit_{result['event_id']}_{PROMPT_VERSION}_key.json"
     bpath.write_text(json.dumps(blind, indent=1, ensure_ascii=False), encoding="utf-8")
     kpath.write_text(json.dumps(key, indent=1, ensure_ascii=False), encoding="utf-8")
     return bpath, kpath
+
+
+def score_audit(event_id: str) -> dict:
+    """Gate 2.6b scoring: human blind labels vs the model's answer key.
+    Tolerant label matching (framing id, framing name, F<n> index, or
+    'none') so the labeler isn't penalized for not copying hex ids.
+    Gate: >=80% agreement AND zero confidently-wrong-framing assignments
+    (model said framing X with high confidence; human says a different
+    framing or none)."""
+    bpath = OUT_DIR / f"audit_{event_id}_{PROMPT_VERSION}_blind.json"
+    kpath = OUT_DIR / f"audit_{event_id}_{PROMPT_VERSION}_key.json"
+    if not bpath.exists():     # fa-1 round used unversioned names
+        bpath = OUT_DIR / f"audit_{event_id}_blind.json"
+        kpath = OUT_DIR / f"audit_{event_id}_key.json"
+    print(f"[audit] scoring {bpath.name}", file=sys.stderr)
+    blind = json.loads(bpath.read_text(encoding="utf-8"))
+    key = {i["i"]: i for i in json.loads(
+        kpath.read_text(encoding="utf-8"))["items"]}
+    framings = blind.get("framings", [])
+    by_id = {f["id"].lower(): f["id"] for f in framings}
+    by_name = {f["name"].lower(): f["id"] for f in framings}
+    by_index = {f"f{n+1}": f["id"] for n, f in enumerate(framings)}
+
+    def norm(label):
+        s = str(label or "").strip().lower()
+        if not s:
+            return None
+        if s in ("none", "no", "neutral", "n/a", "-"):
+            return "none"
+        for table in (by_id, by_index, by_name):
+            if s in table:
+                return table[s]
+        # prefix/substring tolerance on names ("escalation" -> full name)
+        hits = [fid for nm, fid in by_name.items() if s in nm or nm in s]
+        return hits[0] if len(hits) == 1 else f"UNRECOGNIZED:{s}"
+
+    rows = []
+    unrecognized = []
+    for item in blind["items"]:
+        h = norm(item.get("your_framing"))
+        if h is None:
+            continue
+        if isinstance(h, str) and h.startswith("UNRECOGNIZED:"):
+            unrecognized.append(item)
+            continue
+        k = key[item["i"]]
+        rows.append({"headline": item["headline"], "human": h,
+                     "model": k["model_framing"],
+                     "human_rel": str(item.get("your_relation", "")).strip().lower(),
+                     "model_rel": str(k.get("model_relation", "")).strip().lower(),
+                     "confidence": k["model_confidence"]})
+    n = len(rows)
+    agree = [r for r in rows if r["human"] == r["model"]]
+    over = [r for r in rows if r["model"] != "none" and r["human"] == "none"]
+    under = [r for r in rows if r["model"] == "none" and r["human"] != "none"]
+    cross = [r for r in rows if "none" not in (r["model"], r["human"])
+             and r["human"] != r["model"]]
+    conf_wrong = [r for r in rows if r["confidence"] == "high"
+                  and r["human"] != r["model"]]
+    names = {f["id"]: f["name"] for f in framings}
+
+    print(f"Gate 2.6b — {n} labeled ({len(unrecognized)} unrecognized labels skipped)")
+    rate = len(agree) / n if n else 0.0
+    print(f"  framing agreement: {len(agree)}/{n} = {rate:.0%}   (gate: >=80%)")
+    rel_rows = [r for r in rows if r["human_rel"] and r["model_rel"]]
+    if rel_rows:
+        rel_agree = sum(1 for r in rel_rows if r["human_rel"] == r["model_rel"])
+        print(f"  relation agreement (expresses/reports/none): "
+              f"{rel_agree}/{len(rel_rows)} = {rel_agree / len(rel_rows):.0%} (reported, not gated)")
+    print(f"  disagreement anatomy: over-assigned (model framing, human none): "
+          f"{len(over)} | under-assigned (model none, human framing): {len(under)} "
+          f"| cross-framing: {len(cross)}")
+    print(f"  confidently wrong (model 'high', human disagrees): {len(conf_wrong)}"
+          f"   (gate: zero)")
+    for r in conf_wrong:
+        print(f"    model={names.get(r['model'], r['model'])[:34]} "
+              f"human={names.get(r['human'], r['human'])[:34]}  {r['headline'][:60]}")
+    if over:
+        print("  over-assignments (the 'related but not aligned' cases):")
+        for r in over[:8]:
+            print(f"    model={names.get(r['model'], r['model'])[:40]:<40} {r['headline'][:65]}")
+    verdict = "PASS" if (rate >= 0.8 and not conf_wrong) else "FAIL"
+    print(f"  GATE 2.6b: {verdict}")
+    return {"n": n, "agreement": rate, "over": len(over), "under": len(under),
+            "cross": len(cross), "confidently_wrong": len(conf_wrong),
+            "verdict": verdict}
 
 
 def _print_matrix(r: dict):
@@ -254,14 +372,17 @@ def _print_matrix(r: dict):
     print(f"  {r['n_candidate_headlines']} relevant headlines, "
           f"{r['n_unlabeled']} unlabeled; judge {r['judge']['model']} "
           f"({r['judge']['batches']} calls)")
-    print("\n  framing totals:")
-    for fid, t in sorted(r["framing_totals"].items(), key=lambda kv: -kv[1]["items"]):
-        if t["items"]:
-            print(f"    {t['items']:>3} items / {t['n_outlets']:>2} outlets   {names.get(fid, fid)[:70]}")
+    print("\n  framing totals (expressed + reported):")
+    for fid, t in sorted(r["framing_totals"].items(),
+                         key=lambda kv: -(kv[1]["expressed"] + kv[1]["reported"])):
+        if t["expressed"] or t["reported"]:
+            print(f"    {t['expressed']:>3} expressed / {t['reported']:>3} reported "
+                  f"/ {t['n_outlets']:>2} outlets   {names.get(fid, fid)[:60]}")
     print("\n  per outlet:")
     for okey, row in r["matrix"].items():
-        parts = [f"{names.get(fid, fid)[:34]} x{c['items']} (pos {c['best_position']})"
-                 for fid, c in sorted(row["framings"].items(), key=lambda kv: -kv[1]["items"])]
+        parts = [f"{names.get(fid, fid)[:30]} e{c['expressed']}/r{c['reported']} (pos {c['best_position']})"
+                 for fid, c in sorted(row["framings"].items(),
+                                      key=lambda kv: -(kv[1]["expressed"] + kv[1]["reported"]))]
         lean = row["lean"] or ("intl" if row["country"] != "US" else "unrated")
         print(f"    {row['name'][:26]:<26} [{lean:>9}] {row['relevant_items']:>2} items, "
               f"none={row['none']}: " + ("; ".join(parts) if parts else "—"))
@@ -276,7 +397,14 @@ def main():
     p.add_argument("--no-save", action="store_true")
     p.add_argument("--audit-sample", type=int, default=0,
                    help="also write a blind Gate 2.6b sample of N labeled headlines")
+    p.add_argument("--score-audit", action="store_true",
+                   help="score the human-labeled blind file against the model key")
     args = p.parse_args()
+
+    if args.score_audit:
+        event_id = Path(args.event_json).stem.split("_")[0]
+        score_audit(event_id)
+        return
 
     event = load_event(args.event_json)
     cands = candidate_headlines(args.days, event)
