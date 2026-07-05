@@ -47,15 +47,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          if printf '%s' "$ISSUE_TITLE" | grep -qi '^Event request' \
+             || printf '%s' "$ISSUE_BODY" | grep -qiE '^\**Type:\**[[:space:]]*event'; then
+            gh issue comment "$ISSUE_NUMBER" --body "This is an **event framing map** request — those are fulfilled manually for now (framings + carriers take a human pass). Expect a follow-up here."
+            exit 0
+          fi
           SUBJECT="${ISSUE_TITLE#Trace request: }"
           SUBJECT="${SUBJECT#Trace request:}"
           if [ -z "${SUBJECT// /}" ]; then
             gh issue comment "$ISSUE_NUMBER" --body "Could not read a subject from the issue title — expected \`Trace request: <claim>\`."
             exit 1
-          fi
-          if printf '%s' "$ISSUE_BODY" | grep -qiE '^\**Type:\**[[:space:]]*event'; then
-            gh issue comment "$ISSUE_NUMBER" --body "This is an **event** request — those are fulfilled manually for now (framings + carriers take a human pass). Expect a follow-up here."
-            exit 0
           fi
           echo "::notice::tracing claim: $SUBJECT"
           python fingerprint.py "$SUBJECT" --save --max-searches 4 > out.json
