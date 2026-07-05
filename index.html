@@ -196,6 +196,9 @@
 // token scoring on purpose — the corpus is small, and an honest miss that
 // files a request beats a clever wrong match.
 (function () {
+  // Set to the deployed Cloudflare Worker URL (infra/worker.js) to enable
+  // fully in-window requests; empty = fall back to GitHub-issue links.
+  const WORKER_URL = '';
   const input = document.getElementById('ask');
   const btn = document.getElementById('askbtn');
   const out = document.getElementById('askresults');
@@ -209,16 +212,71 @@
     .split(/[^a-z0-9]+/).filter(t => t && !STOP.has(t));
 
   function requestBlock(q) {
-    const mk = prefix => 'https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title='
-      + encodeURIComponent(prefix + ': ' + q.slice(0, 120));
-    return `<div class="askmiss">We haven't traced that yet.
-      <a href="${mk('Trace request')}" target="_blank" rel="noopener">Request an origin trace →</a>
+    if (!WORKER_URL) {
+      const mk = prefix => 'https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title='
+        + encodeURIComponent(prefix + ': ' + q.slice(0, 120));
+      return `<div class="askmiss">We haven't traced that yet.
+        <a href="${mk('Trace request')}" target="_blank" rel="noopener">Request an origin trace →</a>
+        <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
+        <a href="${mk('Event request')}" target="_blank" rel="noopener">Request an event framing map →</a>
+        <span style="color:#999;">(for a news event)</span><br>
+        <span style="color:#777; font-size:0.85rem;">Generation usually takes 5–10 minutes — the permalink
+        is posted back on your request when it's live.</span></div>`;
+    }
+    return `<div class="askmiss" id="askmiss">We haven't traced that yet.
+      <a href="#" data-kind="claim" class="askreq">Request an origin trace →</a>
       <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
-      <a href="${mk('Event request')}" target="_blank" rel="noopener">Request an event framing map →</a>
+      <a href="#" data-kind="event" class="askreq">Request an event framing map →</a>
       <span style="color:#999;">(for a news event)</span><br>
-      <span style="color:#777; font-size:0.85rem;">Generation usually takes 5–10 minutes — the permalink
-      is posted back on your request when it's live.</span></div>`;
+      <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span></div>`;
   }
+
+  // In-window request flow: POST to the Worker, poll status, swap in the
+  // permalink when the trace publishes. The visitor never leaves the page.
+  async function submitRequest(q, kind) {
+    const box = document.getElementById('askmiss');
+    const label = kind === 'event' ? 'event framing map' : 'origin trace';
+    box.innerHTML = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
+      real web searches and source verification are happening. You can keep this tab open.`;
+    let id;
+    try {
+      const r = await fetch(WORKER_URL + '/request', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ subject: q, kind }),
+      });
+      const data = await r.json();
+      if (!r.ok) { box.innerHTML = esc(data.error || 'Could not start generation.'); return; }
+      id = data.id;
+    } catch (e) { box.innerHTML = 'Could not reach the request service — please try again.'; return; }
+
+    const started = Date.now();
+    const poll = setInterval(async () => {
+      if (Date.now() - started > 20 * 60 * 1000) {
+        clearInterval(poll);
+        box.innerHTML = 'This is taking longer than expected — the trace may still land; try your search again in a few minutes.';
+        return;
+      }
+      try {
+        const s = await (await fetch(WORKER_URL + '/status?id=' + encodeURIComponent(id))).json();
+        if (s.state === 'done' && s.url) {
+          clearInterval(poll);
+          box.innerHTML = `<strong>Done.</strong> <a href="${esc(s.url)}">Open your ${label} →</a>
+            <br><span style="color:#777; font-size:0.85rem;">AI-generated and labeled as such — sources on
+            every hop, corrections welcome.</span>`;
+        } else if (s.state === 'failed') {
+          clearInterval(poll);
+          box.innerHTML = 'Generation failed on our side — sorry. It has been logged; please try again later.';
+        }
+      } catch (e) { /* transient poll error — keep trying */ }
+    }, 10000);
+  }
+
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('.askreq');
+    if (!a) return;
+    e.preventDefault();
+    submitRequest((input.value || '').trim(), a.dataset.kind);
+  });
 
   async function search() {
     const q = (input.value || '').trim();
