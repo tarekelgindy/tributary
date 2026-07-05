@@ -821,6 +821,14 @@ function citedVia(url) {
   } catch (e) {}
   return '';
 }
+
+// An attestation's own cited_via field wins over the host heuristic — an
+// explicit empty string means "this IS the first party" (e.g. Snopes' own
+// article should not read "documented by Snopes").
+function citedViaOf(i) {
+  return Object.prototype.hasOwnProperty.call(i, 'cited_via')
+    ? (i.cited_via || '') : citedVia(i.source_url);
+}
 function refHostName(url) {
   try {
     const h = new URL(url).hostname.toLowerCase();
@@ -1704,17 +1712,23 @@ function verifyBadge(item) {
   const status = item.verification_status || 'unchecked';
   const notes = item.verification_notes || '';
   if (status === 'unchecked' && !notes) return '';
-  const symbol = {
+  // Badge honesty (Phase 2.8-A): "✓ verified" is reserved for quote-found
+  // checks. A "verified" whose notes admit the quote was never checked is a
+  // reachability check and says so. (2.8-B gives the pipeline a real
+  // 'url-ok' status; this also handles that.)
+  const urlOnly = status === 'url-ok' ||
+    (status === 'verified' && /quote not checked/i.test(notes));
+  const symbol = urlOnly ? '↻ URL reachable' : {
     'verified': '✓ verified',
     'unchecked': '↻ unchecked',
     'url-error': '✗ URL error',
     'fetch-error': '✗ fetch error',
     'quote-not-found': '⚠ quote not found',
   }[status] || status;
-  const tooltipParts = [status];
+  const tooltipParts = [urlOnly ? 'URL reachable — the quote itself was not checked' : status];
   if (notes) tooltipParts.push(notes);
   const tooltip = tooltipParts.join(' — ');
-  return `<span class="verify-badge ${escapeHtml(status)}" title="${escapeHtml(tooltip)}">${escapeHtml(symbol)}</span>`;
+  return `<span class="verify-badge ${urlOnly ? 'unchecked' : escapeHtml(status)}" title="${escapeHtml(tooltip)}">${escapeHtml(symbol)}</span>`;
 }
 
 function archiveBadge(item) {
@@ -1818,22 +1832,20 @@ function renderSocialSpread(lineage) {
     (acc, p) => acc + (p.likes || 0) + (p.reposts || 0), 0
   );
   const uniqueAuthors = new Set(posts.map(p => p.author_handle)).size;
-  const roleCounts = {};
-  posts.forEach(p => {
-    const r = p.amplifier_role || 'unknown';
-    roleCounts[r] = (roleCounts[r] || 0) + 1;
-  });
 
   // Sort posts: by engagement desc so most-impactful surface first
   const sortedPosts = [...posts].sort(
     (a, b) => ((b.likes || 0) + (b.reposts || 0)) - ((a.likes || 0) + (a.reposts || 0))
   );
 
+  // Phase 2.8-A: amplifier roles are NOT rendered for social posts — a
+  // 1-like anecdote is not a "mass-amplifier". Engagement counts (structural,
+  // P5) carry the weight; role data stays in the JSON for when roles become
+  // evidence-based.
   const postsHtml = sortedPosts.map(p => {
-    const role = p.amplifier_role || 'unknown';
     const engagement = `${p.likes || 0} likes · ${p.reposts || 0} reposts${p.replies ? ` · ${p.replies} replies` : ''}`;
     return `
-      <div class="social-post role-${role}">
+      <div class="social-post">
         <div class="post-head">
           <span class="post-author">@${escapeHtml(p.author_handle || '?')}</span>
           <span class="post-date">${escapeHtml((p.post_date || '').slice(0, 10))}</span>
@@ -1841,18 +1853,12 @@ function renderSocialSpread(lineage) {
         </div>
         <div class="post-text">${escapeHtml(p.post_text || '')}</div>
         <div class="post-role">
-          <span class="role-tag ${role}">${escapeHtml(role)}</span>
-          ${p.role_evidence ? ` <span style="color:#666;">— ${escapeHtml(p.role_evidence)}</span>` : ''}
           ${provenanceBadge(p)}${verifyBadge(p)}${archiveBadge(p)}
           ${p.post_url ? `<a href="${escapeHtml(p.post_url)}" target="_blank" rel="noopener" style="float:right;">↗ open</a>` : ''}
         </div>
       </div>
     `;
   }).join('');
-
-  const roleBreakdown = Object.entries(roleCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([r, c]) => `${r}: ${c}`).join(' · ');
 
   return `
     <div class="card social-card">
@@ -1863,7 +1869,6 @@ function renderSocialSpread(lineage) {
           <div><strong>${posts.length}</strong> posts</div>
           <div><strong>${uniqueAuthors}</strong> unique authors</div>
           <div><strong>${totalEngagement.toLocaleString()}</strong> total engagement</div>
-          <div style="color:#777;">${escapeHtml(roleBreakdown)}</div>
         </div>
         <details class="collapse" style="margin-top:0.5rem;">
           <summary>Posts (sorted by engagement)</summary>
@@ -1940,15 +1945,25 @@ function drawStatsChart(svgId, stats) {
 }
 
 function renderMutationsBlock(label, mutations, instances) {
-  if (!mutations || mutations.length === 0) return '';
+  // Integrity filters (Phase 2.8-A): a mutation must say something (at least
+  // one semantic field) and must actually go somewhere (from != to). URL-keyed
+  // endpoints collapse when sources share a URL — index keys (2.8-B) win when
+  // present.
+  const usable = (mutations || []).filter(m =>
+    (m.preserved || m.dropped || m.added || m.distorted) &&
+    ((m.from_index != null && m.to_index != null && m.from_index !== m.to_index) ||
+     (m.from_source !== m.to_source)));
+  if (usable.length === 0) return '';
 
-  // Look up the from/to instances by URL so each card can show author + date
+  // Look up the from/to instances by index when available, else by URL
   const byUrl = {};
   (instances || []).forEach(i => { byUrl[i.source_url] = i; });
+  const endpoint = (m, key, idxKey) =>
+    (m[idxKey] != null && (instances || [])[m[idxKey]]) || byUrl[m[key]] || {};
 
-  const cards = mutations.map(m => {
-    const from = byUrl[m.from_source] || {};
-    const to = byUrl[m.to_source] || {};
+  const cards = usable.map(m => {
+    const from = endpoint(m, 'from_source', 'from_index');
+    const to = endpoint(m, 'to_source', 'to_index');
     const fields = [];
     if (m.preserved) fields.push(['preserved', 'Preserved', m.preserved]);
     if (m.dropped) fields.push(['dropped', 'Dropped', m.dropped]);
@@ -1977,7 +1992,7 @@ function renderMutationsBlock(label, mutations, instances) {
 
   return `
     <details class="collapse">
-      <summary>${label} mutations (${mutations.length})</summary>
+      <summary>${label} mutations (${usable.length})</summary>
       <div class="body normal-text">
         <p style="color:#777; font-size:0.82rem; margin: 0 0 1rem;">How the framing changed across significant transitions in this lineage.</p>
         ${cards}
@@ -2022,6 +2037,9 @@ function extractMilestones(fp) {
     (list || []).forEach(m => {
       const rank = m.distorted ? 2 : (m.added ? 1 : 0);
       if (rank === 0) return;
+      // Same integrity filter as renderMutationsBlock: a from==to "mutation"
+      // is a URL-keying artifact, not a milestone.
+      if (m.from_source === m.to_source && m.from_index == null) return;
       muts.push({ m, lineage, rank, from: byUrl[m.from_source] || {}, to: byUrl[m.to_source] || {} });
     });
   });
@@ -2051,7 +2069,7 @@ function milestoneHtml(entry) {
   }
   const i = entry.inst;
   const role = i.amplifier_role || 'unknown';
-  const via = citedVia(i.source_url);
+  const via = citedViaOf(i);
   return `<div class="ms-item role-${role}">
     <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
     <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}${
@@ -2096,7 +2114,7 @@ function whoStrip(lexLog, conLog) {
   const lexOrigin = uniq(lexLog.filter(i => (i.amplifier_role || '') === 'originator'));
   const origin = lexOrigin.length ? lexOrigin
     : uniq(all.filter(i => (i.amplifier_role || '') === 'originator'));
-  const via = origin.length ? citedVia(origin[0].source_url) : '';
+  const via = origin.length ? citedViaOf(origin[0]) : '';
   const originSeg = origin.length
     ? `<span class="who-seg"><strong>Origin:</strong> ${escapeHtml(truncate(nameOf(origin[0]), 36))}${
         yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))}${
@@ -2137,7 +2155,17 @@ function renderOverview(fp) {
   // stay on the Lineages tab.
   const stats = lex.timeline_stats || con.timeline_stats || {};
   const bits = [];
-  bits.push(`${lexLog.length} phrasing · ${conLog.length} idea attestations`);
+  // Distinct documents, not attestation rows: the same source often appears
+  // in both lineages, and double-counting overstated the evidence base.
+  // Identity: first-party entries are their URL; secondhand-cited entries
+  // (cited_via) are their TITLE — five print articles documented via one
+  // Snopes page are five documents, not one.
+  const docKey = i => citedViaOf(i)
+    ? 't:' + (i.source_title || '') : 'u:' + (i.source_url || i.source_title || '');
+  const distinctDocs = new Set(lexLog.concat(conLog).map(docKey)).size;
+  bits.push(`${lexLog.length} phrasing · ${conLog.length} idea attestations` +
+    (distinctDocs && distinctDocs < lexLog.length + conLog.length
+      ? ` (${distinctDocs} distinct documents)` : ''));
   if (stats.active_from) bits.push(`active ${stats.active_from} → ${stats.active_through || 'present'}`);
   if (stats.originator_to_mass_amplifier_days != null) bits.push(`origin → mass amplifier: ${fmtDaysHuman(stats.originator_to_mass_amplifier_days)}`);
   if (stats.originator_to_institutional_adoption_days != null) bits.push(`origin → institutional adoption: ${fmtDaysHuman(stats.originator_to_institutional_adoption_days)}`);
@@ -2155,7 +2183,7 @@ function renderOverview(fp) {
 
     <div class="card">
       <h2>Milestones — how this narrative traveled</h2>
-      <p style="color:#777; font-size:0.82rem; margin:0 0 0.8rem;">The genealogy's turning points. The full attestation log is below; dates and roles are AI-attested from the cited sources (a sample, not a census).</p>
+      <p style="color:#777; font-size:0.82rem; margin:0 0 0.8rem;">The genealogy's turning points. The full attestation log is below; dates and roles are AI-attested from the cited sources (a sample, not a census), and role labels have not yet passed a human audit (Gate 2.8, pending).</p>
       ${ms.length ? ms.map(milestoneHtml).join('') : '<p class="empty">No dated attestations found.</p>'}
       <div class="ms-stats" style="margin-top:0.9rem; padding-top:0.7rem; border-top:1px solid #f0f0f0;">${bits.map(escapeHtml).join(' · ')}</div>
     </div>
@@ -2410,7 +2438,7 @@ function instanceDetailHtml(inst) {
       ${provenanceBadge(inst) ? `<div class="field"><span class="label">Provenance</span>${provenanceBadge(inst)}</div>` : ''}
       ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a>${
-        citedVia(inst.source_url) ? `<div style="color:#777; font-size:0.8rem; margin-top:0.15rem;">The dated source is documented in ${escapeHtml(citedVia(inst.source_url))}'s citations; the original is not directly linked (often print or offline).</div>` : ''}</div>` : ''}
+        citedViaOf(inst) ? `<div style="color:#777; font-size:0.8rem; margin-top:0.15rem;">The dated source is documented by ${escapeHtml(citedViaOf(inst))}; the original is not directly linked (often print or offline).</div>` : ''}</div>` : ''}
     </div>
   `;
 }
