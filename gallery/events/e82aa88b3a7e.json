@@ -1,0 +1,2524 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "e82aa88b3a7e",
+  "event": "A financial disclosure document reported that Donald Trump received over 1 billion dollars in income or value from cryptocurrency-related ventures.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-07-05T05:21:15.767391+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "2127ff5f8fb8",
+        "statement": "A financial disclosure document reported that Donald Trump received over $1 billion in income or value from cryptocurrency-related ventures.",
+        "verified": true,
+        "source_url": "https://www.documentcloud.org/documents/24666148-trump-financial-disclosure-2024",
+        "note": "OGE Form 278-e filed in 2024; specific figure cited as $1.4 billion in some framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194165+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "4c1b6b5c6e16",
+        "statement": "Trump's financial disclosure was 927 pages in length.",
+        "verified": true,
+        "source_url": "https://www.documentcloud.org/documents/24666148-trump-financial-disclosure-2024",
+        "note": "Verifiable document length; cited across multiple framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194225+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "aa760f8e2e03",
+        "statement": "The $TRUMP token experienced a significant price decline from its peak.",
+        "verified": true,
+        "source_url": "https://www.coingecko.com/en/coins/trump",
+        "note": "Framings cite 97% collapse; specific peak-to-trough percentage verifiable on blockchain/exchange data",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194237+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8ce497698015",
+        "statement": "Trump pardoned Changpeng Zhao (CZ), founder of Binance.",
+        "verified": true,
+        "source_url": "https://www.whitehouse.gov/presidential-actions/",
+        "note": "Public pardon record; cited in multiple framings as factual",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194244+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "54b1c4546cf5",
+        "statement": "Trump disclosed a financial interest in World Liberty Financial (WLF).",
+        "verified": true,
+        "source_url": "https://www.documentcloud.org/documents/24666148-trump-financial-disclosure-2024",
+        "note": "Named entity in disclosure; subject of multiple framings",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194250+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "b3a09d71ee82",
+        "statement": "The UAE sovereign wealth fund invested $500 million in World Liberty Financial.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Foreign Influence framing; requires confirmation against WLF cap table or UAE official statements; not independently verified in primary sources",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194259+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "96919dfb5c2e",
+        "statement": "Trump earned $636 million specifically from the $TRUMP token.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Retail Investor Harm framing; requires breakdown of disclosed crypto income by asset; disclosure uses ranges, not precise figures",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194265+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b7fc74445b25",
+        "statement": "988,905 retail wallets holding $TRUMP experienced losses.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited as 'Nansen blockchain data' in Retail Investor Harm framing; blockchain analysis is real but the specific figure requires access to Nansen's proprietary dataset and methodology",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194271+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "daa3a04faa83",
+        "statement": "Pakistan's government signed an MOU with World Liberty Financial.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Foreign Influence framing; requires confirmation against Pakistani government or WLF official statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194276+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "68a5f7874af7",
+        "statement": "The $TRUMP token's tokenomics allocate 80% of supply to Trump entities and 20% to the public.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in multiple framings; requires verification against smart contract or WLF official documentation",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194281+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c590fb85f06f",
+        "statement": "Obama's final financial disclosure was 8 pages; Biden's was 11 pages.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Presidential Transparency framing for comparison; requires verification against OGE archives",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194286+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "c0acb627cf67",
+        "statement": "Trump's disclosure filing incurred late fees and required a 45-day extension.",
+        "verified": false,
+        "source_url": "",
+        "note": "Cited in Presidential Transparency framing; requires confirmation against OGE filing records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-05T05:21:00.194292+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Trump's crypto income constitutes a conflict of interest or self-dealing (Corruption framing) vs. whether it is legally permissible and reflects business success (Presidential Success framing)",
+      "Whether foreign investment in Trump crypto ventures represents a national security threat and pay-to-play channel (Foreign Influence framing) vs. whether outside fund managers handle his assets independently",
+      "Whether the $TRUMP token's structure and collapse caused systematic harm to retail investors (Retail Investor Harm framing) vs. whether retail participation in meme coins is a voluntary, speculative choice",
+      "Whether the 927-page disclosure represents unprecedented transparency (Presidential Transparency framing) or a document so vast it obscures rather than clarifies (Legislative Capture framing)",
+      "Whether Trump's crypto policy (GENIUS Act, deregulation) is a quid pro quo for personal enrichment (Corruption framing) vs. whether it reflects a coherent 'America First' crypto agenda (Presidential Success framing)",
+      "Whether the timing of the disclosure during Senate crypto bill negotiations poisoned legislative integrity (Legislative Capture framing) vs. whether it is irrelevant to the merits of crypto policy",
+      "Whether Trump's crypto dealings are politically reckless and will damage the GOP (Conservative Institutional Alarm framing) vs. whether they are legally sound and politically defensible",
+      "Whether meme coin tokenomics expose a regulatory gap that allows insider profit-taking (Crypto Market Structure framing) vs. whether meme coins are inherently speculative and require no special regulation"
+    ],
+    "summary": "All framings accept that Trump disclosed over $1 billion in crypto-related income, that he has financial interests in crypto ventures including World Liberty Financial, that the $TRUMP token experienced a major price decline, and that he pardoned Binance's CZ. The disagreements are entirely interpretive: whether these facts constitute corruption, national security risk, investor harm, transparency, legislative capture, business success, political liability, or a regulatory gap\u2014and what policy or legal response, if any, is warranted."
+  },
+  "framings": [
+    {
+      "framing_id": "d83be4c6",
+      "name": "Corruption & Conflict of Interest",
+      "question": "Is a sitting president profiting from an industry he directly regulates an abuse of power?",
+      "key_claim": "Trump's $1.4 billion in crypto income while simultaneously deregulating the crypto industry constitutes an unprecedented, self-dealing conflict of interest.",
+      "description": "This framing centers on the structural impossibility of a president impartially setting crypto policy while personally earning over a billion dollars from crypto ventures. It foregrounds the regulatory feedback loop: Trump loosened crypto rules, pardoned crypto executives, and backed crypto legislation while his family's ventures reaped the rewards.",
+      "emphasizes": "The regulatory quid pro quo \u2014 deregulation, pardons (Binance's CZ), and the GENIUS Act \u2014 alongside the scale of personal enrichment; the role of the OGE as a toothless reviewer; former ethics lawyers calling it a 'clear conflict of interest'.",
+      "downplays": "The legal compliance noted by OGE; Trump's claim that outside funds manage his money; the argument that disclosure itself is a form of transparency.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Former ethics lawyer says Trump's crypto poses 'clear conflict of interest' (NPR, July 2, 2026)",
+        "Trump made over $1 billion on crypto ventures last year, financial disclosure shows (CBS News, July 2, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "637bbc963232",
+          "name": "NPR / Linda Kenyon",
+          "url": "https://www.npr.org/2026/07/02/nx-s1-5877487/trump-crypto-earnings-ethics",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Former White House ethics lawyer Richard Painter says Trump 'stands alone' in having substantial financial conflicts of interest",
+          "date": "2026-07-02",
+          "role_evidence": "NPR was among the first to frame the story through the lens of ethics law, quoting former White House ethics counsel Richard Painter directly.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487183+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "69f3f1fdbd1d",
+          "name": "Sen. Elizabeth Warren",
+          "url": "https://rollcall.com/2026/07/02/trump-ethics-disclosure-throws-curveball-at-senate-crypto-talks/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The crypto legislation heading to the Senate floor must prevent the president\u2026 and their families from profiting off the crypto industry",
+          "date": "2026-07-02",
+          "role_evidence": "Warren, as Senate Banking Committee ranking member, formally tied the conflict-of-interest framing to pending legislation, giving it institutional weight.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487289+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0939e3c9ce3e",
+          "name": "Sen. Ruben Gallego",
+          "url": "https://rollcall.com/2026/07/02/trump-ethics-disclosure-throws-curveball-at-senate-crypto-talks/",
+          "carrier_type": "political",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump is using the presidency to profit off the American people",
+          "date": "2026-07-02",
+          "role_evidence": "Gallego's X post amplified the conflict-of-interest framing to a broad audience and was cited across multiple outlets.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487301+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1cff8feb63f5",
+          "name": "House Oversight Committee Democrats",
+          "url": "https://oversightdemocrats.house.gov/imo/media/doc/12026cryptoreport.pdf",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "How Donald Trump is abusing power and accepting\u2026 professionalized corruption",
+          "date": "2026-01-20",
+          "role_evidence": "The House Oversight Democrats' January 2026 report was an early institutional document framing Trump's crypto dealings as systematic corruption, predating the disclosure.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487308+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3b89362821a3",
+          "name": "Public Citizen",
+          "url": "https://www.citizen.org/article/trump-crypto-world-liberty-financial-binance-iran-sanctions/",
+          "carrier_type": "institutional",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The Trump family's entanglement with Binance exposes a dangerous contradiction at the heart of U.S. foreign policy",
+          "date": "2026-05-01",
+          "role_evidence": "Public Citizen published a detailed pre-disclosure report linking WLF, Binance, and Iran sanctions evasion, establishing the conflict-of-interest narrative before the June 30 filing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487315+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e82bfbeeb03f",
+          "name": "Democracy Defenders Fund / Lee Reiners (Duke)",
+          "url": "https://www.democracydefendersfund.org/prs/03.11.26-pr",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "USD1's market domination was fueled by\u2026 an infusion of cash from companies operated by a foreign government; a sweetheart deal from a crypto exchange whose convicted felon founder was pardoned",
+          "date": "2026-03-11",
+          "role_evidence": "This academic-backed report coined the 'political capital' framing of WLF's rise as structurally corrupt, months before the disclosure.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487320+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487329+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d00f41b9",
+      "name": "Foreign Influence & National Security",
+      "question": "Are foreign governments purchasing policy influence through Trump's crypto ventures?",
+      "key_claim": "UAE sovereign wealth funds, Pakistani government entities, and Binance \u2014 whose founder Trump pardoned \u2014 have funneled hundreds of millions into Trump-linked crypto ventures, creating a potential pay-to-play channel for foreign policy influence.",
+      "description": "This framing focuses on the geopolitical dimension: foreign state actors investing in Trump family crypto businesses while simultaneously receiving favorable U.S. policy treatment (chip export approvals, diplomatic engagement, pardons). It asks whether crypto has become a new vector for foreign corruption of U.S. policy.",
+      "emphasizes": "The UAE's $500M stake in WLF; the Binance pardon of CZ; Pakistan's MOU with WLF; the DOJ investigation into Binance-Iran sanctions evasion; the Witkoff family's dual role as envoy and crypto co-founder.",
+      "downplays": "Trump's denials of any connection; the legal compliance noted by OGE; the possibility that foreign investors were motivated by financial rather than political returns.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Conflict Coin: How the Trumps' Billion-Dollar Crypto Stake Depends on a Company That Helped Iran Evade Sanctions (Public Citizen, May 2026)",
+        "Trump's Stablecoin USD1: Binance Holds 87% After Founder's Pardon (Forbes, Feb. 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "bd5b4127732f",
+          "name": "Wall Street Journal Editorial Board",
+          "url": "https://www.thedailybeast.com/murdoch-paper-the-wall-street-journal-eviscerates-donald-trump-after-bombshell-financial-disclosure/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The Trump clan is cashing in on the Presidency in big and sketchy ways",
+          "date": "2026-07-01",
+          "role_evidence": "The WSJ editorial board \u2014 a conservative outlet \u2014 gave the foreign-influence dimension mainstream credibility by detailing WLF's deals with UAE and Pakistan actors.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487342+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1fd222c66ba5",
+          "name": "Forbes / Zach Everson",
+          "url": "https://www.forbes.com/sites/zacheverson/2026/02/09/trump-stablecoin-usd1-binance-holds-87-percent/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Binance holds about 87% of USD1\u2026 underscoring the depth of the financial relationship between Binance, whose founder Trump pardoned, and World Liberty Financial",
+          "date": "2026-02-09",
+          "role_evidence": "Forbes was first to quantify Binance's dominance of USD1 and link it explicitly to the CZ pardon, originating the pardon-as-quid-pro-quo thread.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487348+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b105067a6787",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/trump-over-1-billion-on-crypto-ventures-financial-disclosures/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The co-founder of Binance, Changpeng Zhao, received a pardon from Mr. Trump for financial crimes",
+          "date": "2026-07-02",
+          "role_evidence": "CBS News placed the Binance pardon and UAE investment in the same paragraph as the disclosure figures, amplifying the foreign-influence framing to a mass audience.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487353+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f8919e5009c8",
+          "name": "Rep. Ro Khanna",
+          "url": "https://www.forbes.com/sites/zacheverson/2026/02/09/trump-stablecoin-usd1-binance-holds-87-percent/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "launched an investigation into whether the deal influenced U.S. [policy]",
+          "date": "2026-02-09",
+          "role_evidence": "Khanna's formal House investigation into the UAE-WLF deal gave the foreign-influence framing institutional standing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487357+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "254051ea1e5a",
+          "name": "National Review",
+          "url": "https://www.nationalreview.com/corner/trump-crypto-corruption-and-the-failure-of-lawfare/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Now, it's out in the open. Will anyone care?",
+          "date": "2026-02-17",
+          "role_evidence": "National Review \u2014 a conservative outlet \u2014 amplified the foreign-influence angle early, signaling cross-ideological concern.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487362+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487369+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2305472a",
+      "name": "Retail Investor Harm",
+      "question": "Did ordinary Americans \u2014 including Trump supporters \u2014 lose money so that Trump could profit?",
+      "key_claim": "Nearly one million retail buyers of $TRUMP collectively lost $3.81 billion while Trump earned $636 million from the same token, revealing a structural wealth transfer from small investors to insiders.",
+      "description": "This framing foregrounds the asymmetric economics of the meme coin: Trump's revenue came from transaction fees and licensing regardless of price, while retail buyers \u2014 many of them Trump supporters \u2014 absorbed catastrophic losses as the token fell 97% from its peak. It asks who was actually harmed and whether the president exploited his supporters' trust.",
+      "emphasizes": "Nansen blockchain data showing 988,905 losing wallets; the 97% price collapse; the insider tokenomics (80% supply held by Trump entities); the contrast between Trump's fee-based gains and retail losses; individual investor testimonials.",
+      "downplays": "Disclosures warning buyers the token was not an investment; the speculative nature of all meme coins; the fact that some early retail buyers also profited.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Nearly a Million Investors Lost a Total of $3.8 Billion on Trump Crypto Coin (GV Wire / Nansen, July 4, 2026)",
+        "Trump pocketed $636M while buyers lost $3.8B on his meme coin, report finds (Crypto Briefing, July 4, 2026)",
+        "What $10,000 investment in Trump's meme coin is worth now (Newsweek, July 1, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "155590d6e301",
+          "name": "Nansen (blockchain analytics)",
+          "url": "https://gvwire.com/2026/07/04/nearly-a-million-investors-lost-a-total-of-3-8-billion-on-trump-crypto-coin/",
+          "carrier_type": "other",
+          "amplifier_role": "originator",
+          "excerpt": "988,905 buyers of the $TRUMP meme coin have lost money, representing roughly two out of every three buyers",
+          "date": "2026-07-04",
+          "role_evidence": "Nansen's on-chain analysis was the primary data source that originated the $3.81B retail loss figure, cited by virtually every outlet covering this angle.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487377+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "77e272293920",
+          "name": "CNN Business",
+          "url": "https://www.cnn.com/2026/07/02/business/trump-memecoin-crypto-gains",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Even as his memecoin investors lost money, Trump reaped the rewards",
+          "date": "2026-07-02",
+          "role_evidence": "CNN's explainer on the fee-vs-price-collapse dynamic reached a mass audience and crystallized the asymmetric harm narrative.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487381+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cba3caa291ed",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/10k-investment-in-trump-crypto-coin-on-inauguration-day-worth-364-today-12150504",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "a $10,000 investment in the Official Trump ($TRUMP) token on Inauguration Day\u2026 would be worth about $364",
+          "date": "2026-07-01",
+          "role_evidence": "Newsweek's concrete dollar-loss calculation made the retail harm tangible and widely shareable.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487385+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "494778788ab0",
+          "name": "Charlie Bilello (@charliebilello)",
+          "url": "https://beincrypto.com/trump-meme-coin-cycle-retail-losses/",
+          "carrier_type": "social",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump family crypto earnings: $1.4 billion. $TRUMP meme coin: -98%. Perhaps the most blatant example of corruption in the history of American politics.",
+          "date": "2026-07-01",
+          "role_evidence": "Bilello's viral X post juxtaposing Trump's gains against the coin's collapse was cited by BeInCrypto and spread the retail-harm framing on social media.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487389+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dd19ad1a04f6",
+          "name": "MS NOW / MSNBC",
+          "url": "https://www.ms.now/opinion/trump-crypto-meme-coin-profit-losses",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The president and his sons have in effect siphoned billions of dollars away from investors who hoped to profit themselves",
+          "date": "2026-06-10",
+          "role_evidence": "MS NOW published a detailed pre-disclosure investigation into retail losses, establishing the 'wealth transfer' framing before the June 30 filing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487393+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ea7cfe4d2012",
+          "name": "Peter Schiff (economist/commentator)",
+          "url": "https://beincrypto.com/trump-meme-coin-cycle-retail-losses/",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "It's really a way to bribe the president\u2026 it's a lousy investment",
+          "date": "2026-07-01",
+          "role_evidence": "Schiff, a longtime crypto skeptic and conservative, amplified the retail-harm framing from a non-partisan financial perspective.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487397+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487404+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "1008d962",
+      "name": "Presidential Transparency & Disclosure Norms",
+      "question": "Does a 927-page filing represent unprecedented transparency or unprecedented complexity designed to obscure?",
+      "key_claim": "Trump's 927-page disclosure \u2014 80x longer than Obama's final filing \u2014 is either a historic act of financial transparency or a document so vast it defies meaningful public scrutiny.",
+      "description": "This framing focuses on the disclosure process itself: what it reveals, what it obscures, and what it says about the norms of presidential financial accountability. It asks whether the sheer volume of the filing is a feature or a bug, and whether OGE's review process is adequate for a president with this scale of commercial entanglement.",
+      "emphasizes": "The 927-page length vs. Obama's 8 pages and Biden's 11; the 45-day extension and late filing fees; OGE's limited enforcement power; the ranges-not-absolutes reporting format; the Trump Organization's claim of 'unmatched transparency'.",
+      "downplays": "The substantive conflicts embedded in the document; the White House's political framing of the disclosure as vindication.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Trump's annual financial disclosure shows more than $580M in crypto-related income (CNBC, June 30, 2026)",
+        "Trump earned over $1.4 billion from crypto ventures in 2025, financial disclosure shows (ABC News, June 30, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ff3f52d2881c",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/30/trump-financial-disclosure-released.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump's disclosure report for 2025\u2026 totals 927 pages",
+          "date": "2026-06-30",
+          "role_evidence": "CNBC was among the first to publish a detailed breakdown of the 927-page document, establishing the length-as-news-hook that all subsequent coverage adopted.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487409+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "20b5deca8a74",
+          "name": "NBC News / Rob Wile",
+          "url": "https://www.nbcnews.com/politics/donald-trump/financial-disclosure-1-billion-cryptocurrency-earnings-meme-coins-rcna352497",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "By comparison, President Barack Obama's final disclosure form was eight pages, while President Joe Biden's was 11",
+          "date": "2026-06-30",
+          "role_evidence": "NBC's Obama/Biden comparison made the length disparity the most-cited data point in the transparency framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487486+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f20fe4a8b0d4",
+          "name": "Trump Organization (spokesperson)",
+          "url": "https://www.nbcnews.com/politics/donald-trump/financial-disclosure-1-billion-cryptocurrency-earnings-meme-coins-rcna352497",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "At nearly 1,000 pages, it represents one of the most comprehensive financial disclosure reports ever submitted and demonstrates a level of financial transparency unmatched in presidential history",
+          "date": "2026-06-30",
+          "role_evidence": "The Trump Organization officially adopted the 'transparency' counter-framing, rebranding the document's length as a virtue.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487492+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dae222256c09",
+          "name": "Newsweek (analysis)",
+          "url": "https://www.newsweek.com/crypto-donald-trump-coin-maga-12155511",
+          "carrier_type": "news",
+          "amplifier_role": "critic",
+          "excerpt": "Compliance and public confidence are separate problems, and this filing is a map of the distance between them",
+          "date": "2026-07-04",
+          "role_evidence": "Newsweek's analysis pushed back on the transparency framing by distinguishing legal compliance from genuine public accountability.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487497+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487503+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "85f48283",
+      "name": "Legislative Capture & Crypto Policy Integrity",
+      "question": "Can Congress write fair crypto legislation when the president personally profits from the industry being regulated?",
+      "key_claim": "Trump's $1.4 billion crypto windfall, disclosed mid-negotiation, has poisoned Senate crypto market structure talks by making any administration-backed bill appear to serve presidential financial interests.",
+      "description": "This framing focuses on the downstream policy consequences of the disclosure: specifically, how it has complicated bipartisan Senate negotiations over a crypto market structure bill. It asks whether the legislative process itself has been compromised by the president's financial stake in the outcome.",
+      "emphasizes": "The timing of the disclosure during active Senate crypto bill negotiations; Democratic demands for ethics provisions; the GENIUS Act's failure to bar officials from crypto profits; the stalled market structure bill.",
+      "downplays": "The bipartisan support the GENIUS Act did receive; the argument that crypto regulation is needed regardless of Trump's holdings; the White House's position that policy and personal finances are separate.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Trump ethics disclosure throws curveball at Senate crypto talks (Roll Call, July 2, 2026)",
+        "The Latest GENIUS Act Draft Continues to Fuel Trump's Crypto Corruption (Senate Banking Committee Democrats)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "78e72edcb1a7",
+          "name": "Roll Call / Mark Schoeff Jr.",
+          "url": "https://rollcall.com/2026/07/02/trump-ethics-disclosure-throws-curveball-at-senate-crypto-talks/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "The newly disclosed scale of President Donald Trump's personal cryptocurrency-related profits\u2026 comes right at a sensitive moment for Senate negotiations",
+          "date": "2026-07-02",
+          "role_evidence": "Roll Call was the first outlet to explicitly frame the disclosure as a 'curveball' for pending legislation, originating the legislative-capture angle.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487509+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2bf38be80317",
+          "name": "Sen. Angela Alsobrooks",
+          "url": "https://rollcall.com/2026/07/02/trump-ethics-disclosure-throws-curveball-at-senate-crypto-talks/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "We desperately need legislation that includes an agreement on ethics \u2014 that would apply to the president, vice president, and all of us",
+          "date": "2026-07-02",
+          "role_evidence": "Alsobrooks, a swing-vote Democrat on the Senate Banking Committee, formally conditioned her support for the crypto bill on ethics provisions, giving the framing legislative consequence.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487514+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d46bd3d1b0af",
+          "name": "Senate Banking Committee Democrats",
+          "url": "https://www.banking.senate.gov/imo/media/doc/genius_corruption_overview.pdf",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The Latest GENIUS Act Draft Continues to Fuel Trump's Crypto Corruption",
+          "date": "2026-06-01",
+          "role_evidence": "The Senate Banking Committee minority formally adopted this framing in an official document, making it an institutional position.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487518+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2ec9b369404f",
+          "name": "Sen. Kirsten Gillibrand",
+          "url": "https://thenextweb.com/news/trump-memecoin-investors-losses-636-million-payout",
+          "carrier_type": "political",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Senator Kirsten Gillibrand has proposed banning elected officials and their spouses from issuing or promoting crypto tokens",
+          "date": "2026-07-04",
+          "role_evidence": "Gillibrand's legislative proposal to ban officials from crypto promotion directly operationalized the legislative-capture framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487522+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487525+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3467665e",
+      "name": "Presidential Business Success & American Crypto Leadership",
+      "question": "Does Trump's crypto wealth prove that his pro-innovation policies are working for America?",
+      "key_claim": "Trump's crypto earnings reflect the success of his 'America First' crypto agenda, which has made the U.S. the global leader in digital assets and created economic opportunity for all Americans.",
+      "description": "This framing, advanced primarily by the White House and Trump himself, reframes the disclosure as evidence of policy success rather than self-dealing. It argues that Trump's personal wealth growth is inseparable from the broader crypto boom he enabled, and that critics are recycling partisan attacks.",
+      "emphasizes": "The GENIUS Act as landmark legislation; Trump's role in making the U.S. the 'crypto capital of the world'; the argument that outside funds manage his money; the claim that the stock market's rise benefits everyone.",
+      "downplays": "The structural conflict between regulating and profiting from the same industry; retail investor losses; foreign government investments in WLF.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue (CNBC, July 1, 2026)",
+        "White House: 'President Trump proudly made the United States the crypto capital of the world' (CNBC, July 1, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8884e9407d72",
+          "name": "White House / Anna Kelly (spokesperson)",
+          "url": "https://www.cnbc.com/2026/07/01/trump-money-financial-disclosure-crypto-billions.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "President Trump proudly made the United States the crypto capital of the world through executive actions, supporting legislation like the GENIUS Act",
+          "date": "2026-07-01",
+          "role_evidence": "The White House officially adopted this framing in its formal response to the disclosure, making it the administration's on-record position.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487530+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "116fa1fbc84d",
+          "name": "President Donald Trump (direct statements)",
+          "url": "https://www.cnbc.com/2026/07/01/trump-money-financial-disclosure-crypto-billions.html",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "You know why I'm profiting is the stock market's going up, everybody's profiting",
+          "date": "2026-07-01",
+          "role_evidence": "Trump personally originated the 'rising tide lifts all boats' counter-framing in remarks to reporters at Joint Base Andrews.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487535+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "efce322b6b23",
+          "name": "Trump Organization (spokesperson)",
+          "url": "https://www.nbcnews.com/politics/donald-trump/financial-disclosure-1-billion-cryptocurrency-earnings-meme-coins-rcna352497",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "This disclosure once again demonstrates that The Trump Organization continues to maintain a strong financial position",
+          "date": "2026-06-30",
+          "role_evidence": "The Trump Organization's official statement reframed the disclosure as a demonstration of business strength and transparency.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487539+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487629+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "8ead08c2",
+      "name": "Conservative Institutional Alarm (Intra-Right Critique)",
+      "question": "Is Trump's crypto self-enrichment a political liability that will cost Republicans \u2014 even if it is legal?",
+      "key_claim": "Even if Trump's crypto dealings are technically legal, they are politically reckless and morally unseemly, and will hand Democrats a corruption narrative that could cost Republicans Congress in 2026 and the presidency in 2028.",
+      "description": "This framing comes from within the conservative and center-right media ecosystem. It does not dispute Trump's legal compliance but argues that the optics and political risks of billion-dollar presidential self-enrichment are severe enough to warrant criticism from allies. It is distinct from the Democratic corruption framing in that it focuses on electoral and institutional consequences rather than legal violations.",
+      "emphasizes": "The political cost to the GOP; the contrast between Trump's wealth and struggling American families; the 'unseemly' nature of family enrichment even if legal; the risk of Democratic investigations if Congress flips.",
+      "downplays": "The legal violations argument; the foreign influence dimension; the retail investor harm.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Wall Street Journal: Trump family 'cashing in on the presidency in big and sketchy ways' (The Hill, July 2, 2026)",
+        "Crypto Don Is the President MAGA Always Wanted (Newsweek, July 4, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7e7fd3c4d51c",
+          "name": "Wall Street Journal Editorial Board",
+          "url": "https://thehill.com/homenews/media/5951517-wall-street-journal-trump-family/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Assuming all of this is legal, it's still an unseemly display of using the Presidency for family profit",
+          "date": "2026-07-01",
+          "role_evidence": "The WSJ editorial board \u2014 a Murdoch-owned, traditionally conservative outlet \u2014 originated this intra-right critique, explicitly framing it as a political warning to Republicans.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487679+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5de9787e30f",
+          "name": "Newsweek (analysis)",
+          "url": "https://www.newsweek.com/crypto-donald-trump-coin-maga-12155511",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Whether the 'crypto corruption' story sticks to Trump will depend on how his voters parse it",
+          "date": "2026-07-04",
+          "role_evidence": "Newsweek's analytical piece amplified the WSJ's intra-right framing by examining how MAGA voters might process the disclosure.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487686+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "254051ea1e5a",
+          "name": "National Review",
+          "url": "https://www.nationalreview.com/corner/trump-crypto-corruption-and-the-failure-of-lawfare/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Now, it's out in the open. Will anyone care?",
+          "date": "2026-02-17",
+          "role_evidence": "National Review raised the intra-right alarm months before the disclosure, asking whether conservative voters would hold Trump accountable.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487691+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "59ef94ea8287",
+          "name": "Michael Steele (MS NOW)",
+          "url": "https://www.ms.now/news/trump-financial-disclosures-conflict-of-interest-crypto-billion",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "MS NOW's Michael Steele tore into Donald Trump after the president released his annual financial disclosure",
+          "date": "2026-07-01",
+          "role_evidence": "Steele, a former RNC chairman, amplified the intra-right critique to a mass cable audience, lending it cross-partisan credibility.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487695+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487700+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "bc56edfe",
+      "name": "Crypto Market Structure & Tokenomics",
+      "question": "What does the $TRUMP token's collapse reveal about the structural risks of presidential-branded meme coins and insider tokenomics?",
+      "key_claim": "The $TRUMP token's 97% collapse while Trump earned fees regardless of price exposes a structural flaw in meme coin economics: insiders profit from transaction volume while retail buyers absorb price risk, a pattern that regulators have failed to address.",
+      "description": "This framing, dominant in crypto-native and financial media, treats the disclosure primarily as a case study in tokenomics and market structure rather than a political scandal. It focuses on the mechanics of how Trump profited (fees, not price appreciation), the insider vesting schedule, and what this reveals about the need for \u2014 or futility of \u2014 meme coin regulation.",
+      "emphasizes": "The fee-vs-price-appreciation distinction; the 80/20 insider/public token split; the vesting cliff schedule running to 2028; comparisons to other celebrity meme coin collapses (LIBRA/Milei); the regulatory gap that allows meme coins to avoid securities classification.",
+      "downplays": "The political corruption dimension; the foreign influence angle; the partisan framing.",
+      "tone": "measured",
+      "sample_headlines": [
+        "TRUMP Memecoin Collapse Erases $3.81B, 988K Retail Buyers Hit While Insiders Extract $4B (CryptoNews.net, July 4, 2026)",
+        "How Trump made more than $1 billion on crypto when most of his coin's investors lost money (CNN Business, July 2, 2026)"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d3574a35f523",
+          "name": "Nansen (blockchain analytics)",
+          "url": "https://gvwire.com/2026/07/04/nearly-a-million-investors-lost-a-total-of-3-8-billion-on-trump-crypto-coin/",
+          "carrier_type": "other",
+          "amplifier_role": "originator",
+          "excerpt": "reflects a small number of early buyers capturing enormous gains while the broad retail majority absorbed the losses",
+          "date": "2026-07-04",
+          "role_evidence": "Nansen's on-chain analysis was the primary data source for the tokenomics framing, providing the wallet-level data that drove this narrative.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487705+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c4c5e3be5927",
+          "name": "DataWallet / CoinMarketCap analysis",
+          "url": "https://www.datawallet.com/crypto/trump-meme-coin-explained",
+          "carrier_type": "other",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trading generates fees for the Trump-linked entities behind the token\u2026 earned while the token itself fell more than 90%",
+          "date": "2026-06-01",
+          "role_evidence": "DataWallet's detailed tokenomics breakdown established the fee-vs-price-collapse distinction that became central to the market-structure framing.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487709+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "80248b49c4fc",
+          "name": "BeInCrypto / Lockridge Okoth",
+          "url": "https://beincrypto.com/trump-meme-coin-cycle-retail-losses/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The TRUMP token traced the same boom-and-bust arc as the speculative coins that came before it",
+          "date": "2026-07-04",
+          "role_evidence": "BeInCrypto contextualized the $TRUMP collapse within the broader meme coin cycle, amplifying the market-structure framing to a crypto-native audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487713+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "046b6c401a0c",
+          "name": "CryptoNews.net",
+          "url": "https://cryptonews.net/news/altcoins/33102192/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The asymmetry is not accidental. On-chain launch dynamics for memecoins routinely favor snipers and insiders who front-run public awareness",
+          "date": "2026-07-04",
+          "role_evidence": "CryptoNews.net's analysis framed the $TRUMP collapse as a predictable structural outcome of meme coin launch mechanics, not a unique political event.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487717+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "491a43d0339c",
+          "name": "Robert R. Johnson (Creighton University finance professor)",
+          "url": "https://www.newsweek.com/10k-investment-in-trump-crypto-coin-on-inauguration-day-worth-364-today-12150504",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "No one invests in meme coins; they can only speculate",
+          "date": "2026-07-01",
+          "role_evidence": "Johnson provided academic framing of the tokenomics issue, distinguishing speculation from investment and contextualizing the losses.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487721+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "796bae54b993",
+          "name": "National Consumer Law Center (NCLC)",
+          "url": "https://www.nclc.org/president-trump-signs-crypto-bill-exposing-consumers-to-huge-financial-risks/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "The GENIUS Act allows nonbanks to offer uninsured stablecoins without the essential safeguards provided by federal deposit insurance",
+          "date": "2025-07-21",
+          "role_evidence": "NCLC pushed back on the regulatory-gap framing by arguing that the GENIUS Act made the structural problem worse, not better.",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-05T05:20:49.487725+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-05T05:20:49.487737+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: a framing centered on Trump's personal financial risk and vulnerability (e.g., does $1B in crypto exposure create blackmail vectors or force policy decisions to protect his own holdings?). Missing: a skeptical-but-sympathetic framing from crypto entrepreneurs/libertarians questioning whether the $1B figure is inflated or mischaracterized by hostile media. Missing: a labor/working-class framing examining whether crypto wealth concentration (Trump's or industry-wide) diverts capital from productive economy sectors. Missing: a tax policy framing focused on whether these income streams received appropriate tax treatment and what precedent this sets for executive taxation.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "A financial disclosure document reported that Donald Trump received over 1 billion dollars in income or value from cryptocurrency-related ventures.",
+    "rated_outlets": 9,
+    "distribution": {
+      "left": 1,
+      "lean-left": 3,
+      "center": 4,
+      "lean-right": 0,
+      "right": 1
+    },
+    "distribution_pct": {
+      "left": 11,
+      "lean-left": 33,
+      "center": 44,
+      "lean-right": 0,
+      "right": 11
+    },
+    "left_of_center": 4,
+    "center": 4,
+    "right_of_center": 1,
+    "lean_index": -0.33,
+    "resolve_rate": 0.75,
+    "skew": "balanced across the spectrum",
+    "coverage_gap": {
+      "unrated_news_carriers": 3,
+      "examples": [
+        {
+          "carrier": "MS NOW / MSNBC",
+          "domain": "ms.now"
+        },
+        {
+          "carrier": "NBC News / Rob Wile",
+          "domain": "nbcnews.com"
+        },
+        {
+          "carrier": "CryptoNews.net",
+          "domain": "cryptonews.net"
+        }
+      ]
+    },
+    "non_news_carriers": 10,
+    "matched": [
+      {
+        "outlet": "Daily Beast",
+        "carrier": "Wall Street Journal Editorial Board",
+        "bucket": "left",
+        "lean_num": -2,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN Business",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Newsweek",
+        "carrier": "Newsweek",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR / Linda Kenyon",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Forbes",
+        "carrier": "Forbes / Zach Everson",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Hill",
+        "carrier": "Wall Street Journal Editorial Board",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "National Review",
+        "carrier": "National Review",
+        "bucket": "right",
+        "lean_num": 2,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 18,
+        "political": 6,
+        "social": 1,
+        "institutional": 7,
+        "academic": 2,
+        "other": 4
+      },
+      "vested_interest": 13,
+      "framings_with_vested": 6,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 30,
+    "framings": [
+      {
+        "framing_id": "d83be4c6",
+        "name": "Corruption & Conflict of Interest",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d691d0c45cd5",
+            "display": "Democracy Defenders Fund",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "1a4c3c7dfa2c",
+            "display": "House Oversight Committee Democrats",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "90541afcb1f7",
+            "display": "Public Citizen",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0047c6322f05",
+            "display": "Sen. Elizabeth Warren",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "33274b02519c",
+            "display": "Sen. Ruben Gallego",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d00f41b9",
+        "name": "Foreign Influence & National Security",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "f7515aeb2679",
+            "display": "National Review",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec56a9127d9b",
+            "display": "Forbes",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "48cd18dabe7e",
+            "display": "Rep. Ro Khanna",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "3716681b5d21",
+            "display": "Wall Street Journal Editorial Board",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2305472a",
+        "name": "Retail Investor Harm",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "2f3fb718e18b",
+            "display": "Charlie Bilello",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d300797e5c62",
+            "display": "MS NOW",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4fdeb0e253af",
+            "display": "Nansen",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "1008d962",
+        "name": "Presidential Transparency & Disclosure Norms",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "8c3a91c4bf94",
+            "display": "Trump Organization",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": true
+          }
+        ]
+      },
+      {
+        "framing_id": "85f48283",
+        "name": "Legislative Capture & Crypto Policy Integrity",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "b66a55610b7a",
+            "display": "Roll Call",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "fc0ea02da9c5",
+            "display": "Sen. Angela Alsobrooks",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6fefedb05009",
+            "display": "Sen. Kirsten Gillibrand",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "368e5c816033",
+            "display": "Senate Banking Committee Democrats",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3467665e",
+        "name": "Presidential Business Success & American Crypto Leadership",
+        "n_carriers": 5,
+        "primary": 3,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "8c3a91c4bf94",
+            "display": "Trump Organization",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d62b0fd3ce1c",
+            "display": "President Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d673c3cc612c",
+            "display": "White House",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "8ead08c2",
+        "name": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d300797e5c62",
+            "display": "MS NOW",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f7515aeb2679",
+            "display": "National Review",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "bc56edfe",
+        "name": "Crypto Market Structure & Tokenomics",
+        "n_carriers": 7,
+        "primary": 6,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "2f3fb718e18b",
+            "display": "Charlie Bilello",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "4fdeb0e253af",
+            "display": "Nansen",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "228e2b11438f",
+            "display": "CryptoNews.net",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2099f5377ff0",
+            "display": "DataWallet",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7b4f44f86fd6",
+            "display": "Robert R. Johnson",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2d9a26b4ba46",
+            "display": "Newsweek",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6d053f42c0a6",
+            "display": "National Consumer Law Center",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "f7515aeb2679",
+        "display": "National Review",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Conservative Institutional Alarm (Intra-Right Critique)",
+          "Foreign Influence & National Security"
+        ]
+      },
+      {
+        "actor_id": "4fdeb0e253af",
+        "display": "Nansen",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Crypto Market Structure & Tokenomics",
+          "Retail Investor Harm"
+        ]
+      },
+      {
+        "actor_id": "2d9a26b4ba46",
+        "display": "Newsweek",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Conservative Institutional Alarm (Intra-Right Critique)",
+          "Retail Investor Harm"
+        ]
+      },
+      {
+        "actor_id": "2f3fb718e18b",
+        "display": "Charlie Bilello",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Crypto Market Structure & Tokenomics",
+          "Retail Investor Harm"
+        ]
+      },
+      {
+        "actor_id": "d300797e5c62",
+        "display": "MS NOW",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Conservative Institutional Alarm (Intra-Right Critique)",
+          "Retail Investor Harm"
+        ]
+      },
+      {
+        "actor_id": "8c3a91c4bf94",
+        "display": "Trump Organization",
+        "actor_type": "person",
+        "n_framings": 2,
+        "framings": [
+          "Presidential Business Success & American Crypto Leadership",
+          "Presidential Transparency & Disclosure Norms"
+        ]
+      }
+    ],
+    "contested_actors": [
+      {
+        "actor_id": "2d9a26b4ba46",
+        "display": "Newsweek",
+        "actor_type": "news",
+        "champions": [
+          "Conservative Institutional Alarm (Intra-Right Critique)",
+          "Retail Investor Harm"
+        ],
+        "opposes": [
+          "Presidential Transparency & Disclosure Norms"
+        ]
+      }
+    ],
+    "framing_pairs": [
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Foreign Influence & National Security",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Retail Investor Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Presidential Transparency & Disclosure Norms",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Legislative Capture & Crypto Policy Integrity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Presidential Business Success & American Crypto Leadership",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Corruption & Conflict of Interest",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Retail Investor Harm",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Presidential Transparency & Disclosure Norms",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Legislative Capture & Crypto Policy Integrity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Presidential Business Success & American Crypto Leadership",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Retail Investor Harm",
+        "b": "Legislative Capture & Crypto Policy Integrity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Retail Investor Harm",
+        "b": "Presidential Business Success & American Crypto Leadership",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Presidential Transparency & Disclosure Norms",
+        "b": "Legislative Capture & Crypto Policy Integrity",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legislative Capture & Crypto Policy Integrity",
+        "b": "Presidential Business Success & American Crypto Leadership",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legislative Capture & Crypto Policy Integrity",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Legislative Capture & Crypto Policy Integrity",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Presidential Business Success & American Crypto Leadership",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Presidential Business Success & American Crypto Leadership",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Presidential Transparency & Disclosure Norms",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Foreign Influence & National Security",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Retail Investor Harm",
+        "b": "Presidential Transparency & Disclosure Norms",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Presidential Transparency & Disclosure Norms",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 1,
+        "jaccard": 0.143
+      },
+      {
+        "a": "Retail Investor Harm",
+        "b": "Conservative Institutional Alarm (Intra-Right Critique)",
+        "shared": 2,
+        "jaccard": 0.286
+      },
+      {
+        "a": "Retail Investor Harm",
+        "b": "Crypto Market Structure & Tokenomics",
+        "shared": 3,
+        "jaccard": 0.333
+      },
+      {
+        "a": "Presidential Transparency & Disclosure Norms",
+        "b": "Presidential Business Success & American Crypto Leadership",
+        "shared": 3,
+        "jaccard": 0.5
+      }
+    ],
+    "by_actor_type": {
+      "official": 6,
+      "organization": 4,
+      "academic": 2,
+      "person": 2,
+      "news": 16
+    },
+    "connectivity": {
+      "bridge_ratio": 0.2,
+      "siloed_share": 0.733,
+      "mean_jaccard": 0.061
+    },
+    "structure_note": "6 of 30 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-05T05:21:15.767335+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
