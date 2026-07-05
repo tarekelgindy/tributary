@@ -52,7 +52,7 @@
   "genealogy": {
     "lexical": {
       "lineage_type": "lexical",
-      "status": "single-origin",
+      "status": "earliest-found",
       "first_attested_date": "1993-05-26",
       "first_attested_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
       "attestation_confidence": 0.7,
@@ -70,11 +70,12 @@
           "confidence": 0.7,
           "evidence": "Cited as a primary source in Snopes' 'The Seven Year Glitch' fact-check, indicating the paper ran a piece in May 1993 treating this framing as already a common claim. The title and page number confirm print publication. Full text not retrievable online, but citation via Snopes is credible. This is the earliest dated print citation found across all sources reviewed.",
           "amplifier_role": "originator",
-          "role_evidence": "This is the earliest dated attestation found across all reviewed sources; the framing is cited as already-existing folk belief, making this the first documented journalistic echo of the pre-internet oral tradition.",
+          "role_evidence": "This is the earliest dated attestation found across all reviewed sources; the framing is cited as already-existing folk belief, making this the first documented journalistic echo of the pre-internet oral tradition. [Repair 2026-07-05: earliest attestation found; the piece treats the belief as already common, so this marks the start of the documented record, not a coining.]",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL + quote verified",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "Snopes' bibliography"
         },
         {
           "instance_id": "c97abaff94de",
@@ -91,7 +92,8 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL + quote verified",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "Snopes' bibliography"
         },
         {
           "instance_id": "127dd19744c7",
@@ -103,12 +105,13 @@
           "exact_quote": "Hudler, Ad. \"The Real Truth About Health Myths.\" Better Homes and Gardens. January 1998.",
           "confidence": 0.65,
           "evidence": "Cited in the Snopes 'Seven Year Glitch' bibliography as a source addressing this specific myth. Better Homes and Gardens is a mass-circulation mainstream magazine, indicating the framing had reached broad domestic audiences by January 1998. Only year/month known (no day); date set to 1998-01-01. Full text not freely accessible online.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Publication in a major household magazine with multi-million circulation represents the framing reaching a mass domestic audience for the first time in documented print record.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL + quote verified",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "Snopes' bibliography"
         },
         {
           "instance_id": "10ddfdca5f45",
@@ -120,7 +123,7 @@
           "exact_quote": "Chewing gum bezoars of the gastrointestinal tract. Pediatrics. 1998 Aug;102(2):e22.",
           "confidence": 0.9,
           "evidence": "The Milov et al. 1998 Pediatrics paper is confirmed on PubMed (PMID 9685468). While the paper documents clinical cases of gum bezoars in children, multiple later sources (Scientific American, Snopes, HowStuffWorks) cite it as the clinical trigger that brought renewed medical and popular attention to the swallowed-gum myth. Snopes, Scientific American, and HowStuffWorks all reference it directly in the context of the 'seven years' framing.",
-          "amplifier_role": "early-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "The peer-reviewed clinical paper provided the medical hook that journalists and debunkers subsequently used to discuss and amplify the 'seven years in your stomach' myth in major outlets through the 2000s.",
           "verified": true,
           "verification_status": "verified",
@@ -142,7 +145,8 @@
           "verified": false,
           "verification_status": "quote-not-found",
           "verification_notes": "no fuzzy chunk of quote found in page",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "Snopes' bibliography"
         },
         {
           "instance_id": "1c4771456570",
@@ -154,12 +158,13 @@
           "exact_quote": "\"Now, when I was a kid, I remember other kids saying it takes seven years to digest gum if you swallow it, but that smacks of an old wives' tale to me.\"",
           "confidence": 0.92,
           "evidence": "HowStuffWorks cites this Snopes article with the date 'January 5, 2005' and the URL snopes.com/oldwives/chewgum.asp. The Snopes article is still live. This is the first major online debunking of the myth and the earliest reliably-dated web-native document found that directly uses the diagnostic lexical form ('it takes seven years to digest gum'). Snopes was founded in 1994 and this page may have existed earlier in a different form, but January 5, 2005 is the first documented date.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "critic",
           "role_evidence": "Snopes is the de facto institutional authority for urban legend fact-checking; its publication of this myth legitimized and permanently archived the 'seven years' framing as a named, searchable internet fact-check.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL + quote verified",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": ""
         },
         {
           "instance_id": "a572d53db5c7",
@@ -171,7 +176,7 @@
           "exact_quote": "\"Don't swallow chewing gum—it will stay in your system for seven years!\"",
           "confidence": 0.95,
           "evidence": "Confirmed via HowStuffWorks citation ('October 11, 2007') and the live Scientific American article page. This is the earliest major science-journalism piece to formally fact-check the myth by name using the exact lexical form. The article cites gastroenterologists David Milov and Rodger Liddle and is still widely cited as the canonical debunking.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Scientific American's globally-read science journal platform transformed the framing from a local urban legend into a formally fact-checked and widely cited debunking, massively amplifying its documented online reach.",
           "verified": true,
           "verification_status": "verified",
@@ -188,7 +193,7 @@
           "exact_quote": "\"Q: Is it true that swallowed gum stays in your stomach for 7 years?\"",
           "confidence": 0.88,
           "evidence": "Live blog post on Ohio State University's student health blog, dated December 2, 2009. The URL and publication date are stable institutional records. This is one of the earliest medical/institutional blog posts to use the exact lexical form as a debunking Q&A.",
-          "amplifier_role": "early-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "An accredited university health blog adopting the framing as a formal Q&A represents early institutional uptake of the specific 'swallowed gum stays in your stomach' lexical form on the web.",
           "verified": true,
           "verification_status": "verified",
@@ -205,7 +210,7 @@
           "exact_quote": "\"Swallowed chewing gum does not stay in your system for seven years.\"",
           "confidence": 0.9,
           "evidence": "Live academic blog post on West Texas A&M University domain, date confirmed in URL path (2012/12/13). Uses the diagnostic n-gram directly in the title and opening sentence.",
-          "amplifier_role": "mention",
+          "amplifier_role": "critic",
           "role_evidence": "A university professor's science FAQ blog entry uses the framing in passing as a debunking, representing academic mention rather than active amplification.",
           "verified": true,
           "verification_status": "verified",
@@ -222,7 +227,7 @@
           "exact_quote": "\"it does not actually take seven years to digest swallowed chewing gum\"",
           "confidence": 0.88,
           "evidence": "Live Chapman University institutional blog post, date confirmed in URL (2016/02/22). Describes the myth as 'so widely accepted for so long,' indicating the framing was already culturally entrenched by 2016.",
-          "amplifier_role": "mention",
+          "amplifier_role": "critic",
           "role_evidence": "A student essay on an academic blog uses the diagnostic framing as the premise of a myth-busting exercise, contributing to its consolidation as a well-known claim.",
           "verified": true,
           "verification_status": "verified",
@@ -239,7 +244,7 @@
           "exact_quote": "\"We've all heard at one time or another that if you swallow gum, it'll sit in your stomach for seven years.\"",
           "confidence": 0.9,
           "evidence": "Healthline article with metadata date of July 31, 2018. Healthline is a major health information platform with high search traffic. The article uses the exact lexical form 'sit in your stomach for seven years' and explicitly states the 'seven years' origin is 'also unknown.'",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Healthline's wide readership and SEO authority made this one of the most-read debunkings of the myth, cementing the 'sit in your stomach for seven years' lexical variant as the dominant web form.",
           "verified": true,
           "verification_status": "verified",
@@ -256,7 +261,7 @@
           "exact_quote": "\"You may have been told that if you swallow gum it will stay in your body for 7 years.\"",
           "confidence": 0.88,
           "evidence": "Live article on McGill University's Office for Science and Society, metadata date November 7, 2019. Explicitly states 'the origins of this truism are likely lost to history.' Uses the diagnostic lexical form directly.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "critic",
           "role_evidence": "McGill University's science communication office formally cataloguing and debunking this framing represents full institutional adoption of the '7 year myth' label.",
           "verified": true,
           "verification_status": "verified",
@@ -267,108 +272,6 @@
       "adversarial_check_performed": true,
       "adversarial_notes": "Conducted seven rounds of searches targeting pre-1993-05-26 evidence for the narrative framing 'chewing gum stays in your stomach for seven years' and its variants. Here is a full audit trail of what was searched, what was found, and what was ruled out.\n\n**N-GRAMS AND VARIANTS SEARCHED:**\n- 'swallowed gum stays in stomach seven years'\n- 'gum stays in your stomach for seven years' (canonical form)\n- 'gum stays stomach seven years' newspaper 1980s 1970s\n- 'chewing gum stomach years digest old wives tale history origin 1970s 1980s'\n- 'swallow gum seven years OR stays in stomach newspaper 1980s 1970s'\n- Google Books 'swallow gum seven years before:1993'\n- 'gum indigestible stomach years book OR medical journal 1960s 1970s 1980s'\n- 'Ann Landers OR Dear Abby gum stomach years digest'\n- 'urban legends encyclopedia swallow gum seven years Brunvand 1980s'\n- 'swallow gum years stomach children folklore 1970 1980 1985 book'\n- 'archive.org swallow gum seven years OR years to digest 1980s 1990 1991 1992'\n- Internet Archive / Usenet Google Groups pre-1993 attempts\n\n**WHAT WAS FOUND:**\nThe earliest documented print references found in secondary sources are:\n1. Minneapolis Star Tribune, 'Chew on This for a While,' May 26, 1993 (p. T4) — this IS the proposed earliest date, confirming rather than disproving it.\n2. Roy Rivenburg, 'Between Chew and Shoe,' Los Angeles Times, September 19, 1993 (p. E1) — post-dates the proposed date.\n3. Better Homes and Gardens, January 1998.\n4. Washington Post, August 1, 2000.\nThese are all cited in the Snopes bibliography, which is the most authoritative secondary source for this myth's documented history.\n\n**CHARACTERIZATIONS OF THE MYTH'S AGE:**\nMultiple authoritative sources (Scientific American 2007, Duke Health, McGill University, Healthline) consistently describe the framing as 'parenting folklore' and 'old adage' of 'unknown origin' and 'decades-old bit of folklore.' However, none of these provide a specific documented pre-1993 instance — they are describing the oral/folk tradition, not a written record.\n\n**NEAR-MISSES CONSIDERED AND RULED OUT:**\n- Usenet archives: Pre-1993 Usenet is sparsely digitized and not fully searchable via Google Groups. The Google Groups archive nominally goes back to 1981, but coverage for early years (1981-1992) is highly incomplete and the specific topic search returned no results. This is a significant gap in the search.\n- Ann Landers / Dear Abby columns: These ran in hundreds of newspapers from the 1950s onward and would be a natural vehicle for this myth, but the paywalled ProQuest newspaper archives (which index these columns) were not accessible for direct search. No free-access result surfaced a pre-1993 Ann Landers or Dear Abby reference to this specific claim.\n- Jan Harold Brunvand's urban legend books (1981–1993): No result from searches targeting his encyclopedia or books surfaced this specific framing, and web searches for 'Brunvand gum seven years' returned nothing relevant.\n- Children's folklore scholarship (Peter and Iona Opie, etc.): No digitized text found containing this specific claim pre-1993.\n- Chronicling America (LOC): Covers newspapers through 1963 only — too early for the modern chewing gum myth, which plausibly postdates the widespread adoption of synthetic gum base (post-WWII).\n- 19th-century 'popular fallacies' literature: NCBI/PubMed archive returned relevant 1878–1884 articles on folk health myths, but none mentioned chewing gum and the stomach in this way (the myth likely postdates synthetic chicle substitutes, i.e., post-1940s).\n\n**LIMITATIONS:**\n- ProQuest Historical Newspapers (the primary tool for 1970s–1990s US newspapers) is paywalled and could not be directly searched. This is the single most significant limitation.\n- Early Usenet (pre-1993) archives are fragmented and the Google Groups search interface for that period is degraded.\n- Google Books pre-1993 search did not surface any book containing this framing with a verifiable pre-1993 publication date.\n- The myth almost certainly existed in oral tradition well before 1993 — multiple sources describe it as 'parenting folklore' told to children for 'generations' — but oral circulation cannot be documented as a written attestation.\n\n**CONCLUSION:** No credible documented instance of this narrative framing in print or digital text was found predating 1993-05-26. The May 26, 1993 Star Tribune article appears to be — as proposed — the earliest recoverable printed attestation in accessible archives. The framing almost certainly predates this in oral folk tradition, but the documentary record does not, within the scope of what is freely searchable, support an earlier date.",
       "mutations": [
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "",
-          "dropped": "",
-          "added": "",
-          "distorted": "",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:17.774213+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "the core claim that swallowed gum remains in the digestive system for an unusually long time",
-          "dropped": "",
-          "added": "framing as a debunkable 'health myth,' positioning the claim within a listicle of medical misconceptions for a domestic audience",
-          "distorted": "shift from general cultural observation or anecdote to authoritative health-advice register implying medical consensus",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.312345+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://pubmed.ncbi.nlm.nih.gov/9685468/",
-          "preserved": "the core idea that ingested gum can accumulate and persist in the digestive tract",
-          "dropped": "the popular myth-debunking framing that contextualized gum swallowing as generally harmless",
-          "added": "clinical medical terminology ('bezoars') and pediatric case-study grounding in a peer-reviewed journal",
-          "distorted": "shift from broad general-population health myth to specific pathological condition primarily affecting children",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.086558+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://pubmed.ncbi.nlm.nih.gov/9685468/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "",
-          "dropped": "",
-          "added": "",
-          "distorted": "",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.820360+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "the core idea that swallowed gum persists unusually long in the digestive system",
-          "dropped": "any sourcing, medical or scientific grounding that may have accompanied the earlier newspaper framing",
-          "added": "explicit folkloric framing ('old wives' tale'), a specific seven-year figure, and childhood nostalgia context",
-          "distorted": "the claim shifted from a potentially factual assertion to a skeptically framed folk belief attributed to childhood rumor",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:21.119239+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.scientificamerican.com/article/fact-or-fiction-chewing-gum-takes-seven-years-to-digest/",
-          "preserved": "the specific seven-year timeframe and the core claim that swallowed gum persists unusually long in the body",
-          "dropped": "the explicit skeptical framing ('smacks of an old wives' tale') that marked the claim as folklore under scrutiny",
-          "added": "imperative warning language ('Don't swallow') that reframes the claim as actionable health advice",
-          "distorted": "the claim shifts from a childhood rumor being questioned to a declarative warning stated without ironic distance",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.775258+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
         {
           "from_source": "https://www.scientificamerican.com/article/fact-or-fiction-chewing-gum-takes-seven-years-to-digest/",
           "to_source": "https://u.osu.edu/buckmdblog/2009/12/02/medical-mythbusters-does-gum-really-stay-in-your-stomach-for-7-years/",
@@ -537,34 +440,18 @@
         }
       ],
       "social_search_performed": true,
-      "social_search_notes": "Searched 5 queries on Bluesky (canonical phrase + diagnostic n-grams). Found 409 unique posts; sampled 40 for role classification. | CORRECTION 2026-07-05: 37 of 40 posts removed — the generic n-gram 'seven years' had matched unrelated posts; kept only posts that mention gum (mechanical rule). See CORRECTIONS.md."
+      "social_search_notes": "Searched 5 queries on Bluesky (canonical phrase + diagnostic n-grams). Found 409 unique posts; sampled 40 for role classification. | CORRECTION 2026-07-05: 37 of 40 posts removed — the generic n-gram 'seven years' had matched unrelated posts; kept only posts that mention gum (mechanical rule). See CORRECTIONS.md.",
+      "curation_note": "Hand-repaired 2026-07-05 per the published audit (roles, dates, citation paths, mutations) — see CORRECTIONS.md; original in git history."
     },
     "conceptual": {
       "lineage_type": "conceptual",
-      "status": "single-origin",
-      "first_attested_date": "0400-01-01",
+      "status": "earliest-found",
+      "first_attested_date": "1000-01-01",
       "first_attested_source": "https://en.wikipedia.org/wiki/Mastic_(plant_resin)",
       "attestation_confidence": 0.55,
       "primary_origin_id": "ed9d80a5fce5",
       "parallel_origin_ids": [],
       "attestation_log": [
-        {
-          "instance_id": "ed9d80a5fce5",
-          "date": "0400-01-01",
-          "source_url": "https://en.wikipedia.org/wiki/Mastic_(plant_resin)",
-          "source_title": "De Materia Medica / Hippocratic Corpus (mastic gum references)",
-          "author": "Hippocrates / Dioscorides",
-          "lexical_form_seen": "tree resin chewed for stomach ailments; resin described as beneficial or harmful to digestion depending on use",
-          "exact_quote": "Hippocrates used mastic for the prevention of digestive problems, colds and as a breath freshener.",
-          "confidence": 0.55,
-          "evidence": "The earliest known medical engagement with a chewable, indigestible resinous substance (mastic) and its effects on the digestive system. While the claim is medicinal rather than a warning, it establishes the conceptual precedent that an indigestible chewable substance interacts non-trivially with the stomach. Hippocrates noted mastic's GI properties, implicitly recognizing that swallowed resin behaves differently from food.",
-          "amplifier_role": "originator",
-          "role_evidence": "Chronologically earliest documented engagement with the idea that a chewable indigestible resinous substance has meaningful interaction with the human digestive tract.",
-          "verified": true,
-          "verification_status": "verified",
-          "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
-        },
         {
           "instance_id": "4ef25bd2dfdb",
           "date": "1000-01-01",
@@ -580,7 +467,8 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "a 2012 clinical review (Gastroenterology & Hepatology)"
         },
         {
           "instance_id": "c61f74974015",
@@ -597,7 +485,8 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "a 2023 medical-history essay (Hektoen International)"
         },
         {
           "instance_id": "32f112f306c4",
@@ -609,12 +498,13 @@
           "exact_quote": "In 1848, John Curtis of Hampden, Maine, observed loggers chewing spruce resin, and from that sight extrapolated the potential for a lucrative business.",
           "confidence": 0.6,
           "evidence": "The commercialization of spruce resin as chewing gum (1848) created the first mass-market context in which ordinary Americans regularly put an acknowledged indigestible tree resin in their mouths, establishing the social conditions under which parental warnings about swallowing indigestible gum-resin could circulate. The structural claim traces directly to the observable indigestibility of the product.",
-          "amplifier_role": "early-amplifier",
+          "amplifier_role": "mention",
           "role_evidence": "Curtis's commercialization of spruce resin gum created the mass-market context from which the folk claim about swallowed indigestible gum persisting in the stomach emerged.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "Snopes' reconstruction of gum history"
         },
         {
           "instance_id": "4206a55cf7bd",
@@ -643,46 +533,13 @@
           "exact_quote": "Perhaps obstruction by a food Bolus or Bezoar is by no means so uncommon and should be borne in mind in differential diagnoses of obstruction.",
           "confidence": 0.68,
           "evidence": "A 1943 BMJ letter explicitly raised the diagnostic importance of food-bolus and bezoar obstructions — indigestible material accumulating and persisting in the GI tract — as a clinical entity deserving renewed medical attention. This represents active mid-20th century medical transmission of the structural claim in clinical vocabulary.",
-          "amplifier_role": "early-amplifier",
+          "amplifier_role": "mention",
           "role_evidence": "Mid-20th century medical literature restating the clinical reality of persistent indigestible material accumulating in the GI tract, directly prefiguring the pediatric gum-bezoar case reports of the 1990s.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
-        },
-        {
-          "instance_id": "49eb5f76fc9c",
-          "date": "1950-01-01",
-          "source_url": "https://backintimetoday.com/17-things-every-50s-kid-was-warned-about-that-turned-out-to-be-totally-wrong/",
-          "source_title": "Oral parental folk tradition (US, 1950s–1970s)",
-          "author": "Anonymous US parents / folk tradition",
-          "lexical_form_seen": "swallow gum and it'll stay in your gut for seven years; it'll stick to your stomach; you'll choke on it",
-          "exact_quote": "'Swallow gum and it'll stay in your gut for seven years!' This ominous warning echoed through playgrounds and lunchrooms alike.",
-          "confidence": 0.8,
-          "evidence": "The mid-20th century US parental folk warning — documented across multiple retrospective accounts as originating in at least the 1950s–1970s — is the mass popularization of the structural claim in its classic form. Multiple sources confirm it was well-established folklore by the 1970s. Though the vector is anonymous folk tradition rather than a named author, it is the single most important transmission node in the chain.",
-          "amplifier_role": "mass-amplifier",
-          "role_evidence": "The anonymous mid-20th century US parental warning tradition is the mechanism by which the structural claim about swallowed gum persisting in the stomach achieved near-universal cultural penetration across generations.",
-          "verified": true,
-          "verification_status": "verified",
-          "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
-        },
-        {
-          "instance_id": "c2b561062e56",
-          "date": "1970-01-01",
-          "source_url": "https://www.gethistories.com/p/a-history-of-chewing-gum",
-          "source_title": "A History of Chewing Gum (Histories newsletter)",
-          "author": "Paul Lenz",
-          "lexical_form_seen": "swallowing chewing gum would kill you — huge bolus found in stomach at autopsy; common classroom claim in the 1970s",
-          "exact_quote": "Growing up in the 1970s a common classroom claim was that swallowing chewing gum would kill you — normally backed up by an urban legend about some poor kid who continually swallowed their gum.",
-          "confidence": 0.75,
-          "evidence": "This retrospective account documents the specific escalated form of the structural claim circulating in 1970s classrooms: not merely that gum persists for years, but that accumulated gum causes fatal bowel obstruction. The death-at-autopsy narrative is a direct articulation of the claim that swallowed gum accumulates into a lethal mass in the gut.",
-          "amplifier_role": "mass-amplifier",
-          "role_evidence": "Documents the 1970s classroom escalation of the structural claim into a lethal-accumulation narrative, the most extreme expression of the gum-in-stomach belief.",
-          "verified": true,
-          "verification_status": "verified",
-          "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "a pop-history article (ancient-origins.net; weak secondary)"
         },
         {
           "instance_id": "aa76d0b9dcd9",
@@ -711,7 +568,7 @@
           "exact_quote": "Three children who developed intestinal tract and esophageal obstruction as a consequence of swallowing gum.",
           "confidence": 0.95,
           "evidence": "This peer-reviewed 1998 Pediatrics case series is the most important medical document directly substantiating the structural claim. It clinically demonstrated that chronically swallowed gum does accumulate into a large indigestible mass (bezoar) in the GI tract causing obstruction — the literal realization of the folk claim. It uses medical vocabulary (bezoar, gastrointestinal obstruction) entirely different from the diagnostic n-grams.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "mention",
           "role_evidence": "The 1998 Pediatrics paper is the foundational peer-reviewed clinical document establishing that the structural claim has a genuine, if rare, medical basis — the most-cited scientific text in the gum-in-stomach intellectual lineage.",
           "verified": true,
           "verification_status": "verified",
@@ -728,12 +585,13 @@
           "exact_quote": "This oft-repeated claim may stem from genuine confusion over a term commonly applied to chewing gum: indigestible.",
           "confidence": 0.88,
           "evidence": "Snopes' 2005 entry became one of the most widely consulted debunkings of the structural claim, providing the first major internet-era investigation of its origin and logic. Mikkelson explicitly articulates the structural claim's causal chain — indigestibility → perceived persistence — in vocabulary entirely distinct from the diagnostic n-grams.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Snopes' entry brought the claim and its debunking to a mass internet audience, becoming the most-linked reference on the topic and shaping how millions of people understood the claim's logic.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": ""
         },
         {
           "instance_id": "e45eaeabb8d8",
@@ -745,7 +603,7 @@
           "exact_quote": "This decades-old bit of folklore, of unknown origin but almost universal renown, has little basis in fact.",
           "confidence": 0.9,
           "evidence": "Scientific American's 2007 piece synthesized clinical expert opinion (Milov) with the folk claim, reaching a large educated audience. It is the most authoritative popular-science treatment of the structural claim, framing it as folklore while acknowledging the real (if rare) clinical evidence for gum accumulation in the gut.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Scientific American's treatment became the most-cited popular-science reference on the gum-in-stomach claim, bridging academic gastroenterology and mass public discourse.",
           "verified": true,
           "verification_status": "verified",
@@ -762,12 +620,13 @@
           "exact_quote": "Carroll, Aaron and Rachel Vreeman. Don't Swallow Your Gum! New York: St. Martin's Press, 2009.",
           "confidence": 0.82,
           "evidence": "Carroll and Vreeman's 2009 popular-nonfiction book dedicated a chapter to the gum-in-stomach claim, making it one of the few book-length treatments of the structural claim and its debunking. The title itself — 'Don't Swallow Your Gum!' — directly names the structural claim's folk imperative.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "A widely sold popular nonfiction book that brought the structural claim and its medical status to a broad trade readership, cementing it as a recognizable health myth in US culture.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
-          "archive_url": ""
+          "archive_url": "",
+          "cited_via": "a Cleveland Clinic article citing the book"
         },
         {
           "instance_id": "49e20976e789",
@@ -779,11 +638,11 @@
           "exact_quote": "Gastrointestinal: Adherent chewing gum in the colon causing a false positive PET scan. J Gastroenterol Hepatol. 2009;24:1472.",
           "confidence": 0.85,
           "evidence": "This 2009 case report documented swallowed chewing gum that had lodged and remained adherent in the colon of an adult patient — directly instantiating the structural claim that swallowed gum persists in the GI tract rather than passing normally. The PET scan signal confirmed the gum's physical persistence in the bowel. Uses clinical radiology and gastroenterology vocabulary entirely distinct from diagnostic n-grams.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "mention",
           "role_evidence": "A peer-reviewed clinical case report confirming via imaging that swallowed gum can persist in the colon as adherent material, providing direct evidentiary support for the structural claim in specialist medical literature.",
           "verified": true,
-          "verification_status": "verified",
-          "verification_notes": "URL reachable (quote not checked)",
+          "verification_status": "url-error",
+          "verification_notes": "URL reachable (quote not checked) [Repair 2026-07-05: the linked URL is a different paper (Magee & Bernick 2020); the cited 2009 case report is not directly linked.]",
           "archive_url": ""
         },
         {
@@ -796,7 +655,7 @@
           "exact_quote": "If you swallow a large amount of gum in a relatively small amount of time it can theoretically clump up into a large mass of indigestible substance (called a bezoar) that can get trapped in your GI system.",
           "confidence": 0.8,
           "evidence": "An academic medical student blog post at Ohio State that explicitly articulates the structural claim's legitimate kernel — that a bezoar (mass of indigestible gum) can get trapped in the GI system — while debunking the seven-year version. Uses clinical vocabulary (bezoar, GI system) entirely different from diagnostic n-grams.",
-          "amplifier_role": "mention",
+          "amplifier_role": "critic",
           "role_evidence": "A 2009 institutional health communication that accurately summarizes the medical evidence both supporting and refuting elements of the structural claim.",
           "verified": true,
           "verification_status": "verified",
@@ -813,7 +672,7 @@
           "exact_quote": "In 1998, studies published in Pediatrics reported three cases of children who developed intestinal and esophageal obstructions due to chronic gum swallowing.",
           "confidence": 0.82,
           "evidence": "Yale Scientific Magazine's 2010 treatment reached an educated undergraduate audience and brought the Milov 1998 clinical data together with the folk claim, institutionally amplifying the structural claim's evidence base in academic popular science media.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "critic",
           "role_evidence": "Yale's institutional science magazine amplifying the peer-reviewed evidence base for the structural claim to an educated academic audience.",
           "verified": true,
           "verification_status": "verified",
@@ -830,7 +689,7 @@
           "exact_quote": "'They could cause a bezoar effect, which is a medical term for a collection of material, such as gum, which could cause blockage symptoms,' he explains.",
           "confidence": 0.92,
           "evidence": "Mayo Clinic's institutional video and web content directly addresses the structural claim, with a named gastroenterologist using the term 'bezoar effect' to describe how swallowed gum can accumulate and cause blockage — a direct articulation of the structural claim's mechanism in authoritative clinical vocabulary.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "critic",
           "role_evidence": "Mayo Clinic's institutional adoption of the bezoar-effect framing for the gum-in-stomach claim gives the structural claim its most authoritative US medical institutional endorsement of the underlying mechanism.",
           "verified": false,
           "verification_status": "url-error",
@@ -847,7 +706,7 @@
           "exact_quote": "So the idea that it could become lodged into some corner of your digestive tract is not entirely implausible.",
           "confidence": 0.88,
           "evidence": "McGill University's science communication office acknowledges the structural claim's intuitive logic — that the sticky, indigestible nature of gum makes the idea of gut lodgment 'not entirely implausible' — while debunking the seven-year timeline. This is a significant institutional acknowledgment of the claim's legitimate mechanistic basis.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "critic",
           "role_evidence": "A major Canadian research university's science communication office providing institutional framing that acknowledges the structural plausibility of the gum-lodgment claim while contextualizing it.",
           "verified": false,
           "verification_status": "fetch-error",
@@ -864,7 +723,7 @@
           "exact_quote": "She endorsed chewing and swallowing approximately 25 pieces of gum per day for the past 3 years. We estimate there were no less than 30 pieces of gum present in the cecum.",
           "confidence": 0.95,
           "evidence": "This 2020 peer-reviewed clinical case report is the most direct modern clinical substantiation of the structural claim: a patient who swallowed 25 pieces of gum daily for 3 years was found during colonoscopy to have no less than 30 pieces of gum filling her cecum and colon, with gum lodged in diverticula and adherent to the colon wall. This is a nearly verbatim clinical realization of the structural claim, using colonoscopy and gastroenterology vocabulary entirely different from the diagnostic n-grams.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "mention",
           "role_evidence": "The strongest modern peer-reviewed clinical evidence directly substantiating the structural claim: imaging-confirmed accumulation and persistence of swallowed gum throughout the colon in a habitual gum-swallower.",
           "verified": true,
           "verification_status": "verified",
@@ -881,7 +740,7 @@
           "exact_quote": "'Folklore would suggest that if you swallow gum, it stays in the stomach a really long time – up to seven years,' says Dr. Mark V. Larson, a Mayo Clinic gastroenterologist.",
           "confidence": 0.8,
           "evidence": "A 2021 regional US newspaper piece explicitly connecting the structural claim to the historical reasoning — early digestive science + observable indigestibility of resin — and quoting Mayo Clinic authority, representing the claim's continued mass circulation in contemporary American journalism.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Regional US newspaper amplifying the structural claim and its Mayo Clinic medical framing to a general American readership in 2021.",
           "verified": true,
           "verification_status": "verified",
@@ -898,7 +757,7 @@
           "exact_quote": "'Gum base isn't able to be digested, so it just stays in your guts all the way through and doesn't break down,' Czerwony explains.",
           "confidence": 0.87,
           "evidence": "Cleveland Clinic's institutional health communication platform with a registered dietitian explicitly states the mechanism of the structural claim — gum base persists through the gut intact — while contextualizing it. Reaches millions of US health consumers annually and represents the structural claim's institutional health-media transmission in the 2020s.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "Cleveland Clinic's high-traffic consumer health platform providing institutional mass amplification of the structural claim's mechanism to a contemporary US audience.",
           "verified": true,
           "verification_status": "verified",
@@ -915,12 +774,31 @@
           "exact_quote": "Reinforcing these masticatory manners has led to a historic discouragement of gum chewing and swallowing, Elias says.",
           "confidence": 0.85,
           "evidence": "Inverse's 2024 treatment is notable for introducing a cultural historian (Megan Elias, Boston University food historian) alongside the gastroenterologist, contextualizing the structural claim's social history of parental warnings and behavioral policing. This represents the 2021–present era's fusion of cultural history and medical debunking in popular science media.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "A 2024 popular science piece fusing food history scholarship with clinical gastroenterology to provide a historically grounded account of the structural claim's origins and persistence.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
           "archive_url": ""
+        },
+        {
+          "instance_id": "c2b561062e56",
+          "date": "2024-07-26",
+          "source_url": "https://www.gethistories.com/p/a-history-of-chewing-gum",
+          "source_title": "A History of Chewing Gum (Histories newsletter)",
+          "author": "Paul Lenz",
+          "lexical_form_seen": "swallowing chewing gum would kill you — huge bolus found in stomach at autopsy; common classroom claim in the 1970s",
+          "exact_quote": "Growing up in the 1970s a common classroom claim was that swallowing chewing gum would kill you — normally backed up by an urban legend about some poor kid who continually swallowed their gum.",
+          "confidence": 0.75,
+          "evidence": "This retrospective account documents the specific escalated form of the structural claim circulating in 1970s classrooms: not merely that gum persists for years, but that accumulated gum causes fatal bowel obstruction. The death-at-autopsy narrative is a direct articulation of the claim that swallowed gum accumulates into a lethal mass in the gut.",
+          "amplifier_role": "mention",
+          "role_evidence": "Documents the 1970s classroom escalation of the structural claim into a lethal-accumulation narrative, the most extreme expression of the gum-in-stomach belief. [Repair 2026-07-05: date corrected to the document's publication date (was 1970-01-01, the period it describes).]",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "cited_via": "",
+          "describes_period": "1970s classroom folklore (retrospective account)"
         },
         {
           "instance_id": "509973ff1a1f",
@@ -932,7 +810,7 @@
           "exact_quote": "Upon further inspection after suctioning, it was revealed that the supposed polyps were pieces of chewed-up gum... causing significant erosion to the colonic mucosa and potentially lead to acute blood loss.",
           "confidence": 0.9,
           "evidence": "A 2024 ACG conference case report documented chewing gum found during colonoscopy that had accumulated, adhered to the colon wall, caused mucosal erosion and acute anemia — the most serious modern clinical substantiation of the structural claim, presented at the flagship US gastroenterology professional meeting. Uses endoscopic and gastroenterological vocabulary entirely different from the diagnostic n-grams.",
-          "amplifier_role": "institutional-adoption",
+          "amplifier_role": "mention",
           "role_evidence": "The most recent and clinically severe peer-reviewed case report directly substantiating the structural claim, presented at the American College of Gastroenterology's 2024 annual meeting — the field's highest-profile institutional venue.",
           "verified": false,
           "verification_status": "url-error",
@@ -949,12 +827,31 @@
           "exact_quote": "'I've no idea where the myth came from,' Travis told CNN. 'I can only imagine that it was suggested because someone wanted to stop their children from chewing gum.'",
           "confidence": 0.83,
           "evidence": "A 2025 mass-media piece featuring Oxford University's professor of clinical gastroenterology, who provides the structural claim's social-functional explanation (parental behavioral control) while confirming the mechanism (indigestibility). Represents the 2021–present era's continued active circulation of the structural claim in global mass media.",
-          "amplifier_role": "mass-amplifier",
+          "amplifier_role": "critic",
           "role_evidence": "A 2025 viral mass-media piece with an Oxford clinical gastroenterology professor providing the structural claim's most recent authoritative mass-media treatment.",
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (quote not checked)",
           "archive_url": ""
+        },
+        {
+          "instance_id": "49eb5f76fc9c",
+          "date": "2025-06-01",
+          "source_url": "https://backintimetoday.com/17-things-every-50s-kid-was-warned-about-that-turned-out-to-be-totally-wrong/",
+          "source_title": "Oral parental folk tradition (US, 1950s–1970s)",
+          "author": "Anonymous US parents / folk tradition",
+          "lexical_form_seen": "swallow gum and it'll stay in your gut for seven years; it'll stick to your stomach; you'll choke on it",
+          "exact_quote": "'Swallow gum and it'll stay in your gut for seven years!' This ominous warning echoed through playgrounds and lunchrooms alike.",
+          "confidence": 0.8,
+          "evidence": "The mid-20th century US parental folk warning — documented across multiple retrospective accounts as originating in at least the 1950s–1970s — is the mass popularization of the structural claim in its classic form. Multiple sources confirm it was well-established folklore by the 1970s. Though the vector is anonymous folk tradition rather than a named author, it is the single most important transmission node in the chain.",
+          "amplifier_role": "mention",
+          "role_evidence": "The anonymous mid-20th century US parental warning tradition is the mechanism by which the structural claim about swallowed gum persisting in the stomach achieved near-universal cultural penetration across generations. [Repair 2026-07-05: date corrected to the document's publication date (was 1950-01-01, the period it describes).]",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "cited_via": "",
+          "describes_period": "the 1950s–1970s US parental folk tradition (retrospective account)"
         },
         {
           "instance_id": "363fdec1598d",
@@ -966,7 +863,7 @@
           "exact_quote": "BBC Future describes a 1998 Pediatrics case report of three children who developed gum-related obstructions, including a 'taffy-like' mass in the rectum after frequent swallowing.",
           "confidence": 0.78,
           "evidence": "A 2026 fact-check article synthesizing the full evidentiary chain — from Milov 1998 to the 2020 colonoscopy case — representing the structural claim's most current popular-media treatment, confirming that the chain remains active and is still being re-articulated in 2026.",
-          "amplifier_role": "mention",
+          "amplifier_role": "critic",
           "role_evidence": "Represents the 2025–2026 continuation of the structural claim's popular-media circulation, synthesizing the complete clinical evidence chain for a contemporary audience.",
           "verified": true,
           "verification_status": "verified",
@@ -977,23 +874,6 @@
       "adversarial_check_performed": true,
       "adversarial_notes": "TRADITIONS CHECKED AND AUDIT TRAIL:\n\n1. MODERN GUM HISTORY & MYTH ORIGIN: Every major debunking source (Scientific American, Snopes, Healthline, McGill University, Duke Health, Reader's Digest, Factfizz, ScienceInsights) was checked for any documented pre-400 CE articulation of the claim. ALL sources consistently report that the exact origin of the 'seven years in the stomach' myth is unknown, with the consensus being that it emerged after commercial chewing gum became widely available — i.e., post-1860s in the United States. Reader's Digest places it explicitly as arising 'since gum became popular in the late 19th century.' No source traces it to any pre-modern text.\n\n2. ANCIENT GUM-CHEWING TRADITIONS: Ancient cultures did chew resinous substances predating 400 CE — birch bark tar (Neolithic Scandinavia, as far back as 9,000–11,700 BP), mastic resin (ancient Greeks, Hippocrates c. 460–370 BCE, Dioscorides 1st century CE, Galen c. 129–210 CE). None of these ancient physicians or texts, however, articulate the STRUCTURAL CLAIM that swallowed gum/resin accumulates in the stomach and persists for extended periods. The Greek and Roman textual record on mastic (Hippocrates, Dioscorides, Galen) discusses its DIGESTIVE BENEFITS (for dyspepsia, indigestion, peptic ulcer), not a warning that it would accumulate dangerously if swallowed. Dioscorides' Materia Medica and Hippocrates' recommendations are specifically about chewing mastic for therapeutic benefit — the opposite structural framing.\n\n3. BEZOAR TRADITION: The ancient and medieval bezoar tradition (Persian/Arabic origin, spreading to Europe from ~1st century CE, described in detail by Ibn Sina and later Arabic physicians post-400 CE) does involve the structural concept of indigestible material accumulating in the gastrointestinal tract. However, bezoar lore focuses on indigestible materials forming inside ANIMAL stomachs (goats, deer, antelope) that then become prized as medicines. The human-specific claim — that a chewed indigestible substance swallowed by a human persists in the human stomach for years — is not the content of bezoar texts, which concern animal-sourced concretions. Furthermore, the primary documented bezoar literature (Ibn Sina, Al-Biruni) post-dates 400 CE. Pre-400 CE mentions (e.g., Pliny the Elder's Naturalis Historia, c. 77 CE) discuss bezoars as medicinal antidotes from animal guts, not as warnings about human swallowing of indigestible chewing substances.\n\n4. ANCIENT EGYPTIAN, BABYLONIAN, AYURVEDIC TRADITIONS: Egyptian amulet-based digestive treatments (Ebers Papyrus c. 1550 BCE) address indigestion generally but contain no articulation of the gum-accumulation structural claim. Ayurvedic and Babylonian medical texts address digestion but no source found linking them to the specific structural claim about an indigestible chewed substance persisting in the human stomach.\n\n5. TEMPORAL PROBLEM WITH THE PROPOSED DATE ITSELF (0400-01-01): The structural claim as stated presupposes 'chewing gum' as a culturally recognized product. Commercial chewing gum did not exist until the 1860s (Thomas Adams, chicle-based gum in the US). The '7-year' formulation could not logically pre-date the existence of the product as a mass-market item. Even if oral traditions about indigestible substances in the stomach existed, they would not have been articulated about 'chewing gum' specifically. The proposed date of 400 CE is itself implausible as an origin for the specific formulation — all scholarly evidence points to a late-19th-century US origin for the modern myth.\n\n6. LIMITATIONS: Aztec and Mayan chicle-chewing traditions (pre-Columbian) were documented by Franciscan friar Bernardino de Sahagún (16th century CE) and concern social etiquette around chewing, not digestive persistence claims. No Mayan or Aztec primary-source text articulating the structural claim was found. Pre-modern oral traditions from cultures lacking written records (Neolithic birch-tar chewers, indigenous North American spruce-chewers) cannot be verified. Untranslated or digitally unavailable pre-400 CE texts in Arabic, Persian, Sanskrit, or Classical Chinese were not directly searchable.\n\nCONCLUSION: This is a CLEAN NEGATIVE result. No pre-400 CE (or even pre-1860 CE) text or tradition was found that articulates the specific structural claim that swallowed chewing gum accumulates in the human digestive system and persists there for extended periods. The myth is almost certainly a post-1860 American folk belief, likely emerging from gum manufacturers' labeling of gum base as 'indigestible,' and propagated as parental deterrence folklore. The proposed date of 0400-01-01 is not supported as an origin date for this claim — the actual likely origin is 19th–early 20th century CE. A proposed date of 400 CE for this claim would therefore represent a significant anachronism, strengthening rather than requiring further search.",
       "mutations": [
-        {
-          "from_source": "https://en.wikipedia.org/wiki/Mastic_(plant_resin)",
-          "to_source": "https://www.gastroenterologyandhepatology.net/archives/november-2012/gastrointestinal-bezoars-history-and-current-treatment-paradigms/",
-          "preserved": "the idea that indigestible material can persist and accumulate within the gastrointestinal tract",
-          "dropped": "the specific connection to chewing gum or mastic as the causative substance is absent in the later instance",
-          "added": "clinical framing of 'bezoars' as named aggregates of undigested material found across species, broadening the phenomenon",
-          "distorted": "shift from gum as a digestive aid to indigestible aggregates as pathological findings, inverting the health valence",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.030946+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
         {
           "from_source": "https://www.gastroenterologyandhepatology.net/archives/november-2012/gastrointestinal-bezoars-history-and-current-treatment-paradigms/",
           "to_source": "https://hekint.org/2023/10/26/the-bizarre-history-of-the-bezoar/",
@@ -1007,40 +887,6 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T15:46:19.447752+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://hekint.org/2023/10/26/the-bizarre-history-of-the-bezoar/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "",
-          "dropped": "",
-          "added": "",
-          "distorted": "",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:17.826974+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9248709/",
-          "preserved": "",
-          "dropped": "",
-          "added": "moral and hygienic framing of gum-chewing as dangerous and repulsive, introducing a health-risk narrative",
-          "distorted": "",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.989860+00:00",
             "confidence": 0,
             "reasoning": ""
           }
@@ -1097,125 +943,6 @@
           }
         },
         {
-          "from_source": "https://www.gethistories.com/p/a-history-of-chewing-gum",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "the core notion that swallowed gum persists in the digestive system due to its indigestible properties",
-          "dropped": "the urban-legend framing and the extreme 'will kill you' danger claim anchoring the earlier version",
-          "added": "the mechanistic pseudo-explanation linking chewing resistance to digestive persistence, lending quasi-scientific framing",
-          "distorted": "shift from a lethal childhood scare story to a milder but more plausible-sounding claim of multi-year digestive lurking",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.338061+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://pubmed.ncbi.nlm.nih.gov/9685468/",
-          "preserved": "the premise that swallowed gum can persist and cause problems in the digestive/gastrointestinal tract",
-          "dropped": "the explicit framing of the claim as 'fanciful' or mythological, undermining its credibility",
-          "added": "clinical case evidence of actual pediatric patients with documented gum-caused obstructions",
-          "distorted": "shift from skeptical dismissal of a folk belief to medical documentation of real, if rare, pathological outcomes",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.068687+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://pubmed.ncbi.nlm.nih.gov/9685468/",
-          "to_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "preserved": "the premise that swallowed gum behaves differently in the digestive system than ordinary food",
-          "dropped": "the clinical case evidence of three children with actual documented gastrointestinal obstructions from gum bezoars",
-          "added": "the debunking framing tracing the claim's origin to linguistic confusion over the word 'indigestible'",
-          "distorted": "shift from documented medical pathology in specific cases to dismissal of the general claim as popular myth",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.922206+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
-          "to_source": "https://www.scientificamerican.com/article/fact-or-fiction-chewing-gum-takes-seven-years-to-digest/",
-          "preserved": "the claim is characterized as a widely-circulated popular belief lacking factual basis",
-          "dropped": "the specific proposed mechanism (confusion over the term 'indigestible') explaining the myth's origin",
-          "added": "the phrase 'almost universal renown' emphasizing the myth's geographic/cultural breadth",
-          "distorted": "origin shifted from 'genuine confusion' (a plausible cause) to 'unknown origin' (dismissing any traceable source)",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:22.588434+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.scientificamerican.com/article/fact-or-fiction-chewing-gum-takes-seven-years-to-digest/",
-          "to_source": "https://health.clevelandclinic.org/what-happens-when-you-swallow-gum",
-          "preserved": "the claim about swallowed gum and digestive persistence is the central subject being addressed",
-          "dropped": "the explicit debunking framing and characterization of the claim as folklore with little factual basis",
-          "added": "a book-length treatment implying the myth warrants extended popular-audience engagement beyond a brief article",
-          "distorted": "the warning-style imperative title 'Don't Swallow Your Gum' reactivates the cautionary myth even within a myth-busting context",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.574418+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://health.clevelandclinic.org/what-happens-when-you-swallow-gum",
-          "to_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7162131/",
-          "preserved": "the concept that swallowed gum can persist and accumulate in the gastrointestinal tract",
-          "dropped": "the myth-debunking framing of the earlier source, which challenged the folk belief rather than supporting it",
-          "added": "a specific clinical case of adherent gum in the colon with a concrete medical consequence (false positive PET scan)",
-          "distorted": "shift from population-level myth debunking to an isolated case report that could be read as validating the persistence claim",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.855236+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7162131/",
-          "to_source": "https://www.yalescientific.org/2010/05/everyday-qa-can-gum-really-stay-in-your-stomach-for-7-years/",
-          "preserved": "the core claim that swallowed gum can persist and cause physical blockages in the digestive tract",
-          "dropped": "the specific clinical imaging context (PET scan artifact) and the colonic location of adherent gum",
-          "added": "the pediatric framing, the specific '7 years' folk-belief reference, and citation of a different 1998 Pediatrics study involving children",
-          "distorted": "scope shifted from a single adult imaging anomaly to a pattern of pediatric obstruction cases, broadening the implied risk population",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.030586+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
           "from_source": "https://www.yalescientific.org/2010/05/everyday-qa-can-gum-really-stay-in-your-stomach-for-7-years/",
           "to_source": "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-does-gum-get-stuck-in-your-stomach/",
           "preserved": "the core concern that swallowed gum can accumulate and cause digestive blockages",
@@ -1245,74 +972,6 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T15:46:20.037834+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.mcgill.ca/oss/article/health/gum-and-7-year-myth",
-          "to_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7162131/",
-          "preserved": "the core idea that gum can accumulate and persist in the digestive tract",
-          "dropped": "the hedged, speculative framing ('not entirely implausible') indicating this was a theoretical possibility rather than documented fact",
-          "added": "a concrete clinical case with specific quantified data: 25 pieces/day, 3 years, 30+ pieces found in the cecum",
-          "distorted": "shift from cautious hypothetical plausibility to documented medical evidence, dramatically strengthening the claim's evidentiary status",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.339845+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7162131/",
-          "to_source": "https://www.spokesman.com/stories/2021/nov/17/myths-your-mom-told-you-debunked/",
-          "preserved": "the core idea that swallowed gum persists in the digestive system for an extended period",
-          "dropped": "the clinical case evidence of a real patient with extreme habitual gum swallowing and documented colonoscopy findings",
-          "added": "the 'seven years' specific folk-belief duration and the explicit framing of the claim as maternal 'folklore' or myth",
-          "distorted": "shift from a documented medical case supporting accumulation to a debunking frame treating the claim as popular myth rather than clinical reality",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.989479+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://www.spokesman.com/stories/2021/nov/17/myths-your-mom-told-you-debunked/",
-          "to_source": "https://health.clevelandclinic.org/what-happens-when-you-swallow-gum",
-          "preserved": "the core claim that swallowed gum resists digestion and remains in the digestive system",
-          "dropped": "the seven-year duration claim and its framing as folklore/myth being scrutinized by a named gastroenterologist",
-          "added": "mechanistic explanation of why gum persists ('gum base' indigestibility) and the full-transit framing ('all the way through')",
-          "distorted": "shift from a myth being examined with skepticism to a straightforward factual explanation, removing the debunking framing",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:20.269223+00:00",
-            "confidence": 0,
-            "reasoning": ""
-          }
-        },
-        {
-          "from_source": "https://health.clevelandclinic.org/what-happens-when-you-swallow-gum",
-          "to_source": "https://www.inverse.com/science/how-long-does-gum-take-to-digest",
-          "preserved": "the idea that swallowed gum behaves unusually in the digestive system",
-          "dropped": "the specific physiological claim that gum base passes through undigested without breaking down",
-          "added": "historical and social framing around parental discouragement of gum-swallowing as a behavioral myth",
-          "distorted": "shift from presenting the persistence claim as factual physiology to treating it as a culturally perpetuated myth",
-          "status": "ai_generated",
-          "attribution": {
-            "source": "ai",
-            "model": "claude-sonnet-4-6",
-            "contributor_name": "",
-            "timestamp": "2026-05-22T15:46:19.269311+00:00",
             "confidence": 0,
             "reasoning": ""
           }
@@ -1462,7 +1121,8 @@
       },
       "social_spread": [],
       "social_search_performed": false,
-      "social_search_notes": ""
+      "social_search_notes": "",
+      "curation_note": "Hand-repaired 2026-07-05 per the published audit (roles, dates, citation paths, mutations) — see CORRECTIONS.md; original in git history."
     },
     "predecessor_fingerprint_ids": [],
     "successor_fingerprint_ids": [],

@@ -216,10 +216,11 @@ The viewer had grown schema-shaped: tabs named after pipeline layers (L1–L5), 
 Tarek's review and the follow-up full audit of the flagship trace found **one disease with many symptoms: interpretive labels rendered with structural confidence** (P5's exact target). The worst: a lineage composed mostly of fact-checks carried *zero* `critic` roles — McGill's debunk displayed as "Institutional adoption"; retrospective web content plotted decades before it was written ("1950" = a 2025 listicle); mutation endpoints keyed by URL, which collapses whenever sources share one (a viewer bug affecting every trace); double-counted documents across lineages; secondary-URL attributions far beyond the fact-checker hosts the "documented by" chip can catch. Also verified clean, for calibration: all six Snopes-bibliography print citations are real; the 1890 PMC scan is real; the evidence landscape is largely sound. The share layer waits — shareable cards built on mislabeled roles would broadcast the disease.
 
 **A — Stop the bleeding (viewer + verification semantics; no API):**
-- [ ] Mutation rendering: resolve endpoints by attestation identity with URL as fallback; never render a from==to mutation; skip mutation objects with no semantic fields. (Every trace benefits; the data fix is in B.)
-- [ ] Verify-badge honesty: "✓ verified" only when the quote was found; URL-only checks get their own muted "URL reachable" badge; the badge tooltip states exactly what was checked.
-- [ ] Social posts stop rendering amplifier roles (engagement counts only) — a 1-like anecdote is not a "mass-amplifier"; roles return only when they're evidence-based.
-- [ ] Stats count **distinct documents** (dedupe by URL across the two lineages), labeled as such.
+- [x] Mutation rendering: resolve endpoints by attestation identity with URL as fallback; never render a from==to mutation; skip mutation objects with no semantic fields. (Every trace benefits; the data fix is in B.) *(2026-07-05)*
+- [x] Verify-badge honesty: "✓ verified" only when the quote was found; URL-only checks render "↻ URL reachable"; the tooltip states exactly what was checked. *(2026-07-05 — heuristic on existing data via verification_notes; 2.8-B adds a real `url-ok` status)*
+- [x] Social posts stop rendering amplifier roles (engagement counts only) — a 1-like anecdote is not a "mass-amplifier"; roles return only when they're evidence-based. *(2026-07-05 — role data stays in the JSON)*
+- [x] Stats count **distinct documents** (first-party identity = URL; secondhand-cited identity = title, so five print articles cited via one Snopes page stay five documents). *(2026-07-05)*
+- [x] `cited_via` honored as a first-class field when present (explicit empty = first-party, suppressing the host heuristic — Snopes' own article no longer reads "documented by Snopes"); milestone-rail caveat strengthened to name role labels as unaudited pending Gate 2.8. *(2026-07-05)*
 
 **B — Schema + generation fixes (all additive, per convention 3; validate each on one cheap real trace before corpus use):**
 - [ ] `cited_via` becomes a real attestation field (name + note), filled at generation whenever the dated source isn't what the link points to; the viewer prefers it over host heuristics (which remain as fallback for old JSON).
@@ -230,7 +231,7 @@ Tarek's review and the follow-up full audit of the flagship trace found **one di
 - [ ] Social relevance confirm stage + generic-n-gram gate (queued earlier, now scoped here).
 
 **C — Flagship repair (documented, then regenerated):**
-- [ ] Hand-repair the chewing-gum trace per the audit: fact-check roles → `critic`; retrospective entries get their real document dates + `describes_period`; the 400 CE entry → `related-context` with the era error corrected or removed; cross-lineage duplicates marked; broken mutations dropped. CORRECTIONS.md entry; homepage hero re-checked against the repaired data.
+- [x] Hand-repair the chewing-gum trace per the audit: 19 fact-check-function entries → `critic`; retrospective entries re-dated to publication dates + `describes_period`; the opposite-claim 400 CE entry removed; wrong-URL entry flagged not guessed; mutations pruned to unambiguous (9→3, 22→8); `cited_via` recorded; status → `earliest-found`. Table-driven + asserted script; CORRECTIONS.md entry; homepage hero WHO line re-checked against repaired data; stub-DOM 18/18. *(2026-07-05)*
 - [ ] After B validates: regenerate the chewing-gum trace with the fixed pipeline (~$1) and diff against the hand-repair — the diff is a free labeler test.
 
 **D — Corpus sweep (mechanical scans first, judgment flagged not silently rewritten):**
