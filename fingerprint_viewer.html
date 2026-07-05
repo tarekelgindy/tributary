@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tributary Fingerprint Viewer</title>
+<title>Tributary Trace Viewer</title>
 <style>
 * { box-sizing: border-box; }
 body {
@@ -700,13 +700,22 @@ circle.instance { cursor: pointer; transition: opacity 0.1s; }
 circle.instance:hover { opacity: 0.7; }
 .tick { fill: #aaa; font-size: 10px; font-family: 'SF Mono', Menlo, monospace; }
 .lineage-line { stroke: #ddd; stroke-width: 1; }
+
+/* Tier-3 footer: the honesty line stays visible on every view; instrument
+   metadata (IDs, models, thresholds) collapses behind it. */
+#about-footer { margin: 2rem 0 3rem; padding: 0.9rem 2rem 0; border-top: 1px solid #e7e7e7; color: #777; font-size: 0.82rem; }
+#about-footer .about-line a { color: #2a6fa3; text-decoration: none; }
+#about-footer details { margin-top: 0.5rem; }
+#about-footer summary { cursor: pointer; color: #999; font-size: 0.78rem; }
+#about-footer .about-grid { margin-top: 0.4rem; font-family: 'SF Mono', Menlo, monospace; font-size: 0.75rem; }
+#about-footer .about-grid .label { color: #999; display: inline-block; min-width: 11rem; }
 </style>
 </head>
 <body>
 
 <div id="drop-zone">
-  <h1>Tributary Fingerprint Viewer</h1>
-  <p>Drag a fingerprint JSON file here, or click to browse. Self-contained — runs entirely in your browser, no data leaves your machine.</p>
+  <h1>Tributary Trace Viewer</h1>
+  <p>Drag a Tributary trace JSON here, or click to browse. Self-contained — runs entirely in your browser, no data leaves your machine.</p>
   <label for="file-input">Browse...</label>
   <input type="file" id="file-input" accept="application/json,.json">
   <div id="error"></div>
@@ -720,12 +729,12 @@ circle.instance:hover { opacity: 0.7; }
 
   <nav id="tabs">
     <button data-tab="overview" class="active">Overview</button>
-    <button data-tab="lexical">L1 Lexical</button>
-    <button data-tab="conceptual">L2 Conceptual</button>
-    <button data-tab="rhetorical">L3 Rhetorical</button>
-    <button data-tab="lineages">L4 Lineages</button>
+    <button data-tab="lexical">Phrase</button>
+    <button data-tab="conceptual">Idea</button>
+    <button data-tab="rhetorical">Rhetoric</button>
+    <button data-tab="lineages">Spread</button>
     <button data-tab="evidence">Evidence</button>
-    <button data-tab="taxonomic">L5 Taxonomic</button>
+    <button data-tab="taxonomic">Category</button>
   </nav>
 
   <main>
@@ -737,6 +746,7 @@ circle.instance:hover { opacity: 0.7; }
     <section data-panel="evidence" hidden></section>
     <section data-panel="taxonomic" hidden></section>
   </main>
+  <footer id="about-footer" hidden></footer>
 </div>
 
 <script>
@@ -750,6 +760,9 @@ const ROLE_COLORS = {
   'unknown':                 '#bbb',
 };
 const ROLE_ORDER = ['originator','early-amplifier','mass-amplifier','institutional-adoption','critic','mention','unknown'];
+// Reader-facing names for the two genealogy lineages (internal keys stay
+// lexical/conceptual in the data).
+const LINEAGE_LABEL = { 'lexical': 'phrasing', 'conceptual': 'idea' };
 
 let currentFP = null;
 let currentArticle = null;   // set when viewing a multi-claim source analysis
@@ -850,14 +863,9 @@ function renderEventAnalysis(analysis) {
 
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
-  addMeta(meta, 'event analysis', analysis.analysis_id || '');
+  addMetaText(meta, 'event analysis');
   if (analysis.event_date) addMeta(meta, 'event date', (analysis.event_date || '').split('T')[0]);
   addMeta(meta, 'framings', String((analysis.framings || []).length));
-  if (analysis.provenance) {
-    const span = document.createElement('span');
-    span.innerHTML = `<strong>analysis:</strong> ${provenanceBadge(analysis)}`;
-    meta.appendChild(span);
-  }
 
   document.getElementById('tabs').style.display = 'none';
 
@@ -932,8 +940,8 @@ function renderEventAnalysis(analysis) {
     ).join('');
     let trace;
     if (hasFp) trace = `<div class="fr-trace clickable" data-framing-idx="${idx}">↗ Trace this framing's origin →</div>`;
-    else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced">(linked fingerprint ${escapeHtml(fr.fingerprint_id)} not embedded)</div>`;
-    else trace = `<div class="fr-trace untraced">(not yet traced — run with --trace-framings)</div>`;
+    else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced" title="fingerprint ${escapeHtml(fr.fingerprint_id)} exists but is not embedded in this file">(origin trace exists, not included here)</div>`;
+    else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
     // Progressive disclosure: the compact card carries what a reader needs to
     // pick a framing (name, question, key claim, carrier count); the rest
     // waits behind the toggle.
@@ -971,6 +979,10 @@ function renderEventAnalysis(analysis) {
     ${renderCoverageBackdrop(analysis.coverage_lean)}
     ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
   `;
+  setAbout('event analysis', [
+    ['Analysis ID', analysis.analysis_id],
+    ['Model', (analysis.provenance || {}).model],
+  ]);
 
   main.querySelectorAll('.fr-trace.clickable').forEach(el => {
     el.onclick = () => {
@@ -1040,17 +1052,16 @@ function renderCoverageLean(cl) {
       &nbsp;—&nbsp; ${eco.vested_interest||0} vested-interest carriers across ${eco.framings_with_vested||0}/${eco.n_framings} framings.
       <span class="cov-sub">(texture, not a polarization score — many stakeholders can mean a big event, not a charged one)</span></div>` : '';
 
-  const idxNote = (cl.lean_index !== null && cl.lean_index !== undefined && n > 0)
+  const idxTip = (cl.lean_index !== null && cl.lean_index !== undefined && n > 0)
     ? `lean index ${cl.lean_index} (−2 all-left … +2 all-right)` : '';
 
   return `
     <div class="card coverage-card">
       <div class="cov-head">
         <h2 style="margin:0;">Coverage Lean</h2>
-        <span class="cov-sub">${n} of ${n + (gap.unrated_news_carriers || 0)} news outlets rated${
-          cl.resolve_rate !== undefined ? ` · ${Math.round(cl.resolve_rate * 100)}% resolved` : ''}</span>
+        <span class="cov-sub"${cl.resolve_rate !== undefined ? ` title="${Math.round(cl.resolve_rate * 100)}% of carrier outlets resolved in the ratings DB"` : ''}>${n} of ${n + (gap.unrated_news_carriers || 0)} news outlets rated</span>
       </div>
-      <div class="cov-skew ${skewClass}">${escapeHtml(skew)}${idxNote ? ` <span class="cov-sub" style="font-weight:400;">· ${idxNote}</span>` : ''}</div>
+      <div class="cov-skew ${skewClass}"${idxTip ? ` title="${escapeHtml(idxTip)}"` : ''}>${escapeHtml(skew)}</div>
       ${bar}
       ${chips ? `<div class="cov-outlets">${chips}</div>` : ''}
       ${gapNote}
@@ -1137,10 +1148,9 @@ function renderFramingAttention(r) {
     'Framing attention — ' + (r.event || '').slice(0, 120);
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
-  addMeta(meta, 'event', r.event_id || '');
+  addMetaText(meta, 'framing attention');
   addMeta(meta, 'window', `${r.window_days || '?'} day(s)`);
   addMeta(meta, 'headlines', String(r.n_candidate_headlines || 0));
-  addMeta(meta, 'judge', `${(r.judge || {}).model || '?'} (${(r.judge || {}).prompt_version || ''})`);
 
   const allFramings = r.framings || [];
   const totals = r.framing_totals || {};
@@ -1180,7 +1190,7 @@ function renderFramingAttention(r) {
     ).join('');
     return `<tr><td class="o-name">${escapeHtml(row.name)} ${leanChip(row.lean)}</td>
       ${cells}<td><span class="fa-cell zero">${row.none || 0}</span></td></tr>` +
-      (details ? `<tr><td colspan="${fIds.length + 2}" style="text-align:left;"><details><summary style="cursor:pointer; color:#777; font-size:0.74rem;">headlines + judge reasons</summary>${details}</details></td></tr>` : '');
+      (details ? `<tr><td colspan="${fIds.length + 2}" style="text-align:left;"><details><summary style="cursor:pointer; color:#777; font-size:0.74rem;">headlines + why each was labeled</summary>${details}</details></td></tr>` : '');
   }).join('');
 
   const main = document.querySelector('main');
@@ -1205,6 +1215,12 @@ function renderFramingAttention(r) {
       <div class="agenda-caveat" style="margin-top:0.9rem;"><strong>Read this first:</strong> ${escapeHtml(r.method_caveat || '')}</div>
     </div>
   `;
+  setAbout('framing-attention matrix', [
+    ['Event ID', r.event_id],
+    ['Judge model', (r.judge || {}).model],
+    ['Judge prompt version', (r.judge || {}).prompt_version],
+    ['Audit status', (r.judge || {}).audit_status],
+  ]);
 }
 
 // ---- Agenda report (Phase 2): selection & prominence across outlets ------
@@ -1266,7 +1282,7 @@ function renderAgendaReport(report) {
         ${s.factcheck_attention ? `<span class="agenda-badge factcheck" title="selected for checking by ${s.factcheck_attention} fact-checker(s) — their selection, never their verdict">fact-checked ×${s.factcheck_attention}</span>` : ''}
       </summary>
       <div class="agenda-carriers">${carriers}</div>
-      ${s.nearest_trace ? `<div class="agenda-evidence">↗ near an already-traced narrative: “${escapeHtml(s.nearest_trace.canonical_phrase)}” (phrasing ${s.nearest_trace.l1_sim} / idea ${s.nearest_trace.l2_sim} — embedding-stage lead, unconfirmed)</div>` : ''}
+      ${s.nearest_trace ? `<div class="agenda-evidence">↗ resembles an already-traced narrative: “${escapeHtml(s.nearest_trace.canonical_phrase)}” <span title="phrasing similarity ${s.nearest_trace.l1_sim} · idea similarity ${s.nearest_trace.l2_sim} — embedding-stage lead">(automated match, unconfirmed)</span></div>` : ''}
     </details>`;
   }).join('');
 
@@ -1311,13 +1327,13 @@ function renderAgendaReport(report) {
   const om = report.omissions || {};
   const omRows = (om.by_outlet || []).filter(r => !r.insufficient_sample && (r.missed || (r.adjacent_stories || []).length || (r.covered_not_featured || []).length)).map(r => {
     const missed = (r.missed_stories || []).map(m =>
-      `<div class="agenda-evidence">∅ <strong>${escapeHtml(m.label)}</strong> (carried by ${m.n_outlets} outlets) — nearest of ${r.sitemap_articles} sitemap articles: “${escapeHtml(m.nearest_article || '(none)')}” at similarity ${m.nearest_sim}</div>`
+      `<div class="agenda-evidence">∅ <strong>${escapeHtml(m.label)}</strong> (carried by ${m.n_outlets} outlets) — closest of the ${r.sitemap_articles} articles they did publish: <span title="closest-match similarity ${m.nearest_sim} (1 = identical) — below the adjacency guard">“${escapeHtml(m.nearest_article || '(none)')}”</span></div>`
     ).join('');
     const adjacent = (r.adjacent_stories || []).map(a =>
-      `<div class="agenda-evidence">≈ adjacent to <strong>${escapeHtml(a.label)}</strong> via “${escapeHtml(a.nearest_article)}” (${a.nearest_sim})</div>`
+      `<div class="agenda-evidence">≈ adjacent to <strong>${escapeHtml(a.label)}</strong> via <span title="similarity ${a.nearest_sim} — above the adjacency guard, so no omission is claimed">“${escapeHtml(a.nearest_article)}”</span></div>`
     ).join('');
     const covered = (r.covered_not_featured || []).map(c =>
-      `<div class="agenda-evidence">✓ covered, not feed-featured: <strong>${escapeHtml(c.label)}</strong> — ${c.nearest_url ? `<a href="${escapeHtml(c.nearest_url)}" target="_blank" rel="noopener">${escapeHtml(c.nearest_article)}</a>` : escapeHtml(c.nearest_article)} (${c.nearest_sim}); a prominence observation, not an omission</div>`
+      `<div class="agenda-evidence">✓ covered, not feed-featured: <strong>${escapeHtml(c.label)}</strong> — <span title="similarity ${c.nearest_sim}">${c.nearest_url ? `<a href="${escapeHtml(c.nearest_url)}" target="_blank" rel="noopener">${escapeHtml(c.nearest_article)}</a>` : escapeHtml(c.nearest_article)}</span>; a prominence observation, not an omission</div>`
     ).join('');
     return `<details class="agenda-omit-row">
       <summary>${escapeHtml(r.name)} ${leanChip(r.lean)} — <strong>${r.missed}</strong> of ${r.broad_stories} broad stories with no sitemap match
@@ -1335,7 +1351,7 @@ function renderAgendaReport(report) {
   // -- universe cross-check --
   const u = report.universe || {};
   const uncovered = (u.uncovered_by_roster || []).map(e =>
-    `<div class="agenda-evidence">• ${escapeHtml(e.event)} <span style="color:#aaa">(best story similarity ${e.best_sim})</span></div>`
+    `<div class="agenda-evidence" title="best story similarity ${e.best_sim}">• ${escapeHtml(e.event)}</div>`
   ).join('');
 
   const main = document.querySelector('main');
@@ -1355,7 +1371,7 @@ function renderAgendaReport(report) {
 
     <div class="card">
       <h2>Shared stories across outlets</h2>
-      <p style="color:#777; font-size:0.8rem;">Headlines grouped by the local matcher (threshold ${totals.story_threshold}); each story expands to its carriers. The bar shows which leans carried it.</p>
+      <p style="color:#777; font-size:0.8rem;">Headlines that clustered into the same story across outlets; each story expands to its carriers. The bar shows which leans carried it.</p>
       ${storiesHtml || '<p class="empty">No cross-outlet stories in this window.</p>'}
     </div>
 
@@ -1375,6 +1391,11 @@ function renderAgendaReport(report) {
       <details><summary style="cursor:pointer; font-size:0.85rem; color:#555;">Events with no observed roster coverage (${(u.uncovered_by_roster || []).length})</summary>${uncovered}</details>
     </div>` : ''}
   `;
+  setAbout('agenda report', [
+    ['Report ID', report.report_id],
+    ['Generated', report.generated_at],
+    ['Story-join threshold', totals.story_threshold],
+  ]);
 }
 
 function renderArticle(analysis) {
@@ -1389,7 +1410,7 @@ function renderArticle(analysis) {
 
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
-  addMeta(meta, 'analysis', analysis.analysis_id);
+  addMetaText(meta, 'source analysis');
   if (analysis.source_platform) addMeta(meta, 'platform', analysis.source_platform);
   if (analysis.source_author) addMeta(meta, 'author', analysis.source_author);
   if (analysis.source_published_at) addMeta(meta, 'published', (analysis.source_published_at || '').split('T')[0]);
@@ -1408,7 +1429,7 @@ function renderArticle(analysis) {
     let cta;
     if (hasFp) cta = '<div class="claim-cta">View fingerprint →</div>';
     else if (!traceable) cta = '<div class="claim-cta empty">(not traceable — opinions and unverifiable claims aren\'t fingerprinted)</div>';
-    else cta = '<div class="claim-cta empty">(traceable, but not fingerprinted — run without --extract-only)</div>';
+    else cta = '<div class="claim-cta empty">(traceable, but not yet traced)</div>';
     return `
       <div class="card claim-card ${hasFp ? 'clickable' : ''}" data-claim-idx="${idx}">
         <div class="claim-card-head">
@@ -1441,6 +1462,7 @@ function renderArticle(analysis) {
       if (fp) openFingerprintFromArticle(fp);
     };
   });
+  setAbout('source analysis', [['Analysis ID', analysis.analysis_id]]);
 }
 
 function renderBreakdown(breakdown) {
@@ -1504,18 +1526,16 @@ function render(fp) {
 
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
-  addMeta(meta, 'id', fp.fingerprint_id);
+  addMetaText(meta, 'narrative trace');
   addMeta(meta, 'created', (fp.created_at || '').split('T')[0]);
   const scope = fp.scope || {};
   const window = (scope.time_window_start || '—') + ' to ' + (scope.time_window_end || 'present');
   addMeta(meta, 'scope', `${scope.language || 'en'} · ${scope.region || 'global'} · ${window}`);
-  addMeta(meta, 'schema', fp.taxonomy_version || '?');
-  // Overall analysis provenance — the honest "this whole thing is AI" signal
-  if (fp.provenance) {
-    const span = document.createElement('span');
-    span.innerHTML = `<strong>analysis:</strong> ${provenanceBadge(fp)}`;
-    meta.appendChild(span);
-  }
+  setAbout('narrative trace', [
+    ['Fingerprint ID', fp.fingerprint_id],
+    ['Schema version', fp.taxonomy_version],
+    ['Model', (fp.provenance || {}).model],
+  ]);
 
   renderOverview(fp);
   renderLexical(fp);
@@ -1535,6 +1555,33 @@ function addMeta(parent, label, value) {
   const span = document.createElement('span');
   span.innerHTML = `<strong>${escapeHtml(label)}:</strong> ${escapeHtml(value || '')}`;
   parent.appendChild(span);
+}
+
+function addMetaText(parent, text) {
+  const span = document.createElement('span');
+  span.innerHTML = `<strong>${escapeHtml(text)}</strong>`;
+  parent.appendChild(span);
+}
+
+// Tier-3 footer (the reader-tier rule): every view keeps a visible one-line
+// honesty statement with the standing links, while instrument metadata —
+// IDs, schema/model/prompt versions, thresholds — collapses behind it.
+// P2 wants provenance AVAILABLE on every page, not ambient in every card.
+const REPO_URL = 'https://github.com/tarekelgindy/tributary';
+function setAbout(kind, pairs) {
+  const el = document.getElementById('about-footer');
+  if (!el) return;
+  const rows = (pairs || [])
+    .filter(([, v]) => v !== undefined && v !== null && v !== '')
+    .map(([k, v]) => `<div><span class="label">${escapeHtml(k)}</span><span class="value">${escapeHtml(String(v))}</span></div>`)
+    .join('');
+  el.innerHTML = `
+    <div class="about-line">AI-generated ${escapeHtml(kind)} — not yet human-reviewed.
+      <a href="${REPO_URL}/blob/main/METHODOLOGY.md" target="_blank" rel="noopener">How it's made</a> ·
+      <a href="${REPO_URL}/blob/main/CORRECTIONS.md" target="_blank" rel="noopener">Corrections log</a> ·
+      <a href="${REPO_URL}/issues/new/choose" target="_blank" rel="noopener">Suggest a correction</a></div>
+    ${rows ? `<details><summary>Details for auditors</summary><div class="about-grid">${rows}</div></details>` : ''}`;
+  el.hidden = false;
 }
 
 function switchTab(name) {
@@ -1627,8 +1674,9 @@ function archiveBadge(item) {
 
 function provenanceBadge(item) {
   // Reads item.provenance ({origin, status, model, contributor_name,
-  // confirmation_count, dispute_count}). Quiet by default — AI-generated
-  // shows a small muted 'AI' chip; the human states (added / confirmed /
+  // confirmation_count, dispute_count}). Badge the exceptions: ai_generated
+  // is the page-wide default (the about-footer states it once, visibly), so
+  // it gets no per-element chip; the human states (added / confirmed /
   // consensus / disputed / retracted) light up automatically once the
   // contribution layer populates them. Returns '' for fingerprints that
   // predate the provenance field.
@@ -1640,9 +1688,7 @@ function provenanceBadge(item) {
   let label, cls, tip;
   switch (status) {
     case 'ai_generated':
-      label = 'AI'; cls = 'ai';
-      tip = 'AI-generated' + (p.model ? ' · ' + p.model : '') + ' · not human-reviewed';
-      break;
+      return '';
     case 'human_added':
       label = '✎ human'; cls = 'human';
       tip = 'Added by ' + (p.contributor_name || 'a contributor');
@@ -1947,7 +1993,7 @@ function milestoneHtml(entry) {
     if (m.added) fields.push(['added', m.added]);
     if (m.dropped) fields.push(['dropped', m.dropped]);
     return `<div class="ms-item ms-mutation">
-      <div class="ms-head"><span class="ms-when">${escapeHtml(to.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="ms-lineage">${escapeHtml(lineage)}</span></div>
+      <div class="ms-head"><span class="ms-when">${escapeHtml(to.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[lineage] || lineage)}</span></div>
       <div class="ms-who">${escapeHtml(truncate(from.author, 48) || '?')} → ${escapeHtml(truncate(to.author, 48) || '?')}</div>
       ${fields.map(([cls, text]) => `<div class="ms-mut"><span class="lbl ${cls}">${cls}</span>${escapeHtml(truncate(text, 220))}</div>`).join('')}
     </div>`;
@@ -1955,7 +2001,7 @@ function milestoneHtml(entry) {
   const i = entry.inst;
   const role = i.amplifier_role || 'unknown';
   return `<div class="ms-item role-${role}">
-    <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(entry.lineage)}</span></div>
+    <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
     <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}</div>
     ${i.exact_quote ? `<div class="ms-quote">“${escapeHtml(truncate(i.exact_quote, 220))}”</div>` : ''}
   </div>`;
@@ -1978,7 +2024,7 @@ function renderOverview(fp) {
   // stay on the Lineages tab.
   const stats = lex.timeline_stats || con.timeline_stats || {};
   const bits = [];
-  bits.push(`${lexLog.length} lexical · ${conLog.length} conceptual attestations`);
+  bits.push(`${lexLog.length} phrasing · ${conLog.length} idea attestations`);
   if (stats.active_from) bits.push(`active ${stats.active_from} → ${stats.active_through || 'present'}`);
   if (stats.originator_to_mass_amplifier_days != null) bits.push(`origin → mass amplifier: ${fmtDaysHuman(stats.originator_to_mass_amplifier_days)}`);
   if (stats.originator_to_institutional_adoption_days != null) bits.push(`origin → institutional adoption: ${fmtDaysHuman(stats.originator_to_institutional_adoption_days)}`);
@@ -1999,10 +2045,10 @@ function renderOverview(fp) {
     </div>
 
     <details class="collapse">
-      <summary>Full attestation log (${lexLog.length} lexical · ${conLog.length} conceptual)</summary>
+      <summary>Full attestation log (${lexLog.length} phrasing · ${conLog.length} idea)</summary>
       <div class="body normal-text">
-        ${lexLog.length ? `<div class="log-grp">Lexical — this phrasing</div>${logRowsHtml(lexLog, 'lex')}` : ''}
-        ${conLog.length ? `<div class="log-grp">Conceptual — the underlying idea</div>${logRowsHtml(conLog, 'con')}` : ''}
+        ${lexLog.length ? `<div class="log-grp">Phrasing — this exact wording</div>${logRowsHtml(lexLog, 'lex')}` : ''}
+        ${conLog.length ? `<div class="log-grp">Idea — the underlying claim</div>${logRowsHtml(conLog, 'con')}` : ''}
         ${!lexLog.length && !conLog.length ? '<p class="empty">Empty.</p>' : ''}
       </div>
     </details>
@@ -2032,15 +2078,19 @@ function renderLexical(fp) {
       <h2>Phrase Variants</h2>
       ${(l.phrase_variants || []).map(v => `<span class="pill">${escapeHtml(v)}</span>`).join('') || '<p class="empty">None</p>'}
     </div>
-    <div class="card">
-      <h2>Diagnostic N-grams</h2>
-      <p style="color:#666; font-size:0.85rem; margin-bottom:0.6rem;">The lexical fingerprints that drive earliest-use search.</p>
-      ${(l.diagnostic_ngrams || []).map(n => `<span class="pill diagnostic">${escapeHtml(n)}</span>`).join('') || '<p class="empty">None</p>'}
-    </div>
-    <div class="card">
-      <h2>Stopword-stripped Signature</h2>
-      <code>${escapeHtml(l.stopword_stripped_signature || '')}</code>
-    </div>
+    <details class="collapse">
+      <summary>Search internals — the signatures that drive earliest-use search</summary>
+      <div class="body normal-text">
+        <div class="card">
+          <h2>Diagnostic N-grams</h2>
+          ${(l.diagnostic_ngrams || []).map(n => `<span class="pill diagnostic">${escapeHtml(n)}</span>`).join('') || '<p class="empty">None</p>'}
+        </div>
+        <div class="card">
+          <h2>Stopword-stripped Signature</h2>
+          <code>${escapeHtml(l.stopword_stripped_signature || '')}</code>
+        </div>
+      </div>
+    </details>
   `;
 }
 
@@ -2078,7 +2128,7 @@ function renderRhetorical(fp) {
   const hasContent = (r.frame_primitives || []).length || v.villain || v.victim || v.hero
                      || r.epistemic_stance || r.register;
   panel.innerHTML = `
-    ${!hasContent ? '<div class="card"><p class="empty">L3 rhetorical layer was not generated for this fingerprint.</p></div>' : ''}
+    ${!hasContent ? '<div class="card"><p class="empty">Rhetorical framing was not generated for this trace.</p></div>' : ''}
     <div class="card">
       <h2>Frame Primitives</h2>
       ${(r.frame_primitives || []).map(p => `<span class="pill frame">${escapeHtml(p)}</span>`).join('') || '<p class="empty">None</p>'}
@@ -2117,36 +2167,36 @@ function renderLineages(fp) {
 
     <div class="timeline-block">
       <div class="timeline-header">
-        <h2>Lexical Lineage</h2>
-        <div class="timeline-info">status: ${escapeHtml(lex.status || 'unknown')} · earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances · ${(lex.mutations || []).length} mutations</div>
+        <h2>Phrasing Lineage <span style="font-weight:400; color:#999; font-size:0.75rem;">— this exact wording</span></h2>
+        <div class="timeline-info" title="pipeline status: ${escapeHtml(lex.status || 'unknown')}">earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances · ${(lex.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-lexical"></svg>
     </div>
-    ${renderTimelineStats('Lexical', lex.timeline_stats, 'stats-lexical')}
+    ${renderTimelineStats('Phrasing', lex.timeline_stats, 'stats-lexical')}
     ${renderSocialSpread(lex)}
 
     <div class="timeline-block">
       <div class="timeline-header">
-        <h2>Conceptual Lineage</h2>
-        <div class="timeline-info">status: ${escapeHtml(con.status || 'unknown')} · earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances · ${(con.mutations || []).length} mutations</div>
+        <h2>Idea Lineage <span style="font-weight:400; color:#999; font-size:0.75rem;">— the underlying claim</span></h2>
+        <div class="timeline-info" title="pipeline status: ${escapeHtml(con.status || 'unknown')}">earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances · ${(con.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-conceptual"></svg>
     </div>
-    ${renderTimelineStats('Conceptual', con.timeline_stats, 'stats-conceptual')}
+    ${renderTimelineStats('Idea', con.timeline_stats, 'stats-conceptual')}
 
     <p style="color:#777; font-size:0.85rem; margin: 0 0 1rem;">Click any dot to see the full instance details.</p>
     <div id="instance-detail"></div>
 
-    ${renderMutationsBlock('Lexical', lex.mutations, lexLog)}
-    ${renderMutationsBlock('Conceptual', con.mutations, conLog)}
+    ${renderMutationsBlock('Phrasing', lex.mutations, lexLog)}
+    ${renderMutationsBlock('Idea', con.mutations, conLog)}
 
     <details class="collapse">
-      <summary>Lexical adversarial notes</summary>
+      <summary>How the phrasing lineage was stress-tested — search notes</summary>
       <div class="body">${escapeHtml(lex.adversarial_notes || '(no adversarial notes recorded)')}</div>
     </details>
 
     <details class="collapse">
-      <summary>Conceptual adversarial notes</summary>
+      <summary>How the idea lineage was stress-tested — search notes</summary>
       <div class="body">${escapeHtml(con.adversarial_notes || '(no adversarial notes recorded)')}</div>
     </details>
   `;
@@ -2325,7 +2375,7 @@ function instanceDetailHtml(inst) {
       ${inst.lexical_form_seen ? `<div class="field"><span class="label">Form seen</span>${escapeHtml(inst.lexical_form_seen)}</div>` : ''}
       ${inst.evidence ? `<div class="field"><span class="label">Evidence</span>${escapeHtml(inst.evidence)}</div>` : ''}
       ${inst.role_evidence ? `<div class="field"><span class="label">Role evidence</span>${escapeHtml(inst.role_evidence)}</div>` : ''}
-      ${inst.confidence != null ? `<div class="field"><span class="label">Confidence</span>${inst.confidence}</div>` : ''}
+      ${inst.confidence != null ? `<div class="field"><span class="label">AI confidence</span>${inst.confidence}</div>` : ''}
       ${provenanceBadge(inst) ? `<div class="field"><span class="label">Provenance</span>${provenanceBadge(inst)}</div>` : ''}
       ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
@@ -2341,7 +2391,7 @@ function renderEvidence(fp) {
   if (sources.length === 0 && !ev.summary) {
     panel.innerHTML = `
       <div class="card">
-        <p class="empty">Evidence landscape was not generated for this fingerprint (use --no-evidence to skip; or this is an older fingerprint that predates the feature).</p>
+        <p class="empty">Evidence landscape was not generated for this trace (older traces predate the feature).</p>
       </div>`;
     return;
   }
@@ -2425,19 +2475,16 @@ function renderTaxonomic(fp) {
   panel.innerHTML = `
     <div class="card">
       <h2>Domain</h2>
-      <span class="pill domain">${escapeHtml(t.domain || 'other')}</span>
-      <span style="color:#777; font-size:0.85rem; margin-left:0.6rem;">confidence: ${t.domain_confidence ?? 0}</span>
+      <span class="pill domain" title="AI classification confidence: ${t.domain_confidence ?? 0}">${escapeHtml(t.domain || 'other')}</span>
     </div>
     <div class="card">
       <h2>Tropes</h2>
       ${(t.tropes || []).map(tp => `<span class="pill trope">${escapeHtml(tp)}</span>`).join('') || '<p class="empty">None invoked</p>'}
     </div>
-    <div class="card">
-      <h2>Inductive Cluster IDs</h2>
-      ${(t.inductive_cluster_ids || []).length
-        ? (t.inductive_cluster_ids || []).map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('')
-        : '<p class="empty">Not yet generated — cross-corpus clustering is a deferred feature.</p>'}
-    </div>
+    ${(t.inductive_cluster_ids || []).length ? `<div class="card">
+      <h2>Cross-narrative clusters</h2>
+      ${(t.inductive_cluster_ids || []).map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('')}
+    </div>` : ''}
   `;
 }
 

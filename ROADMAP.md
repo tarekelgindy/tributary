@@ -175,6 +175,17 @@ Two findings from the first real agenda reports set this phase. (1) RSS-based om
 >
 > The matrices remain viewable with their PENDING badge — evidence always shown, counts never presented as validated.
 
+## Phase 2.7 — Reader tiers (2026-07-04; from Tarek's product review)
+
+The viewer had grown schema-shaped: tabs named after pipeline layers (L1–L5), raw IDs and model names in every meta-bar, similarity floats and CLI flags in reader-facing strings. The rule now: **Tier 1** (default-visible) = the finding in plain language; **Tier 2** (one click) = the evidence; **Tier 3** (footer "Details for auditors" / tooltips / methodology) = the instrument. P2 requires provenance *available* on every page, not ambient in every card.
+
+- [x] Tabs renamed to reader words (Phrase / Idea / Rhetoric / Spread / Evidence / Category); phrasing/idea vocabulary through milestones, lineages, and the attestation log. *(2026-07-04)*
+- [x] Meta-bars carry only reader-meaningful facts; IDs, schema/model/prompt versions, and thresholds moved to a per-view **about-footer**: a visible "AI-generated X — not yet human-reviewed" line + methodology/corrections/suggest-a-correction links + a collapsed auditor block. *(2026-07-04)*
+- [x] Per-element `AI` chips retired (the footer states the default once); provenance badges now light up only for the exception states (human-added / confirmed / disputed / consensus) — the dormant contribution layer's display path, ready for when it populates. *(2026-07-04)*
+- [x] Similarity floats, lean index, pipeline status enums → tooltips; CLI-flag fallback strings (`--trace-framings` et al.) removed from UI copy; n-grams/stopword signature behind a "Search internals" toggle; dev-only "Inductive Cluster IDs" card renders only with data. *(2026-07-04)*
+- [x] Contribution intake, cheapest honest version: GitHub issue templates (correction / earlier sighting) + "Suggest a correction" links in the viewer footer and gallery. Evidence submission, not judgment submission — labels stay out until the contribution layer earns its gates. *(2026-07-04)*
+- [x] Validated: stub-DOM smoke test, 40/40 across all five routeData branches (fingerprint, event, agenda report, matrix, source analysis) on real corpus files. *(2026-07-04)*
+
 ---
 
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
