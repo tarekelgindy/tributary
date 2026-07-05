@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tributary — design mockups (story card + framing fan A/B)</title>
+<style>
+  :root { color-scheme: light; }
+  .viz-root {
+    --surface-1: #fcfcfb; --page: #f9f9f7;
+    --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+    --grid: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --blue: #2a78d6; --blue-deep: #184f95; --blue-wash: #cde2fb; --blue-mid: #86b6ef;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink-1);
+         font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5; }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
+  h1 { font-size: 1.35rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lede { color: var(--ink-2); font-size: 0.92rem; margin: 0 0 2.2rem; }
+  .mock-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+                text-transform: uppercase; color: var(--ink-3); margin: 2.6rem 0 0.6rem; }
+  .designnote { font-size: 0.85rem; color: var(--ink-2); font-style: italic; margin: 0.6rem 0 0; }
+  .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+          padding: 1.4rem 1.6rem 1.1rem; box-shadow: 0 1px 3px rgba(11,11,11,0.04); }
+  .kicker { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--ink-3); margin-bottom: 0.5rem; }
+  .headline { font-size: 1.75rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.15rem; }
+  .phrase { color: var(--ink-2); font-size: 0.95rem; margin: 0 0 1rem; }
+  .cardfoot { border-top: 1px solid var(--grid); margin-top: 0.9rem; padding-top: 0.65rem;
+              font-size: 0.78rem; color: var(--ink-3); display: flex; justify-content: space-between; }
+  .cardfoot a { color: var(--blue); text-decoration: none; }
+  svg text { font-family: inherit; }
+  .tick { fill: var(--ink-3); font-size: 11px; }
+  .mslabel { fill: var(--ink-1); font-size: 11.5px; font-weight: 600; }
+  .mssub { fill: var(--ink-2); font-size: 10.5px; }
+
+  /* Fan A: bars */
+  .agree { background: #f4f3ef; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
+           color: var(--ink-2); margin: 0.8rem 0 1.2rem; }
+  .agree strong { color: var(--ink-1); }
+  .frow { margin-bottom: 1.05rem; }
+  .fname { font-weight: 600; font-size: 0.95rem; }
+  .fclaim { color: var(--ink-2); font-size: 0.84rem; margin: 0.1rem 0 0.35rem; }
+  .ftrack { display: flex; align-items: center; gap: 0.55rem; }
+  .fbar { height: 14px; background: var(--blue); border-radius: 0 4px 4px 0; }
+  .fcount { font-size: 0.8rem; color: var(--ink-2); white-space: nowrap; }
+
+  /* Fan B: equal cards */
+  .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 1.2rem; }
+  .fcell { border: 1px solid var(--grid); border-radius: 10px; padding: 0.8rem 0.95rem; }
+  .dots { display: flex; gap: 4px; margin-top: 0.5rem; align-items: center; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--blue); }
+  .footnote { font-size: 0.78rem; color: var(--ink-3); margin-top: 1rem; }
+  @media (max-width: 640px) { .fgrid { grid-template-columns: 1fr; } .headline { font-size: 1.4rem; } }
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <h1>Design mockups — for review, not production</h1>
+  <p class="lede">Real data throughout: the story card uses the "birth tourism loophole" trace
+  (18 attestations, 2010→2026); both framing-fan variants use the crypto-disclosure event
+  (8 framings, carrier counts 3–6). Light mode only for this round.</p>
+
+  <div class="mock-label">Mockup 1 — the story card (trace)</div>
+  <div class="card" style="max-width: 760px;">
+    <div class="kicker">Tributary · narrative trace</div>
+    <div class="headline">This narrative is 16 years old.</div>
+    <p class="phrase">“Birthright citizenship is a loophole that rewards illegal entry and birth tourism”</p>
+    <svg id="timeline" viewBox="0 0 728 178" width="100%" role="img"
+         aria-label="Timeline of 18 recorded uses from August 2010 to July 2026, with a surge in the week of the Supreme Court ruling"></svg>
+    <div class="cardfoot">
+      <span>18 recorded uses · AI-traced, not human-reviewed</span>
+      <a href="#">see every source ↗</a>
+    </div>
+  </div>
+  <p class="designnote">This exact card is meant to render identically as: page header, list entry,
+  share-preview image (what you see in a chat or on Bluesky before clicking), and embed. Hover the dots —
+  each carries its source.</p>
+
+  <div class="mock-label">Mockup 2 — framing fan, variant A (bar length = carriers recorded)</div>
+  <div class="card">
+    <div class="kicker">Tributary · event analysis</div>
+    <div class="headline" style="font-size:1.25rem;">Trump’s $1B crypto disclosure — 8 competing framings</div>
+    <div class="agree"><strong>Everyone agrees:</strong> the disclosure reports over $1B in crypto-related
+      income; the $TRUMP token fell sharply; Binance’s founder was pardoned. The contest is over what it <em>means</em>.</div>
+    <div id="fanA"></div>
+    <p class="footnote">Bar length = carriers we recorded for each framing — a sample bounded by our search,
+    not a census of the discourse.</p>
+  </div>
+
+  <div class="mock-label">Mockup 3 — framing fan, variant B (equal weight; count as a label)</div>
+  <div class="card">
+    <div class="kicker">Tributary · event analysis</div>
+    <div class="headline" style="font-size:1.25rem;">Trump’s $1B crypto disclosure — 8 competing framings</div>
+    <div class="agree"><strong>Everyone agrees:</strong> the disclosure reports over $1B in crypto-related
+      income; the $TRUMP token fell sharply; Binance’s founder was pardoned. The contest is over what it <em>means</em>.</div>
+    <div class="fgrid" id="fanB"></div>
+    <p class="footnote">Each dot is one recorded carrier. Equal card size avoids implying we measured
+    each framing’s true share of the discourse.</p>
+  </div>
+</div>
+
+<script>
+// ---- real data, extracted from gallery/events/*.json ----
+const LOG = [
+  ["2010-08-18","NPR (Talk of the Nation call-in debate)","originator"],
+  ["2015-09-20","Washington Post (reposted)","originator"],
+  ["2016-10-05","Andy J. Semotiuk, Forbes","originator"],
+  ["2020-01-09","workingimmigrants.com","originator"],
+  ["2021-01-01","Sen. Marsha Blackburn — bill introduced","institutional-adoption"],
+  ["2026-04-02","FAIR (advocacy report)","originator"],
+  ["2026-06-30","CNN Politics","originator"],
+  ["2026-06-30","Fox News Digital","mass-amplifier"],
+  ["2026-06-30","Rep. Nancy Mace","institutional-adoption"],
+  ["2026-06-30","Rep. Andy Ogles","institutional-adoption"],
+  ["2026-06-30","NPR","mention"],
+  ["2026-06-30","Axios","mass-amplifier"],
+  ["2026-07-01","PolitiFact","critic"],
+  ["2026-07-01","Jim Hoft","early-amplifier"],
+  ["2026-07-01","Spectrum News","early-amplifier"],
+  ["2026-07-01","The 19th","mention"],
+  ["2026-07-02","Christine Bish (The Western Journal)","critic"],
+  ["2026-07-03","Fox News Digital","mass-amplifier"],
+];
+const MILESTONES = { 0: ["First attested", "NPR call-in debate · Aug 2010"],
+                     4: ["Reaches the Senate", "bill introduced · 2021"],
+                     7: ["Resurfaces — ruling week", "8 uses in 4 days · Jun–Jul 2026"] };
+const FRAMINGS = [
+  ["Corruption & Conflict of Interest", "Crypto income while deregulating crypto is an unprecedented conflict", 6],
+  ["Retail Investor Harm", "~1M retail buyers lost billions while fees were earned regardless of price", 6],
+  ["Crypto Market Structure", "The token’s design, not any person, is the story — a meme-coin structural flaw", 6],
+  ["Foreign Influence & National Security", "Foreign sovereign funds and a pardoned exchange founder are in the money flow", 5],
+  ["Transparency & Disclosure Norms", "A 927-page disclosure — historic transparency, or paperwork as smokescreen?", 4],
+  ["Legislative Capture", "A windfall disclosed mid-negotiation poisons Senate crypto-policy talks", 4],
+  ["Intra-Right Institutional Alarm", "Legal or not, it is politically reckless — an argument from the right", 4],
+  ["Presidential Business Success", "The earnings reflect a successful America-first crypto agenda", 3],
+];
+
+// ---- Mockup 1: hero timeline ----
+(function () {
+  const svg = document.getElementById('timeline');
+  const NS = 'http://www.w3.org/2000/svg';
+  const W = 728, PAD = 34, axisY = 148, areaTop = 26;
+  const frac = d => { const [y, m, dd] = d.split('-').map(Number); return y + ((m - 1) + (dd - 1) / 31) / 12; };
+  const t0 = 2010.3, t1 = 2026.75;
+  const x = t => PAD + (t - t0) / (t1 - t0) * (W - 2 * PAD);
+  const el = (tag, attrs, text) => { const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent = text; svg.appendChild(e); return e; };
+
+  // cumulative step-area (sequence, not influence)
+  const pts = LOG.map(l => frac(l[0]));
+  let dpath = `M ${x(pts[0])} ${axisY}`, prevY = axisY;
+  const yOf = c => axisY - (c / pts.length) * (axisY - areaTop);
+  pts.forEach((t, i) => {
+    if (i + 1 < pts.length && pts[i + 1] - t < 1e-6) return;
+    dpath += ` L ${x(t).toFixed(1)} ${prevY.toFixed(1)} L ${x(t).toFixed(1)} ${yOf(i + 1).toFixed(1)}`;
+    prevY = yOf(i + 1);
+  });
+  dpath += ` L ${x(t1).toFixed(1)} ${prevY.toFixed(1)} L ${x(t1).toFixed(1)} ${axisY} Z`;
+  el('path', { d: dpath, fill: '#cde2fb', 'fill-opacity': 0.55, stroke: '#86b6ef', 'stroke-width': 1 });
+
+  // axis + ticks
+  el('line', { x1: PAD, x2: W - PAD, y1: axisY, y2: axisY, stroke: '#c3c2b7', 'stroke-width': 1 });
+  [2010, 2014, 2018, 2022, 2026].forEach(yr => {
+    el('line', { x1: x(yr), x2: x(yr), y1: axisY - 3, y2: axisY + 3, stroke: '#c3c2b7' });
+    el('text', { x: x(yr), y: axisY + 16, 'text-anchor': 'middle', class: 'tick' }, String(yr));
+  });
+
+  // dots (stack same-week dots vertically)
+  const buckets = {};
+  LOG.forEach((l, i) => { const key = Math.round(x(frac(l[0])) / 9) * 9;
+    (buckets[key] = buckets[key] || []).push(i); });
+  Object.entries(buckets).forEach(([key, idxs]) => {
+    idxs.forEach((i, j) => {
+      const ms = MILESTONES[i];
+      // dense clusters (the ruling week) stack in two columns so they never
+      // overflow the card
+      const col = idxs.length > 6 ? (j % 2 ? 4.5 : -4.5) : 0;
+      const row = idxs.length > 6 ? Math.floor(j / 2) : j;
+      const cy = axisY - 13 - row * 9.5;
+      const c = el('circle', { cx: x(frac(LOG[i][0])) + col, cy, r: ms ? 6.5 : 4.5,
+        fill: ms ? '#184f95' : '#2a78d6', stroke: '#fcfcfb', 'stroke-width': ms ? 2 : 1.5 });
+      const t = document.createElementNS(NS, 'title');
+      t.textContent = `${LOG[i][0]} · ${LOG[i][1]} · ${LOG[i][2]}`; c.appendChild(t);
+    });
+  });
+
+  // selective milestone labels (3 of 18)
+  const lab = (i, y, anchor) => { const ms = MILESTONES[i]; const cx = x(frac(LOG[i][0]));
+    el('text', { x: cx, y, 'text-anchor': anchor, class: 'mslabel' }, ms[0]);
+    el('text', { x: cx, y: y + 13, 'text-anchor': anchor, class: 'mssub' }, ms[1]); };
+  lab(0, 20, 'start'); lab(4, 42, 'middle'); lab(7, 20, 'end');
+})();
+
+// ---- Mockup 2: variant A bars ----
+document.getElementById('fanA').innerHTML = FRAMINGS.map(([name, claim, n]) => `
+  <div class="frow">
+    <div class="fname">${name}</div>
+    <div class="fclaim">${claim}</div>
+    <div class="ftrack"><div class="fbar" style="width:${(n / 6) * 62}%" title="${n} carriers recorded"></div>
+      <span class="fcount">${n} carriers</span></div>
+  </div>`).join('');
+
+// ---- Mockup 3: variant B equal cards ----
+document.getElementById('fanB').innerHTML = FRAMINGS.map(([name, claim, n]) => `
+  <div class="fcell">
+    <div class="fname" style="font-size:0.9rem;">${name}</div>
+    <div class="fclaim">${claim}</div>
+    <div class="dots" title="${n} carriers recorded">${'<span class="dot"></span>'.repeat(n)}
+      <span class="fcount" style="margin-left:4px;">${n} carriers</span></div>
+  </div>`).join('');
+</script>
+</body>
+</html>
