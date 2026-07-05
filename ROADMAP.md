@@ -205,6 +205,8 @@ The viewer had grown schema-shaped: tabs named after pipeline layers (L1–L5), 
 - [ ] Share layer: publish.py emits per-trace stub pages with OG tags + a rendered story-card image, so links carry their finding into chats/Bluesky unclicked; `?embed=1` compact mode for embedding in articles.
 - [ ] Story-card share image: who-first layout (per Tarek — the cast, not the age, is the headline).
 - [ ] Image-provenance spike (Tarek green-lit ahead of demand): given an image URL → C2PA content credentials + EXIF + Wayback CDX first-capture → an "earliest observed instance" card. Structural descriptors only, never an "AI or not" verdict (P1 already reserves "machine-generation signals present").
+- [ ] **Social relevance confirm stage** (from the 2026-07-05 correction): no social post attaches to a lineage without passing a second-stage relevance check against the canonical phrase (embedding + cheap judge — Gate 1's retrieve-then-confirm DNA); plus a generic-n-gram gate so terms like "seven years" never drive social search alone.
+- [ ] **Conceptual-ancestor identity gate**: a deep idea-lineage ancestor earns a milestone only if it passes the narrative-identity bar (same claim, not same topic — Gate 1's blame/consequence rule); loosely-related antiquity (Hippocrates on digestion vs. "gum stays seven years") stays in the log but never headlines. Hero surfaces lead with the phrasing's own story (shipped in the viewer 2026-07-05; the generation-side gate is the open item).
 - Parked, per Tarek: browser overlay/extension (until the structure is set and matcher coverage makes it non-embarrassing); corpus browsing stays a plain archive until a paste-a-claim search replaces it.
 
 ---

@@ -805,6 +805,22 @@ fileInput.addEventListener('change', e => { if (e.target.files.length) loadFile(
 // Reference/aggregator hosts: a carrier link to one of these is a page ABOUT
 // the event, not the named carrier's own words — flagged for transparency.
 const REFERENCE_HOSTS = ['wikipedia.org', 'britannica.com', 'wikiwand.com', 'wikidata.org', 'wikimedia.org'];
+
+// Secondhand-citation transparency: when an attestation's link goes to a
+// fact-checker or reference site, the dated source is DOCUMENTED there (e.g.
+// a 1993 print article in Snopes' bibliography), not directly linked. Say so
+// — a reader who clicks and lands on Snopes must know why.
+const CITED_VIA_HOSTS = { 'snopes.com': 'Snopes', 'politifact.com': 'PolitiFact',
+  'factcheck.org': 'FactCheck.org', 'fullfact.org': 'Full Fact',
+  'wikipedia.org': 'Wikipedia', 'britannica.com': 'Britannica' };
+function citedVia(url) {
+  try {
+    const h = new URL(url).hostname.toLowerCase();
+    for (const host in CITED_VIA_HOSTS)
+      if (h === host || h.endsWith('.' + host)) return CITED_VIA_HOSTS[host];
+  } catch (e) {}
+  return '';
+}
 function refHostName(url) {
   try {
     const h = new URL(url).hostname.toLowerCase();
@@ -919,21 +935,34 @@ function renderEventAnalysis(analysis) {
   // contesting it. Everything here is countable/structural (P5).
   const nFramings = (analysis.framings || []).length;
   const commonLine = sf.summary || (verified[0] && verified[0].statement) || '';
-  let contestLine = '';
-  if (co.n_actors) {
+  // WHO leads here too: name the most active voices (actors carrying the most
+  // framings), with the actor-type breakdown demoted to a tooltip.
+  let contestLine = '', contestTip = '';
+  const bridges = (co.bridges || []).slice()
+    .sort((a, b) => (b.n_framings || 0) - (a.n_framings || 0));
+  if (bridges.length) {
+    const top = bridges.slice(0, 3).map(b => truncate(b.display || '', 24));
+    const rest = (co.n_actors || 0) > top.length ? ` +${co.n_actors - top.length} more` : '';
+    contestLine = `${top.join(', ')}${rest}`;
+    contestTip = Object.entries(co.by_actor_type || {}).sort((a, b) => b[1] - a[1])
+      .map(([t, n]) => `${n} ${t}`).join(' · ');
+  } else if (co.n_actors) {
     const typeline = Object.entries(co.by_actor_type || {}).sort((a, b) => b[1] - a[1])
       .map(([t, n]) => `${n} ${t}`).join(' · ');
     contestLine = `${co.n_actors} actors${typeline ? ' — ' + typeline : ''}`;
   } else {
     const names = new Set();
     (analysis.framings || []).forEach(fr => (fr.carriers || []).forEach(c => c.name && names.add(c.name)));
-    if (names.size) contestLine = `${names.size} carriers across the framings`;
+    if (names.size) {
+      const top = [...names].slice(0, 3).map(n => truncate(n, 24));
+      contestLine = `${top.join(', ')}${names.size > 3 ? ` +${names.size - 3} more` : ''}`;
+    }
   }
   const glanceHtml = `
     <div class="event-glance">
       <div class="glance-stat"><strong>${nFramings}</strong>framing${nFramings === 1 ? '' : 's'}</div>
       ${commonLine ? `<div class="glance-common"><span class="glance-lbl">Common ground</span>${escapeHtml(truncate(commonLine, 200))}</div>` : ''}
-      ${contestLine ? `<div class="glance-contest"><span class="glance-lbl">Who's contesting it</span>${escapeHtml(contestLine)}</div>` : ''}
+      ${contestLine ? `<div class="glance-contest"${contestTip ? ` title="${escapeHtml(contestTip)}"` : ''}><span class="glance-lbl">Who's most active</span>${escapeHtml(contestLine)}</div>` : ''}
     </div>`;
 
   const framingsHtml = (analysis.framings || []).map((fr, idx) => {
@@ -2022,9 +2051,11 @@ function milestoneHtml(entry) {
   }
   const i = entry.inst;
   const role = i.amplifier_role || 'unknown';
+  const via = citedVia(i.source_url);
   return `<div class="ms-item role-${role}">
     <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
-    <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}</div>
+    <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}${
+      via ? ` <span class="who-year" title="the dated source is documented in ${escapeHtml(via)}'s citations — the link goes there, not to the original">documented by ${escapeHtml(via)}</span>` : ''}</div>
     ${i.exact_quote ? `<div class="ms-quote">“${escapeHtml(truncate(i.exact_quote, 220))}”</div>` : ''}
   </div>`;
 }
@@ -2060,10 +2091,16 @@ function whoStrip(lexLog, conLog) {
     const more = items.length > max ? ` +${items.length - max}` : '';
     return `<span class="who-seg"><strong>${label}:</strong> ${shown.join(', ')}${more}</span>`;
   };
-  const origin = byRoles(['originator']);
+  // The PHRASING's originator leads; deep idea-lineage ancestors (often only
+  // loosely the same claim) never headline the cast (Tarek, 2026-07-05).
+  const lexOrigin = uniq(lexLog.filter(i => (i.amplifier_role || '') === 'originator'));
+  const origin = lexOrigin.length ? lexOrigin
+    : uniq(all.filter(i => (i.amplifier_role || '') === 'originator'));
+  const via = origin.length ? citedVia(origin[0].source_url) : '';
   const originSeg = origin.length
     ? `<span class="who-seg"><strong>Origin:</strong> ${escapeHtml(truncate(nameOf(origin[0]), 36))}${
-        yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))})</span>` : ''}</span>`
+        yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))}${
+        via ? `, documented by ${escapeHtml(via)}` : ''})</span>` : ''}</span>`
     : '';
   const parts = [
     originSeg,
@@ -2372,7 +2409,8 @@ function instanceDetailHtml(inst) {
       ${inst.confidence != null ? `<div class="field"><span class="label">AI confidence</span>${inst.confidence}</div>` : ''}
       ${provenanceBadge(inst) ? `<div class="field"><span class="label">Provenance</span>${provenanceBadge(inst)}</div>` : ''}
       ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
-      ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a></div>` : ''}
+      ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a>${
+        citedVia(inst.source_url) ? `<div style="color:#777; font-size:0.8rem; margin-top:0.15rem;">The dated source is documented in ${escapeHtml(citedVia(inst.source_url))}'s citations; the original is not directly linked (often print or offline).</div>` : ''}</div>` : ''}
     </div>
   `;
 }
