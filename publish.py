@@ -61,7 +61,64 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     index = {"count": len(entries), "entries": entries}
     (gallery_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False), encoding="utf-8")
+    build_search_index(gallery_dir)
     return {"published": len(entries), "skipped": skipped}
+
+
+def build_search_index(gallery_dir: Path) -> int:
+    """gallery/search_index.json — the corpus the homepage question box
+    matches against: every published event (title + framing names) and every
+    example trace (canonical phrase + variants + published request-fulfilled
+    traces in gallery/traces/). Lexical keys only; the client does simple
+    token scoring, and misses fall through to the request-a-trace path."""
+    items = []
+
+    def keys_for_fp(fp):
+        lex = fp.get("lexical") or {}
+        return [lex.get("canonical_phrase") or ""] + (lex.get("phrase_variants") or [])
+
+    for p in sorted((gallery_dir / "events").glob("*.json")):
+        try:
+            ev = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        framings = ev.get("framings") or []
+        items.append({
+            "kind": "event",
+            "title": (ev.get("event") or "")[:200],
+            "url": f"fingerprint_viewer.html?load=gallery/events/{p.name}",
+            "keys": [f.get("name") or "" for f in framings]
+                    + [f.get("key_claim") or "" for f in framings],
+        })
+
+    for folder, prefix in ((ROOT / "examples", "examples"),
+                           (gallery_dir / "traces", "gallery/traces")):
+        if not folder.exists():
+            continue
+        for p in sorted(folder.glob("*.json")):
+            try:
+                doc = json.loads(p.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                continue
+            if doc.get("fingerprint_id") and doc.get("lexical"):
+                items.append({
+                    "kind": "trace",
+                    "title": (doc["lexical"].get("canonical_phrase") or p.stem)[:200],
+                    "url": f"fingerprint_viewer.html?load={prefix}/{p.name}",
+                    "keys": keys_for_fp(doc),
+                })
+            elif doc.get("is_event_analysis"):
+                items.append({
+                    "kind": "event",
+                    "title": (doc.get("event") or "")[:200],
+                    "url": f"fingerprint_viewer.html?load={prefix}/{p.name}",
+                    "keys": [f.get("name") or "" for f in (doc.get("framings") or [])],
+                })
+
+    (gallery_dir / "search_index.json").write_text(
+        json.dumps({"count": len(items), "items": items}, indent=1, ensure_ascii=False),
+        encoding="utf-8")
+    return len(items)
 
 
 def main():
