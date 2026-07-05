@@ -8,9 +8,14 @@ deployed, the site falls back to GitHub-issue request links automatically.
 ## 1. Create the Worker (Cloudflare dashboard)
 
 1. Sign up / log in at dash.cloudflare.com (free plan is fine).
-2. **Workers & Pages → Create → Worker** — name it e.g. `tributary-requests`,
-   deploy the hello-world, then **Edit code** and paste the contents of
-   `infra/worker.js`. Deploy.
+2. **Workers & Pages → "Create application"** → pick the **"Hello World"**
+   template (first card in the template gallery; do NOT "Import a
+   repository"). Name it `tributary-requests` → **Deploy**.
+3. On the Worker's page: **"Edit code"** → replace the placeholder with the
+   contents of `infra/worker.js` → **Save and deploy**.
+
+(Terminal alternative: `npm create cloudflare@latest` with the Hello World
+worker, replace `src/index.js` with `infra/worker.js`, `npx wrangler deploy`.)
 
 ## 2. Create the KV namespace and bind it
 
