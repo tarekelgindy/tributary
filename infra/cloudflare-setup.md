@@ -21,12 +21,13 @@ worker, replace `src/index.js` with `infra/worker.js`, `npx wrangler deploy`.)
 
 1. **Storage & Databases → Workers KV → "Create instance"** (the dashboard's
    current name for creating a namespace) — name it `tributary-status`.
-2. Worker → **Settings → Bindings → Add → KV namespace** —
-   variable name **`STATUS`** (exact, uppercase), select the namespace. Deploy.
+2. Worker page → **"Bindings" tab** (top-level, next to Metrics/Settings) →
+   **Add binding → KV namespace** — variable name **`STATUS`** (exact,
+   uppercase), select the namespace → **Add binding** (deploys automatically).
 3. Health check: `https://<worker-url>/status?id=test` should return
    `{"state":"unknown"}` — confirms code + KV binding are both live.
 
-## 3. Secrets on the Worker (Settings → Variables & Secrets)
+## 3. Secrets on the Worker (the Bindings tab also offers type "Secret", or Settings → Variables and Secrets)
 
 | Name | Value |
 |---|---|
