@@ -211,6 +211,37 @@ The viewer had grown schema-shaped: tabs named after pipeline layers (L1–L5), 
 
 ---
 
+## Phase 2.8 — Trace integrity (from the 2026-07-05 chewing-gum audits; jumps the queue ahead of the share layer)
+
+Tarek's review and the follow-up full audit of the flagship trace found **one disease with many symptoms: interpretive labels rendered with structural confidence** (P5's exact target). The worst: a lineage composed mostly of fact-checks carried *zero* `critic` roles — McGill's debunk displayed as "Institutional adoption"; retrospective web content plotted decades before it was written ("1950" = a 2025 listicle); mutation endpoints keyed by URL, which collapses whenever sources share one (a viewer bug affecting every trace); double-counted documents across lineages; secondary-URL attributions far beyond the fact-checker hosts the "documented by" chip can catch. Also verified clean, for calibration: all six Snopes-bibliography print citations are real; the 1890 PMC scan is real; the evidence landscape is largely sound. The share layer waits — shareable cards built on mislabeled roles would broadcast the disease.
+
+**A — Stop the bleeding (viewer + verification semantics; no API):**
+- [ ] Mutation rendering: resolve endpoints by attestation identity with URL as fallback; never render a from==to mutation; skip mutation objects with no semantic fields. (Every trace benefits; the data fix is in B.)
+- [ ] Verify-badge honesty: "✓ verified" only when the quote was found; URL-only checks get their own muted "URL reachable" badge; the badge tooltip states exactly what was checked.
+- [ ] Social posts stop rendering amplifier roles (engagement counts only) — a 1-like anecdote is not a "mass-amplifier"; roles return only when they're evidence-based.
+- [ ] Stats count **distinct documents** (dedupe by URL across the two lineages), labeled as such.
+
+**B — Schema + generation fixes (all additive, per convention 3; validate each on one cheap real trace before corpus use):**
+- [ ] `cited_via` becomes a real attestation field (name + note), filled at generation whenever the dated source isn't what the link points to; the viewer prefers it over host heuristics (which remain as fallback for old JSON).
+- [ ] Date honesty: attestation `date` is ALWAYS the document's date; new `date_precision` (day/month/year/circa) renders without fake `-01-01` exactness; new `describes_period` carries "this 2024 newsletter describes 1970s classrooms" without backdating the dot.
+- [ ] Role prompt: sources whose function is examining/debunking the claim default to `critic` (carry-while-disputing is exactly what `critic` means); `originator` requires evidence of coining — otherwise the lineage status says `earliest-found` (replacing the overclaiming `single-origin`) and the first entry is just the earliest attestation.
+- [ ] Mutations generated with attestation-index endpoints, at least one semantic field required, capped per lineage.
+- [ ] Conceptual-ancestor identity gate (queued earlier, now scoped here): an ancestor must assert the *same claim* (Gate 1's blame/consequence bar), else it lands as `related-context` — kept in the log, excluded from milestones, WHO strip, and hero surfaces. The Hippocrates-mastic entry (which asserts the *opposite* claim) is the type specimen.
+- [ ] Social relevance confirm stage + generic-n-gram gate (queued earlier, now scoped here).
+
+**C — Flagship repair (documented, then regenerated):**
+- [ ] Hand-repair the chewing-gum trace per the audit: fact-check roles → `critic`; retrospective entries get their real document dates + `describes_period`; the 400 CE entry → `related-context` with the era error corrected or removed; cross-lineage duplicates marked; broken mutations dropped. CORRECTIONS.md entry; homepage hero re-checked against the repaired data.
+- [ ] After B validates: regenerate the chewing-gum trace with the fixed pipeline (~$1) and diff against the hand-repair — the diff is a free labeler test.
+
+**D — Corpus sweep (mechanical scans first, judgment flagged not silently rewritten):**
+- [ ] Scans across all fingerprints: shared-URL/empty/from==to mutations; `-01-01` date share; lineages with fact-check-titled sources but zero critics; multi-`originator` lineages. Publish the counts (they are the measured error rate P2 promises); mechanically fix what's mechanical; flag the rest in place.
+- [ ] **Digest editorial line addition (binding):** no upstream trace is *featured* in a digest until it passes a human role/date read-through; the Digest #1 traces get that read-through retroactively.
+
+**Deliverable:** a chewing-gum page a skeptical stranger can walk end-to-end without hitting a mislabeled role, a backdated dot, or an unexplained link — plus measured, published label-error counts for the corpus.
+**Gate 2.8 (semantic, per P5):** ~30 blind-sampled attestations from repaired + regenerated traces; Tarek labels role and date-type; require ≥90% agreement, **zero** adoption/critic inversions, **zero** backdated retrospectives. Until it passes, the milestone-rail caveat is strengthened to name role labels as unaudited.
+
+---
+
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
 
 - [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery. *(Issue #1 follows the Phase 2.6 editorial line: omission claims and framing matrices appear only after their gates pass; everything else ships with evidence shown.)*
