@@ -196,6 +196,17 @@ The viewer had grown schema-shaped: tabs named after pipeline layers (L1–L5), 
 - [x] Contribution intake, cheapest honest version: GitHub issue templates (correction / earlier sighting) + "Suggest a correction" links in the viewer footer and gallery. Evidence submission, not judgment submission — labels stay out until the contribution layer earns its gates. *(2026-07-04)*
 - [x] Validated: stub-DOM smoke test, 40/40 across all five routeData branches (fingerprint, event, agenda report, matrix, source analysis) on real corpus files. *(2026-07-04)*
 
+**Slice 2 (2026-07-05, from the general-audience redesign dialog — strategy note: design for the general reader first; journalists go deep, but aren't the primary lens).** Principles adopted: *shape first, sentence second, prose third* (a trace's shape is its timeline; an event's is its framing fan); *names beat counts* (WHO is pushing a narrative is the product — Tarek's call); *magnitude is encoded visually only for census-grade numbers* (carrier counts are search-bounded samples → equal-weight framing cards with names, never sized bars; bar-length encoding reserved for sitemap-census data). Design mockups at `mockups/design-mockups.html`.
+
+- [x] Homepage rebuilt: one-sentence value prop → chewing-gum hero trace (non-political on purpose; idea → Hippocratic era, phrasing → a 1993 column) with a WHO line + mini-timeline → Digest #1 front door → three curated traces. The full-corpus list moved to `corpus.html`. *(2026-07-05)*
+- [x] Viewer front door: bare `fingerprint_viewer.html` now offers curated traces; the drag/browse affordance demoted to a footnote. *(2026-07-05)*
+- [x] Upstream tabs collapsed to **Overview · Spread · Evidence** (per Tarek). Reader-gold from the retired tabs folded into Overview: a **WHO strip** under the hero timeline (origin → amplified by → adopted by → pushback, names computed from the attestation logs) and a **narrative-anatomy strip** (villain/victim/hero, tropes, domain). Phrase/predicate/n-gram internals live on in the JSON only. *(2026-07-05)*
+- [x] Event framing cards lead with **carrier names** (first 3 + n) instead of a bare count. *(2026-07-05)*
+- [ ] Share layer: publish.py emits per-trace stub pages with OG tags + a rendered story-card image, so links carry their finding into chats/Bluesky unclicked; `?embed=1` compact mode for embedding in articles.
+- [ ] Story-card share image: who-first layout (per Tarek — the cast, not the age, is the headline).
+- [ ] Image-provenance spike (Tarek green-lit ahead of demand): given an image URL → C2PA content credentials + EXIF + Wayback CDX first-capture → an "earliest observed instance" card. Structural descriptors only, never an "AI or not" verdict (P1 already reserves "machine-generation signals present").
+- Parked, per Tarek: browser overlay/extension (until the structure is set and matcher coverage makes it non-embarrassing); corpus browsing stays a plain archive until a paste-a-claim search replaces it.
+
 ---
 
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)

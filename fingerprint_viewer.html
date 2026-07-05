@@ -701,6 +701,25 @@ circle.instance:hover { opacity: 0.7; }
 .tick { fill: #aaa; font-size: 10px; font-family: 'SF Mono', Menlo, monospace; }
 .lineage-line { stroke: #ddd; stroke-width: 1; }
 
+/* Front door: curated trace links; the local-file affordance is demoted. */
+.dz-links { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+            max-width: 640px; margin: 0 0 1.6rem; }
+.dz-links a { background: #fff; border: 1px solid #ddd; border-radius: 20px;
+              padding: 0.4rem 1rem; font-size: 0.88rem; color: #2a6fa3;
+              text-decoration: none; }
+.dz-links a:hover { border-color: #888; }
+.dz-local { color: #999; font-size: 0.82rem; margin-top: 1.4rem; }
+.dz-local label { display: inline; padding: 0; background: none; color: #2a6fa3;
+                  font-size: 0.82rem; text-decoration: underline; cursor: pointer; }
+.dz-local label:hover { background: none; color: #17537e; }
+
+/* WHO strip: the trace's cast in one line (origin, amplifiers, adopters, pushback) */
+.who-strip { margin: 0.55rem 0 0.4rem; font-size: 0.85rem; color: #444; line-height: 1.7; }
+.who-strip strong { color: #222; font-weight: 600; }
+.who-year { color: #999; }
+.who-dot { color: #bbb; }
+.fr-carried { color: #777; font-size: 0.78rem; }
+
 /* Tier-3 footer: the honesty line stays visible on every view; instrument
    metadata (IDs, models, thresholds) collapses behind it. */
 #about-footer { margin: 2rem 0 3rem; padding: 0.9rem 2rem 0; border-top: 1px solid #e7e7e7; color: #777; font-size: 0.82rem; }
@@ -715,8 +734,17 @@ circle.instance:hover { opacity: 0.7; }
 
 <div id="drop-zone">
   <h1>Tributary Trace Viewer</h1>
-  <p>Drag a Tributary trace JSON here, or click to browse. Self-contained — runs entirely in your browser, no data leaves your machine.</p>
-  <label for="file-input">Browse...</label>
+  <p>This page renders a Tributary trace — where a narrative came from, who amplified it,
+     and how an event's framings split. Pick one to explore:</p>
+  <div class="dz-links">
+    <a href="?load=examples/fingerprint_chewing_gum.json">“Chewing gum stays in your stomach for years”</a>
+    <a href="?load=examples/fingerprint_rigged_economy.json">“The economy is rigged”</a>
+    <a href="?load=gallery/events/55fe57fd9c41.json">The birthright ruling — 5 framings</a>
+    <a href="?load=gallery/events/e82aa88b3a7e.json">Trump's crypto disclosure — 8 framings</a>
+    <a href="corpus.html">browse all traces →</a>
+  </div>
+  <p class="dz-local">Runs entirely in your browser — or drag a local trace JSON here /
+    <label for="file-input">open a file</label>.</p>
   <input type="file" id="file-input" accept="application/json,.json">
   <div id="error"></div>
 </div>
@@ -729,22 +757,14 @@ circle.instance:hover { opacity: 0.7; }
 
   <nav id="tabs">
     <button data-tab="overview" class="active">Overview</button>
-    <button data-tab="lexical">Phrase</button>
-    <button data-tab="conceptual">Idea</button>
-    <button data-tab="rhetorical">Rhetoric</button>
     <button data-tab="lineages">Spread</button>
     <button data-tab="evidence">Evidence</button>
-    <button data-tab="taxonomic">Category</button>
   </nav>
 
   <main>
     <section data-panel="overview"></section>
-    <section data-panel="lexical" hidden></section>
-    <section data-panel="conceptual" hidden></section>
-    <section data-panel="rhetorical" hidden></section>
     <section data-panel="lineages" hidden></section>
     <section data-panel="evidence" hidden></section>
-    <section data-panel="taxonomic" hidden></section>
   </main>
   <footer id="about-footer" hidden></footer>
 </div>
@@ -943,9 +963,15 @@ function renderEventAnalysis(analysis) {
     else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced" title="fingerprint ${escapeHtml(fr.fingerprint_id)} exists but is not embedded in this file">(origin trace exists, not included here)</div>`;
     else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
     // Progressive disclosure: the compact card carries what a reader needs to
-    // pick a framing (name, question, key claim, carrier count); the rest
-    // waits behind the toggle.
+    // pick a framing (name, question, key claim, WHO is carrying it); the
+    // rest waits behind the toggle. Names beat counts — who is pushing a
+    // framing is the product.
     const nCarriers = (fr.carriers || []).length;
+    const carrierNames = (fr.carriers || []).map(c => (c.name || '').trim()).filter(Boolean);
+    const carriedBy = carrierNames.length
+      ? `<span class="fr-carried">${carrierNames.slice(0, 3).map(n => escapeHtml(truncate(n, 26))).join(', ')}${
+          carrierNames.length > 3 ? ` +${carrierNames.length - 3}` : ''}</span>`
+      : `<span class="fr-count">${nCarriers} carrier${nCarriers === 1 ? '' : 's'}</span>`;
     return `
       <div class="framing-card">
         <div class="fr-head">
@@ -953,7 +979,7 @@ function renderEventAnalysis(analysis) {
           ${fr.question ? `<div class="fr-question">${escapeHtml(fr.question)}</div>` : ''}
           ${fr.key_claim ? `<div class="fr-claim">${escapeHtml(fr.key_claim)}</div>` : ''}
           <div class="fr-meta">
-            <span class="fr-count">${nCarriers} carrier${nCarriers === 1 ? '' : 's'}</span>
+            ${carriedBy}
             <button class="fr-toggle" type="button" aria-expanded="false">▸ details</button>
           </div>
         </div>
@@ -1538,12 +1564,8 @@ function render(fp) {
   ]);
 
   renderOverview(fp);
-  renderLexical(fp);
-  renderConceptual(fp);
-  renderRhetorical(fp);
   renderLineages(fp);
   renderEvidence(fp);
-  renderTaxonomic(fp);
 
   document.querySelectorAll('#tabs button').forEach(btn => {
     btn.onclick = () => switchTab(btn.dataset.tab);
@@ -2014,6 +2036,60 @@ function logRowsHtml(log, grp) {
   }).join('');
 }
 
+// WHO strip: the trace's cast in one line — origin, loudest amplifiers,
+// institutional adopters, pushback — computed from the attestation logs.
+// Names are the product; the reader should never have to open a log to
+// learn who is pushing a narrative.
+function whoStrip(lexLog, conLog) {
+  const all = lexLog.concat(conLog).slice().sort(byDateAsc);
+  const nameOf = i => (i.author || i.source_title || '').trim();
+  const yearOf = i => {
+    const d = String(i.date || '');
+    const y = d.replace(/^-/, '').slice(0, 4).replace(/^0+/, '');
+    return y ? y + (d.startsWith('-') ? ' BCE' : '') : '';
+  };
+  const uniq = list => {
+    const seen = new Set(), out = [];
+    for (const i of list) { const n = nameOf(i); if (n && !seen.has(n)) { seen.add(n); out.push(i); } }
+    return out;
+  };
+  const byRoles = roles => uniq(all.filter(i => roles.includes(i.amplifier_role || '')));
+  const seg = (label, items, max) => {
+    if (!items.length) return '';
+    const shown = items.slice(0, max).map(i => escapeHtml(truncate(nameOf(i), 32)));
+    const more = items.length > max ? ` +${items.length - max}` : '';
+    return `<span class="who-seg"><strong>${label}:</strong> ${shown.join(', ')}${more}</span>`;
+  };
+  const origin = byRoles(['originator']);
+  const originSeg = origin.length
+    ? `<span class="who-seg"><strong>Origin:</strong> ${escapeHtml(truncate(nameOf(origin[0]), 36))}${
+        yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))})</span>` : ''}</span>`
+    : '';
+  const parts = [
+    originSeg,
+    seg('Amplified by', byRoles(['early-amplifier', 'mass-amplifier']), 3),
+    seg('Adopted by', byRoles(['institutional-adoption']), 2),
+    seg('Pushback', byRoles(['critic']), 2),
+  ].filter(Boolean);
+  return parts.length ? `<div class="who-strip">${parts.join('<span class="who-dot"> · </span>')}</div>` : '';
+}
+
+// The narrative's anatomy: dramatic roles, tropes, and domain — the reader-
+// facing remnants of the retired Rhetoric/Category tabs.
+function anatomyStrip(fp) {
+  const v = (fp.rhetorical || {}).valence || {};
+  const tropes = (fp.taxonomic || {}).tropes || [];
+  const domain = (fp.taxonomic || {}).domain || '';
+  const chips = [];
+  if (v.villain) chips.push(`<span class="pill frame">villain — ${escapeHtml(truncate(v.villain, 44))}</span>`);
+  if (v.victim) chips.push(`<span class="pill frame">victim — ${escapeHtml(truncate(v.victim, 44))}</span>`);
+  if (v.hero) chips.push(`<span class="pill frame">hero — ${escapeHtml(truncate(v.hero, 44))}</span>`);
+  tropes.forEach(t => chips.push(`<span class="pill trope">${escapeHtml(t)}</span>`));
+  if (domain && domain !== 'other') chips.push(`<span class="pill domain">${escapeHtml(domain)}</span>`);
+  if (!chips.length) return '';
+  return `<div class="card"><h2>The narrative's anatomy</h2>${chips.join(' ')}</div>`;
+}
+
 function renderOverview(fp) {
   const panel = document.querySelector('[data-panel=overview]');
   const lex = fp.genealogy?.lexical || {};
@@ -2033,9 +2109,12 @@ function renderOverview(fp) {
     <div class="card">
       <h2>Spread over time — ${lexLog.length ? 'this phrasing' : 'the underlying idea'}</h2>
       <svg class="timeline-svg" id="spread-overview"></svg>
+      ${whoStrip(lexLog, conLog)}
       <div class="ms-caveat">Observed sequence of dated attestations from the cited sources — a sparse sample, not a census. Order shows sequence, not influence. Shading: cumulative share of observed attestations. Click a dot for detail.</div>
       <div id="instance-detail-overview"></div>
     </div>
+
+    ${anatomyStrip(fp)}
 
     <div class="card">
       <h2>Milestones — how this narrative traveled</h2>
@@ -2064,91 +2143,6 @@ function renderOverview(fp) {
       if (inst) row.insertAdjacentHTML('afterend', `<div class="log-detail">${instanceDetailHtml(inst)}</div>`);
     });
   });
-}
-
-function renderLexical(fp) {
-  const panel = document.querySelector('[data-panel=lexical]');
-  const l = fp.lexical || {};
-  panel.innerHTML = `
-    <div class="card">
-      <h2>Canonical Phrase</h2>
-      <p style="font-size: 1.1rem;">${escapeHtml(l.canonical_phrase || '')}</p>
-    </div>
-    <div class="card">
-      <h2>Phrase Variants</h2>
-      ${(l.phrase_variants || []).map(v => `<span class="pill">${escapeHtml(v)}</span>`).join('') || '<p class="empty">None</p>'}
-    </div>
-    <details class="collapse">
-      <summary>Search internals — the signatures that drive earliest-use search</summary>
-      <div class="body normal-text">
-        <div class="card">
-          <h2>Diagnostic N-grams</h2>
-          ${(l.diagnostic_ngrams || []).map(n => `<span class="pill diagnostic">${escapeHtml(n)}</span>`).join('') || '<p class="empty">None</p>'}
-        </div>
-        <div class="card">
-          <h2>Stopword-stripped Signature</h2>
-          <code>${escapeHtml(l.stopword_stripped_signature || '')}</code>
-        </div>
-      </div>
-    </details>
-  `;
-}
-
-function renderConceptual(fp) {
-  const panel = document.querySelector('[data-panel=conceptual]');
-  const c = fp.conceptual || {};
-  const ent = c.entities || {};
-  panel.innerHTML = `
-    <div class="card">
-      <h2>Claim Predicate</h2>
-      <p style="font-size: 1.05rem;">${escapeHtml(c.claim_predicate || '')}</p>
-    </div>
-    <div class="card">
-      <h2>Causal Structure</h2>
-      <p>${escapeHtml(c.causal_structure || '')}</p>
-    </div>
-    <div class="card">
-      <h2>Entities</h2>
-      ${Object.keys(ent).length ? `<div class="entity-grid">
-        ${Object.entries(ent).map(([k, v]) => `
-          <div>
-            <div class="label">${escapeHtml(k)}</div>
-            <div class="value">${escapeHtml(v)}</div>
-          </div>
-        `).join('')}
-      </div>` : '<p class="empty">None extracted</p>'}
-    </div>
-  `;
-}
-
-function renderRhetorical(fp) {
-  const panel = document.querySelector('[data-panel=rhetorical]');
-  const r = fp.rhetorical || {};
-  const v = r.valence || {};
-  const hasContent = (r.frame_primitives || []).length || v.villain || v.victim || v.hero
-                     || r.epistemic_stance || r.register;
-  panel.innerHTML = `
-    ${!hasContent ? '<div class="card"><p class="empty">Rhetorical framing was not generated for this trace.</p></div>' : ''}
-    <div class="card">
-      <h2>Frame Primitives</h2>
-      ${(r.frame_primitives || []).map(p => `<span class="pill frame">${escapeHtml(p)}</span>`).join('') || '<p class="empty">None</p>'}
-    </div>
-    <div class="card">
-      <h2>Valence</h2>
-      <div class="entity-grid">
-        <div><div class="label">Villain</div><div class="value">${escapeHtml(v.villain || '—')}</div></div>
-        <div><div class="label">Victim</div><div class="value">${escapeHtml(v.victim || '—')}</div></div>
-        <div><div class="label">Hero</div><div class="value">${escapeHtml(v.hero || '—')}</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Tone</h2>
-      <div class="entity-grid">
-        <div><div class="label">Epistemic stance</div><div class="value">${escapeHtml(r.epistemic_stance || '—')}</div></div>
-        <div><div class="label">Register</div><div class="value">${escapeHtml(r.register || '—')}</div></div>
-      </div>
-    </div>
-  `;
 }
 
 function renderLineages(fp) {
@@ -2466,25 +2460,6 @@ function renderEvidenceCard(s) {
       ${(verifyBadge(s) || archiveBadge(s) || provenanceBadge(s)) ? `<div style="margin-bottom:0.4rem;">${provenanceBadge(s)}${verifyBadge(s)}${archiveBadge(s)}</div>` : ''}
       ${s.source_url ? `<div class="ev-link"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">↗ ${escapeHtml(s.source_url)}</a></div>` : ''}
     </div>
-  `;
-}
-
-function renderTaxonomic(fp) {
-  const panel = document.querySelector('[data-panel=taxonomic]');
-  const t = fp.taxonomic || {};
-  panel.innerHTML = `
-    <div class="card">
-      <h2>Domain</h2>
-      <span class="pill domain" title="AI classification confidence: ${t.domain_confidence ?? 0}">${escapeHtml(t.domain || 'other')}</span>
-    </div>
-    <div class="card">
-      <h2>Tropes</h2>
-      ${(t.tropes || []).map(tp => `<span class="pill trope">${escapeHtml(tp)}</span>`).join('') || '<p class="empty">None invoked</p>'}
-    </div>
-    ${(t.inductive_cluster_ids || []).length ? `<div class="card">
-      <h2>Cross-narrative clusters</h2>
-      ${(t.inductive_cluster_ids || []).map(c => `<span class="pill">${escapeHtml(c)}</span>`).join('')}
-    </div>` : ''}
   `;
 }
 

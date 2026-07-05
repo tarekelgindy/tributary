@@ -3,113 +3,146 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tributary — example traces</title>
+<title>Tributary — see where narratives come from</title>
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
          margin: 0; background: #f7f6f3; color: #222; line-height: 1.55; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
-  h1 { font-size: 1.7rem; margin: 0 0 0.3rem; }
-  .tagline { color: #555; margin: 0 0 0.4rem; font-size: 1.02rem; }
-  .nolabel { color: #777; font-size: 0.88rem; margin: 0 0 2rem; }
-  .nolabel a { color: #2a6fa3; text-decoration: none; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 2.8rem 1.2rem 4rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+  .tagline { color: #444; margin: 0 0 0.4rem; font-size: 1.08rem; }
+  .nolabel { color: #777; font-size: 0.88rem; margin: 0 0 2.2rem; }
+  .nolabel a, a.plain { color: #2a6fa3; text-decoration: none; }
   h2 { font-size: 0.82rem; font-weight: 600; color: #555; text-transform: uppercase;
-       letter-spacing: 0.07em; margin: 2rem 0 0.8rem; }
-  .card { display: block; background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+       letter-spacing: 0.07em; margin: 2.4rem 0 0.8rem; }
+
+  .card { display: block; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px;
           padding: 1rem 1.2rem; margin-bottom: 0.8rem; text-decoration: none; color: inherit;
           transition: border-color 0.15s, box-shadow 0.15s; }
-  .card:hover { border-color: #888; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
-  .card .kind { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em;
-                padding: 0.12rem 0.5rem; border-radius: 3px; color: #fff; margin-right: 0.5rem; }
+  a.card:hover { border-color: #888; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+  .kind { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em;
+          padding: 0.12rem 0.5rem; border-radius: 3px; color: #fff; margin-right: 0.5rem; }
   .kind.up { background: #2a6fa3; }
   .kind.down { background: #5a4b8a; }
   .card .title { font-weight: 600; font-size: 1.02rem; }
   .card p { margin: 0.45rem 0 0; color: #555; font-size: 0.9rem; }
-  .links { margin-top: 2.2rem; padding-top: 1.2rem; border-top: 1px solid #e5e5e5;
+
+  /* hero example card */
+  .hero { border: 1px solid #dcdad2; border-radius: 12px; background: #fff;
+          padding: 1.3rem 1.4rem 1rem; margin: 0 0 0.6rem; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+  .hero .kicker { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+                  text-transform: uppercase; color: #999; margin-bottom: 0.45rem; }
+  .hero .claim { font-size: 1.35rem; font-weight: 650; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
+  .hero .who { color: #444; font-size: 0.92rem; margin: 0 0 0.9rem; }
+  .hero .who strong { font-weight: 600; }
+  .hero svg { display: block; width: 100%; }
+  .hero .tick { fill: #999; font-size: 11px; }
+  .hero .mslabel { fill: #222; font-size: 11.5px; font-weight: 600; }
+  .hero .foot { border-top: 1px solid #eee; margin-top: 0.8rem; padding-top: 0.6rem;
+                display: flex; justify-content: space-between; font-size: 0.82rem; color: #888; }
+  .hero .foot a { color: #2a6fa3; text-decoration: none; font-weight: 600; }
+  .herounder { color: #777; font-size: 0.85rem; margin: 0 0 0.4rem; }
+
+  .weekcard { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem 1.2rem; }
+  .weekcard .wtitle { font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
+  .weekcard p { color: #555; font-size: 0.9rem; margin: 0.3rem 0 0.7rem; }
+  .chips a { display: inline-block; background: #f0eee8; border-radius: 20px; padding: 0.3rem 0.85rem;
+             margin: 0 0.4rem 0.45rem 0; font-size: 0.84rem; color: #2a6fa3; text-decoration: none; }
+  .chips a:hover { background: #e6e3da; }
+
+  .links { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid #e5e5e5;
            color: #666; font-size: 0.9rem; }
   .links a { color: #2a6fa3; text-decoration: none; }
   footer { margin-top: 2rem; color: #999; font-size: 0.8rem; }
+  footer a { color: #2a6fa3; text-decoration: none; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Tributary</h1>
-  <p class="tagline">See where information on the internet really comes from — and how it spreads.
-     Every trace below is real, unedited pipeline output: where a narrative originated, who amplified it,
-     what framings formed around an event, and what each one leaves out.</p>
-  <p class="nolabel">Tributary never labels claims true or false — it shows provenance you can verify yourself.
-     How each layer is produced, and its known limits: <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a> ·
+  <p class="tagline">See where a narrative comes from — who said it first, who spread it,
+     and what it leaves out.</p>
+  <p class="nolabel">Tributary traces narratives across the internet and shows the receipts — news events,
+     political framings, folk claims. It never labels claims true or false; it shows provenance you can verify.
+     <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a> ·
      <a href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md">corrections log</a></p>
 
-  <h2>Upstream — where did this narrative come from?</h2>
+  <div class="hero">
+    <div class="kicker">A narrative trace</div>
+    <div class="claim">“Chewing gum stays in your stomach for years.”</div>
+    <div class="who"><strong>Idea first attested:</strong> Hippocratic-era medicine ·
+      <strong>This phrasing:</strong> a 1993 newspaper column ·
+      <strong>Carried since by:</strong> parenting guides, chain emails, listicles ·
+      <strong>Pushback:</strong> pediatric literature, fact-checkers</div>
+    <svg viewBox="0 0 700 108" role="img" aria-label="Timeline: the swallowed-gum idea from roughly 400 CE to 2026">
+      <line x1="36" x2="664" y1="76" y2="76" stroke="#c9c7bf" stroke-width="1"/>
+      <text x="36" y="94" class="tick">~400 CE</text>
+      <text x="350" y="94" class="tick" text-anchor="middle">1500</text>
+      <text x="664" y="94" class="tick" text-anchor="end">today</text>
+      <!-- dots: 400, 1000, 1543, 1848, then the modern cluster -->
+      <circle cx="40" cy="62" r="6.5" fill="#1c4d74" stroke="#fff" stroke-width="2"/>
+      <circle cx="266" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="472" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="588" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="646" cy="62" r="6.5" fill="#1c4d74" stroke="#fff" stroke-width="2"/>
+      <circle cx="654" cy="50" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="647" cy="38" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="655" cy="26" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
+      <text x="52" y="40" class="mslabel">Hippocratic-era medicine</text>
+      <text x="640" y="12" class="mslabel" text-anchor="end">1993 → still circulating</text>
+    </svg>
+    <div class="foot">
+      <span>37 recorded uses across ~1,600 years · AI-traced, not human-reviewed</span>
+      <a href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json">open the full trace →</a>
+    </div>
+  </div>
+  <p class="herounder">Every trace looks like this: who originated it, who amplified it, how it mutated,
+     and the evidence on every hop. Politics gets the same treatment — so do folk claims like this one.</p>
+
+  <h2>This week in narratives — issue #1</h2>
+  <div class="weekcard">
+    <div class="wtitle">June 28 – July 5: the birthright ruling, a $1B crypto disclosure, and a
+      16-year-old talking point</div>
+    <p>Built from 27 automated captures of 36 outlets: the week's shared agenda, what each front page led
+       with, which stories only one side carried — and the "birth tourism loophole" framing traced back
+       to a 2010 call-in debate.</p>
+    <div class="chips">
+      <a href="fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json">The birthright ruling — 5 framings, all traced</a>
+      <a href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json">Trump's crypto disclosure — 8 framings</a>
+      <a href="https://github.com/tarekelgindy/tributary/blob/main/digests/issue-01.md">Read the full issue →</a>
+    </div>
+  </div>
+
+  <h2>More traces</h2>
 
   <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_rigged_economy.json">
-    <span class="kind up">fingerprint</span><span class="title">“The economy is rigged against working people”</span>
-    <p>The dual-lineage demo: the <em>phrasing</em> traces through recent US politics, while the underlying
-       <em>idea</em> traces back through centuries of economic thought — two timelines, side by side.
-       With a 15-source evidence landscape and observed social-media spread.</p>
+    <span class="kind up">where it came from</span><span class="title">“The economy is rigged against working people”</span>
+    <p>The phrasing runs through three decades of US politics; the underlying idea runs back centuries —
+       two timelines, with the amplifiers, mutations, and evidence on each.</p>
   </a>
-
-  <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json">
-    <span class="kind up">fingerprint</span><span class="title">“Chewing gum stays in your stomach for years”</span>
-    <p>A decades-old folk claim. The genealogy reaches back to pre-modern medicine and includes both the
-       claim’s spreaders and the medical literature and fact-checkers that dispute it — recorded, not adjudicated.</p>
-  </a>
-
-  <h2>Downstream — what narratives formed around an event?</h2>
 
   <a class="card" href="fingerprint_viewer.html?load=examples/event_platner_allegations.json">
-    <span class="kind down">event analysis</span><span class="title">Misconduct allegations against a Senate candidate</span>
-    <p>Eight competing framings of one contested US story, the common ground beneath them, who carries each —
-       and a coverage backdrop spanning the outlet spectrum (15 rated outlets).</p>
+    <span class="kind down">how an event split</span><span class="title">Misconduct allegations against a Senate candidate</span>
+    <p>Eight competing framings of one contested story: the common ground beneath them, and who carries each.</p>
   </a>
 
   <a class="card" href="fingerprint_viewer.html?load=examples/event_gaza_airstrikes.json">
-    <span class="kind down">event analysis</span><span class="title">Israeli airstrikes in Gaza</span>
-    <p>An international story where a US left/right axis doesn’t map. The coalition view shows the real
-       structure of the coverage; the US-centric ratings backdrop honestly reports it can’t judge skew here.</p>
+    <span class="kind down">how an event split</span><span class="title">Israeli airstrikes in Gaza</span>
+    <p>An international story where a US left/right axis doesn't map — the coalition view shows the real
+       structure of the coverage.</p>
   </a>
-
-  <a class="card" href="fingerprint_viewer.html?load=examples/event_house_war_powers.json">
-    <span class="kind down">event analysis</span><span class="title">House vote on Iran war powers</span>
-    <p>The largest actor coalition in the corpus — 30+ officials, outlets, and institutions across eight
-       framings of one congressional vote.</p>
-  </a>
-
-  <h2 id="corpus-heading" hidden>Full corpus — every published event analysis</h2>
-  <div id="corpus-list"></div>
 
   <div class="links">
-    <strong>Use it yourself:</strong> the viewer is one dependency-free HTML file; analyses are plain JSON.
+    <strong>Go deeper:</strong>
+    <a href="corpus.html">browse all published traces</a> ·
     <a href="https://github.com/tarekelgindy/tributary">GitHub repo</a> ·
     <a href="https://github.com/tarekelgindy/tributary/blob/main/INTRO.md">plain-language intro</a> ·
-    <a href="https://github.com/tarekelgindy/tributary/blob/main/README.md">full README</a> ·
     <a href="https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md">roadmap</a>
   </div>
   <footer>All analyses are AI-generated and labeled as such on every page; none are yet human-reviewed.
     Spotted an error or an earlier use of a narrative?
     <a href="https://github.com/tarekelgindy/tributary/issues/new/choose">Suggest a correction</a>.</footer>
 </div>
-<script>
-// Corpus list: rendered from gallery/index.json (written by publish.py).
-// Graceful no-op if the gallery hasn't been published yet.
-fetch('gallery/index.json')
-  .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-  .then(idx => {
-    const entries = idx.entries || [];
-    if (!entries.length) return;
-    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
-      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    document.getElementById('corpus-heading').hidden = false;
-    document.getElementById('corpus-list').innerHTML = entries.map(e => `
-      <a class="card" href="fingerprint_viewer.html?load=gallery/events/${esc(e.id)}.json">
-        <span class="kind down">event analysis</span><span class="title">${esc(e.event)}</span>
-        <p>${e.event_date ? esc(String(e.event_date).slice(0, 10)) + ' · ' : ''}${e.n_framings} framings${
-          e.n_actors ? ' · ' + e.n_actors + ' actors' : ''}${e.skew ? ' · coverage: ' + esc(e.skew) : ''}</p>
-      </a>`).join('');
-  })
-  .catch(() => {});
-</script>
 </body>
 </html>
