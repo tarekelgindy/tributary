@@ -1559,7 +1559,11 @@ def compute_timeline_stats(lineage: "LineageRecord") -> dict:
     peak year, and milestone latencies (originator -> first mass amplifier
     / first institutional adoption / first critic). Empty dict if the
     chain has no parseable dates."""
-    log = lineage.attestation_log or []
+    # related-context material is background, not the lineage — it must not
+    # stretch the active span or seed milestone latencies (living-memory
+    # rule, 2026-07-05)
+    log = [i for i in (lineage.attestation_log or [])
+           if getattr(i, "claim_relation", "") != "related-context"]
     if not log:
         return {}
 

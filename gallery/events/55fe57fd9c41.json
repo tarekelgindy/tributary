@@ -1782,7 +1782,7 @@
             },
             "instances_per_year_by_role": {
               "2018": {
-                "originator": 1
+                "critic": 1
               },
               "2025": {
                 "early-amplifier": 4
@@ -1797,9 +1797,9 @@
             },
             "peak_year": "2026",
             "peak_year_count": 10,
-            "originator_to_mass_amplifier_days": 2710,
-            "originator_to_institutional_adoption_days": 2800,
-            "originator_to_critic_days": 2803,
+            "originator_to_mass_amplifier_days": null,
+            "originator_to_institutional_adoption_days": null,
+            "originator_to_critic_days": null,
             "days_since_latest": 2
           },
           "social_spread": [],
@@ -3383,24 +3383,23 @@
                 "originator": 1
               },
               "2015": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2016": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2020": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2021": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2026": {
-                "originator": 2,
+                "early-amplifier": 4,
                 "mass-amplifier": 3,
                 "institutional-adoption": 2,
                 "mention": 2,
-                "critic": 2,
-                "early-amplifier": 2
+                "critic": 2
               }
             },
             "peak_year": "2026",
@@ -4588,8 +4587,7 @@
               },
               "2026": {
                 "unknown": 1,
-                "originator": 1,
-                "early-amplifier": 3,
+                "early-amplifier": 4,
                 "mass-amplifier": 3,
                 "institutional-adoption": 4,
                 "mention": 1
@@ -5472,10 +5470,10 @@
                 "originator": 1
               },
               "2007": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2009": {
-                "originator": 1
+                "early-amplifier": 1
               },
               "2023": {
                 "early-amplifier": 1

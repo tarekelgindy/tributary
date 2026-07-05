@@ -840,7 +840,7 @@
             "critic": 1
           },
           "2015": {
-            "institutional-adoption": 1
+            "critic": 1
           },
           "2016": {
             "mass-amplifier": 1
@@ -2463,14 +2463,12 @@
         }
       ],
       "timeline_stats": {
-        "active_from": "1848-01-01",
+        "active_from": "1900-01-01",
         "active_through": "2026-01-18",
-        "active_span_days": 65031,
-        "years_active": 178,
-        "years_with_activity": 20,
+        "active_span_days": 46038,
+        "years_active": 126,
+        "years_with_activity": 18,
         "instances_per_year": {
-          "1848": 1,
-          "1869": 1,
           "1900": 1,
           "1982": 1,
           "1989": 1,
@@ -2491,12 +2489,6 @@
           "2026": 1
         },
         "instances_per_year_by_role": {
-          "1848": {
-            "originator": 1
-          },
-          "1869": {
-            "early-amplifier": 1
-          },
           "1900": {
             "early-amplifier": 1
           },
@@ -2517,7 +2509,7 @@
             "critic": 1
           },
           "2007": {
-            "mass-amplifier": 1
+            "critic": 1
           },
           "2009": {
             "mass-amplifier": 1
@@ -2538,7 +2530,7 @@
             "early-amplifier": 1
           },
           "2021": {
-            "mass-amplifier": 1,
+            "critic": 1,
             "early-amplifier": 1
           },
           "2022": {
@@ -2548,7 +2540,7 @@
             "mass-amplifier": 1
           },
           "2024": {
-            "mass-amplifier": 1
+            "critic": 1
           },
           "2026": {
             "critic": 1
@@ -2556,9 +2548,9 @@
         },
         "peak_year": "1993",
         "peak_year_count": 2,
-        "originator_to_mass_amplifier_days": 53106,
-        "originator_to_institutional_adoption_days": 54999,
-        "originator_to_critic_days": 55883,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
         "days_since_latest": 168
       },
       "social_spread": [],

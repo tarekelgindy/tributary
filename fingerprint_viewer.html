@@ -1651,17 +1651,19 @@ function switchTab(name) {
     s.hidden = s.dataset.panel !== name);
   // Redraw timelines on activation; SVG clientWidth is 0 while hidden, so
   // we have to draw after the panel is visible.
+  // related-context entries stay in the LOG but never on the timelines —
+  // an ancient context dot would stretch the axis and read as the origin.
   if (name === 'overview' && currentFP) {
-    const lex = currentFP.genealogy?.lexical?.attestation_log || [];
-    const con = currentFP.genealogy?.conceptual?.attestation_log || [];
+    const lex = (currentFP.genealogy?.lexical?.attestation_log || []).filter(i => !isRelatedContext(i));
+    const con = (currentFP.genealogy?.conceptual?.attestation_log || []).filter(i => !isRelatedContext(i));
     const markers = milestoneMarkers(currentFP);
     requestAnimationFrame(() => {
       drawSpreadTimeline('spread-overview', lex.length ? lex : con, markers);
     });
   }
   if (name === 'lineages' && currentFP) {
-    const lex = currentFP.genealogy?.lexical?.attestation_log || [];
-    const con = currentFP.genealogy?.conceptual?.attestation_log || [];
+    const lex = (currentFP.genealogy?.lexical?.attestation_log || []).filter(i => !isRelatedContext(i));
+    const con = (currentFP.genealogy?.conceptual?.attestation_log || []).filter(i => !isRelatedContext(i));
     const lexStats = currentFP.genealogy?.lexical?.timeline_stats || {};
     const conStats = currentFP.genealogy?.conceptual?.timeline_stats || {};
     const markers = milestoneMarkers(currentFP);
