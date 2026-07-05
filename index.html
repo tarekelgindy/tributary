@@ -1,320 +1,849 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tributary — see where narratives come from</title>
-<style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         margin: 0; background: #f7f6f3; color: #222; line-height: 1.55; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 2.8rem 1.2rem 4rem; }
-  h1 { font-size: 1.9rem; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
-  .tagline { color: #444; margin: 0 0 0.4rem; font-size: 1.08rem; }
-  .nolabel { color: #777; font-size: 0.88rem; margin: 0 0 2.2rem; }
-  .nolabel a, a.plain { color: #2a6fa3; text-decoration: none; }
-  h2 { font-size: 0.82rem; font-weight: 600; color: #555; text-transform: uppercase;
-       letter-spacing: 0.07em; margin: 2.4rem 0 0.8rem; }
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Tributary — see where narratives come from</title>
+        <style>
+            :root {
+                color-scheme: light;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    sans-serif;
+                margin: 0;
+                background: #f7f6f3;
+                color: #222;
+                line-height: 1.55;
+            }
+            .wrap {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 2.8rem 1.2rem 4rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+                margin: 0 0 0.35rem;
+                letter-spacing: -0.01em;
+            }
+            .tagline {
+                color: #444;
+                margin: 0 0 0.4rem;
+                font-size: 1.08rem;
+            }
+            .nolabel {
+                color: #777;
+                font-size: 0.88rem;
+                margin: 0 0 2.2rem;
+            }
+            .nolabel a,
+            a.plain {
+                color: #2a6fa3;
+                text-decoration: none;
+            }
+            h2 {
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: 0.07em;
+                margin: 2.4rem 0 0.8rem;
+            }
 
-  .card { display: block; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px;
-          padding: 1rem 1.2rem; margin-bottom: 0.8rem; text-decoration: none; color: inherit;
-          transition: border-color 0.15s, box-shadow 0.15s; }
-  a.card:hover { border-color: #888; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
-  .kind { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em;
-          padding: 0.12rem 0.5rem; border-radius: 3px; color: #fff; margin-right: 0.5rem; }
-  .kind.up { background: #2a6fa3; }
-  .kind.down { background: #5a4b8a; }
-  .card .title { font-weight: 600; font-size: 1.02rem; }
-  .card p { margin: 0.45rem 0 0; color: #555; font-size: 0.9rem; }
+            .card {
+                display: block;
+                background: #fff;
+                border: 1px solid #e5e5e5;
+                border-radius: 10px;
+                padding: 1rem 1.2rem;
+                margin-bottom: 0.8rem;
+                text-decoration: none;
+                color: inherit;
+                transition:
+                    border-color 0.15s,
+                    box-shadow 0.15s;
+            }
+            a.card:hover {
+                border-color: #888;
+                box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+            }
+            .kind {
+                font-size: 0.66rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                padding: 0.12rem 0.5rem;
+                border-radius: 3px;
+                color: #fff;
+                margin-right: 0.5rem;
+            }
+            .kind.up {
+                background: #2a6fa3;
+            }
+            .kind.down {
+                background: #5a4b8a;
+            }
+            .card .title {
+                font-weight: 600;
+                font-size: 1.02rem;
+            }
+            .card p {
+                margin: 0.45rem 0 0;
+                color: #555;
+                font-size: 0.9rem;
+            }
 
-  /* hero example card */
-  .hero { border: 1px solid #dcdad2; border-radius: 12px; background: #fff;
-          padding: 1.3rem 1.4rem 1rem; margin: 0 0 0.6rem; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
-  .hero .kicker { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
-                  text-transform: uppercase; color: #999; margin-bottom: 0.45rem; }
-  .hero .claim { font-size: 1.35rem; font-weight: 650; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
-  .hero .who { color: #444; font-size: 0.92rem; margin: 0 0 0.9rem; }
-  .hero .who strong { font-weight: 600; }
-  .hero svg { display: block; width: 100%; }
-  .hero .tick { fill: #999; font-size: 11px; }
-  .hero .mslabel { fill: #222; font-size: 11.5px; font-weight: 600; }
-  .hero .foot { border-top: 1px solid #eee; margin-top: 0.8rem; padding-top: 0.6rem;
-                display: flex; justify-content: space-between; font-size: 0.82rem; color: #888; }
-  .hero .foot a { color: #2a6fa3; text-decoration: none; font-weight: 600; }
-  .herounder { color: #777; font-size: 0.85rem; margin: 0 0 0.4rem; }
+            /* hero example card */
+            .hero {
+                border: 1px solid #dcdad2;
+                border-radius: 12px;
+                background: #fff;
+                padding: 1.3rem 1.4rem 1rem;
+                margin: 0 0 0.6rem;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            }
+            .hero .kicker {
+                font-size: 0.68rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #999;
+                margin-bottom: 0.45rem;
+            }
+            .hero .claim {
+                font-size: 1.35rem;
+                font-weight: 650;
+                margin: 0 0 0.35rem;
+                letter-spacing: -0.01em;
+            }
+            .hero .who {
+                color: #444;
+                font-size: 0.92rem;
+                margin: 0 0 0.9rem;
+            }
+            .hero .who strong {
+                font-weight: 600;
+            }
+            .hero svg {
+                display: block;
+                width: 100%;
+            }
+            .hero .tick {
+                fill: #999;
+                font-size: 11px;
+            }
+            .hero .mslabel {
+                fill: #222;
+                font-size: 11.5px;
+                font-weight: 600;
+            }
+            .hero .foot {
+                border-top: 1px solid #eee;
+                margin-top: 0.8rem;
+                padding-top: 0.6rem;
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.82rem;
+                color: #888;
+            }
+            .hero .foot a {
+                color: #2a6fa3;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            .herounder {
+                color: #777;
+                font-size: 0.85rem;
+                margin: 0 0 0.4rem;
+            }
 
-  /* the question box — ask your own question, get a trace or request one */
-  .askbox { display: flex; gap: 0.5rem; margin: 0 0 0.4rem; }
-  .askbox input { flex: 1; padding: 0.65rem 0.9rem; font-size: 0.95rem; border: 1px solid #ccc;
-                  border-radius: 8px; background: #fff; font-family: inherit; }
-  .askbox input:focus { outline: 2px solid #2a6fa3; border-color: #2a6fa3; }
-  .askbox button { padding: 0.65rem 1.2rem; font-size: 0.9rem; border: none; border-radius: 8px;
-                   background: #2a6fa3; color: #fff; cursor: pointer; }
-  .askbox button:hover { background: #1c5580; }
-  .asknote { color: #999; font-size: 0.78rem; margin: 0 0 1.6rem; }
-  #askresults { margin: 0 0 1.6rem; }
-  #askresults .card { margin-bottom: 0.5rem; padding: 0.7rem 1rem; }
-  .askmiss { background: #f4f3ef; border-radius: 10px; padding: 0.9rem 1.1rem; font-size: 0.92rem;
-             color: #444; }
-  .askmiss a { color: #2a6fa3; font-weight: 600; text-decoration: none; }
+            /* the question box — ask your own question, get a trace or request one */
+            .askbox {
+                display: flex;
+                gap: 0.5rem;
+                margin: 0 0 0.4rem;
+            }
+            .askbox input {
+                flex: 1;
+                padding: 0.65rem 0.9rem;
+                font-size: 0.95rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background: #fff;
+                font-family: inherit;
+            }
+            .askbox input:focus {
+                outline: 2px solid #2a6fa3;
+                border-color: #2a6fa3;
+            }
+            .askbox button {
+                padding: 0.65rem 1.2rem;
+                font-size: 0.9rem;
+                border: none;
+                border-radius: 8px;
+                background: #2a6fa3;
+                color: #fff;
+                cursor: pointer;
+            }
+            .askbox button:hover {
+                background: #1c5580;
+            }
+            .asknote {
+                color: #999;
+                font-size: 0.78rem;
+                margin: 0 0 1.6rem;
+            }
+            #askresults {
+                margin: 0 0 1.6rem;
+            }
+            #askresults .card {
+                margin-bottom: 0.5rem;
+                padding: 0.7rem 1rem;
+            }
+            .askmiss {
+                background: #f4f3ef;
+                border-radius: 10px;
+                padding: 0.9rem 1.1rem;
+                font-size: 0.92rem;
+                color: #444;
+            }
+            .askmiss a {
+                color: #2a6fa3;
+                font-weight: 600;
+                text-decoration: none;
+            }
 
-  .weekcard { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem 1.2rem; }
-  .weekcard .wtitle { font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
-  .weekcard p { color: #555; font-size: 0.9rem; margin: 0.3rem 0 0.7rem; }
-  .chips a { display: inline-block; background: #f0eee8; border-radius: 20px; padding: 0.3rem 0.85rem;
-             margin: 0 0.4rem 0.45rem 0; font-size: 0.84rem; color: #2a6fa3; text-decoration: none; }
-  .chips a:hover { background: #e6e3da; }
+            .weekcard {
+                background: #fff;
+                border: 1px solid #e5e5e5;
+                border-radius: 10px;
+                padding: 1rem 1.2rem;
+            }
+            .weekcard .wtitle {
+                font-weight: 600;
+                font-size: 1.02rem;
+                margin-bottom: 0.3rem;
+            }
+            .weekcard p {
+                color: #555;
+                font-size: 0.9rem;
+                margin: 0.3rem 0 0.7rem;
+            }
+            .chips a {
+                display: inline-block;
+                background: #f0eee8;
+                border-radius: 20px;
+                padding: 0.3rem 0.85rem;
+                margin: 0 0.4rem 0.45rem 0;
+                font-size: 0.84rem;
+                color: #2a6fa3;
+                text-decoration: none;
+            }
+            .chips a:hover {
+                background: #e6e3da;
+            }
 
-  .links { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid #e5e5e5;
-           color: #666; font-size: 0.9rem; }
-  .links a { color: #2a6fa3; text-decoration: none; }
-  footer { margin-top: 2rem; color: #999; font-size: 0.8rem; }
-  footer a { color: #2a6fa3; text-decoration: none; }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h1>Tributary</h1>
-  <p class="tagline">See where a narrative comes from — who said it first, who spread it,
-     and what it leaves out.</p>
-  <p class="nolabel">Tributary traces narratives across the internet and shows the receipts — news events,
-     political framings, folk claims. It never labels claims true or false; it shows provenance you can verify.
-     <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a> ·
-     <a href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md">corrections log</a></p>
+            .links {
+                margin-top: 2.4rem;
+                padding-top: 1.2rem;
+                border-top: 1px solid #e5e5e5;
+                color: #666;
+                font-size: 0.9rem;
+            }
+            .links a {
+                color: #2a6fa3;
+                text-decoration: none;
+            }
+            footer {
+                margin-top: 2rem;
+                color: #999;
+                font-size: 0.8rem;
+            }
+            footer a {
+                color: #2a6fa3;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>Tributary</h1>
+            <p class="tagline">
+                See where a narrative comes from — who said it first, who spread
+                it, and what it leaves out.
+            </p>
+            <p class="nolabel">
+                Tributary traces narratives across the internet and shows the
+                receipts — news events, political framings, folk claims. It
+                never labels claims true or false; it shows provenance you can
+                verify.
+                <a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md"
+                    >methodology</a
+                >
+                ·
+                <a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md"
+                    >corrections log</a
+                >
+            </p>
 
-  <div class="askbox">
-    <input id="ask" type="search"
-           placeholder="Where does a narrative come from? Paste a claim, a phrase, or an event…"
-           aria-label="Search traces">
-    <button id="askbtn">Search traces</button>
-  </div>
-  <p class="asknote">Claims and phrases get an <strong>origin trace</strong> (who said it first, who spread
-     it); events get a <strong>framing map</strong> (how coverage split). If we haven't traced yours yet,
-     request it — generation usually takes 5–10 minutes (daily capacity is capped; overflow runs the
-     next day).</p>
-  <div id="askresults" hidden></div>
+            <div class="askbox">
+                <input
+                    id="ask"
+                    type="search"
+                    placeholder="Where does a narrative come from? Paste a claim, a phrase, or an event…"
+                    aria-label="Search traces"
+                />
+                <button id="askbtn">Search traces</button>
+            </div>
+            <p class="asknote">
+                Claims and phrases get an <strong>origin trace</strong> (who
+                said it first, who spread it); events get a
+                <strong>framing map</strong> (how coverage split). If we haven't
+                traced yours yet, request it — generation usually takes 5–10
+                minutes (daily capacity is capped; overflow runs the next day).
+            </p>
+            <div id="askresults" hidden></div>
 
-  <div class="hero">
-    <div class="kicker">A narrative trace</div>
-    <div class="claim">“Chewing gum stays in your stomach for years.”</div>
-    <div class="who"><strong>First recorded:</strong> Minneapolis Star Tribune, 1993
-      <span style="color:#999;">(documented by Snopes)</span> ·
-      <strong>Carried by:</strong> Los Angeles Times, The Washington Post ·
-      <strong>Examined by:</strong> Snopes, Scientific American, Healthline, McGill University</div>
-    <svg viewBox="0 0 700 108" role="img" aria-label="Timeline: 13 recorded uses of the swallowed-gum claim, 1993 to 2019, plus 12 social-media sightings through 2026">
-      <line x1="36" x2="664" y1="76" y2="76" stroke="#c9c7bf" stroke-width="1"/>
-      <text x="36" y="94" class="tick">1993</text>
-      <text x="258" y="94" class="tick" text-anchor="middle">2005</text>
-      <text x="443" y="94" class="tick" text-anchor="middle">2015</text>
-      <text x="664" y="94" class="tick" text-anchor="end">today</text>
-      <!-- 13 dated attestations (articles), then social sightings (outlined) -->
-      <circle cx="43" cy="62" r="6.5" fill="#1c4d74" stroke="#fff" stroke-width="2"/>
-      <circle cx="49" cy="50" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="128" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="139" cy="50" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="176" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="258" cy="62" r="6.5" fill="#1c4d74" stroke="#fff" stroke-width="2"/>
-      <circle cx="309" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="349" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="356" cy="50" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="450" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="468" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="509" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="532" cy="62" r="4.5" fill="#2a6fa3" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="603" cy="62" r="4" fill="none" stroke="#2a6fa3" stroke-width="1.5"/>
-      <circle cx="618" cy="62" r="4" fill="none" stroke="#2a6fa3" stroke-width="1.5"/>
-      <circle cx="635" cy="62" r="4" fill="none" stroke="#2a6fa3" stroke-width="1.5"/>
-      <circle cx="654" cy="62" r="4" fill="none" stroke="#2a6fa3" stroke-width="1.5"/>
-      <text x="36" y="38" class="mslabel">First recorded — Star Tribune, 1993</text>
-      <text x="258" y="14" class="mslabel" text-anchor="middle">Fact-checks take it up — Snopes, 2005</text>
-      <text x="664" y="38" class="mslabel" text-anchor="end">still circulating</text>
-    </svg>
-    <div class="foot">
-      <span>13 recorded uses 1993–2019 · 12 social sightings 2023–2026 · AI-traced, not human-reviewed</span>
-      <a href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json">open the full trace →</a>
-    </div>
-  </div>
-  <p class="herounder">Every trace looks like this: who originated it, who amplified it, how it mutated,
-     and the evidence on every hop. Politics gets the same treatment — so do folk claims like this one.</p>
+            <div class="hero">
+                <div class="kicker">A narrative trace</div>
+                <div class="claim">
+                    “Chewing gum stays in your stomach for years.”
+                </div>
+                <div class="who">
+                    <strong>First recorded:</strong> Minneapolis Star Tribune,
+                    1993
+                    <span style="color: #999">(documented by Snopes)</span> ·
+                    <strong>Carried by:</strong> Los Angeles Times, The
+                    Washington Post · <strong>Examined by:</strong> Snopes,
+                    Scientific American, Healthline, McGill University
+                </div>
+                <svg
+                    viewBox="0 0 700 108"
+                    role="img"
+                    aria-label="Timeline: 13 recorded uses of the swallowed-gum claim, 1993 to 2019, plus 12 social-media sightings through 2026"
+                >
+                    <line
+                        x1="36"
+                        x2="664"
+                        y1="76"
+                        y2="76"
+                        stroke="#c9c7bf"
+                        stroke-width="1"
+                    />
+                    <text x="36" y="94" class="tick">1993</text>
+                    <text x="258" y="94" class="tick" text-anchor="middle">
+                        2005
+                    </text>
+                    <text x="443" y="94" class="tick" text-anchor="middle">
+                        2015
+                    </text>
+                    <text x="664" y="94" class="tick" text-anchor="end">
+                        today
+                    </text>
+                    <!-- 13 dated attestations (articles), then social sightings (outlined) -->
+                    <circle
+                        cx="43"
+                        cy="62"
+                        r="6.5"
+                        fill="#1c4d74"
+                        stroke="#fff"
+                        stroke-width="2"
+                    />
+                    <circle
+                        cx="49"
+                        cy="50"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="128"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="139"
+                        cy="50"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="176"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="258"
+                        cy="62"
+                        r="6.5"
+                        fill="#1c4d74"
+                        stroke="#fff"
+                        stroke-width="2"
+                    />
+                    <circle
+                        cx="309"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="349"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="356"
+                        cy="50"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="450"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="468"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="509"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="532"
+                        cy="62"
+                        r="4.5"
+                        fill="#2a6fa3"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="603"
+                        cy="62"
+                        r="4"
+                        fill="none"
+                        stroke="#2a6fa3"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="618"
+                        cy="62"
+                        r="4"
+                        fill="none"
+                        stroke="#2a6fa3"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="635"
+                        cy="62"
+                        r="4"
+                        fill="none"
+                        stroke="#2a6fa3"
+                        stroke-width="1.5"
+                    />
+                    <circle
+                        cx="654"
+                        cy="62"
+                        r="4"
+                        fill="none"
+                        stroke="#2a6fa3"
+                        stroke-width="1.5"
+                    />
+                    <text x="36" y="38" class="mslabel">
+                        First recorded — Star Tribune, 1993
+                    </text>
+                    <text x="258" y="14" class="mslabel" text-anchor="middle">
+                        Fact-checks take it up — Snopes, 2005
+                    </text>
+                    <text x="664" y="38" class="mslabel" text-anchor="end">
+                        still circulating
+                    </text>
+                </svg>
+                <div class="foot">
+                    <span
+                        >13 recorded uses 1993–2019 · 12 social sightings
+                        2023–2026 · AI-traced, not human-reviewed</span
+                    >
+                    <a
+                        href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json"
+                        >open the full trace →</a
+                    >
+                </div>
+            </div>
+            <p class="herounder">
+                Every trace looks like this: who originated it, who amplified
+                it, how it mutated, and the evidence on every hop. Politics gets
+                the same treatment — so do folk claims like this one.
+            </p>
 
-  <h2>This week in narratives — issue #1</h2>
-  <div class="weekcard">
-    <div class="wtitle">June 28 – July 5: the birthright ruling, a $1B crypto disclosure, and a
-      16-year-old talking point</div>
-    <p>Built from 27 automated captures of 36 outlets: the week's shared agenda, what each front page led
-       with, which stories only one side carried — and the "birth tourism loophole" framing traced back
-       to a 2010 call-in debate.</p>
-    <div class="chips">
-      <a href="fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json">The birthright ruling — 5 framings, all traced</a>
-      <a href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json">Trump's crypto disclosure — 8 framings</a>
-      <a href="digests/issue-01.html">Read the full issue →</a>
-    </div>
-  </div>
+            <h2>This week in narratives — issue #1</h2>
+            <div class="weekcard">
+                <div class="wtitle">
+                    June 28 – July 5: the birthright ruling, a $1B crypto
+                    disclosure, and a 16-year-old talking point
+                </div>
+                <p>
+                    Built from 27 automated captures of 36 outlets: the week's
+                    shared agenda, what each front page led with, which stories
+                    only one side carried — and the "birth tourism loophole"
+                    framing traced back to a 2010 call-in debate.
+                </p>
+                <div class="chips">
+                    <a
+                        href="fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json"
+                        >The birthright ruling — 5 framings, all traced</a
+                    >
+                    <a
+                        href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json"
+                        >Trump's crypto disclosure — 8 framings</a
+                    >
+                    <a href="digests/issue-01.html">Read the full issue →</a>
+                </div>
+            </div>
 
-  <h2>More traces</h2>
+            <h2>More traces</h2>
 
-  <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_carrots_eyesight.json">
-    <span class="kind up">where it came from</span><span class="title">“Carrots improve your eyesight”</span>
-    <p>Traced to a dated origin: a 1940 British Ministry statement during the Blitz — wartime messaging
-       that became worldwide folk wisdom, with the ancient dietary idea behind it and the science desks
-       that examined it.</p>
-  </a>
+            <a
+                class="card"
+                href="fingerprint_viewer.html?load=examples/fingerprint_carrots_eyesight.json"
+            >
+                <span class="kind up">where it came from</span
+                ><span class="title">“Carrots improve your eyesight”</span>
+                <p>
+                    Traced to a dated origin: a 1940 British Ministry statement
+                    during the Blitz — wartime messaging that became worldwide
+                    folk wisdom, with the ancient dietary idea behind it and the
+                    science desks that examined it.
+                </p>
+            </a>
 
-  <a class="card" href="fingerprint_viewer.html?load=examples/fingerprint_rigged_economy.json">
-    <span class="kind up">where it came from</span><span class="title">“The economy is rigged against working people”</span>
-    <p>The phrasing runs through three decades of US politics; the idea's current wave traces to
-       early-20th-century labor politics — with the amplifiers, mutations, and evidence on each hop,
-       and the older intellectual tradition kept as context, not lineage.</p>
-  </a>
+            <a
+                class="card"
+                href="fingerprint_viewer.html?load=examples/fingerprint_rigged_economy.json"
+            >
+                <span class="kind up">where it came from</span
+                ><span class="title"
+                    >“The economy is rigged against working people”</span
+                >
+                <p>
+                    The phrasing runs through three decades of US politics; the
+                    idea's current wave traces to early-20th-century labor
+                    politics — with the amplifiers, mutations, and evidence on
+                    each hop, and the older intellectual tradition kept as
+                    context, not lineage.
+                </p>
+            </a>
 
-  <a class="card" href="fingerprint_viewer.html?load=examples/event_platner_allegations.json">
-    <span class="kind down">how an event split</span><span class="title">Misconduct allegations against a Senate candidate</span>
-    <p>Eight competing framings of one contested story: the common ground beneath them, and who carries each.</p>
-  </a>
+            <a
+                class="card"
+                href="fingerprint_viewer.html?load=examples/event_platner_allegations.json"
+            >
+                <span class="kind down">how an event split</span
+                ><span class="title"
+                    >Misconduct allegations against a Senate candidate</span
+                >
+                <p>
+                    Eight competing framings of one contested story: the common
+                    ground beneath them, and who carries each.
+                </p>
+            </a>
 
-  <a class="card" href="fingerprint_viewer.html?load=examples/event_gaza_airstrikes.json">
-    <span class="kind down">how an event split</span><span class="title">Israeli airstrikes in Gaza</span>
-    <p>An international story where a US left/right axis doesn't map — the coalition view shows the real
-       structure of the coverage.</p>
-  </a>
+            <a
+                class="card"
+                href="fingerprint_viewer.html?load=examples/event_gaza_airstrikes.json"
+            >
+                <span class="kind down">how an event split</span
+                ><span class="title">Israeli airstrikes in Gaza</span>
+                <p>
+                    An international story where a US left/right axis doesn't
+                    map — the coalition view shows the real structure of the
+                    coverage.
+                </p>
+            </a>
 
-  <div class="links">
-    <strong>Go deeper:</strong>
-    <a href="corpus.html">browse all published traces</a> ·
-    <a href="https://github.com/tarekelgindy/tributary">GitHub repo</a> ·
-    <a href="https://github.com/tarekelgindy/tributary/blob/main/INTRO.md">plain-language intro</a> ·
-    <a href="https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md">roadmap</a>
-  </div>
-  <footer>All analyses are AI-generated and labeled as such on every page; none are yet human-reviewed.
-    Spotted an error or an earlier use of a narrative?
-    <a href="https://github.com/tarekelgindy/tributary/issues/new/choose">Suggest a correction</a>.</footer>
-</div>
-<script>
-// The question box: lexical match against gallery/search_index.json; misses
-// fall through to the request-a-trace path (GitHub issue template). Simple
-// token scoring on purpose — the corpus is small, and an honest miss that
-// files a request beats a clever wrong match.
-(function () {
-  // Set to the deployed Cloudflare Worker URL (infra/worker.js) to enable
-  // fully in-window requests; empty = fall back to GitHub-issue links.
-  const WORKER_URL = '';
-  const input = document.getElementById('ask');
-  const btn = document.getElementById('askbtn');
-  const out = document.getElementById('askresults');
-  let index = null;
-  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
-    c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const STOP = new Set(['the', 'a', 'an', 'of', 'to', 'in', 'on', 'for', 'and', 'or', 'is',
-    'are', 'was', 'were', 'be', 'about', 'with', 'that', 'this', 'it', 'at', 'by', 'from',
-    'does', 'do', 'did', 'why', 'how', 'what', 'when', 'who', 'where']);
-  const toks = q => q.toLowerCase().replace(/["“”'’]/g, '')
-    .split(/[^a-z0-9]+/).filter(t => t && !STOP.has(t));
+            <div class="links">
+                <strong>Go deeper:</strong>
+                <a href="corpus.html">browse all published traces</a> ·
+                <a href="https://github.com/tarekelgindy/tributary"
+                    >GitHub repo</a
+                >
+                ·
+                <a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/INTRO.md"
+                    >plain-language intro</a
+                >
+                ·
+                <a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md"
+                    >roadmap</a
+                >
+            </div>
+            <footer>
+                All analyses are AI-generated and labeled as such on every page;
+                none are yet human-reviewed. Spotted an error or an earlier use
+                of a narrative?
+                <a
+                    href="https://github.com/tarekelgindy/tributary/issues/new/choose"
+                    >Suggest a correction</a
+                >.
+            </footer>
+        </div>
+        <script>
+            // The question box: lexical match against gallery/search_index.json; misses
+            // fall through to the request-a-trace path (GitHub issue template). Simple
+            // token scoring on purpose — the corpus is small, and an honest miss that
+            // files a request beats a clever wrong match.
+            (function () {
+                // Set to the deployed Cloudflare Worker URL (infra/worker.js) to enable
+                // fully in-window requests; empty = fall back to GitHub-issue links.
+                const WORKER_URL =
+                    "tributary-requests.tarek-elgindy.workers.dev";
+                const input = document.getElementById("ask");
+                const btn = document.getElementById("askbtn");
+                const out = document.getElementById("askresults");
+                let index = null;
+                const esc = (s) =>
+                    String(s == null ? "" : s).replace(
+                        /[&<>"']/g,
+                        (c) =>
+                            ({
+                                "&": "&amp;",
+                                "<": "&lt;",
+                                ">": "&gt;",
+                                '"': "&quot;",
+                                "'": "&#39;",
+                            })[c],
+                    );
+                const STOP = new Set([
+                    "the",
+                    "a",
+                    "an",
+                    "of",
+                    "to",
+                    "in",
+                    "on",
+                    "for",
+                    "and",
+                    "or",
+                    "is",
+                    "are",
+                    "was",
+                    "were",
+                    "be",
+                    "about",
+                    "with",
+                    "that",
+                    "this",
+                    "it",
+                    "at",
+                    "by",
+                    "from",
+                    "does",
+                    "do",
+                    "did",
+                    "why",
+                    "how",
+                    "what",
+                    "when",
+                    "who",
+                    "where",
+                ]);
+                const toks = (q) =>
+                    q
+                        .toLowerCase()
+                        .replace(/["“”'’]/g, "")
+                        .split(/[^a-z0-9]+/)
+                        .filter((t) => t && !STOP.has(t));
 
-  function requestBlock(q) {
-    if (!WORKER_URL) {
-      const mk = prefix => 'https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title='
-        + encodeURIComponent(prefix + ': ' + q.slice(0, 120));
-      return `<div class="askmiss">We haven't traced that yet.
-        <a href="${mk('Trace request')}" target="_blank" rel="noopener">Request an origin trace →</a>
+                function requestBlock(q) {
+                    if (!WORKER_URL) {
+                        const mk = (prefix) =>
+                            "https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title=" +
+                            encodeURIComponent(prefix + ": " + q.slice(0, 120));
+                        return `<div class="askmiss">We haven't traced that yet.
+        <a href="${mk("Trace request")}" target="_blank" rel="noopener">Request an origin trace →</a>
         <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
-        <a href="${mk('Event request')}" target="_blank" rel="noopener">Request an event framing map →</a>
+        <a href="${mk("Event request")}" target="_blank" rel="noopener">Request an event framing map →</a>
         <span style="color:#999;">(for a news event)</span><br>
         <span style="color:#777; font-size:0.85rem;">Generation usually takes 5–10 minutes — the permalink
         is posted back on your request when it's live.</span></div>`;
-    }
-    return `<div class="askmiss" id="askmiss">We haven't traced that yet.
+                    }
+                    return `<div class="askmiss" id="askmiss">We haven't traced that yet.
       <a href="#" data-kind="claim" class="askreq">Request an origin trace →</a>
       <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
       <a href="#" data-kind="event" class="askreq">Request an event framing map →</a>
       <span style="color:#999;">(for a news event)</span><br>
       <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span></div>`;
-  }
+                }
 
-  // In-window request flow: POST to the Worker, poll status, swap in the
-  // permalink when the trace publishes. The visitor never leaves the page.
-  async function submitRequest(q, kind) {
-    const box = document.getElementById('askmiss');
-    const label = kind === 'event' ? 'event framing map' : 'origin trace';
-    box.innerHTML = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
+                // In-window request flow: POST to the Worker, poll status, swap in the
+                // permalink when the trace publishes. The visitor never leaves the page.
+                async function submitRequest(q, kind) {
+                    const box = document.getElementById("askmiss");
+                    const label =
+                        kind === "event" ? "event framing map" : "origin trace";
+                    box.innerHTML = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
       real web searches and source verification are happening. You can keep this tab open.`;
-    let id;
-    try {
-      const r = await fetch(WORKER_URL + '/request', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subject: q, kind }),
-      });
-      const data = await r.json();
-      if (!r.ok) { box.innerHTML = esc(data.error || 'Could not start generation.'); return; }
-      id = data.id;
-    } catch (e) { box.innerHTML = 'Could not reach the request service — please try again.'; return; }
+                    let id;
+                    try {
+                        const r = await fetch(WORKER_URL + "/request", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ subject: q, kind }),
+                        });
+                        const data = await r.json();
+                        if (!r.ok) {
+                            box.innerHTML = esc(
+                                data.error || "Could not start generation.",
+                            );
+                            return;
+                        }
+                        id = data.id;
+                    } catch (e) {
+                        box.innerHTML =
+                            "Could not reach the request service — please try again.";
+                        return;
+                    }
 
-    const started = Date.now();
-    const poll = setInterval(async () => {
-      if (Date.now() - started > 20 * 60 * 1000) {
-        clearInterval(poll);
-        box.innerHTML = 'This is taking longer than expected — the trace may still land; try your search again in a few minutes.';
-        return;
-      }
-      try {
-        const s = await (await fetch(WORKER_URL + '/status?id=' + encodeURIComponent(id))).json();
-        if (s.state === 'done' && s.url) {
-          clearInterval(poll);
-          box.innerHTML = `<strong>Done.</strong> <a href="${esc(s.url)}">Open your ${label} →</a>
+                    const started = Date.now();
+                    const poll = setInterval(async () => {
+                        if (Date.now() - started > 20 * 60 * 1000) {
+                            clearInterval(poll);
+                            box.innerHTML =
+                                "This is taking longer than expected — the trace may still land; try your search again in a few minutes.";
+                            return;
+                        }
+                        try {
+                            const s = await (
+                                await fetch(
+                                    WORKER_URL +
+                                        "/status?id=" +
+                                        encodeURIComponent(id),
+                                )
+                            ).json();
+                            if (s.state === "done" && s.url) {
+                                clearInterval(poll);
+                                box.innerHTML = `<strong>Done.</strong> <a href="${esc(s.url)}">Open your ${label} →</a>
             <br><span style="color:#777; font-size:0.85rem;">AI-generated and labeled as such — sources on
             every hop, corrections welcome.</span>`;
-        } else if (s.state === 'failed') {
-          clearInterval(poll);
-          box.innerHTML = 'Generation failed on our side — sorry. It has been logged; please try again later.';
-        }
-      } catch (e) { /* transient poll error — keep trying */ }
-    }, 10000);
-  }
+                            } else if (s.state === "failed") {
+                                clearInterval(poll);
+                                box.innerHTML =
+                                    "Generation failed on our side — sorry. It has been logged; please try again later.";
+                            }
+                        } catch (e) {
+                            /* transient poll error — keep trying */
+                        }
+                    }, 10000);
+                }
 
-  document.addEventListener('click', e => {
-    const a = e.target.closest && e.target.closest('.askreq');
-    if (!a) return;
-    e.preventDefault();
-    submitRequest((input.value || '').trim(), a.dataset.kind);
-  });
+                document.addEventListener("click", (e) => {
+                    const a = e.target.closest && e.target.closest(".askreq");
+                    if (!a) return;
+                    e.preventDefault();
+                    submitRequest((input.value || "").trim(), a.dataset.kind);
+                });
 
-  async function search() {
-    const q = (input.value || '').trim();
-    if (!q) return;
-    out.hidden = false;
-    out.innerHTML = '<p style="color:#888;">Searching…</p>';
-    if (!index) {
-      try {
-        index = (await (await fetch('gallery/search_index.json')).json()).items || [];
-      } catch (e) {
-        out.innerHTML = requestBlock(q);
-        return;
-      }
-    }
-    const qt = toks(q);
-    const qn = qt.join(' ');
-    const scored = index.map(it => {
-      const hay = (it.title + ' ' + (it.keys || []).join(' ')).toLowerCase();
-      let s = 0, hits = 0;
-      for (const t of qt) if (hay.includes(t)) { hits++; s += t.length > 3 ? 2 : 1; }
-      if (qn && hay.includes(qn)) s += 4;
-      return { it, s, hits };
-    }).filter(x => x.s >= 3 && (x.hits >= 2 || qt.length === 1))
-      .sort((a, b) => b.s - a.s).slice(0, 4);
+                async function search() {
+                    const q = (input.value || "").trim();
+                    if (!q) return;
+                    out.hidden = false;
+                    out.innerHTML = '<p style="color:#888;">Searching…</p>';
+                    if (!index) {
+                        try {
+                            index =
+                                (
+                                    await (
+                                        await fetch("gallery/search_index.json")
+                                    ).json()
+                                ).items || [];
+                        } catch (e) {
+                            out.innerHTML = requestBlock(q);
+                            return;
+                        }
+                    }
+                    const qt = toks(q);
+                    const qn = qt.join(" ");
+                    const scored = index
+                        .map((it) => {
+                            const hay = (
+                                it.title +
+                                " " +
+                                (it.keys || []).join(" ")
+                            ).toLowerCase();
+                            let s = 0,
+                                hits = 0;
+                            for (const t of qt)
+                                if (hay.includes(t)) {
+                                    hits++;
+                                    s += t.length > 3 ? 2 : 1;
+                                }
+                            if (qn && hay.includes(qn)) s += 4;
+                            return { it, s, hits };
+                        })
+                        .filter(
+                            (x) => x.s >= 3 && (x.hits >= 2 || qt.length === 1),
+                        )
+                        .sort((a, b) => b.s - a.s)
+                        .slice(0, 4);
 
-    out.innerHTML = (scored.length ? scored.map(({ it }) => `
+                    out.innerHTML =
+                        (scored.length
+                            ? scored
+                                  .map(
+                                      ({ it }) => `
       <a class="card" href="${esc(it.url)}">
-        <span class="kind ${it.kind === 'trace' ? 'up' : 'down'}">${it.kind === 'trace' ? 'narrative trace' : 'event analysis'}</span>
+        <span class="kind ${it.kind === "trace" ? "up" : "down"}">${it.kind === "trace" ? "narrative trace" : "event analysis"}</span>
         <span class="title">${esc(it.title)}</span>
-      </a>`).join('') : '') + requestBlock(q);
-    if (scored.length) {
-      out.innerHTML = out.innerHTML.replace('We haven\'t traced that yet.',
-        'Not what you were looking for?');
-    }
-  }
-  btn.addEventListener('click', search);
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
-})();
-</script>
-</body>
+      </a>`,
+                                  )
+                                  .join("")
+                            : "") + requestBlock(q);
+                    if (scored.length) {
+                        out.innerHTML = out.innerHTML.replace(
+                            "We haven't traced that yet.",
+                            "Not what you were looking for?",
+                        );
+                    }
+                }
+                btn.addEventListener("click", search);
+                input.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") search();
+                });
+            })();
+        </script>
+    </body>
 </html>
