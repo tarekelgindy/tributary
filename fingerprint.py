@@ -1156,6 +1156,32 @@ def _distinctive_ngram(ngram: str) -> bool:
     return any(t not in _GENERIC_TOKENS and t not in _STOPWORDS for t in tokens)
 
 
+# Deterministic role sanity (Phase 2.8-B): both validation traces showed the
+# judge drifting on exactly one class — sources whose TITLE announces an
+# examining function ("Medical Mythbuster", "Doctor debunks…") labeled as
+# amplifiers or adopters. Titles are structural evidence (P5); the regex is
+# deliberately conservative so gray cases stay with the judge.
+_EXAMINER_TITLE_RE = re.compile(
+    r"fact.?check|fact or fiction|myth ?bust\w*|debunk|myth or fact|old wives",
+    re.IGNORECASE)
+
+
+def _role_sanity_pass(instances: list) -> None:
+    for inst in instances:
+        if (_EXAMINER_TITLE_RE.search(inst.source_title or "")
+                and inst.amplifier_role != AmplifierRole.CRITIC):
+            inst.role_evidence = ((inst.role_evidence or "") +
+                f" [Role adjusted from {inst.amplifier_role.value}: the title "
+                "announces an examining function.]").strip()
+            inst.amplifier_role = AmplifierRole.CRITIC
+        if (getattr(inst, "claim_relation", "") == "related-context"
+                and inst.amplifier_role == AmplifierRole.ORIGINATOR):
+            inst.role_evidence = ((inst.role_evidence or "") +
+                " [Role adjusted from originator: related-context material "
+                "cannot originate a claim it does not assert.]").strip()
+            inst.amplifier_role = AmplifierRole.MENTION
+
+
 def _estimate_fingerprint_cost(fingerprint_kwargs: dict) -> float:
     """Rough per-fingerprint cost estimate (USD) from which layers are enabled.
     Deliberately approximate — for a 'you're about to spend ~$X' heads-up."""
@@ -2136,7 +2162,14 @@ class FingerprintGenerator:
         )
         if earlier_instances:
             instances = earlier_instances + instances
-            earliest = instances[0]
+
+        # Deterministic role sanity, then anchor the lineage's origin claims
+        # on entries that actually ASSERT the claim — related-context material
+        # can neither be the first attestation nor drive status.
+        _role_sanity_pass(instances)
+        asserting = [i for i in instances
+                     if getattr(i, "claim_relation", "") != "related-context"]
+        earliest = (asserting or instances)[0]
 
         # Polygenesis applies to lexical lineage only — same phrase emerging
         # in independent places within a short window of a real-world event.
@@ -2208,7 +2241,12 @@ class FingerprintGenerator:
         )
         if earlier_ancestors:
             ancestors = earlier_ancestors + ancestors
-            earliest = ancestors[0]
+
+        # Role sanity + asserts-anchored origin (see generate_lineage_lexical)
+        _role_sanity_pass(ancestors)
+        asserting = [i for i in ancestors
+                     if getattr(i, "claim_relation", "") != "related-context"]
+        earliest = (asserting or ancestors)[0]
 
         # Conceptual lineage skips polygenesis detection: structural claims
         # evolve across decades and centuries, not days. A near-coincident
