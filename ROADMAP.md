@@ -245,6 +245,19 @@ Tarek's review and the follow-up full audit of the flagship trace found **one di
 
 ---
 
+## Phase 2.9 — The front door (2026-07-05; Tarek's "presentable" bar, made finite)
+
+A journalist arrives with *their* question, not ours. The presentable bar is four items, deliberately closed-ended:
+
+- [x] **Ask-your-own-question**: a question box on the homepage matches pasted claims/events against the published corpus (lexical scoring over `gallery/search_index.json`, rebuilt by `publish.py`); hits serve instantly (match-and-serve, finally visible); misses fall through to **request-a-trace** (issue template) with a stated ~24h turnaround. Fulfillment is approval-gated automation: a maintainer applies `approved-trace` → GitHub Action generates (lean, search-capped, title/body passed via env only), publishes to `gallery/traces/`, rebuilds the index, posts the permalink, closes the issue. The label is the spend control; every request is Gate-3 signal and grows the corpus where demand actually is. *(2026-07-05 — needs the `ANTHROPIC_API_KEY` repo secret + `trace-request`/`approved-trace` labels created, then one dry-run request end-to-end)*
+- [x] **The digest is a page on the site** (`digests/issue-01.html`), not a GitHub blob; homepage links to it. *(2026-07-05 — future issues should generate HTML from the md; hand-converted for #1)*
+- [ ] One outsider read-through of a trace page (someone who isn't Tarek, watched, not coached).
+- [ ] The turnaround promise proven once end-to-end (dry-run request → approve → permalink lands).
+
+Explicitly NOT on this bar: story cards, share images, matrix revival, role-ontology work — post-contact improvements.
+
+---
+
 ## Phase 3 — The heartbeat (ongoing; ~1–2 hrs/week)
 
 - [ ] Publish **"This Week in Narratives"** weekly: 3–5 contested events; framings + common ground; coverage lean; the omission report; one featured upstream fingerprint. Newsletter + Bluesky + the gallery. *(Issue #1 follows the Phase 2.6 editorial line: omission claims and framing matrices appear only after their gates pass; everything else ships with evidence shown.)*

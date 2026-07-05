@@ -1,0 +1,80 @@
+# Fulfill an approved trace request: when a maintainer applies the
+# 'approved-trace' label to a request issue, generate the trace (lean,
+# search-capped), publish it to gallery/traces/, rebuild the search index,
+# and post the permalink back on the issue.
+#
+# Spend control = the label: only collaborators can apply it, so anonymous
+# issues never trigger API spend. Issue title/body are attacker-controlled
+# text — they are passed exclusively through env vars, never interpolated
+# into scripts.
+#
+# Requires the ANTHROPIC_API_KEY repository secret.
+name: fulfill-trace-request
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: trace-requests
+  cancel-in-progress: false
+
+jobs:
+  fulfill:
+    if: github.event.label.name == 'approved-trace'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps (generation needs only anthropic + httpx)
+        run: pip install --quiet anthropic httpx
+
+      - name: Generate and publish
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          SUBJECT="${ISSUE_TITLE#Trace request: }"
+          SUBJECT="${SUBJECT#Trace request:}"
+          if [ -z "${SUBJECT// /}" ]; then
+            gh issue comment "$ISSUE_NUMBER" --body "Could not read a subject from the issue title — expected \`Trace request: <claim>\`."
+            exit 1
+          fi
+          if printf '%s' "$ISSUE_BODY" | grep -qiE '^\**Type:\**[[:space:]]*event'; then
+            gh issue comment "$ISSUE_NUMBER" --body "This is an **event** request — those are fulfilled manually for now (framings + carriers take a human pass). Expect a follow-up here."
+            exit 0
+          fi
+          echo "::notice::tracing claim: $SUBJECT"
+          python fingerprint.py "$SUBJECT" --save --max-searches 4 > out.json
+          ID=$(grep -o '\[saved fingerprint: [a-f0-9]*\]' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
+          if [ -z "$ID" ]; then
+            gh issue comment "$ISSUE_NUMBER" --body "Generation ran but no fingerprint was saved — a maintainer will look at the run log."
+            exit 1
+          fi
+          mkdir -p gallery/traces
+          cp "fingerprints/$ID.json" "gallery/traces/$ID.json"
+          python publish.py
+          git config user.name "tributary-trace-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add gallery/traces "gallery/search_index.json"
+          git commit -m "Trace request #$ISSUE_NUMBER: $SUBJECT (gallery/traces/$ID.json)"
+          git pull --rebase origin main
+          git push origin main
+          URL="https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/traces/$ID.json"
+          gh issue comment "$ISSUE_NUMBER" --body "Traced and published: $URL
+
+          (Allow ~10 minutes for the site cache. The trace is AI-generated and labeled as such — sources on every hop; corrections welcome on this issue.)"
+          gh issue close "$ISSUE_NUMBER" --reason completed

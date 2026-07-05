@@ -44,6 +44,21 @@
   .hero .foot a { color: #2a6fa3; text-decoration: none; font-weight: 600; }
   .herounder { color: #777; font-size: 0.85rem; margin: 0 0 0.4rem; }
 
+  /* the question box — ask your own question, get a trace or request one */
+  .askbox { display: flex; gap: 0.5rem; margin: 0 0 0.4rem; }
+  .askbox input { flex: 1; padding: 0.65rem 0.9rem; font-size: 0.95rem; border: 1px solid #ccc;
+                  border-radius: 8px; background: #fff; font-family: inherit; }
+  .askbox input:focus { outline: 2px solid #2a6fa3; border-color: #2a6fa3; }
+  .askbox button { padding: 0.65rem 1.2rem; font-size: 0.9rem; border: none; border-radius: 8px;
+                   background: #2a6fa3; color: #fff; cursor: pointer; }
+  .askbox button:hover { background: #1c5580; }
+  .asknote { color: #999; font-size: 0.78rem; margin: 0 0 1.6rem; }
+  #askresults { margin: 0 0 1.6rem; }
+  #askresults .card { margin-bottom: 0.5rem; padding: 0.7rem 1rem; }
+  .askmiss { background: #f4f3ef; border-radius: 10px; padding: 0.9rem 1.1rem; font-size: 0.92rem;
+             color: #444; }
+  .askmiss a { color: #2a6fa3; font-weight: 600; text-decoration: none; }
+
   .weekcard { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem 1.2rem; }
   .weekcard .wtitle { font-weight: 600; font-size: 1.02rem; margin-bottom: 0.3rem; }
   .weekcard p { color: #555; font-size: 0.9rem; margin: 0.3rem 0 0.7rem; }
@@ -67,6 +82,16 @@
      political framings, folk claims. It never labels claims true or false; it shows provenance you can verify.
      <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a> ·
      <a href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md">corrections log</a></p>
+
+  <div class="askbox">
+    <input id="ask" type="search"
+           placeholder="Where does a narrative come from? Paste a claim, a phrase, or an event…"
+           aria-label="Search traces">
+    <button id="askbtn">Search traces</button>
+  </div>
+  <p class="asknote">Searches the published corpus. If we haven't traced it yet, you can request it —
+     approved requests are typically published within 24 hours.</p>
+  <div id="askresults" hidden></div>
 
   <div class="hero">
     <div class="kicker">A narrative trace</div>
@@ -121,7 +146,7 @@
     <div class="chips">
       <a href="fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json">The birthright ruling — 5 framings, all traced</a>
       <a href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json">Trump's crypto disclosure — 8 framings</a>
-      <a href="https://github.com/tarekelgindy/tributary/blob/main/digests/issue-01.md">Read the full issue →</a>
+      <a href="digests/issue-01.html">Read the full issue →</a>
     </div>
   </div>
 
@@ -163,5 +188,69 @@
     Spotted an error or an earlier use of a narrative?
     <a href="https://github.com/tarekelgindy/tributary/issues/new/choose">Suggest a correction</a>.</footer>
 </div>
+<script>
+// The question box: lexical match against gallery/search_index.json; misses
+// fall through to the request-a-trace path (GitHub issue template). Simple
+// token scoring on purpose — the corpus is small, and an honest miss that
+// files a request beats a clever wrong match.
+(function () {
+  const input = document.getElementById('ask');
+  const btn = document.getElementById('askbtn');
+  const out = document.getElementById('askresults');
+  let index = null;
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
+    c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const STOP = new Set(['the', 'a', 'an', 'of', 'to', 'in', 'on', 'for', 'and', 'or', 'is',
+    'are', 'was', 'were', 'be', 'about', 'with', 'that', 'this', 'it', 'at', 'by', 'from',
+    'does', 'do', 'did', 'why', 'how', 'what', 'when', 'who', 'where']);
+  const toks = q => q.toLowerCase().replace(/["“”'’]/g, '')
+    .split(/[^a-z0-9]+/).filter(t => t && !STOP.has(t));
+
+  function requestBlock(q) {
+    const url = 'https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title='
+      + encodeURIComponent('Trace request: ' + q.slice(0, 120));
+    return `<div class="askmiss">We haven't traced that yet. <a href="${url}" target="_blank"
+      rel="noopener">Request this trace →</a> — approved requests are typically published within
+      24 hours, with a permalink posted back on your request.</div>`;
+  }
+
+  async function search() {
+    const q = (input.value || '').trim();
+    if (!q) return;
+    out.hidden = false;
+    out.innerHTML = '<p style="color:#888;">Searching…</p>';
+    if (!index) {
+      try {
+        index = (await (await fetch('gallery/search_index.json')).json()).items || [];
+      } catch (e) {
+        out.innerHTML = requestBlock(q);
+        return;
+      }
+    }
+    const qt = toks(q);
+    const qn = qt.join(' ');
+    const scored = index.map(it => {
+      const hay = (it.title + ' ' + (it.keys || []).join(' ')).toLowerCase();
+      let s = 0, hits = 0;
+      for (const t of qt) if (hay.includes(t)) { hits++; s += t.length > 3 ? 2 : 1; }
+      if (qn && hay.includes(qn)) s += 4;
+      return { it, s, hits };
+    }).filter(x => x.s >= 3 && (x.hits >= 2 || qt.length === 1))
+      .sort((a, b) => b.s - a.s).slice(0, 4);
+
+    out.innerHTML = (scored.length ? scored.map(({ it }) => `
+      <a class="card" href="${esc(it.url)}">
+        <span class="kind ${it.kind === 'trace' ? 'up' : 'down'}">${it.kind === 'trace' ? 'narrative trace' : 'event analysis'}</span>
+        <span class="title">${esc(it.title)}</span>
+      </a>`).join('') : '') + requestBlock(q);
+    if (scored.length) {
+      out.innerHTML = out.innerHTML.replace('We haven\'t traced that yet.',
+        'Not what you were looking for?');
+    }
+  }
+  btn.addEventListener('click', search);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
+})();
+</script>
 </body>
 </html>
