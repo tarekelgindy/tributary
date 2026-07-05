@@ -166,9 +166,25 @@ Search strategy:
   forum/Usenet posts, academic papers, blogs
 
 For each instance you find, report:
-  date              ISO YYYY-MM-DD; if only year is known, use YYYY-01-01 and
-                    note this in evidence
+  date              ISO date of THE DOCUMENT ITSELF (its publication date).
+                    NEVER the period a document talks about: a 2024 article
+                    describing 1970s folklore is dated 2024, with the 1970s
+                    recorded in describes_period. If only the year is known,
+                    use YYYY-01-01 and set date_precision to "year".
+  date_precision    "day", "month", "year", or "circa" — how precisely the
+                    date is actually known
+  describes_period  "" unless the document is a retrospective account of an
+                    earlier period — then that period as text (e.g. "1970s
+                    classroom folklore"). The date field STILL carries the
+                    document's own date.
   source_url        canonical URL of the source
+  cited_via         "" when the URL IS the dated source itself. When the
+                    dated source is offline/print and you know it from
+                    another document's citations (a fact-check bibliography,
+                    a review article), name that documenting source here
+                    (e.g. "Snopes' bibliography") and link the documenting
+                    URL in source_url. Never present a secondhand citation
+                    as a first-party link.
   source_title      title of the article/post/book
   author            if known, else ""
   lexical_form_seen the actual wording used at this source
@@ -182,30 +198,43 @@ For each instance you find, report:
   role_evidence     one-sentence justification for the assigned role
 
 Amplifier role definitions:
-  originator              the chronologically earliest credible articulation
-                          of the framing in this chain — EXACTLY ONE INSTANCE
-                          may have this role, the oldest one. Subsequent
-                          instances that originate a new variant or
-                          re-articulate in new vocabulary are early-amplifiers
-                          or mass-amplifiers, NOT additional originators.
+  originator              coined or first articulated the framing — assign
+                          ONLY when there is evidence of actual coining or
+                          first articulation, and to AT MOST ONE instance.
+                          If your earliest instance already treats the
+                          framing as existing folk belief or common
+                          knowledge, it is NOT the originator — tag it
+                          early-amplifier or mention and say in evidence
+                          that the true origin predates the record.
   early-amplifier         spread the framing before mainstream uptake
   mass-amplifier          drove broad public adoption (e.g. viral campaign,
                           national TV speech, viral op-ed)
-  institutional-adoption  adopted into an official platform — party platform,
-                          government document, major newspaper editorial,
-                          flagship academic journal
-  critic                  pushed back, fact-checked, or rebutted the framing
+  institutional-adoption  ADOPTED the framing as its own position — party
+                          platform, government document, editorial stance.
+                          A fact-checker or university office EXAMINING the
+                          framing is NOT adoption; that is critic. Hospital
+                          and university health explainers, science-desk
+                          Q&As, and any "Myth or Fact?" page are critic even
+                          when their tone is neutral — examining is not
+                          adopting.
+  critic                  pushed back, fact-checked, examined, or rebutted
+                          the framing. ANY source whose function is checking
+                          or debunking the claim belongs here — fact-check
+                          sites, mythbuster columns, medical debunkings —
+                          even though such sources repeat the phrasing.
+                          When in doubt between critic and amplifier for a
+                          source that disputes the claim, choose critic.
   mention                 used the framing in passing without driving spread
 
 Assign exactly one role per instance. Use evidence-based judgement, not
-inference from author identity alone. Only the chronologically earliest
-instance in your returned chain may be tagged as originator.
+inference from author identity alone.
 
 Return JSON of this shape:
 
 {
   "instances": [
-    {"date": "...", "source_url": "...", "source_title": "...", "author": "...",
+    {"date": "...", "date_precision": "...", "describes_period": "",
+     "source_url": "...", "cited_via": "", "source_title": "...", "author": "...",
      "lexical_form_seen": "...", "exact_quote": "...", "confidence": 0.0,
      "evidence": "...", "amplifier_role": "...", "role_evidence": "..."}
   ],
@@ -373,8 +402,22 @@ discourse. Do not over-weight academic texts at the expense of widely-read
 commentators, journalists, documentarians, or podcasters.
 
 For each direct contributor, report:
-  date              ISO date
+  date              ISO date of THE DOCUMENT ITSELF (publication date). NEVER
+                    the period a document talks about: a 2024 retrospective
+                    about 1970s folklore is dated 2024, with the 1970s in
+                    describes_period. For genuinely historical documents
+                    (Wealth of Nations, the Canon of Medicine) use the
+                    historical document's date with date_precision "circa"
+                    or "year" as appropriate.
+  date_precision    "day", "month", "year", or "circa"
+  describes_period  "" unless the document is a retrospective describing an
+                    earlier period — then that period as text. The date
+                    field STILL carries the document's own date.
   source_url        canonical URL
+  cited_via         "" when the URL IS the dated source. For historical or
+                    offline documents known through a modern secondary
+                    source, name that secondary here (e.g. "a 2012 clinical
+                    review") and link the secondary's URL in source_url.
   source_title      title of the work / talk / video / book / podcast
   author            who produced it
   lexical_form_seen the vocabulary they actually used (their own period-
@@ -385,46 +428,66 @@ For each direct contributor, report:
   evidence          why this is a credible direct contributor — does it
                     articulate the same structural claim in vocabulary
                     that DIFFERS from the diagnostic n-grams?
+  claim_relation    "asserts" when the source articulates the SAME
+                    structural claim — same subject, same asserted
+                    mechanism or consequence. "related-context" for
+                    background material that is topically connected but
+                    asserts a DIFFERENT (or opposite) claim and earns a
+                    place only as context. IDENTITY TEST: if the source's
+                    own position contradicts the claim's asserted harm or
+                    consequence, it is NOT an ancestor of the claim —
+                    related-context at most, and never the earliest entry.
   amplifier_role    one of: originator, early-amplifier, mass-amplifier,
                     institutional-adoption, critic, mention.
 
-                    CRITICAL: ONLY ONE instance in the returned chain may
-                    be tagged "originator" — the chronologically earliest
-                    one. Subsequent foundational figures (Smith, Marx,
-                    etc.) who articulate the claim in their own
-                    vocabulary are early-amplifiers or mass-amplifiers,
-                    NOT additional originators. Do not assign "originator"
+                    originator: assign ONLY with evidence of actual coining
+                    or first articulation, and to AT MOST ONE instance. If
+                    the earliest contributor already treats the idea as
+                    established, tag it early-amplifier and note that the
+                    origin predates the record. Do not assign "originator"
                     to Marx's Capital if an older ancestor (e.g. Smith,
                     Aristotle, Ibn Khaldun) is also in your chain.
 
                     Role definitions:
-                      originator              = chronologically earliest;
-                                                exactly one
+                      originator              = evidenced coining; at most one
                       early-amplifier         = built the intellectual
                                                 tradition
                       mass-amplifier          = popularized to a broad
                                                 audience (bestseller,
                                                 viral essay, documentary)
-                      institutional-adoption  = official platform / major
-                                                party / govt / flagship
-                                                academic journal
-                      critic                  = pushed back
+                      institutional-adoption  = ADOPTED the claim as its own
+                                                official position (party,
+                                                govt, editorial stance) —
+                                                examining or fact-checking
+                                                the claim is critic, not
+                                                adoption; hospital/university
+                                                explainers and "Myth or
+                                                Fact?" pages are critic even
+                                                in neutral tone
+                      critic                  = pushed back, fact-checked,
+                                                examined, or rebutted — any
+                                                source whose function is
+                                                checking/debunking, even
+                                                though it restates the claim
                       mention                 = passing reference
   role_evidence     one-sentence justification for the assigned role
 
 Distinctions:
 - DIRECT contributor: articulates the same structural claim, any era,
   in vocabulary OTHER than the diagnostic n-grams
-- ADJACENT: related but a different claim — skip
+- ADJACENT: related but a different claim — skip entirely, or include as
+  claim_relation="related-context" ONLY if genuinely load-bearing context
 - LEXICAL: uses the diagnostic n-grams — skip (belongs in lexical chain)
 
 Return JSON:
 
 {
   "contributors": [
-    {"date": "...", "source_url": "...", "source_title": "...", "author": "...",
+    {"date": "...", "date_precision": "...", "describes_period": "",
+     "source_url": "...", "cited_via": "", "source_title": "...", "author": "...",
      "lexical_form_seen": "...", "exact_quote": "...", "confidence": 0.0,
-     "evidence": "...", "amplifier_role": "...", "role_evidence": "..."}
+     "evidence": "...", "claim_relation": "asserts",
+     "amplifier_role": "...", "role_evidence": "..."}
   ],
   "search_notes": "what eras and source types you covered; balance of academic vs. popularizer contributors; what you ruled out"
 }
@@ -668,10 +731,18 @@ narrative on a single platform.
 
 You will receive:
   - A narrative claim (the canonical framing being traced)
-  - A batch of posts mentioning or using the framing, each with index,
-    author handle, date, text, and engagement (likes, reposts)
+  - A batch of posts that MATCHED A SEARCH for the framing's phrases, each
+    with index, author handle, date, text, and engagement (likes, reposts)
 
-For each post, assign exactly one of these amplifier_role values:
+FIRST, for each post, decide `relevant`: does this post actually express,
+reference, question, or dispute THIS SPECIFIC narrative claim? Posts that
+merely share vocabulary with the claim (a common phrase like "seven years"
+matching an unrelated topic) are NOT relevant. Be strict: when a post is
+about a different subject, relevant=false regardless of matching words.
+Irrelevant posts get relevant=false and no role.
+
+THEN, for each relevant post, assign exactly one of these amplifier_role
+values:
 
   mention            uses the framing in passing; most posts will be this
   mass-amplifier     drove visible spread — high engagement, or a notable
@@ -694,9 +765,9 @@ Output ONLY JSON with one classification per input post:
 
 {
   "classifications": [
-    {"idx": 0, "role": "mention", "role_evidence": "passing use of the phrase, no signal of intent to spread"},
-    {"idx": 1, "role": "mass-amplifier", "role_evidence": "47 reposts, account with large following, restates canonical framing as call-to-action"},
-    {"idx": 2, "role": "critic", "role_evidence": "post explicitly argues the framing is misleading and links a rebuttal"}
+    {"idx": 0, "relevant": true, "role": "mention", "role_evidence": "passing use of the phrase, no signal of intent to spread"},
+    {"idx": 1, "relevant": true, "role": "mass-amplifier", "role_evidence": "47 reposts, account with large following, restates canonical framing as call-to-action"},
+    {"idx": 2, "relevant": false, "role": "", "role_evidence": "post is about a TV show; only the phrase 'seven years' matched"}
   ]
 }
 
@@ -1034,6 +1105,12 @@ def _instance_from_dict(d: dict, model: str = SONNET) -> Optional[AttestedInstan
         except ValueError:
             role = AmplifierRole.UNKNOWN
         conf = float(d.get("confidence", 0.5))
+        precision = str(d.get("date_precision", "")).strip().lower()
+        if precision not in ("day", "month", "year", "circa"):
+            precision = ""
+        relation = str(d.get("claim_relation", "")).strip().lower()
+        if relation not in ("asserts", "related-context"):
+            relation = ""
         return AttestedInstance(
             date=_clean_text_field(d.get("date")),
             source_url=_clean_text_field(d.get("source_url")),
@@ -1045,6 +1122,10 @@ def _instance_from_dict(d: dict, model: str = SONNET) -> Optional[AttestedInstan
             evidence=_clean_text_field(d.get("evidence")),
             amplifier_role=role,
             role_evidence=_clean_text_field(d.get("role_evidence")),
+            cited_via=_clean_text_field(d.get("cited_via")),
+            date_precision=precision,
+            describes_period=_clean_text_field(d.get("describes_period")),
+            claim_relation=relation,
             provenance=Provenance.ai(model=model, confidence=conf),
         )
     except (TypeError, ValueError):
@@ -1052,6 +1133,27 @@ def _instance_from_dict(d: dict, model: str = SONNET) -> Optional[AttestedInstan
 
 
 _EMPTY_SENTINELS = {"none", "n/a", "null", "nil", "not applicable", "not specified"}
+
+# Phase 2.8-B: an n-gram made entirely of common words ("seven years") matches
+# the whole internet — it poisoned social results with unrelated posts (36 of
+# 40 on the chewing-gum trace). A search n-gram must contain at least one
+# distinctive token to be used as a query.
+_GENERIC_TOKENS = {
+    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+    "year", "years", "day", "days", "week", "weeks", "month", "months",
+    "time", "times", "ago", "never", "always", "forever", "every",
+    "people", "person", "thing", "things", "world", "life", "way", "ways",
+    "good", "bad", "big", "small", "new", "old", "long", "hard", "easy",
+    "make", "makes", "made", "take", "takes", "took", "get", "gets", "got",
+    "stay", "stays", "stayed", "go", "goes", "going", "gone", "come", "comes",
+    "know", "knows", "known", "think", "thinks", "say", "says", "said",
+    "really", "actually", "true", "false", "right", "wrong",
+}
+
+
+def _distinctive_ngram(ngram: str) -> bool:
+    tokens = re.findall(r"[a-z0-9']+", (ngram or "").lower())
+    return any(t not in _GENERIC_TOKENS and t not in _STOPWORDS for t in tokens)
 
 
 def _estimate_fingerprint_cost(fingerprint_kwargs: dict) -> float:
@@ -1284,7 +1386,7 @@ async def _verify_information_source(http: httpx.AsyncClient, src) -> None:
         src.archive_url = archive
         return
     src.verified = True
-    src.verification_status = "verified"
+    src.verification_status = "url-ok"   # URL-only check; never claims quote verification
     src.verification_notes = f"URL reachable (HTTP {status})"
 
 
@@ -1309,7 +1411,7 @@ async def _verify_carrier(http: httpx.AsyncClient, carrier) -> None:
         carrier.verification_notes = f"HTTP {status}"
         return
     carrier.verified = True
-    carrier.verification_status = "verified"
+    carrier.verification_status = "url-ok"
     carrier.verification_notes = f"URL reachable (HTTP {status})"
 
 
@@ -1346,7 +1448,7 @@ async def _verify_attested(http: httpx.AsyncClient, inst, check_quote: bool) -> 
             inst.verification_notes = note
     else:
         inst.verified = True
-        inst.verification_status = "verified"
+        inst.verification_status = "url-ok"
         inst.verification_notes = "URL reachable (quote not checked)"
 
 
@@ -1369,7 +1471,7 @@ async def _verify_social(http: httpx.AsyncClient, post) -> None:
         post.verification_notes = f"HTTP {status}"
         return
     post.verified = True
-    post.verification_status = "verified"
+    post.verification_status = "url-ok"
     post.verification_notes = f"URL reachable (HTTP {status})"
 
 
@@ -2059,8 +2161,13 @@ class FingerprintGenerator:
         elif earliest.confidence < 0.4:
             status = GenealogyStatus.DIFFUSE
             parallel_ids = []
-        else:
+        elif earliest.amplifier_role == AmplifierRole.ORIGINATOR:
+            # single-origin is an overclaim unless coining is actually
+            # evidenced (the prompt reserves 'originator' for that case)
             status = GenealogyStatus.SINGLE_ORIGIN
+            parallel_ids = []
+        else:
+            status = GenealogyStatus.EARLIEST_FOUND
             parallel_ids = []
 
         return LineageRecord(
@@ -2108,8 +2215,10 @@ class FingerprintGenerator:
         # second articulation does not imply independent emergence.
         if earliest.confidence < 0.4:
             status = GenealogyStatus.DIFFUSE
-        else:
+        elif earliest.amplifier_role == AmplifierRole.ORIGINATOR:
             status = GenealogyStatus.SINGLE_ORIGIN
+        else:
+            status = GenealogyStatus.EARLIEST_FOUND
 
         return LineageRecord(
             lineage_type="conceptual",
@@ -2128,6 +2237,8 @@ class FingerprintGenerator:
         claim_predicate: str,
         prev_inst: AttestedInstance,
         curr_inst: AttestedInstance,
+        prev_index: Optional[int] = None,
+        curr_index: Optional[int] = None,
     ) -> Optional[Mutation]:
         """Analyze how the framing changed between two attested instances."""
         user_content = (
@@ -2156,15 +2267,21 @@ class FingerprintGenerator:
         if not data:
             return None
 
-        return Mutation(
+        m = Mutation(
             from_source=prev_inst.source_url,
             to_source=curr_inst.source_url,
+            from_index=prev_index,
+            to_index=curr_index,
             preserved=str(data.get("preserved", "")).strip(),
             dropped=str(data.get("dropped", "")).strip(),
             added=str(data.get("added", "")).strip(),
             distorted=str(data.get("distorted", "")).strip(),
             provenance=Provenance.ai(model=SONNET),
         )
+        # A mutation that says nothing is not a mutation.
+        if not (m.preserved or m.dropped or m.added or m.distorted):
+            return None
+        return m
 
     async def analyze_lineage_mutations(
         self,
@@ -2184,6 +2301,10 @@ class FingerprintGenerator:
             AmplifierRole.INSTITUTIONAL_ADOPTION,
             AmplifierRole.CRITIC,
         }
+        # Carry each instance's position in the attestation_log so mutation
+        # endpoints resolve by identity, not URL (URLs collide whenever two
+        # attestations are documented via the same page).
+        idx_of = {id(inst): n for n, inst in enumerate(lineage.attestation_log)}
         significant = [
             i for i in lineage.attestation_log
             if i.amplifier_role in SIGNIFICANT and i.exact_quote and i.exact_quote.strip()
@@ -2194,14 +2315,23 @@ class FingerprintGenerator:
         # Defensive sort — chains should already be chronological
         significant.sort(key=lambda a: a.date or "9999")
 
-        pairs = list(zip(significant[:-1], significant[1:]))
+        # Same-URL pairs are transitions between two attestations documented
+        # by one page — endpoint-ambiguous and usually artifactual; skip.
+        pairs = [
+            (prev, curr) for prev, curr in zip(significant[:-1], significant[1:])
+            if prev.source_url != curr.source_url
+        ][:10]   # cap: mutation analysis is per-pair spend, and long chains inflate
+        if not pairs:
+            return []
         _log_progress(
             f"L4 {lineage.lineage_type}: analyzing {len(pairs)} mutation transitions"
         )
         t0 = time.monotonic()
 
         results = await asyncio.gather(*[
-            self._analyze_single_mutation(claim_predicate, prev, curr)
+            self._analyze_single_mutation(
+                claim_predicate, prev, curr,
+                prev_index=idx_of.get(id(prev)), curr_index=idx_of.get(id(curr)))
             for prev, curr in pairs
         ])
         mutations = [m for m in results if m is not None]
@@ -2218,9 +2348,10 @@ class FingerprintGenerator:
         scope: Scope,
         target_sample_size: int = 40,
     ) -> tuple[list[SocialAttestedInstance], str]:
-        """Search Bluesky for instances of the diagnostic n-grams, sample a
-        representative subset, classify each post's amplifier_role via Haiku,
-        and return as structured entries.
+        """Search Bluesky for instances of the distinctive diagnostic n-grams,
+        sample a representative subset, then run one Haiku pass that both
+        checks each post's RELEVANCE to this specific narrative (vocabulary-
+        only matches are dropped) and classifies the survivors' roles.
 
         Gracefully returns ([], explanation) if Bluesky is unavailable
         (missing creds, atproto not installed, API down, etc.) so the
@@ -2242,11 +2373,16 @@ class FingerprintGenerator:
                 await bsky.login()
 
                 queries: list[str] = []
+                skipped_generic: list[str] = []
                 if lexical.canonical_phrase:
                     queries.append(f'"{lexical.canonical_phrase}"')
                 for n in (lexical.diagnostic_ngrams or []):
-                    if n and n not in queries:
+                    if not n or n in queries:
+                        continue
+                    if _distinctive_ngram(n):
                         queries.append(n)
+                    else:
+                        skipped_generic.append(n)
                 queries = queries[:6]   # cap to limit API load
 
                 since = scope.time_window_start or None
@@ -2305,9 +2441,12 @@ class FingerprintGenerator:
 
             notes = (
                 f"Searched {len(queries)} queries on Bluesky "
-                f"(canonical phrase + diagnostic n-grams). Found "
-                f"{len(all_posts)} unique posts; sampled "
-                f"{len(sample)} for role classification."
+                f"(canonical phrase + distinctive diagnostic n-grams"
+                + (f"; generic n-grams excluded from search: "
+                   f"{', '.join(skipped_generic)}" if skipped_generic else "")
+                + f"). Found {len(all_posts)} unique posts; sampled "
+                f"{len(sample)}; kept {len(instances)} after the "
+                f"relevance check (posts matching only on vocabulary are dropped)."
             )
             _log_progress(
                 f"Social spread done in {time.monotonic() - t0:.1f}s "
@@ -2367,8 +2506,17 @@ class FingerprintGenerator:
                 except (TypeError, ValueError):
                     continue
 
+        # Relevance gate (Phase 2.8-B): only posts the judge marks relevant
+        # attach to the lineage. Unlabeled posts (judge missed them, parse
+        # failure) are DROPPED — the failure mode is a missing post, never an
+        # unrelated post presented as observed spread.
+        kept: list[SocialAttestedInstance] = []
+        dropped = 0
         for i, inst in enumerate(instances):
-            c = by_idx.get(i, {})
+            c = by_idx.get(i)
+            if not c or not c.get("relevant"):
+                dropped += 1
+                continue
             role_str = str(c.get("role", "")).strip().lower()
             try:
                 inst.amplifier_role = (
@@ -2377,8 +2525,13 @@ class FingerprintGenerator:
             except ValueError:
                 inst.amplifier_role = AmplifierRole.MENTION
             inst.role_evidence = str(c.get("role_evidence", "")).strip()
+            kept.append(inst)
 
-        return instances
+        if dropped:
+            _log_progress(
+                f"Social relevance check: dropped {dropped} of "
+                f"{len(instances)} posts (vocabulary-only matches)")
+        return kept
 
     async def generate_evidence_landscape(
         self,

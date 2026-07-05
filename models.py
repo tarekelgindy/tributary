@@ -316,9 +316,16 @@ class View:
 
 @dataclass
 class Mutation:
-    """How a claim changed between two sources."""
+    """How a claim changed between two sources.
+
+    from_index/to_index (Phase 2.8-B) identify the endpoints as positions in
+    the lineage's attestation_log — URL keying is ambiguous whenever two
+    attestations share a URL (e.g. five print articles documented via one
+    Snopes page). None = legacy mutation without indices."""
     from_source: str = ""
     to_source: str = ""
+    from_index: Optional[int] = None
+    to_index: Optional[int] = None
     preserved: str = ""
     dropped: str = ""
     added: str = ""
@@ -342,6 +349,8 @@ class Mutation:
             "mutation_id": self.mutation_id,
             "from_source": self.from_source,
             "to_source": self.to_source,
+            "from_index": self.from_index,
+            "to_index": self.to_index,
             "preserved": self.preserved,
             "dropped": self.dropped,
             "added": self.added,
@@ -569,7 +578,8 @@ class Domain(str, Enum):
 class GenealogyStatus(str, Enum):
     """Whether the narrative has one origin, several parallel origins, or is
     too widespread/diffuse to pinpoint."""
-    SINGLE_ORIGIN = "single-origin"
+    SINGLE_ORIGIN = "single-origin"        # reserved: evidence of actual coining
+    EARLIEST_FOUND = "earliest-found"      # we found a start of the RECORD, not the origin
     MULTIPLE_INDEPENDENT = "multiple-independent"
     DIFFUSE = "diffuse"
     UNKNOWN = "unknown"
@@ -714,9 +724,18 @@ class AttestedInstance:
     evidence: str = ""
     amplifier_role: AmplifierRole = AmplifierRole.UNKNOWN
     role_evidence: str = ""             # short justification for the assigned role
+    # Provenance-honesty fields (Phase 2.8-B) — all additive with defaults:
+    cited_via: str = ""                 # "" = the URL IS the source; else who documents
+                                        # the dated source (e.g. "Snopes' bibliography")
+    date_precision: str = ""            # day / month / year / circa ("" = legacy/unknown)
+    describes_period: str = ""          # for retrospectives: the period the document
+                                        # DESCRIBES (date stays the document's own date)
+    claim_relation: str = ""            # "" or "asserts" = states the claim itself;
+                                        # "related-context" = background material that
+                                        # never headlines milestones or the WHO strip
     # Verification fields — populated by the post-generation URL+quote check
     verified: bool = False
-    verification_status: str = "unchecked"  # unchecked / verified / url-error / fetch-error / quote-not-found
+    verification_status: str = "unchecked"  # unchecked / verified / url-ok / url-error / fetch-error / quote-not-found
     verification_notes: str = ""
     archive_url: str = ""               # Wayback snapshot if the live URL is down
     provenance: Provenance = field(default_factory=Provenance)  # who produced it + review state
@@ -739,6 +758,10 @@ class AttestedInstance:
             "evidence": self.evidence,
             "amplifier_role": self.amplifier_role.value,
             "role_evidence": self.role_evidence,
+            "cited_via": self.cited_via,
+            "date_precision": self.date_precision,
+            "describes_period": self.describes_period,
+            "claim_relation": self.claim_relation,
             "verified": self.verified,
             "verification_status": self.verification_status,
             "verification_notes": self.verification_notes,

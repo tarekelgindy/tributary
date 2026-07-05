@@ -1704,6 +1704,22 @@ function truncate(s, max) {
   return s.length > max ? s.slice(0, max - 3) + '...' : s;
 }
 
+// Honest date display (Phase 2.8): year-only knowledge renders as the year,
+// not a fabricated Jan-1; circa gets a tilde. Legacy entries (no
+// date_precision) render as stored.
+function fmtAttDate(i) {
+  const d = String((i && i.date) || '');
+  const p = (i && i.date_precision) || '';
+  if (p === 'year' || p === 'circa') {
+    const y = d.replace(/^-/, '').slice(0, 4).replace(/^0+/, '') || d;
+    return (p === 'circa' ? '~' : '') + y + (d.startsWith('-') ? ' BCE' : '');
+  }
+  if (p === 'month') return d.slice(0, 7);
+  return d;
+}
+
+const isRelatedContext = i => (i && i.claim_relation) === 'related-context';
+
 function verifyBadge(item) {
   // item is any object with verification fields (InformationSource,
   // AttestedInstance, SocialAttestedInstance). Returns badge HTML or ''
@@ -2007,6 +2023,9 @@ function renderMutationsBlock(label, mutations, instances) {
 function extractMilestones(fp) {
   const lexLog = (fp.genealogy?.lexical?.attestation_log || []).slice().sort(byDateAsc);
   const conLog = (fp.genealogy?.conceptual?.attestation_log || []).slice().sort(byDateAsc);
+  // related-context material stays in the log but never earns a milestone
+  const lexA = lexLog.filter(i => !isRelatedContext(i));
+  const conA = conLog.filter(i => !isRelatedContext(i));
   const chosen = new Set();
   const ms = [];
   const pick = (label, inst, lineage) => {
@@ -2016,16 +2035,16 @@ function extractMilestones(fp) {
   };
   const firstRole = (log, roles) => log.find(i => roles.includes(i.amplifier_role || ''));
 
-  const lexOrigin = firstRole(lexLog, ['originator']) || lexLog[0];
-  const conRoot = conLog[0];
+  const lexOrigin = firstRole(lexA, ['originator']) || lexA[0];
+  const conRoot = conA[0];
   // The deep ancestor is a milestone only when it actually predates the phrase.
   if (conRoot && (!lexOrigin || parseDateFrac(conRoot.date) < parseDateFrac(lexOrigin.date))) {
     pick('Oldest traced ancestor of the idea', conRoot, 'conceptual');
   }
   pick('This phrasing first attested', lexOrigin, 'lexical');
-  pick('First amplification', firstRole(lexLog, ['early-amplifier', 'mass-amplifier']) || firstRole(conLog, ['early-amplifier', 'mass-amplifier']), lexLog.length ? 'lexical' : 'conceptual');
-  pick('Institutional adoption', firstRole(lexLog, ['institutional-adoption']) || firstRole(conLog, ['institutional-adoption']), lexLog.length ? 'lexical' : 'conceptual');
-  pick('First documented pushback', firstRole(lexLog, ['critic']) || firstRole(conLog, ['critic']), lexLog.length ? 'lexical' : 'conceptual');
+  pick('First amplification', firstRole(lexA, ['early-amplifier', 'mass-amplifier']) || firstRole(conA, ['early-amplifier', 'mass-amplifier']), lexA.length ? 'lexical' : 'conceptual');
+  pick('Institutional adoption', firstRole(lexA, ['institutional-adoption']) || firstRole(conA, ['institutional-adoption']), lexA.length ? 'lexical' : 'conceptual');
+  pick('First documented pushback', firstRole(lexA, ['critic']) || firstRole(conA, ['critic']), lexA.length ? 'lexical' : 'conceptual');
 
   // Major mutations: distortion outranks addition; cap at 3, interleaved
   // across lineages so the phrase's own drift and the idea's deepest shift
@@ -2071,7 +2090,7 @@ function milestoneHtml(entry) {
   const role = i.amplifier_role || 'unknown';
   const via = citedViaOf(i);
   return `<div class="ms-item role-${role}">
-    <div class="ms-head"><span class="ms-when">${escapeHtml(i.date || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
+    <div class="ms-head"><span class="ms-when">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
     <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}${
       via ? ` <span class="who-year" title="the dated source is documented in ${escapeHtml(via)}'s citations — the link goes there, not to the original">documented by ${escapeHtml(via)}</span>` : ''}</div>
     ${i.exact_quote ? `<div class="ms-quote">“${escapeHtml(truncate(i.exact_quote, 220))}”</div>` : ''}
@@ -2081,7 +2100,9 @@ function milestoneHtml(entry) {
 function logRowsHtml(log, grp) {
   return log.map((i, idx) => {
     const role = i.amplifier_role || 'unknown';
-    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(i.date || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}</div>`;
+    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
+      isRelatedContext(i) ? ' <span class="who-year">related context</span>' : ''}${
+      i.describes_period ? ` <span class="who-year" title="a retrospective: dated by its own publication; describes ${escapeHtml(i.describes_period)}">retrospective</span>` : ''}</div>`;
   }).join('');
 }
 
@@ -2090,7 +2111,8 @@ function logRowsHtml(log, grp) {
 // Names are the product; the reader should never have to open a log to
 // learn who is pushing a narrative.
 function whoStrip(lexLog, conLog) {
-  const all = lexLog.concat(conLog).slice().sort(byDateAsc);
+  // related-context material never appears in the cast
+  const all = lexLog.concat(conLog).filter(i => !isRelatedContext(i)).sort(byDateAsc);
   const nameOf = i => (i.author || i.source_title || '').trim();
   const yearOf = i => {
     const d = String(i.date || '');
@@ -2425,9 +2447,10 @@ function instanceDetailHtml(inst) {
   return `
     <div class="detail-card role-${role}">
       <div class="head">
-        <span class="date">${escapeHtml(inst.date || '?')}</span>
+        <span class="date">${escapeHtml(fmtAttDate(inst) || '?')}</span>
         <span class="role-tag ${role}">${escapeHtml(role)}</span>
       </div>
+      ${inst.describes_period ? `<div class="field"><span class="label">Describes period</span>${escapeHtml(inst.describes_period)} <span style="color:#999;">(the date shown is the document's own)</span></div>` : ''}
       <div class="title-line">${escapeHtml(inst.source_title || '')}</div>
       <div class="author">${escapeHtml(inst.author || '')}</div>
       ${inst.exact_quote ? `<div class="quote">"${escapeHtml(inst.exact_quote)}"</div>` : ''}
