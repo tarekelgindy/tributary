@@ -15,6 +15,7 @@ world, not against another instrument.
 Usage:
     python gen_gate2_audit.py                      # newest report in agenda/reports/
     python gen_gate2_audit.py --report <path> --n 10
+    python gen_gate2_audit.py --transcribe <audit.md>  # md checkboxes -> the sibling .json
     python gen_gate2_audit.py --tally <audit.json> # score a filled-in audit
 
 Verdicts (fill into the JSON, or tick the .md and transcribe):
@@ -29,6 +30,7 @@ Verdicts (fill into the JSON, or tick the .md and transcribe):
 import argparse
 import json
 import random
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -129,10 +131,13 @@ def write_audit(report_path: Path, n: int) -> None:
         "",
         "For each claim: search the outlet's own site search AND a "
         "`site:<domain> <story keywords>` web query, restricted to the report window. "
-        "An in-window article covering the story = **failed** (paste the URL). "
+        "An in-window article covering the story = **failed** (paste the URL — and "
+        "check its publish date; out-of-window evidence doesn't falsify the claim). "
         "Nothing found = **held**. Ambiguous = **unclear** (explain).",
         "",
-        f"**Pass bar: ≥9/10 held.** Verdicts go in `{json_path.name}`.",
+        f"**Pass bar: ≥9/10 held.** Tick the boxes here, then run "
+        f"`python gen_gate2_audit.py --transcribe agenda/audits/gate2_{stamp}.md` (md → json) "
+        f"and `--tally agenda/audits/gate2_{stamp}.json`.",
         "",
     ]
     for i, c in enumerate(picked, 1):
@@ -151,6 +156,32 @@ def write_audit(report_path: Path, n: int) -> None:
     print(f"wrote {md_path}")
     outlets = sorted({c['outlet_name'] for c in picked})
     print(f"{len(picked)} claims across {len(outlets)} outlets: {', '.join(outlets)}")
+
+
+def transcribe(md_path: Path) -> None:
+    """Read ticked verdict checkboxes + evidence links from the audit .md
+    checklist into the sibling .json — so the human can fill whichever file
+    is friendlier. Notes are never clobbered; verdicts in the md win."""
+    text = md_path.read_text(encoding="utf-8")
+    json_path = md_path.with_suffix(".json")
+    audit = json.loads(json_path.read_text(encoding="utf-8"))
+    blocks = re.split(r"^## \d+\. ", text, flags=re.M)[1:]
+    if len(blocks) != len(audit.get("claims", [])):
+        raise SystemExit(f"{len(blocks)} claim blocks in the md vs "
+                         f"{len(audit.get('claims', []))} claims in {json_path.name} — aborting")
+    n = 0
+    for block, claim in zip(blocks, audit["claims"]):
+        vm = re.search(r"\[\s*[xX]\s*\]\s*(held|failed|unclear)", block)
+        if vm:
+            claim["verdict"] = vm.group(1)
+            n += 1
+        em = re.search(r"evidence:\s*(https?://\S+)", block)
+        if em:
+            claim["evidence_url"] = em.group(1)
+    json_path.write_text(json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"transcribed {n} verdict(s) from {md_path.name} -> {json_path.name}")
+    if n < len(audit["claims"]):
+        print(f"{len(audit['claims']) - n} claim(s) have no ticked box yet")
 
 
 def tally(audit_path: Path) -> None:
@@ -179,8 +210,12 @@ def main():
     ap.add_argument("--report", type=Path, default=None, help="report JSON (default: newest)")
     ap.add_argument("--n", type=int, default=10, help="claims to sample (default 10)")
     ap.add_argument("--tally", type=Path, default=None, help="score a filled-in audit JSON")
+    ap.add_argument("--transcribe", type=Path, default=None,
+                    help="read ticked checkboxes from an audit .md into its sibling .json")
     args = ap.parse_args()
-    if args.tally:
+    if args.transcribe:
+        transcribe(args.transcribe)
+    elif args.tally:
         tally(args.tally)
     else:
         write_audit(args.report or newest_report(), args.n)
