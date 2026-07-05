@@ -2374,6 +2374,9 @@ class FingerprintGenerator:
         significant = [
             i for i in lineage.attestation_log
             if i.amplifier_role in SIGNIFICANT and i.exact_quote and i.exact_quote.strip()
+            # related-context is background, not the chain — no mutation may
+            # claim a transition into or out of it
+            and getattr(i, "claim_relation", "") != "related-context"
         ]
         if len(significant) < 2:
             return []

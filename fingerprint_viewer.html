@@ -1968,17 +1968,20 @@ function renderMutationsBlock(label, mutations, instances) {
   // one semantic field) and must actually go somewhere (from != to). URL-keyed
   // endpoints collapse when sources share a URL — index keys (2.8-B) win when
   // present.
-  const usable = (mutations || []).filter(m =>
-    (m.preserved || m.dropped || m.added || m.distorted) &&
-    ((m.from_index != null && m.to_index != null && m.from_index !== m.to_index) ||
-     (m.from_source !== m.to_source)));
-  if (usable.length === 0) return '';
-
   // Look up the from/to instances by index when available, else by URL
   const byUrl = {};
   (instances || []).forEach(i => { byUrl[i.source_url] = i; });
   const endpoint = (m, key, idxKey) =>
     (m[idxKey] != null && (instances || [])[m[idxKey]]) || byUrl[m[key]] || {};
+
+  const usable = (mutations || []).filter(m =>
+    (m.preserved || m.dropped || m.added || m.distorted) &&
+    ((m.from_index != null && m.to_index != null && m.from_index !== m.to_index) ||
+     (m.from_source !== m.to_source)) &&
+    // a mutation into/out of related-context asserts a chain we don't claim
+    !isRelatedContext(endpoint(m, 'from_source', 'from_index')) &&
+    !isRelatedContext(endpoint(m, 'to_source', 'to_index')));
+  if (usable.length === 0) return '';
 
   const cards = usable.map(m => {
     const from = endpoint(m, 'from_source', 'from_index');
@@ -2062,10 +2065,14 @@ function extractMilestones(fp) {
     (list || []).forEach(m => {
       const rank = m.distorted ? 2 : (m.added ? 1 : 0);
       if (rank === 0) return;
-      // Same integrity filter as renderMutationsBlock: a from==to "mutation"
-      // is a URL-keying artifact, not a milestone.
+      // Same integrity filters as renderMutationsBlock: a from==to "mutation"
+      // is a URL-keying artifact, and related-context endpoints assert a
+      // chain we don't claim.
       if (m.from_source === m.to_source && m.from_index == null) return;
-      muts.push({ m, lineage, rank, from: byUrl[m.from_source] || {}, to: byUrl[m.to_source] || {} });
+      const from = byUrl[m.from_source] || {};
+      const to = byUrl[m.to_source] || {};
+      if (isRelatedContext(from) || isRelatedContext(to)) return;
+      muts.push({ m, lineage, rank, from, to });
     });
   });
   const rankSort = (a, b) => b.rank - a.rank || byDateAsc(a.to, b.to);
