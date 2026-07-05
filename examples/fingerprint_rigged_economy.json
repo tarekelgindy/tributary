@@ -221,7 +221,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.488943+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -238,7 +238,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.841968+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -255,7 +255,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.559577+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -272,7 +272,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.384698+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -289,7 +289,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:14.984119+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -306,7 +306,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.177467+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -323,7 +323,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.076019+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -340,7 +340,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.995440+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -357,7 +357,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.448787+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -374,7 +374,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.139911+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         }
@@ -1000,11 +1000,11 @@
     },
     "conceptual": {
       "lineage_type": "conceptual",
-      "status": "single-origin",
-      "first_attested_date": "-0133-01-01",
-      "first_attested_source": "https://classics.mit.edu/Plutarch/tiberius.html",
+      "status": "earliest-found",
+      "first_attested_date": "1912-10-01",
+      "first_attested_source": "https://historymatters.gmu.edu/d/5725/",
       "attestation_confidence": 0.9,
-      "primary_origin_id": "dc2b06680637",
+      "primary_origin_id": "aee36441bfca",
       "parallel_origin_ids": [],
       "attestation_log": [
         {
@@ -1018,7 +1018,8 @@
           "confidence": 0.9,
           "evidence": "Tiberius Gracchus's 133 BCE speech (preserved by Plutarch) is an explicit, detailed articulation of the exact structural claim: wealthy elites use legal manipulation and political power to circumvent rules designed to protect workers/small farmers, allowing land (capital) to be concentrated upward at the expense of the laboring class. The mechanism is clear — 'rich men contrived to get lands into their possession under other people's names,' systematically violating the 500-iugera cap, using their political power to block enforcement. The result is worker dispossession: 'the poor, who were thus deprived of their farms, were no longer able to serve in war.' Plutarch records Tiberius explicitly arguing that the economic and legal system, as operated by elites, structurally transfers public assets (value) from the laboring citizen-farmer class to the landholding capital class. This is a more complete and explicit version of the structural claim than either Amos or Hesiod — naming ownership, law/rules, and political influence as the instruments. NOTE: 133 BCE is later than both Amos and Hesiod but substantially earlier than the proposed 0350-01-01 date. However, since Amos (~760 BCE) is even earlier, Tiberius Gracchus is better categorized as an intermediate amplifier/restater rather than originator.",
           "amplifier_role": "unknown",
-          "role_evidence": "Tiberius Gracchus (133 BCE) does not originate the structural claim — Amos and Hesiod precede him by 5–6 centuries — but he is the clearest pre-0350-01-01 political articulaton of it, moving from prophetic moral critique to a legislative and structural-causal diagnosis. He names the specific instruments (legal manipulation, land law, political power, slave-capital substitution for free labor) and explicitly connects them to the systematic dispossession of the laboring class. He is an amplifier who makes the structural claim fully explicit in political-reform language."
+          "role_evidence": "Tiberius Gracchus (133 BCE) does not originate the structural claim — Amos and Hesiod precede him by 5–6 centuries — but he is the clearest pre-0350-01-01 political articulaton of it, moving from prophetic moral critique to a legislative and structural-causal diagnosis. He names the specific instruments (legal manipulation, land law, political power, slave-capital substitution for free labor) and explicitly connects them to the systematic dispossession of the laboring class. He is an amplifier who makes the structural claim fully explicit in political-reform language. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "d49a5d9b911f",
@@ -1030,8 +1031,9 @@
           "exact_quote": "\"Hesiod uses a particular instance in his life...as a springboard into a discussion of the injustice of aristocratic landowners\"",
           "confidence": 0.82,
           "evidence": "Hesiod's Works and Days (~700 BCE) opens with a direct complaint about 'bribe-devouring kings' who serve the property-owning class at the expense of laboring farmers. Hesiod explicitly describes a world 'dominated by aristocratic landlords, so that small farmers such as himself had to struggle to survive.' The poem diagnoses a structural distortion: those who own property can influence the legal/judicial system ('the agora,' the courts, the 'bribe-swallowing lords') against those who only have their labor. Hesiod's description of aristocratic lords who 'labor little and receive much' while farmers 'labor much and get little' (echoed in Aristotle's later paraphrase) captures the labor-to-capital value transfer. The mechanism named is the capture of legal and political institutions (judges, courts) by property owners — precisely the 'instrument' in the structural claim (design of rules and political influence). However, unlike Amos, Hesiod stops short of diagnosing a complete systemic/structural causal mechanism and focuses more on moral-ethical corruption; his structural awareness is real but less systematically developed.",
-          "amplifier_role": "originator",
-          "role_evidence": "Hesiod (~700 BCE) predates the proposed 0350-01-01 date by roughly 350 years and is the earliest Greek-tradition articulation of the structural claim. He names ownership concentration (aristocratic landlords), political/judicial capture (bribe-devouring kings), and the resulting disadvantage of laboring farmers relative to property-owning elites. His confidence rating is slightly lower than Amos because his framing is more ethical-moral than structural-causal, and because 'capital' in his text means landed property and political office rather than productive capital in the modern sense."
+          "amplifier_role": "mention",
+          "role_evidence": "Hesiod (~700 BCE) predates the proposed 0350-01-01 date by roughly 350 years and is the earliest Greek-tradition articulation of the structural claim. He names ownership concentration (aristocratic landlords), political/judicial capture (bribe-devouring kings), and the resulting disadvantage of laboring farmers relative to property-owning elites. His confidence rating is slightly lower than Amos because his framing is more ethical-moral than structural-causal, and because 'capital' in his text means landed property and political office rather than productive capital in the modern sense. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.] [Role adjusted from originator (corpus sweep 2026-07-05): related-context material cannot originate a claim it does not assert.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "0bd7fec572b7",
@@ -1044,7 +1046,8 @@
           "confidence": 0.88,
           "evidence": "Isaiah 5 (~740 BCE) contains the famous 'woe' oracle against those 'who join house to house, who add field to field, until there is no more room' (Isaiah 5:8). Scholarly analysis of the socioeconomic context shows this addresses a specific structural mechanism: the urban-based absentee landowning elite, politically connected to the royal court, used taxation and rental policy to extract rents at each phase of agricultural production, undermining the self-sufficiency of small farmers and concentrating wealth. The article in Scielo explicitly identifies that 'rents or taxes could be exacted for each segment of the process of production,' that 'this had the effect of undermining the self-sufficiency of small farmers,' and that 'the urban elite [could] dictate market resources and prices, most probably encouraged or even aided by the trade and taxation policies controlled by the royal elite to which they belonged.' This is the same structural claim: elite ownership + political influence + designed tax/rent rules → systematic value transfer from laboring farmers to absentee capital owners. The instrument of 'the design of rules, ownership, taxation, and political influence' is present and explicitly causal.",
           "amplifier_role": "unknown",
-          "role_evidence": "Isaiah is a near-contemporary of Amos (~740 BCE) and articulates the same structural claim in a more explicitly political-economic frame, emphasizing the collusion between landowning capital and state/royal power in designing the taxation and pricing rules that transfer value from workers to owners. He is an independent co-originator rather than a later amplifier of Amos."
+          "role_evidence": "Isaiah is a near-contemporary of Amos (~740 BCE) and articulates the same structural claim in a more explicitly political-economic frame, emphasizing the collusion between landowning capital and state/royal power in designing the taxation and pricing rules that transfer value from workers to owners. He is an independent co-originator rather than a later amplifier of Amos. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "c8222728ff77",
@@ -1056,8 +1059,9 @@
           "exact_quote": "\"By these business practices and economic structures, the members of the upper classes were guilty of taking property that rightfully belonged to others\"",
           "confidence": 0.95,
           "evidence": "The Book of Amos (~760–750 BCE, active during the reign of Jeroboam II) is the strongest pre-0350 BCE articulation of the exact structural claim. Amos directly names the instruments: (1) rigged market scales and false weights (Amos 8:5–6) used by merchant-owners to extract value from workers/buyers; (2) the courts ('the gate') systematically manipulated by elites against the poor (Amos 5:10–12); (3) grain-rent levied on peasants who farm land owned by elites (Amos 5:11); (4) debt-slavery as the mechanism by which dispossessed workers are absorbed as capital assets ('selling the righteous for silver, and the needy for a pair of sandals,' Amos 2:6). Scholarly analysis explicitly frames this as 'existing economic structures' by which 'the ruling class was enriching itself by exploiting the poor' — not merely personal moral failing but a designed institutional system. Amos names all four structural instruments in the target claim: rules (courts/law), ownership (land concentration), taxation (grain-rent), and political influence (monarchy aligned with wealthy, priests serving the crown). The causal mechanism — institutions transferring value from labor/peasants to landowning capital class — is unmistakably present. This is not merely a 'related idea'; it is the same structural claim articulated in a different vocabulary (covenant-prophetic rather than political-economic).",
-          "amplifier_role": "originator",
-          "role_evidence": "Amos (~760 BCE) predates the proposed earliest date of 0350-01-01 by approximately four centuries and is the first known writer to articulate the full structural mechanism — not just inequality as outcome, but the specific instruments (designed rules, ownership, taxation, judicial capture, political elite alignment) by which owners of land/capital systematically extract value from workers. His oracles name all the structural components with remarkable specificity and connect them causally to worker dispossession."
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Amos (~760 BCE) predates the proposed earliest date of 0350-01-01 by approximately four centuries and is the first known writer to articulate the full structural mechanism — not just inequality as outcome, but the specific instruments (designed rules, ownership, taxation, judicial capture, political elite alignment) by which owners of land/capital systematically extract value from workers. His oracles name all the structural components with remarkable specificity and connect them causally to worker dispossession. [Role adjusted from originator (corpus sweep 2026-07-05): only the earliest instance can be the originator; later re-articulations are early amplifiers.] [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "4c292100f38c",
@@ -1069,8 +1073,9 @@
           "exact_quote": "a piece of property is a tool for action separate from its owner",
           "confidence": 0.62,
           "evidence": "Aristotle's Politics theorizes the oikos as a hierarchy in which ownership of property confers the right to command; the propertyless serve those who own. While Aristotle naturalizes this inequality rather than critiquing it, his framework is the earliest systematic articulation that ownership structurally positions one class over another in the economic order — the same structural claim, argued from the master's perspective. Vocabulary is entirely distinct from diagnostic n-grams: 'master/slave,' 'oikonomia,' 'natural rule.'",
-          "amplifier_role": "originator",
-          "role_evidence": "Chronologically earliest systematic text articulating that ownership of productive property confers structural command over laborers within an economic institution."
+          "amplifier_role": "mention",
+          "role_evidence": "Chronologically earliest systematic text articulating that ownership of productive property confers structural command over laborers within an economic institution. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.] [Role adjusted from originator (corpus sweep 2026-07-05): related-context material cannot originate a claim it does not assert.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "87eb4daa0fb9",
@@ -1083,7 +1088,8 @@
           "confidence": 0.96,
           "evidence": "Smith explicitly observes that the law 'authorises, or at least does not prohibit' masters' wage-suppression combinations while prohibiting workers' combinations; that masters can survive without workers far longer than workers can without masters; and that 'whenever the legislature attempts to regulate the differences between masters and their workmen, its counsellors are always the masters.' This is the structural claim — design of rules transfers value from labor to capital — argued in Enlightenment political-economy vocabulary, not diagnostic n-grams.",
           "amplifier_role": "early-amplifier",
-          "role_evidence": "Smith's Wealth of Nations was the foundational text of modern political economy and gave the structural claim its first rigorous empirical articulation in mainstream economic thought."
+          "role_evidence": "Smith's Wealth of Nations was the foundational text of modern political economy and gave the structural claim its first rigorous empirical articulation in mainstream economic thought. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "7d433413d20a",
@@ -1096,7 +1102,8 @@
           "confidence": 0.94,
           "evidence": "Hodgskin used Ricardo's labor theory of value to argue that 'artificial' property rights created by legislation allow owners of capital to claim an unearned share of workers' production. He explicitly identified state-enforced property rules as the mechanism of transfer — precisely the 'instrument' in the structural claim. Vocabulary: 'natural vs. artificial right,' 'unproductiveness of capital,' 'whole produce of labour.' Entirely distinct from diagnostic n-grams.",
           "amplifier_role": "early-amplifier",
-          "role_evidence": "Hodgskin was the first Anglophone writer to center the structural claim on the legal-institutional design of property rights as the causal mechanism of worker disadvantage, directly influencing Marx."
+          "role_evidence": "Hodgskin was the first Anglophone writer to center the structural claim on the legal-institutional design of property rights as the causal mechanism of worker disadvantage, directly influencing Marx. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "9006942d373b",
@@ -1109,7 +1116,8 @@
           "confidence": 0.98,
           "evidence": "The Manifesto is the founding mass-circulation text arguing that the design of capitalist property relations structurally transfers value from those who labor to those who own, and that the state, law, and ideology reinforce this transfer. Vocabulary: 'means of production,' 'bourgeoisie/proletariat,' 'class struggle,' 'exploitation.' No overlap with diagnostic n-grams.",
           "amplifier_role": "early-amplifier",
-          "role_evidence": "The Manifesto brought the structural claim to a global mass audience for the first time and established the vocabulary for a century of subsequent articulations."
+          "role_evidence": "The Manifesto brought the structural claim to a global mass audience for the first time and established the vocabulary for a century of subsequent articulations. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "f95930ce4efd",
@@ -1122,7 +1130,8 @@
           "confidence": 0.99,
           "evidence": "Capital develops the structural claim with full rigor: the wage relation is designed such that the worker is paid the reproduction cost of their labor-power while the capitalist appropriates all surplus value produced beyond that cost. The entire economic system — property law, the wage contract, money, the state — is shown to systematically transfer value from labor to capital. No diagnostic n-grams used; vocabulary is 'surplus value,' 'labor-power,' 'means of production,' 'valorization.'",
           "amplifier_role": "early-amplifier",
-          "role_evidence": "Das Kapital is the most elaborated academic statement of the structural claim and has grounded nearly every subsequent scholarly and political articulation of it."
+          "role_evidence": "Das Kapital is the most elaborated academic statement of the structural claim and has grounded nearly every subsequent scholarly and political articulation of it. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "15c2f9e04d29",
@@ -1135,7 +1144,8 @@
           "confidence": 0.95,
           "evidence": "George argues that concentrated ownership of land — the foundational productive asset — allows non-producing owners to extract rent from all who need land to work, driving wages to subsistence and concentrating wealth at the top. The structural claim is articulated in Georgist vocabulary: 'land monopoly,' 'unearned increment,' 'rent.' Progress and Poverty sold millions of copies, making it a major US mass-amplifier. Vocabulary entirely distinct from diagnostic n-grams.",
           "amplifier_role": "mass-amplifier",
-          "role_evidence": "Progress and Poverty sold several million copies in the late 1800s and became one of the most-read books of the era, making the structural claim about ownership and worker disadvantage accessible to an enormous popular audience."
+          "role_evidence": "Progress and Poverty sold several million copies in the late 1800s and became one of the most-read books of the era, making the structural claim about ownership and worker disadvantage accessible to an enormous popular audience. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "674a25c6444c",
@@ -1148,7 +1158,8 @@
           "confidence": 0.88,
           "evidence": "Rerum Novarum explicitly identifies concentrated capital ownership and industrial power as placing workers in a structurally disadvantaged position, requiring state and church intervention to ensure just wages and working conditions. It frames the problem as the design of industrial property relations, not individual moral failings. Vocabulary: 'condition of the working classes,' 'rights and duties of capital and labor,' 'just wage.' Distinct from all diagnostic n-grams; articulates from Catholic social teaching tradition.",
           "amplifier_role": "institutional-adoption",
-          "role_evidence": "As a papal encyclical, Rerum Novarum represents the Catholic Church's institutional adoption of the structural claim and became the cornerstone of Catholic social teaching for over a century, reaching hundreds of millions of readers worldwide."
+          "role_evidence": "As a papal encyclical, Rerum Novarum represents the Catholic Church's institutional adoption of the structural claim and became the cornerstone of Catholic social teaching for over a century, reaching hundreds of millions of readers worldwide. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "e76df746f443",
@@ -1161,7 +1172,8 @@
           "confidence": 0.88,
           "evidence": "Veblen's institutional economics argues that the design of capitalist institutions — particularly pecuniary ownership divorced from productive work — systematically rewards non-producing owners while compelling workers to perform all actual industrial labor. Business enterprise (ownership/finance) and industry (productive work) are structurally at odds, with institutional rules channeling gains to owners. Vocabulary: 'leisure class,' 'predatory culture,' 'pecuniary vs. industrial employments,' 'instinct of workmanship.' Entirely distinct from diagnostic n-grams.",
           "amplifier_role": "mass-amplifier",
-          "role_evidence": "Theory of the Leisure Class was a popular bestseller and public sensation, introducing the structural critique in a non-Marxist, accessible vocabulary that reached progressive and mainstream audiences."
+          "role_evidence": "Theory of the Leisure Class was a popular bestseller and public sensation, introducing the structural critique in a non-Marxist, accessible vocabulary that reached progressive and mainstream audiences. [Demoted to related-context (corpus sweep 2026-07-05): pre-1900 idea material is resemblance, not evidenced transmission — it stays in the log as context and no longer headlines.]",
+          "claim_relation": "related-context"
         },
         {
           "instance_id": "aee36441bfca",
@@ -1336,7 +1348,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.250135+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1353,7 +1365,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.682284+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1370,7 +1382,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.349401+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1387,7 +1399,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.315543+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1404,7 +1416,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.342226+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1421,7 +1433,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.653249+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1438,7 +1450,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.619520+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1455,7 +1467,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.633603+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1472,7 +1484,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.793009+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1489,7 +1501,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.826227+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1506,7 +1518,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.774663+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1523,7 +1535,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:18.065337+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1540,7 +1552,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.193892+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1557,7 +1569,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.189626+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1574,7 +1586,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.720534+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1591,7 +1603,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.890261+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1608,7 +1620,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.163195+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1625,7 +1637,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.976564+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1642,7 +1654,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:15.802189+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1659,7 +1671,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.176295+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         },
@@ -1676,7 +1688,7 @@
             "model": "claude-sonnet-4-6",
             "contributor_name": "",
             "timestamp": "2026-05-22T07:51:16.043705+00:00",
-            "confidence": 0.0,
+            "confidence": 0,
             "reasoning": ""
           }
         }
@@ -1776,7 +1788,8 @@
       },
       "social_spread": [],
       "social_search_performed": false,
-      "social_search_notes": ""
+      "social_search_notes": "",
+      "curation_note": "Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D). | Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D). | Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D)."
     },
     "predecessor_fingerprint_ids": [],
     "successor_fingerprint_ids": [],
@@ -2014,7 +2027,7 @@
     "model": "claude-sonnet-4-6",
     "contributor_name": "",
     "timestamp": "2026-05-22T07:51:40.129849+00:00",
-    "confidence": 0.0,
+    "confidence": 0,
     "reasoning": ""
   },
   "amplifiers": {

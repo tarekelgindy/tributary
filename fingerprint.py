@@ -358,20 +358,26 @@ Output ONLY the JSON object.
 
 
 CONCEPTUAL_ANCESTORS_SYSTEM = """\
-You are tracing the INTELLECTUAL LINEAGE of a structural claim — the full
-chain of texts and figures across history that articulate the same
-underlying claim, in any vocabulary, from the earliest origin through to
-the present day.
+You are tracing where the CURRENT WAVE of a structural claim came from —
+the chain of texts and figures WITHIN LIVING CULTURAL MEMORY (roughly the
+last 100 years, unless the scope window says otherwise) that articulate
+the same underlying claim in any vocabulary, through to the present day.
 
 This is NOT a search for the specific phrasing — the user has the lexical
-search separately. You are finding everyone who articulates the SAME
-structural claim using vocabulary OTHER than the diagnostic n-grams,
-across any era.
+search separately. You are finding who articulated the SAME structural
+claim in OTHER vocabulary: the prior waves of the idea, and how it
+travelled into the present.
 
-Cover the FULL chronological range. Modern contributors (last 20 years)
-are AS IMPORTANT as historical ancestors. The chain should NOT
-artificially terminate in the early or mid-20th century — do not stop
-the chain at the "classical" or "founding" texts.
+Resemblance is not transmission. A topically similar text from a distant
+era provides no insight into where today's claim came from, and placing it
+on the timeline implies an unbroken chain across centuries that cannot be
+verified. Stay within the claim's era: do NOT reach into antiquity,
+religious traditions, or pre-modern texts by default. If genuinely
+foundational older material matters, include at most one or two entries
+tagged claim_relation="related-context" — never as the chain's origin.
+
+Cover the range from the current wave's beginnings through the present.
+Modern contributors (last 20 years) are AS IMPORTANT as earlier ones.
 
 Include these source types:
 
@@ -405,10 +411,9 @@ For each direct contributor, report:
   date              ISO date of THE DOCUMENT ITSELF (publication date). NEVER
                     the period a document talks about: a 2024 retrospective
                     about 1970s folklore is dated 2024, with the 1970s in
-                    describes_period. For genuinely historical documents
-                    (Wealth of Nations, the Canon of Medicine) use the
-                    historical document's date with date_precision "circa"
-                    or "year" as appropriate.
+                    describes_period. For older documents within scope,
+                    use the document's own date with date_precision
+                    "circa" or "year" as appropriate.
   date_precision    "day", "month", "year", or "circa"
   describes_period  "" unless the document is a retrospective describing an
                     earlier period — then that period as text. The date
@@ -473,8 +478,8 @@ For each direct contributor, report:
   role_evidence     one-sentence justification for the assigned role
 
 Distinctions:
-- DIRECT contributor: articulates the same structural claim, any era,
-  in vocabulary OTHER than the diagnostic n-grams
+- DIRECT contributor: articulates the same structural claim, within the
+  claim's era, in vocabulary OTHER than the diagnostic n-grams
 - ADJACENT: related but a different claim — skip entirely, or include as
   claim_relation="related-context" ONLY if genuinely load-bearing context
 - LEXICAL: uses the diagnostic n-grams — skip (belongs in lexical chain)
@@ -492,11 +497,11 @@ Return JSON:
   "search_notes": "what eras and source types you covered; balance of academic vs. popularizer contributors; what you ruled out"
 }
 
-Sort by date ascending. Aim for 15–25 results across the full chronological
-range from earliest available text through to the present, with at least
+Sort by date ascending. Aim for 15–25 results across the claim's era
+(living memory by default) through to the present, with at least
 2–3 contributors from each of 2010–2016, 2016–2021, and 2021–present
 where evidence exists. Modern popularizers AND contemporary academic work
-are welcome and expected — DO NOT cap the chain at the early 20th century.
+are welcome and expected.
 
 Output ONLY the JSON object.
 """
@@ -508,9 +513,12 @@ Someone has proposed that {proposed_date} is the earliest known articulation
 of a structural claim. Your job is to find earlier texts articulating the
 same structural claim in any vocabulary.
 
-Search older intellectual traditions, foundational philosophy and political
-economy, religious and ethical traditions, and pre-modern texts. The claim
-may have been articulated in very different words centuries earlier.
+Search earlier decades WITHIN the claim's era — living cultural memory,
+roughly the last century unless the scope window says otherwise. The claim
+may have been articulated in very different words decades earlier. Do NOT
+reach into antiquity or pre-modern traditions by default: resemblance
+across centuries is not transmission, and a distant-era text is at most
+claim_relation="related-context", never an origin.
 
 For each pre-{proposed_date} direct ancestor you find, report the standard
 fields (date, source_url, source_title, author, lexical_form_seen,
@@ -1768,13 +1776,27 @@ class FingerprintGenerator:
     """Generates NarrativeFingerprint objects via Claude."""
 
     def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None,
-                 max_searches: int = 10):
+                 max_searches: int = 10, deep_history: bool = False):
         self.client = client or anthropic.AsyncAnthropic()
         # Cap on web searches per Sonnet+web_search call. The model tends to
         # over-search (15-22 searches in one call observed), and each search
         # carries a fee. Capping trades peripheral depth for lower cost,
         # faster runs, and better run-to-run consistency. 0 or None = uncapped.
         self.max_searches = max_searches
+        # Opt-in (2026-07-05, Tarek's call): conceptual lineage defaults to
+        # living cultural memory — deep ancestry is tangential resemblance,
+        # not transmission, and produced the audit's worst errors. This flag
+        # re-enables pre-modern tracing for the rare trace where antiquity
+        # genuinely is the story.
+        self.deep_history = deep_history
+
+    _DEEP_HISTORY_ADDENDUM = (
+        "\n\nDEEP-HISTORY MODE IS ON for this trace: you may additionally "
+        "trace pre-modern intellectual traditions (philosophy, religious "
+        "texts, classical political economy). Every pre-modern entry still "
+        "faces the identity test, needs cited_via when documented via a "
+        "modern secondary, and stays claim_relation=\"related-context\" "
+        "unless transmission into the modern claim is actually evidenced.")
 
     def _web_search_tool(self) -> dict:
         """Build the web_search tool config, applying the search cap."""
@@ -2059,10 +2081,10 @@ class FingerprintGenerator:
             f"  Entities: {json.dumps(conceptual.entities)}\n"
             f"  Causal structure: {conceptual.causal_structure}\n\n"
             f"SCOPE: {_scope_clause(scope)}\n\n"
-            "Find direct intellectual ancestors of this claim. Cast a wide net "
-            "across philosophy, political economy, movement texts, and older "
-            "traditions. Look for texts that argue the SAME structural claim "
-            "in the vocabulary of their own time."
+            "Find the sources of this claim's current wave. Cast a wide net "
+            "across scholarship, journalism, movement texts, and popular "
+            "media within the claim's era. Look for texts that argue the "
+            "SAME structural claim in the vocabulary of their own time."
         )
 
         response = await _create_with_retry(
@@ -2070,7 +2092,8 @@ class FingerprintGenerator:
             model=SONNET,
             max_tokens=16384,
             tools=[self._web_search_tool()],
-            system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM,
+            system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM
+                     + (self._DEEP_HISTORY_ADDENDUM if self.deep_history else ""),
                      "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user_content}],
             retry_on_empty_text=True,
@@ -2104,7 +2127,8 @@ class FingerprintGenerator:
     ) -> tuple[list[AttestedInstance], str]:
         _log_progress(f"L4 conceptual: adversarial verify against {proposed_date} starting")
         t0 = time.monotonic()
-        system_text = CONCEPTUAL_ADVERSARIAL_SYSTEM.format(proposed_date=proposed_date)
+        system_text = (CONCEPTUAL_ADVERSARIAL_SYSTEM.format(proposed_date=proposed_date)
+                       + (self._DEEP_HISTORY_ADDENDUM if self.deep_history else ""))
 
         user_content = (
             f"STRUCTURAL CLAIM:\n"
@@ -2113,9 +2137,9 @@ class FingerprintGenerator:
             f"  Causal structure: {conceptual.causal_structure}\n\n"
             f"PROPOSED EARLIEST DATE: {proposed_date}\n\n"
             f"SCOPE: {_scope_clause(scope)}\n\n"
-            "Search older intellectual traditions for any earlier articulation "
-            "of this same structural claim. A clean negative result strengthens "
-            "the claim; say so plainly if you find nothing."
+            "Search earlier decades within the claim's era for any earlier "
+            "articulation of this same structural claim. A clean negative "
+            "result strengthens the claim; say so plainly if you find nothing."
         )
 
         response = await _create_with_retry(
@@ -3683,7 +3707,8 @@ class FingerprintStore:
 # ---------------------------------------------------------------------------
 
 async def _cli(args):
-    gen = FingerprintGenerator(max_searches=args.max_searches)
+    gen = FingerprintGenerator(max_searches=args.max_searches,
+                               deep_history=args.deep_history)
     scope = Scope(
         language="en",
         region=args.region,
@@ -3953,6 +3978,12 @@ def main():
                         help="Run the full deep pipeline: conceptual lineage + "
                              "mutations + evidence landscape (~$0.75–1.00/claim). "
                              "Default is LEAN — lexical lineage only (~$0.15–0.25).")
+    parser.add_argument("--deep-history", action="store_true",
+                        help="Conceptual lineage may trace pre-modern traditions. "
+                             "Default is living cultural memory (~last century): "
+                             "deep ancestry is resemblance, not transmission, and "
+                             "never headlines even with this flag (related-context "
+                             "unless transmission is evidenced).")
     parser.add_argument("--conceptual", action="store_true",
                         help="Add the L4 conceptual lineage pass (~+$0.30). "
                              "Opt-in; included by --full.")

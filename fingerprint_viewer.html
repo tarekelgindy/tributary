@@ -2038,9 +2038,12 @@ function extractMilestones(fp) {
 
   const lexOrigin = firstRole(lexA, ['originator']) || lexA[0];
   const conRoot = conA[0];
-  // The deep ancestor is a milestone only when it actually predates the phrase.
+  // The idea's earliest documentation is a milestone only when it actually
+  // predates the phrase — that's the "this framing is a recycled wave"
+  // finding. (Deep antiquity no longer reaches here: the pipeline scopes the
+  // idea lineage to living memory, and related-context is filtered above.)
   if (conRoot && (!lexOrigin || parseDateFrac(conRoot.date) < parseDateFrac(lexOrigin.date))) {
-    pick('Oldest traced ancestor of the idea', conRoot, 'conceptual');
+    pick('The idea, first documented', conRoot, 'conceptual');
   }
   pick('This phrasing first attested', lexOrigin, 'lexical');
   pick('First amplification', firstRole(lexA, ['early-amplifier', 'mass-amplifier']) || firstRole(conA, ['early-amplifier', 'mass-amplifier']), lexA.length ? 'lexical' : 'conceptual');
