@@ -1,0 +1,42 @@
+# Self-managed Pages deploy — replaces the default "pages build and
+# deployment" pipeline, whose deploy step failed transiently four times on
+# 2026-07-05/06 with "Deployment failed, try again later". This one retries,
+# and gives us logs we can actually read.
+#
+# Requires: repo Settings -> Pages -> Build and deployment -> Source set to
+# "GitHub Actions" (until then this workflow errors harmlessly and the legacy
+# branch-based pipeline keeps running).
+name: deploy-site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Retry deploy once
+        if: failure()
+        uses: actions/deploy-pages@v4
