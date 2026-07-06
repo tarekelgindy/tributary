@@ -114,7 +114,9 @@ jobs:
             REL="gallery/events/$ID.json"
           else
             echo "::notice::origin trace: $SUBJECT"
-            python fingerprint.py "$SUBJECT" --save --max-searches 4 > out.json
+            # lean + evidence: the supports/disputes map is the most
+            # reader-valuable deep layer (~$0.40/request vs ~$0.20 bare lean)
+            python fingerprint.py "$SUBJECT" --evidence --save --max-searches 4 > out.json
             ID=$(grep -o '\[saved fingerprint: [a-f0-9]*\]' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
             REL="gallery/traces/$ID.json"
             mkdir -p gallery/traces

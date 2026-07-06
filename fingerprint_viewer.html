@@ -2487,7 +2487,7 @@ function renderEvidence(fp) {
   if (sources.length === 0 && !ev.summary) {
     panel.innerHTML = `
       <div class="card">
-        <p class="empty">Evidence landscape was not generated for this trace (older traces predate the feature).</p>
+        <p class="empty">Evidence landscape was not generated for this trace — lean generation runs skip it to keep on-demand requests cheap; it can be added by regenerating with the evidence layer on.</p>
       </div>`;
     return;
   }
