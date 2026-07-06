@@ -1,0 +1,805 @@
+{
+  "fingerprint_id": "95dffd8065ce",
+  "created_at": "2026-07-06T06:05:19.063146+00:00",
+  "last_updated": "2026-07-06T06:05:19.063146+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "the moon landing was faked",
+    "phrase_variants": [
+      "moon landing hoax",
+      "fake moon landing",
+      "we never went to the moon",
+      "Apollo moon landing was staged",
+      "moon landing conspiracy"
+    ],
+    "diagnostic_ngrams": [
+      "moon landing hoax",
+      "faked moon landing",
+      "never went to moon",
+      "staged Apollo landing"
+    ],
+    "stopword_stripped_signature": "moon landing faked"
+  },
+  "conceptual": {
+    "claim_predicate": "the Apollo moon landings did not occur as officially documented; the evidence presented to the public was fabricated",
+    "entities": {
+      "agent": "NASA and the U.S. government",
+      "patient": "the public / historical record",
+      "arena": "space exploration and scientific documentation",
+      "instrument": "film production, photography manipulation, and institutional control of information"
+    },
+    "causal_structure": "NASA and the U.S. government, through technical deception and media control, created false evidence of moon landings and presented it to the public as authentic historical fact"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-blame",
+      "process-violation",
+      "revelation"
+    ],
+    "valence": {
+      "villain": "NASA and the U.S. government",
+      "victim": "the public / historical record",
+      "hero": ""
+    },
+    "epistemic_stance": "certain",
+    "register": "populist"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "earliest-found",
+      "first_attested_date": "1969-07-01",
+      "first_attested_source": "https://en.wikipedia.org/wiki/Moon_landing_conspiracy_theories",
+      "attestation_confidence": 0.55,
+      "primary_origin_id": "029b3e80f841",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "029b3e80f841",
+          "date": "1969-07-01",
+          "source_url": "https://en.wikipedia.org/wiki/Moon_landing_conspiracy_theories",
+          "source_title": "Moon landing conspiracy theories \u2014 Wikipedia (citing Chaikin 1994 and contemporaneous accounts)",
+          "author": "",
+          "lexical_form_seen": "the moon landing was faked / moon landing conspiracy ideas",
+          "exact_quote": "Doubts about the authenticity of the Apollo Moon landings first appeared in December 1968, when Apollo 8 was launched.",
+          "confidence": 0.55,
+          "evidence": "Multiple secondary historians (Chaikin 1994, Wikipedia synthesis) report that informal oral skepticism and fringe claims that the landing was staged circulated immediately after Apollo 8 (Dec 1968) and Apollo 11 (July 1969). No primary text with the exact diagnostic n-grams has been recovered from this period; this entry records the attested oral/informal origin window, not a specific document. Confidence is limited because no primary-source text with the diagnostic phrasing has been located for this period.",
+          "amplifier_role": "mention",
+          "role_evidence": "Represents the earliest attested window of the claim's existence per historians, but no recoverable primary document with the diagnostic n-grams survives from this moment.",
+          "cited_via": "Wikipedia / multiple secondary historians citing Andrew Chaikin's 'A Man on the Moon' (1994) and other sources",
+          "date_precision": "circa",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340236+00:00",
+            "confidence": 0.55,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "5ef5121ab30b",
+          "date": "1970-01-01",
+          "source_url": "https://www.moonfaker.com/documents/Metapedia-Moon-Hoax/",
+          "source_title": "\"Did Man Land on the Moon?\" \u2014 book by James J. Cranny",
+          "author": "James J. Cranny",
+          "lexical_form_seen": "Did man land on the Moon? [title implies faked landing]",
+          "exact_quote": "The first book on the subject (\"Did man land on the Moon?\") was issued in 1970 by the Texas mathematician James J. Cranny.",
+          "confidence": 0.5,
+          "evidence": "Cited in Metapedia and Simple English Wikipedia as the first book on the subject, published 1970 in Texas. The title itself is a close lexical variant of the 'never went to the moon' framing. However, no digitized primary text has been located, and the exact internal phrasing of the book is unknown. Confidence is moderate due to secondhand citation only.",
+          "amplifier_role": "originator",
+          "role_evidence": "Described by multiple secondary sources as the first book-length articulation of the moon-landing-as-hoax claim, predating Kaysing's 1976 work.",
+          "cited_via": "Metapedia Moon Hoax article (secondary); original book not digitally available",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340287+00:00",
+            "confidence": 0.5,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "0d2cbfc4cda2",
+          "date": "1971-01-01",
+          "source_url": "https://www.space.com/apollo-11-moon-landing-hoax-believers.html",
+          "source_title": "Moon-landing hoax still lives on. But why? \u2014 Space.com",
+          "author": "",
+          "lexical_form_seen": "faked moon landings",
+          "exact_quote": "The James Bond movie \"Diamonds Are Forever,\" for example, had a joke about faked moon landings just two years later, in 1971.",
+          "confidence": 0.75,
+          "evidence": "Space.com (citing the 1971 film 'Diamonds Are Forever') documents that the phrase 'faked moon landings' was already culturally legible enough to be used as a joke in a mainstream Hollywood film just two years after Apollo 11. The film itself is the dated artifact; the Space.com article is the documenting source.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "A mainstream Hollywood film referencing 'faked moon landings' as a recognizable joke indicates the framing had already entered popular culture by 1971.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340305+00:00",
+            "confidence": 0.75,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "e84ef030336c",
+          "date": "1976-06-03",
+          "source_url": "https://www.amazon.com/We-Never-Went-Moon-Americas/dp/1545393575",
+          "source_title": "We Never Went to the Moon: America's Thirty Billion Dollar Swindle",
+          "author": "Bill Kaysing and Randy Reid",
+          "lexical_form_seen": "We Never Went to the Moon",
+          "exact_quote": "We Never Went to the Moon: America's Thirty Billion Dollar Swindle",
+          "confidence": 0.97,
+          "evidence": "Self-published June 3, 1976 (Eden Press, Fountain Valley CA; OCLC 19542836). The title itself is the canonical diagnostic n-gram 'never went to the moon.' Confirmed by Wikipedia, Amazon, eBay, Goodreads, and multiple scholarly secondary sources. This is the most widely cited originating text for the modern framing.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Universally credited by historians, journalists, and academics as the foundational text that launched the modern moon-landing-hoax framing into broad public circulation; directly inspired subsequent films, documentaries, and online communities.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340318+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "35639b013941",
+          "date": "1978-01-01",
+          "source_url": "https://www.rollingstone.com/culture/culture-features/moon-landing-conspiracy-theories-explained-861205/",
+          "source_title": "Capricorn One (film) \u2014 documented via Rolling Stone and Manchester University",
+          "author": "Peter Hyams (director)",
+          "lexical_form_seen": "moon landing was staged / faked landing",
+          "exact_quote": "The 1978 release of a film called Capricorn One...did much to promote the idea that the moon landing was staged.",
+          "confidence": 0.88,
+          "evidence": "The 1978 film Capricorn One depicted a faked government space mission and is documented by Rolling Stone, Manchester University, Space.com, and PolitiFact as a major amplifier of the 'moon landing was staged' framing. The film's plot directly mirrors the Kaysing thesis. Multiple sources confirm its 1978 release date.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Multiple independent sources credit Capricorn One with propelling the 'staged moon landing' framing into mainstream popular culture in the post-Watergate era.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340331+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "640a9197ff36",
+          "date": "1980-07-01",
+          "source_url": "https://www.politifact.com/article/2019/jul/18/fifty-years-after-apollo-11-moon-landing-hoaxes-st/",
+          "source_title": "\"The Flat-out Truth: Earth Orbits? Moon Landings? A Fraud! Says This Prophet\" \u2014 Science Digest",
+          "author": "Robert J. Schadewald",
+          "lexical_form_seen": "Moon Landings? A Fraud!",
+          "exact_quote": "Science Digest, \"The Flat-out Truth: Earth Orbits? Moon Landings? A Fraud! Says This Prophet,\" July 1980",
+          "confidence": 0.82,
+          "evidence": "Cited in Wikipedia's Moon landing conspiracy theories article (with archive link) and PolitiFact's bibliography. Published July 1980 in Science Digest (Hearst Magazines). The title contains a close lexical variant of the diagnostic framing ('Moon Landings? A Fraud!'). The Flat Earth Society's formal accusation that NASA faked the landings is also dated to 1980 by multiple sources.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "A national magazine article in 1980 brought the 'moon landings are a fraud' framing to a mainstream readership, amplifying Kaysing's earlier self-published work.",
+          "cited_via": "PolitiFact (documenting source); original article in Science Digest, July 1980",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340343+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "55c281bffe10",
+          "date": "1994-09-01",
+          "source_url": "https://www.wired.com/1994/09/kaysing/",
+          "source_title": "\"The Wrong Stuff\" \u2014 Wired Magazine, Vol. 2 No. 9",
+          "author": "Rogier van Bakel",
+          "lexical_form_seen": "moon landing hoax / faked moon landing",
+          "exact_quote": "\"The Wrong Stuff\" \u2014 Wired profile of Bill Kaysing and the moon landing hoax, September 1994",
+          "confidence": 0.78,
+          "evidence": "Cited in Wikipedia's bibliography for the Moon landing conspiracy theories article. Wired's September 1994 profile of Kaysing brought the 'moon landing hoax' framing to the early internet-era tech-savvy audience. Wired was one of the first major publications to cover this framing for a digitally connected readership.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Wired's 1994 profile introduced the moon landing hoax framing to the early internet-era audience, bridging the pre-web and web eras of the conspiracy's spread.",
+          "cited_via": "Cited in Wikipedia Moon landing conspiracy theories bibliography as: van Bakel, Rogier (September 1994). \"The Wrong Stuff\". Wired. Vol. 2, no. 9.",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340355+00:00",
+            "confidence": 0.78,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "3323fea3b683",
+          "date": "2001-02-15",
+          "source_url": "https://en.wikipedia.org/wiki/Conspiracy_Theory:_Did_We_Land_on_the_Moon%3F",
+          "source_title": "Conspiracy Theory: Did We Land on the Moon? \u2014 Fox Television documentary",
+          "author": "Fox Broadcasting Company",
+          "lexical_form_seen": "Did We Land on the Moon? / NASA faked the moon landing",
+          "exact_quote": "As late as 2001, the Fox television network documentary Conspiracy Theory: Did We Land on the Moon? claimed NASA faked the first landing in 1969 to win the Space Race.",
+          "confidence": 0.97,
+          "evidence": "Broadcast February 15, 2001 on Fox. Confirmed by Wikipedia, Space.com, PolitiFact, and Manchester University. NASA issued a rebuttal fact sheet the day before (Feb 14, 2001). Multiple sources describe this as the single event that most dramatically reinvigorated the 'moon landing hoax' framing in the internet era.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Universally credited as the event that drove the broadest modern public adoption of the 'moon landing hoax' framing, generating massive online discussion in the early internet era.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340368+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "9342283df3fa",
+          "date": "2001-02-23",
+          "source_url": "https://science.nasa.gov/science-news/science-at-nasa/2001/ast23feb_1",
+          "source_title": "\"The Great Moon Hoax\" \u2014 Science@NASA",
+          "author": "Tony Phillips",
+          "lexical_form_seen": "The Great Moon Hoax",
+          "exact_quote": "\"The Great Moon Hoax\" \u2014 Science@NASA, February 23, 2001",
+          "confidence": 0.88,
+          "evidence": "Published February 23, 2001, eight days after the Fox documentary aired. NASA's own Science@NASA web portal used the phrase 'The Great Moon Hoax' in the title of its official rebuttal article, confirming the phrase was already the dominant lexical form in public discourse by this date. Archived and cited in Wikipedia.",
+          "amplifier_role": "critic",
+          "role_evidence": "NASA's official Science@NASA rebuttal explicitly names and examines the 'moon hoax' framing, functioning as an institutional critic/debunker rather than an adopter.",
+          "cited_via": "Wikipedia Moon landing conspiracy theories bibliography: Phillips, Tony (February 23, 2001). \"The Great Moon Hoax\". Science@NASA.",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20230608054411/https://science.nasa.gov/science-news/science-at-nasa/2001/ast23feb_1",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340379+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "c3bbc398f351",
+          "date": "2002-01-01",
+          "source_url": "https://www.space.com/apollo-11-moon-landing-hoax-believers.html",
+          "source_title": "Bad Astronomy: Misconceptions and Misuses Revealed, from Astrology to the Moon Landing 'Hoax' \u2014 book by Phil Plait (Wiley, 2002)",
+          "author": "Phil Plait",
+          "lexical_form_seen": "Moon Landing 'Hoax'",
+          "exact_quote": "his 2002 book \"Bad Astronomy: Misconceptions and Misuses Revealed, from Astrology to the Moon Landing 'Hoax'\" (Wiley)",
+          "confidence": 0.93,
+          "evidence": "Published by Wiley in 2002. The book's subtitle contains the diagnostic n-gram 'Moon Landing Hoax' (in scare quotes). Documented by Space.com. Plait's earlier blog post responding to the Fox documentary (February 2001) also used the framing and 'quickly generated thousands of views' per Space.com, making it one of the earliest high-traffic online uses.",
+          "amplifier_role": "critic",
+          "role_evidence": "Plait's book and blog post explicitly examine and rebut the 'moon landing hoax' framing; the book is a sustained critical/debunking work, not an adoption of the claim.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340411+00:00",
+            "confidence": 0.93,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "95784f1ea682",
+          "date": "2013-01-01",
+          "source_url": "https://journals.sagepub.com/doi/10.1177/0956797612457686",
+          "source_title": "\"NASA faked the moon landing\u2014therefore, (climate) science is a hoax: An anatomy of the motivated rejection of science\" \u2014 Psychological Science",
+          "author": "Stephan Lewandowsky, Klaus Oberauer, Gilles E. Gignac",
+          "lexical_form_seen": "NASA faked the moon landing",
+          "exact_quote": "\"NASA faked the moon landing\u2014therefore, (climate) science is a hoax: An anatomy of the motivated rejection of science.\"",
+          "confidence": 0.95,
+          "evidence": "Published in Psychological Science 24.5 (2013): 622\u2013633. The title of this peer-reviewed academic paper uses the exact diagnostic n-gram 'NASA faked the moon landing' as a named, established belief system being studied. Confirms the framing had achieved sufficient cultural saturation by 2013 to be used as a named variable in academic psychology research.",
+          "amplifier_role": "critic",
+          "role_evidence": "Academic paper studying the framing as a named conspiracy belief; its function is analytical/critical examination of the claim, not adoption or amplification.",
+          "cited_via": "Space.com bibliography: Lewandowsky, Stephan, Klaus Oberauer, and Gilles E. Gignac. \"NASA faked the moon landing\u2014therefore, (climate) science is a hoax.\" Psychological Science 24.5 (2013): 622\u2013633.",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20250506100833/https://journals.sagepub.com/doi/10.1177/0956797612457686",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-06T06:04:43.340432+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "Conducted four targeted searches across multiple angles to find any pre-July 1, 1969 instance of the 'moon landing was faked/hoax/staged' narrative framing. The searches covered: (1) general origin history of moon landing conspiracy theories; (2) earliest documented uses of 'faked,' 'hoax,' or 'staged' in relation to the moon landing; (3) Bill Kaysing's publication history and pre-1969 beliefs; and (4) pre-1969 Soviet propaganda, newspaper skepticism, or any anticipatory 'will be faked' framing.\n\nKey findings and ruling-outs:\n\n(a) N-GRAMS AND VARIANTS SEARCHED: 'moon landing hoax,' 'faked moon landing,' 'staged moon landing,' 'never went to the moon,' 'Apollo staged,' 'moon landing conspiracy before 1969,' 'moon landing will be faked,' 'moon landing is faked.' No pre-July 1, 1969 documentary instance of any of these was found.\n\n(b) BILL KAYSING \u2014 NEAR MISS BUT NOT A PREDECESSOR: Wikipedia's Bill Kaysing article notes that 'even before July 1969, he had a hunch, an intuition... a true conviction' that no one was going to the Moon. However, this was a private, undocumented personal belief \u2014 not a published, broadcast, or otherwise documented public articulation of the framing. His book was self-published in 1976. No evidence exists that he committed this framing to any public record before July 1, 1969.\n\n(c) POST-LANDING SKEPTICISM (RULED OUT AS TOO LATE): The Smithsonian Magazine article cites a New York Times science reporter remarking in December 1969 about 'stool-warmers in Chicago bars' claiming the landing was staged, and an Atlanta Constitution story from June 15, 1970 referencing widespread skepticism. These are post-July 20, 1969 and thus outside scope.\n\n(d) SOVIET PROPAGANDA ANGLE: Multiple sources confirm the Soviet Union \u2014 the most motivated party to claim a hoax \u2014 did not do so. Pravda ran a front-page story acknowledging the Apollo 11 landing on July 22, 1969, and the Great Soviet Encyclopedia (3rd ed., 1970\u20131979) described it as a genuine historic event. No Soviet or other foreign pre-landing 'it will be faked' propaganda was found.\n\n(e) FICTIONAL/SATIRICAL PRECURSORS: The 1968 film '2001: A Space Odyssey' is frequently cited in conspiracy lore as a technical precursor (showing realistic Moon footage), but it does not contain or imply a 'moon landing is faked' narrative. The 1971 James Bond film 'Diamonds Are Forever' contains a staged moon-landing scene, but that is post-July 1969. The 1978 film 'Capricorn One' is the major fictional amplifier, also well after the proposed date.\n\n(f) LIMITATIONS: Newspaper archives (ProQuest Historical Newspapers, Chronicling America, paywalled archives like the New York Times archive pre-1969) were not directly accessible via these searches. Google Books snippet view for pre-1969 texts was not directly queried due to search-call limits. Usenet did not exist before 1980. No undigitized pamphlets, zines, or underground press materials from 1967\u20131969 could be checked. These represent genuine gaps, though the scholarly consensus across Wikipedia, Britannica, History.com, Smithsonian, The Conversation, and University of Manchester is unanimous: the framing did not exist in documented public form before the Apollo 11 landing on July 20, 1969, and did not gain traction until the mid-1970s with Kaysing's 1976 book.\n\nCONCLUSION: The proposed earliest date of 1969-07-01 is structurally impossible to predate in a meaningful sense, because the framing 'the moon landing was faked' is logically contingent on a moon landing having occurred or been imminent. The Apollo 11 landing happened on July 20, 1969 \u2014 after the proposed date. The framing could not have existed in its canonical form before the event it describes. The proposed date of 1969-07-01 is therefore not a claim about a pre-event attestation but rather a claim about the very earliest post-event skepticism (i.e., skepticism expressed during the Apollo 11 mission window, July 16\u201324, 1969). No credible evidence was found of any public articulation of this framing before July 1, 1969. The clean negative result is well-supported.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "1969-07-01",
+        "active_through": "2013-01-01",
+        "active_span_days": 15890,
+        "years_active": 44,
+        "years_with_activity": 10,
+        "instances_per_year": {
+          "1969": 1,
+          "1970": 1,
+          "1971": 1,
+          "1976": 1,
+          "1978": 1,
+          "1980": 1,
+          "1994": 1,
+          "2001": 2,
+          "2002": 1,
+          "2013": 1
+        },
+        "instances_per_year_by_role": {
+          "1969": {
+            "mention": 1
+          },
+          "1970": {
+            "originator": 1
+          },
+          "1971": {
+            "early-amplifier": 1
+          },
+          "1976": {
+            "mass-amplifier": 1
+          },
+          "1978": {
+            "mass-amplifier": 1
+          },
+          "1980": {
+            "early-amplifier": 1
+          },
+          "1994": {
+            "early-amplifier": 1
+          },
+          "2001": {
+            "mass-amplifier": 1,
+            "critic": 1
+          },
+          "2002": {
+            "critic": 1
+          },
+          "2013": {
+            "critic": 1
+          }
+        },
+        "peak_year": "2001",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": 2345,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": 11376,
+        "days_since_latest": 4934
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "science",
+    "domain_confidence": 0.85,
+    "inductive_cluster_ids": [],
+    "tropes": [
+      "revealed-truth",
+      "hidden-cabal",
+      "deep-state",
+      "misinformation"
+    ]
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 9,
+    "actors": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "mass-amplifier",
+          "mention"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1969-07-01",
+        "last_date": "2001-02-15"
+      },
+      {
+        "actor_id": "381ef513905a",
+        "display": "moonfaker.com",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1970-01-01",
+        "last_date": "1970-01-01"
+      },
+      {
+        "actor_id": "332d65ea4de4",
+        "display": "space.com",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1971-01-01",
+        "last_date": "2002-01-01"
+      },
+      {
+        "actor_id": "32407faddf14",
+        "display": "amazon.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1976-06-03",
+        "last_date": "1976-06-03"
+      },
+      {
+        "actor_id": "0776ff232199",
+        "display": "rollingstone.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1978-01-01",
+        "last_date": "1978-01-01"
+      },
+      {
+        "actor_id": "648473b848ae",
+        "display": "PolitiFact",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1980-07-01",
+        "last_date": "1980-07-01"
+      },
+      {
+        "actor_id": "73704027077d",
+        "display": "wired.com",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1994-09-01",
+        "last_date": "1994-09-01"
+      },
+      {
+        "actor_id": "4ce2df55f923",
+        "display": "nasa.gov",
+        "actor_type": "official",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2001-02-23",
+        "last_date": "2001-02-23"
+      },
+      {
+        "actor_id": "d29eaf163dd0",
+        "display": "sagepub.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2013-01-01",
+        "last_date": "2013-01-01"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "381ef513905a",
+        "display": "moonfaker.com",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1970-01-01",
+        "last_date": "1970-01-01"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "4ce2df55f923",
+        "display": "nasa.gov",
+        "actor_type": "official",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2001-02-23",
+        "last_date": "2001-02-23"
+      },
+      {
+        "actor_id": "d29eaf163dd0",
+        "display": "sagepub.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2013-01-01",
+        "last_date": "2013-01-01"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "reference": 1,
+      "news": 7,
+      "official": 1
+    },
+    "date_span": [
+      "1969-07-01",
+      "2013-01-01"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-06T06:05:19.063116+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
