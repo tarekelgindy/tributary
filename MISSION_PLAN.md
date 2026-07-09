@@ -1,6 +1,6 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 0 — not started
+> **Status:** Phase 0 — in progress
 > **Last updated:** 2026-07-09
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
@@ -55,8 +55,9 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 
 - [ ] Rewrite one-page thesis (README top / INTRO) around the loop above. Hero question first.
       Move civilizational framing to an "about/mission" page; the tool pages speak specialist.
-- [ ] Commit the Park List (above) into the repo so it stops being ambient guilt.
-- [ ] Write `INCIDENT_PROTOCOL.md`: what we do, publicly, the first time a community decides
+- [x] Commit the Park List (above) into the repo so it stops being ambient guilt.
+      (Lives in this file, which is committed — standalone file judged unnecessary.)
+- [x] Write `INCIDENT_PROTOCOL.md`: what we do, publicly, the first time a community decides
       Tributary is enemy infrastructure. Must cover: (a) corrections posture and turnaround,
       (b) tone rules for responding to hostile viral criticism, (c) what we never do
       (litigate motives, issue truth verdicts in self-defense), (d) who/what we point to
