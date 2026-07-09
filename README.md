@@ -1,15 +1,21 @@
 # Tributary
 
-**See where information on the internet really comes from — and how it spreads.**
+**Where did this come from — and what do the bubbles agree on that your feed never showed you?**
 
-The internet has fractured into information ecosystems where people see the same events through completely different lenses, and increasingly can't tell where what they're reading actually originated. Tributary makes information flow transparent. It doesn't tell you what's true; it shows you the machinery behind what you read — where it came from, who amplified it, how it changed along the way, what evidence surrounds it, and what other framings exist — so you can judge for yourself.
+One question, two halves, one loop:
 
-Tributary traces information in **two directions**:
+- **Provenance (upstream):** given a claim or narrative, trace where it came from — first attestation, amplification path, how the phrasing and the underlying *idea* each mutated on the way — as a dated, sourced, mechanically verified attestation log (a **NarrativeFingerprint**). Not "is it true," but "where has it been."
+- **Framing overlap (downstream):** given an event, map the distinct framings forming around it, who carries each — and the part engagement-driven feeds systematically bury: where the framings of different epistemic circles *intersect*, shown in each circle's own quoted words (an **EventAnalysis**).
 
-- **Upstream** — given a claim or narrative, where did it come from? Who coined the phrasing, who amplified it, how did it mutate, and where does the underlying *idea* trace back to? (a **NarrativeFingerprint**)
-- **Downstream** — given an event or statement, what narratives are forming around it, and who creates/amplifies each? What's the shared common ground everyone accepts? (an **EventAnalysis**)
+Each half protects the other. Provenance keeps overlap honest: an organic decades-old concern and a recently seeded talking point look identical in a feed but are structurally distinguishable in a trace, so "both circles say X" never has to mean false equivalence. Overlap keeps provenance humane: a trace read alone becomes tribal ammunition ("*their* narrative was seeded"); read against what the circles actually share, it becomes context.
 
-Every element it produces carries **provenance** — whether it's an AI assertion or human-verified — and the schema is built so human contributions can be layered in Wikipedia-style alongside the AI analysis.
+Three commitments, stated up front:
+
+- **No truth verdicts.** Tributary never labels a claim true or false. It produces structural descriptions a reader can check — who said it first, who repeated it, who disputed it, who never mentioned it — with a provenance label on every element ([METHODOLOGY.md](METHODOLOGY.md)).
+- **Low overlap gets reported.** A tool that always finds heartwarming common ground is harmony propaganda; conclusion-neutral cuts both ways.
+- **Errors are logged publicly**, with root causes and credit to finders ([CORRECTIONS.md](CORRECTIONS.md)), under a pre-committed incident posture ([INCIDENT_PROTOCOL.md](INCIDENT_PROTOCOL.md)).
+
+It's built for **multipliers** — journalists, educators, bridging organizations, researchers — to make cheap what currently takes hours per claim. Why that's the theory of change, and what success means here, is in [ABOUT.md](ABOUT.md); the rest of this page is the tool. Every element carries provenance (AI assertion vs. human-verified), and the schema is built so human contributions can be layered in Wikipedia-style alongside the AI analysis.
 
 ---
 

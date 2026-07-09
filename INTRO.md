@@ -1,14 +1,14 @@
-# Tributary — See Where Your Information Really Comes From
+# Tributary — Where Did This Come From, and What Do the Bubbles Agree On?
 
 ## What is Tributary?
 
-Every day you read news articles, scroll through social media, and watch videos that shape how you understand the world. But have you ever wondered: where did this information actually come from? Who said it first? Who is amplifying it? And what are you *not* being told?
-
-Tributary is a tool that answers these questions, in two directions:
+Every claim in your feed has a hidden **history**: someone said it first, others amplified it, and it mutated along the way. And every event in your feed is being framed by circles you never see — whose framings sometimes overlap with your own circle's more than either side knows, because an engagement-driven feed surfaces the other side's worst take, not its overlapping one. Tributary is a tool that makes both visible:
 
 - **Upstream — trace a narrative to its origins.** Give it a claim like *"the economy is rigged"* and it builds a **narrative fingerprint**: who coined the phrasing, who amplified it, how it mutated as it spread — and, separately, where the underlying *idea* comes from (the phrasing may be 30 years old while the idea traces back centuries). It also maps the surrounding evidence landscape: what supports it, what disputes it, what context all sides share.
 
-- **Downstream — map the narratives forming around an event.** Give it an event and it finds the **distinct framings** competing to define it — each one a different *question* being asked, not just a political side — plus who carries each framing, what each emphasizes and leaves out, and the **common ground**: the facts every side accepts, which is often the most clarifying part.
+- **Downstream — map the narratives forming around an event, and where they intersect.** Give it an event and it finds the **distinct framings** competing to define it — each one a different *question* being asked, not just a political side — plus who carries each framing, what each emphasizes and leaves out, and the **common ground**: the facts every side accepts and the framings that appear across circles, in each circle's own quoted words. This is often the most clarifying part — it's the agreement your feed buried.
+
+The two directions form one loop, and each half protects the other. Provenance tells you whether a shared framing is an organic, decades-old concern or a recently seeded talking point — so finding overlap never means false equivalence. And overlap gives a trace its human context — so provenance doesn't collapse into a gotcha weapon ("*their* narrative was seeded").
 
 - **Whole articles too.** Point it at an article or transcript and it classifies every significant claim (fact / study / narrative / opinion / unverifiable) and traces the traceable ones.
 
@@ -17,6 +17,8 @@ Every cited source is verified against the live page (with an archive fallback),
 ## What Tributary will never do
 
 It doesn't tell you what to think, and it will never label a claim **true** or **false**. Those are verdicts, and verdicts ask for your trust. Tributary instead gives you *structural descriptions you can check yourself*: who said it first, who repeated it, who linked primary documents, who issued corrections, who never mentioned it. The methodology is public ([METHODOLOGY.md](METHODOLOGY.md)), and so is the corrections log ([CORRECTIONS.md](CORRECTIONS.md)) — a provenance tool should hold itself to the standards it measures.
+
+One more commitment: Tributary is allowed to find **low** overlap. When circles genuinely don't agree, it says so — a tool that always finds heartwarming common ground is harmony propaganda, and conclusion-neutral cuts both ways.
 
 ## See it without installing anything
 
@@ -57,5 +59,6 @@ For a narrative, you get the five-layer fingerprint: the phrasing and its varian
 ## Learn more
 
 - [README.md](README.md) — full setup, all features, cost controls, architecture
+- [ABOUT.md](ABOUT.md) — why this exists: the problem, the theory of change, what success means
 - [METHODOLOGY.md](METHODOLOGY.md) — what each output claims, how it's produced, and its known limits
-- [ROADMAP.md](ROADMAP.md) — where this is going, with binding gates
+- [MISSION_PLAN.md](MISSION_PLAN.md) — the working plan of record, phase by phase, with binding gates
