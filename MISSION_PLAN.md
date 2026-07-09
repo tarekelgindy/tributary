@@ -62,7 +62,7 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
       (b) tone rules for responding to hostile viral criticism, (c) what we never do
       (litigate motives, issue truth verdicts in self-defense), (d) who/what we point to
       (methodology, error rate, corrections log). Write it now, while calm.
-- [ ] Define the recognition-gate concept in `METHODOLOGY.md`: circle summaries must pass
+- [x] Define the recognition-gate concept in `METHODOLOGY.md`: circle summaries must pass
       "would members of that circle call this a fair statement of their framing?"
       v0 proxy rule: **circle summaries may contain only quoted language from that circle's
       own sources.** No paraphrased value-attribution.
