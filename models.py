@@ -1444,6 +1444,13 @@ class EventAnalysis:
     # and connectivity. Axis-free (no left/right). Produced by
     # coalitions.coalition(); empty until enriched.
     coalition: dict = field(default_factory=dict)
+    # Circle rollup: per-circle framing frequency table — which framings each
+    # epistemic circle's member outlets carried (n_pieces of n_total), with
+    # quote receipts (URL + archive link per representative quote). Membership
+    # edges are seeded from the AllSides snapshot (basis recorded per edge;
+    # ratings are AllSides', aggregated by Tributary). Produced by
+    # circles.framing_rollup(); empty until enriched.
+    circle_rollup: dict = field(default_factory=dict)
     # Shared contribution-ready substrate (1a/1b)
     provenance: Provenance = field(default_factory=Provenance)
     contributions: list[Contribution] = field(default_factory=list)
@@ -1471,6 +1478,7 @@ class EventAnalysis:
             "fingerprints": [f.to_dict() for f in self.fingerprints],
             "coverage_lean": self.coverage_lean,
             "coalition": self.coalition,
+            "circle_rollup": self.circle_rollup,
             "provenance": self.provenance.to_dict(),
             "contributions": [c.to_dict() for c in self.contributions],
             "contributors": [c.to_dict() for c in self.contributors],

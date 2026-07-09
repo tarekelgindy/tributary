@@ -287,6 +287,7 @@ class AmplificationEdge:
     lineage_type: str = ""           # lexical | conceptual (upstream)
     platform: str = ""
     source_url: str = ""
+    archive_url: str = ""            # Wayback snapshot of source_url, when captured
     evidence: str = ""
 
     def to_dict(self) -> dict:
@@ -419,7 +420,8 @@ class ActorRegistry:
                 primary = self.intern(resolve(name=name, url=url, carrier_type=ct))
                 self._edge(primary, narrative_kind="framing", narrative_id=nref[0],
                            narrative_label=nref[1], role=role, direction="downstream",
-                           tier="primary", context_id=ctx, source_url=url,
+                           tier="primary", context_id=ctx, date=c.get("date", ""),
+                           source_url=url, archive_url=c.get("archive_url", ""),
                            evidence=c.get("excerpt", ""))
                 # Provenance chain: when a NAMED primary source (politician, org,
                 # scholar) was relayed via a recognized news outlet, that outlet
@@ -433,7 +435,8 @@ class ActorRegistry:
                         self._edge(v, narrative_kind="framing", narrative_id=nref[0],
                                    narrative_label=nref[1], role="relay",
                                    direction="downstream", tier="secondary",
-                                   context_id=ctx, source_url=url)
+                                   context_id=ctx, date=c.get("date", ""),
+                                   source_url=url, archive_url=c.get("archive_url", ""))
 
     def ingest_fingerprint(self, fp: dict):
         fid = fp.get("fingerprint_id", "")
@@ -451,6 +454,7 @@ class ActorRegistry:
                            direction="upstream-formal", context_id=fid,
                            date=a_inst.get("date", ""), lineage_type=ltype,
                            source_url=a_inst.get("source_url", ""),
+                           archive_url=a_inst.get("archive_url", ""),
                            evidence=a_inst.get("exact_quote", ""))
             for s in rec.get("social_spread", []):
                 a = self.intern(resolve(handle=s.get("author_handle", ""),
