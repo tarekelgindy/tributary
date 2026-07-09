@@ -1,6 +1,6 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 0 — in progress
+> **Status:** Phase 1 — not started (Gate 0 passed 2026-07-09)
 > **Last updated:** 2026-07-09
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
@@ -53,8 +53,9 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 
 *Mostly thinking. Deliverables are documents, not code.*
 
-- [ ] Rewrite one-page thesis (README top / INTRO) around the loop above. Hero question first.
+- [x] Rewrite one-page thesis (README top / INTRO) around the loop above. Hero question first.
       Move civilizational framing to an "about/mission" page; the tool pages speak specialist.
+      (Civilizational framing lives in ABOUT.md — named to avoid collision with MISSION_PLAN.md.)
 - [x] Commit the Park List (above) into the repo so it stops being ambient guilt.
       (Lives in this file, which is committed — standalone file judged unnecessary.)
 - [x] Write `INCIDENT_PROTOCOL.md`: what we do, publicly, the first time a community decides
@@ -210,7 +211,7 @@ researcher data request, bridging-org pilot, or educator classroom use.
 
 | Date | Gate | Result | Evidence | Notes |
 |---|---|---|---|---|
-| | 0 | | | |
+| 2026-07-09 | 0 | PASS | Thesis rewritten around the loop (README top, INTRO, ABOUT.md); Park List committed; INCIDENT_PROTOCOL.md written; recognition gate defined in METHODOLOGY.md — commits 2db9034, 191ca9b, 7c39888 | Internal gate, trivial by design; the point was forcing the decisions into writing |
 | | 1 | | | |
 | | 2 | | | |
 | | 3 | | | |
