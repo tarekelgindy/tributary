@@ -1,6 +1,6 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 1 — 1a done; next 1b (the three computations)
+> **Status:** Phase 1 — 1a, 1b done; next 1c (the artifact)
 > **Last updated:** 2026-07-09
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
@@ -99,14 +99,35 @@ curation systematically buries agreement between circles. Mostly query-writing, 
 
 ### 1b. The three computations (per event, per capture week)
 
-- [ ] **Framing intersection:** framings appearing in BOTH circles, with per-circle rates.
+- [x] **Framing intersection:** framings appearing in BOTH circles, with per-circle rates.
       Output: "framing F appears in a/b left pieces and c/d right pieces" + quotes from each.
-- [ ] **Convergent claims:** same factual claim asserted by sources in both circles
+      (`common_ground.py: framing_intersection()`. Substantiveness filter: a circle must
+      ASSERT the framing (champion/mention); oppose-only carriage lands in a separate
+      `contested` list, never in the intersection — see Decision Log 2026-07-09.
+      Corpus check: 15/108 events show ≥1 intersection; thin circles flagged on the row.)
+- [x] **Convergent claims:** same factual claim asserted by sources in both circles
       (reuse narrative-matcher, filtered cross-circle).
-- [ ] **Shared-but-buried:** stories covered by both circles but feed-featured by neither.
+      (`convergent_claims()`: claim units are member outlets' verbatim excerpts (receipts
+      built in); matcher embeddings propose cross-circle pairs free; pairs stay CANDIDATES
+      unless the stage-2 judge confirms (`--confirm`, batched Haiku, ~$0.001/event) —
+      the Gate 1 serving discipline, kept. Validation caught embeddings ranking a
+      not-same pair (0.81) above a genuinely-same pair (0.76, Greenland "go home").)
+- [x] **Shared-but-buried:** stories covered by both circles but feed-featured by neither.
       (Mirror image of the existing one-side-only query — invert it.)
-- [ ] **Claim-age overlay:** attach trace-engine first-attestation dates to intersecting
+      (`shared_but_buried()`: coverage = feed carriage OR sitemap match (omission-report
+      standard); featuring = feed position ≤ 5; ≥2 rated US outlets per side. Feed-only
+      coverage found 0 buried in the validation week — the coverage-evidence choice is
+      load-bearing, see Decision Log. 2026-07-09 week: 49 buried of 115 both-circle
+      stories; non-circle outlets that DID feature are listed per row.)
+- [x] **Claim-age overlay:** attach trace-engine first-attestation dates to intersecting
       framings, so organic long-lived framings are distinguishable from recently seeded ones.
+      (`claim_age_overlay()`: basis explicit per attachment — `linked` (framing's own
+      fingerprint_id) or `embedding_lead` (≥0.60, never presented as confirmed). Reports
+      dates/status/confidence + age-at-event only; the reader judges organic vs. seeded.
+      Validation: birthright event attached 5/5 linked; lead path re-found the same
+      fingerprints 3/5, 2 honestly unattached. Stale vectors.json refreshed via
+      `matcher.py --backfill` (was 15/25 fingerprints).
+      Backfilled onto all 108 events as `common_ground` (confirm off — free path).)
 
 ### 1c. The artifact
 
@@ -230,6 +251,9 @@ researcher data request, bridging-org pilot, or educator classroom use.
 |---|---|---|---|
 | 2026-07-09 | Adopted loop thesis (provenance + framing overlap), parked omission census & destination-site framing | Upstream-only; downstream-only; status quo | Each half fixes the other's failure mode: provenance prevents false equivalence in overlap claims; overlap prevents tribal weaponization of traces. Evidence base: perception-gap correction is the depolarization intervention with support; pure exposure/mirror interventions are not. |
 | 2026-07-09 | Circle membership (1a) is deliberately conservative: foreign-ccTLD domains join a circle via the curated alias file only; name-based matches must be consistent with the domain's own brand label; membership counts dedupe by rated outlet, not actor key | Accept bias_db's fuzzy lookup as-is (coverage_lean's bar) | Corpus audit found nation.com.pk (The Nation, Pakistan) landing in the left circle via brand-label collision, and wire-copy sites (wfmz.com) inheriting AP's identity by display name. A MEMBER_OF edge is a graph fact hostile readers will check — better to miss a membership (honest unrated gap) than to invent one. Same audit fixed 8 drifted alias values that had been silently falling through to fuzzy matching. |
+| 2026-07-09 | 1b intersection requires ASSERTION, not carriage: a framing a circle only opposes goes to a separate `contested` list, never the intersection | Count any both-circle carriage (the raw "both" count from circles.py --sweep) | Stance data exists for exactly this. An intersection built on oppose-only carriage would present contestation as agreement — the harmony-propaganda failure mode the honesty rule exists to prevent. Live case: Platner's "Media Bias & Journalistic Malpractice" framing (right champions, left only opposes) correctly lands in contested. |
+| 2026-07-09 | Convergent claims keep the two-stage serving discipline: embedding pairs are only CANDIDATES; the label "convergent" requires the stage-2 judge (`--confirm`, batched reuse of matcher's validated Haiku prompt, ~$0.001/event, opt-in) | Label by embedding threshold alone (free, no key needed) | Gate 1 measured embeddings missing blame/consequence distinctions, and 1b validation reproduced it: a not-same pair (snub vs. consulate-opening, 0.81) outranked a genuinely-same pair (Greenlanders' "go home", 0.76). Opt-in because default runs and backfills must stay free (cost constraint) and no key is assumed in the environment. |
+| 2026-07-09 | Shared-but-buried coverage evidence = feed carriage OR news-sitemap match at the existing COVERED_THRESHOLD; featuring stays feed-only (position ≤ 5); presence bar ≥2 rated US outlets per side (one_side_only's own bar) | Feed-only coverage — the strict mirror of one_side_only | Feed-only found 0 buried of 21 both-circle stories in the validation week: anything feed-carried by 2+ outlets per side touches some top-5 within a week, so the strict mirror measures nothing. "Covered" should mean "wrote about it" — the sitemap census already provides that under the omission report's standard (49/115 buried once used). Honesty note: the risk direction flips here (a borderline sitemap match could overstate "both circles covered it"), so every sitemap receipt ships the matched article title/URL/similarity and the caveat names the failure mode; Gate 2's audit calibrates the threshold. |
 
 ## Feedback Log
 
