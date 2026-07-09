@@ -132,17 +132,25 @@ curation systematically buries agreement between circles. Mostly query-writing, 
 
 ### 1c. The artifact
 
-- [ ] Draft **Common Ground Report #1** (this is Digest Issue 2 with a new job):
+- [x] Draft **Common Ground Report #1** (this is Digest Issue 2 with a new job):
       1. The week's biggest framing intersection (with quotes from both circles)
       2. Convergent claims table
       3. Shared-but-buried stories
       4. One claim-age finding (organic vs. recently-seeded framing, if present)
       5. "What we can't tell you" section (keep this tradition)
-- [ ] Apply v0 recognition rule: every circle summary built ONLY from that circle's quotes,
+      (Draft at `digests/issue-02.md` (2026-07-09), buried-report data shipped alongside.
+      Lead exhibits: Odeh decapitation framing + Al Jazeera↔Fox / NBC↔Fox confirmed
+      convergences; Le Pen / Farage / Hormuz / Memphis as buried stories. Claim-age
+      section honestly empty (no intersecting framing has a trace yet) with the
+      birthright 2010 finding shown as capability demo. AWAITING TAREK'S EDITORIAL
+      REVIEW — publish is deliberately still unchecked.)
+- [x] Apply v0 recognition rule: every circle summary built ONLY from that circle's quotes,
       **in the outlet's own voice** — relayed individual speech (Fetterman-via-CNN,
       Maher-via-Fox, both found in real 1b output) never stands as circle voice; if used
       at all it is explicitly attributed to its speaker. (Rider added to METHODOLOGY
-      Principle 4 after Tarek's 2026-07-09 review — see Decision Log.)
+      Principle 4 after Tarek's 2026-07-09 review — see Decision Log. Applied in the
+      draft: WSJ-editorial-via-Daily-Beast receipt excluded from circle voice; the
+      Fetterman/Maher catch disclosed in the issue's own "what we can't tell you".)
 - [ ] Publish it.
 
 **Gate 1 (internal — THE LAST INTERNAL GATE):** Does measurable, non-trivial overlap exist

@@ -1,0 +1,3566 @@
+{
+ "is_shared_buried_report": true,
+ "generated_at": "2026-07-09T18:14:06.702448+00:00",
+ "period_days": 7,
+ "captures": 14,
+ "method_caveat": "The story universe is what at least one sampled RSS feed carried — a story no feed touched at all is invisible to this query. COVERAGE by a circle means a rated US member outlet either feed-carried the story or has a news-sitemap article matching it (the omission report's evidence standard; threshold uncalibrated until the Gate 2 audit). FEATURING is feed-only: observed at position <= 5 in at least one capture. 'Buried' therefore means both circles demonstrably covered the story and no member outlet of either circle ever surfaced it top-of-feed — it says nothing about placement on outlets' websites. Circle scope is RATED US outlets only (the AllSides spectrum is a US construct, the same scope one_side_only uses). Outlets outside the circles that DID feature the story are listed on the row.",
+ "params": {
+  "min_rated_us_outlets_per_side": 2,
+  "featured_position": 5,
+  "story_threshold": 0.62,
+  "sitemap_covered_threshold": 0.62,
+  "member_outlets_with_sitemap": [
+   "abcnews",
+   "breitbart",
+   "foxnews",
+   "huffpost",
+   "motherjones",
+   "nbcnews",
+   "newsmax",
+   "newsweek",
+   "nypost",
+   "nytimes",
+   "vox",
+   "washingtonexaminer"
+  ]
+ },
+ "totals": {
+  "stories": 2619,
+  "covered_by_every_circle": 115,
+  "of_those_feed_featured_by_a_circle": 66,
+  "shared_but_buried": 49
+ },
+ "stories": [
+  {
+   "story_id": "e4b210d563c9",
+   "label": "Nigel Farage Resigns As MP",
+   "n_outlets": 6,
+   "n_items": 6,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.773,
+      "sample_title": "Nigel Farage's Only Rival Is Man Dressed As Trash Can As U.K. Special Election Turns To Farce",
+      "sample_link": "https://www.huffpost.com/entry/nigel-farage-count-binface-uk-election-trashcan_n_6a4e7102e4b094d71e717f1b"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.75,
+      "sample_title": "Farage Resigns and Says He Will Run Again in Special Election",
+      "sample_link": "https://www.nytimes.com/live/2026/07/07/world/nigel-farage-reform-uk"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.632,
+      "sample_title": "Trump ally and hard-right leader Nigel Farage triggers vote in bid to clear name amid financial scrutiny",
+      "sample_link": "https://www.nbcnews.com/world/united-kingdom/nigel-farage-trump-ally-triggers-vote-clear-name-election-rcna353291"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.823,
+      "sample_title": "Reform UK’s Nigel Farage says he’ll quit as a lawmaker and seek re-election to clear name",
+      "sample_link": "https://abcnews.com/International/wireStory/reform-uks-nigel-farage-hell-quit-lawmaker-seek-134545305"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.796,
+      "sample_title": "Nigel Farage Resigns To Trigger Special Election After Furious Speech",
+      "sample_link": "https://www.newsweek.com/nigel-farage-resigns-to-trigger-special-election-after-furious-speech-12165480"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "reason",
+      "name": "Reason",
+      "evidence": "feed",
+      "best_position": 21,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Nigel Farage Resigns His Parliamentary Seat—and Is Standing for Election Again",
+      "sample_link": "https://reason.com/2026/07/07/nigel-farage-resigns-his-parliamentary-seat-and-is-standing-for-election-again/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 28,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Reform UK Accuses Establishment of 'Running Scared' From Farage Election",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/08/reform-uk-accuses-establishment-of-running-scared-from-farage-election/"
+     },
+     {
+      "outlet": "dailywire",
+      "name": "The Daily Wire",
+      "evidence": "feed",
+      "best_position": 48,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Will Nigel Farage Call British Parliament’s Bluff?",
+      "sample_link": "https://www.dailywire.com/news/will-nigel-farage-call-british-parliaments-bluff"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.836,
+      "sample_title": "Nigel Farage reveals he's quitting parliament — but will run again in re-election: 'I will fight to win'",
+      "sample_link": "https://nypost.com/2026/07/07/world-news/nigel-farage-reveals-hes-quitting-parliament-but-will-run-again-in-re-election-i-will-fight-to-win/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.888,
+      "sample_title": "Nigel Farage to resign, run again for Parliament in &#039;people vs. the establishment&#039; by-election",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4638505/nigel-farage-resign-parliament-run-again-by-election/"
+     }
+    ]
+   },
+   "best_position_any_circle": 21,
+   "featured_outside_circles": [
+    {
+     "outlet": "guardian",
+     "name": "The Guardian",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 5,
+     "featured": true,
+     "sample_title": "Could Farage quit? Questions swirl over Reform UK leader’s future",
+     "sample_link": "https://www.theguardian.com/news/ng-interactive/2026/jul/05/nigel-farage-reform-uk-speculation-future",
+     "lean": "lean-left"
+    }
+   ]
+  },
+  {
+   "story_id": "4db7896e6b7e",
+   "label": "Paris appeals court ruling could upend Marine Le Pen’s 2027 presidential bid",
+   "n_outlets": 4,
+   "n_items": 11,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.824,
+      "sample_title": "Marine Le Pen To Run For French Presidency Next Year Despite Court-Ordered Monitor",
+      "sample_link": "https://www.huffpost.com/entry/marine-le-pen-to-run-for-french-presidency-next-year-despite-court-ordered-monitor_n_6a4d43b0e4b0a7adb6d7d690"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.786,
+      "sample_title": "Le Pen Launches Presidential Campaign, in a Twist for French Politics",
+      "sample_link": "https://www.nytimes.com/2026/07/08/world/europe/marine-le-pen-presidential-campaign.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.773,
+      "sample_title": "Far-right leader Marine Le Pen says she will run for president of France after court lifts ban",
+      "sample_link": "https://www.nbcnews.com/world/europe/france-far-right-marine-le-pen-presidential-election-macron-rcna353271"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.881,
+      "sample_title": "How Paris appeals court ruling could upend Marine Le Pen’s 2027 presidential bid",
+      "sample_link": "https://abcnews.com/International/wireStory/paris-appeals-court-ruling-upend-marine-le-pens-134493389"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.803,
+      "sample_title": "Marine Le Pen Says She Will Run for French Presidency, Maintains Innocence",
+      "sample_link": "https://www.newsweek.com/jordan-bardella-can-le-pens-replacement-win-french-presidency-in-2027-12165637"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.804,
+      "sample_title": "French court clears way for Marine Le Pen to run in 2027 but under a condition she rejects",
+      "sample_link": "https://nypost.com/2026/07/07/world-news/french-court-clears-way-for-marine-le-pen-to-run-in-2027-but-under-a-condition-she-rejects/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.736,
+      "sample_title": "Marine Le Pen eligible to run for president in 2027, but under conditions she rejects",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4638430/marine-le-pen-eligible-president-2027/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.793,
+      "sample_title": "Marine Le Pen Announces She Will Run in French Presidential Election, Plans to Appeal House Arrest Ruling",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/07/le-pen-announces-she-will-run-in-french-presidential-election-plans-to-appeal-house-arrest-ruling/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.831,
+      "sample_title": "With Le Pen Sentencing, France's Presidential Election Veers into the Extraordinary",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/france-marine-le-pen-bardella-macron-elections/2026/07/08/id/1262268/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 3,
+     "captures_seen": 4,
+     "featured": true,
+     "sample_title": "In pictures: Marine Le Pen’s political rise and frustrated presidential ambitions",
+     "sample_link": "https://www.france24.com/en/france/20260706-in-pictures-marine-le-pen-s-political-rise-and-frustrated-presidential-ambitions",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "259c200ebd47",
+   "label": "Sons of Iran’s leader Ali Khamenei attend funeral, but Mojtaba is absent",
+   "n_outlets": 3,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.65,
+      "sample_title": "Iran's Slain Leader Khamenei Laid In State In Tehran For Week Of Mass Funeral Events",
+      "sample_link": "https://www.huffpost.com/entry/ayatollah-ali-khamenei-funeral-preparations_n_6a475683e4b03060a850244b"
+     },
+     {
+      "outlet": "vox",
+      "name": "Vox",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.646,
+      "sample_title": "Iran’s new supreme leader is a no-show at his father’s funeral. Where is he?",
+      "sample_link": "https://www.vox.com/politics/493746/mojtaba-khamenei-iran-supreme-leader"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.806,
+      "sample_title": "Will Iran’s New Supreme Leader, Mojtaba Khamenei, Attend His Father’s Funeral?",
+      "sample_link": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-supreme-leader-khamenei-son.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.811,
+      "sample_title": "Iran’s injured Supreme Leader Mojtaba Khamenei won’t attend his father’s funeral, sources say",
+      "sample_link": "https://www.nbcnews.com/world/iran/powerful-iranian-general-seen-public-preparation-supreme-leaders-vast-rcna352842"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.714,
+      "sample_title": "What to know about the funeral of Iran's Supreme Leader Ayatollah Ali Khamenei",
+      "sample_link": "https://abcnews.com/International/wireStory/funeral-burial-irans-supreme-leader-ayatollah-ali-khamenei-134434725"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.719,
+      "sample_title": "Ayatollah Khamenei Funeral: What We Know",
+      "sample_link": "https://www.newsweek.com/ayatollah-khamenei-funeral-iran-12154206"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.911,
+      "sample_title": "Three sons of Iran's late Ayatollah Khamenei appear at funeral — but Supreme Leader Mojtaba Khamenei is still absent",
+      "sample_link": "https://nypost.com/2026/07/05/world-news/ayatollah-khamenei-funeral-attended-by-sons-but-iran-supreme-leader-mojtaba-khamenei-is-absent/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.67,
+      "sample_title": "Iran begins Khamenei&#039;s funeral 126 days after assassination",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4636077/iran-begin-khamenei-funeral/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.745,
+      "sample_title": "Khamenei Funeral Marks the Rise of a More Defiant Iran",
+      "sample_link": "https://www.newsmax.com/newsfront/khamenei-funeral-defiant/2026/07/04/id/1261767/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "aljazeera",
+     "name": "Al Jazeera English",
+     "evidence": "feed",
+     "best_position": 5,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "Sons of Iran’s leader Ali Khamenei attend funeral, but Mojtaba is absent",
+     "sample_link": "https://www.aljazeera.com/news/2026/7/5/sons-of-irans-leader-ali-khamenei-attend-funeral-but-mojtaba-is-absent?traffic_source=rss",
+     "lean": "lean-left"
+    }
+   ]
+  },
+  {
+   "story_id": "d5130bc69a75",
+   "label": "U.S. strikes Iran after attacks on vessels in Strait of Hormuz",
+   "n_outlets": 7,
+   "n_items": 12,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.774,
+      "sample_title": "U.S. Launches New Strikes On Iran, Revokes Oil Sales Permit After 3 Ships Attacked In Strait Of Hormuz",
+      "sample_link": "https://www.huffpost.com/entry/iran-us-strikes_n_6a4d701de4b0a7adb6d813b2"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.845,
+      "sample_title": "Iran’s Strikes on Ships in Strait of Hormuz Threaten Oil Flow",
+      "sample_link": "https://www.nytimes.com/2026/07/07/world/middleeast/iran-war-oman-hormuz-tanker.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.73,
+      "sample_title": "Three tankers hit in the Strait of Hormuz as U.S. revokes license authorizing sale of Iranian oil",
+      "sample_link": "https://www.nbcnews.com/world/middle-east/tanker-set-ablaze-struck-projectile-strait-hormuz-iran-mourns-khamenei-rcna353264"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.733,
+      "sample_title": "US launches new strikes on Iran, revokes oil sales permit after 3 ships attacked in Strait of Hormuz",
+      "sample_link": "https://abcnews.com/Business/wireStory/tanker-set-ablaze-after-struck-projectile-strait-hormuz-134536251"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "feed",
+      "best_position": 10,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "US strikes target Iran’s ability to control Strait of Hormuz after Trump declares MOU ‘over’",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4641840/us-strike-iran-strait-of-hormuz/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 29,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Four Oil and Gas Tankers Withdraw from Strait of Hormuz After Iran Attacks",
+      "sample_link": "https://www.breitbart.com/middle-east/2026/07/08/four-oil-gas-tankers-withdraw-strait-hormuz-after-iran-attacks/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.885,
+      "sample_title": "Iran to close Strait of Hormuz as it vows mass retaliation against US attacks: report",
+      "sample_link": "https://nypost.com/2026/07/08/world-news/iran-to-close-strait-of-hormuz-as-it-vows-mass-retaliation-against-us-report/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.789,
+      "sample_title": "Iran Vows Hormuz Closure, More Attacks After US Strikes",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/iran-strait-of-hormuz-donald-trump/2026/07/08/id/1262263/"
+     }
+    ]
+   },
+   "best_position_any_circle": 10,
+   "featured_outside_circles": [
+    {
+     "outlet": "axios",
+     "name": "Axios",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 3,
+     "featured": true,
+     "sample_title": "With Iran ceasefire \"over,\" Trump shifts to battle for Hormuz",
+     "sample_link": "https://www.axios.com/2026/07/09/trump-iran-strait-hormuz-battle",
+     "lean": "center"
+    },
+    {
+     "outlet": "dw",
+     "name": "Deutsche Welle",
+     "evidence": "feed",
+     "best_position": 2,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "Is the Strait of Hormuz still Iran's trump card?",
+     "sample_link": "https://www.dw.com/en/is-the-strait-of-hormuz-still-iran-s-trump-card/a-77870807?maca=en-rss-en-all-1573-rdf",
+     "lean": "international"
+    },
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 4,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "US says it's carrying out more strikes after Iran’s attacks in Strait of Hormuz",
+     "sample_link": "https://www.france24.com/en/tv-shows/a-propos/20260708-us-says-it-s-carrying-out-more-strikes-after-iran-s-attacks-in-strait-of-hormuz",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "af41f99cbfd9",
+   "label": "Integrity of game at stake over Fifa Balogun decision - Uefa",
+   "n_outlets": 4,
+   "n_items": 5,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.666,
+      "sample_title": "Pochettino defends controversial FIFA decision to suspend Balogun's red card ban",
+      "sample_link": "https://www.nytimes.com/athletic/7424257/2026/07/05/pochettino-reaction-balogun-red-card-decision-fifa-ban/"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.646,
+      "sample_title": "Folarin Balogun’s red card draws scrutiny and inspires debate across soccer community",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/folarin-balogun-red-card-us-striker-suspended-belgium-world-cup-match-rcna352790"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.713,
+      "sample_title": "Integrity of World Cup is questioned as Trump, FIFA defend actions surrounding Balogun suspension",
+      "sample_link": "https://abcnews.com/Sports/wireStory/uefa-decision-fifa-us-forward-play-world-cup-134513965"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 16,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "UEFA Slams FIFA's 'Unprecedented, Incomprehensible and Unjustifiable' Balogun Decision",
+      "sample_link": "https://www.newsmax.com/newsfront/uefa-fifa-balogun/2026/07/06/id/1261870"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 24,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "UEFA issues blistering statement over FIFA's Folarin Balogun's decision",
+      "sample_link": "https://www.foxnews.com/sports/uefa-issues-blistering-statement-fifa-folarin-balogun-decision"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.649,
+      "sample_title": "Belgium soccer 'astonished' by FIFA's Folarin Balogun red card decision as it investigates 'all potential options'",
+      "sample_link": "https://nypost.com/2026/07/05/sports/belgium-soccer-astonished-by-fifas-folarin-balogun-red-card-decision/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.624,
+      "sample_title": "Trump called FIFA president to reverse Folarin Balogun&#039;s one-game ban",
+      "sample_link": "https://www.washingtonexaminer.com/sports/4636612/trump-called-fifa-president-folarin-balogun-ban-report/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.664,
+      "sample_title": "Europeans Claim FIFA Gave U.S. Special Treatment After Balogun Red Card Suspension Despite Evidence",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/05/europeans-claim-fifa-gave-u-s-special-treatment-after-balogun-red-card-suspension-despite-evidence/"
+     }
+    ]
+   },
+   "best_position_any_circle": 16,
+   "featured_outside_circles": [
+    {
+     "outlet": "bbc",
+     "name": "BBC News",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Uefa says 'integrity of game at stake' after Fifa's decision to overturn US star's red card ban",
+     "sample_link": "https://www.bbc.co.uk/sport/football/articles/c5yzzd73871o?at_medium=RSS&at_campaign=rss",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "c2ea1887d913",
+   "label": "Manhattan High-Rise Stabilized After Buckled Structural Columns Sparked Fears of Collapse",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.73,
+      "sample_title": "Manhattan High-Rise To Be Stabilized After Columns Buckle, Forcing Evacuations",
+      "sample_link": "https://www.huffpost.com/entry/new-york-city-building-collapse-risk_n_6a4d5fbee4b0a7adb6d80b84"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.665,
+      "sample_title": "Manhattan Building’s Columns Buckled Beneath New Addition, Images Show",
+      "sample_link": "https://www.nytimes.com/interactive/2026/07/07/us/midtown-structural.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.707,
+      "sample_title": "Buckling Manhattan high-rise deemed ‘stable’ for now after evacuations ordered",
+      "sample_link": "https://www.nbcnews.com/news/us-news/buckling-beams-manhattan-high-rise-construction-trigger-mass-evacuatio-rcna353343"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.7,
+      "sample_title": "Midtown Manhattan building at risk of partial collapse after beams found buckling",
+      "sample_link": "https://abcnews.com/US/midtown-manhattan-blocks-evacuated-after-beams-found-buckling/story?id=134549272"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 18,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Manhattan building developer says collapse fears were overblown, calls buckling columns 'localized situation'",
+      "sample_link": "https://www.foxnews.com/us/manhattan-building-developer-says-collapse-fears-overblown-calls-buckling-columns-localized-situation"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 43,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Manhattan High-Rise Stabilized After Buckled Structural Columns Sparked Fears of Collapse",
+      "sample_link": "https://www.breitbart.com/environment/2026/07/08/manhattan-high-rise-stabilized-after-buckled-structural-columns-sparked-fears-of-collapse/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.628,
+      "sample_title": "Midtown NYC building ‘shifting’ and in danger of ‘localized collapse’: officials",
+      "sample_link": "https://nypost.com/2026/07/07/us-news/midtown-nyc-building-shifting-and-in-danger-of-localized-collapse-officials/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.681,
+      "sample_title": "Workers begin stabilizing Manhattan high-rise after instability forced evacuations",
+      "sample_link": "https://www.washingtonexaminer.com/policy/infrastructure/4639957/manhattan-new-york-high-rise-collapse/"
+     }
+    ]
+   },
+   "best_position_any_circle": 18,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "e3a019d2cc9c",
+   "label": "The U.S. faces Belgium in the World Cup on the heels of Trump-Infantino red card call",
+   "n_outlets": 3,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "politico",
+      "name": "Politico",
+      "evidence": "feed",
+      "best_position": 22,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Revenge of the ‘hellhole’: Belgium eyes payback in US World Cup clash",
+      "sample_link": "https://www.politico.com/live-updates/2026/07/06/world-cup-2026/belgium-usa-world-cup-hellhole-trump-00988322"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.668,
+      "sample_title": "Belgium Soccer Team Trolls Trump In The Most Hilarious Way",
+      "sample_link": "https://www.huffpost.com/entry/belgium-soccer-team-mocks-trump-dance_n_6a4d1e54e4b0c806bbefbe83"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.746,
+      "sample_title": "World Cup 2026: See How a Series of U.S. Mistakes Led to Belgium’s Third Goal",
+      "sample_link": "https://www.nytimes.com/interactive/2026/07/07/sports/soccer/usa-belgium-world-cup-goal.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.637,
+      "sample_title": "From The Sports Desk: Belgium demolishes the U.S. 4-1 and trolls it afterward",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/sports-newsletter-belgium-demolishes-us-4-1-trolls-afterward-rcna353181"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.657,
+      "sample_title": "Belgium beats US 4-1 to reach World Cup quarterfinals, taking advantage of defensive lapses",
+      "sample_link": "https://abcnews.com/Sports/wireStory/belgium-beats-us-4-1-reach-world-cup-134532373"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.683,
+      "sample_title": "USMNT not looking past Belgium as it still seeks 'signature' World Cup  win",
+      "sample_link": "https://nypost.com/2026/07/05/sports/usmnt-not-looking-past-belgium-in-world-cup-round-of-16-battle/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.691,
+      "sample_title": "Belgian players mock USA by mimicking the Trump dance after beating them at World Cup",
+      "sample_link": "https://www.washingtonexaminer.com/sports/4638909/belgian-players-mock-usa-trump-dance-world-cup/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.701,
+      "sample_title": "Belgium Trolls President with ‘Trump Dance’ After Humiliating Team USA at World Cup",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/07/belgium-trolls-president-trump-dance-after-humiliating-team-usa-world-cup/"
+     }
+    ]
+   },
+   "best_position_any_circle": 22,
+   "featured_outside_circles": [
+    {
+     "outlet": "npr",
+     "name": "NPR",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Trump, Mamdani give contrasting July 4th speeches. And, U.S. faces Belgium in World Cup",
+     "sample_link": "https://www.npr.org/2026/07/06/g-s1-132097/up-first-newsletter-america-250-trump-democrats-iran-israel-world-cup-folarin-balogun",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "bb217c05ebf0",
+   "label": "Mbappe hits back at racist insults from Paraguay senator",
+   "n_outlets": 4,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "politico",
+      "name": "Politico",
+      "evidence": "feed",
+      "best_position": 23,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Paraguayan senator’s ‘brazen racism’ against Mbappé sparks anger in France",
+      "sample_link": "https://www.politico.com/live-updates/2026/07/06/world-cup-2026/kylian-mbappe-paraguay-senator-racism-fifa-world-cup-2026-00988001"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "feed",
+      "best_position": 40,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "France World Cup Star Fires Back At Paraguayan Senator's Racist Attack",
+      "sample_link": "https://www.huffpost.com/entry/kylian-mbappe-paraguay-senator-racist-attack_n_6a4c99f1e4b0a7adb6d74178"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.839,
+      "sample_title": "Paraguay senator demands Mbappe 'apology' over his accusation of 'blatant racism'",
+      "sample_link": "https://www.nytimes.com/athletic/7427643/2026/07/07/kylian-mbappe-france-paraguay-racism-senator-amarilla/"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.908,
+      "sample_title": "Mbappé fires back at Paraguayan senator’s racist attack after France victory",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/mbappe-fires-back-paraguayan-senators-racist-attack-france-victory-rcna353277"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.826,
+      "sample_title": "Kylian Mbappé condemns Paraguayan senator over racist remarks after World Cup match",
+      "sample_link": "https://abcnews.com/Sports/wireStory/kylian-mbapp-condemns-paraguayan-senator-racist-remarks-after-134579420"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.81,
+      "sample_title": "Paraguayan Senator Demands Apology From Mbappé Amid Racism Dispute",
+      "sample_link": "https://www.newsweek.com/paraguayan-senator-apology-kylian-mbappe-racism-dispute-12164454"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.838,
+      "sample_title": "Kylian Mbappé fires back at Paraguayan senator's racist attack after France victory",
+      "sample_link": "https://nypost.com/2026/07/07/sports/mbappe-fires-back-at-paraguayan-senators-racist-attack-after-france-victory/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.723,
+      "sample_title": "Paraguayan Senator Threatens Legal Action Against French Athlete Mbappé over Social Media ‘Gender Violence’",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/07/paraguayan-senator-threatens-legal-action-against-french-athlete-mbappe-over-social-media-gender-violence/"
+     }
+    ]
+   },
+   "best_position_any_circle": 23,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "8a025a25f1dd",
+   "label": "Williams sisters withdraw from Wimbledon doubles after Serena suffers knee injury",
+   "n_outlets": 5,
+   "n_items": 5,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "feed",
+      "best_position": 6,
+      "captures_seen": 4,
+      "featured": false,
+      "sample_title": "Why Did Serena Williams, Venus Williams Withdraw From Wimbledon?",
+      "sample_link": "https://www.newsweek.com/sports/why-did-serena-williams-venus-williams-withdraw-from-wimbledon-12158322"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "feed",
+      "best_position": 20,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Serena Williams withdraws from Wimbledon doubles competition after knee injury",
+      "sample_link": "https://www.nbcnews.com/sports/tennis/serena-williams-withdraws-wimbledon-rcna352965"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.914,
+      "sample_title": "Serena Williams Withdraws From Doubles Match With Sister Venus At Wimbledon Due To Injury",
+      "sample_link": "https://www.huffpost.com/entry/wimbledon-williams-sisters_n_6a497c6ce4b03060a850a7c5"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.894,
+      "sample_title": "Serena and Venus Williams withdraw from Wimbledon doubles",
+      "sample_link": "https://www.nytimes.com/athletic/7418930/2026/07/04/serena-venus-williams-wimbledon-doubles-out/"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.907,
+      "sample_title": "Serena Williams withdraws from doubles match at Wimbledon due to injury",
+      "sample_link": "https://abcnews.com/Sports/wireStory/serena-williams-withdraws-doubles-match-sister-venus-wimbledon-134473652"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 16,
+      "captures_seen": 4,
+      "featured": false,
+      "sample_title": "Williams sisters withdraw from Wimbledon doubles after Serena suffers knee injury",
+      "sample_link": "https://www.foxnews.com/sports/williams-sisters-withdraw-wimbledon-doubles-serena-suffers-knee-injury"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.89,
+      "sample_title": "Serena Williams withdraws from Wimbledon doubles match with sister Venus because of injury: 'Heartbroken'",
+      "sample_link": "https://nypost.com/2026/07/04/sports/serena-williams-withdraws-from-wimbledon-doubles-match-with-sister-venus-because-of-injury/"
+     }
+    ]
+   },
+   "best_position_any_circle": 6,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "a1973b7e61f0",
+   "label": "Iran strikes drive oil price gains",
+   "n_outlets": 4,
+   "n_items": 5,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "feed",
+      "best_position": 6,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Oil Prices Hold Gains After U.S. and Iran Trade Another Round of Strikes",
+      "sample_link": "https://www.nytimes.com/2026/07/09/business/oil-shipping-stocks-gas-iran-hormuz.html"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.729,
+      "sample_title": "Oil Jumps Over 6% To 2-Week High After Trump Says Deal With Iran 'Over'",
+      "sample_link": "https://www.huffpost.com/entry/oil-jumps-after-trump-says-iran-mou-is-over_n_6a4e1088e4b0a7adb6d85366"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.822,
+      "sample_title": "Oil prices surge, stocks slide after Trump says Iran ceasefire is ‘over’",
+      "sample_link": "https://www.nbcnews.com/business/business-news/oil-prices-surge-stocks-tumble-trump-iran-ceasefire-over-hormuz-rcna353446"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.8,
+      "sample_title": "Oil prices jump nearly 6% after Trump says ceasefire with Iran is 'over'",
+      "sample_link": "https://abcnews.com/Business/wireStory/oil-prices-jump-2-after-us-strikes-iran-134574031"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.662,
+      "sample_title": "Map Shows Gas Prices in Each State as Iran Ceasefire Ends",
+      "sample_link": "https://www.newsweek.com/map-gas-prices-each-state-iran-ceasefire-ends-12172881"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.854,
+      "sample_title": "Oil prices spike after Trump declared ceasefire with Iran &#039;over&#039;",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4640075/oil-prices-spike-trump-declared-ceasefire-iran-over/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.63,
+      "sample_title": "Trump Administration Reinstates Iran Oil Sanctions",
+      "sample_link": "https://www.breitbart.com/politics/2026/07/07/trump-administration-reinstates-iran-oil-sanctions/"
+     }
+    ]
+   },
+   "best_position_any_circle": 6,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "42f3995ebca0",
+   "label": "The fatal flaw in how America handles heat waves",
+   "n_outlets": 3,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "vox",
+      "name": "Vox",
+      "evidence": "feed",
+      "best_position": 6,
+      "captures_seen": 10,
+      "featured": false,
+      "sample_title": "The fatal flaw in how America handles heat waves",
+      "sample_link": "https://www.vox.com/future-perfect/494126/heat-wave-ac-passive-homes"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.633,
+      "sample_title": "‘My Area Is In The Middle Of A Brutal Heat Wave Right Now’ – And This Cooling Blanket Is A Lifesaver",
+      "sample_link": "https://www.huffpost.com/entry/cooling-blanket-heat-wave-amazon_l_6a466d7ae4b03060a84bf4f5"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.67,
+      "sample_title": "Without Climate Change, U.S. Heat Wave Called ‘Virtually Impossible’",
+      "sample_link": "https://www.nytimes.com/2026/07/03/climate/heat-wave-us-canada-climate-change.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.669,
+      "sample_title": "25 dead in ongoing heat wave as storms bring flood, wind threats to East Coast",
+      "sample_link": "https://www.nbcnews.com/weather/heat/heat-wave-storms-bring-flood-wind-threats-east-coast-rcna353025"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.722,
+      "sample_title": "'Stretched to the limit': Heat wave prompts US electrical grid emergency",
+      "sample_link": "https://abcnews.com/US/stretched-limit-heat-wave-prompts-us-electrical-grid/story?id=134369230"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.678,
+      "sample_title": "SoCal blasted by powerful heat wave as triple-digit figures hit",
+      "sample_link": "https://nypost.com/2026/07/07/us-news/southern-california-heatwave-to-bring-triple-digit-temperatures-this-week/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.738,
+      "sample_title": "Heat Wave Disrupts Fourth of July Events Across US",
+      "sample_link": "https://www.newsmax.com/us/heat-wave-fourth-of-july-great-american-state-fair/2026/07/03/id/1261748/"
+     }
+    ]
+   },
+   "best_position_any_circle": 6,
+   "featured_outside_circles": [
+    {
+     "outlet": "dw",
+     "name": "Deutsche Welle",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "Why heat waves heighten the risk of blackouts",
+     "sample_link": "https://www.dw.com/en/why-heat-waves-heighten-the-risk-of-blackouts/a-77824609?maca=en-rss-en-all-1573-rdf",
+     "lean": "international"
+    },
+    {
+     "outlet": "axios",
+     "name": "Axios",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 5,
+     "featured": true,
+     "sample_title": "Heat wave's deadly impact grows",
+     "sample_link": "https://www.axios.com/2026/07/06/us-heat-wave-death-toll-july-2026",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "1a3c59aeed19",
+   "label": "Zelenskyy After Trump Call: American Resolve 'Crucial' to Ending War",
+   "n_outlets": 4,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.744,
+      "sample_title": "Trump holds 90-minute call with Putin, also speaks with Zelenskyy ahead of NATO summit",
+      "sample_link": "https://www.nbcnews.com/world/ukraine/trump-holds-90-minute-call-putin-speaks-zelenskyy-ahead-nato-summit-rcna353010"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.804,
+      "sample_title": "Zelenskyy calls on NATO for more Patriot missiles after deadly Russian attack on Kyiv",
+      "sample_link": "https://abcnews.com/International/russian-overnight-bombardment-kyiv-kills-14-ukrainian-officials/story?id=134509281"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 7,
+      "captures_seen": 5,
+      "featured": false,
+      "sample_title": "Zelenskyy After Trump Call: American Resolve 'Crucial' to Ending War",
+      "sample_link": "https://www.newsmax.com/newsfront/ukraine-zelenskyy-trump/2026/07/04/id/1261785"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 7,
+      "captures_seen": 4,
+      "featured": false,
+      "sample_title": "Zelensky and Putin Hold Separate Talks With President Trump on Ending War",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/05/zelensky-and-putin-hold-separate-talks-with-president-trump/"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 19,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Zelenskyy pressures US and Europe for more 'air defense' assistance amid ongoing war with Russia",
+      "sample_link": "https://www.foxnews.com/world/zelenskyy-pressures-us-europe-air-defense-assistance-ongoing-war-russia"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.72,
+      "sample_title": "Ukraine pushes new approach to end Russia war ahead of Trump-Zelensky meeting",
+      "sample_link": "https://nypost.com/2026/07/07/world-news/ukraine-pushes-new-approach-to-end-russia-war-ahead-of-trump-zelensky-meeting/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.753,
+      "sample_title": "Trump accidentally calls Zelensky &#039;President Putin&#039; at NATO summit",
+      "sample_link": "https://www.washingtonexaminer.com/policy/foreign-policy/4640545/trump-accidentally-calls-zelensky-president-putin-at-nato-summit/"
+     }
+    ]
+   },
+   "best_position_any_circle": 7,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "3a3ce874cea3",
+   "label": "July 4 heat delays America 250 celebration as State Fair guests share love of USA",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.646,
+      "sample_title": "How the Heat Is Upending Plans for America’s 250th Birthday",
+      "sample_link": "https://www.nytimes.com/2026/07/03/weather/heat-wave-weather-delays-injuries.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.657,
+      "sample_title": "Record heat disrupts America’s 250th birthday celebrations and travel",
+      "sample_link": "https://www.nbcnews.com/weather/heat/heat-wave-july-4-celebrations-rcna352896"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.627,
+      "sample_title": "Extraordinary heat in US Northeast arrives to clash with Fourth of July revelry",
+      "sample_link": "https://abcnews.com/US/wireStory/extraordinary-heat-us-northeast-arrives-clash-fourth-july-134383337"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.624,
+      "sample_title": "July 4 Celebrations Across US Hit by Series of Mishaps",
+      "sample_link": "https://www.newsweek.com/july-4-celebrations-across-us-hit-by-series-of-mishaps-12158890"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 20,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "July 4 heat delays America 250 celebration as State Fair guests share love of USA",
+      "sample_link": "https://www.foxnews.com/health/july-4-heat-delays-america-250-celebration-state-fair-guests-share-love-usa"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.622,
+      "sample_title": "DC heat forces temporary closure of National Mall 'State Fair' as 4th of July celebrations get underway",
+      "sample_link": "https://nypost.com/2026/07/03/us-news/a-capitol-fourth-concert-still-on-despite-sweltering-record-setting-heat/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.635,
+      "sample_title": "America's 250th Birthday Marked by Fireworks, Heat",
+      "sample_link": "https://www.newsmax.com/newsfront/america-250-weekend-heat/2026/07/04/id/1261762/"
+     }
+    ]
+   },
+   "best_position_any_circle": 20,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "d3c93a880ee9",
+   "label": "Previously Unidentified Original Declaration of Independence Discovered in UK Royal Navy Archives",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.787,
+      "sample_title": "Rare Copy of the Declaration of Independence Is Discovered in London",
+      "sample_link": "https://www.nytimes.com/2026/07/02/world/europe/declaration-independence-copy-uk-archive.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.709,
+      "sample_title": "Rare copy of Declaration of Independence seized in 1776 uncovered in London",
+      "sample_link": "https://www.nbcnews.com/world/europe/rare-declaration-independence-found-in-uk-rcna352852"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.822,
+      "sample_title": "Rare copy of Declaration of Independence found by UK National Archives in papers of captured US ship",
+      "sample_link": "https://abcnews.com/Weird/wireStory/rare-copy-declaration-independence-found-uk-national-archives-134427038"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.758,
+      "sample_title": "UK Finding Copy of US Declaration of Independence ‘Astonishing’—Historian",
+      "sample_link": "https://www.newsweek.com/uk-finding-copy-of-us-declaration-of-independence-astonishing-historian-12156070"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 20,
+      "captures_seen": 7,
+      "featured": false,
+      "sample_title": "Previously Unidentified Original Declaration of Independence Discovered in UK Royal Navy Archives",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/04/previously-unidentified-original-declaration-of-independence-discovered-in-uk-royal-navy-archives/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.822,
+      "sample_title": "Rare copy of Declaration of Independence found by UK National Archives in papers of captured US ship",
+      "sample_link": "https://nypost.com/2026/07/02/world-news/rare-copy-of-declaration-of-independence-found-by-uk-national-archives-in-papers-of-captured-us-ship/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.747,
+      "sample_title": "Rare Declaration Copy Found in UK National Archives",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/declaration-of-independence-uk-national-archives/2026/07/03/id/1261712/"
+     }
+    ]
+   },
+   "best_position_any_circle": 20,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "7011b2ee41cd",
+   "label": "Ukrainian Drones Strike St. Petersburg Oil Terminal in Latest Long-Range Attack on Russia",
+   "n_outlets": 4,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.634,
+      "sample_title": "Far From Kyiv and Moscow, Soldiers Stalk Ruins and Evade Drones on the Front",
+      "sample_link": "https://www.nytimes.com/2026/07/05/world/europe/ukraine-russia-donetsk-front.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.852,
+      "sample_title": "St. Petersburg region port and oil terminal hit in major Ukrainian drone attack",
+      "sample_link": "https://www.nbcnews.com/world/russia/st-petersburg-region-port-oil-terminal-hit-major-ukrainian-drone-attac-rcna352944"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.917,
+      "sample_title": "Ukrainian drones hit St Petersburg oil terminal in latest long-range attack on Russia",
+      "sample_link": "https://abcnews.com/International/wireStory/ukrainian-drones-hit-st-petersburg-oil-terminal-latest-134467061"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 25,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Ukrainian Drones Strike St. Petersburg Oil Terminal in Latest Long-Range Attack on Russia",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/04/ukrainian-drones-strike-st-petersburg-oil-terminal-in-latest-long-range-attack-on-russia/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.696,
+      "sample_title": "Russia deploying new jet-powered drones that reach 310 mph to 'maximize' destruction in Ukraine",
+      "sample_link": "https://nypost.com/2026/07/03/world-news/russia-has-new-jet-powered-drones-to-maximize-destruction-in-ukraine/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.622,
+      "sample_title": "Ukraine&#039;s 40-day missile and drone blitz heaps pressure and pain on Putin",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4633207/ukraine-missile-blitz-pain-russia/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.906,
+      "sample_title": "Ukraine Drones Hit St. Petersburg Oil Terminal",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/russia-ukraine-war/2026/07/04/id/1261759/"
+     }
+    ]
+   },
+   "best_position_any_circle": 25,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "5807ba1035c7",
+   "label": "Farewell Cape Verde - defeat by Argentina but they are the underdogs the World Cup will never forget",
+   "n_outlets": 7,
+   "n_items": 11,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "feed",
+      "best_position": 6,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Vozinha Addresses Cape Verde Loss to Argentina, Lionel Messi at World Cup",
+      "sample_link": "https://www.newsweek.com/sports/vozinha-addresses-cape-verde-loss-to-argentina-lionel-messi-at-world-cup-12157889"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "feed",
+      "best_position": 8,
+      "captures_seen": 4,
+      "featured": false,
+      "sample_title": "Argentina, Messi pushed to the brink by Cape Verde and its 40-year-old goalkeeper",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/lionel-messi-faces-surprising-test-vozinha-cape-verdes-40-year-old-goa-rcna352908"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.834,
+      "sample_title": "For Cape Verde, There’s Victory in Their World Cup Defeat",
+      "sample_link": "https://www.nytimes.com/2026/07/04/world/africa/cape-verde-world-cup.html"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.752,
+      "sample_title": "Argentina narrowly defeats Cape Verde in historic World Cup game",
+      "sample_link": "https://abcnews.com/International/argentina-narrowly-defeats-cape-verde-historic-world-cup/story?id=134456329"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.744,
+      "sample_title": "Argentina vs. Cape Verde live updates: World Cup 2026 score, news and highlights",
+      "sample_link": "https://nypost.com/2026/07/03/sports/argentina-vs-cape-verde-live-updates-world-cup-2026-score-news-and-highlights/"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.724,
+      "sample_title": "Messi, Argentina avoid a shocking upset in wild knockout stage match against Cape Verde",
+      "sample_link": "https://www.foxnews.com/sports/messi-argentina-avoid-shocking-upset-wild-knockout-stage-match-against-cape-verde"
+     }
+    ]
+   },
+   "best_position_any_circle": 6,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "21c96ae79649",
+   "label": "Trump flies partway home from Turkey in an old Air Force One",
+   "n_outlets": 3,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "feed",
+      "best_position": 7,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Security Precaution Led Trump to Use Old Air Force One in Leaving Turkey",
+      "sample_link": "https://www.nytimes.com/2026/07/08/us/politics/trump-air-force-one-security.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.847,
+      "sample_title": "Security decision led President Trump to take older Air Force One when he left Turkey",
+      "sample_link": "https://www.nbcnews.com/politics/donald-trump/security-decision-trump-older-air-force-one-leaving-turkey-rcna353622"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.747,
+      "sample_title": "In a surprise swap, Trump flies back from Turkey in an old Air Force One, not the Qatari-gifted jet",
+      "sample_link": "https://abcnews.com/US/wireStory/surprise-swap-trump-flies-back-turkey-air-force-134596869"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.677,
+      "sample_title": "Trump ditches new Air Force One in Turkey, stoking Iran threat fears: ‘I'm number one on the kill list’",
+      "sample_link": "https://nypost.com/2026/07/08/us-news/trump-wont-fly-400m-new-air-force-one-out-of-turkey-as-iran-war-resumes/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.635,
+      "sample_title": "Donald Trump sparks intrigue by ditching new Qatari jet for old Air Force One",
+      "sample_link": "https://www.washingtonexaminer.com/news/washington-secrets/4641318/trump-intrigue-qatari-jet-old-air-force-one/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.702,
+      "sample_title": "Trump Returning to US on Old Air Force One Amid Iran Threats",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/trump-air-force-one-nato-iran-qatar/2026/07/08/id/1262238/"
+     }
+    ]
+   },
+   "best_position_any_circle": 7,
+   "featured_outside_circles": [
+    {
+     "outlet": "npr",
+     "name": "NPR",
+     "evidence": "feed",
+     "best_position": 2,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Trump flies partway home from Turkey in an old Air Force One",
+     "sample_link": "https://www.npr.org/2026/07/09/nx-s1-5887064/trump-air-force-one",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "652e4789b1b9",
+   "label": "The Democratic Party Failed Us With Graham Platner",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "motherjones",
+      "name": "Mother Jones",
+      "evidence": "feed",
+      "best_position": 10,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "The Democratic Party Failed Us With Graham Platner",
+      "sample_link": "https://www.motherjones.com/politics/2026/07/the-democratic-party-failed-us-with-graham-platner/"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.678,
+      "sample_title": "How Did the Democrats Get Graham Platner, Anyway?",
+      "sample_link": "https://www.nytimes.com/2026/07/08/opinion/graham-platner-maine-senate.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.631,
+      "sample_title": "Maine Democratic Party accuses Graham Platner of meddling in the process to replace him",
+      "sample_link": "https://www.nbcnews.com/politics/2026-election/maine-democratic-party-graham-platner-meddling-process-replace-rcna353430"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.736,
+      "sample_title": "Graham Platner's implosion isn't a problem for just him — rather the entire Democratic Party",
+      "sample_link": "https://nypost.com/2026/07/07/opinion/graham-platners-implosion-isnt-a-problem-for-just-him-rather-the-entire-democratic-party/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.654,
+      "sample_title": "Graham Platner could use his campaign cash to bolster another Democrat — or abandon them",
+      "sample_link": "https://www.washingtonexaminer.com/news/campaigns/congressional/4639491/graham-platner-campaign-cash-bolster-democrat-abandon-them/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.68,
+      "sample_title": "Top Democrats Who Backed Graham Platner Through Controversy and Allegations",
+      "sample_link": "https://www.breitbart.com/politics/2026/07/06/the-top-democrats-backed-graham-platner-controversy-allegations/"
+     }
+    ]
+   },
+   "best_position_any_circle": 10,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "a2cd475b8680",
+   "label": "Trump says he'll ask Supreme Court to rehear birthright citizenship case",
+   "n_outlets": 6,
+   "n_items": 6,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "feed",
+      "best_position": 16,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Trump Says He’ll Ask Supreme Court to Rehear Citizenship Case, an Unlikely Event",
+      "sample_link": "https://www.nytimes.com/2026/07/08/us/politics/trump-supreme-court-birthright-citizenship.html"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.857,
+      "sample_title": "Trump Calls for Supreme Court to Rehear Birthright Citizenship Over 'Scam'",
+      "sample_link": "https://www.newsweek.com/trump-calls-supreme-court-rehear-birthright-citizenship-over-scam-12174080"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 14,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Trump: Will Ask Supreme Court to Rehear Birthright Case",
+      "sample_link": "https://www.newsmax.com/newsfront/donald-trump-supreme-court-birthright-citizenship/2026/07/08/id/1262248"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 21,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Trump to ask Supreme Court to rehear birthright citizenship case after 'insane decision'",
+      "sample_link": "https://www.foxnews.com/politics/trump-ask-supreme-court-rehear-birthright-citizenship-case-insane-decision"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.904,
+      "sample_title": "Trump demands rehearing after Supreme Court&#039;s &#039;insane&#039; birthright citizenship ruling",
+      "sample_link": "https://www.washingtonexaminer.com/news/white-house/4641535/trump-rehearing-supreme-court-birthright-citizenship/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.701,
+      "sample_title": "Marlow: Conservatives Must Vet Judges, Justices on Birthright Citizenship",
+      "sample_link": "https://www.breitbart.com/clips/2026/07/03/marlow-conservatives-must-vet-judges-justices-on-birthright-citizenship/"
+     }
+    ]
+   },
+   "best_position_any_circle": 14,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "4d4e59ba1434",
+   "label": "Pubs and police brace for England-Mexico 1am kick-off after Fifa U-turn",
+   "n_outlets": 2,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "feed",
+      "best_position": 16,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Mexico-England Match Prompts Security Crackdown After Fan Violence",
+      "sample_link": "https://www.newsweek.com/mexico-england-match-prompts-security-crackdown-after-fan-violence-12159155"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.734,
+      "sample_title": "England v Mexico kicks off at 1am in the UK. How are fans planning to watch it?",
+      "sample_link": "https://www.nytimes.com/athletic/7416633/2026/07/03/england-mexico-1am-kick-off-world-cup-plans/"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.63,
+      "sample_title": "England fans can drink till 5 a.m. for Mexico World Cup game after government intervenes",
+      "sample_link": "https://www.nbcnews.com/world/united-kingdom/england-fans-drink-alcohol-pubs-mexico-world-cup-game-licensing-rcna352851"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.657,
+      "sample_title": "FIFA considering earlier kickoff for Mexico vs. England at World Cup due to weather",
+      "sample_link": "https://abcnews.com/Sports/wireStory/fifa-earlier-kickoff-mexico-england-world-cup-due-134453073"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.718,
+      "sample_title": "Mexico boosting security for England World Cup clash after fan deaths",
+      "sample_link": "https://nypost.com/2026/07/04/sports/mexico-boosting-security-for-england-world-cup-clash-after-fan-deaths/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.663,
+      "sample_title": "WATCH: Mexico Fans Upset England Players’ Sleep at Hotel Before Pivotal World Cup Matchup",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/05/watch-mexico-fans-upset-england-players-sleep-at-hotel-before-pivotal-world-cup-matchup/"
+     }
+    ]
+   },
+   "best_position_any_circle": 16,
+   "featured_outside_circles": [
+    {
+     "outlet": "bbc",
+     "name": "BBC News",
+     "evidence": "feed",
+     "best_position": 4,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "Pubs and police brace for England-Mexico 1am kick-off after Fifa U-turn",
+     "sample_link": "https://www.bbc.co.uk/news/articles/cy9r2x4pz1wo?at_medium=RSS&at_campaign=rss",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "499fb1c2bb57",
+   "label": "Why Charges Were Dropped Against Doctor Who Drove Family Off Cliff",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.778,
+      "sample_title": "Judge Drops All Charges Against Dad Who Drove Family Off Cliff",
+      "sample_link": "https://www.huffpost.com/entry/judge-drops-all-charges-against-dad-who-drove-family-off-cliff_n_6a4d8005e4b0c806bbf0373a"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.818,
+      "sample_title": "Charges Against Man Who Drove Family Off Cliff Are Dropped After Treatment",
+      "sample_link": "https://www.nytimes.com/2026/07/07/us/california-devils-slide-dad-charges.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.713,
+      "sample_title": "California dad who drove family off cliff has charges dropped after mental health treatment",
+      "sample_link": "https://www.nbcnews.com/news/us-news/california-dad-drove-family-cliff-charges-dropped-rcna353418"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.739,
+      "sample_title": "Charges against dad who drove family off cliff dropped after mental health treatment",
+      "sample_link": "https://abcnews.com/US/wireStory/charges-california-dad-drove-family-off-cliff-dropped-134565857"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "dailywire",
+      "name": "The Daily Wire",
+      "evidence": "feed",
+      "best_position": 50,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Why Charges Were Dropped Against Doctor Who Drove Family Off Cliff",
+      "sample_link": "https://www.dailywire.com/news/why-charges-were-dropped-against-doctor-who-drove-family-off-cliff"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.752,
+      "sample_title": "Wife takes back doctor husband who intentionally drove her, their two children off cliff after charges are dropped",
+      "sample_link": "https://nypost.com/2026/07/07/us-news/pasadena-doctor-who-drove-family-over-cliff-has-charges-dismissed/"
+     }
+    ]
+   },
+   "best_position_any_circle": 50,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "745aa1cd5d2b",
+   "label": "Syria expecting Macron visit in first for Western head-of-state since Assad",
+   "n_outlets": 2,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.628,
+      "sample_title": "Blasts Rock Damascus During Macron Syria Visit",
+      "sample_link": "https://www.huffpost.com/entry/blasts-rock-damascus-macron-visit_n_6a4cb3ade4b094d71e70224e"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.796,
+      "sample_title": "Macron Continues With Syria Visit Despite Explosions Near His Hotel in Damascus",
+      "sample_link": "https://www.nytimes.com/2026/07/07/world/middleeast/syria-explosions-macron-damascus-visit.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.889,
+      "sample_title": "Macron will visit Syria as the first Western leader since Assad’s ouster, Damascus says",
+      "sample_link": "https://www.nbcnews.com/world/europe/macron-will-visit-syria-rcna353038"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.861,
+      "sample_title": "Macron arrives in Syria as first major Western leader to visit war-torn country under new leadership",
+      "sample_link": "https://abcnews.com/International/wireStory/macron-arrives-syria-major-western-leader-visit-war-134523294"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.741,
+      "sample_title": "Macron addresses ‘elements of risk’ in Syria’s reintegration after bomb goes off outside his hotel",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4638644/macron-syria-reintegration-bombs-hotel-france/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.896,
+      "sample_title": "Macron to Become First Western Leader to Visit Syria Since Fall of Assad",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/05/macron-to-become-first-western-leader-to-visit-syria-since-fall-of-assad/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Macron expected in Syria in first post-Assad visit by Western leader, Damascus says",
+     "sample_link": "https://www.france24.com/en/middle-east/20260706-macron-expected-in-syria-in-first-post-assad-visit-by-western-leader-damascus-says",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "2d66936c8972",
+   "label": "'Why should we not kill the man ... ?' Angry slogans against Trump at Khamenei's funeral",
+   "n_outlets": 2,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.675,
+      "sample_title": "Exhausted by Iran War, Tehran Transforms for Khamenei’s Funeral",
+      "sample_link": "https://www.nytimes.com/2026/07/05/world/middleeast/iran-funeral-khamenei-tehran.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.69,
+      "sample_title": "Months after U.S. and Israeli strikes, Iran readies massive funeral for Khamenei",
+      "sample_link": "https://www.nbcnews.com/world/iran/iran-funeral-supreme-leader-khamenei-rcna352664"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.682,
+      "sample_title": "Ayatollah Khamenei Funeral: What We Know",
+      "sample_link": "https://www.newsweek.com/ayatollah-khamenei-funeral-iran-12154206"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.645,
+      "sample_title": "Trump says Iran gets 'week off' for lengthy funeral for former supreme leader Ali Khamenei: 'Isn't that nice?'",
+      "sample_link": "https://nypost.com/2026/07/04/world-news/trump-says-iran-gets-week-off-for-lengthy-khamenei-funeral-isnt-that-nice/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.627,
+      "sample_title": "Khamenei is dead. His kill list is alive — and Trump is still at the top",
+      "sample_link": "https://www.washingtonexaminer.com/op-eds/4639986/ali-khamenei-dead-iran-kill-list-alive-trump-assassination-plot/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.722,
+      "sample_title": "Khamenei Funeral Marks the Rise of a More Defiant Iran",
+      "sample_link": "https://www.newsmax.com/newsfront/khamenei-funeral-defiant/2026/07/04/id/1261767/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "timesofindia",
+     "name": "The Times of India",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "'Why should we not kill the man ... ?' Angry slogans against Trump at Khamenei's funeral",
+     "sample_link": "https://timesofindia.indiatimes.com/world/middle-east/why-should-we-not-kill-the-man-who-killed-my-imam-calls-to-assassinate-trump-ring-out-at-khameneis-funeral/articleshow/132191271.cms",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "90d547c98790",
+   "label": "Pakistan: Rescuers find wreckage of crashed cargo plane",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.825,
+      "sample_title": "Pakistan Finds Wreckage of Cargo Plane That Vanished at Sea Overnight",
+      "sample_link": "https://www.nytimes.com/2026/07/08/world/asia/pakistan-cargo-plane-missing-arabian-sea.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.849,
+      "sample_title": "Cargo plane wreckage found off Pakistan as search for 5 crewmembers continues",
+      "sample_link": "https://www.nbcnews.com/world/pakistan/cargo-plane-wreckage-found-pakistans-coast-rcna353494"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.709,
+      "sample_title": "Pakistan expands search for missing cargo plane as rough seas hamper rescue efforts",
+      "sample_link": "https://abcnews.com/International/wireStory/pakistan-expands-search-missing-cargo-plane-rough-seas-134574540"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.66,
+      "sample_title": "Pakistan expands search for cargo plane after it vanished from radar, lost contact with air traffic control",
+      "sample_link": "https://nypost.com/2026/07/08/world-news/pakistan-expands-search-for-missing-cargo-plane-as-rough-seas-hamper-rescue-efforts/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.684,
+      "sample_title": "Authorities searching for K2 cargo plane crew that disappeared near Pakistan",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4640645/authorities-searching-k2-plane-crew-pakistan/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.732,
+      "sample_title": "Pakistani PM Orders Intensive Search and Rescue Effort for Vanished Cargo Plane",
+      "sample_link": "https://www.breitbart.com/asia/2026/07/08/pakistani-pm-orders-intensive-search-rescue-effort-vanished-cargo-plane/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "4b1e2b2972ee",
+   "label": "England's Epic World Cup Win Over Mexico Set Viewership Record",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "feed",
+      "best_position": 8,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "England's Epic World Cup Win Over Mexico Set Viewership Record",
+      "sample_link": "https://www.newsweek.com/sports/englands-epic-world-cup-win-over-mexico-set-viewership-record-12174504"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.794,
+      "sample_title": "England win over Mexico sets new record for most-watched soccer game in U.S. history",
+      "sample_link": "https://www.nytimes.com/athletic/7432616/2026/07/08/england-mexico-world-cup-tv-ratings/"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.667,
+      "sample_title": "Mexico-England most watched non-US English-language World Cup match in US history",
+      "sample_link": "https://abcnews.com/Entertainment/wireStory/mexico-england-watched-us-english-language-world-cup-134600501"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.635,
+      "sample_title": "USMNT's thrilling World Cup Round of 32 win drew historic TV viewership",
+      "sample_link": "https://nypost.com/2026/07/02/sports/usmnts-world-cup-round-of-32-win-drew-historic-tv-viewership/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.637,
+      "sample_title": "U.S.-Belgium World Cup Game Sets TV Ratings Record",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/08/u-s-belgium-world-cup-game-sets-tv-ratings-record/"
+     }
+    ]
+   },
+   "best_position_any_circle": 8,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "64c0bdfcc22b",
+   "label": "Second person in four days fatally shot by federal task force member in Memphis",
+   "n_outlets": 3,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "feed",
+      "best_position": 24,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Second Person in a Week Killed by Federal Task Force in Memphis",
+      "sample_link": "https://www.nytimes.com/2026/07/08/us/shootings-federal-task-force-memphis.html"
+     },
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.954,
+      "sample_title": "Second Person In 4 Days Is Fatally Shot In Memphis By Federal Task Force Member",
+      "sample_link": "https://www.huffpost.com/entry/ap-us-memphis-task-force-shooting_n_6a4ecbf2e4b04b52a93e2e22"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.954,
+      "sample_title": "Second person in 4 days is fatally shot in Memphis by federal task force member",
+      "sample_link": "https://abcnews.com/US/wireStory/person-4-days-fatally-shot-memphis-federal-task-134598818"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 9,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "2nd Fatal Memphis Shooting in 4 Days by Federal Task Force",
+      "sample_link": "https://www.newsmax.com/newsfront/memphis-shooting-federal-task-force/2026/07/08/id/1262255"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.679,
+      "sample_title": "2 National Guardsmen shoot, kill gunman during foot chase in Memphis hotspot",
+      "sample_link": "https://nypost.com/2026/07/05/us-news/2-national-guardsmen-shoot-kill-gunman-during-foot-chase-in-memphis-hotspot/"
+     }
+    ]
+   },
+   "best_position_any_circle": 9,
+   "featured_outside_circles": [
+    {
+     "outlet": "thehill",
+     "name": "The Hill",
+     "evidence": "feed",
+     "best_position": 3,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Second person in four days fatally shot by federal task force member in Memphis",
+     "sample_link": "https://thehill.com/homenews/state-watch/5960486-memphis-crime-task-force/",
+     "lean": "center"
+    }
+   ]
+  },
+  {
+   "story_id": "442a45fea5cb",
+   "label": "CDC Investigates Food-Borne Parasite Cases",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.719,
+      "sample_title": "‘Explosive diarrhea parasite’ sickens 170 in Michigan, hospitalizes at least 20 nationwide",
+      "sample_link": "https://www.nbcnews.com/health/health-news/explosive-diarrhea-parasite-michigan-cyclosporiasis-illness-rcna352848"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.768,
+      "sample_title": "Outbreak of diarrhea-causing parasite grows to more than 1,000 cases",
+      "sample_link": "https://abcnews.com/US/wireStory/outbreak-diarrhea-causing-parasite-grows-1000-cases-134595460"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.7,
+      "sample_title": "'Explosive' Diarrhea Parasite Infections Soar in Michigan",
+      "sample_link": "https://www.newsweek.com/explosive-diarrhea-parasite-infections-soar-in-michigan-12157600"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 14,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "CDC Investigates Food-Borne Parasite Cases",
+      "sample_link": "https://www.newsmax.com/newsfront/cdc-cyclosporiasis-explosive-diarrhea/2026/07/03/id/1261752"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.806,
+      "sample_title": "‘Explosive diarrhea’ parasite cases up over 400% in a week in hardest-hit state — as experts search for source",
+      "sample_link": "https://nypost.com/2026/07/07/health/explosive-diarrhea-parasite-up-over-400-in-a-week-in-hardest-hit-state/"
+     }
+    ]
+   },
+   "best_position_any_circle": 14,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "9ede3e6501ab",
+   "label": "Judge Rejects DOJ Attempt To Get Names Of 2020 Election Workers In Fulton County",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "feed",
+      "best_position": 14,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Judge Rejects DOJ Attempt To Get Names Of 2020 Election Workers In Fulton County",
+      "sample_link": "https://www.huffpost.com/entry/judge-quashes-doj-subpoena-2020-election_n_6a4e2d33e4b0a7adb6d86128"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.836,
+      "sample_title": "Federal judge rejects Trump administration effort to get names of 2020 election workers in Fulton County",
+      "sample_link": "https://www.nbcnews.com/politics/justice-department/federal-judge-rejects-trump-administration-effort-get-names-2020-elect-rcna353389"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.862,
+      "sample_title": "Judge rejects Justice Department attempt to get names of 2020 election workers in Fulton County",
+      "sample_link": "https://abcnews.com/Politics/wireStory/judge-rejects-justice-department-attempt-names-2020-election-134561868"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.749,
+      "sample_title": "Judge rejects Justice Department's attempt to obtain names of 2020 election workers in Georgia",
+      "sample_link": "https://nypost.com/2026/07/07/us-news/judge-rejects-justice-departments-attempt-to-obtain-names-of-2020-election-workers-in-georgia/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.744,
+      "sample_title": "Judge quashes &#039;unreasonable&#039; DOJ subpoena for names of Fulton County election workers",
+      "sample_link": "https://www.washingtonexaminer.com/news/justice/4639518/judge-quashes-doj-subpoena-fulton-county-2020-election-workers/"
+     }
+    ]
+   },
+   "best_position_any_circle": 14,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "00bd9fdd3f15",
+   "label": "Blackhawks’ Connor Bedard to Miss Significant Time After Brutal Injury",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "feed",
+      "best_position": 15,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Blackhawks’ Connor Bedard to Miss Significant Time After Brutal Injury",
+      "sample_link": "https://www.newsweek.com/sports/blackhawks-connor-bedard-to-miss-significant-time-after-brutal-injury-12174353"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.786,
+      "sample_title": "Blackhawks star Connor Bedard suffers apparent injury during offseason training",
+      "sample_link": "https://www.nytimes.com/athletic/7417930/2026/07/03/connor-bedard-injury-offseason-training-blackhawks/"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.862,
+      "sample_title": "Blackhawks star Connor Bedard to miss start of the season after shoulder surgery",
+      "sample_link": "https://abcnews.com/Sports/wireStory/blackhawks-star-connor-bedard-miss-start-season-after-134595731"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 17,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Chicago Blackhawks dealt devastating blow with Connor Bedard expected to miss start of season",
+      "sample_link": "https://www.foxnews.com/sports/chicago-blackhawks-dealt-devastating-blow-connor-bedard-expected-miss-start-season"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.858,
+      "sample_title": "Connor Bedard will miss start of season with shoulder injury in Blackhawks crusher",
+      "sample_link": "https://nypost.com/2026/07/08/sports/blackhawks-connor-bedard-to-miss-start-of-year-with-shoulder-injury/"
+     }
+    ]
+   },
+   "best_position_any_circle": 15,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "b4cf7cd48a5f",
+   "label": "A deadly Fourth of July as at least six killed in shootings and explosions that wound dozens",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "feed",
+      "best_position": 17,
+      "captures_seen": 4,
+      "featured": false,
+      "sample_title": "A deadly Fourth of July as at least six killed in shootings and explosions that wound dozens",
+      "sample_link": "https://www.nbcnews.com/news/us-news/fourth-of-july-violence-injuries-rcna353061"
+     },
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.742,
+      "sample_title": "Shootings in Nine States Mar Fourth of July Celebrations",
+      "sample_link": "https://www.nytimes.com/2026/07/05/us/shootings-fourth-of-july-weekend.html"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.66,
+      "sample_title": "July 4 Celebrations Across US Hit by Series of Mishaps",
+      "sample_link": "https://www.newsweek.com/july-4-celebrations-across-us-hit-by-series-of-mishaps-12158890"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.721,
+      "sample_title": "Fourth of July horror as woman killed, three injured as firework explosion creates huge car blaze",
+      "sample_link": "https://nypost.com/2026/07/05/us-news/woman-killed-3-injured-in-huge-july-4-fireworks-explosion/"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.64,
+      "sample_title": "Fourth of July fireworks pose hidden health risk for certain Americans, experts warn",
+      "sample_link": "https://www.foxnews.com/health/fourth-july-fireworks-pose-hidden-health-risk-certain-americans-experts-warn"
+     }
+    ]
+   },
+   "best_position_any_circle": 17,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "1edff6cabd35",
+   "label": "WATCH: Mexico Fans Upset England Players’ Sleep at Hotel Before Pivotal World Cup Matchup",
+   "n_outlets": 3,
+   "n_items": 4,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.704,
+      "sample_title": "England v Mexico kicks off at 1am in the UK. How are fans planning to watch it?",
+      "sample_link": "https://www.nytimes.com/athletic/7416633/2026/07/03/england-mexico-1am-kick-off-world-cup-plans/"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.686,
+      "sample_title": "Mexico hopes to lean on altitude and hostile fans to upset England in World Cup",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/mexico-england-world-cup-estadio-azteca-rcna353017"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.704,
+      "sample_title": "Mexico-England Match Prompts Security Crackdown After Fan Violence",
+      "sample_link": "https://www.newsweek.com/mexico-england-match-prompts-security-crackdown-after-fan-violence-12159155"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 44,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "WATCH: Mexico Fans Upset England Players’ Sleep at Hotel Before Pivotal World Cup Matchup",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/05/watch-mexico-fans-upset-england-players-sleep-at-hotel-before-pivotal-world-cup-matchup/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.688,
+      "sample_title": "Mexico boosting security for England World Cup clash after fan deaths",
+      "sample_link": "https://nypost.com/2026/07/04/sports/mexico-boosting-security-for-england-world-cup-clash-after-fan-deaths/"
+     }
+    ]
+   },
+   "best_position_any_circle": 44,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "3eb1abdc85bb",
+   "label": "Typhoon, tornadoes, landslides: deadly weather ravages China – in pictures",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.658,
+      "sample_title": "At Least 17 Dead in China After Flooding and Tornadoes During Typhoon Maysak",
+      "sample_link": "https://www.nytimes.com/2026/07/07/world/asia/china-flooding-typhoon-maysak.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.676,
+      "sample_title": "At least 11 people dead as tornadoes and storms sweep through central China",
+      "sample_link": "https://www.nbcnews.com/world/china/china-storms-tornadoes-hubei-province-dead-missing-injured-rcna353319"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.673,
+      "sample_title": "Chinese region reels from floods and destruction from remnants of tropical storm",
+      "sample_link": "https://abcnews.com/International/wireStory/southern-chinese-region-reels-floods-destruction-remnants-tropical-134574241"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.624,
+      "sample_title": "Tornadoes and storms in central China leave at least 11 people dead, over 330 injured",
+      "sample_link": "https://nypost.com/2026/07/07/world-news/tornadoes-and-storms-in-central-china-leave-at-least-11-people-dead/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.623,
+      "sample_title": "China Allocates Millions in New Disaster Relief after Deadly Storms and a Landslide",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/china-tropical-storm-maysak-rain-flooding/2026/07/08/id/1262267/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "493753c3730c",
+   "label": "Confirmed Ebola deaths in DR Congo hit 600",
+   "n_outlets": 5,
+   "n_items": 6,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.81,
+      "sample_title": "For Rebels in Congo, Ebola Could Help Strengthen Their Rule",
+      "sample_link": "https://www.nytimes.com/2026/07/08/world/africa/ebola-congo-m23-rebels.html"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.879,
+      "sample_title": "Researchers launch study on Ebola treatments as Congo outbreak worsens",
+      "sample_link": "https://abcnews.com/Technology/wireStory/researchers-launch-study-ebola-treatments-congo-outbreak-worsens-134414986"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 7,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Ebola Death Toll in Congo Reaches 600",
+      "sample_link": "https://www.newsmax.com/newsfront/ebola-congo-outbreak/2026/07/09/id/1262277"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.736,
+      "sample_title": "Some health workers in Congo’s Ebola outbreak go on strike over pay issues as deaths near 600",
+      "sample_link": "https://nypost.com/2026/07/08/world-news/some-health-workers-in-congos-ebola-outbreak-go-on-strike-over-pay-issues-as-deaths-near-600/"
+     }
+    ]
+   },
+   "best_position_any_circle": 7,
+   "featured_outside_circles": [
+    {
+     "outlet": "abcau",
+     "name": "ABC News (Australia)",
+     "evidence": "feed",
+     "best_position": 3,
+     "captures_seen": 3,
+     "featured": true,
+     "sample_title": "Ebola treatment trial begins in Congo as outbreak continues to grow",
+     "sample_link": "https://www.abc.net.au/news/2026-07-05/ebola-treatment-trial-congo/106882406",
+     "lean": "lean-left"
+    }
+   ]
+  },
+  {
+   "story_id": "3b2ab9fec858",
+   "label": "Netanyahu rips anti-Israel ‘woke Right,’ rebuffs Vance’s ‘only powerful ally’ remark",
+   "n_outlets": 3,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "feed",
+      "best_position": 28,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "As American Support For Israel Plummets, Bibi Netanyahu Blames … TikTok",
+      "sample_link": "https://www.huffpost.com/entry/netanyahu-american-support-tiktok-polls_n_6a4d47efe4b0a7adb6d7e687"
+     },
+     {
+      "outlet": "motherjones",
+      "name": "Mother Jones",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.645,
+      "sample_title": "“He’s Mister Iran”: How Netanyahu Made a Better Iran Deal Impossible",
+      "sample_link": "https://www.motherjones.com/politics/2026/07/hes-mister-iran-how-netanyahu-made-a-better-iran-deal-impossible/"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "feed",
+      "best_position": 7,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Netanyahu rips anti-Israel ‘woke Right,’ rebuffs Vance’s ‘only powerful ally’ remark",
+      "sample_link": "https://www.washingtonexaminer.com/news/world/4636534/netanyahu-israel-woke-right-vance/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.635,
+      "sample_title": "Trump: Netanyahu 'Knows Who the Boss Is'",
+      "sample_link": "https://www.newsmax.com/newsfront/trump-iran-benjamin-netanyahu/2026/07/04/id/1261776/"
+     }
+    ]
+   },
+   "best_position_any_circle": 7,
+   "featured_outside_circles": [
+    {
+     "outlet": "timesofindia",
+     "name": "The Times of India",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 3,
+     "featured": true,
+     "sample_title": "'Have some other friends, like India': Netanyahu counters Vance's 'only ally' claim",
+     "sample_link": "https://timesofindia.indiatimes.com/world/middle-east/we-have-some-other-friends-like-india-netanyahu-pushes-back-after-vance-calls-us-only-ally-of-israel/articleshow/132201235.cms",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "5dd554057c8e",
+   "label": "Pope Leo Urges US to Welcome Immigrants in July 4 Appeal",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.825,
+      "sample_title": "Pope Leo calls on U.S. to protect immigrants in message marking America’s 250th birthday",
+      "sample_link": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-us-protect-immigrants-appeal-250th-birthday-rcna352946"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.75,
+      "sample_title": "Pope Leo Sends Veiled Message to Trump on Migrants in July 4 Appeal",
+      "sample_link": "https://www.newsweek.com/pope-leo-sends-veiled-message-to-trump-on-migrants-in-july-4-appeal-12157630"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "feed",
+      "best_position": 11,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "Pope Leo Urges US to Welcome Immigrants in July 4 Appeal",
+      "sample_link": "https://www.newsmax.com/newsfront/pope-leo-immigration/2026/07/04/id/1261763"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.806,
+      "sample_title": "Pope Leo urges US to welcome immigrants in America 250 speech before visiting global migrant hot spot",
+      "sample_link": "https://www.foxnews.com/politics/pope-leo-urges-us-welcome-immigrants-america-250-speech-before-visiting-global-migrant-hotspot"
+     }
+    ]
+   },
+   "best_position_any_circle": 11,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "70003aaa631b",
+   "label": "Toddler declared dead after near-drowning was found alive in hospital morgue hours later, police say",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.782,
+      "sample_title": "Arizona toddler declared dead was found alive in the morgue",
+      "sample_link": "https://www.nbcnews.com/news/us-news/arizona-toddler-declared-dead-was-found-alive-morgue-rcna352853"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.932,
+      "sample_title": "Toddler declared dead in drowning incident found alive in hospital morgue: Police",
+      "sample_link": "https://abcnews.com/US/toddler-declared-dead-drowning-incident-found-alive-hospital/story?id=134565306"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "feed",
+      "best_position": 12,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "Toddler declared dead after near-drowning was found alive in hospital morgue hours later, police say",
+      "sample_link": "https://www.foxnews.com/us/toddler-declared-dead-after-near-drowning-found-alive-hospital-morgue-hours-later-police-say"
+     },
+     {
+      "outlet": "dailywire",
+      "name": "The Daily Wire",
+      "evidence": "feed",
+      "best_position": 36,
+      "captures_seen": 3,
+      "featured": false,
+      "sample_title": "Toddler Declared Dead At Hospital Found Alive Hours Later in Morgue",
+      "sample_link": "https://www.dailywire.com/news/hospital-declared-toddler-dead-hours-later-came-a-miracle"
+     }
+    ]
+   },
+   "best_position_any_circle": 12,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "2cd1db8fdbac",
+   "label": "Egypt team staffer in altercation with Dallas police",
+   "n_outlets": 1,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "politico",
+      "name": "Politico",
+      "evidence": "feed",
+      "best_position": 12,
+      "captures_seen": 8,
+      "featured": false,
+      "sample_title": "Egyptian coach smooths over issues with Dallas police",
+      "sample_link": "https://www.politico.com/live-updates/2026/07/03/world-cup-2026/egyptian-coach-hassan-hossam-deescalates-brother-altercation-00986993"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.718,
+      "sample_title": "Egypt Coach: Team is 'Happy' at World Cup Despite Dallas Police Issue",
+      "sample_link": "https://www.newsweek.com/egypt-coach-team-is-happy-at-world-cup-despite-dallas-police-issue-12157205"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.798,
+      "sample_title": "Egypt's World Cup staffers clash with Dallas police in wild scene",
+      "sample_link": "https://nypost.com/2026/07/03/sports/egypts-world-cup-staffers-clash-with-dallas-police-in-wild-scene/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.81,
+      "sample_title": "WATCH: Egypt’s World Cup Staffers Fight with Dallas Police",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/03/watch-egypts-world-cup-staffers-fight-with-dallas-police/"
+     }
+    ]
+   },
+   "best_position_any_circle": 12,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "6538a92161c2",
+   "label": "Pope Leo urges migrant protection, integration on visit to Lampedusa",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.716,
+      "sample_title": "Pope Visits U.S. Ambassador On July 4 After Prayers At Lampedusa Cemetery For Migrant Victims",
+      "sample_link": "https://www.huffpost.com/entry/pope-leo-july-4th-vatican-migration_n_6a490e96e4b001e08fc66454"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.833,
+      "sample_title": "Pope marks July 4 by praying in Lampedusa for migrants who died seeking freedom",
+      "sample_link": "https://abcnews.com/International/wireStory/pope-marks-july-4-praying-lampedusa-migrants-died-134465857"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 21,
+      "captures_seen": 7,
+      "featured": false,
+      "sample_title": "Pope Marks Fourth of July by Praying at Europe Illegal Migrant Hotspot Lampedusa",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/04/pope-marks-4th-of-july-by-praying-at-europe-illegal-migrant-hotspot-lampedusa/"
+     },
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.82,
+      "sample_title": "Pope Leo marks 4th of July by praying in Lampedusa for migrants who died",
+      "sample_link": "https://nypost.com/2026/07/04/world-news/pope-leo-marks-july-4-by-praying-in-lampedusa-for-migrants-who-died/"
+     }
+    ]
+   },
+   "best_position_any_circle": 21,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "f67d11fc3c06",
+   "label": "Former Olympian Indicted On Felony Charge Over Alleged Reflecting Pool Vandalism",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "feed",
+      "best_position": 26,
+      "captures_seen": 8,
+      "featured": false,
+      "sample_title": "Former Olympian Indicted On Felony Charge Over Alleged Reflecting Pool Vandalism",
+      "sample_link": "https://www.huffpost.com/entry/trump-reflecting-pool-felony-charge-david-hearn_n_6a46b628e4b03060a84f53e5"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.717,
+      "sample_title": "Olympian David Hearn indicted for alleged vandalism of Reflecting Pool",
+      "sample_link": "https://abcnews.com/Politics/olympian-david-hearn-indicted-alleged-vandalism-reflecting-pool/story?id=134420251"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.629,
+      "sample_title": "Grand jury indicts former Olympian over Reflecting Pool arrest",
+      "sample_link": "https://www.washingtonexaminer.com/news/crime/4634758/olympian-indicted-reflecting-pool-vandalism/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.645,
+      "sample_title": "Former U.S. Olympic Canoeist David Hearn Indicted for Alleged Vandalism to D.C. Reflecting Pool",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/02/former-u-s-olympic-canoeist-david-hearn-indicted-for-alleged-vandalism-to-d-c-reflecting-pool/"
+     }
+    ]
+   },
+   "best_position_any_circle": 26,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "fe293e241939",
+   "label": "Appeals Court: Trump Administration Can Reinstall Slavery Exhibit Panels at Philadelphia Historic Site",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.755,
+      "sample_title": "Court clears way for Trump admin to 'immediately' replace slavery exhibit in Philly",
+      "sample_link": "https://abcnews.com/Politics/court-clears-trump-admin-immediately-replace-slavery-exhibit/story?id=134443527"
+     },
+     {
+      "outlet": "newsweek",
+      "name": "Newsweek",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.639,
+      "sample_title": "List of Slavery Signs Trump Can Remove From National Parks After Court Win",
+      "sample_link": "https://www.newsweek.com/list-slavery-signs-trump-can-remove-national-parks-court-win-12154454"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 34,
+      "captures_seen": 6,
+      "featured": false,
+      "sample_title": "Appeals Court: Trump Administration Can Reinstall Slavery Exhibit Panels at Philadelphia Historic Site",
+      "sample_link": "https://www.breitbart.com/politics/2026/07/04/court-trump-administration-can-reinstall-slavery-exhibit-at-philadelphia-historic-site/"
+     },
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.72,
+      "sample_title": "US can replace slavery exhibit at George Washington’s Philadelphia home, court rules",
+      "sample_link": "https://www.washingtonexaminer.com/news/justice/4635912/slavery-exhibit-george-washington-philadelphia-home-replaced/"
+     }
+    ]
+   },
+   "best_position_any_circle": 34,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "f746fbbc4753",
+   "label": "California Reacts to DOJ Lawsuit, Intimating Glocks Are 'Dangerous and Unusual'",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.633,
+      "sample_title": "Trump Admin Sues California, Virginia Over New Gun Laws",
+      "sample_link": "https://www.huffpost.com/entry/us-gun-laws-lawsuit_n_6a45c242e4b07748e7588349"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.635,
+      "sample_title": "Trump administration sues California, Virginia over new gun laws",
+      "sample_link": "https://abcnews.com/US/wireStory/trump-administration-sues-california-virginia-new-gun-laws-134389170"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "reason",
+      "name": "Reason",
+      "evidence": "feed",
+      "best_position": 43,
+      "captures_seen": 2,
+      "featured": false,
+      "sample_title": "The DOJ Challenges Virginia's 'Assault Firearm' Law and California's Glock Ban",
+      "sample_link": "https://reason.com/2026/07/06/the-doj-challenges-virginias-assault-firearm-law-and-californias-glock-ban/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "feed",
+      "best_position": 44,
+      "captures_seen": 1,
+      "featured": false,
+      "sample_title": "California Reacts to DOJ Lawsuit, Intimating Glocks Are 'Dangerous and Unusual'",
+      "sample_link": "https://www.breitbart.com/2nd-amendment/2026/07/03/california-reacts-doj-lawsuit-intimating-glocks-dangerous-unusual/"
+     }
+    ]
+   },
+   "best_position_any_circle": 43,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "14f9bb5d07d7",
+   "label": "Egypt accuse Fifa of World Cup ‘fix’ and demand referee is thrown out",
+   "n_outlets": 5,
+   "n_items": 5,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.82,
+      "sample_title": "Egypt rages about refereeing, says the World Cup is 'directed towards Argentina'",
+      "sample_link": "https://www.nytimes.com/athletic/7429069/2026/07/07/egypt-hossam-hassan-argentina-world-cup/"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.855,
+      "sample_title": "Egypt files complaint over referee decisions in World Cup loss to Argentina",
+      "sample_link": "https://www.nbcnews.com/sports/soccer/world-cup-2026-egypt-complaint-loss-argentina-rcna353470"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.717,
+      "sample_title": "Egypt coach goes scorched earth on referees after heartbreaking World Cup loss to Argentina",
+      "sample_link": "https://nypost.com/2026/07/07/sports/egypt-coach-goes-scorched-earth-on-referees-after-heartbreaking-world-cup-loss/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.67,
+      "sample_title": "WATCH: Egypt Coach Spits at Israeli Flag After Controversial Loss to Argentina",
+      "sample_link": "https://www.breitbart.com/sports/2026/07/08/watch-egypt-coach-spits-at-israeli-flag-after-controversial-loss-to-argentina/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "npr",
+     "name": "NPR",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Egypt complains officials were biased in World Cup loss to Argentina",
+     "sample_link": "https://www.npr.org/2026/07/09/nx-s1-5887063/egypt-complain-world-cup",
+     "lean": "center"
+    },
+    {
+     "outlet": "telegraph",
+     "name": "The Telegraph",
+     "evidence": "feed",
+     "best_position": 4,
+     "captures_seen": 3,
+     "featured": true,
+     "sample_title": "Egypt accuse Fifa of World Cup ‘fix’ and demand referee is thrown out",
+     "sample_link": "https://www.telegraph.co.uk/football/2026/07/07/argentina-vs-egypt-live-score-latest-world-cup-2026/",
+     "lean": "lean-right"
+    },
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 5,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "Egypt files FIFA complaint as Argentina ‘rigged’ World Cup claims go viral",
+     "sample_link": "https://www.france24.com/en/tv-shows/truth-or-fake/20260708-egypt-files-fifa-complaint-as-argentina-rigged-world-cup-claims-go-viral",
+     "lean": "international"
+    },
+    {
+     "outlet": "abcau",
+     "name": "ABC News (Australia)",
+     "evidence": "feed",
+     "best_position": 5,
+     "captures_seen": 2,
+     "featured": true,
+     "sample_title": "'Cannot remain silent': Egypt demands FIFA investigate World Cup referees",
+     "sample_link": "https://www.abc.net.au/news/2026-07-09/egypt-demands-fifa-investigate-world-cup-referees/106896584",
+     "lean": "lean-left"
+    }
+   ]
+  },
+  {
+   "story_id": "0f404442d0f6",
+   "label": "Wildfires rage in Portugal, Greece, France and Spain",
+   "n_outlets": 3,
+   "n_items": 5,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.83,
+      "sample_title": "Wildfires rage in Portugal, Greece and Spain while Greek authorities warn of toxic smoke",
+      "sample_link": "https://www.nbcnews.com/world/europe/wildfires-rage-portugal-greece-spain-greek-authorities-warn-toxic-smok-rcna353030"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.83,
+      "sample_title": "Wildfires rage in Portugal, Greece and Spain while Greek authorities warn of toxic smoke",
+      "sample_link": "https://abcnews.com/International/wireStory/hundreds-firefighters-battle-wildfire-portugal-greek-authorities-warn-134494484"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.696,
+      "sample_title": "Fast-Moving Wildfire Spark Evacuations Near Greek City of Thessaloniki",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/05/fast-moving-wildfire-spark-evacuations-near-greek-city-of-thessaloniki/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.853,
+      "sample_title": "Hundreds of Firefighters Battle a Wildfire in Portugal, While Greek Authorities Warn of Toxic Smoke",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/greece-portugal-wildfire-vouzela-thessaloniki/2026/07/05/id/1261813/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "dw",
+     "name": "Deutsche Welle",
+     "evidence": "feed",
+     "best_position": 2,
+     "captures_seen": 7,
+     "featured": true,
+     "sample_title": "Wildfires rage in Portugal, Greece, France and Spain",
+     "sample_link": "https://www.dw.com/en/wildfires-rage-in-portugal-greece-france-and-spain/a-77839526?maca=en-rss-en-all-1573-rdf",
+     "lean": "international"
+    },
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 5,
+     "captures_seen": 1,
+     "featured": true,
+     "sample_title": "Greece's Thessaloniki threatened by spreading wildfire",
+     "sample_link": "https://www.france24.com/en/greece-s-thessaloniki-threatened-by-spreading-wildfire",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "1c90c73efafb",
+   "label": "More crude ahead as OPEC+ hikes August output by 188,000 barrels per day",
+   "n_outlets": 2,
+   "n_items": 3,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.62,
+      "sample_title": "OPEC Plus Pledges to Pump More Even as Oil Prices Fall",
+      "sample_link": "https://www.nytimes.com/2026/07/05/business/opec-production-iran-war.html"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.768,
+      "sample_title": "7 OPEC+ countries agree to expand monthly oil production modestly as prices slide",
+      "sample_link": "https://abcnews.com/Business/wireStory/7-opec-countries-agree-expand-monthly-oil-production-134501573"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.72,
+      "sample_title": "OPEC+ approves further oil output increase as Strait of Hormuz exports recover",
+      "sample_link": "https://nypost.com/2026/07/05/business/opec-approves-further-oil-output-increase-as-strait-of-hormuz-exports-recover/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.768,
+      "sample_title": "7 OPEC+ Countries Agree to Expand Monthly Oil Production Modestly as Prices Slide",
+      "sample_link": "https://www.newsmax.com/world/globaltalk/opec-increase-oil-production-iran-hormuz/2026/07/05/id/1261851/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "e20565682e92",
+   "label": "Tensions with Iran add fresh uncertainty to an already shaky global economy",
+   "n_outlets": 2,
+   "n_items": 2,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.627,
+      "sample_title": "As U.S.-Iran Cease-Fire Frays, Trump Faces a Muddled War and Unpalatable Options",
+      "sample_link": "https://www.nytimes.com/2026/07/08/us/politics/trump-iran-war.html"
+     },
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.64,
+      "sample_title": "Inside Iran, the economic fallout from war takes a huge personal toll",
+      "sample_link": "https://www.nbcnews.com/world/iran/iran-war-us-israel-ceasefire-food-goods-tehran-expensive-economic-toll-rcna352335"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.654,
+      "sample_title": "Iran war may deliver US a diplomatic silver lining",
+      "sample_link": "https://www.washingtonexaminer.com/opinion/beltway-confidential/4634533/iran-war-may-deliver-us-diplomatic-silver-lining/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.632,
+      "sample_title": "Trump: Iran ‘Wants a Deal So Badly’ — Warns ‘Hit Us Once, We Hit Twenty-Fold’",
+      "sample_link": "https://www.breitbart.com/politics/2026/07/08/trump-iran-wants-deal-badly-warns-hit-once-hit-twenty-fold/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": [
+    {
+     "outlet": "france24",
+     "name": "France 24",
+     "evidence": "feed",
+     "best_position": 1,
+     "captures_seen": 4,
+     "featured": true,
+     "sample_title": "Iran needs to 'normalise relations with the US somehow' to save economy, expert says",
+     "sample_link": "https://www.france24.com/en/iran-needs-to-normalise-relations-with-the-us-somehow-to-save-economy-expert-says",
+     "lean": "international"
+    }
+   ]
+  },
+  {
+   "story_id": "b6900415fbea",
+   "label": "Three children dead after boat capsizes during storm in Wisconsin",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nytimes",
+      "name": "The New York Times",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.952,
+      "sample_title": "3 Children Dead After Boat Capsizes on Wisconsin Lake During Severe Storm",
+      "sample_link": "https://www.nytimes.com/2026/07/03/us/boat-capsized-storm-wisconsin.html"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.791,
+      "sample_title": "3 dead and others rescued after boat capsizes on Wisconsin lake amid storms",
+      "sample_link": "https://abcnews.com/US/wireStory/3-dead-rescued-after-boat-capsizes-wisconsin-lake-134459954"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.622,
+      "sample_title": "Illinois couple horrifically lose children in Wisconsin lake during 'unprecedented storm' -- even though they were 'experienced boaters'",
+      "sample_link": "https://nypost.com/2026/07/08/us-news/illinois-couple-horrifically-lose-children-in-wisconsin-lake-during-unprecedented-storm-even-though-they-were-experienced-boaters/"
+     },
+     {
+      "outlet": "foxnews",
+      "name": "Fox News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.682,
+      "sample_title": "Three dead, 7 rescued in boating tragedy as severe holiday weekend storm ravages Wisconsin tourist hot spot",
+      "sample_link": "https://www.foxnews.com/us/3-dead-7-rescued-boating-tragedy-severe-holiday-weekend-storm-ravages-wisconsin-tourist-hotspot"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "06d6d6f8e5c2",
+   "label": "Couple expected to photograph a moose, then a calf and bear burst out",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "huffpost",
+      "name": "HuffPost",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.641,
+      "sample_title": "Maine Couple Spots Bear Chasing Moose Calf And Helps It Escape",
+      "sample_link": "https://www.huffpost.com/entry/maine-couple-spots-bear-chasing-moose-calf-and-helps-it-escape_n_6a46e05ce4b07748e75c7fc2"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.704,
+      "sample_title": "Maine couple spots a bear chasing a moose calf and helps it escape",
+      "sample_link": "https://abcnews.com/US/wireStory/maine-couple-spots-bear-chasing-moose-calf-helps-134423169"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.649,
+      "sample_title": "Maine couple help moose calf escape charging bear, reunite with its mom: 'Knew what I had to do'",
+      "sample_link": "https://nypost.com/2026/07/03/us-news/maine-couple-help-moose-calf-escape-terrifying-bear-chase/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.737,
+      "sample_title": "PHOTOS — Couple Helps Moose Calf Escape Bear Attack in Maine Woods: ‘My Heart Was Racing’",
+      "sample_link": "https://www.breitbart.com/pre-viral/2026/07/03/photos-couple-helps-moose-calf-escape-bear-attack-in-maine-woods-my-heart-was-racing/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "b1c2c794e611",
+   "label": "Inside the Telegram ‘drug rape’ chat group that shocked Germany",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.757,
+      "sample_title": "Chinese men in Germany used Telegram groups to share rape videos and drugging tips, prosecutors say",
+      "sample_link": "https://www.nbcnews.com/world/asia/chinese-men-germany-used-telegram-groups-share-rape-videos-rcna353442"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.688,
+      "sample_title": "Telegram used to share rape videos and drugging tips, prosecutors say",
+      "sample_link": "https://abcnews.com/International/wireStory/chinese-men-germany-telegram-groups-share-rape-videos-134573683"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "nypost",
+      "name": "New York Post",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.677,
+      "sample_title": "Members of sexual predator network on Telegram who drugged and raped women tried to hide crimes with sick code words",
+      "sample_link": "https://nypost.com/2026/07/08/world-news/members-of-sexual-predator-network-on-telegram-who-drugged-and-raped-women-tried-to-hide-crimes-with-sick-code-words/"
+     },
+     {
+      "outlet": "breitbart",
+      "name": "Breitbart",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.647,
+      "sample_title": "‘Online Predator Network’: Court Hears Chinese Migrants in Germany Shared Rape Advice in Group Chat",
+      "sample_link": "https://www.breitbart.com/europe/2026/07/08/online-predator-network-court-hears-chinese-migrants-in-germany-shared-rape-advice-in-group-chat/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  },
+  {
+   "story_id": "c998b20a9556",
+   "label": "Why Obamacare premiums are set for another double-digit jump",
+   "n_outlets": 1,
+   "n_items": 1,
+   "per_circle": {
+    "left-leaning": [
+     {
+      "outlet": "nbcnews",
+      "name": "NBC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.739,
+      "sample_title": "ACA premiums likely set for another double-digit rise next year",
+      "sample_link": "https://www.nbcnews.com/health/health-news/aca-premiums-likely-set-another-double-digit-rise-year-rcna353306"
+     },
+     {
+      "outlet": "abcnews",
+      "name": "ABC News",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.676,
+      "sample_title": "Obamacare premiums surged this year. A new analysis shows it's likely to happen again in 2027",
+      "sample_link": "https://abcnews.com/Business/wireStory/obamacare-premiums-surged-year-new-analysis-shows-happen-134577036"
+     }
+    ],
+    "right-leaning": [
+     {
+      "outlet": "washingtonexaminer",
+      "name": "Washington Examiner",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.848,
+      "sample_title": "Obamacare premiums set for another double-digit increase in 2027",
+      "sample_link": "https://www.washingtonexaminer.com/policy/healthcare/4639408/obamacare-premiums-double-digit-increase-2027/"
+     },
+     {
+      "outlet": "newsmax",
+      "name": "Newsmax",
+      "evidence": "sitemap",
+      "featured": false,
+      "nearest_sim": 0.696,
+      "sample_title": "Obamacare Premiums Likely to Surge Again in 2027",
+      "sample_link": "https://www.newsmax.com/health/health-news/affordable-care-act-premiums-insurance/2026/07/08/id/1262152/"
+     }
+    ]
+   },
+   "best_position_any_circle": null,
+   "featured_outside_circles": []
+  }
+ ]
+}
