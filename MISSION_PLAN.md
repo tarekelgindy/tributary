@@ -1,6 +1,6 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 1 — not started (Gate 0 passed 2026-07-09)
+> **Status:** Phase 1 — 1a done; next 1b (the three computations)
 > **Last updated:** 2026-07-09
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
@@ -80,15 +80,22 @@ curation systematically buries agreement between circles. Mostly query-writing, 
 
 ### 1a. Circle as a first-class entity (schema work)
 
-- [ ] Add `Circle` node type to the graph (start with 2: left-leaning, right-leaning;
+- [x] Add `Circle` node type to the graph (start with 2: left-leaning, right-leaning;
       design for N — independent/international later).
-- [ ] Membership edges: `(:Source)-[:MEMBER_OF {confidence, basis}]->(:Circle)`,
+      (`circles.py`: CIRCLES table; derivation iterates it, N is a new row.)
+- [x] Membership edges: `(:Source)-[:MEMBER_OF {confidence, basis}]->(:Circle)`,
       seeded from existing AllSides labels in `bias_db.py`. Crude is fine for v0;
       record `basis: "allsides_snapshot"` so provenance of the labels themselves is kept.
-- [ ] Framing rollup: per event, per circle → framing frequency table
+      (MembershipEdge also records the matched rated entity verbatim + match method +
+      snapshot date; conservative identity guards — see Decision Log 2026-07-09.)
+- [x] Framing rollup: per event, per circle → framing frequency table
       `(circle, event, framing, n_pieces, n_total, representative_quotes[])`.
       Input is existing multi-frame pipeline output; this is aggregation, not new extraction.
-- [ ] Every rollup row carries receipts: URLs + archive links for representative quotes.
+      (`framing_rollup()`, backfilled onto 108 events as `circle_rollup`. Rows also carry
+      stance counts — needed so a framing one circle only OPPOSES can't read as shared.)
+- [x] Every rollup row carries receipts: URLs + archive links for representative quotes.
+      (Quotes carry url + archive_url + date; `--archive` adds lookup-only Wayback links,
+      written back onto carriers. No-snapshot URLs stay an honest gap.)
 
 ### 1b. The three computations (per event, per capture week)
 
@@ -222,6 +229,7 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | Date | Decision | Alternatives considered | Reasoning |
 |---|---|---|---|
 | 2026-07-09 | Adopted loop thesis (provenance + framing overlap), parked omission census & destination-site framing | Upstream-only; downstream-only; status quo | Each half fixes the other's failure mode: provenance prevents false equivalence in overlap claims; overlap prevents tribal weaponization of traces. Evidence base: perception-gap correction is the depolarization intervention with support; pure exposure/mirror interventions are not. |
+| 2026-07-09 | Circle membership (1a) is deliberately conservative: foreign-ccTLD domains join a circle via the curated alias file only; name-based matches must be consistent with the domain's own brand label; membership counts dedupe by rated outlet, not actor key | Accept bias_db's fuzzy lookup as-is (coverage_lean's bar) | Corpus audit found nation.com.pk (The Nation, Pakistan) landing in the left circle via brand-label collision, and wire-copy sites (wfmz.com) inheriting AP's identity by display name. A MEMBER_OF edge is a graph fact hostile readers will check — better to miss a membership (honest unrated gap) than to invent one. Same audit fixed 8 drifted alias values that had been silently falling through to fuzzy matching. |
 
 ## Feedback Log
 
