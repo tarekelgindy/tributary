@@ -46,6 +46,7 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 | Everything-digest (weekly panorama) | Digest survives but changes job: vehicle for ONE artifact (Common Ground Report) | Post-Phase 3, if capacity allows |
 | X/Twitter integration | No third-party context mechanism; API hostile | Treat as screenshot marketing channel only |
 | Browser extension | High build cost, brutal distribution | Phase 3 gate passed + demand for personalization |
+| Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings |
 
 ---
 
@@ -137,7 +138,11 @@ curation systematically buries agreement between circles. Mostly query-writing, 
       3. Shared-but-buried stories
       4. One claim-age finding (organic vs. recently-seeded framing, if present)
       5. "What we can't tell you" section (keep this tradition)
-- [ ] Apply v0 recognition rule: every circle summary built ONLY from that circle's quotes.
+- [ ] Apply v0 recognition rule: every circle summary built ONLY from that circle's quotes,
+      **in the outlet's own voice** — relayed individual speech (Fetterman-via-CNN,
+      Maher-via-Fox, both found in real 1b output) never stands as circle voice; if used
+      at all it is explicitly attributed to its speaker. (Rider added to METHODOLOGY
+      Principle 4 after Tarek's 2026-07-09 review — see Decision Log.)
 - [ ] Publish it.
 
 **Gate 1 (internal — THE LAST INTERNAL GATE):** Does measurable, non-trivial overlap exist
@@ -254,6 +259,8 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-07-09 | 1b intersection requires ASSERTION, not carriage: a framing a circle only opposes goes to a separate `contested` list, never the intersection | Count any both-circle carriage (the raw "both" count from circles.py --sweep) | Stance data exists for exactly this. An intersection built on oppose-only carriage would present contestation as agreement — the harmony-propaganda failure mode the honesty rule exists to prevent. Live case: Platner's "Media Bias & Journalistic Malpractice" framing (right champions, left only opposes) correctly lands in contested. |
 | 2026-07-09 | Convergent claims keep the two-stage serving discipline: embedding pairs are only CANDIDATES; the label "convergent" requires the stage-2 judge (`--confirm`, batched reuse of matcher's validated Haiku prompt, ~$0.001/event, opt-in) | Label by embedding threshold alone (free, no key needed) | Gate 1 measured embeddings missing blame/consequence distinctions, and 1b validation reproduced it: a not-same pair (snub vs. consulate-opening, 0.81) outranked a genuinely-same pair (Greenlanders' "go home", 0.76). Opt-in because default runs and backfills must stay free (cost constraint) and no key is assumed in the environment. |
 | 2026-07-09 | Shared-but-buried coverage evidence = feed carriage OR news-sitemap match at the existing COVERED_THRESHOLD; featuring stays feed-only (position ≤ 5); presence bar ≥2 rated US outlets per side (one_side_only's own bar) | Feed-only coverage — the strict mirror of one_side_only | Feed-only found 0 buried of 21 both-circle stories in the validation week: anything feed-carried by 2+ outlets per side touches some top-5 within a week, so the strict mirror measures nothing. "Covered" should mean "wrote about it" — the sitemap census already provides that under the omission report's standard (49/115 buried once used). Honesty note: the risk direction flips here (a borderline sitemap match could overstate "both circles covered it"), so every sitemap receipt ships the matched article title/URL/similarity and the caveat names the failure mode; Gate 2's audit calibrates the threshold. |
+| 2026-07-09 | Recognition rule gains a rider: circle quotes must be in the outlet's OWN VOICE — relayed individual speech never stands as circle voice (METHODOLOGY Principle 4 updated) | Keep the letter-only quote rule | Tarek's review of the Platner intersection caught both representative quotes being relayed speech from individuals whose politics don't match the circle shown (Fetterman's takedown via CNN as the "left" voice; Bill Maher's line via a foxnews.com write-up as the "right" voice). The quote-only rule was satisfied in letter, failed in spirit. Root causes are systematic: the role→stance ladder counts relaying as championing (the expresses/reports construct that failed Gate 2.6b), and quote selection prefers champions. v0 fix is editorial (1c checkbox); a mechanical relay detector (news-typed carrier whose display names a person/show while the URL is an outlet domain) is future instrument work; Phase 4's recognition test is the gate for this class. |
+| 2026-07-09 | Beyond-L/R circle expansion acknowledged as an explicit goal and PARKED (new Park List row) rather than worked now | Start an independent/international/endogenous circle immediately | Tarek wants out of the L/R mould, but derailing Phase 1 for it would trade a committed gate for an uncommitted basis: AllSides is the only attributable membership source in hand, and endogenous circles (the preferred path — co-carriage clustering, mission-true, coalitions.py groundwork) need corpus scale and their own validation to survive hostile reading. The 1a schema means expansion is a new CIRCLES row + a new `basis`, not a refactor, so parking costs nothing structurally. |
 
 ## Feedback Log
 
