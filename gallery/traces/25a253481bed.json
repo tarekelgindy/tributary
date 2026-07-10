@@ -1,0 +1,991 @@
+{
+  "fingerprint_id": "25a253481bed",
+  "created_at": "2026-07-10T21:52:50.233437+00:00",
+  "last_updated": "2026-07-10T21:52:50.233437+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "vaccines do not cause autism",
+    "phrase_variants": [
+      "vaccines don't cause autism",
+      "no link between vaccines and autism",
+      "vaccine-autism link debunked",
+      "vaccines are not the cause of autism"
+    ],
+    "diagnostic_ngrams": [
+      "vaccines do not cause",
+      "vaccine autism link",
+      "vaccines autism debunked",
+      "no vaccine autism connection"
+    ],
+    "stopword_stripped_signature": "vaccines cause autism"
+  },
+  "conceptual": {
+    "claim_predicate": "vaccines do not cause autism",
+    "entities": {
+      "agent": "vaccines (as a medical intervention)",
+      "patient": "vaccinated individuals, particularly children",
+      "arena": "public health and developmental neurology",
+      "instrument": "the biological mechanisms of vaccine components and immune response"
+    },
+    "causal_structure": "vaccines, through their biological mechanisms and components, do not produce autism as a causal outcome in vaccinated populations"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "process-violation",
+      "revelation"
+    ],
+    "valence": {
+      "villain": "misinformation / false causal claims",
+      "victim": "vaccine-hesitant parents / public trust in vaccines",
+      "hero": "scientific evidence / medical consensus"
+    },
+    "epistemic_stance": "certain",
+    "register": "academic"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "single-origin",
+      "first_attested_date": "1998-03-01",
+      "first_attested_source": "https://en.wikipedia.org/wiki/Lancet_MMR_vaccine-autism_report",
+      "attestation_confidence": 0.95,
+      "primary_origin_id": "5b4e6df37123",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "5b4e6df37123",
+          "date": "1998-03-01",
+          "source_url": "https://en.wikipedia.org/wiki/Lancet_MMR_vaccine-autism_report",
+          "source_title": "UK Medical Research Council Expert Panel Statement on MMR and Autism (March 1998)",
+          "author": "Medical Research Council Expert Panel, chaired by Professor Sir John Pattison (37 scientific experts)",
+          "lexical_form_seen": "no evidence to indicate any link [between MMR vaccine and autism]",
+          "exact_quote": "no evidence to indicate any link",
+          "confidence": 0.95,
+          "evidence": "Multiple independent Wikipedia articles on the Lancet MMR vaccine-autism report and the MMR vaccine-autism fraud article both consistently state: 'In March 1998, a panel of 37 scientific experts set up by the Medical Research Council, headed by Professor Sir John Pattison found \"no evidence to indicate any link\" between the MMR vaccine and colitis or autism in children.' This was convened directly in response to the Wakefield paper published February 28, 1998. The date (March 1998) is corroborated by a Minnesota Legislative Reference Library document (lrl.mn.gov) which references the MRC's March 1998 review and its conclusion of no causal link. The date is independently confirmed across at least four separate sources. This is approximately 15 months before the proposed earliest date of 1999-06-12.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the first formal, authoritative institutional rebuttal of the vaccine-autism claim, issued within weeks of the Wakefield paper's publication in February 1998. It predates the proposed earliest date by over a year and represents the first documented deployment of the 'no link between vaccines and autism' narrative framing by a major scientific body.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:52:50.232949+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "fd9713415567",
+          "date": "1998-04-01",
+          "source_url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6187309",
+          "source_title": "Peltola H et al., 'No evidence for measles, mumps, and rubella vaccine-associated inflammatory bowel disease or autism in a 14-year prospective study', The Lancet 351:1327-1328 (1998)",
+          "author": "Peltola H et al.",
+          "lexical_form_seen": "failed to find support for the suggestion that the vaccination could cause autism or bowel disease",
+          "exact_quote": "failed to find support for the suggestion that the vaccination could cause autism",
+          "confidence": 0.92,
+          "evidence": "A US Patent document (USPTO #6187309) cites this paper directly as 'Peltola, et al. Lancet 351:1327-1328 (1998)' and describes it as reporting work 'in which children who received the MMR vaccination in Finland between 1982 and 1996 were traced but failed to find support for the suggestion that the vaccination could cause autism or bowel disease.' The Lancet volume 351 corresponds to early-to-mid 1998 (the Wakefield paper itself was Lancet 351:637-641, published February 28, 1998; page 1327 would place Peltola's paper approximately April-May 1998). This is a peer-reviewed scientific paper in a prestigious journal explicitly deploying the 'vaccines do not cause autism' framing, well before the proposed earliest date of 1999-06-12. The citation is independently verifiable via PubMed (the paper is a real, indexed Lancet publication from 1998).",
+          "amplifier_role": "originator",
+          "role_evidence": "This is one of the first peer-reviewed scientific papers to explicitly rebut the vaccine-autism claim with empirical data, published in the same journal (The Lancet) and same volume as the Wakefield paper, within weeks of the original claim. It predates the proposed earliest date by over a year.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:52:50.233013+00:00",
+            "confidence": 0.92,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "97c558e3720e",
+          "date": "1999-06-12",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)01239-8/abstract",
+          "source_title": "Autism and measles, mumps, and rubella vaccine: no epidemiological evidence for a causal association",
+          "author": "Brent Taylor, Elizabeth Miller, C. Paddy Farrington, et al.",
+          "lexical_form_seen": "no epidemiological evidence for a causal association [between MMR vaccine and autism]",
+          "exact_quote": "Our analyses do not support a causal association between MMR vaccine and autism.",
+          "confidence": 0.97,
+          "evidence": "Published in The Lancet on June 12, 1999 (vol. 353, p. 2026\u20132029), this is the first major peer-reviewed study directly rebutting Wakefield's 1998 claim. The title itself contains the diagnostic n-gram 'no epidemiological evidence for a causal association' between MMR vaccine and autism. The abstract conclusion uses 'do not support a causal association between MMR vaccine and autism.' This is the earliest credible primary-source lexical attestation found. The paper is widely cited as the first systematic scientific rebuttal.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the first published scientific document to use the diagnostic framing ('no causal association between MMR vaccine and autism') in direct response to Wakefield's 1998 paper, establishing the counter-narrative in the peer-reviewed record.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20250730134617/https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)01239-8/abstract",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470207+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "29b0c7686601",
+          "date": "1999-09-11",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)75696-8/fulltext",
+          "source_title": "MMR vaccination and autism [Wakefield letter to The Lancet, with Taylor et al. cited as 'MMR vaccine and autism: no epidemiological evidence for a causal association']",
+          "author": "Andrew J. Wakefield (letter disputing Taylor et al.)",
+          "lexical_form_seen": "MMR vaccine and autism: no epidemiological evidence for a causal association",
+          "exact_quote": "MMR vaccine and autism: no epidemiological evidence for a causal association \u00b7 Lancet. 1999; 353:2026-2029",
+          "confidence": 0.88,
+          "evidence": "Wakefield's September 1999 letter to The Lancet (vol. 354, p. 949\u2013950) disputes Taylor et al. and in doing so quotes the diagnostic n-gram phrase from the Taylor paper title. The Lancet page metadata shows September 11, 1999. This is an early echo of the framing, appearing in the same journal as a rebuttal-of-the-rebuttal, confirming the phrase was already in circulation within months of Taylor et al.",
+          "amplifier_role": "mention",
+          "role_evidence": "Wakefield's letter repeats the diagnostic n-gram from Taylor et al.'s title while disputing it, functioning as a mention that inadvertently amplified the counter-framing's visibility.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20250409184504/https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)75696-8/fulltext",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470274+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "97ad7f6f13f7",
+          "date": "2001-01-01",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2528717/",
+          "source_title": "Immunization Safety Review: Measles-Mumps-Rubella Vaccine and Autism (IOM Committee report, 2001)",
+          "author": "Institute of Medicine (IOM) Committee on Immunization Safety",
+          "lexical_form_seen": "no causal relationship between thimerosal-containing vaccines and autism, as well as MMR vaccine and autism",
+          "exact_quote": "The IOM Committee concluded that the evidence favoured rejection of a causal relationship between thimerosal-containing vaccines and autism, as well as MMR vaccine and autism.",
+          "confidence": 0.85,
+          "evidence": "The IOM convened a safety review panel in 2000 and published its first report in 2001 (confirmed by multiple secondary sources including PMC2682483 and PMC2528717). The conclusion uses the diagnostic framing 'no causal relationship between \u2026 vaccines and autism.' The IOM report is a landmark institutional document; the exact 2001 date is confirmed by the CDC's own historical timeline and the PLoS Biology 2009 article (PMC2682483) which states 'The IOM convened a safety review panel in 2000' and issued its first review shortly after.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The IOM, the US government's leading independent science advisory body, formally adopted the 'no causal relationship between vaccines and autism' framing as its official conclusion, giving it major institutional authority.",
+          "cited_via": "PMC article summarizing IOM 2001 review (PMC2528717)",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470289+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "14bccb7a0f6e",
+          "date": "2002-01-01",
+          "source_url": "https://www.who.int/news/item/11-12-2025-who-expert-group-s-new-analysis-reaffirms-there-is-no-link-between-vaccines-and-autism",
+          "source_title": "WHO Global Advisory Committee on Vaccine Safety (GACVS) \u2014 first conclusion on vaccines and autism (2002)",
+          "author": "WHO Global Advisory Committee on Vaccine Safety (GACVS)",
+          "lexical_form_seen": "vaccines do not cause autism [first stated in 2002 GACVS conclusion]",
+          "exact_quote": "GACVS reaffirms its previous conclusions from 2002, 2004 and 2012: vaccines, including those with thiomersal and/or aluminum, do not cause autism.",
+          "confidence": 0.82,
+          "evidence": "The WHO GACVS 2025 statement explicitly references its 2002 original conclusion using the exact phrase 'vaccines do not cause autism.' The GACVS was established in 1999 and issued its first autism-related conclusion in 2002. The 2025 WHO document is the citing source; the 2002 GACVS report is the dated primary source. Confidence is slightly reduced because the 2002 primary document itself is not directly accessible online, but the WHO's own 2025 statement is an authoritative citation of it.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "WHO's GACVS formally adopted the exact phrase 'vaccines do not cause autism' as its institutional conclusion in 2002, representing the earliest known use of that precise canonical form by a major international health body.",
+          "cited_via": "WHO GACVS 2025 statement referencing 2002 original conclusion",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470315+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "b8317586a705",
+          "date": "2004-01-01",
+          "source_url": "https://en.wikipedia.org/wiki/MMR_vaccine_and_autism",
+          "source_title": "Review article: 'The evidence now is convincing that the measles\u2013mumps\u2013rubella vaccine does not cause autism' (2004)",
+          "author": "Multiple authors (review article cited in Wikipedia MMR vaccine and autism article)",
+          "lexical_form_seen": "the measles\u2013mumps\u2013rubella vaccine does not cause autism",
+          "exact_quote": "The evidence now is convincing that the measles\u2013mumps\u2013rubella vaccine does not cause autism or any particular subtypes of autistic spectrum disorder.",
+          "confidence": 0.78,
+          "evidence": "Wikipedia's MMR vaccine and autism article (with edit history traceable to 2007) cites a 2004 review article using this exact phrasing. The Wikipedia article itself is a secondary source; the 2004 review is the primary source. Confidence is reduced because the primary 2004 article is not directly linked in the search results, only cited via Wikipedia.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "A 2004 peer-reviewed review article used the phrase 'does not cause autism' in relation to the MMR vaccine, helping consolidate the scientific consensus framing in the academic literature before it reached mass public audiences.",
+          "cited_via": "Wikipedia article on MMR vaccine and autism, citing original 2004 review article",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470326+00:00",
+            "confidence": 0.78,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "cc0b7371a898",
+          "date": "2009-05-01",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2682483/",
+          "source_title": "A Broken Trust: Lessons from the Vaccine\u2013Autism Wars",
+          "author": "Liza Gross",
+          "lexical_form_seen": "vaccines don't cause autism",
+          "exact_quote": "No matter that the overwhelming weight of evidence shows that climate change is real, or that vaccines don't cause autism.",
+          "confidence": 0.95,
+          "evidence": "Published in PLoS Biology (PMC collection date: 2009 May), this open-access article by science writer Liza Gross uses 'vaccines don't cause autism' as a settled, common-knowledge assertion in a broader discussion of science communication. The PMC record confirms the 2009 publication date. This is one of the earliest open-access, widely indexed uses of the colloquial 'vaccines don't cause autism' form.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Published in a high-visibility open-access journal, this article treated 'vaccines don't cause autism' as established consensus and helped spread the framing to a broad scientific and public readership.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470337+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "8b109ec8f230",
+          "date": "2010-02-04",
+          "source_url": "https://www.pbs.org/newshour/health/europe-jan-june10-lancet_0204",
+          "source_title": "Journal Retracts Study Backing Vaccine-Autism Link | PBS NewsHour",
+          "author": "PBS NewsHour staff",
+          "lexical_form_seen": "vaccine-autism link",
+          "exact_quote": "Multiple studies in the past decade and a review of research on the topic in 2004 by the Institute of Medicine found no scientific evidence the vaccine causes autism in children.",
+          "confidence": 0.93,
+          "evidence": "Published February 4, 2010, the day The Lancet formally retracted Wakefield's paper. PBS NewsHour used the phrase 'vaccine-autism link' in the headline and body, and the article explicitly states that multiple studies and the IOM found no evidence the vaccine causes autism. This is a major mass-media amplification moment tied to the retraction news event.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "PBS NewsHour's coverage of the Lancet retraction on February 4, 2010 brought the 'vaccine-autism link debunked' framing to a national US public audience at a pivotal news moment.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470344+00:00",
+            "confidence": 0.93,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "1a26090e8ebb",
+          "date": "2014-09-05",
+          "source_url": "https://www.pbs.org/wgbh/nova/article/autism-vaccine-myth/",
+          "source_title": "The Autism-Vaccine Myth | NOVA | PBS",
+          "author": "NOVA/PBS staff",
+          "lexical_form_seen": "vaccine-autism link; vaccines and autism might be linked",
+          "exact_quote": "The overwhelming scientific consensus is that they are not [linked].",
+          "confidence": 0.92,
+          "evidence": "Published September 5, 2014 on PBS NOVA. Uses 'vaccine-autism link' and 'vaccine-autism myth' in the title and throughout, with a detailed timeline from 1998 onward. Explicitly states the scientific consensus that vaccines and autism are not linked. Page metadata confirms the 2014 date.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "PBS NOVA's explainer article used 'vaccine-autism myth' and 'vaccine-autism link' prominently in a widely-read public science outlet, consolidating the debunking framing for a broad US audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470350+00:00",
+            "confidence": 0.92,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f6fb1c06c55d",
+          "date": "2015-02-13",
+          "source_url": "https://archive.cdc.gov/www_cdc_gov/vaccinesafety/00_pdf/CDCStudiesonVaccinesandAutism.pdf",
+          "source_title": "Vaccines and Autism: A Summary of CDC Conducted or Sponsored Studies",
+          "author": "Centers for Disease Control and Prevention (CDC)",
+          "lexical_form_seen": "vaccines do not cause autism spectrum disorder (ASD)",
+          "exact_quote": "The evidence is clear: vaccines do not cause autism spectrum disorder (ASD).",
+          "confidence": 0.9,
+          "evidence": "CDC fact sheet archived at archive.cdc.gov; the CDC stacks record (stacks.cdc.gov/view/cdc/27788) notes 'Publication date estimated from document properties' as February 13, 2015. This is the CDC's own direct, unambiguous use of the canonical phrase 'vaccines do not cause autism spectrum disorder (ASD)' in an official government fact sheet.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The CDC formally adopted the exact phrase 'vaccines do not cause autism spectrum disorder' in an official published fact sheet, representing the US federal government's clearest institutional endorsement of the framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470356+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "4c10dac9f8a8",
+          "date": "2019-05-01",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8207024/",
+          "source_title": "Time to remember: Vaccines don't cause autism",
+          "author": "Published in PMC (NIH); collection date 2021, article likely 2019 based on measles outbreak context",
+          "lexical_form_seen": "vaccines don't cause autism",
+          "exact_quote": "Vaccines don't cause autism. And measles, unlike autism (at least for now), can be prevented.",
+          "confidence": 0.8,
+          "evidence": "PMC article (PMC8207024) titled 'Time to remember: Vaccines don't cause autism.' The article references the 2019 US measles outbreak context. The exact colloquial form 'vaccines don't cause autism' appears in the title and body. Confidence is slightly reduced because the precise publication date within 2019 is not confirmed from the search results.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This NIH-indexed article used the colloquial 'vaccines don't cause autism' as its title during the 2019 measles outbreak, amplifying the framing in the context of renewed public concern.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470362+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a3d6178c896b",
+          "date": "2020-11-01",
+          "source_url": "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/autism-vaccine-link-debunked",
+          "source_title": "Autism-vaccine link debunked \u2014 Mayo Clinic Health System",
+          "author": "Mayo Clinic Health System staff",
+          "lexical_form_seen": "autism-vaccine link debunked; vaccines do not cause autism",
+          "exact_quote": "Vaccines do not cause autism.",
+          "confidence": 0.85,
+          "evidence": "Mayo Clinic Health System page titled 'Autism-vaccine link debunked' \u2014 the title itself contains the diagnostic n-gram 'vaccine autism link debunked.' The page uses 'vaccines do not cause autism' as its opening statement. Page metadata shows November 7, 2024 as the most recent update, but the content references the 2015 JAMA study as 'the largest study to date,' suggesting original publication around 2015\u20132020. Confidence is moderate due to uncertainty about original vs. updated publication date.",
+          "amplifier_role": "critic",
+          "role_evidence": "Mayo Clinic Health System adopted both 'autism-vaccine link debunked' (in the title) and 'vaccines do not cause autism' (in the body) as its institutional position, representing a major US health system's formal endorsement of the framing. [Role adjusted from institutional-adoption: the title announces an examining function.]",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260609105730/https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/autism-vaccine-link-debunked",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470370+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "78880eebd156",
+          "date": "2025-11-20",
+          "source_url": "https://www.npr.org/sections/shots-health-news/2025/11/20/nx-s1-5615040/cdc-rfk-childhood-vaccines-autism",
+          "source_title": "The CDC revives debunked 'link' between childhood vaccines and autism | NPR",
+          "author": "NPR Health staff",
+          "lexical_form_seen": "vaccines do not cause autism [as the prior CDC statement being reversed]; vaccine-autism link debunked",
+          "exact_quote": "A Centers for Disease Control and Prevention webpage that previously stated 'Vaccines do not cause autism' has been changed to cast doubt on the scientific research.",
+          "confidence": 0.98,
+          "evidence": "Published November 20, 2025. NPR reports on the CDC's controversial update to its vaccine-autism webpage, quoting the prior CDC statement 'Vaccines do not cause autism' as the established framing that was being reversed. This article is a critic/watchdog piece that documents the phrase's institutional history and the controversy over its removal.",
+          "amplifier_role": "critic",
+          "role_evidence": "NPR's reporting examined and pushed back against the CDC's removal of the 'vaccines do not cause autism' statement, functioning as a critic of the policy change while documenting the phrase's prior institutional use.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470377+00:00",
+            "confidence": 0.98,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "235c092b098e",
+          "date": "2025-12-11",
+          "source_url": "https://www.who.int/news/item/11-12-2025-who-expert-group-s-new-analysis-reaffirms-there-is-no-link-between-vaccines-and-autism",
+          "source_title": "WHO expert group's new analysis reaffirms there is no link between vaccines and autism",
+          "author": "World Health Organization (WHO) / GACVS",
+          "lexical_form_seen": "vaccines do not cause autism; no link between vaccines and autism",
+          "exact_quote": "GACVS reaffirms its previous conclusions from 2002, 2004 and 2012: vaccines, including those with thiomersal and/or aluminum, do not cause autism.",
+          "confidence": 0.99,
+          "evidence": "Published December 11, 2025 on WHO.int. The title uses 'no link between vaccines and autism' and the body uses 'vaccines do not cause autism.' This is the most recent major institutional reaffirmation, explicitly tracing the framing back to 2002. The WHO statement was issued in direct response to renewed US political controversy over the CDC's position change.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "WHO's GACVS reaffirmed 'vaccines do not cause autism' as its official global position in December 2025, representing the most recent major institutional adoption of the canonical framing in direct response to US political pressure.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:51:52.470383+00:00",
+            "confidence": 0.99,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "Searched the following n-grams and variants: 'vaccines do not cause autism before 1999', 'no link between vaccines and autism 1998 1997 1996', 'MMR vaccine autism link debunked history 1998', 'Medical Research Council 1998 MMR autism no evidence panel statement March 1998', 'Peltola 1998 Lancet MMR Finland autism bowel no causal publication date April 1998', 'MRC Medical Research Council March 1998 MMR autism panel Pattison statement date'. Checked: Wikipedia articles on the Lancet MMR vaccine-autism report and MMR vaccine-autism fraud; Johns Hopkins Bloomberg School of Public Health; Mayo Clinic; Cleveland Clinic; Autism Speaks; Children's Hospital of Philadelphia; CDC; PBS NOVA; ASAT Online; Minnesota Legislative Reference Library; US Patent Office documents; PMC/NIH archives; GAVI; LSHTM; CIDRAP. The proposed date of 1999-06-12 almost certainly refers to the Taylor et al. Lancet paper ('Autism and measles, mumps, and rubella vaccine: no epidemiological evidence for a causal association', The Lancet, June 1999), which is frequently cited as the first major epidemiological study to rebut Wakefield. However, two clearly earlier instances were found: (1) The UK Medical Research Council's March 1998 expert panel statement (37 scientists, chaired by Prof. Sir John Pattison) finding 'no evidence to indicate any link' between MMR and autism \u2014 issued within weeks of the Wakefield paper's February 28, 1998 publication, and corroborated by multiple independent sources; and (2) Peltola et al.'s April 1998 Lancet paper (351:1327-1328) reporting a 14-year Finnish prospective study that found no support for the claim that MMR vaccination causes autism. Both instances are approximately 14-15 months before the proposed earliest date. Limitations: The MRC panel's exact date within March 1998 is not pinpointed to a specific day in the sources found (only 'March 1998' is given); the Peltola paper's exact publication date within April-May 1998 is inferred from Lancet volume/page numbering rather than a directly retrieved publication date. Neither the original MRC statement text nor the full Peltola paper text was directly retrieved (paywalled/undigitized primary sources), but both are corroborated by multiple independent secondary sources of high reliability. Pre-1998 instances were ruled out: the vaccine-autism claim itself did not exist in public discourse before the Wakefield paper (February 1998), so no rebuttal framing could predate it. Wikipedia notes the link was 'first suggested in the early 1990s' in obscure academic contexts, but no public rebuttal framing has been documented before 1998.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "1998-03-01",
+        "active_through": "2025-12-11",
+        "active_span_days": 10147,
+        "years_active": 27,
+        "years_with_activity": 12,
+        "instances_per_year": {
+          "1998": 2,
+          "1999": 2,
+          "2001": 1,
+          "2002": 1,
+          "2004": 1,
+          "2009": 1,
+          "2010": 1,
+          "2014": 1,
+          "2015": 1,
+          "2019": 1,
+          "2020": 1,
+          "2025": 2
+        },
+        "instances_per_year_by_role": {
+          "1998": {
+            "originator": 2
+          },
+          "1999": {
+            "originator": 1,
+            "mention": 1
+          },
+          "2001": {
+            "institutional-adoption": 1
+          },
+          "2002": {
+            "institutional-adoption": 1
+          },
+          "2004": {
+            "early-amplifier": 1
+          },
+          "2009": {
+            "early-amplifier": 1
+          },
+          "2010": {
+            "mass-amplifier": 1
+          },
+          "2014": {
+            "mass-amplifier": 1
+          },
+          "2015": {
+            "institutional-adoption": 1
+          },
+          "2019": {
+            "early-amplifier": 1
+          },
+          "2020": {
+            "critic": 1
+          },
+          "2025": {
+            "critic": 1,
+            "institutional-adoption": 1
+          }
+        },
+        "peak_year": "1998",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": 4358,
+        "originator_to_institutional_adoption_days": 1037,
+        "originator_to_critic_days": 8281,
+        "days_since_latest": 211
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "health",
+    "domain_confidence": 0.98,
+    "inductive_cluster_ids": [],
+    "tropes": []
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 9,
+    "actors": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "early-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1998-03-01",
+        "last_date": "2004-01-01"
+      },
+      {
+        "actor_id": "15585368260e",
+        "display": "uspto.gov",
+        "actor_type": "official",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1998-04-01",
+        "last_date": "1998-04-01"
+      },
+      {
+        "actor_id": "4745eeb1222b",
+        "display": "thelancet.com",
+        "actor_type": "news",
+        "roles": [
+          "mention",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1999-06-12",
+        "last_date": "1999-09-11"
+      },
+      {
+        "actor_id": "4d4c54f9dae8",
+        "display": "NIH",
+        "actor_type": "official",
+        "roles": [
+          "early-amplifier",
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "2001-01-01",
+        "last_date": "2019-05-01"
+      },
+      {
+        "actor_id": "7b0beb92fff8",
+        "display": "who.int",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2002-01-01",
+        "last_date": "2025-12-11"
+      },
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2010-02-04",
+        "last_date": "2014-09-05"
+      },
+      {
+        "actor_id": "a7104347581b",
+        "display": "cdc.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2015-02-13",
+        "last_date": "2015-02-13"
+      },
+      {
+        "actor_id": "af8672d80b4d",
+        "display": "mayoclinichealthsystem.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2020-11-01",
+        "last_date": "2020-11-01"
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-11-20",
+        "last_date": "2025-11-20"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "early-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1998-03-01",
+        "last_date": "2004-01-01"
+      },
+      {
+        "actor_id": "15585368260e",
+        "display": "uspto.gov",
+        "actor_type": "official",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1998-04-01",
+        "last_date": "1998-04-01"
+      },
+      {
+        "actor_id": "4745eeb1222b",
+        "display": "thelancet.com",
+        "actor_type": "news",
+        "roles": [
+          "mention",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1999-06-12",
+        "last_date": "1999-09-11"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "af8672d80b4d",
+        "display": "mayoclinichealthsystem.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2020-11-01",
+        "last_date": "2020-11-01"
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-11-20",
+        "last_date": "2025-11-20"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "reference": 1,
+      "official": 3,
+      "news": 5
+    },
+    "date_span": [
+      "1998-03-01",
+      "2025-12-11"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-10T21:52:50.233404+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

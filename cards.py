@@ -713,8 +713,9 @@ def render_png(cd, out_path):
     n_dots = len(cd["points"])
     counts = f'{cd["n_uses"]} recorded uses' + \
         (f' ({n_dots} dated)' if n_dots != cd["n_uses"] else '')
-    d.text((ML, 578), f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
-                      f'earliest found, not provably first · AI-traced, not human-reviewed',
+    d.text((ML, 578), _ellipsize(d,
+           f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
+           f'earliest found, not provably first · AI-traced, not human-reviewed', _font(16), cw),
            font=_font(16), fill=INK3)
     wordmark = "tributary"
     f_wm = _font(22, "semibold")
@@ -722,6 +723,314 @@ def render_png(cd, out_path):
            font=f_wm, fill=BLUE_DEEP)
 
     img.save(out_path, "PNG")
+
+
+# ---------------------------------------------------------------------------
+# claim-vs-rebuttal cards: two-track timeline (the correction gap)
+# ---------------------------------------------------------------------------
+# Two separately-run traces on one axis: the claim's recorded uses on the top
+# track, the disputing counter-narrative's on the bottom. Dot presence and
+# timing are the facts; deliberately NOT overlaid cumulative curves — the two
+# logs are separately sampled, so comparing curve heights would assert a
+# volume difference we never measured. No verdicts: the reader sees when the
+# rebuttal arrived and that both lineages are alive.
+
+def _vs_side(fp):
+    gen = fp.get("genealogy") or {}
+    lineage, gl = None, None
+    for lin in ("lexical", "conceptual"):
+        cand = gen.get(lin) or {}
+        if cand.get("first_attested_date"):
+            lineage, gl = lin, cand
+            break
+    if not gl:
+        return None
+    first = parse_date_conservative(gl["first_attested_date"])
+    log = [i for i in gl.get("attestation_log") or []
+           if (i.get("claim_relation") or "") != "related-context"]
+    dated = sorted((i for i in log if date_frac(i.get("date")) is not None),
+                   key=lambda i: date_frac(i.get("date")))
+    if not first or not dated:
+        return None
+    who = lambda i: (i.get("author") or host_outlet(i.get("source_url"))
+                     or "").strip().split(" (")[0]
+    points = [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
+               "who": who(i), "role": (i.get("amplifier_role") or "unknown")}
+              for i in dated]
+    idea_note = ""
+    conc = gen.get("conceptual") or {}
+    if lineage == "lexical" and conc.get("first_attested_date"):
+        c = parse_date_conservative(conc["first_attested_date"])
+        if c and c < first:
+            idea_note = f"the underlying idea is older — documented from {fmt_date_human(conc['first_attested_date'])}"
+    return {"fingerprint_id": fp.get("fingerprint_id") or "",
+            "phrase": (fp.get("lexical") or {}).get("canonical_phrase") or "",
+            "lineage": lineage, "first": first,
+            "first_raw": gl["first_attested_date"],
+            "first_human": fmt_date_human(gl["first_attested_date"]),
+            "first_who": (dated[0].get("author") or host_outlet(dated[0].get("source_url"))
+                          or dated[0].get("source_title") or "").strip().split(" (")[0],
+            "conf": gl.get("attestation_confidence") or 0.0,
+            "n_uses": len(log), "points": points,
+            "last_human": fmt_date_human(dated[-1].get("date") or ""),
+            "last_year": (dated[-1].get("date") or "")[:4],
+            "idea_note": idea_note}
+
+
+def vs_card_data(claim_fp, counter_fp):
+    a, b = _vs_side(claim_fp), _vs_side(counter_fp)
+    if not a or not b:
+        return None
+    days = (b["first"] - a["first"]).days
+    if abs(days) < 45:
+        headline = "The rebuttal is as old as the claim."
+    elif days > 0:
+        n, unit = age_parts(a["first"], b["first"])
+        headline = f"The rebuttal came {n} {unit} later."
+    else:
+        headline = "The rebuttal predates this phrasing of the claim."
+    roles = [r for r in ROLE_ORDER
+             if any(p["role"] == r for p in a["points"] + b["points"])]
+    return {"claim": a, "counter": b, "headline": headline,
+            "roles_present": roles}
+
+
+def _stack_dots(pts, X, base_y, bucket_px=12, gap=10):
+    buckets = {}
+    for i, p in enumerate(pts):
+        key = round(X(p["frac"]) / bucket_px) * bucket_px
+        buckets.setdefault(key, []).append(i)
+    dots = []
+    for idxs in buckets.values():
+        for j, i in enumerate(idxs):
+            dots.append({"x": X(pts[i]["frac"]), "y": base_y - 12 - j * gap,
+                         "ms": i == 0, "p": pts[i]})
+    return dots
+
+
+def _vs_axis(a, b):
+    fracs = [p["frac"] for p in a["points"] + b["points"]]
+    t0, t1 = min(fracs), max(fracs)
+    span = max(t1 - t0, 1 / 12)
+    t0 -= span * 0.03
+    t1 += span * 0.03
+    return t0, t1
+
+
+def _ticks_for(t0, t1):
+    span = t1 - t0
+    for step in (1 / 12, 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100):
+        if span / step <= 6:
+            break
+    ticks, t = [], (int(t0 / step) + 1) * step
+    while t < t1 - span * 0.02:
+        y, mo = int(t // 1), int(round((t % 1) * 12))
+        if mo > 11:
+            y, mo = y + 1, 0
+        ticks.append((t, str(y) if step >= 1 else f"{MONTHS[mo][:3]} {y}"))
+        t += step
+    return ticks
+
+
+def render_vs_png(vcd, out_path):
+    img = Image.new("RGB", (W, H), PAPER)
+    d = ImageDraw.Draw(img, "RGBA")
+    d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
+                        outline=GRID, width=1)
+    ML, MR = 70, W - 70
+    cw = MR - ML
+    a, b = vcd["claim"], vcd["counter"]
+
+    d.text((ML, 52), "T R I B U T A R Y   ·   C L A I M   &   R E B U T T A L",
+           font=_font(22, "semibold"), fill=INK3)
+    f_head = _fit(d, vcd["headline"], "bold", 64, cw)
+    d.text((ML, 90), vcd["headline"], font=f_head, fill=INK1)
+
+    f_cap, f_ph, f_note = _font(22, "semibold"), _font(20), _font(16)
+    y = 182
+    for side, label in ((a, "The claim"), (b, "The rebuttal")):
+        d.text((ML, y), f'{label} — first attested {side["first_human"]}',
+               font=f_cap, fill=INK1)
+        d.text((ML, y + 30), _ellipsize(d, f'“{side["phrase"]}”', f_ph, cw),
+               font=f_ph, fill=INK2)
+        y += 60
+        if side["idea_note"]:
+            d.text((ML, y - 2), _ellipsize(d, "(" + side["idea_note"] + ")", f_note, cw),
+                   font=f_note, fill=INK3)
+            y += 24
+
+    # two tracks, shared axis
+    t0, t1 = _vs_axis(a, b)
+    X = lambda t: ML + (t - t0) / (t1 - t0) * (MR - ML)
+    base_a, base_b, axis_y = 400, 478, 500
+    f_trk = _font(16, "semibold")
+    for base, side, label in ((base_a, a, "THE CLAIM"), (base_b, b, "THE REBUTTAL")):
+        d.line([ML, base, MR, base], fill=GRID, width=2)
+        d.text((ML, base - 60), f'{label} · {side["n_uses"]} recorded uses',
+               font=f_trk, fill=INK3)
+        for dot in _stack_dots(side["points"], X, base):
+            r = 6 if dot["ms"] else 5
+            d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
+                      fill=_hex_rgb(ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])),
+                      outline=(68, 68, 68) if dot["ms"] else CARD_BG, width=2)
+    d.line([ML, axis_y, MR, axis_y], fill=BASELINE, width=2)
+    f_t = _font(18)
+    for t, label in _ticks_for(t0, t1):
+        x = X(t)
+        d.line([x, axis_y - 3, x, axis_y + 4], fill=BASELINE, width=2)
+        d.text((x - d.textlength(label, font=f_t) / 2, axis_y + 8), label,
+               font=f_t, fill=INK3)
+
+    # legend + honesty clauses
+    d.line([ML, 540, MR, 540], fill=GRID, width=2)
+    f_leg = _font(16)
+    lx = ML
+    for role in vcd["roles_present"]:
+        d.ellipse([lx, 553, lx + 10, 563], fill=_hex_rgb(ROLE_COLORS[role]))
+        d.text((lx + 15, 549), role, font=f_leg, fill=INK3)
+        lx += 15 + d.textlength(role, font=f_leg) + 18
+    d.text((ML, 578), _ellipsize(d,
+           'separately-sampled traces — dot counts aren’t comparable volumes · '
+           'roles are unaudited AI labels · earliest found, not provably first · '
+           'AI-traced, not human-reviewed', _font(16), cw),
+           font=_font(16), fill=INK3)
+    f_wm = _font(22, "semibold")
+    d.text((MR - d.textlength("tributary", font=f_wm), 549), "tributary",
+           font=f_wm, fill=BLUE_DEEP)
+
+    img.save(out_path, "PNG")
+
+
+def svg_vs(vcd):
+    a, b = vcd["claim"], vcd["counter"]
+    x0, x1 = 10, 750
+    t0, t1 = _vs_axis(a, b)
+    X = lambda t: x0 + (t - t0) / (t1 - t0) * (x1 - x0)
+    base_a, base_b, axis_y = 92, 178, 196
+    parts = [f'<svg viewBox="0 0 760 226" role="img" aria-label="Two timelines: '
+             f'the claim ({a["n_uses"]} recorded uses from {esc(a["first_human"])}) and '
+             f'its rebuttal ({b["n_uses"]} from {esc(b["first_human"])})">',
+             '<style>.trk{font:600 12px system-ui;fill:#898781;letter-spacing:0.06em}'
+             '.t{font:11.5px system-ui;fill:#898781}</style>']
+    for base, side, label in ((base_a, a, "THE CLAIM"), (base_b, b, "THE REBUTTAL")):
+        parts.append(f'<line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}" stroke="#e1e0d9" stroke-width="1.5"/>'
+                     f'<text x="{x0}" y="{base - 52}" class="trk">{esc(label)} · {side["n_uses"]} RECORDED USES</text>')
+        for dot in _stack_dots(side["points"], X, base, bucket_px=10, gap=9):
+            r = 5.5 if dot["ms"] else 4
+            fill = ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])
+            tip = ("first attested — " if dot["ms"] else "") + dot["p"]["date"] + \
+                (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "") + f' · {dot["p"]["role"]}'
+            parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
+                         f'stroke="{"#444444" if dot["ms"] else "#fcfcfb"}" stroke-width="1.5">'
+                         f'<title>{esc(tip)}</title></circle>')
+    parts.append(f'<line x1="{x0}" y1="{axis_y}" x2="{x1}" y2="{axis_y}" stroke="#c3c2b7" stroke-width="1.5"/>')
+    for t, label in _ticks_for(t0, t1):
+        x = X(t)
+        parts.append(f'<line x1="{x:.1f}" y1="{axis_y - 3}" x2="{x:.1f}" y2="{axis_y + 3}" stroke="#c3c2b7"/>'
+                     f'<text x="{x:.1f}" y="{axis_y + 16}" text-anchor="middle" class="t">{esc(label)}</text>')
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def render_vs_page(vcd, out_path, slug):
+    a, b = vcd["claim"], vcd["counter"]
+    og_img = f"{SITE}gallery/cards/{slug}.png"
+    og_url = f"{SITE}gallery/cards/{slug}.html"
+    og_desc = (f'The claim: “{a["phrase"]}” (first attested {a["first_human"]}). '
+               f'The rebuttal: “{b["phrase"]}” (first attested {b["first_human"]}). '
+               f'Two separately-sampled traces, every date receipted. '
+               f'AI-traced, not human-reviewed.')
+    def side_html(side, label):
+        note = f'<p class="idea">({esc(side["idea_note"])})</p>' if side["idea_note"] else ""
+        return (f'<div class="side"><strong>{label} — first attested {esc(side["first_human"])}</strong>'
+                f'<div class="ph">“{esc(side["phrase"])}”</div>{note}</div>')
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(vcd["headline"])} — Tributary</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tributary">
+<meta property="og:title" content="{esc(vcd["headline"])}">
+<meta property="og:description" content="{esc(og_desc)}">
+<meta property="og:image" content="{esc(og_img)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(vcd["headline"])} Claim: “{esc(a["phrase"])}” from {esc(a["first_human"])}; rebuttal: “{esc(b["phrase"])}” from {esc(b["first_human"])}.">
+<meta property="og:url" content="{esc(og_url)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="{esc(og_desc)}">
+<style>
+  :root {{ color-scheme: light; }}
+  * {{ box-sizing: border-box; }}
+  body {{ margin: 0; background: #f9f9f7; color: #0b0b0b;
+         font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5; }}
+  .wrap {{ max-width: 820px; margin: 0 auto; padding: 2.2rem 1.2rem 3rem; }}
+  .card {{ background: #fcfcfb; border: 1px solid rgba(11,11,11,0.10); border-radius: 12px;
+          padding: 1.4rem 1.6rem 1.1rem; box-shadow: 0 1px 3px rgba(11,11,11,0.04); }}
+  .kicker {{ font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+            color: #898781; margin-bottom: 0.5rem; }}
+  .headline {{ font-size: 1.7rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.6rem; }}
+  .side {{ margin: 0 0 0.5rem; }}
+  .side strong {{ font-size: 0.92rem; }}
+  .side .ph {{ color: #52514e; font-size: 0.92rem; margin: 0.1rem 0 0; }}
+  .idea {{ color: #898781; font-size: 0.8rem; margin: 0.1rem 0 0.4rem; }}
+  .legend {{ margin: 0.5rem 0 0; font-size: 0.75rem; color: #898781; display: flex;
+            flex-wrap: wrap; gap: 0.35rem 0.9rem; }}
+  .lg {{ white-space: nowrap; }}
+  .lgdot {{ display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+           margin-right: 0.3rem; vertical-align: -1px; }}
+  .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
+              font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
+              flex-wrap: wrap; gap: 0.4rem; }}
+  .cta {{ display: inline-block; margin: 1.3rem 0.9rem 0 0; background: #2a78d6; color: #fff;
+         text-decoration: none; font-weight: 600; font-size: 0.9rem;
+         padding: 0.5rem 1rem; border-radius: 8px; }}
+  .cta:hover {{ background: #184f95; }}
+  .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
+             color: #898781; font-size: 0.82rem; }}
+  .honesty a {{ color: #2a78d6; text-decoration: none; }}
+  svg {{ width: 100%; height: auto; display: block; margin: 0.6rem 0 0; }}
+  @media (max-width: 640px) {{ .headline {{ font-size: 1.35rem; }} }}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="kicker">Tributary · claim &amp; rebuttal</div>
+    <div class="headline">{esc(vcd["headline"])}</div>
+    {side_html(a, "The claim")}
+    {side_html(b, "The rebuttal")}
+    {svg_vs(vcd)}
+    <div class="legend">{legend_html(vcd["roles_present"])}</div>
+    <div class="cardfoot">
+      <span>two separately-sampled traces — dot counts are not comparable volumes · roles are unaudited AI labels · earliest found, not provably first</span>
+      <span>AI-traced, not human-reviewed</span>
+    </div>
+  </div>
+
+  <a class="cta" href="../../fingerprint_viewer.html?load=gallery/traces/{esc(a["fingerprint_id"])}.json">The claim's full trace →</a>
+  <a class="cta" href="../../fingerprint_viewer.html?load=gallery/traces/{esc(b["fingerprint_id"])}.json">The rebuttal's full trace →</a>
+
+  <p class="honesty">
+    This card is AI-generated and not yet human-reviewed. Each side is a single-run trace;
+    “first attested” is the earliest use our search found (pipeline confidence:
+    {a["conf"]:.2f} claim / {b["conf"]:.2f} rebuttal) and an earlier one may exist. The two
+    attestation logs were sampled independently — comparing how many dots each row has
+    says nothing about real-world volume. Tributary does not label either side true or
+    false. Hover any dot for its date, source, and (unaudited) role label.
+    Card image for sharing: <a href="{esc(slug)}.png">PNG</a>.<br>
+    <a href="{REPO_URL}/blob/main/METHODOLOGY.md">How it’s made</a> ·
+    <a href="{REPO_URL}/blob/main/CORRECTIONS.md">Corrections log</a> ·
+    <a href="{REPO_URL}/issues/new/choose">Suggest a correction</a> ·
+    <a href="../../index.html">Tributary</a>
+  </p>
+</div>
+</body>
+</html>
+"""
+    out_path.write_text(html, encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------
@@ -1191,6 +1500,9 @@ def main():
     ap.add_argument("--event", action="append", default=None, metavar="ID",
                     help="render a framing-fan card for this event analysis id "
                          "(repeatable; explicit only — no default event set)")
+    ap.add_argument("--vs", action="append", default=None, metavar="CLAIM:REBUTTAL",
+                    help="render a claim-vs-rebuttal two-track card from two "
+                         "fingerprint ids (repeatable; explicit only)")
     ap.add_argument("--as-of", default=None,
                     help="age anchor date YYYY-MM-DD (default: today)")
     ap.add_argument("--gallery-dir", default=str(ROOT / "gallery"))
@@ -1226,6 +1538,40 @@ def main():
         rendered += 1
         print(f"[cards] {fid}: {cd['headline']}  ({cd['n_uses']} uses, "
               f"{len(cd['outlets'])} carriers named)", file=sys.stderr)
+
+    for pair in args.vs or []:
+        try:
+            cid, rid = pair.split(":", 1)
+        except ValueError:
+            print(f"[cards] --vs {pair}: expected CLAIM_ID:REBUTTAL_ID — skipped",
+                  file=sys.stderr)
+            continue
+        fps = []
+        for fid in (cid, rid):
+            p = fpdir / f"{fid}.json"
+            if not p.exists():
+                print(f"[cards] --vs: no fingerprints/{fid}.json — skipped", file=sys.stderr)
+                break
+            fps.append(json.loads(p.read_text(encoding="utf-8")))
+        if len(fps) != 2:
+            continue
+        vcd = vs_card_data(*fps)
+        if not vcd:
+            print(f"[cards] --vs {pair}: a side has no dated lineage — skipped",
+                  file=sys.stderr)
+            continue
+        slug = f"vs-{cid}-{rid}"
+        render_vs_png(vcd, cards_dir / f"{slug}.png")
+        render_vs_page(vcd, cards_dir / f"{slug}.html", slug)
+        for fid in (cid, rid):   # tap-throughs need both traces published
+            shutil.copyfile(fpdir / f"{fid}.json", traces_dir / f"{fid}.json")
+        index.append({"kind": "vs", "headline": vcd["headline"],
+                      "phrase": vcd["claim"]["phrase"],
+                      "claim_id": cid, "rebuttal_id": rid,
+                      "page": f"gallery/cards/{slug}.html",
+                      "image": f"gallery/cards/{slug}.png", "event_id": ""})
+        rendered += 1
+        print(f"[cards] {slug}: {vcd['headline']}", file=sys.stderr)
 
     for aid in args.event or []:
         p = gallery / "events" / f"{aid}.json"

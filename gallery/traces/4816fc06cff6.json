@@ -1,0 +1,1539 @@
+{
+  "fingerprint_id": "4816fc06cff6",
+  "created_at": "2026-05-21T16:29:38.324996+00:00",
+  "last_updated": "2026-05-21T16:29:38.324996+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "vaccines cause autism",
+    "phrase_variants": [
+      "vaccines and autism link",
+      "the vaccine-autism connection",
+      "vaccines trigger autism",
+      "vaccines are causing autism in children",
+      "vaccine autism link"
+    ],
+    "diagnostic_ngrams": [
+      "vaccines cause autism",
+      "vaccine autism link",
+      "vaccines trigger autism",
+      "autism vaccines connection"
+    ],
+    "stopword_stripped_signature": "vaccines cause autism"
+  },
+  "conceptual": {
+    "claim_predicate": "vaccines cause autism in children",
+    "entities": {
+      "agent": "vaccine administration / vaccine components",
+      "patient": "vaccinated children",
+      "arena": "child development and neurology",
+      "instrument": "biological/chemical properties of vaccines or vaccine ingredients"
+    },
+    "causal_structure": "vaccine administration, through its biological or chemical properties, causes autism spectrum disorder in children who receive vaccines"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "harm-claim",
+      "threat-claim"
+    ],
+    "valence": {
+      "villain": "vaccines / vaccine components",
+      "victim": "children / vaccinated children",
+      "hero": ""
+    },
+    "epistemic_stance": "certain",
+    "register": "casual"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "single-origin",
+      "first_attested_date": "1985-01-01",
+      "first_attested_source": "https://www.nvic.org/resources/frequently-asked-questions/autism",
+      "attestation_confidence": 0.97,
+      "primary_origin_id": "2326fca41292",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "2326fca41292",
+          "date": "1985-01-01",
+          "source_url": "https://www.nvic.org/resources/frequently-asked-questions/autism",
+          "source_title": "DPT: A Shot in the Dark (Harcourt Brace Jovanovich, 1985)",
+          "author": "Harris L. Coulter and Barbara Loe Fisher",
+          "lexical_form_seen": "vaccines cause autism / vaccine-induced autism / vaccination and autistic behavior",
+          "exact_quote": "The debate about whether vaccines can cause regressive autism began in 1985 with the publishing of the landmark book DPT: A Shot in the Dark",
+          "confidence": 0.97,
+          "evidence": "Multiple independent corroborating sources confirm the 1985 Harcourt Brace Jovanovich publication date: AbeBooks lists the hardcover ISBN 9780151264810 with publisher Harcourt and publication date 1985; Barbara Loe Fisher's own NVIC biography lists the book as 'DPT: A Shot in the Dark (Harcourt Brace Jovanovich 1985; Warner 1986; Avery/Putnam 1991)'; Wikipedia's National Vaccine Information Center article states 'In 1985, Fisher and Harris Coulter co-authored a book, DPT: A Shot in the Dark, which asserted an association between the whole cell pertussis (whooping cough) vaccine in the DPT shot and autism'; the NVIC FAQ page states directly that 'The debate about whether vaccines can cause regressive autism began in 1985 with the publishing of the landmark book DPT: A Shot in the Dark.' The NVIC newsletter (nvic.org/newsletter/autismandvaccines) states: 'The connection between vaccination and autistic behavior, first reported in DPT: A Shot in the Dark (Coulter & Fisher, 1985) fifteen years ago...' The Vaccination Information Network states the 1985 book 'detailed more than 100 cases of DPT vaccine-induced brain inflammation and immune system dysfunction, among them children who had developed regressive autism after suffering a brain inflammation and encephalopathy following DPT vaccination.' The date is confirmed by multiple independent bibliographic sources, the authors' own organization, and peer-reviewed academic references (e.g., cited in the 1991 IOM report). This is a well-attested 1985 publication.",
+          "amplifier_role": "originator",
+          "role_evidence": "NVIC describes this as the first public articulation of the vaccine-autism link in the US: 'first reported in DPT: A Shot in the Dark (Coulter & Fisher, 1985).' Barbara Loe Fisher is described by her own organization as 'the first to warn about an association between vaccination and autism' in this 1985 book. The book predates the proposed 1995-01-01 cutoff by a full decade and predates Wakefield's 1998 paper by 13 years. The framing is specifically the narrative that DPT vaccination causes regressive autism in children — the canonical framing under investigation."
+        },
+        {
+          "instance_id": "ac7faa6f622d",
+          "date": "1986-11-14",
+          "source_url": "https://www.nvic.org/resources/frequently-asked-questions/autism",
+          "source_title": "National Childhood Vaccine Injury Act of 1986 (Public Law 99-660), congressional record and legislative history",
+          "author": "U.S. Congress (99th Congress)",
+          "lexical_form_seen": "vaccines cause autism / relationship between vaccines and autism",
+          "exact_quote": "The Secretary shall complete a review of all relevant medical and scientific information on the nature, circumstances, and extent of the relationship, if any, between vaccines containing pertussis...and the following illnesses and conditions [including autism]",
+          "confidence": 0.93,
+          "evidence": "The CDC's own page on Autism and Vaccines states: 'The National Childhood Vaccine Injury Act of 1986 required that the Secretary of Health and Human Services shall complete a review of all relevant medical and scientific information on the nature, circumstances, and extent of the relationship, if any, between vaccines containing pertussis...and the following illnesses and conditions. The statute lists 11 specific illnesses and conditions, including autism.' The law was signed November 14, 1986 (Public Law 99-660), well documented in the NCBI Bookshelf and Congress.gov. This means the U.S. Congress formally encoded the 'vaccines and autism' framing into federal law in 1986, explicitly listing autism as a condition whose potential relationship to pertussis vaccines required government investigation. This congressional act itself is evidence that the framing was sufficiently well-established by late 1986 to merit legislative attention. The date November 14, 1986, is confirmed by the Public Law citation (100 Stat. 3755, PL 99-660).",
+          "amplifier_role": "unknown",
+          "role_evidence": "The 1986 Act did not originate the claim but institutionalized it in federal law, giving it major amplification and legitimacy. By mandating the HHS review autism as a potential vaccine injury, Congress formally embedded the framing into US health policy, nine years before the proposed 1995-01-01 origin date."
+        },
+        {
+          "instance_id": "292f5279f510",
+          "date": "1991-01-01",
+          "source_url": "https://www.nvic.org/newsletter/autismandvaccines",
+          "source_title": "IOM Report: Adverse Effects of Pertussis and Rubella Vaccines (National Academy Press, 1991)",
+          "author": "Institute of Medicine, National Academy of Sciences",
+          "lexical_form_seen": "vaccines can cause acute and chronic brain inflammation leading to neurological dysfunction associated with regressive autism",
+          "exact_quote": "This report was the first major review of evidence that vaccines can cause acute and chronic brain inflammation leading to neurological dysfunction associated with regressive autism.",
+          "confidence": 0.88,
+          "evidence": "The NVIC newsletter describes the 1991 IOM report (mandated by the 1986 NCVIA) as 'the first major review of evidence that vaccines can cause acute and chronic brain inflammation leading to neurological dysfunction associated with regressive autism.' The report cited the Coulter & Fisher 1985 DPT book and 100+ documented case histories. The 1991 date of this IOM report is consistent with the congressional mandate in the 1986 NCVIA and is referenced by NVIC as a pre-1995 document. Publication year 1991 is the commonly cited date for this IOM report, consistent with bibliographic references across multiple sources. This predates the proposed 1995-01-01 cutoff by four years.",
+          "amplifier_role": "unknown",
+          "role_evidence": "The IOM is a prestigious, authoritative body. Its 1991 report formally reviewing the vaccine-autism link in a major government-mandated study is a key instance of the framing appearing in institutional scientific literature well before 1995-01-01."
+        },
+        {
+          "instance_id": "114ad45b18a3",
+          "date": "1994-01-01",
+          "source_url": "https://sciencebasedmedicine.org/a-shot-in-the-dark-revisited/",
+          "source_title": "IOM Report: Adverse Events Associated with Childhood Vaccines — Evidence Bearing on Causality (National Academy Press, 1994)",
+          "author": "Institute of Medicine, National Academy of Sciences",
+          "lexical_form_seen": "vaccines and autism connection / autism as a potential vaccine adverse event",
+          "exact_quote": "a later (1994) extensive population-based case control study",
+          "confidence": 0.85,
+          "evidence": "The 1994 IOM report (a second congressionally mandated review under the 1986 NCVIA) again reviewed evidence on vaccine adverse events including autism. Barbara Loe Fisher's NVIC letter to IOM (referenced in nvic.org/news-media-reports/press-releases/iom-played-politics-in-report-on-autism-and-vaccines) references both the 1991 and 1994 IOM reports as addressing the vaccine-autism link under congressional mandate. Science-Based Medicine explicitly references the 1994 IOM study on pertussis vaccine safety. The 1994 date is additionally corroborated by the congressional mandate timeline and multiple academic references to the 1991 and 1994 IOM reports as a sequential pair. This instance predates the proposed 1995-01-01 cutoff by approximately one year.",
+          "amplifier_role": "unknown",
+          "role_evidence": "A second major IOM review of vaccine-autism evidence in 1994, again under congressional mandate from the 1986 NCVIA, confirms the framing was well-established in institutional scientific discourse by 1994, one year before the proposed origin date."
+        },
+        {
+          "instance_id": "033a9b3ec4d5",
+          "date": "1995-01-01",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(95)90439-5/fulltext",
+          "source_title": "Is measles vaccination a risk factor for inflammatory bowel disease?",
+          "author": "Thompson, N.P.; Pounder, R.E.; Wakefield, A.J.; Montgomery, S.M.",
+          "lexical_form_seen": "vaccination … autism [precursor framing: vaccine as bowel-disease trigger → neuropsychiatric disease including autism]",
+          "exact_quote": "persistent infection with vaccine virus caused disruption of the intestinal tissue that in turn led to bowel disease and neuropsychiatric disease (specifically, autism)",
+          "confidence": 0.75,
+          "evidence": "Published in The Lancet 1995;345(8957):1071-1074. The paper itself does not use the exact n-gram 'vaccines cause autism' but introduces the mechanistic vaccine→autism framing that Wakefield would crystallise in 1998. Cited and paraphrased by multiple secondary sources (History of Vaccines, CHOP, Wikipedia) as the precursor. Year-only certainty on month; cited as vol. 345 (April 1995).",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "First peer-reviewed document to propose a mechanistic causal chain from an MMR-type vaccine to autism via bowel disease, the conceptual seed that generated all later lexical articulations of the framing. [Role adjusted from originator (corpus sweep 2026-07-05): only the earliest instance can be the originator; later re-articulations are early amplifiers.]"
+        },
+        {
+          "instance_id": "11bbbfb0708d",
+          "date": "1998-02-28",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/fulltext",
+          "source_title": "Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children",
+          "author": "Wakefield AJ, Murch SH, Anthony A, et al.",
+          "lexical_form_seen": "MMR vaccine … apparent precipitating event … autism [paper]; 'vaccines cause autism' [press-conference paraphrase reported widely same day]",
+          "exact_quote": "The paper described MMR vaccination as the 'apparent precipitating event' … suggested the connection between autism and the gastrointestinal pathologies was 'real'",
+          "confidence": 0.95,
+          "evidence": "Published 28 February 1998 in The Lancet vol. 351:637-641 (DOI 10.1016/s0140-6736(97)11096-0). Simultaneously Wakefield held a press conference at the Royal Free Hospital where reporters paraphrased his claim as vaccines cause autism. Multiple sources (GAVI, Wikipedia, Johns Hopkins, PBS) confirm the date. The n-gram 'vaccines cause autism' entered wide media circulation on this date as a result of the press conference and the paper.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This publication, paired with its same-day press conference, is the single event universally identified as originating the modern 'vaccines cause autism' framing in public discourse; Peter Hotez's research concluded 'no prior paper supports a link.' [Role adjusted from originator (corpus sweep 2026-07-05): only the earliest instance can be the originator; later re-articulations are early amplifiers.]"
+        },
+        {
+          "instance_id": "642c757ae3f8",
+          "date": "1998-03-01",
+          "source_url": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "source_title": "Medical Research Council expert panel statement on MMR and autism, March 1998",
+          "author": "Medical Research Council (UK), Prof. Sir John Pattison (chair)",
+          "lexical_form_seen": "no evidence to indicate any link between the MMR vaccine and … autism",
+          "exact_quote": "a panel of 37 scientific experts … found 'no evidence to indicate any link' between the MMR vaccine and colitis or autism in children",
+          "confidence": 0.8,
+          "evidence": "Reported by multiple secondary sources (Wikipedia, CDC) as occurring in March 1998, shortly after the Lancet paper. The exact date within March 1998 is not confirmed; set to 1998-03-01 with month-only certainty. This is an early institutional government-science rebuttal using the 'vaccine … autism link' lexical form.",
+          "amplifier_role": "critic",
+          "role_evidence": "Official UK government scientific body issuing the first formal rebuttal to the vaccine-autism link claim, using the key n-gram cluster in its conclusion."
+        },
+        {
+          "instance_id": "013387afc110",
+          "date": "1998-03-07",
+          "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1112717/",
+          "source_title": "MMR vaccination and autism 1998 [BMJ editorial]",
+          "author": "Nicoll A, Elliman D, Ross E",
+          "lexical_form_seen": "MMR vaccination and autism … possible link between measles, mumps, and rubella (MMR) vaccine and autism",
+          "exact_quote": "editorial … about a possible link between measles, mumps, and rubella (MMR) vaccine and autism",
+          "confidence": 0.92,
+          "evidence": "Published BMJ 1998 Mar 7;316(7133):715-716 (DOI 10.1136/bmj.316.7133.715; PMID 9529392). Date confirmed by PubMed metadata. This is the first institutional medical-journal editorial to name the 'vaccine-autism link' phrase, appearing one week after the Lancet paper. The title itself, 'MMR vaccination and autism 1998', is an early institutional lexical instantiation of the exact n-gram cluster.",
+          "amplifier_role": "critic",
+          "role_evidence": "Published as a rapid public-health rebuttal editorial in the BMJ the same week as Wakefield's paper, framing it as a 'scare story' and arguing 'there is no causal link between MMR vaccine and autism' — the earliest institutional critic of the framing."
+        },
+        {
+          "instance_id": "07c54bd018a0",
+          "date": "1999-06-12",
+          "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)01239-8/fulltext",
+          "source_title": "Autism and measles, mumps, and rubella vaccine: no epidemiological evidence for a causal association",
+          "author": "Taylor B, Miller E, Farrington CP, et al.",
+          "lexical_form_seen": "MMR vaccine … no epidemiological evidence for a causal association [with autism]",
+          "exact_quote": "Autism and measles, mumps, and rubella vaccine: no epidemiological evidence for a causal association",
+          "confidence": 0.93,
+          "evidence": "Published The Lancet 1999;353:2026-2029 (DOI 10.1016/S0140-6736(99)01239-8). Cited by Autism Speaks, GAVI, and multiple peer-reviewed reviews. Commissioned by the UK Medicines Control Agency. The title is one of the earliest major epidemiological lexical uses of the 'vaccine [and] autism' n-gram cluster in a formal rebuttal study.",
+          "amplifier_role": "critic",
+          "role_evidence": "First large-scale epidemiological study to explicitly use the 'vaccine-autism' n-gram in its title as a direct rebuttal; found no link in a cohort of 498 children and drove the scientific consensus framing forward."
+        },
+        {
+          "instance_id": "7bedc484541f",
+          "date": "2000-04-06",
+          "source_url": "https://www.npr.org/transcripts/1231104444",
+          "source_title": "US House Government Reform Committee Hearing: Autism — Present Challenges, Future Needs",
+          "author": "US House of Representatives; testimony by Andrew Wakefield, Paul Offit et al.; chaired by Rep. Dan Burton",
+          "lexical_form_seen": "vaccines cause autism [spoken by Dr. Paul Offit in refutation, before a US congressional panel]",
+          "exact_quote": "My concern, Mr. Chairman, is that parents listening to or reading about this hearing might incorrectly conclude that vaccines cause autism.",
+          "confidence": 0.9,
+          "evidence": "Congressional hearing held April 6, 2000 (confirmed by NPR Throughline transcript and reporting). Paul Offit's exact words 'vaccines cause autism' are documented in both NPR's archived transcript and contemporaneous accounts. This is among the earliest documented uses of the precise canonical n-gram 'vaccines cause autism' in a US governmental/institutional setting.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The framing 'vaccines cause autism' entered formal US Congressional record on this date, used by a testifying expert to rebut the claim before the House Government Reform Committee, marking the phrase's arrival in official government discourse."
+        },
+        {
+          "instance_id": "a870e2c80cb1",
+          "date": "2005-06-16",
+          "source_url": "https://www.rollingstone.com/politics/politics-news/deadly-immunity-rolling-stone/",
+          "source_title": "Deadly Immunity",
+          "author": "Robert F. Kennedy Jr.",
+          "lexical_form_seen": "thimerosal … may have caused autism … link between thimerosal and the epidemic of childhood neurological disorders",
+          "exact_quote": "the link between thimerosal and the epidemic of childhood neurological disorders is real",
+          "confidence": 0.88,
+          "evidence": "Co-published in Rolling Stone (print June 2005) and Salon.com (online June 16, 2005). The article explicitly argued vaccines' preservative thimerosal caused autism-spectrum disorders; subsequent corrections and eventual retraction by Salon confirmed date and content. Described by multiple sources (FactCheck, KFF, CBS News) as arguing 'vaccines cause autism.' The article no longer appears on Rolling Stone or Salon websites but its date and content are confirmed by multiple secondary sources.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Kennedy's article, co-published in two major US media outlets with national reach, represented the most prominent US amplification of the vaccine-autism framing to that point, directly seeding it into mainstream political discourse."
+        },
+        {
+          "instance_id": "38a2d106b110",
+          "date": "2007-01-01",
+          "source_url": "https://www.time.com/7201582/donald-trump-vaccines-fact-check-2024/",
+          "source_title": "Interview with Donald Trump, South Florida Sun-Sentinel",
+          "author": "Donald J. Trump",
+          "lexical_form_seen": "my theory is the shots [causing autism]",
+          "exact_quote": "My theory, and I study it because I have young children, my theory is the shots. We've giving these massive injections at one time, and I really think it does something to the children.",
+          "confidence": 0.82,
+          "evidence": "Quoted by TIME (2024 fact-check) and CNN (2025) as from a 2007 interview with the South Florida Sun-Sentinel. Exact date within 2007 not confirmed in available sources; confidence on the year is high. This is the earliest documented lexical statement of the vaccine-autism framing by Trump, who would later become a major amplifier of the claim.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Trump's 2007 public statement linking 'the shots' to autism, made to a regional newspaper while a nationally prominent celebrity, constitutes an early-amplifier event that prefigured his later mass-amplification of the framing."
+        },
+        {
+          "instance_id": "d09fc1aa3b3c",
+          "date": "2007-09-18",
+          "source_url": "https://www.oprah.com/relationships/jenny-mccarthys-warrior-spirit/all",
+          "source_title": "Jenny McCarthy appearance on The Oprah Winfrey Show",
+          "author": "Jenny McCarthy",
+          "lexical_form_seen": "vaccinations triggered Evan's autism",
+          "exact_quote": "Without a doubt, in my mind, I believe vaccinations triggered Evan's autism.",
+          "confidence": 0.88,
+          "evidence": "Jenny McCarthy's book Louder than Words was published September 17, 2007, and her Oprah appearance was confirmed by Oprah.com (updated Sept. 24, 2008, referring to 'since she last spoke with Oprah in September 2007'). The NPR Throughline transcript and multiple secondary sources confirm she used the phrase 'vaccinations triggered Evan's autism' on that September 2007 Oprah appearance. This is the first major broadcast-TV use of a diagnostic variant ('vaccines trigger autism').",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "McCarthy's Oprah appearance, reaching tens of millions of viewers, is widely identified as the single most impactful celebrity mass-amplification of the vaccine-autism framing in US broadcast history."
+        },
+        {
+          "instance_id": "f30b7f062950",
+          "date": "2008-04-03",
+          "source_url": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "source_title": "Larry King Live: Autism and Vaccines special",
+          "author": "Jenny McCarthy (on CNN Larry King Live)",
+          "lexical_form_seen": "vaccines can trigger autism",
+          "exact_quote": "In 2008, she appeared on a Larry King Live special dedicated to the subject and argued that vaccines can trigger autism.",
+          "confidence": 0.85,
+          "evidence": "Confirmed by Wikipedia's Jenny McCarthy article with consistent sourcing across multiple outlets. The Larry King Live special on vaccines and autism aired in 2008; exact date within 2008 not confirmed, set approximately to early April 2008 based on surrounding context. The diagnostic n-gram 'vaccines trigger autism' is explicitly used in summarized reporting of this broadcast.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "CNN's Larry King Live was prime-time national television with millions of viewers; McCarthy's explicit 'vaccines can trigger autism' framing on this platform constitutes a textbook mass-amplification event."
+        },
+        {
+          "instance_id": "eb7e5b0e6021",
+          "date": "2010-02-04",
+          "source_url": "https://www.pbs.org/newshour/health/europe-jan-june10-lancet_0204",
+          "source_title": "Journal Retracts Study Backing Vaccine-Autism Link",
+          "author": "PBS NewsHour staff; quoting Dr. Paul Offit",
+          "lexical_form_seen": "vaccines cause autism … vaccine-autism link",
+          "exact_quote": "\"That initial publication [in the Lancet] gave birth to the notion that vaccines can cause autism.\"",
+          "confidence": 0.93,
+          "evidence": "Published February 4, 2010 on PBS NewsHour, confirmed by article metadata. The quote from Dr. Paul Offit uses the canonical n-gram 'vaccines can cause autism'; the article title uses 'vaccine-autism link'. Published on the same day The Lancet formally retracted Wakefield's 1998 paper, making this a major news event that cemented both the framing and its debunking in the popular press.",
+          "amplifier_role": "mention",
+          "role_evidence": "PBS NewsHour's retraction-day coverage mentioned the framing in a high-profile national context as a direct rebuttal of the claim, without itself driving spread of the myth."
+        },
+        {
+          "instance_id": "d6bc898d1513",
+          "date": "2014-09-03",
+          "source_url": "https://twitter.com/realDonaldTrump",
+          "source_title": "Donald Trump tweet: 'Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes - AUTISM.'",
+          "author": "Donald J. Trump",
+          "lexical_form_seen": "Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes - AUTISM.",
+          "exact_quote": "Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes - AUTISM.",
+          "confidence": 0.85,
+          "evidence": "Quoted verbatim by multiple sources including Bustle (2017) and KFF Health News (2023) as a Trump tweet. Date of September 3, 2014 is reported by several outlets as one of several 2014 tweets. The exact tweet date within 2014 is consistent across sources. This tweet is one of the earliest viral social-media uses of the 'vaccines → autism' n-gram cluster.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Trump's 2014 tweet used an explicit 'vaccines → AUTISM' causal framing to a multi-million follower Twitter audience, driving one of the earliest viral social-media amplifications of the framing."
+        },
+        {
+          "instance_id": "f60147ab0e02",
+          "date": "2015-09-16",
+          "source_url": "https://www.statnews.com/2015/09/18/trump-backs-autism-group-that-rejects-his-views/",
+          "source_title": "Republican Presidential Debate, Simi Valley, CA (Ronald Reagan Library)",
+          "author": "Donald J. Trump",
+          "lexical_form_seen": "got vaccinated … got a tremendous fever, got very, very sick, now is autistic [explicit vaccine-causes-autism narrative at presidential debate]",
+          "exact_quote": "Donald Trump told a story about a child who he said got vaccinated, 'got a tremendous fever, got very, very sick, now is autistic.'",
+          "confidence": 0.92,
+          "evidence": "Confirmed by STAT News (September 18, 2015 article) and multiple media. Trump made this statement at the Republican presidential primary debate on September 16, 2015, watched by an estimated 23 million viewers. This is the highest-audience single-event use of a vaccines→autism causal narrative in US political history to that date.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Trump's live national debate statement in front of ~23 million viewers explicitly narrating vaccines causing autism in a child is the single highest-reach live broadcast articulation of the framing in US political history prior to his presidency."
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "SEARCHED: (1) General history-of-vaccines sources for pre-1995 documentation of the vaccine-autism framing. (2) Fudenberg (1996) pilot study — confirmed published in Biotherapy journal in 1996, which is AFTER 1995-01-01; ruled out as a pre-1995 instance. (3) Usenet/Google Groups archives for pre-1995 online mentions — found no datable pre-1995 Usenet posts with the specific vaccine-autism framing. (4) 1985 Coulter & Fisher book 'DPT: A Shot in the Dark' — confirmed as the strongest pre-1995 originator, with multiple independent corroborating sources (NVIC, Wikipedia, AbeBooks, academic citations) all consistently dating it to 1985 (Harcourt Brace Jovanovich hardcover). (5) 1986 National Childhood Vaccine Injury Act — confirmed that Congress explicitly listed autism as a condition for HHS investigation under the pertussis vaccine mandate. (6) 1991 and 1994 IOM reports under congressional mandate — both confirmed as pre-1995 institutional treatments of the vaccine-autism link. (7) DPT 'Vaccine Roulette' 1982 NBC documentary — this raised the broader vaccine-neurological-damage framing, but the language used was 'brain damage,' 'encephalopathy,' 'mental retardation,' not specifically 'autism'; NOT included as a primary instance because it does not use the canonical 'vaccines cause autism' framing, though it is a clear precursor narrative. (8) Peter Hotez's claim that 'no prior paper supports a link' before Wakefield 1998 — this refers specifically to peer-reviewed scientific papers establishing the link, not to popular books or legislative records; the 1985 Coulter/Fisher book and the 1991/1994 IOM reviews are not peer-reviewed 'papers' in that strict sense, but they are clearly documented pre-1995 instances of the narrative framing. CONCLUSION: The proposed 1995-01-01 earliest date is INCORRECT. The 'vaccines cause autism' narrative framing is well-documented in a widely-circulated 1985 book (Coulter & Fisher), was incorporated into U.S. federal law in November 1986, and was reviewed by the Institute of Medicine in 1991 and 1994 — all predating the proposed origin date by a decade or more.",
+      "mutations": [
+        {
+          "from_source": "https://www.nvic.org/resources/frequently-asked-questions/autism",
+          "to_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(95)90439-5/fulltext",
+          "preserved": "the core claim that vaccines cause autism in children",
+          "dropped": "the framing of the claim as an open 'debate' with uncertain causality, preserving some epistemic humility",
+          "added": "a specific biological mechanism (persistent viral infection → intestinal disruption → neuropsychiatric disease) lending scientific-sounding causal specificity",
+          "distorted": "shift from general DPT vaccine concern to measles vaccine specifically, and from contested association to asserted mechanistic causation",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.124231+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(95)90439-5/fulltext",
+          "to_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/fulltext",
+          "preserved": "the claimed causal link between vaccination and autism as a real, not incidental, connection",
+          "dropped": "the specific mechanistic pathway (persistent viral infection → bowel disruption → neuropsychiatric disease) that grounded the earlier causal chain",
+          "added": "the broader MMR combination vaccine as the implicated agent, and gastrointestinal pathology as an intermediate finding in a clinical case series",
+          "distorted": "shift from a specific mechanistic hypothesis in a research letter to a clinical authority claim presenting autism-vaccine association as an observed, 'real' phenomenon in patients",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:36.582876+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(97)11096-0/fulltext",
+          "to_source": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "preserved": "the subject pairing of MMR vaccination and autism in children as the central investigative focus",
+          "dropped": "the Wakefield paper's own hedging language ('apparent,' 'suggested') that stopped short of asserting causation",
+          "added": "an authoritative institutional rebuttal from 37 experts explicitly negating the claimed link",
+          "distorted": "the framing shifted from a speculative clinical observation about a small case series to a binary confirmed/refuted public health verdict",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:36.903854+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "to_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1112717/",
+          "preserved": "the association between MMR vaccine and autism in children as the subject under discussion",
+          "dropped": "the authoritative 37-expert panel conclusion of 'no evidence' for any link, which was the core finding of the earlier statement",
+          "added": "the word 'possible' as a hedge, but framed as an editorial topic rather than a refutation",
+          "distorted": "shift from an institutional scientific verdict against the link to a framing that treats the link as a live open question worthy of editorial debate",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.946972+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1112717/",
+          "to_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)01239-8/fulltext",
+          "preserved": "the specific MMR vaccine and autism pairing remains the subject under investigation",
+          "dropped": "the hedged 'possible link' framing is abandoned in favor of a definitive epidemiological verdict",
+          "added": "explicit declaration of absence of causal evidence based on population-level epidemiological data",
+          "distorted": "shift from open speculative inquiry to evidential refutation, reversing the claim's implied direction",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.844956+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)01239-8/fulltext",
+          "to_source": "https://www.npr.org/transcripts/1231104444",
+          "preserved": "the association between vaccines and autism remains the central topic under discussion",
+          "dropped": "the definitive epidemiological refutation from the Taylor et al. study is not foregrounded as settled evidence",
+          "added": "a congressional hearing frame that institutionally elevates the vaccine-autism question as an open policy controversy worth legislative scrutiny",
+          "distorted": "a scientifically closed question is recontextualized as an ongoing public debate requiring official caution about parental misinterpretation",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:38.324543+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.npr.org/transcripts/1231104444",
+          "to_source": "https://www.rollingstone.com/politics/politics-news/deadly-immunity-rolling-stone/",
+          "preserved": "the assertion of a causal connection between a vaccine component and childhood neurological/developmental disorders",
+          "dropped": "the expert cautionary framing that explicitly warned against concluding vaccines cause autism, which was the earlier quote's entire purpose",
+          "added": "the specific chemical scapegoat 'thimerosal' and the epidemic framing, plus authoritative journalistic declarative certainty",
+          "distorted": "a congressional warning against misreading evidence was effectively inverted into a confident affirmative causal claim",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.758636+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.rollingstone.com/politics/politics-news/deadly-immunity-rolling-stone/",
+          "to_source": "https://www.time.com/7201582/donald-trump-vaccines-fact-check-2024/",
+          "preserved": "the core assertion that vaccine administration causes neurological harm in children",
+          "dropped": "the specific chemical agent (thimerosal) and the framing of an 'epidemic' of documented neurological disorders",
+          "added": "personal authority via parental identity ('I have young children') and the new sub-claim about injection size/bundling ('massive injections at one time')",
+          "distorted": "shift from a chemical-mechanism claim citing data to a vague personal 'theory,' broadening causation from a specific preservative to shots generally",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.360351+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.time.com/7201582/donald-trump-vaccines-fact-check-2024/",
+          "to_source": "https://www.oprah.com/relationships/jenny-mccarthys-warrior-spirit/all",
+          "preserved": "the core belief that vaccines cause or trigger autism in children",
+          "dropped": "the hedging language ('my theory') and the specific mechanistic concern about injection size/timing",
+          "added": "personal maternal testimony grounded in a named child's specific case, lending emotional and experiential authority",
+          "distorted": "shift from speculative personal theory to absolute personal certainty ('without a doubt'), and from general children to a specific diagnosed child",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.340948+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.oprah.com/relationships/jenny-mccarthys-warrior-spirit/all",
+          "to_source": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "preserved": "the core claim that vaccines trigger autism, attributed to Jenny McCarthy based on her son Evan's case",
+          "dropped": "the personal, first-person conviction framing ('without a doubt, in my mind') and the specific reference to her son Evan",
+          "added": "the institutional framing of a CNN special broadcast lending the claim an air of journalistic legitimacy",
+          "distorted": "shift from a personal belief statement to a generalized argued position, broadening implied applicability beyond one child's case",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.339712+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "to_source": "https://twitter.com/realDonaldTrump",
+          "preserved": "the core causal claim that vaccines cause autism in children",
+          "dropped": "the conditional framing ('can trigger') and any acknowledgment of debate or uncertainty around the claim",
+          "added": "visceral language ('pumped with massive shot') and a vivid narrative scenario designed for viral emotional impact",
+          "distorted": "shift from a probabilistic 'can trigger' hedge to a declarative, inevitable causal sequence presented as self-evident fact",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.841977+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://twitter.com/realDonaldTrump",
+          "to_source": "https://www.statnews.com/2015/09/18/trump-backs-autism-group-that-rejects-his-views/",
+          "preserved": "the core narrative of a child receiving vaccines and subsequently developing autism",
+          "dropped": "the vivid 'pumped with massive shot' language suggesting aggressive over-vaccination as the mechanism",
+          "added": "a specific fever and severe illness as an intermediate step in the causal chain, lending medical plausibility",
+          "distorted": "shift from a generalized pattern ('healthy young child') to a personalized anecdote, making the claim feel like eyewitness testimony",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.024627+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        }
+      ],
+      "curation_note": "Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D).",
+      "timeline_stats": {
+        "active_from": "1985-01-01",
+        "active_through": "2015-09-16",
+        "active_span_days": 11215,
+        "years_active": 30,
+        "years_with_activity": 14,
+        "instances_per_year": {
+          "1985": 1,
+          "1986": 1,
+          "1991": 1,
+          "1994": 1,
+          "1995": 1,
+          "1998": 3,
+          "1999": 1,
+          "2000": 1,
+          "2005": 1,
+          "2007": 2,
+          "2008": 1,
+          "2010": 1,
+          "2014": 1,
+          "2015": 1
+        },
+        "instances_per_year_by_role": {
+          "1985": {
+            "originator": 1
+          },
+          "1986": {
+            "unknown": 1
+          },
+          "1991": {
+            "unknown": 1
+          },
+          "1994": {
+            "unknown": 1
+          },
+          "1995": {
+            "early-amplifier": 1
+          },
+          "1998": {
+            "early-amplifier": 1,
+            "critic": 2
+          },
+          "1999": {
+            "critic": 1
+          },
+          "2000": {
+            "institutional-adoption": 1
+          },
+          "2005": {
+            "mass-amplifier": 1
+          },
+          "2007": {
+            "early-amplifier": 1,
+            "mass-amplifier": 1
+          },
+          "2008": {
+            "mass-amplifier": 1
+          },
+          "2010": {
+            "mention": 1
+          },
+          "2014": {
+            "mass-amplifier": 1
+          },
+          "2015": {
+            "mass-amplifier": 1
+          }
+        },
+        "peak_year": "1998",
+        "peak_year_count": 3,
+        "originator_to_mass_amplifier_days": 7471,
+        "originator_to_institutional_adoption_days": 5574,
+        "originator_to_critic_days": 4807,
+        "days_since_latest": 3945
+      }
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "single-origin",
+      "first_attested_date": "1933-01-01",
+      "first_attested_source": "https://www.ncbi.nlm.nih.gov/books/NBK234367/",
+      "attestation_confidence": 0.78,
+      "primary_origin_id": "5ac803e01f38",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "5ac803e01f38",
+          "date": "1933-01-01",
+          "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK234367/",
+          "source_title": "Two case reports of neurological events following pertussis immunization (Madsen, 1933)",
+          "author": "Thorvald Madsen",
+          "lexical_form_seen": "adverse neurological events following pertussis immunization; neurological injury in vaccinated children",
+          "exact_quote": "The possibility that pertussis immunization might cause adverse neurologic events resulting in permanent brain injury was first raised following a report of two cases by Madsen (1933).",
+          "confidence": 0.78,
+          "evidence": "The earliest documented clinical case series explicitly linking a vaccine's biological action to neurological injury in children — the same structural claim (vaccine administration → brain/neurological damage in children) that later morphed into the vaccine-autism claim. Published decades before autism was a diagnostic category; uses 'encephalopathy/neurological injury' vocabulary.",
+          "amplifier_role": "originator",
+          "role_evidence": "Madsen's 1933 case reports are the earliest-known published clinical articulation of a causal link between a specific vaccine and neurological harm in children, establishing the prototype structural claim for all later vaccine-injury narratives."
+        },
+        {
+          "instance_id": "cb076c1b1722",
+          "date": "1948-04-01",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/18857905/",
+          "source_title": "Encephalopathies Following Prophylactic Pertussis Vaccine",
+          "author": "R. K. Byers and F. C. Moll",
+          "lexical_form_seen": "encephalopathy following pertussis vaccination; neurological damage in vaccinated children; post-vaccinal brain injury",
+          "exact_quote": "Vaccine encephalopathy was first identified in a report by Byers and Moll in 1948.",
+          "confidence": 0.88,
+          "evidence": "Byers and Moll's 1948 paper in Pediatrics on 15 children was the definitive early clinical articulation of the claim that a routine childhood vaccine causes irreversible neurological damage in children through its biological properties — identical structural claim to the later vaccine-autism thesis, framed in 1940s medical vocabulary of 'encephalopathy' and 'brain injury'.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This paper 'spurred increased research and legal action' (per NCBI) and became the canonical early scientific text in the vaccine-neurological-harm tradition, directly seeding the later DPT-brain-damage and vaccine-autism lineage."
+        },
+        {
+          "instance_id": "43cea7009634",
+          "date": "1974-01-01",
+          "source_url": "https://www.gavi.org/vaccineswork/1970s-whooping-cough-vaccine-scare",
+          "source_title": "Neurological Complications Following Pertussis Immunization (Kulenkampff et al., Journal of Neurology, Neurosurgery and Psychiatry)",
+          "author": "M. Kulenkampff, J. S. Schwartzman, and J. Wilson",
+          "lexical_form_seen": "severe neurological problems following DPT vaccination; brain injury triggered by inoculation; vaccine-induced neurological damage in children",
+          "exact_quote": "In January 1974, a small study was published in a medical journal. It was a case series of 35 children who had been treated … all of the children had presented with severe neurological problems.",
+          "confidence": 0.87,
+          "evidence": "The 1974 Kulenkampff/Wilson case series directly reignited the vaccine-neurological-harm structural claim on a mass scale in both the UK and US, arguing through post-vaccination temporal association that the DPT vaccine's biological components caused permanent brain damage in children — the same structural claim as the autism thesis, in the vocabulary of 'neurological complications' and 'post-vaccinal encephalopathy'.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "This paper triggered a nationwide UK media panic and was the subject of an ITV prime-time documentary that accused the vaccine of causing brain damage in 100 children per year, collapsing vaccination rates and igniting the parent-activist movement that directly prefigured the autism-parent movement."
+        },
+        {
+          "instance_id": "b4ba37bc42b5",
+          "date": "1982-04-19",
+          "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK234365/",
+          "source_title": "DPT: Vaccine Roulette (TV documentary, NBC affiliate WRC-TV)",
+          "author": "Lea Thompson (journalist/director)",
+          "lexical_form_seen": "pertussis vaccine causing brain damage; children neurologically devastated by DPT shots; vaccine-induced disability",
+          "exact_quote": "The television program 'DPT: Vaccine Roulette,' first broadcast by NBC affiliate WRC-TV in Washington, D.C., is widely publicized. The program depicts children with severe injuries reported to be associated with pertussis vaccine.",
+          "confidence": 0.9,
+          "evidence": "This 1982 TV documentary made the mass-media case that the DPT vaccine's biological components directly caused permanent brain damage in children, presenting parents' accounts of developmental regression after vaccination — exactly the same narrative structure, evidentiary logic, and emotional register as the later vaccine-autism movement. It triggered $10 billion in US lawsuits.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "As the first major US mass-media broadcast of the structural claim (vaccine causes neurological damage in children), it ignited the DPT litigation wave and the formation of parent advocacy groups, establishing the populist template later used in the MMR-autism scare."
+        },
+        {
+          "instance_id": "de1fa5bf612e",
+          "date": "1985-01-01",
+          "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK234365/",
+          "source_title": "DPT: A Shot in the Dark",
+          "author": "Harris L. Coulter and Barbara Loe Fisher",
+          "lexical_form_seen": "pertussis vaccine causing brain injury; DPT shot triggering developmental regression; toxic components of DPT damaging children's neurology",
+          "exact_quote": "Due to lawsuits of the unscientific claims about the DPT vaccine in the 1980s, it led to many manufacturers to stop making the vaccine.",
+          "confidence": 0.85,
+          "evidence": "Coulter and Fisher's 1985 book argued that the whole-cell pertussis component in DPT was biologically causing permanent neurological damage — including developmental regression — in children who received it, framing parents as victims of a medical-pharmaceutical establishment that denied harm. The book directly prefigures the later vaccine-autism genre in structure, argument, and rhetoric.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "A widely cited popularization that helped establish the 'vaccine-injured child' narrative as a genre, fuelling the legal and activist infrastructure (Dissatisfied Parents Together / DPT advocacy group) that later fed directly into the MMR-autism parent movement."
+        },
+        {
+          "instance_id": "90b144ca6f6d",
+          "date": "1998-02-28",
+          "source_url": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "source_title": "Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children (The Lancet, Vol. 351)",
+          "author": "Andrew J. Wakefield et al.",
+          "lexical_form_seen": "MMR vaccine associated with developmental regression; routine vaccination triggering autistic enterocolitis; gastrointestinal pathology and neuropsychiatric dysfunction following vaccination",
+          "exact_quote": "The paper falsely claimed causative links between the measles, mumps, and rubella (MMR) vaccine and colitis, and between colitis and autism.",
+          "confidence": 0.98,
+          "evidence": "The 1998 Lancet paper is the direct, named originator of the specific vaccine→autism causal claim in its modern form, using the vocabulary of 'autistic enterocolitis,' 'developmental regression,' and 'possible environmental triggers' to argue that MMR vaccination biologically triggered autism-spectrum disorder in previously normal children.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Universally recognized as the founding scientific text of the modern vaccine-autism claim; its fraudulent methodology and financial conflicts of interest were later exposed, but it remained the most-cited retracted scientific paper for years and directly seeded every subsequent iteration of the claim. [Role adjusted from originator (corpus sweep 2026-07-05): only the earliest instance can be the originator; later re-articulations are early amplifiers.]"
+        },
+        {
+          "instance_id": "92a4d2aa8c4a",
+          "date": "2000-06-07",
+          "source_url": "https://archive.cdc.gov/www_cdc_gov/vaccinesafety/concerns/thimerosal/timeline.html",
+          "source_title": "Simpsonwood CDC Conference (internal scientific meeting, Norcross, Georgia)",
+          "author": "Thomas Verstraeten (CDC) and assembled scientists/officials",
+          "lexical_form_seen": "thimerosal exposure in children potentially linked to neurodevelopmental disorders; mercury accumulation in infant brains from vaccine preservatives",
+          "exact_quote": "Some people believe increased exposure to thimerosal (from the addition of important vaccines recommended for children) explains the higher prevalence [of autism] in recent years.",
+          "confidence": 0.72,
+          "evidence": "The Simpsonwood conference, where early Verstraeten data showed some thimerosal-neurodevelopmental associations, became the evidentiary anchor for the second major variant of the structural claim — that the mercury-based vaccine ingredient thimerosal caused autism through neurotoxic biological action. Later anti-vaccine activists (especially RFK Jr.) used leaked transcripts to argue cover-up.",
+          "amplifier_role": "mention",
+          "role_evidence": "The Simpsonwood meeting's preliminary data became the factual substrate for the thimerosal-autism variant of the claim, cited by Kennedy, Kirby, and many others as proof that official science had glimpsed the connection and suppressed it."
+        },
+        {
+          "instance_id": "79cfdded7314",
+          "date": "2005-03-01",
+          "source_url": "https://www.barnesandnoble.com/w/evidence-of-harm-david-kirby/1100335648",
+          "source_title": "Evidence of Harm: Mercury in Vaccines and the Autism Epidemic: A Medical Controversy",
+          "author": "David Kirby",
+          "lexical_form_seen": "mercury-containing preservative thimerosal in pediatric vaccines causing autism epidemic; toxic accumulation of ethylmercury in susceptible children; vaccine-schedule expansion producing neurological damage",
+          "exact_quote": "Could thimerosal, a mercury-containing preservative used in pediatric vaccines, be the cause of the world-wide epidemic of autism?",
+          "confidence": 0.95,
+          "evidence": "Kirby's New York Times bestseller made the full causal argument — that the thimerosal in childhood vaccines, through mercury neurotoxicity, caused the autism epidemic in children — in journalist narrative form, following affected families and framing the structural claim as a 'medical controversy' suppressed by pharmaceutical and government interests.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "As a NYT bestseller and IRE award-winning investigative book, Evidence of Harm was the primary vehicle by which the thimerosal-autism structural claim reached a mass US audience and entered sustained mainstream debate; described by Science-Based Medicine as 'the book that sent the mercury-autism hypothesis viral.'"
+        },
+        {
+          "instance_id": "1e2a74ec69d3",
+          "date": "2005-07-14",
+          "source_url": "https://en.wikipedia.org/wiki/Deadly_Immunity",
+          "source_title": "Deadly Immunity (Rolling Stone / Salon)",
+          "author": "Robert F. Kennedy Jr.",
+          "lexical_form_seen": "thimerosal-containing vaccines causing autism; mercury poisoning of children by vaccine preservative; government-pharma collusion to hide neurological damage from vaccines",
+          "exact_quote": "The article is focused on the 2000 Simpsonwood CDC conference and claims that thimerosal-containing vaccines caused autism.",
+          "confidence": 0.97,
+          "evidence": "Kennedy's 4,700-word article in Rolling Stone and Salon made the full structural claim — that a specific chemical component of vaccines (thimerosal/ethylmercury) biologically caused autism in children — backed by the Simpsonwood transcripts, and added a conspiracy layer alleging official cover-up. Despite multiple corrections and eventual retraction, it reached millions.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Published simultaneously in two major national outlets and immediately entered into the Congressional Record; it became the most widely-read single articulation of the thimerosal-autism structural claim and established Kennedy as the movement's most prominent political champion."
+        },
+        {
+          "instance_id": "f1cdeff4d997",
+          "date": "2007-09-17",
+          "source_url": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "source_title": "Louder Than Words: A Mother's Journey in Healing Autism",
+          "author": "Jenny McCarthy",
+          "lexical_form_seen": "vaccines triggering autism; child's immune deficiency aggravated by vaccination; shots precipitating developmental regression",
+          "exact_quote": "McCarthy's autism advocacy quickly turned into a vaccine-safety crusade, when she concluded that Evan was born with an immune deficiency that was aggravated by vaccines and contributed to his autism.",
+          "confidence": 0.96,
+          "evidence": "McCarthy's NYT bestselling memoir made the structural claim — that vaccines, through their biological effect on a child's immune system, caused autism — from the perspective of a celebrity parent, amplified by appearances on Oprah, Larry King Live, and numerous other mass-media platforms. She became, per journalists, 'the nation's most prominent purveyor of anti-vaxxer ideology.'",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "As a celebrity with tens of millions of fans, McCarthy converted the academic/journalistic thimerosal-autism debate into a mainstream parenting-culture conviction; Google Trends data shows a sustained surge in 'autism & vaccines' searches after her 2007 media blitz, earning the phenomenon the label 'The Jenny McCarthy Effect.'"
+        },
+        {
+          "instance_id": "a42674379f7f",
+          "date": "2014-07-01",
+          "source_url": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "source_title": "Thimerosal: Let the Science Speak",
+          "author": "Robert F. Kennedy Jr.",
+          "lexical_form_seen": "thimerosal mercury in vaccines causing autism and neurological disorders in children; ethylmercury neurotoxicity at vaccine doses; suppressed science on mercury-autism link",
+          "exact_quote": "Let's be clear: Kennedy will tell you he's not against vaccines themselves, but rather, against thimerosal, a vaccine preservative purportedly responsible for the rise in autism in the U.S.",
+          "confidence": 0.9,
+          "evidence": "Kennedy's 2014 book specifically argued that the thimerosal component of vaccines causes autism through ethylmercury neurotoxicity in children, framing it as established science being suppressed. It extended and formalized his 2005 Rolling Stone structural claim into book-length treatment, maintaining the same biological-mechanism causal structure.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Published by Skyhorse (the same house used by Wakefield), the book deepened Kennedy's institutional role as the primary US political champion of the thimerosal-autism structural claim and linked his environmental-law expertise to the chemical-toxicity causal argument."
+        },
+        {
+          "instance_id": "3e8a90bb4281",
+          "date": "2016-04-01",
+          "source_url": "https://en.wikipedia.org/wiki/Vaxxed",
+          "source_title": "Vaxxed: From Cover-Up to Catastrophe (documentary film)",
+          "author": "Andrew Wakefield (director); Del Bigtree (producer)",
+          "lexical_form_seen": "MMR vaccine causing autism; CDC data showing vaccine-autism link suppressed; vaccine-induced developmental regression in children as covered-up epidemic",
+          "exact_quote": "Vaxxed: From Cover-Up to Catastrophe is a 2016 American pseudoscience propaganda film alleging a cover-up by the Centers for Disease Control and Prevention (CDC) of a purported link between the MMR vaccine and autism.",
+          "confidence": 0.97,
+          "evidence": "The documentary revived and escalated the structural claim — that MMR vaccination biologically causes autism in children — using the 'CDC whistleblower' narrative to argue that official science had confirmed the link and suppressed it. It became the primary audiovisual vehicle for the claim, reaching hundreds of thousands of viewers in theatrical release and online.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Vaxxed reached cinema audiences across the US, UK, and Australia; spawned a sequel (2019) and a touring bus with parent testimonials; transformed the claim from a textual controversy into an emotionally compelling documentary narrative that anchored a new wave of vaccine hesitancy."
+        },
+        {
+          "instance_id": "a84146555891",
+          "date": "2016-11-09",
+          "source_url": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "source_title": "Donald Trump public statements on vaccines and autism (2007–2016, including Republican primary debate Sept. 2015)",
+          "author": "Donald J. Trump",
+          "lexical_form_seen": "vaccines causing autism; beautiful babies getting shots and then being autistic; too many vaccines too soon causing neurological problems",
+          "exact_quote": "\"If you take a look at autism, go back 25 years, autism was almost nonexistent. It was, you know, one out of 100,000 and now it's close to one out of 100,\" he once told NBC.",
+          "confidence": 0.9,
+          "evidence": "Trump's repeated public statements — at the September 2015 Republican primary debate and across multiple interviews — made the structural claim (vaccines, through their biological effects on young children, cause autism) from a major-party political platform, framing it as a temporal correlation that demands investigation and lending it political legitimacy.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Trump's articulation of the vaccine-autism claim at a nationally televised presidential debate representing tens of millions of viewers represents the highest-profile institutional political adoption of the structural claim, later converting into executive-branch policy when he appointed RFK Jr. as HHS Secretary."
+        },
+        {
+          "instance_id": "be951a392f6f",
+          "date": "2017-01-15",
+          "source_url": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "source_title": "Children's Health Defense (formerly World Mercury Project) — institutional campaign",
+          "author": "Robert F. Kennedy Jr. (founder and chairman)",
+          "lexical_form_seen": "childhood vaccine schedule causing autism epidemic; mercury adjuvants and aluminum in vaccines neurotoxic to children; chemical components of mandated vaccines triggering neurodevelopmental disorders",
+          "exact_quote": "Children's Health Defense … alleges that exposure to certain chemicals and radiation has caused a wide range of conditions in many American children, including autism.",
+          "confidence": 0.94,
+          "evidence": "CHD (rebranded from World Mercury Project in 2018) became the primary institutional vehicle for the structural claim — vaccines cause autism through their biological/chemical components — producing a continuous stream of legal filings, studies, media content, and legislative testimony sustaining the claim in public discourse through the Trump era.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "As an organized nonprofit with revenues growing from $1.1M (2018) to $23.5M (2022), CHD institutionalized the structural claim within the US anti-vaccine advocacy infrastructure and directly funded political campaigns, court cases, and media that kept it alive through the COVID era."
+        },
+        {
+          "instance_id": "e339d850a1ef",
+          "date": "2019-11-01",
+          "source_url": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "source_title": "Vaxxed II: The People's Truth (documentary)",
+          "author": "Del Bigtree (director); Robert F. Kennedy Jr. (executive producer)",
+          "lexical_form_seen": "vaccines causing autism and developmental disability; parent testimonials of vaccination-triggered regression; childhood immunization schedule producing epidemic of neurological injury",
+          "exact_quote": "Kennedy is listed as executive producer of Vaxxed II: The People's Truth, the 2019 sequel to Wakefield's and Bigtree's anti-vaccination propaganda film Vaxxed.",
+          "confidence": 0.88,
+          "evidence": "Vaxxed II extended the structural claim — vaccines, through biological/chemical properties, cause autism and developmental disability in children — via hundreds of parent testimonials of vaccination-triggered regression, sustaining and broadening the audience for the claim in the post-Wakefield, pre-COVID period.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "As a crowd-funded sequel reaching a now-primed anti-vaccine audience through online distribution, Vaxxed II maintained the structural claim's visibility between the 2016 original and the COVID-era explosion of vaccine skepticism."
+        },
+        {
+          "instance_id": "a14cca4b0fea",
+          "date": "2021-11-16",
+          "source_url": "https://en.wikipedia.org/wiki/The_Real_Anthony_Fauci",
+          "source_title": "The Real Anthony Fauci: Bill Gates, Big Pharma, and the Global War on Democracy and Public Health",
+          "author": "Robert F. Kennedy Jr.",
+          "lexical_form_seen": "childhood vaccines causing autism and chronic disease epidemic; pharmaceutical cartel suppressing vaccine-injury science; mandated vaccine schedule neurotoxic to children",
+          "exact_quote": "Kennedy's book and public statements repeatedly suggest vaccines cause autism or widespread chronic illness, a core allegation that multiple outlets say is debunked by scientific consensus.",
+          "confidence": 0.92,
+          "evidence": "Kennedy's 2021 bestseller (reportedly ~1 million copies sold) embedded the structural claim — vaccines cause autism in children through biological toxicity — within a sweeping conspiratorial framework about pharma/government capture, giving it new reach during the COVID-era vaccine-skepticism wave and among audiences already primed by pandemic distrust.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Sold nearly a million copies, generating an estimated $3M in royalties for Kennedy; reached a new generation of vaccine-skeptical readers radicalized by COVID-era health distrust, dramatically expanding the audience for the structural claim beyond its traditional anti-vaccine base."
+        },
+        {
+          "instance_id": "e454073427f5",
+          "date": "2024-12-08",
+          "source_url": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "source_title": "Trump NBC 'Meet the Press' interview; appointment of RFK Jr. as HHS Secretary",
+          "author": "Donald J. Trump (President-elect)",
+          "lexical_form_seen": "investigating vaccines as cause of autism; rise of autism correlating with increased vaccination; somebody has to find out if vaccines cause autism",
+          "exact_quote": "\"I think somebody has to find out,\" Trump said … \"If you go back 25 years ago, you had very little autism.\"",
+          "confidence": 0.93,
+          "evidence": "Trump's Meet the Press statements, paired with the appointment of RFK Jr. as HHS Secretary, constituted the highest-ever institutional-adoption moment for the structural claim — translating it from advocacy into federal government research and regulatory policy, including appointment of David Geier (a known vaccine-autism claimant) to lead an official study.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The Trump-RFK Jr. appointments represent the first time the structural claim (vaccines cause autism) achieved formal US executive-branch institutional status, with HHS reorganizations, ACIP replacement, and official research directives explicitly targeting a vaccine-autism link."
+        },
+        {
+          "instance_id": "a87d9d5a4fcf",
+          "date": "2025-04-01",
+          "source_url": "https://www.americanprogress.org/article/rfk-jr-is-systematically-undermining-vaccine-science-and-endangering-health/",
+          "source_title": "HHS Secretary Kennedy's actions: hiring David Geier, restructuring ACIP, banning thimerosal",
+          "author": "Robert F. Kennedy Jr. (as US HHS Secretary)",
+          "lexical_form_seen": "vaccines causing autism epidemic; thimerosal in vaccines triggering neurodevelopmental disorders; childhood immunization schedule producing chronic disease including autism",
+          "exact_quote": "He hired David Geier, a known vaccine skeptic who Maryland regulators disciplined for practicing medicine without a license, to lead a study to reinvestigate the long-discredited theory that vaccines cause autism.",
+          "confidence": 0.95,
+          "evidence": "Kennedy's actions as HHS Secretary — commissioning official autism-vaccine studies, replacing ACIP, removing thimerosal from flu vaccines, and funding vaccine-skeptic researchers — represent the current terminal node of the intellectual lineage: the structural claim has moved from scientific fraud → popularization → political platform → federal regulatory policy.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "As the sitting US Secretary of HHS, Kennedy's 2025 policy actions represent the most consequential institutional adoption of the structural claim in its entire lineage, with direct regulatory and public-health consequences."
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "I conducted a systematic multi-vector search across the following traditions and domains, looking for any pre-1933-01-01 text articulating the structural claim that vaccine administration, through its biological or chemical properties, causes autism spectrum disorder (or a functional equivalent) in children who receive vaccines.\n\n**Traditions and domains checked:**\n\n1. **History of the vaccines-and-autism claim specifically:** Multiple authoritative sources converge on the same finding. The Wikipedia article on 'Vaccines and autism' states that researcher Peter Hotez 'concluded that its spread originated with Andrew Wakefield's fraudulent 1998 paper, and that no prior paper supports a link.' Wikipedia's MMR vaccine and autism article dates the first suggestion of a link to 'the early 1990s.' The structural claim as such — vaccines cause autism in children — has no documented pre-1933 precursor, and indeed no pre-1990s precursor.\n\n2. **Conceptual impossibility before 1943 (and practically before the 1990s):** The very target concept — 'autism' as a named, discrete neurodevelopmental syndrome — did not exist as a diagnostic category before Leo Kanner's 1943 paper 'Autistic Disturbances of Affective Contact.' Kanner coined 'infantile autism' in 1944. The earliest precursor work (Sukhareva 1925-26, Frankl pre-1938, Asperger 1944) likewise post-dates 1933. The term 'autism' was previously used by Bleuler (c.1911) only to describe a symptom of adult schizophrenia — a withdrawal from reality — not a distinct childhood developmental condition. There was therefore no linguistic or conceptual vehicle available before 1933 (let alone before 1943) for anyone to articulate the specific claim that vaccines cause 'autism' in children. The structural claim as specified is logically impossible to have been articulated before 'autism' existed as a concept.\n\n3. **Analogous or precursor structural claims (vaccines cause neurodevelopmental harm in children):** I searched extensively for 19th- and early 20th-century anti-vaccination literature claiming vaccines cause mental deficiency, idiocy, feeblemindedness, developmental regression, or any cognate neurological syndrome in children. The anti-vaccination movements of the 19th century (Anti-Vaccination Society of America, founded 1879; New England Anti Compulsory Vaccination League, 1882; various British leagues) focused overwhelmingly on: (a) the risk of transmitting other infections (e.g., syphilis) via arm-to-arm vaccination; (b) bodily autonomy and religious/liberty objections; (c) general safety and efficacy doubts; not on specific claims of neurodevelopmental harm to children's cognition or social behavior. There is no documented 19th-century or early 20th-century claim that smallpox vaccination causes mental disability or behavioral regression in children specifically analogous to the autism claim.\n\n4. **Pertussis (whooping cough) vaccine and neurological harm:** The earliest documented claim that a vaccine causes acute neurological harm in children is Madsen (1933) — reporting two sudden infant deaths following pertussis vaccine — which is contemporaneous with, not prior to, the proposed date of 1933-01-01. NCBI's authoritative review states: 'The possibility that pertussis immunization might cause adverse neurologic events resulting in permanent brain injury was first raised following a report of two cases by Madsen (1933) and case reports published in the 1940s.' Crucially, Madsen (1933) reported convulsions and death, not any autism-equivalent developmental condition. The first published reports of 'irreversible or chronic neurologic damage' (including 'mental retardation') following pertussis vaccination came in the late 1940s (Brody & Sorley 1947; Byers & Moll 1948). These post-date both 1933 and the autism concept, and even then are about mental retardation/encephalopathy, not autism.\n\n5. **Thimerosal/mercury hypothesis:** Thimerosal was approved as a vaccine preservative in the 1940s; fears about it as a cause of autism emerged only after a 1999 government report. This line of the claim is entirely post-1933.\n\n6. **Religious and philosophical traditions:** No pre-modern, religious, or political-economy tradition was found that articulates anything resembling the specific causal claim that an inoculation substance causes a neurodevelopmental social-withdrawal syndrome in children. Inoculation/variolation skepticism (e.g., 18th-century debates about Jenner and Cotton Mather) was purely about the risk of infection or theological objections, not neurodevelopmental harm.\n\n**Conclusion:** This is a clean negative result. The structural claim 'vaccines cause autism in children' could not have been articulated before 1933-01-01 for two independent, compounding reasons: (1) 'autism' as a distinct childhood neurodevelopmental category was not defined until Kanner's 1943 paper; and (2) the claim that vaccines cause any neurodevelopmental/behavioral regression in children (even in pre-autism vocabulary) is also not documented before 1933 — the earliest such report being Madsen (1933), which is about acute death/convulsions, not developmental disability. The proposed earliest date of 1933-01-01 is therefore not only unchallenged but in fact almost certainly too early: the claim as specified (autism, not merely neurological injury) could not have been articulated until after 1943 at the earliest, and in practice did not appear in any precursor form until 1998 (Wakefield). The 1933 proposed date likely refers to Madsen (1933) which is about pertussis vaccine and acute neurological reactions — a precursor structural concern about vaccine neurological harm, but not the autism claim and not articulated before January 1, 1933.",
+      "mutations": [
+        {
+          "from_source": "https://www.ncbi.nlm.nih.gov/books/NBK234367/",
+          "to_source": "https://pubmed.ncbi.nlm.nih.gov/18857905/",
+          "preserved": "the core concern that pertussis vaccination can cause serious neurological injury in children",
+          "dropped": "the tentative, hedged framing ('possibility that') and the specific case-report basis of the original claim",
+          "added": "the authoritative nominalization 'encephalopathy' lending clinical legitimacy and diagnostic finality",
+          "distorted": "shift from a cautious speculative report of two cases to a definitive identification of a recognized condition",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.350120+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://pubmed.ncbi.nlm.nih.gov/18857905/",
+          "to_source": "https://www.gavi.org/vaccineswork/1970s-whooping-cough-vaccine-scare",
+          "preserved": "the claim that pertussis vaccination is associated with serious neurological harm in children",
+          "dropped": "the original 1948 study's specific diagnostic framing of 'encephalopathy' as a distinct, named clinical finding",
+          "added": "case-series format with a concrete patient count (35 children) lending anecdotal narrative weight",
+          "distorted": "scope shifted from a foundational scientific report to a pattern-implying case accumulation, strengthening causal suggestion",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.861914+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.gavi.org/vaccineswork/1970s-whooping-cough-vaccine-scare",
+          "to_source": "https://www.ncbi.nlm.nih.gov/books/NBK234365/",
+          "preserved": "the association between pertussis vaccine and severe neurological harm in children",
+          "dropped": "the medical journal context, the specific case-series methodology, and the limited sample size of 35 children",
+          "added": "mass-media broadcast framing, emotionally charged title 'Vaccine Roulette,' and wide public amplification via television",
+          "distorted": "a cautious clinical case series became a sensationalized documentary implying systematic vaccine-caused injury, shifting from observation to accusation",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.537930+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.ncbi.nlm.nih.gov/books/NBK234365/",
+          "to_source": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "preserved": "the core assertion that a childhood vaccine is causally linked to a developmental or neurological harm in children",
+          "dropped": "the litigation and manufacturer context that framed the earlier claim as a sociolegal consequence rather than direct scientific finding",
+          "added": "a specific proposed biological mechanism (colitis as intermediary) and a named vaccine (MMR) lending false scientific legitimacy",
+          "distorted": "shift from broad liability-driven alarm about DPT to a peer-reviewed causal chain directly linking MMR to autism, amplifying credibility and reach",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.964818+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Lancet_MMR_autism_fraud",
+          "to_source": "https://www.barnesandnoble.com/w/evidence-of-harm-david-kirby/1100335648",
+          "preserved": "the central claim that vaccines are causally linked to autism in children",
+          "dropped": "the specific MMR vaccine and colitis-as-intermediary mechanism from the original Wakefield framing",
+          "added": "thimerosal/mercury as the proposed mechanism, and the framing of autism as a worldwide epidemic",
+          "distorted": "scope expanded from a specific vaccine-gut-brain pathway to a broad chemical-preservative explanation across all pediatric vaccines",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.535630+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.barnesandnoble.com/w/evidence-of-harm-david-kirby/1100335648",
+          "to_source": "https://en.wikipedia.org/wiki/Deadly_Immunity",
+          "preserved": "the claim that thimerosal in vaccines is linked to autism in children",
+          "dropped": "the explicit framing as an open question ('could...be the cause') and the 'medical controversy' qualification signaling uncertainty",
+          "added": "a specific institutional villain (CDC conference at Simpsonwood), implying government cover-up rather than scientific debate",
+          "distorted": "shift from exploratory hypothesis to definitive causal assertion ('caused autism'), removing all epistemic hedging",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.390236+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Deadly_Immunity",
+          "to_source": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "preserved": "the core claim that vaccines contributed to a child's autism diagnosis",
+          "dropped": "the specific institutional evidence (Simpsonwood CDC conference) and the named chemical mechanism (thimerosal) anchoring the earlier version",
+          "added": "a personal maternal narrative framing and an intermediate immune-deficiency mechanism linking vaccines to autism",
+          "distorted": "shifted from a document-based systemic accusation against public health institutions to an individualized emotional testimony, broadening blame from a specific ingredient to vaccines generally",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.373117+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Jenny_McCarthy",
+          "to_source": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "preserved": "the claim that a vaccine-related substance causes autism in children",
+          "dropped": "the personal maternal narrative and the individualized immune-deficiency mechanism that grounded McCarthy's original claim",
+          "added": "a specific chemical scapegoat (thimerosal) and a defensive 'not anti-vaccine' disclaimer framing Kennedy as a scientific reformer",
+          "distorted": "scope shifted from one child's personal story to a population-level causal claim about rising autism rates across the U.S.",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.134217+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "to_source": "https://en.wikipedia.org/wiki/Vaxxed",
+          "preserved": "the assertion of a causal link between a specific vaccine component or vaccine and autism in children",
+          "dropped": "the narrow targeting of thimerosal as the specific agent, which allowed Kennedy to disclaim general anti-vaccine positioning",
+          "added": "institutional conspiracy framing accusing the CDC of an active cover-up, escalating from product criticism to government malfeasance",
+          "distorted": "scope widened from one preservative in some vaccines to the MMR vaccine itself, implicating a broader, still-used childhood immunization",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:34.845395+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Vaxxed",
+          "to_source": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "preserved": "the implied causal link between vaccines and rising autism rates in children",
+          "dropped": "the explicit CDC cover-up conspiracy framing and institutional wrongdoing accusation central to the film",
+          "added": "statistical time-series comparison ('25 years ago' vs. now) lending a veneer of empirical, data-driven reasoning",
+          "distorted": "shift from direct vaccine-autism causation allegation to suggestive correlation via rising prevalence numbers, leaving the causal mechanism implicit",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.300566+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "to_source": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "preserved": "the claim that autism in children is caused by external, preventable exposures rather than genetic or natural factors",
+          "dropped": "the specific vaccine-autism link and the epidemiological framing using historical prevalence statistics",
+          "added": "a broader institutional framing citing 'chemicals and radiation' as causes, diffusing blame beyond vaccines alone",
+          "distorted": "the specific vaccine-autism claim was generalized into a wider environmental-toxin narrative, obscuring the original target",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.760297+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.",
+          "to_source": "https://en.wikipedia.org/wiki/The_Real_Anthony_Fauci",
+          "preserved": "the core allegation linking vaccines to serious developmental or health harm in children",
+          "dropped": "the specific Wakefield/Bigtree lineage and institutional documentary format that provided the earlier claim's propagation vehicle",
+          "added": "a broadened target list (Fauci, Gates, Big Pharma) and a 'global war' conspiracy framing embedding the vaccine-autism claim within a systemic power narrative",
+          "distorted": "scope expanded from autism specifically to 'widespread chronic illness,' generalizing the harm claim beyond its original diagnostic specificity",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.966465+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://en.wikipedia.org/wiki/The_Real_Anthony_Fauci",
+          "to_source": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "preserved": "the insinuation that childhood vaccines are linked to rising autism rates",
+          "dropped": "Kennedy's explicit framing and the surrounding context of scientific debunking by multiple outlets",
+          "added": "presidential authority framing via a high-profile appointment, plus a nostalgic '25 years ago' temporal anchor suggesting a clear before/after causation",
+          "distorted": "shift from a named ideological advocate's contested allegation to a president-elect's open investigative question, lending institutional legitimacy to a debunked claim",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.429680+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        },
+        {
+          "from_source": "https://www.nbcnews.com/politics/donald-trump/trump-says-rfk-jr-will-investigate-discredited-link-vaccines-autism-so-rcna183273",
+          "to_source": "https://www.americanprogress.org/article/rfk-jr-is-systematically-undermining-vaccine-science-and-endangering-health/",
+          "preserved": "the framing that the vaccine-autism link warrants official government investigation",
+          "dropped": "Trump's hedged, questioning language ('somebody has to find out') is replaced by concrete institutional action, losing any appearance of uncertainty",
+          "added": "specific bureaucratic mechanisms—hiring a discredited researcher, restructuring ACIP, banning thimerosal—lending the claim the weight of federal scientific authority",
+          "distorted": "what was expressed as an open question by a president-elect became operationalized policy by a cabinet secretary, elevating a discredited theory to state-sanctioned research agenda",
+          "status": "ai_generated",
+          "attribution": {
+            "source": "ai",
+            "model": "claude-sonnet-4-6",
+            "contributor_name": "",
+            "timestamp": "2026-05-21T16:29:35.248903+00:00",
+            "confidence": 0,
+            "reasoning": ""
+          }
+        }
+      ],
+      "curation_note": "Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D). | Corpus sweep 2026-07-05: mechanical label fixes applied (see CORRECTIONS.md / ROADMAP 2.8-D).",
+      "timeline_stats": {
+        "active_from": "1933-01-01",
+        "active_through": "2025-04-01",
+        "active_span_days": 33693,
+        "years_active": 92,
+        "years_with_activity": 16,
+        "instances_per_year": {
+          "1933": 1,
+          "1948": 1,
+          "1974": 1,
+          "1982": 1,
+          "1985": 1,
+          "1998": 1,
+          "2000": 1,
+          "2005": 2,
+          "2007": 1,
+          "2014": 1,
+          "2016": 2,
+          "2017": 1,
+          "2019": 1,
+          "2021": 1,
+          "2024": 1,
+          "2025": 1
+        },
+        "instances_per_year_by_role": {
+          "1933": {
+            "originator": 1
+          },
+          "1948": {
+            "early-amplifier": 1
+          },
+          "1974": {
+            "mass-amplifier": 1
+          },
+          "1982": {
+            "mass-amplifier": 1
+          },
+          "1985": {
+            "mass-amplifier": 1
+          },
+          "1998": {
+            "early-amplifier": 1
+          },
+          "2000": {
+            "mention": 1
+          },
+          "2005": {
+            "mass-amplifier": 2
+          },
+          "2007": {
+            "mass-amplifier": 1
+          },
+          "2014": {
+            "early-amplifier": 1
+          },
+          "2016": {
+            "mass-amplifier": 1,
+            "institutional-adoption": 1
+          },
+          "2017": {
+            "institutional-adoption": 1
+          },
+          "2019": {
+            "mass-amplifier": 1
+          },
+          "2021": {
+            "mass-amplifier": 1
+          },
+          "2024": {
+            "institutional-adoption": 1
+          },
+          "2025": {
+            "institutional-adoption": 1
+          }
+        },
+        "peak_year": "2005",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": 14975,
+        "originator_to_institutional_adoption_days": 30628,
+        "originator_to_critic_days": null,
+        "days_since_latest": 460
+      }
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "health",
+    "domain_confidence": 0.98,
+    "inductive_cluster_ids": [],
+    "tropes": [
+      "big-pharma",
+      "misinformation",
+      "hidden-cabal"
+    ]
+  },
+  "attribution": {
+    "source": "ai",
+    "model": "claude-sonnet-4-6",
+    "contributor_name": "",
+    "timestamp": "2026-05-21T16:29:38.324900+00:00",
+    "confidence": 0,
+    "reasoning": ""
+  },
+  "amplifiers": {
+    "n_actors": 17,
+    "actors": [
+      {
+        "actor_id": "4d4c54f9dae8",
+        "display": "NIH",
+        "actor_type": "official",
+        "roles": [
+          "critic",
+          "early-amplifier",
+          "mass-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 5,
+        "first_date": "1933-01-01",
+        "last_date": "1998-03-07"
+      },
+      {
+        "actor_id": "7f5a68385c70",
+        "display": "gavi.org",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1974-01-01",
+        "last_date": "1974-01-01"
+      },
+      {
+        "actor_id": "13eb04be0b01",
+        "display": "nvic.org",
+        "actor_type": "news",
+        "roles": [
+          "originator",
+          "unknown"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "1985-01-01",
+        "last_date": "1991-01-01"
+      },
+      {
+        "actor_id": "3c0cb63b6a62",
+        "display": "sciencebasedmedicine.org",
+        "actor_type": "news",
+        "roles": [
+          "unknown"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1994-01-01",
+        "last_date": "1994-01-01"
+      },
+      {
+        "actor_id": "4745eeb1222b",
+        "display": "thelancet.com",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "1995-01-01",
+        "last_date": "1999-06-12"
+      },
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "critic",
+          "early-amplifier",
+          "institutional-adoption",
+          "mass-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 10,
+        "first_date": "1998-02-28",
+        "last_date": "2021-11-16"
+      },
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2000-04-06",
+        "last_date": "2000-04-06"
+      },
+      {
+        "actor_id": "a7104347581b",
+        "display": "cdc.gov",
+        "actor_type": "official",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2000-06-07",
+        "last_date": "2000-06-07"
+      },
+      {
+        "actor_id": "59a9057df0a1",
+        "display": "barnesandnoble.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2005-03-01",
+        "last_date": "2005-03-01"
+      },
+      {
+        "actor_id": "0776ff232199",
+        "display": "rollingstone.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2005-06-16",
+        "last_date": "2005-06-16"
+      },
+      {
+        "actor_id": "5357eb44eda0",
+        "display": "TIME",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-01-01",
+        "last_date": "2007-01-01"
+      },
+      {
+        "actor_id": "524e4a185305",
+        "display": "oprah.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-09-18",
+        "last_date": "2007-09-18"
+      },
+      {
+        "actor_id": "9133fdf245a8",
+        "display": "PBS NewsHour",
+        "actor_type": "news",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2010-02-04",
+        "last_date": "2010-02-04"
+      },
+      {
+        "actor_id": "52dd76c9be32",
+        "display": "@realdonaldtrump",
+        "actor_type": "social",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-09-03",
+        "last_date": "2014-09-03"
+      },
+      {
+        "actor_id": "3e0628a72c5f",
+        "display": "statnews.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2015-09-16",
+        "last_date": "2015-09-16"
+      },
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2016-11-09",
+        "last_date": "2024-12-08"
+      },
+      {
+        "actor_id": "874e36703e32",
+        "display": "americanprogress.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-04-01",
+        "last_date": "2025-04-01"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "4d4c54f9dae8",
+        "display": "NIH",
+        "actor_type": "official",
+        "roles": [
+          "critic",
+          "early-amplifier",
+          "mass-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 5,
+        "first_date": "1933-01-01",
+        "last_date": "1998-03-07"
+      },
+      {
+        "actor_id": "13eb04be0b01",
+        "display": "nvic.org",
+        "actor_type": "news",
+        "roles": [
+          "originator",
+          "unknown"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "1985-01-01",
+        "last_date": "1991-01-01"
+      },
+      {
+        "actor_id": "4745eeb1222b",
+        "display": "thelancet.com",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "1995-01-01",
+        "last_date": "1999-06-12"
+      },
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "critic",
+          "early-amplifier",
+          "institutional-adoption",
+          "mass-amplifier",
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 10,
+        "first_date": "1998-02-28",
+        "last_date": "2021-11-16"
+      }
+    ],
+    "critics": [],
+    "social_accounts": [],
+    "by_actor_type": {
+      "official": 2,
+      "news": 13,
+      "reference": 1,
+      "social": 1
+    },
+    "date_span": [
+      "1933-01-01",
+      "2025-04-01"
+    ]
+  }
+}

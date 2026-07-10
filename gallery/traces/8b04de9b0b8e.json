@@ -1,0 +1,908 @@
+{
+  "fingerprint_id": "8b04de9b0b8e",
+  "created_at": "2026-07-10T21:48:05.995007+00:00",
+  "last_updated": "2026-07-10T21:48:05.995007+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "swallowed gum passes through your system in a few days",
+    "phrase_variants": [
+      "gum passes through in days",
+      "swallowed gum comes out in a few days",
+      "gum goes through your digestive system",
+      "gum doesn't stay in your stomach",
+      "swallowed gum is harmless and passes"
+    ],
+    "diagnostic_ngrams": [
+      "gum passes through",
+      "swallowed gum days",
+      "gum digestive system",
+      "gum comes out"
+    ],
+    "stopword_stripped_signature": "swallowed gum passes through your system few days"
+  },
+  "conceptual": {
+    "claim_predicate": "swallowed chewing gum is digestible or passes through the digestive system without harm",
+    "entities": {
+      "agent": "swallowed chewing gum",
+      "patient": "the human digestive system / the person who swallows it",
+      "arena": "human digestion and gastrointestinal health",
+      "instrument": "the physical and chemical properties of the digestive tract and gum composition"
+    },
+    "causal_structure": "chewing gum, when swallowed, moves through the digestive system via normal peristalsis and is excreted within a few days without accumulating or causing obstruction"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "harm-claim"
+    ],
+    "valence": {
+      "villain": "",
+      "victim": "",
+      "hero": "the digestive system"
+    },
+    "epistemic_stance": "certain",
+    "register": "casual"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "earliest-found",
+      "first_attested_date": "1993-05-26",
+      "first_attested_source": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+      "attestation_confidence": 0.55,
+      "primary_origin_id": "77e2b9599aae",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "77e2b9599aae",
+          "date": "1993-05-26",
+          "source_url": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+          "source_title": "Chew on This for a While",
+          "author": "",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "[Title and framing: debunking gum-stays-seven-years; gum passes through digestive system]",
+          "confidence": 0.55,
+          "evidence": "Listed in Snopes' primary bibliography as '[Minneapolis] Star Tribune, \"Chew on This for a While,\" 26 May 1993 (p. T4).' Print article; no digitized text available. Snopes cites it as a source debunking the seven-year myth, implying it carried the corrective 'passes through' framing. Date is from Snopes citation metadata. Cannot confirm exact lexical form without access to the original print.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Mainstream regional newspaper article debunking the myth and presumably articulating the corrective framing before the internet era; cited by Snopes as a primary source.",
+          "cited_via": "Snopes bibliography (Barbara Mikkelson, 'The Seven Year Glitch', Snopes.com, Jan 5 2005)",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161058+00:00",
+            "confidence": 0.55,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "8cc931011f1f",
+          "date": "1993-09-19",
+          "source_url": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+          "source_title": "Between Chew and Shoe",
+          "author": "Roy Rivenburg",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "[Debunks seven-year myth; gum passes through digestive system \u2014 exact wording unconfirmed from print]",
+          "confidence": 0.55,
+          "evidence": "Listed in Snopes' primary bibliography as 'Rivenburg, Roy. \"Between Chew and Shoe.\" Los Angeles Times. 19 September 1993 (p. E1).' Print article; no digitized text available. Snopes cites it as a debunking source, implying the corrective framing. Date is from Snopes citation metadata.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Major national newspaper (LA Times) article debunking the myth before the internet era; cited by Snopes as a primary source alongside the Star Tribune piece.",
+          "cited_via": "Snopes bibliography (Barbara Mikkelson, 'The Seven Year Glitch', Snopes.com, Jan 5 2005)",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161474+00:00",
+            "confidence": 0.55,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "af7d164d91ae",
+          "date": "1998-01-01",
+          "source_url": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+          "source_title": "The Real Truth About Health Myths",
+          "author": "Ad Hudler",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "[Debunks health myths including gum-stays-seven-years; gum passes through digestive system \u2014 exact wording unconfirmed from print]",
+          "confidence": 0.5,
+          "evidence": "Listed in Snopes' bibliography as 'Hudler, Ad. \"The Real Truth About Health Myths.\" Better Homes and Gardens. January 1998.' Print article; no digitized text available. Cited by Snopes as a debunking source. Date is from Snopes citation metadata.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Mass-circulation consumer magazine (Better Homes and Gardens) article debunking the myth, reaching a broad domestic audience in 1998.",
+          "cited_via": "Snopes bibliography (Barbara Mikkelson, 'The Seven Year Glitch', Snopes.com, Jan 5 2005)",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161530+00:00",
+            "confidence": 0.5,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "7cf72c8d31e6",
+          "date": "1998-08-01",
+          "source_url": "https://pediatrics.aappublications.org/cgi/content/full/102/2/e22",
+          "source_title": "Chewing gum bezoars of the gastrointestinal tract",
+          "author": "David E. Milov et al.",
+          "lexical_form_seen": "gum passes through / gum digestive system",
+          "exact_quote": "\"It probably passes through slower than most foodstuffs, but eventually the normal housekeeping waves in the digestive tract will sort of push it through\"",
+          "confidence": 0.8,
+          "evidence": "Peer-reviewed paper in Pediatrics (August 1998) by Milov et al. documenting gum bezoar cases. Milov is quoted in Scientific American (2007) and HowStuffWorks using the 'passes through' framing directly. The paper is the foundational clinical source cited by virtually every subsequent debunking article. The quote is attributed to Milov in Scientific American's 2007 article, which drew on the 1998 Pediatrics work.",
+          "amplifier_role": "originator",
+          "role_evidence": "The 1998 Pediatrics paper by Milov et al. is the earliest identified primary source in which a named medical authority explicitly articulates the 'gum passes through' corrective framing in a citable, widely-reproduced form; all subsequent online debunking articles trace back to this paper and Milov's quotes.",
+          "cited_via": "HowStuffWorks citation: 'Milov, David E. et al. \"Chewing gum bezoars of the gastrointestinal tract.\" Pediatrics. August 1998.'",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20090831040125/http://pediatrics.aappublications.org:80/cgi/content/full/102/2/e22",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161546+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "73308a8fc364",
+          "date": "2000-08-01",
+          "source_url": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+          "source_title": "Chew on This",
+          "author": "Nicholas Johnston",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "[Debunks seven-year myth; gum passes through digestive system \u2014 exact wording unconfirmed from print]",
+          "confidence": 0.5,
+          "evidence": "Listed in Snopes' bibliography as 'Johnston, Nicholas. \"Chew on This.\" The Washington Post. 1 August 2000 (p. C13).' Print article; no digitized text available. Cited by Snopes as a debunking source. Date is from Snopes citation metadata.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Washington Post article debunking the myth, reaching a national audience and bridging the pre-internet and early-internet eras.",
+          "cited_via": "Snopes bibliography (Barbara Mikkelson, 'The Seven Year Glitch', Snopes.com, Jan 5 2005)",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161555+00:00",
+            "confidence": 0.5,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "29f67666a672",
+          "date": "2005-01-05",
+          "source_url": "https://www.snopes.com/fact-check/the-seven-year-glitch/",
+          "source_title": "The Seven Year Glitch (Does Chewing Gum Take Seven Years to Digest?)",
+          "author": "Barbara Mikkelson",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "\"once it's sent down the alimentary canal it's no more remarkable in that respect than most anything else we swallow\"",
+          "confidence": 0.85,
+          "evidence": "Snopes article dated January 5, 2005 per HowStuffWorks citation ('Mikkelson, Barbara. \"The seven year glitch.\" Snopes.com. January 5, 2005'). The article explicitly debunks the seven-year myth and articulates the corrective framing that gum passes through the digestive system like other indigestible matter. This is the earliest confirmed online debunking article with a precise date.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Snopes is the dominant urban-legend reference site; its 2005 article on this myth became the go-to citation for all subsequent online debunking and drove broad public awareness of the corrective 'passes through' framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161564+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "8da9fbfff3e8",
+          "date": "2005-11-10",
+          "source_url": "https://bendbulletin.com/2005/11/10/fact-or-fiction-chewing-gum-stays-in-the-stomach-for-seven-years-if-swallowed/",
+          "source_title": "Fact or fiction: Chewing gum stays in the stomach for seven years if swallowed",
+          "author": "",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "\"in rare cases swallowing a lot of gum can block the digestive tract\"",
+          "confidence": 0.75,
+          "evidence": "Bend Bulletin article dated November 10, 2005 per page metadata. Cites Milov's 1998 Pediatrics paper and articulates the corrective framing that gum passes through the digestive tract. Confirms regional newspaper uptake of the debunking framing in 2005.",
+          "amplifier_role": "critic",
+          "role_evidence": "Regional newspaper article spreading the corrective 'gum passes through' framing to a general audience shortly after the Snopes article, citing the Milov 1998 clinical source. [Role adjusted from early-amplifier: the title announces an examining function.]",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161576+00:00",
+            "confidence": 0.75,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "4c841c93200f",
+          "date": "2007-10-11",
+          "source_url": "https://www.scientificamerican.com/article/fact-or-fiction-chewing-gum-takes-seven-years-to-digest/",
+          "source_title": "Fact or Fiction?: Chewing Gum Takes Seven Years to Digest",
+          "author": "John Matson",
+          "lexical_form_seen": "gum passes through / gum digestive system",
+          "exact_quote": "\"It probably passes through slower than most foodstuffs, but eventually the normal housekeeping waves in the digestive tract will sort of push it through\"",
+          "confidence": 0.9,
+          "evidence": "Scientific American article dated October 11, 2007 per HowStuffWorks citation ('Matson, John. \"Fact or fiction?: Chewing gum takes seven years to digest.\" Scientific American. October 11, 2007'). Quotes Milov directly using the 'passes through' framing. This is the most-cited early online source for the corrective framing, with high authority.",
+          "amplifier_role": "critic",
+          "role_evidence": "Scientific American's high-authority platform and the direct Milov quote drove widespread adoption of the 'gum passes through' framing across health media; it is cited in virtually every subsequent article on the topic. [Role adjusted from mass-amplifier: the title announces an examining function.]",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161584+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "dd0c7d033809",
+          "date": "2010-05-01",
+          "source_url": "https://www.yalescientific.org/2010/05/everyday-qa-can-gum-really-stay-in-your-stomach-for-7-years/",
+          "source_title": "Can gum really stay in your stomach for 7 years?",
+          "author": "",
+          "lexical_form_seen": "gum digestive system / swallowed gum passes through",
+          "exact_quote": "\"even if gum does not remain with you for years, swallowing the substance may lead to other negative consequences\"",
+          "confidence": 0.7,
+          "evidence": "Yale Scientific Magazine article from May 2010 per URL date structure. Cites the 1998 Pediatrics study and articulates the corrective framing. Represents academic/institutional uptake of the debunking narrative.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "University science magazine article spreading the corrective framing to an academic audience, citing the Milov 1998 clinical source.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161591+00:00",
+            "confidence": 0.7,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "659db22022f6",
+          "date": "2018-05-29",
+          "source_url": "https://www.healthline.com/health/swallowed-gum",
+          "source_title": "Swallowed Gum: What Happens If You Swallow Gum?",
+          "author": "",
+          "lexical_form_seen": "swallowed gum passes through digestive system / comes out in stool about 40 hours later",
+          "exact_quote": "\"a piece of swallowed gum will usually pass through your digestive system \u2014 basically intact \u2014 and come out in your stool about 40 hours later\"",
+          "confidence": 0.85,
+          "evidence": "Healthline article dated May 29, 2018 per page metadata. Uses the diagnostic n-gram 'pass through your digestive system' explicitly and adds the specific '40 hours' timeframe. Medically reviewed.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Healthline is one of the highest-traffic health information sites; this article's explicit 'passes through your digestive system' framing with a specific timeframe reached millions of readers and is widely cited.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161599+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f29f0bb07298",
+          "date": "2018-07-31",
+          "source_url": "https://www.healthline.com/health/how-long-does-gum-take-to-digest",
+          "source_title": "How Long Does Gum Take to Digest? How Long It Stays In Your System",
+          "author": "",
+          "lexical_form_seen": "gum passes through your system / swallowed gum days",
+          "exact_quote": "\"Gum will usually pass through your system completely in less than seven days. Your body can safely pass gum within a few days.\"",
+          "confidence": 0.9,
+          "evidence": "Healthline article dated July 31, 2018 per page metadata. Contains multiple diagnostic n-grams: 'pass through your system', 'pass gum within a few days', 'gum digestive system'. Medically reviewed by Daniel Murrell, M.D.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "High-traffic Healthline article with explicit 'passes through your system in a few days' framing, medically reviewed, reaching a very large audience and ranking highly in search results.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161606+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "6a809bf3e5f6",
+          "date": "2019-11-07",
+          "source_url": "https://www.mcgill.ca/oss/article/health/gum-and-7-year-myth",
+          "source_title": "Gum and the 7 Year Myth",
+          "author": "",
+          "lexical_form_seen": "gum passes through / gum digestive system / swallowed gum days",
+          "exact_quote": "\"Gum, like most other undigested foods, will pass through you within 24-48 hours.\"",
+          "confidence": 0.9,
+          "evidence": "McGill University Office for Science and Society article dated November 7, 2019 per page metadata. Contains the diagnostic n-gram 'pass through you within 24-48 hours' \u2014 a clear lexical instance of 'gum passes through [in] days'.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "McGill University's Office for Science and Society adopts the corrective framing as its institutional position, lending academic authority to the 'gum passes through in days' claim.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161615+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "ab5da96f258a",
+          "date": "2022-04-25",
+          "source_url": "https://health.clevelandclinic.org/what-happens-when-you-swallow-gum",
+          "source_title": "What Really Happens When You Swallow Gum",
+          "author": "",
+          "lexical_form_seen": "swallowed gum comes out / gum passes through digestive system",
+          "exact_quote": "\"If you've swallowed a piece of gum, it'll come out about 40 hours later in your stool\"",
+          "confidence": 0.9,
+          "evidence": "Cleveland Clinic article dated April 25, 2022 per page metadata. Uses the diagnostic n-gram 'come out about 40 hours later' \u2014 a clear lexical instance of 'swallowed gum comes out in [days]'. Attributed to dietitian Kate Czerwony.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Cleveland Clinic, a major medical institution, adopts the corrective framing as its official health guidance, with a named clinician providing the specific timeframe.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161623+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "08b9295745cd",
+          "date": "2025-04-14",
+          "source_url": "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446",
+          "source_title": "Swallowing gum: Is it harmful?",
+          "author": "",
+          "lexical_form_seen": "gum passes through digestive system / gum doesn't stay in your stomach",
+          "exact_quote": "\"the gum doesn't stay in your stomach. It moves relatively intact through your digestive system and passes out of your body in your stool\"",
+          "confidence": 0.85,
+          "evidence": "Mayo Clinic FAQ page, last accessed April 14, 2025 per its own citation metadata. Copyright footer on syndicated versions reads '\u00a9 1998-2025/2026 MFMER', suggesting the FAQ content dates to at least 1998, but the precise first-publication date of this specific page is unconfirmed without Wayback Machine access. Recorded here at the confirmed access date. Contains the diagnostic n-gram 'passes through your digestive system' explicitly.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Mayo Clinic, the most authoritative US medical institution for consumer health information, adopts the corrective 'passes through your digestive system' framing as its official FAQ answer, giving it maximum institutional weight.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260429050542/https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T21:47:10.161636+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "Conducted seven distinct web searches targeting: (a) general history/origin of the 'swallowed gum passes through in days' framing; (b) pre-1993 newspaper and book sources using n-grams 'gum passes through,' 'swallowed gum days,' 'gum digestive system,' 'gum comes out'; (c) the Snopes.com reference bibliography for this myth, which is the most authoritative compiled source list; (d) the 1998 Milov et al. Pediatrics paper and its cited references; (e) pre-1993 medical journal literature on swallowed gum; (f) variant phrasings including 'swallow gum few days,' 'passes through digestive system,' and date-restricted queries for 1970\u20131992. The Snopes reference list \u2014 the most comprehensive bibliography for this topic \u2014 cites the Minneapolis Star Tribune 'Chew on This for a While' (May 26, 1993, p. T4) as its earliest popular-press source, which is exactly the proposed earliest date, and the LA Times 'Between Chew and Shoe' by Roy Rivenburg (September 19, 1993) as the next. No source in the Snopes bibliography predates May 26, 1993. The 1998 Milov et al. Pediatrics paper cites two pre-1993 medical papers \u2014 Cotner M (1992, South Med J 75:775, 'Fecal impaction due to bubble gum bezoar') and Truex JH et al. (1989, Am J Disease Child 143:253-254, 'Bubble gum bezoar') \u2014 but both concern pathological complications (bezoar/blockage), not the corrective reassurance framing that gum 'passes through in a few days.' These were ruled out as instances of the target framing. Multiple authoritative sources (McGill OSS, Scientific American, Healthline, Duke Health, Snopes, HowStuffWorks) explicitly state that the origin of the myth-debunking framing is unknown and cannot be traced to any specific earlier source. A 1853 NCBI article about swallowed teeth passing through the alimentary canal was found but ruled out as it concerns teeth, not gum, and predates modern chewing gum entirely. Limitations: Google Books full-text search for pre-1993 books was not directly accessible; Usenet archives (Google Groups) were not directly searchable in this session; paywalled newspaper archives (ProQuest Historical Newspapers, Newspapers.com) could not be accessed. It is possible that an earlier instance exists in an undigitized or paywalled source, but no credible evidence of one was found across all accessible sources.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "1993-05-26",
+        "active_through": "2025-04-14",
+        "active_span_days": 11646,
+        "years_active": 32,
+        "years_with_activity": 10,
+        "instances_per_year": {
+          "1993": 2,
+          "1998": 2,
+          "2000": 1,
+          "2005": 2,
+          "2007": 1,
+          "2010": 1,
+          "2018": 2,
+          "2019": 1,
+          "2022": 1,
+          "2025": 1
+        },
+        "instances_per_year_by_role": {
+          "1993": {
+            "early-amplifier": 2
+          },
+          "1998": {
+            "early-amplifier": 1,
+            "originator": 1
+          },
+          "2000": {
+            "early-amplifier": 1
+          },
+          "2005": {
+            "mass-amplifier": 1,
+            "critic": 1
+          },
+          "2007": {
+            "critic": 1
+          },
+          "2010": {
+            "early-amplifier": 1
+          },
+          "2018": {
+            "mass-amplifier": 2
+          },
+          "2019": {
+            "institutional-adoption": 1
+          },
+          "2022": {
+            "institutional-adoption": 1
+          },
+          "2025": {
+            "institutional-adoption": 1
+          }
+        },
+        "peak_year": "1993",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": 2349,
+        "originator_to_institutional_adoption_days": 7768,
+        "originator_to_critic_days": 2658,
+        "days_since_latest": 452
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "health",
+    "domain_confidence": 0.89,
+    "inductive_cluster_ids": [],
+    "tropes": []
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 9,
+    "actors": [
+      {
+        "actor_id": "fcad1d501913",
+        "display": "Snopes",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 5,
+        "first_date": "1993-05-26",
+        "last_date": "2005-01-05"
+      },
+      {
+        "actor_id": "09070cfda22d",
+        "display": "aappublications.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1998-08-01",
+        "last_date": "1998-08-01"
+      },
+      {
+        "actor_id": "13d3331a7fae",
+        "display": "bendbulletin.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2005-11-10",
+        "last_date": "2005-11-10"
+      },
+      {
+        "actor_id": "56d675bb130f",
+        "display": "scientificamerican.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-10-11",
+        "last_date": "2007-10-11"
+      },
+      {
+        "actor_id": "0c221efb3b87",
+        "display": "yalescientific.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2010-05-01",
+        "last_date": "2010-05-01"
+      },
+      {
+        "actor_id": "54f792caea99",
+        "display": "healthline.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2018-05-29",
+        "last_date": "2018-07-31"
+      },
+      {
+        "actor_id": "df64c560cd0f",
+        "display": "mcgill.ca",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-11-07",
+        "last_date": "2019-11-07"
+      },
+      {
+        "actor_id": "78aa1763c9ba",
+        "display": "clevelandclinic.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2022-04-25",
+        "last_date": "2022-04-25"
+      },
+      {
+        "actor_id": "f3c10b5456f8",
+        "display": "mayoclinic.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-04-14",
+        "last_date": "2025-04-14"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "09070cfda22d",
+        "display": "aappublications.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1998-08-01",
+        "last_date": "1998-08-01"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "13d3331a7fae",
+        "display": "bendbulletin.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2005-11-10",
+        "last_date": "2005-11-10"
+      },
+      {
+        "actor_id": "56d675bb130f",
+        "display": "scientificamerican.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-10-11",
+        "last_date": "2007-10-11"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "news": 9
+    },
+    "date_span": [
+      "1993-05-26",
+      "2025-04-14"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-10T21:48:05.994954+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
