@@ -928,7 +928,11 @@ if (loadParam) {
   // only returns if the load fails and the reader genuinely needs it.
   dropZone.hidden = true;
   loadingDiv.hidden = false;
-  fetch(loadParam)
+  // no-store: trace/event JSONs are edited in place (backfills, embeddings);
+  // a browser serving a heuristically-cached copy renders stale data even
+  // after a page reload (found live 2026-07-10: an event updated on disk
+  // kept showing its pre-update state).
+  fetch(loadParam, { cache: 'no-store' })
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(data => { loadingDiv.hidden = true; errorDiv.textContent = ''; routeData(data); })
     .catch(e => {
@@ -1100,9 +1104,19 @@ function renderEventAnalysis(analysis) {
 
   main.querySelectorAll('.fr-trace.clickable').forEach(el => {
     el.onclick = () => {
-      const fr = analysis.framings[parseInt(el.dataset.framingIdx, 10)];
-      const fp = fpById[fr.fingerprint_id];
-      if (fp) openFingerprintFromEvent(fp);
+      // A failed trace-open must say so, not die silently in the console —
+      // a reader who clicks and sees nothing reasonably concludes the
+      // feature is broken (reader test, 2026-07-10).
+      try {
+        const fr = analysis.framings[parseInt(el.dataset.framingIdx, 10)];
+        const fp = fpById[fr.fingerprint_id];
+        if (fp) openFingerprintFromEvent(fp);
+        else el.insertAdjacentHTML('afterend',
+          '<div style="color:#a33; font-size:0.8rem;">Could not open this trace: its fingerprint is not embedded in this file (stale copy? hard-refresh, or reload the JSON).</div>');
+      } catch (err) {
+        el.insertAdjacentHTML('afterend',
+          `<div style="color:#a33; font-size:0.8rem;">Could not render this trace: ${escapeHtml(err.message)} — please report this via the corrections link below.</div>`);
+      }
     };
   });
 
