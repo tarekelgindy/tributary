@@ -1,0 +1,1036 @@
+{
+  "fingerprint_id": "4e1fa849a987",
+  "created_at": "2026-07-10T07:47:04.880639+00:00",
+  "last_updated": "2026-07-10T07:47:04.880639+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "Arctic strategic imperative requires deeper U.S. presence in Greenland",
+    "phrase_variants": [
+      "countering Russian and Chinese Arctic expansion",
+      "strategic necessity in the Arctic",
+      "U.S. must compete in the Arctic",
+      "Arctic geopolitical competition demands American presence",
+      "responding to Russian and Chinese Arctic activity"
+    ],
+    "diagnostic_ngrams": [
+      "Arctic strategic imperative",
+      "Russian Chinese Arctic",
+      "Arctic geopolitical competition",
+      "Arctic presence necessary",
+      "countering Arctic expansion"
+    ],
+    "stopword_stripped_signature": "arctic strategic imperative requires deeper u s presence greenland"
+  },
+  "conceptual": {
+    "claim_predicate": "increased U.S. military and political presence in Greenland is justified by the need to counter rival powers' Arctic expansion",
+    "entities": {
+      "agent": "the United States",
+      "patient": "U.S. strategic interests in the Arctic region",
+      "arena": "great power competition in the Arctic",
+      "instrument": "military presence, diplomatic infrastructure, and geopolitical positioning"
+    },
+    "causal_structure": "Russian and Chinese expansion of activity and influence in the Arctic creates a strategic threat that necessitates increased U.S. presence and engagement in Greenland to maintain competitive balance"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "threat-claim",
+      "solution-prescription"
+    ],
+    "valence": {
+      "villain": "Russia and China",
+      "victim": "U.S. strategic interests in the Arctic",
+      "hero": "the United States"
+    },
+    "epistemic_stance": "certain",
+    "register": "academic"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "single-origin",
+      "first_attested_date": "2009-01-09",
+      "first_attested_source": "https://en.wikipedia.org/wiki/Arctic_policy_of_the_United_States",
+      "attestation_confidence": 0.82,
+      "primary_origin_id": "c977326ada41",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "c977326ada41",
+          "date": "2009-01-09",
+          "source_url": "https://en.wikipedia.org/wiki/Arctic_policy_of_the_United_States",
+          "source_title": "National Security Presidential Directive 66 (NSPD-66) / HSPD-25",
+          "author": "George W. Bush administration",
+          "lexical_form_seen": "assert a more active and influential national presence \u2026 project sea power throughout the region",
+          "exact_quote": "The policy calls for the US to 'assert a more active and influential national presence to protect its Arctic interests and project sea power throughout the region'",
+          "confidence": 0.82,
+          "evidence": "NSPD-66 is a primary government document signed January 9, 2009. The Wikipedia article on Arctic policy of the United States quotes this language directly. The directive frames Arctic presence as a national security necessity, though it predates the explicit Russia-China pairing that defines the later canonical framing. The lexical form 'national presence' in the Arctic for strategic reasons is clearly present.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the earliest U.S. government document found that explicitly frames an 'active and influential national presence' in the Arctic as a strategic imperative, predating all subsequent executive and DoD strategies that built on this language.",
+          "cited_via": "Wikipedia summary of NSPD-66 text; original document: National Security Presidential Directive 66 / Homeland Security Presidential Directive 25, signed January 9, 2009",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971025+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "e591d5dbe7d9",
+          "date": "2015-08-26",
+          "source_url": "https://csis-website-prod.s3.amazonaws.com/s3fs-public/legacy_files/files/publication/150826_Conley_NewIceCurtain_Web.pdf",
+          "source_title": "The New Ice Curtain: Russia's Strategic Reach to the Arctic",
+          "author": "Heather A. Conley and Caroline Rohloff (CSIS)",
+          "lexical_form_seen": "Russia's strategic reach to the Arctic \u2026 assess Russia's strategic ambitions \u2026 offer policy recommendations for the future of US-Russian Arctic relations",
+          "exact_quote": "The New Ice Curtain explores Russia's strategic ambitions for its Arctic region \u2026 assess the Arctic nation's military modernization efforts",
+          "confidence": 0.85,
+          "evidence": "Published August 26, 2015 by CSIS. The report is the earliest major U.S. think-tank document found that frames Russia's Arctic military buildup as a strategic challenge requiring a U.S. policy response, and explicitly discusses China's growing Arctic presence (noted in the panel discussion). The CSIS event page and USNI News coverage confirm the August 2015 date. The report does not yet use the full Russia-China paired framing but establishes the 'Arctic strategic' vocabulary that later documents adopt.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The CSIS report is the earliest major policy-community document found that frames Russia's Arctic strategic reach as requiring a U.S. competitive response, seeding the vocabulary adopted in subsequent DoD strategies and Pompeo's 2019 speech.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971097+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "d6be8b5c70c3",
+          "date": "2017-01-04",
+          "source_url": "https://jsis.washington.edu/aic/2017/01/04/imagining-the-arctic-re-emergence-of-a-cold-war-mentality/",
+          "source_title": "Imagining the Arctic: Re-Emergence of a Cold War Mentality?",
+          "author": "University of Washington Arctic in Context blog",
+          "lexical_form_seen": "Cold War narrative is used to catalyze increased presence and development in the Arctic \u2026 U.S. needs to return and invest \u2026 show strategic strength in the region",
+          "exact_quote": "The Cold War narrative is used to catalyze increased presence and development in the Arctic \u2026 Two past U.S. military leaders recently argued that the U.S. needs to return and invest in Arctic oil and gas development as a way to show strategic strength in the region.",
+          "confidence": 0.78,
+          "evidence": "Published January 4, 2017. This academic blog post explicitly describes and critiques the framing that the U.S. must increase Arctic presence for strategic reasons in response to Russian activity, citing unnamed U.S. military leaders. It treats the framing as already circulating in policy discourse, confirming the framing was active by early 2017.",
+          "amplifier_role": "critic",
+          "role_evidence": "The post explicitly critiques the 'Cold War narrative' being used to justify increased U.S. Arctic presence, functioning as an early critical examination of the framing rather than an amplifier.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "ConnectError",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971114+00:00",
+            "confidence": 0.78,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "e6cf070571cf",
+          "date": "2018-11-01",
+          "source_url": "https://chinaus-icas.org/research/us-russia-and-china-in-the-arctic-seeking-cooperation-despite-increasing-competition/",
+          "source_title": "US, Russia and China in the Arctic: Seeking Cooperation despite Increasing Competition",
+          "author": "ICAS (Institute for China-America Studies)",
+          "lexical_form_seen": "countering the growing influence of China and Russia in the high north \u2026 China and Russia's growing presence in the Arctic",
+          "exact_quote": "It seems that the United States has began to shift its Arctic policy aiming at countering the growing influence of China and Russia in the high north.",
+          "confidence": 0.75,
+          "evidence": "The ICAS article references Pompeo's February 2019 NATO visit and the December 2018 spending bill allocating $675 million for icebreakers to compete with Russia and China in the Arctic. The article's metadata and internal references suggest late 2018/early 2019 publication. It is one of the earliest documents found using the explicit paired 'China and Russia' + 'Arctic' + 'countering' lexical cluster.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This is among the earliest documents found using the explicit 'countering \u2026 China and Russia in the [Arctic]' phrasing, spreading the framing in policy-analytical circles before Pompeo's mass-amplifying Rovaniemi speech.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971125+00:00",
+            "confidence": 0.75,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "6f619672da8b",
+          "date": "2019-05-06",
+          "source_url": "https://www.washingtonpost.com/world/national-security/pompeo-warns-of-dangers-of-russian-and-chinese-activities-in-the-arctic/2019/05/06/e2e99690-7001-11e9-9eb4-0828f5389013_story.html",
+          "source_title": "Pompeo warns of the dangers of Russian and Chinese activities in the Arctic",
+          "author": "Washington Post staff",
+          "lexical_form_seen": "new age of strategic engagement in the Arctic \u2026 dangers of Russian militarization and Chinese investment \u2026 arena of global power and competition",
+          "exact_quote": "'We're entering a new age of strategic engagement in the Arctic, complete with new threats to the Arctic and its real estate, and to all of our interests in the region,' he said.",
+          "confidence": 0.97,
+          "evidence": "Secretary of State Pompeo's speech at the Arctic Council Ministerial in Rovaniemi, Finland on May 6, 2019 is the single most widely reported early articulation of the framing. Multiple contemporaneous news sources (WaPo, Al Jazeera, CBC, Yle, High North News) confirm the date and content. Pompeo explicitly named Russian and Chinese Arctic activity as threats requiring a U.S. strategic response, and announced boosting 'America's security and diplomatic presence' in the Arctic. The speech title was 'Looking North: Sharpening America's Arctic Focus.'",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Pompeo's Rovaniemi speech was the first high-profile, globally covered articulation of the 'Russian and Chinese Arctic activity requires deeper U.S. presence' framing by a senior U.S. official, driving broad public and policy adoption of the narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20250726013239/https://www.washingtonpost.com/world/national-security/pompeo-warns-of-dangers-of-russian-and-chinese-activities-in-the-arctic/2019/05/06/e2e99690-7001-11e9-9eb4-0828f5389013_story.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971135+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "970f0ea9576e",
+          "date": "2019-06-01",
+          "source_url": "https://media.defense.gov/2019/jun/06/2002141657/-1/-1/1/2019-dod-arctic-strategy.pdf",
+          "source_title": "Report to Congress: Department of Defense Arctic Strategy, June 2019",
+          "author": "U.S. Department of Defense",
+          "lexical_form_seen": "China and Russia pose discrete and different challenges \u2026 both are also pursuing activities and capabilities in the Arctic that may present risks \u2026 Arctic as a potential corridor for strategic competition",
+          "exact_quote": "China and Russia pose discrete and different challenges \u2026 both are also pursuing activities and capabilities in the Arctic that may present risks to the homeland.",
+          "confidence": 0.97,
+          "evidence": "The 2019 DoD Arctic Strategy (June 2019) is the first official DoD document to explicitly pair China and Russia as Arctic strategic competitors requiring a U.S. competitive response. It defines the Arctic as 'a potential corridor for strategic competition' and calls for maintaining 'a credible deterrent for the Arctic region.' The document is publicly available on defense.gov.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The 2019 DoD Arctic Strategy is the first official U.S. Department of Defense document to formally adopt the paired Russia-China Arctic competition framing as institutional policy, directing the Joint Force to maintain competitive military advantages in the region.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260511010646/https://media.defense.gov/2019/Jun/06/2002141657/-1/-1/1/2019-DOD-ARCTIC-STRATEGY.PDF",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971145+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a103cb394bda",
+          "date": "2019-08-15",
+          "source_url": "https://www.thenation.com/article/archive/pompeo-arctic-greenland/",
+          "source_title": "The Trump Administration's Drive for Dominance in the Arctic",
+          "author": "The Nation",
+          "lexical_form_seen": "countering Chinese and Russian inroads in the region \u2026 fortifying America's security and diplomatic presence in the area",
+          "exact_quote": "The United States will \u2026 respond by enhancing its own military presence in the Arctic to better protect US interests, while countering Chinese and Russian inroads in the region.",
+          "confidence": 0.88,
+          "evidence": "Published September 13, 2019 (metadata says August, article text references events through August 2019). The Nation article quotes Pompeo's speech and contextualizes the Trump administration's Greenland purchase proposal (floated August 2019) within the broader Arctic strategic competition framing. It is an early critical amplifier connecting the Pompeo framing to the Greenland acquisition push.",
+          "amplifier_role": "critic",
+          "role_evidence": "The Nation article critically examines and contextualizes the 'countering Chinese and Russian inroads' framing as the strategic rationale behind both Pompeo's speech and Trump's Greenland purchase proposal, functioning as a critical amplifier.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971154+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "2978ee714b19",
+          "date": "2020-04-23",
+          "source_url": "https://2017-2021.state.gov/briefing-with-senior-state-department-official-on-the-administrations-arctic-strategy/",
+          "source_title": "Briefing With Senior State Department Official on the Administration's Arctic Strategy",
+          "author": "U.S. Department of State (senior official, unnamed)",
+          "lexical_form_seen": "Russia and the People's Republic of China to challenge the United States \u2026 Arctic is not immune \u2026 greater incentives for the Kremlin and the PRC to pursue agendas that clash with the interests of the United States",
+          "exact_quote": "The Arctic is not immune from the implications of these changes and we can expect \u2026 the Kremlin and the PRC to pursue agendas that clash with the interests of the United States and our allies.",
+          "confidence": 0.95,
+          "evidence": "Official State Department briefing transcript dated April 23, 2020, archived on the 2017-2021 State Department website. The briefing explicitly frames the reopening of the U.S. consulate in Nuuk as a response to Russian and Chinese Arctic ambitions, and announces the administration is 'adjusting our Arctic policy to today's new strategic realities.' This is the clearest early institutional adoption of the Greenland-specific framing.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The State Department briefing formally adopts the framing that Russian and Chinese Arctic activity requires a deeper U.S. diplomatic and strategic presence, specifically in Greenland (Nuuk consulate reopening), as official U.S. policy.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971164+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "82979da8bedd",
+          "date": "2021-12-22",
+          "source_url": "https://cejiss.org/conceptualising-the-arctic-as-a-zone-of-conflict",
+          "source_title": "Conceptualising the Arctic as a Zone of Conflict",
+          "author": "Central European Journal of International and Security Studies",
+          "lexical_form_seen": "geopolitical competition in the Arctic \u2026 Russia or China as threats \u2026 significant language in American Arctic policy documents from 2016 onward that note geopolitical competition",
+          "exact_quote": "We will expect to see significant language in American Arctic policy documents from 2016 onward that note geopolitical competition and conflictual language in opposition to earlier documents.",
+          "confidence": 0.82,
+          "evidence": "Published December 22, 2021. This peer-reviewed academic article explicitly traces the emergence of the 'geopolitical competition in the Arctic' framing in U.S. policy documents, noting its absence before 2016 and its rise thereafter. It confirms the framing's trajectory and provides scholarly documentation of its spread.",
+          "amplifier_role": "critic",
+          "role_evidence": "The academic article critically examines the emergence and spread of the Arctic geopolitical competition framing in U.S. policy, tracing its lexical appearance in official documents from 2016 onward.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971171+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "4ba0b57626d2",
+          "date": "2022-10-17",
+          "source_url": "https://2021-2025.state.gov/briefings-foreign-press-centers/us-national-arctic-policy/",
+          "source_title": "U.S. National Arctic Policy (Biden NSAR 2022 briefing)",
+          "author": "U.S. Department of State",
+          "lexical_form_seen": "increasing strategic competition in the Arctic region \u2026 exacerbated by Russia's unprovoked war in Ukraine \u2026 changing role that the People's Republic of China is playing in the region",
+          "exact_quote": "This new strategy also acknowledges the increasing strategic competition in the Arctic region since 2013, which is exacerbated by Russia's unprovoked war in Ukraine, but also takes into account the changing role that the People's Republic of China is playing in the region.",
+          "confidence": 0.95,
+          "evidence": "Official State Department briefing on the Biden administration's 2022 National Strategy for the Arctic Region (NSAR), delivered October 17, 2022 at the Arctic Circle Assembly. The briefing explicitly frames 'increasing strategic competition in the Arctic' from Russia and China as the driver of the updated U.S. strategy, representing full institutional adoption under a new administration.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The Biden State Department briefing formally adopts the 'increasing strategic competition in the Arctic' framing from Russia and China as the rationale for the 2022 NSAR, demonstrating bipartisan institutional adoption of the narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971178+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "bbb4b664bb2c",
+          "date": "2024-07-22",
+          "source_url": "https://media.defense.gov/2024/Jul/22/2003507411/-1/-1/0/DOD-ARCTIC-STRATEGY-2024.PDF",
+          "source_title": "2024 Department of Defense Arctic Strategy",
+          "author": "U.S. Department of Defense",
+          "lexical_form_seen": "PRC and Russian activities in the Arctic \u2014 including their growing cooperation \u2026 new, more dynamic Arctic security environment",
+          "exact_quote": "PRC and Russian activities in the Arctic \u2014 including their growing cooperation \u2014 the enlargement of NATO, and the increasing effects of climate change herald a new, more dynamic Arctic security environment.",
+          "confidence": 0.97,
+          "evidence": "The 2024 DoD Arctic Strategy, released July 22, 2024, is the most recent major institutional document. It explicitly names PRC-Russian Arctic cooperation as the central strategic challenge and directs DoD to 'enhance its Arctic capabilities' in response. This represents the mature, institutionalized form of the framing.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The 2024 DoD Arctic Strategy is the most recent and comprehensive institutional adoption of the framing, explicitly directing U.S. defense policy around countering paired Russian-Chinese Arctic activity.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971186+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "8a550c2348bc",
+          "date": "2024-11-21",
+          "source_url": "https://warontherocks.com/2024/11/more-nato-in-the-arctic-could-free-the-united-states-up-to-focus-on-china/",
+          "source_title": "More NATO in the Arctic Could Free the United States Up to Focus on China",
+          "author": "War on the Rocks",
+          "lexical_form_seen": "converging Russian and Chinese interests both in and beyond the Arctic requires the United States to work \u2026 to counter threats in the region",
+          "exact_quote": "Converging Russian and Chinese interests both in and beyond the Arctic requires the United States to work by, with, and through allies to counter threats in the region.",
+          "confidence": 0.93,
+          "evidence": "Published November 21, 2024 on War on the Rocks, a widely read U.S. defense policy platform. The article uses the diagnostic n-gram cluster 'Russian and Chinese \u2026 Arctic \u2026 counter' and frames U.S. Arctic presence as a strategic necessity, while arguing for NATO burden-sharing. It represents the framing's mature circulation in the defense policy community.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The War on the Rocks article spreads the 'countering Russian and Chinese Arctic' framing to a broad defense-policy audience, explicitly linking it to the strategic necessity of U.S. Arctic presence.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971195+00:00",
+            "confidence": 0.93,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a244f549b953",
+          "date": "2025-01-22",
+          "source_url": "https://www.csis.org/analysis/seizing-greenland-worse-bad-deal",
+          "source_title": "Seizing Greenland Is Worse Than a Bad Deal",
+          "author": "CSIS",
+          "lexical_form_seen": "Greenland's strategic importance warrants U.S. efforts to prevent the People's Republic of China (PRC) and Russia from establishing a presence on or around the island",
+          "exact_quote": "Greenland's strategic importance warrants U.S. efforts to prevent the People's Republic of China (PRC) and Russia from establishing a presence on or around the island.",
+          "confidence": 0.95,
+          "evidence": "Published January 22, 2025 by CSIS. This is the clearest early 2025 articulation of the Greenland-specific variant of the framing: Arctic strategic imperative (Greenland's strategic importance) + countering Russian and Chinese Arctic expansion (prevent PRC and Russia from establishing a presence). The CSIS report explicitly endorses the strategic rationale while opposing annexation.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The CSIS report amplifies the Greenland-specific variant of the framing \u2014 that Greenland's strategic importance requires U.S. action to counter PRC and Russian presence \u2014 while critiquing the annexation method, reaching a broad policy audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971203+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "cce70a47481b",
+          "date": "2026-01-06",
+          "source_url": "https://www.britannica.com/topic/Why-Is-the-US-Interested-in-Greenland",
+          "source_title": "Why Is the U.S. Interested in Greenland?",
+          "author": "Britannica editorial staff",
+          "lexical_form_seen": "framing U.S. acquisition as a national security imperative \u2026 Greenland is increasingly surrounded by Russian and Chinese naval activity",
+          "exact_quote": "Trump asserted that Greenland was increasingly surrounded by Russian and Chinese naval activity and argued that Denmark lacked the capacity to defend it, framing U.S. acquisition as a national security imperative.",
+          "confidence": 0.97,
+          "evidence": "Published January 6, 2026 by Britannica. This is the clearest single-sentence attestation of the canonical framing: 'national security imperative' + 'Russian and Chinese naval activity' + Greenland/Arctic. It documents Trump's public statements from early January 2026 and represents the framing's peak mass-media circulation.",
+          "amplifier_role": "mention",
+          "role_evidence": "Britannica's explainer documents and summarizes the framing as it reached peak public visibility in January 2026, functioning as a reference mention rather than an originator or amplifier.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260219200237/https://www.britannica.com/topic/Why-Is-the-US-Interested-in-Greenland",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971210+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "2bea58cd3e15",
+          "date": "2026-01-10",
+          "source_url": "https://www.nbcnews.com/world/greenland/trump-greenland-hopes-russia-china-rcna252965",
+          "source_title": "Security fears and dreams of minerals behind Trump's push to 'own' Greenland, experts say",
+          "author": "NBC News",
+          "lexical_form_seen": "deter Russian and Chinese aggression in the Arctic region \u2026 national security necessity, critical to reinforcing control of the Arctic against possible threats from Russia and China",
+          "exact_quote": "White House press secretary Karoline Leavitt \u2026 saying U.S. ownership of Greenland was required 'to deter Russian and Chinese aggression in the Arctic region.'",
+          "confidence": 0.97,
+          "evidence": "Published January 10, 2026 by NBC News. This article quotes White House Press Secretary Karoline Leavitt using the exact diagnostic phrasing 'deter Russian and Chinese aggression in the Arctic region' as the official White House justification for Greenland acquisition. This is the clearest official government articulation of the canonical framing at its peak.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The NBC News article reports the White House's official adoption of the 'deter Russian and Chinese aggression in the Arctic' framing as the public justification for Greenland acquisition, representing peak mass-media amplification of the narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:45:56.971218+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "Conducted a systematic adversarial search across six distinct angles to find any pre-2009-01-09 instance of the narrative framing 'Arctic strategic imperative requires deeper U.S. presence in Greenland / countering Russian and Chinese Arctic expansion.' No credible earlier instance was found. Here is the full audit trail:\n\n(a) N-GRAMS AND VARIANTS SEARCHED:\n- 'Arctic strategic imperative US presence Greenland before 2009'\n- 'countering Russian Chinese Arctic expansion US strategy' (congressional records, GPO)\n- 'Arctic geopolitical competition United States 2007 2008'\n- 'US Arctic strategy Russia China competition strategic imperative 2007 2008 think tank'\n- 'NSPD-66 Arctic policy 2009 Russia China strategic competition predecessor earlier draft'\n- 'Arctic Russia China United States strategic competition presence 2007 2008' (Google Books, JSTOR, RAND)\n- 'Arctic Russia China United States strategic 2007 2008 CFR Heritage Foundation report'\n\n(b) SPECIFIC OLDER SOURCES AND TIME PERIODS CHECKED:\n- The full text of NSPD-66/HSPD-25 (dated January 9, 2009, released January 12, 2009) was retrieved from irp.fas.org. The document frames U.S. Arctic interests in terms of missile defense, strategic sealift, maritime presence, and freedom of navigation \u2014 but does NOT name China as a specific adversary or competitor in the Arctic. The framing is primarily about U.S. national security interests broadly, not a Russia-China combined threat requiring deeper presence. This is the proposed 'earliest date' document itself.\n- The predecessor to NSPD-66 was Presidential Decision Directive/NSC-26 (June 9, 1994), which was a post-Cold War cooperative document that explicitly emphasized 'unprecedented opportunities for collaboration' among Arctic states and did not frame the Arctic as a competitive space requiring U.S. presence against Russia or China.\n- Congressional Research Service (CRS) Arctic reports: The CRS Arctic overview report (R41153) was initiated in 2010, confirming no earlier congressional framing of this kind. The CRS Polar Security Cutter report was initiated in 2008 but focused on icebreaker procurement, not the Russia-China strategic competition framing.\n- Russia's Arctic resurgence: Russia planted its flag on the North Pole seabed in August 2007 and adopted its first comprehensive Arctic policy document in September 2008. These events are widely cited as the trigger for renewed Western concern, but the U.S. policy response (NSPD-66) came in January 2009 and still did not explicitly name China as an Arctic threat.\n- China's Arctic involvement pre-2009: Multiple authoritative sources confirm that China's formal Arctic ambitions were minimal before 2009. China applied to become an Arctic Council observer in 2006, 2009, and 2011 (all unsuccessful). China's first official Arctic White Paper was not published until January 2018. The first time U.S. military observed Chinese naval ships in the Bering Sea was September 2015. China's 'near-Arctic state' self-designation came in 2018. The Scandinavian Journal of Military Studies (index 24) explicitly found that the 'great power competition' narrative in the Arctic 'emerged in U.S. governmental circles' and was 'popularized in media outlets' only after the first half of the 2010s. RAND's 2022 report on China's Arctic strategy (index 75) and the Arctic Institute's analysis (index 43) both confirm that U.S. concern about China in the Arctic is a post-2013 phenomenon that intensified after 2018-2019.\n- Think tanks and academic archives (CFR, Heritage Foundation, RAND, Arctic Institute): No pre-2009 document was found combining the Russia+China Arctic threat with a U.S. strategic necessity/presence argument. The Heritage Foundation's earliest relevant Arctic report (SR220) dates to January 2020. RAND's Arctic-China work dates to 2018 and later. The CFR's Arctic geopolitics backgrounder does not cite any pre-2009 source for this combined framing.\n- The ArcticToday article (index 2) by a CFR fellow who testified before Congress 'from 2007 to 2009' is notable: it describes Washington as 'shrugging' at Arctic concerns during that period, explicitly noting that 'Russia and China increasingly teamed up in the high north' was a later development, and that the Arctic was 'still treated as a fringe topic' during the Obama transition. This is a near-miss but actually CONFIRMS the negative result \u2014 the framing was not yet established.\n\n(c) NEAR-MISSES CONSIDERED AND RULED OUT:\n- NSPD-66 (January 9, 2009): This IS the proposed earliest date document. Its text addresses U.S. Arctic security interests (missile defense, maritime presence) but does not name China as an Arctic competitor or frame the issue as countering Russian AND Chinese expansion. The Russia-China combined framing is absent.\n- Russia's 2007 flag-planting and 2008 Arctic policy: These triggered concern about Russian Arctic assertiveness, but the U.S. response (NSPD-66) was still cooperative in tone and did not invoke China. The Quincy Institute (index 38) confirms NSPD-66 'maintained a cooperative tone but introduced security dimensions, focusing on missile defense, resources, and freedom of navigation.'\n- The 2008 Ilulissat Declaration (May 2008): This was a five-nation Arctic coastal states declaration emphasizing cooperation and existing international law \u2014 the opposite of the competitive framing being searched for.\n- The 1994 PDD/NSC-26: Explicitly cooperative, not competitive.\n\n(d) LIMITATIONS OF THE SEARCH:\n- Paywalled archives: JSTOR, some academic journals, and classified government documents were not fully accessible. It is possible that classified interagency drafts of NSPD-66 or earlier NSC deliberations contained earlier versions of this framing, but these would not be publicly documented.\n- Undigitized text: Pre-2009 think-tank working papers, conference proceedings, and congressional testimony transcripts that were not digitized or indexed by Google may contain earlier instances, but none surfaced in any of the searches.\n- Google Books: The 2009 book 'China and the Arctic: The Awakening Snow Dragon' (China Brief, 9(6)) is cited in the literature as an early treatment of China's Arctic ambitions, but it dates to 2009 and focuses on China's emerging interest, not a U.S. strategic imperative to counter it.\n- The structural reason for the clean negative: The combined Russia+China Arctic threat framing requiring U.S. presence is structurally impossible to predate 2009 in its full form, because China had no meaningful Arctic military or strategic presence before 2009 (its first naval vessels were not observed in the Bering Sea until 2015, its first Arctic White Paper was 2018, and it was not even an Arctic Council observer until 2013). The framing is therefore not merely undocumented before 2009 \u2014 it is historically anachronistic. The Russia-only Arctic threat framing (without China) does predate 2009 (triggered by the 2007 flag-planting), but that is a different and narrower framing than the one specified.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "2009-01-09",
+        "active_through": "2026-01-10",
+        "active_span_days": 6210,
+        "years_active": 17,
+        "years_with_activity": 11,
+        "instances_per_year": {
+          "2009": 1,
+          "2015": 1,
+          "2017": 1,
+          "2018": 1,
+          "2019": 3,
+          "2020": 1,
+          "2021": 1,
+          "2022": 1,
+          "2024": 2,
+          "2025": 1,
+          "2026": 2
+        },
+        "instances_per_year_by_role": {
+          "2009": {
+            "originator": 1
+          },
+          "2015": {
+            "early-amplifier": 1
+          },
+          "2017": {
+            "critic": 1
+          },
+          "2018": {
+            "early-amplifier": 1
+          },
+          "2019": {
+            "mass-amplifier": 1,
+            "institutional-adoption": 1,
+            "critic": 1
+          },
+          "2020": {
+            "institutional-adoption": 1
+          },
+          "2021": {
+            "critic": 1
+          },
+          "2022": {
+            "institutional-adoption": 1
+          },
+          "2024": {
+            "institutional-adoption": 1,
+            "early-amplifier": 1
+          },
+          "2025": {
+            "early-amplifier": 1
+          },
+          "2026": {
+            "mention": 1,
+            "mass-amplifier": 1
+          }
+        },
+        "peak_year": "2019",
+        "peak_year_count": 3,
+        "originator_to_mass_amplifier_days": 3769,
+        "originator_to_institutional_adoption_days": 3795,
+        "originator_to_critic_days": 2917,
+        "days_since_latest": 181
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "foreign-policy",
+    "domain_confidence": 0.96,
+    "inductive_cluster_ids": [],
+    "tropes": [
+      "forever-war"
+    ]
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 13,
+    "actors": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2009-01-09",
+        "last_date": "2009-01-09"
+      },
+      {
+        "actor_id": "5af63b62ee28",
+        "display": "amazonaws.com",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2015-08-26",
+        "last_date": "2015-08-26"
+      },
+      {
+        "actor_id": "5d6cbc5e4b9b",
+        "display": "washington.edu",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2017-01-04",
+        "last_date": "2017-01-04"
+      },
+      {
+        "actor_id": "300b97ff2538",
+        "display": "chinaus-icas.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2018-11-01",
+        "last_date": "2018-11-01"
+      },
+      {
+        "actor_id": "0cb9681f2dcd",
+        "display": "The Washington Post",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-05-06",
+        "last_date": "2019-05-06"
+      },
+      {
+        "actor_id": "9853ac5a35e9",
+        "display": "defense.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2019-06-01",
+        "last_date": "2024-07-22"
+      },
+      {
+        "actor_id": "013de1f4a601",
+        "display": "thenation.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-08-15",
+        "last_date": "2019-08-15"
+      },
+      {
+        "actor_id": "39b33d774373",
+        "display": "state.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2020-04-23",
+        "last_date": "2022-10-17"
+      },
+      {
+        "actor_id": "f5265b59b8d7",
+        "display": "cejiss.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-12-22",
+        "last_date": "2021-12-22"
+      },
+      {
+        "actor_id": "2526f6217569",
+        "display": "warontherocks.com",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-11-21",
+        "last_date": "2024-11-21"
+      },
+      {
+        "actor_id": "805bbff82dcb",
+        "display": "csis.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-01-22",
+        "last_date": "2025-01-22"
+      },
+      {
+        "actor_id": "3a33310f5f0c",
+        "display": "Britannica",
+        "actor_type": "reference",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-01-06",
+        "last_date": "2026-01-06"
+      },
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-01-10",
+        "last_date": "2026-01-10"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2009-01-09",
+        "last_date": "2009-01-09"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "5d6cbc5e4b9b",
+        "display": "washington.edu",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2017-01-04",
+        "last_date": "2017-01-04"
+      },
+      {
+        "actor_id": "013de1f4a601",
+        "display": "thenation.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-08-15",
+        "last_date": "2019-08-15"
+      },
+      {
+        "actor_id": "f5265b59b8d7",
+        "display": "cejiss.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-12-22",
+        "last_date": "2021-12-22"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "reference": 2,
+      "news": 9,
+      "official": 2
+    },
+    "date_span": [
+      "2009-01-09",
+      "2026-01-10"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-10T07:47:04.880589+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

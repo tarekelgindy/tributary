@@ -1,0 +1,841 @@
+{
+  "fingerprint_id": "78c85bea510c",
+  "created_at": "2026-07-10T07:43:12.066902+00:00",
+  "last_updated": "2026-07-10T07:43:12.066902+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "foreign money in Trump crypto creates pay-to-play foreign policy influence",
+    "phrase_variants": [
+      "crypto as foreign influence channel",
+      "foreign capital buying policy access through crypto",
+      "Trump crypto ventures foreign money pipeline",
+      "pay-to-play through cryptocurrency deals",
+      "foreign funds influencing policy via crypto"
+    ],
+    "diagnostic_ngrams": [
+      "foreign money crypto influence",
+      "pay-to-play crypto foreign",
+      "crypto foreign policy access",
+      "foreign capital policy channel"
+    ],
+    "stopword_stripped_signature": "foreign money trump crypto creates pay play foreign policy influence"
+  },
+  "conceptual": {
+    "claim_predicate": "foreign financial investment in a political figure's business ventures creates a mechanism for foreign actors to influence that figure's policy decisions",
+    "entities": {
+      "agent": "foreign governments or foreign capital holders",
+      "patient": "the political figure and the domestic political system",
+      "arena": "foreign policy and political decision-making",
+      "instrument": "financial investment in business ventures; the expectation of quid pro quo or leverage through financial entanglement"
+    },
+    "causal_structure": "foreign capital flowing into a political figure's business ventures creates financial leverage that foreign actors can use to influence that figure's policy decisions in their favor"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "attribution-of-blame",
+      "harm-claim",
+      "threat-claim",
+      "process-violation"
+    ],
+    "valence": {
+      "villain": "foreign governments/capital holders; Trump",
+      "victim": "domestic political system; U.S. foreign policy integrity",
+      "hero": ""
+    },
+    "epistemic_stance": "accusatory",
+    "register": "journalistic"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "earliest-found",
+      "first_attested_date": "2024-11-25",
+      "first_attested_source": "https://www.cnbc.com/2024/11/25/trump-crypto-justin-sun-investment.html",
+      "attestation_confidence": 0.62,
+      "primary_origin_id": "a95a29833e49",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "a95a29833e49",
+          "date": "2024-11-25",
+          "source_url": "https://www.cnbc.com/2024/11/25/trump-crypto-justin-sun-investment.html",
+          "source_title": "Banana Auction Billionaire's $30 Million Investment in Trump's Crypto Token Highlights New Ways to Enrich President-Elect",
+          "author": "",
+          "lexical_form_seen": "foreign [investor] \u2026 Trump crypto \u2026 new ways to enrich [president-elect]",
+          "exact_quote": "Banana Auction Billionaire's $30 Million Investment in Trump's Crypto Token Highlights New Ways to Enrich President-Elect",
+          "confidence": 0.62,
+          "evidence": "Cited by name and URL in the January 2026 House Oversight Democrats report (footnote 3) and corroborated by Justin Sun's public tweet of the same date announcing his $30M WLF investment. The headline frames foreign capital flowing into Trump crypto as a presidential-enrichment channel, which is the earliest dateable press instance of the foreign-money-into-Trump-crypto framing. The article itself is behind CNBC's archive; the headline is reproduced verbatim in the congressional footnote. Confidence docked because the full article text is not directly accessible to confirm the exact diagnostic phrasing inside the body.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "CNBC's framing of a foreign crypto billionaire's investment as a novel 'enrichment' channel for the president-elect was among the first mainstream press articulations of the foreign-money-into-Trump-crypto pipeline narrative, predating all congressional reports.",
+          "cited_via": "oversightdemocrats.house.gov/imo/media/doc/12026cryptoreport.pdf (footnote 3); beincrypto.com/trump-administration-crypto-report/ (cites Justin Sun tweet of same date)",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406387+00:00",
+            "confidence": 0.62,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "ea92a83e3ec2",
+          "date": "2024-12-03",
+          "source_url": "https://www.washingtonpost.com/politics/2024/12/03/trump-crypto-chinese-entrepreneur/",
+          "source_title": "Chinese Entrepreneur Invested $30M in Trump's Crypto Project After Election",
+          "author": "",
+          "lexical_form_seen": "Chinese [foreign] entrepreneur \u2026 invested \u2026 Trump's crypto project \u2026 [after election / policy access implied]",
+          "exact_quote": "Chinese Entrepreneur Invested $30M in Trump's Crypto Project After Election",
+          "confidence": 0.65,
+          "evidence": "Cited verbatim by URL and title in the January 2026 House Oversight Democrats report (footnote 25). The headline directly names a foreign national's investment in Trump crypto in the post-election period, establishing the foreign-capital-into-Trump-crypto framing. Full article text not directly accessible; confidence docked accordingly. This is the earliest Washington Post dateable instance of the framing.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Washington Post's framing of a Chinese entrepreneur's post-election crypto investment in Trump's venture was an early mainstream press articulation of the foreign-capital-into-Trump-crypto channel narrative.",
+          "cited_via": "oversightdemocrats.house.gov/imo/media/doc/12026cryptoreport.pdf (footnote 25, citing Washington Post Dec. 3 2024)",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20250816012634/https://www.washingtonpost.com/politics/2024/12/03/trump-crypto-chinese-entrepreneur/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406719+00:00",
+            "confidence": 0.65,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "538738e1c982",
+          "date": "2025-01-20",
+          "source_url": "https://oversightdemocrats.house.gov/imo/media/doc/12026cryptoreport.pdf",
+          "source_title": "Professionalized Corruption: How Donald Trump Is Abusing Power and Accepting Foreign Interests",
+          "author": "U.S. House Committee on Oversight and Accountability Democrats",
+          "lexical_form_seen": "foreign interests \u2026 crypto \u2026 foreign government handed over enormous sums of money to WLF and was then granted access \u2026 top end computer chips",
+          "exact_quote": "a foreign government handed over enormous sums of money to WLF and was then granted access by the Trump Administration to top end computer chips in a deal that poses substantial risks to U.S. national security.",
+          "confidence": 0.88,
+          "evidence": "PDF is dated January 20, 2026 per document metadata and URL. The report explicitly frames foreign money into Trump crypto (WLF) as purchasing policy access (chip export deal), using the diagnostic framing 'foreign government handed over enormous sums of money to WLF and was then granted access.' This is the earliest institutional congressional document to articulate the full pay-to-play-via-crypto-foreign-money framing with this lexical specificity.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The House Oversight Democrats formally adopted the framing as their official investigative position in a published staff report, making it the first institutional congressional adoption of the foreign-money-crypto-policy-access narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406741+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "5f58ccc77c47",
+          "date": "2025-02-01",
+          "source_url": "https://www.brennancenter.org/our-work/research-reports/money-politics-roundup-february-2026",
+          "source_title": "Money in Politics Roundup \u2014 February 2026",
+          "author": "Brennan Center for Justice",
+          "lexical_form_seen": "World Liberty's dealings with foreign governments raise stark questions about who is influencing key U.S. foreign policy and national security decisions",
+          "exact_quote": "World Liberty's dealings with foreign governments raise stark questions about who is influencing key U.S. foreign policy and national security decisions.",
+          "confidence": 0.82,
+          "evidence": "Published February 2026 per site metadata. The Brennan Center explicitly frames Trump crypto (WLF) foreign government dealings as a foreign policy influence channel, using the diagnostic phrasing 'foreign governments \u2026 influencing key U.S. foreign policy.' Corroborated by the UAE chip deal sequence described in the same document.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The Brennan Center, a nonpartisan legal institute, amplified the foreign-crypto-policy-influence framing in its money-in-politics monitoring series, lending institutional credibility before the framing reached mass media.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260704083813/https://www.brennancenter.org/our-work/research-reports/money-politics-roundup-february-2026",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406753+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "d71ada465fc8",
+          "date": "2025-04-25",
+          "source_url": "https://www.cnbc.com/2025/04/25/trump-dinner-for-meme-coin-prompts-senators-to-demand-ethics-probe.html",
+          "source_title": "Trump dinner for meme coin buyers prompts senators to demand ethics probe",
+          "author": "CNBC staff",
+          "lexical_form_seen": "pay to play corruption \u2026 selling presidential access to individuals or entities, to include foreign nationals \u2026 personally enriching the President",
+          "exact_quote": "severe risk that President Trump and other officials may be engaging in 'pay to play' corruption by selling presidential access to individuals or entities, to include foreign nationals",
+          "confidence": 0.97,
+          "evidence": "CNBC article dated April 25, 2025, directly accessible. Quotes the Schiff-Warren letter to OGE verbatim, which uses the exact diagnostic phrase 'pay to play corruption' combined with 'foreign nationals' buying 'presidential access' through crypto investment. This is the earliest mass-media publication of the full pay-to-play + crypto + foreign nationals lexical cluster in a single sentence.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "CNBC's national coverage of the Schiff-Warren letter drove the 'pay to play crypto foreign nationals' framing into broad public awareness, quoting the diagnostic phrase verbatim and reaching a mass financial-news audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406774+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "22f312ea6050",
+          "date": "2025-05-05",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/forwarding-merkley-warren-trump-linked-crypto-deal-is-a-staggering-conflict-of-interest",
+          "source_title": "Merkley, Warren: Trump-Linked Crypto Deal is a 'Staggering' Conflict of Interest",
+          "author": "Senators Jeff Merkley and Elizabeth Warren",
+          "lexical_form_seen": "foreign countries from currying favor with President Trump by using his stablecoin to funnel money to him \u2026 foreign influence and the potential for a quid pro quo \u2026 WLF could be used as a backdoor for foreign kickbacks and bribes",
+          "exact_quote": "prevent foreign countries from currying favor with President Trump by using his stablecoin to funnel money to him.",
+          "confidence": 0.95,
+          "evidence": "Senate Banking Committee minority press release dated May 5, 2025, directly accessible. Senators Merkley and Warren explicitly frame Trump's crypto stablecoin (USD1/WLF) as a channel for foreign governments to funnel money and gain policy access \u2014 the core diagnostic framing. The letter to OGE also asks what safeguards exist to 'prevent individuals under federal investigation, foreign actors, or those seeking pardons from making an investment in the President's financial interests \u2026 in order to gain political influence.' This is the earliest Senate-level institutional articulation of the full foreign-money-crypto-policy-access framing.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Senators Merkley and Warren formally adopted and institutionalized the framing in an official Senate Banking Committee letter to the Office of Government Ethics, making it a matter of congressional record.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406765+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "badf8be86a80",
+          "date": "2025-05-13",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-van-hollen-call-on-trump-and-trump-family-to-divest-from-world-liberty-financial-sound-alarm-on-foreign-governments-using-trump-crypto-to-curry-presidential-favors",
+          "source_title": "Warren, Van Hollen Call on Trump and Trump Family to Divest from World Liberty Financial; Sound Alarm on Foreign Governments Using Trump Crypto to Curry Presidential Favors",
+          "author": "Senators Elizabeth Warren and Chris Van Hollen",
+          "lexical_form_seen": "foreign governments using Trump crypto to curry presidential favors \u2026 using your stablecoin for massive crypto transactions \u2026 curry your favor",
+          "exact_quote": "This trip appears to be a case study in how foreign governments may now seek to curry your favor: by using your stablecoin for massive crypto transactions and showering you with extravagant gifts.",
+          "confidence": 0.97,
+          "evidence": "Senate Banking Committee minority press release dated May 13, 2025, directly accessible. The title itself contains the diagnostic phrase 'foreign governments using Trump crypto to curry presidential favors.' The letter body frames the UAE stablecoin transaction as a foreign-policy-access purchase via crypto \u2014 the canonical framing. This is the clearest single-document lexical match to the 'crypto foreign policy access' diagnostic n-gram.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Warren and Van Hollen formally institutionalized the 'foreign governments using Trump crypto to curry presidential favors' framing in an official Senate letter, with the title itself serving as a canonical statement of the narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406788+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "3f2a5ee17800",
+          "date": "2025-07-14",
+          "source_url": "https://democrats-financialservices.house.gov/news/documentsingle.aspx?DocumentID=413632",
+          "source_title": "Day 2: Trump's World Liberty Financial Grift Part I",
+          "author": "U.S. House Committee on Financial Services Democrats",
+          "lexical_form_seen": "foreign influence behind Trump's World Liberty Financial \u2026 selling influence to foreign countries",
+          "exact_quote": "To stop Trump from selling influence to foreign countries, Members of Congress must vote 'NO' on the so-called 'CLARITY' and 'GENIUS' Acts",
+          "confidence": 0.93,
+          "evidence": "House Financial Services Committee Democrats press release dated July 14\u201315, 2025, directly accessible. Uses the diagnostic phrase 'selling influence to foreign countries' in the context of Trump's crypto ventures, and the companion Day 3 release is titled 'Inside the Foreign Influence Behind Trump's World Liberty Financial Grift.' This is the clearest congressional use of 'foreign influence' + Trump crypto as a legislative call to action.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The House Financial Services Committee Democrats formally adopted the 'foreign influence behind Trump's World Liberty Financial' framing as the basis for their legislative opposition to the GENIUS and CLARITY Acts.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406798+00:00",
+            "confidence": 0.93,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "d4c29ed3603a",
+          "date": "2025-09-05",
+          "source_url": "https://www.commoncause.org/articles/trumps-crypto-corruption-a-new-low-in-pay-to-play-politics/",
+          "source_title": "Trump's Crypto Corruption: A New Low in Pay-to-Play Politics",
+          "author": "Common Cause",
+          "lexical_form_seen": "Cryptocurrency is now one of the most significant sources of the Trump family's wealth, making it incredibly easy for foreign interests to influence the president \u2026 pay-to-play politics",
+          "exact_quote": "Cryptocurrency is now one of the most significant sources of the Trump family's wealth, making it incredibly easy for foreign interests to influence the president",
+          "confidence": 0.95,
+          "evidence": "Common Cause article dated September 5, 2025, directly accessible. Combines the diagnostic elements: crypto as a channel for foreign interests to influence the president, framed explicitly as 'pay-to-play politics' in the title. This is the clearest civil-society/advocacy articulation of the 'foreign money crypto influence' + 'pay-to-play' cluster.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Common Cause, a major nonpartisan watchdog with broad public reach, published this as a standalone explainer piece explicitly titled 'pay-to-play politics,' driving the framing to a general advocacy audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406805+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a07d8ce32176",
+          "date": "2025-11-25",
+          "source_url": "https://democrats-judiciary.house.gov/media-center/press-releases/new-report-exposes-the-trump-family-s-multi-billion-dollar-crypto-empire-fueled-by-self-dealing-and-corrupt-foreign-interests",
+          "source_title": "New Report Exposes the Trump Family's Multi-Billion-Dollar Crypto Empire, Fueled by Self-Dealing and Corrupt Foreign Interests",
+          "author": "Rep. Jamie Raskin / House Judiciary Committee Democrats",
+          "lexical_form_seen": "pay-to-play deals and corrupt foreign interests seeking secret channels of access and influence \u2026 Foreign actors \u2026 buying access and favors \u2026 by funneling money into the Trump family's cryptocurrency ventures",
+          "exact_quote": "built on pay-to-play deals and corrupt foreign interests seeking secret channels of access and influence",
+          "confidence": 0.99,
+          "evidence": "House Judiciary Committee Democrats press release dated November 25, 2025, directly accessible. Contains the most complete single-sentence articulation of the canonical framing: 'pay-to-play deals and corrupt foreign interests seeking secret channels of access and influence' in the context of Trump crypto ventures. Also states: 'Foreign actors and corporate interests have been buying access and favors from the President \u2026 by funneling money into the Trump family's cryptocurrency ventures.' This is the highest-profile congressional report to use all diagnostic n-grams together.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Rep. Raskin's report, released with a national press rollout, drove the fully-formed 'pay-to-play + foreign interests + crypto + access and influence' framing into national headlines and became the most-cited single document for this narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406816+00:00",
+            "confidence": 0.99,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "37542d9b9576",
+          "date": "2026-01-20",
+          "source_url": "https://oversightdemocrats.house.gov/imo/media/doc/12026cryptoreport.pdf",
+          "source_title": "Professionalized Corruption: How Donald Trump Is Abusing Power and Accepting Foreign Interests (Full Report)",
+          "author": "U.S. House Committee on Oversight and Accountability Democrats",
+          "lexical_form_seen": "foreign interests \u2026 crypto \u2026 foreign government handed over enormous sums of money to WLF and was then granted access \u2026 national security \u2026 foreign digital payments \u2026 maximum opacity \u2026 without any direct oversight",
+          "exact_quote": "a foreign government handed over enormous sums of money to WLF and was then granted access by the Trump Administration to top end computer chips",
+          "confidence": 0.91,
+          "evidence": "Full PDF report dated January 20, 2026 per document metadata. Expands on the earlier press release with detailed evidence, explicitly framing WLF as a 'venture focused on foreign digital payments' designed for 'maximum opacity and without any direct oversight by the U.S. government,' and documenting the foreign-money-to-policy-access pipeline with specific transactions. Distinct from the November 2025 Raskin/Judiciary report \u2014 this is the Oversight Committee's parallel investigation.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The House Oversight Committee Democrats formally adopted the framing in a comprehensive investigative report, institutionalizing it as the basis for proposed legislative reforms.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406839+00:00",
+            "confidence": 0.91,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "2a56efe295ca",
+          "date": "2026-03-04",
+          "source_url": "https://www.americanbar.org/groups/crsj/resources/human-rights/2026-march/trump-administrations-rampant-pay-to-play-corruption-threatens-our-democracy/",
+          "source_title": "The Trump Administration's Rampant Pay-to-Play Corruption Threatens Our Democracy",
+          "author": "American Bar Association (Commission on Racial and Social Justice)",
+          "lexical_form_seen": "pay-to-play \u2026 foreign policy can apparently be bought \u2026 crypto \u2026 foreign government \u2026 USD1 \u2026 Emiratis secured an agreement \u2026 access \u2026 AI computing chips",
+          "exact_quote": "Even America's foreign policy can apparently be bought, as Trump accepts foreign governments' money and gifts with open arms in exchange for concrete policy action.",
+          "confidence": 0.94,
+          "evidence": "ABA article dated March 4, 2026, directly accessible. Explicitly frames the crypto-foreign-money-policy-access pipeline using the diagnostic phrase 'foreign policy can apparently be bought' in the context of the UAE crypto deal, and uses 'pay-to-play' in the title and throughout. Represents adoption of the framing by a major legal institution.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "The American Bar Association's formal publication of this framing under its human rights commission represents institutional legal-community adoption of the 'pay-to-play crypto foreign policy access' narrative.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260619065100/https://www.americanbar.org/groups/crsj/resources/human-rights/2026-march/trump-administrations-rampant-pay-to-play-corruption-threatens-our-democracy/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406852+00:00",
+            "confidence": 0.94,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "9029d85d3e7b",
+          "date": "2026-03-11",
+          "source_url": "https://www.democracydefendersfund.org/prs/03.11.26-pr",
+          "source_title": "Political Capital: How the Trump Family's Crypto Ventures Are Distorting the Market",
+          "author": "Democracy Defenders Fund / Lee A. Reiners (Duke University)",
+          "lexical_form_seen": "foreign cash \u2026 political influence \u2026 deregulatory actions \u2026 A way to pay to play? \u2026 foreign government \u2026 USD1 \u2026 national payments infrastructure",
+          "exact_quote": "A way to pay to play?: Pakistan recently signed a deal to integrate USD1 into its national payments infrastructure",
+          "confidence": 0.95,
+          "evidence": "Democracy Defenders Fund press release dated March 11, 2026, directly accessible. Uses the exact phrase 'A way to pay to play?' as a section header describing a foreign government (Pakistan) integrating Trump's crypto stablecoin into national infrastructure, and frames the entire report around 'political influence, foreign cash, and deregulatory actions.' This is the clearest academic/think-tank use of the 'pay to play' + 'foreign' + crypto diagnostic cluster.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "The Democracy Defenders Fund/Duke University report amplified the framing with academic credibility, explicitly labeling the Pakistan-USD1 deal 'a way to pay to play' and providing quantitative market analysis.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406860+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "77230647993c",
+          "date": "2026-05-08",
+          "source_url": "https://www.americanprogress.org/article/how-trumps-500-million-uae-crypto-deal-trades-u-s-national-security-for-family-profit/",
+          "source_title": "How Trump's $500 Million UAE Crypto Deal Trades U.S. National Security for Family Profit",
+          "author": "Center for American Progress",
+          "lexical_form_seen": "cryptocurrency ventures \u2026 directly benefit from his authority to shape foreign and global economic policy \u2026 foreign policy for sale \u2026 pay-to-play system \u2026 UAE crypto deal",
+          "exact_quote": "These schemes effectively amount to foreign policy for sale and pose serious national security risks",
+          "confidence": 0.97,
+          "evidence": "Center for American Progress article dated May 8, 2026, directly accessible. Uses the diagnostic phrase 'foreign policy for sale' explicitly in the context of Trump's crypto ventures and the UAE deal, and calls it 'the latest example of the pay-to-play system.' This is the clearest think-tank articulation of the 'crypto foreign policy access' diagnostic n-gram in its most compressed form.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "CAP's widely-circulated policy brief drove the 'foreign policy for sale via crypto' formulation to a broad policy and media audience, representing the most compressed and quotable version of the canonical framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260706150738/https://www.americanprogress.org/article/how-trumps-500-million-uae-crypto-deal-trades-u-s-national-security-for-family-profit/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:41:52.406868+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "CRITICAL DATE CLARIFICATION: The proposed 'earliest date' of 2024-11-25 appears to be a transcription error. All evidence confirms the Raskin/House Judiciary Committee Democrats report ('Trump, Crypto, and a New Age of Corruption') was released on 2025-11-25 (November 25, 2025), not 2024-11-25. Wikipedia, BeInCrypto, and the official House Judiciary Democrats press release all confirm the 2025 date. The search was therefore conducted to find instances predating 2025-11-25.\n\nSEARCH STRATEGY: Queries targeted (1) 'Trump crypto foreign money pay-to-play influence 2024,' (2) 'cryptocurrency foreign influence policy access Trump before November 2024,' (3) 'Trump crypto venture foreign capital policy channel corruption concern,' (4) 'World Liberty Financial foreign money influence policy concern October 2024,' (5) 'Trump crypto foreign emoluments pay-to-play concern 2024 before election,' (6) 'World Liberty Financial foreign investors conflict interest emoluments October November 2024,' (7) 'World Liberty Financial foreign influence pay-to-play policy 2024 before inauguration,' and (8) 'Elizabeth Warren World Liberty Financial foreign emoluments conflict interest October 2024.'\n\nPRE-ELECTION WINDOW (Sep\u2013Nov 5, 2024): World Liberty Financial launched in September 2024. The NYT published early reporting on the venture ('Trump Rolls Out His New Cryptocurrency Business,' Sept. 16, 2024; 'The Crypto Punks Behind Trump's Murky New Business Venture,' Oct. 7, 2024). However, no search results returned pre-election articulations of the specific framing \u2014 foreign money in Trump crypto as a pay-to-play foreign policy influence mechanism. The venture had raised only $2.7 million by end of October 2024 and had not yet attracted significant foreign investment. The framing was structurally impossible to articulate in full before Trump won the election and before foreign investors began pouring money in.\n\nPOST-ELECTION, PRE-INAUGURATION WINDOW (Nov 5\u2013Jan 20, 2025): A December 5, 2024 NYT article ('Trump Organization Plans an Ethics Policy Without Banning Foreign Deals') is cited in Wikipedia's World Liberty Financial article, suggesting early conflict-of-interest coverage, but no search result returned a pre-inauguration articulation of the specific foreign-money-crypto-policy-access framing.\n\nEARLIEST CONFIRMED INSTANCES FOUND: (1) NYT article 'Secret Deals, Foreign Investments, Presidential Policy Changes: The Rise of Trump's Crypto Firm' (April 29, 2025) \u2014 confirmed by multiple independent citations; (2) Warren/Merkley Senate letter (May 5, 2025) \u2014 confirmed via official senate.gov domain and corroborated by The Hill and CBS News. Both predate the Raskin report (Nov. 25, 2025) by approximately 6\u20137 months.\n\nNEAR-MISSES CONSIDERED AND RULED OUT: (a) The ABC News/WSJ report on the UAE 49% stake in WLF was initially considered but confirmed to be from late January/early February 2026 \u2014 after the proposed date. (b) Vitalik Buterin's quote calling politician-backed coins 'vehicles for unlimited political bribery, including from foreign nation states' appears in a LegalClarity.org article but without a clear date for the original quote; it could not be independently verified as pre-Nov. 25, 2025. (c) PBS NewsHour coverage (dated November 21, 2025 in search metadata) articulates the framing ('people who are based in foreign countries and are banned from donating to the political process in the U.S. have this new route for directing money toward the president') and predates the Raskin report by 4 days, but is very close to the proposed date and may itself be responding to pre-report leaks.\n\nLIMITATIONS: Paywalled NYT and WSJ archives from late 2024 and early 2025 could not be fully accessed. Usenet, early blog posts, and think-tank working papers from the Sep\u2013Dec 2024 window were not directly searchable. The search did not find any pre-November 5, 2024 (election day) articulation of the full framing, which is consistent with the framing being structurally dependent on Trump winning the election and foreign investors subsequently entering his crypto ventures.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "2024-11-25",
+        "active_through": "2026-05-08",
+        "active_span_days": 529,
+        "years_active": 2,
+        "years_with_activity": 3,
+        "instances_per_year": {
+          "2024": 2,
+          "2025": 8,
+          "2026": 4
+        },
+        "instances_per_year_by_role": {
+          "2024": {
+            "early-amplifier": 2
+          },
+          "2025": {
+            "institutional-adoption": 4,
+            "early-amplifier": 1,
+            "mass-amplifier": 3
+          },
+          "2026": {
+            "institutional-adoption": 2,
+            "early-amplifier": 1,
+            "mass-amplifier": 1
+          }
+        },
+        "peak_year": "2025",
+        "peak_year_count": 8,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
+        "days_since_latest": 63
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "foreign-policy",
+    "domain_confidence": 0.85,
+    "inductive_cluster_ids": [],
+    "tropes": [
+      "pay-to-play",
+      "hidden-cabal",
+      "deep-state"
+    ]
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 9,
+    "actors": [
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2024-11-25",
+        "last_date": "2025-04-25"
+      },
+      {
+        "actor_id": "0cb9681f2dcd",
+        "display": "The Washington Post",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-12-03",
+        "last_date": "2024-12-03"
+      },
+      {
+        "actor_id": "98010f77739f",
+        "display": "house.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 4,
+        "first_date": "2025-01-20",
+        "last_date": "2026-01-20"
+      },
+      {
+        "actor_id": "f7a08515c16e",
+        "display": "brennancenter.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-02-01",
+        "last_date": "2025-02-01"
+      },
+      {
+        "actor_id": "b93c6ee46aa6",
+        "display": "senate.gov",
+        "actor_type": "official",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2025-05-05",
+        "last_date": "2025-05-13"
+      },
+      {
+        "actor_id": "a722db3200d2",
+        "display": "commoncause.org",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-09-05",
+        "last_date": "2025-09-05"
+      },
+      {
+        "actor_id": "ca249d6f55dd",
+        "display": "americanbar.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-03-04",
+        "last_date": "2026-03-04"
+      },
+      {
+        "actor_id": "d6e3848512c4",
+        "display": "democracydefendersfund.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-03-11",
+        "last_date": "2026-03-11"
+      },
+      {
+        "actor_id": "874e36703e32",
+        "display": "americanprogress.org",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-05-08",
+        "last_date": "2026-05-08"
+      }
+    ],
+    "originators": [],
+    "critics": [],
+    "social_accounts": [],
+    "by_actor_type": {
+      "news": 7,
+      "official": 2
+    },
+    "date_span": [
+      "2024-11-25",
+      "2026-05-08"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-10T07:43:12.066850+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

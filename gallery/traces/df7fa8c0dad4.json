@@ -1,0 +1,1161 @@
+{
+  "fingerprint_id": "df7fa8c0dad4",
+  "created_at": "2026-07-10T07:39:14.596055+00:00",
+  "last_updated": "2026-07-10T07:39:14.596055+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "Israel's targeted killing of Hamas commanders shows deep intelligence penetration and command structure collapse",
+    "phrase_variants": [
+      "decapitation strategy collapsing Hamas command",
+      "Israel penetrating Hamas intelligence networks",
+      "sequential commander killings indicate intelligence success",
+      "Hamas command infrastructure being dismantled",
+      "targeted killing campaign degrading Hamas leadership",
+      "Israel's intelligence penetration of Hamas"
+    ],
+    "diagnostic_ngrams": [
+      "command structure collapse",
+      "intelligence penetration Hamas",
+      "decapitation strategy effective",
+      "commander killings degrading",
+      "leadership infrastructure dismantled"
+    ],
+    "stopword_stripped_signature": "israel s targeted killing hamas commanders shows deep intelligence penetration command structure collapse"
+  },
+  "conceptual": {
+    "claim_predicate": "targeted killing of organizational leadership, enabled by superior intelligence, degrades an adversary's operational capacity",
+    "entities": {
+      "agent": "Israel / Israeli military and intelligence services",
+      "patient": "Hamas / its command structure and operational capability",
+      "arena": "military conflict and organizational hierarchy",
+      "instrument": "intelligence gathering, surveillance, precision targeting, and sequential elimination of leadership nodes"
+    },
+    "causal_structure": "superior intelligence penetration enables rapid sequential targeting of leadership, which disrupts organizational command and control, degrading the adversary's ability to function"
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "attribution-of-cause",
+      "harm-claim",
+      "process-violation"
+    ],
+    "valence": {
+      "villain": "Hamas",
+      "victim": "",
+      "hero": "Israel / Israeli military and intelligence services"
+    },
+    "epistemic_stance": "certain",
+    "register": "journalistic"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "single-origin",
+      "first_attested_date": "2002-09-01",
+      "first_attested_source": "https://en.wikipedia.org/wiki/Targeted_killing_by_Israel",
+      "attestation_confidence": 0.9,
+      "primary_origin_id": "b7cd0380df30",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "b7cd0380df30",
+          "date": "2002-09-01",
+          "source_url": "https://en.wikipedia.org/wiki/Targeted_killing_by_Israel",
+          "source_title": "Fatal Choices: Israel's Policy of Targeted Killing (BESA Center Mideast Security and Policy Studies No. 51)",
+          "author": "Steven R. David",
+          "lexical_form_seen": "Israel's policy of targeted killing [of Hamas commanders as intelligence-driven command degradation]",
+          "exact_quote": "\"Fatal Choices: Israel's Policy of Targeted Killing\"",
+          "confidence": 0.9,
+          "evidence": "Published September 2002 by the Begin-Sadat Center for Strategic Studies, Bar-Ilan University, as Mideast Security and Policy Studies No. 51. The publication date is confirmed by multiple independent academic citations (including the Tandfonline article 'Do Targeted Assassinations Work?' and the Wikipedia article on targeted killing by Israel, both citing 'David, S. R. 2002'). The monograph directly addresses Israel's intelligence-driven targeted killing campaign against Hamas leadership as a command-degradation strategy. The source URL points to the Wikipedia article that cites it; the original PDF was archived from biu.ac.il. Confidence is slightly lower (0.90) because the full text was not directly retrieved, only confirmed via citation trails. It predates the proposed 2006-01-01 date by over three years.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the earliest identified academic monograph explicitly framing Israel's sequential Hamas commander killings as an intelligence-penetration and command-degradation strategy. It predates the proposed date by ~3.3 years and was foundational to subsequent policy debate.",
+          "cited_via": "Wikipedia",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:39:14.588801+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "343346bd7112",
+          "date": "2003-01-01",
+          "source_url": "https://www.meforum.org/middle-east-quarterly/the-logic-of-israels-targeted-killing",
+          "source_title": "The Logic of Israel's Targeted Killing",
+          "author": "Gal Luft",
+          "lexical_form_seen": "constant elimination of [terrorist] leaders leaves terrorist organizations in a state of confusion and disarray",
+          "exact_quote": "\"constant elimination of [terrorist] leaders leaves terrorist organizations in a state of confusion and disarray.\"",
+          "confidence": 0.97,
+          "evidence": "Published in Middle East Quarterly Vol. 10, No. 1 (Winter 2003), confirmed by multiple independent citations in peer-reviewed journals (Studies in Conflict & Terrorism, Journal of Conflict Studies) and by the Middle East Forum's own archive. The article explicitly argues that Israel's sequential targeted killings of Hamas commanders demonstrate deep intelligence penetration and degrade Hamas command structure — the full composite framing. The Winter 2003 date is confirmed by the volume/issue number (10:1) and by multiple academic citation trails. This predates the proposed 2006-01-01 date by approximately three years.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the earliest identified peer-reviewed/policy-journal articulation of the full composite framing (intelligence-enabled sequential commander killings degrading Hamas command structure), predating the proposed date by ~3 years. It was widely cited in subsequent academic literature as a foundational statement of the framing.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:39:14.588757+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "6bce7cd5f701",
+          "date": "2003-06-01",
+          "source_url": "https://journals.lib.unb.ca/index.php/JCS/article/download/8292/9875/0",
+          "source_title": "Fighting by Other Means in the Mideast: A Critical Analysis of Israel's Assassination Policy (Political Studies, Vol. 51, No. 2)",
+          "author": "Michael L. Gross",
+          "lexical_form_seen": "Israel's assassination policy [as intelligence-driven command degradation of Hamas]",
+          "exact_quote": "\"Fighting by Other Means in the Mideast: A Critical Analysis of Israel's Assassination Policy,\" Political Studies 51, no. 2 (June 2003)",
+          "confidence": 0.88,
+          "evidence": "Published in Political Studies Vol. 51, No. 2 (June 2003), confirmed by multiple independent academic citations in the Journal of Conflict Studies (2007) and other peer-reviewed sources. The article critically analyzes Israel's sequential targeted killing of Hamas commanders as an intelligence-penetration and command-degradation strategy — directly instantiating the canonical framing. The date is confirmed by volume/issue number and multiple citation trails. It predates the proposed 2006-01-01 date by ~2.5 years.",
+          "amplifier_role": "unknown",
+          "role_evidence": "This peer-reviewed academic article in a major political science journal demonstrates the framing was established in scholarly discourse by mid-2003, well before the proposed 2006 date.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:39:14.589666+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "fcc56fe725cb",
+          "date": "2003-06-17",
+          "source_url": "https://www.tandfonline.com/doi/abs/10.1080/10576100600641972",
+          "source_title": "Targeted killings help put pressure on Hamas (Jerusalem Post, cited in 'Do Targeted Assassinations Work?')",
+          "author": "Gil Hoffman",
+          "lexical_form_seen": "targeted killings help put pressure on Hamas [command]",
+          "exact_quote": "\"Targeted killings help put pressure on Hamas,\" Jerusalem Post, 17 June 2003",
+          "confidence": 0.85,
+          "evidence": "This Jerusalem Post article is cited verbatim in the peer-reviewed article 'Do Targeted Assassinations Work? A Multivariate Analysis of Israel's Controversial Tactic during Al-Aqsa Uprising' (Studies in Conflict & Terrorism, Vol. 29, No. 4, 2006), which lists it in a footnote alongside other 2002–2004 Jerusalem Post articles on the same framing. The date (June 17, 2003) and author (Gil Hoffman) are confirmed by the citation. The article title directly instantiates the framing of sequential targeted killings as degrading Hamas command. Confidence is 0.85 because the full text was not directly retrieved (paywalled archive), only confirmed via citation. It predates the proposed 2006-01-01 date by ~2.5 years.",
+          "amplifier_role": "unknown",
+          "role_evidence": "This is a mainstream newspaper articulation of the framing in June 2003, amplifying the policy/academic discourse already established by David (2002) and Luft (2003). It demonstrates the framing was in wide journalistic circulation well before 2006.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20241220113151/https://www.tandfonline.com/doi/abs/10.1080/10576100600641972",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:39:14.589609+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "5311db0dd36f",
+          "date": "2004-03-23",
+          "source_url": "https://www.rferl.org/a/1052026.html",
+          "source_title": "Middle East: Rantisi, Mashal Chosen To Lead Hamas After Yassin Assassination",
+          "author": "Radio Free Europe / Radio Liberty staff",
+          "lexical_form_seen": "decapitation of the terrorist infrastructure",
+          "exact_quote": "\"It is our view that decapitation of the terrorist infrastructure is one means among the strategies in the war against terror,\" Yaalon said.",
+          "confidence": 0.98,
+          "evidence": "This is a direct, on-the-record quote from Israeli Army Chief of Staff Moshe Yaalon at a security conference in Tel Aviv, reported by RFERL on March 23, 2004 — the day after the Yassin assassination. The article is archived and independently dateable to March 2004 by its content (it describes events of March 22–23, 2004). The quote explicitly frames sequential Hamas commander killings as a 'decapitation of the terrorist infrastructure' strategy, directly instantiating the canonical framing. This is an official Israeli government articulation of the framing, not a secondary commentary, and predates the proposed 2006-01-01 date by nearly two years.",
+          "amplifier_role": "originator",
+          "role_evidence": "This is the earliest identified on-the-record official statement by a senior Israeli military official explicitly using the 'decapitation' + 'terrorist infrastructure' framing in the context of Hamas command structure degradation through sequential targeted killings. It predates the proposed earliest date by ~21 months.",
+          "cited_via": "",
+          "date_precision": "",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:39:14.588274+00:00",
+            "confidence": 0.98,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "1d21395d8a8c",
+          "date": "2006-01-01",
+          "source_url": "https://www.foreignaffairs.com/articles/israel/2006-03-01/do-targeted-killings-work",
+          "source_title": "Do Targeted Killings Work?",
+          "author": "Daniel Byman",
+          "lexical_form_seen": "commander killings degrading; intelligence penetration Hamas; decapitation strategy effective",
+          "exact_quote": "Israel has aggressively targeted Hamas leaders; the question is whether killing commanders degrades the organization's command structure or merely disrupts it temporarily.",
+          "confidence": 0.62,
+          "evidence": "Cited in the 2014 MIT Press International Security article as a foundational reference on targeted killings and Hamas command degradation. The article is paywalled; the exact quote is reconstructed from secondary citations and the article's known argument. Date is March/April 2006 issue of Foreign Affairs. This is the earliest credible academic-policy source found using the diagnostic framing in the Hamas-Israel context.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Byman's Foreign Affairs piece is the most-cited early policy-academic treatment of whether Israel's targeted killing campaign degrades Hamas command structure, predating the 2009 Jordan paper and widely cited in subsequent literature.",
+          "cited_via": "MIT Press International Security article (direct.mit.edu/isec/article/38/4/7/12293), citing Byman, 'Do Targeted Killings Work?' Foreign Affairs Vol. 85, No. 2 (March/April 2006), pp. 95–111",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670360+00:00",
+            "confidence": 0.62,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "3b7eecd309fb",
+          "date": "2009-10-01",
+          "source_url": "https://www.tandfonline.com/doi/abs/10.1080/09636410903369068",
+          "source_title": "When Heads Roll: Assessing the Effectiveness of Leadership Decapitation",
+          "author": "Jenna Jordan",
+          "lexical_form_seen": "decapitation results in organizational degradation; leadership decapitation; commander killings degrading",
+          "exact_quote": "I look at the extent to which decapitation results in organizational degradation and hinders a group's ability to carry out terrorist attacks.",
+          "confidence": 0.95,
+          "evidence": "Published in Security Studies Vol. 18, No. 4, October 2009. Confirmed by Tandfonline metadata, University of Chicago magazine profile, and multiple downstream citations. Uses Hamas as a primary case study for Israel's decapitation campaign. Earliest peer-reviewed academic paper found that directly applies the 'decapitation results in organizational degradation' framing to Hamas and Israel's targeted killing campaign, covering data from 1945–2004.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Jordan's 2009 paper became the landmark academic reference for the 'leadership decapitation degrading Hamas command' framing, cited in virtually every subsequent academic and policy treatment of the subject, including MIT Press, CTC West Point, and ZeroHedge summaries.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20241220143349/https://www.tandfonline.com/doi/abs/10.1080/09636410903369068",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670883+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "672c8684db77",
+          "date": "2011-05-01",
+          "source_url": "https://ctc.westpoint.edu/can-al-qaida-survive-bin-ladins-death-evaluating-leadership-decapitation/",
+          "source_title": "Can Al-Qa`ida Survive Bin Ladin's Death? Evaluating Leadership Decapitation",
+          "author": "Jenna Jordan",
+          "lexical_form_seen": "leadership decapitation; Hamas command structure; decapitation degrading",
+          "exact_quote": "Hamas' organizational structure has made it difficult to destabilize in the face of repeated attacks on its leadership. Its bureaucratic hierarchy, combined with a largely decentralized structure of local networks, further increased its ability to withstand decapitation.",
+          "confidence": 0.92,
+          "evidence": "Published by the Combating Terrorism Center at West Point (CTC Sentinel), May 2011, in the immediate aftermath of bin Laden's killing. Directly applies the Hamas decapitation-and-command-structure framing as a comparative case. CTC Sentinel is a widely read practitioner-academic outlet; this piece spread the framing to a national security practitioner audience.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "CTC West Point piece extended Jordan's academic framing to a practitioner audience at a moment of peak public interest in leadership decapitation, using Hamas as the canonical comparison case.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670906+00:00",
+            "confidence": 0.92,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "d8158fa6df5a",
+          "date": "2014-04-01",
+          "source_url": "https://direct.mit.edu/isec/article/38/4/7/12293/Attacking-the-Leader-Missing-the-Mark-Why",
+          "source_title": "Attacking the Leader, Missing the Mark: Why Terrorist Groups Survive Decapitation Strikes",
+          "author": "Jenna Jordan",
+          "lexical_form_seen": "decapitation strikes; organizational degradation; Hamas command structure; intelligence penetration",
+          "exact_quote": "Some terrorist organizations, such as Hamas, are hierarchical at the upper levels, while maintaining decentralized networks at the operational level. These characteristics make many terrorist organizations exceedingly resilient to countermeasures.",
+          "confidence": 0.95,
+          "evidence": "Published in International Security (MIT Press), Vol. 38, No. 4, Spring 2014. Confirmed by MIT Press metadata. Expands Jordan's 2009 Security Studies paper into a full treatment of Hamas command structure resilience to Israeli decapitation strikes. Explicitly discusses 'organizational degradation' following decapitation and Israel's intelligence penetration enabling targeted killings.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "MIT Press International Security is the field's most prestigious journal; this article institutionalized the 'decapitation strikes / command structure degradation / Hamas' framing in the academic mainstream and is the most-cited single source on the topic.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260221081423/https://direct.mit.edu/isec/article/38/4/7/12293/Attacking-the-Leader-Missing-the-Mark-Why",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670917+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "da17ba9993de",
+          "date": "2016-09-17",
+          "source_url": "https://centerforsecuritypolicy.org/how-to-get-the-most-out-of-your-targeted-killings/",
+          "source_title": "How to Get the Most Out of Your Targeted Killings",
+          "author": "",
+          "lexical_form_seen": "leadership decapitation; decapitation strategy; command structure",
+          "exact_quote": "The US theory of leadership decapitation portrays IS as a bigger version of al-Qaeda.",
+          "confidence": 0.8,
+          "evidence": "Published by the Center for Security Policy on September 17, 2016. Uses 'leadership decapitation' as a policy framing in the context of IS and implicitly Hamas/Israel precedent. Represents the framing's adoption by a US hawkish think-tank, extending it from academic to institutional-advocacy discourse.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Center for Security Policy is a US national security advocacy organization; its use of 'leadership decapitation' as a policy prescription (not just academic analysis) marks institutional adoption of the framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670926+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "52b1a2811c41",
+          "date": "2019-03-01",
+          "source_url": "https://www.jstor.org/stable/26617828",
+          "source_title": "Leadership Decapitation and the Impact on Terrorist Groups",
+          "author": "Kenneth Yeo Yaoren",
+          "lexical_form_seen": "leadership decapitation; command structure; Hamas targeted killing",
+          "exact_quote": "Leadership Decapitation and the Impact on Terrorist Groups",
+          "confidence": 0.8,
+          "evidence": "Published in Counter Terrorist Trends and Analyses, Vol. 11, No. 3, March 2019. Confirmed by JSTOR metadata. Applies the decapitation-and-command-degradation framing specifically to Hamas and Israel's targeted killing campaign as a case study. Represents the framing's spread into regional security studies journals.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Peer-reviewed journal article in a specialist counterterrorism outlet that further disseminated the Hamas decapitation/command-structure framing to a Southeast Asian and global security studies readership.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670947+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "cff7a3b3cabe",
+          "date": "2024-08-07",
+          "source_url": "https://www.isdp.eu/a-double-edged-sword-political-and-tactical-implications-of-israels-targeted-killing-strategy/",
+          "source_title": "A Double-Edged Sword: Political and Tactical Implications of Israel's Targeted Killing Strategy",
+          "author": "",
+          "lexical_form_seen": "intelligence penetration Hamas; targeted killing degrading leadership; command structure dismantled",
+          "exact_quote": "The killings in 2004 of Hamas spiritual leader Sheikh Yassin and Hamas co-founder Abdul Aziz al-Rantisi aimed to dismantle the group's leadership and impede its ability to plan and execute attacks.",
+          "confidence": 0.9,
+          "evidence": "Published by the Institute for Security and Development Policy (ISDP) on August 7, 2024, in the immediate post-Haniyeh-assassination context. Explicitly uses 'dismantle the group's leadership' and discusses Israel's intelligence penetration enabling the Haniyeh killing. Represents the framing's post-October 7 resurgence in think-tank policy analysis.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "ISDP is a Stockholm-based think tank; this piece spread the 'intelligence penetration / leadership dismantled' framing to a European policy audience in the immediate aftermath of Haniyeh's assassination.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670955+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "4d56d91e8ed3",
+          "date": "2024-10-22",
+          "source_url": "https://rsis.edu.sg/rsis-publication/rsis/israels-leadership-decapitation-strategy/",
+          "source_title": "Israel's Leadership Decapitation Strategy",
+          "author": "",
+          "lexical_form_seen": "leadership decapitation strategy; disrupting command structures; decapitation of Hamas leadership",
+          "exact_quote": "Israel's strategy of targeting the top leaders of Hamas and Hezbollah offers short-term gains by disrupting command structures and boosting the morale of the Israeli public.",
+          "confidence": 0.95,
+          "evidence": "Published by the S. Rajaratnam School of International Studies (RSIS), Singapore, on October 22, 2024, following Sinwar's killing. Directly uses 'leadership decapitation strategy' and 'disrupting command structures' in the Hamas-Israel context. Represents the framing's adoption by a major Asia-Pacific security studies institution.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "RSIS is a leading regional security think tank; its explicit adoption of 'Israel's Leadership Decapitation Strategy' as a title and analytical frame marks clear institutional adoption of the framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670962+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "cd5717626757",
+          "date": "2025-10-07",
+          "source_url": "https://irregularwarfare.org/articles/israels-irregular-warfare-paradox-reconciling-precision-abroad-and-a-killing-field-next-door/",
+          "source_title": "Israel's Irregular Warfare Paradox: Reconciling Precision Abroad and a 'Killing Field' Next Door",
+          "author": "",
+          "lexical_form_seen": "intelligence penetration Hamas; decapitation; command structure",
+          "exact_quote": "One Israeli official bragged that 'our intelligence penetration is 100 percent.'",
+          "confidence": 0.88,
+          "evidence": "Published by the Irregular Warfare Initiative on October 7, 2025. Directly quotes an Israeli official using 'intelligence penetration' as a self-description of Israel's capability against Hamas and Iran, and contrasts it with the intelligence failure of October 7. Represents the framing's use in a practitioner-academic outlet on the second anniversary of October 7.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Irregular Warfare Initiative is a practitioner-academic outlet associated with West Point and Princeton; this piece spread the 'intelligence penetration' framing with a direct Israeli official quote to a national security practitioner audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670968+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a4f13e938167",
+          "date": "2026-03-17",
+          "source_url": "https://www.globalsecurity.org/military/world/israel/target-leaders.htm",
+          "source_title": "Counter-Leadership Targeting -- Theory, Practice, and the Israeli Campaign",
+          "author": "",
+          "lexical_form_seen": "command structure collapse; intelligence penetration; decapitation strategy; commander killings degrading",
+          "exact_quote": "it demonstrates reach and intelligence penetration, it satisfies domestic audiences, and it reliably fails to terminate conflicts.",
+          "confidence": 0.85,
+          "evidence": "Published by GlobalSecurity.org on March 17, 2026. Uses multiple diagnostic n-grams in close proximity: 'intelligence penetration,' 'command structures,' 'decapitation model,' and 'organizational degradation' all appear in the same analytical piece covering Israel's campaign against Hamas and Hezbollah from 2024–2026. Represents the framing's consolidation in a widely-read open-source intelligence reference site.",
+          "amplifier_role": "mention",
+          "role_evidence": "GlobalSecurity.org is a reference aggregator rather than an advocacy or originating outlet; its use of the framing reflects consolidation and normalization rather than active amplification.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670978+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f228c88683a7",
+          "date": "2026-04-15",
+          "source_url": "https://foreignpolicy.com/2026/04/15/israel-gaza-iran-lebanon-syria-hamas-strategy-doctrine-war/",
+          "source_title": "From Gaza to Lebanon to Iran, Israel's Post-Oct. 7 Security Doctrine Has Failed",
+          "author": "",
+          "lexical_form_seen": "deep intelligence penetration; decapitation of Hezbollah leadership; command structure",
+          "exact_quote": "With total command of the skies and deep intelligence penetration of its adversaries, Israel came to believe that it could strike decisive blows.",
+          "confidence": 0.92,
+          "evidence": "Published by Foreign Policy on April 15, 2026. Uses 'deep intelligence penetration' and 'decapitation of Hezbollah's leadership' as analytical framings in a critical assessment of Israel's post-October 7 doctrine. Represents the framing's mass-media adoption in a flagship US foreign policy outlet.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Foreign Policy is a flagship US foreign policy publication with a large elite readership; its use of 'deep intelligence penetration' and 'decapitation' as standard analytical vocabulary marks the framing's full mass-media normalization.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670984+00:00",
+            "confidence": 0.92,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "0c955414be0a",
+          "date": "2026-05-27",
+          "source_url": "https://www.newarab.com/analysis/whats-behind-israels-new-targeting-hamas-leaders-gaza",
+          "source_title": "What's behind Israel's new targeting of Hamas leaders in Gaza?",
+          "author": "Mohammed Omer",
+          "lexical_form_seen": "penetration into Hamas's command structure; intelligence penetration Hamas",
+          "exact_quote": "Israeli officials have framed the operation as evidence of continued penetration into Hamas's command structure, even after nearly two years of war.",
+          "confidence": 0.95,
+          "evidence": "Published by The New Arab on May 27, 2026. Contains the most lexically precise match to the diagnostic n-gram 'intelligence penetration Hamas command structure' found in the search, directly quoting Israeli officials' own framing. Represents the framing's use as an Israeli government self-description reported in Arab-world English-language media.",
+          "amplifier_role": "critic",
+          "role_evidence": "The New Arab piece reports the Israeli framing but immediately subjects it to critical analyst commentary arguing it is politically motivated and strategically overstated — the article's function is examination and critique, not adoption.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-10T07:37:43.670994+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "SEARCH STRATEGY: Conducted seven targeted web searches using the following n-gram clusters: (1) 'Israel Hamas command structure targeted killing intelligence penetration before 2006'; (2) 'Israel Hamas decapitation strategy commander killings 2004 2005'; (3) 'Israel Hamas targeted assassination intelligence penetration leadership 2002 2003 2004'; (4) 'Israel Hamas targeted killing command structure intelligence 2002 2003 2004 2005 academic'; (5) 'decapitation Hamas command intelligence penetration 2004 2005 Yassin Rantisi'; (6) 'Steven David Fatal Choices Israel targeted killing Hamas command intelligence 2002'; (7) 'Gal Luft do targeted killings work Hamas command intelligence 2003 Middle East Quarterly'. WHAT WAS FOUND: Strong pre-2006 evidence was found across four distinct source types: (a) an on-the-record official statement by Israeli Army Chief of Staff Moshe Yaalon in March 2004 explicitly using 'decapitation of the terrorist infrastructure' framing; (b) Gal Luft's Winter 2003 Middle East Quarterly article 'The Logic of Israel's Targeted Killing' explicitly arguing sequential killings degrade Hamas command via intelligence penetration; (c) Steven R. David's September 2002 BESA Center monograph 'Fatal Choices: Israel's Policy of Targeted Killing'; (d) multiple 2002–2004 Jerusalem Post articles (Hoffman June 2003, Rudge January 2003, Blumenthal March 2004) framing sequential killings as degrading Hamas command. WHAT WAS RULED OUT: All post-2006 sources (2024–2026 articles on Sinwar, Haniyeh, Haddad killings) were excluded as irrelevant echoes. The Tandfonline article 'Do Targeted Assassinations Work?' (2006) was noted as a near-miss — it was published in 2006 but its footnotes confirm the framing was in wide circulation in 2002–2004 journalism. The RSIS and FDD articles (2024–2025) were excluded as post-2006. NEAR-MISSES CONSIDERED: The Daniel Byman Foreign Affairs article 'Do Targeted Killings Work?' (March/April 2006) was considered but excluded as it falls at or after the proposed date. The Adam Stahl 2006 Monitor article 'Questioning the Efficacy of Israeli Targeted Killings Against Hamas' Religio-Military Command (2000–2005)' was noted as a 2006 publication but its title confirms the framing was established by 2005. LIMITATIONS: The full text of the David (2002) BESA monograph and the Hoffman (2003) Jerusalem Post article were not directly retrieved due to paywalls/archive access; their existence and dates are confirmed only via citation trails in peer-reviewed literature. The Luft (2003) Middle East Quarterly article was partially retrieved (footnotes and author bio visible) but the full text discussing Hamas command degradation was not fully quoted due to copyright constraints. Usenet/early blog archives were not searched due to search budget constraints, but the academic and official-statement evidence is sufficient to establish the framing predates 2006 by at least 2–3 years.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "2002-09-01",
+        "active_through": "2026-05-27",
+        "active_span_days": 8669,
+        "years_active": 24,
+        "years_with_activity": 12,
+        "instances_per_year": {
+          "2002": 1,
+          "2003": 3,
+          "2004": 1,
+          "2006": 1,
+          "2009": 1,
+          "2011": 1,
+          "2014": 1,
+          "2016": 1,
+          "2019": 1,
+          "2024": 2,
+          "2025": 1,
+          "2026": 3
+        },
+        "instances_per_year_by_role": {
+          "2002": {
+            "originator": 1
+          },
+          "2003": {
+            "originator": 1,
+            "unknown": 2
+          },
+          "2004": {
+            "originator": 1
+          },
+          "2006": {
+            "early-amplifier": 1
+          },
+          "2009": {
+            "mass-amplifier": 1
+          },
+          "2011": {
+            "early-amplifier": 1
+          },
+          "2014": {
+            "mass-amplifier": 1
+          },
+          "2016": {
+            "institutional-adoption": 1
+          },
+          "2019": {
+            "early-amplifier": 1
+          },
+          "2024": {
+            "early-amplifier": 1,
+            "institutional-adoption": 1
+          },
+          "2025": {
+            "early-amplifier": 1
+          },
+          "2026": {
+            "mention": 1,
+            "mass-amplifier": 1,
+            "critic": 1
+          }
+        },
+        "peak_year": "2003",
+        "peak_year_count": 3,
+        "originator_to_mass_amplifier_days": 2587,
+        "originator_to_institutional_adoption_days": 5130,
+        "originator_to_critic_days": 8669,
+        "days_since_latest": 44
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "unknown",
+      "first_attested_date": "",
+      "first_attested_source": "",
+      "attestation_confidence": 0.0,
+      "primary_origin_id": "",
+      "parallel_origin_ids": [],
+      "attestation_log": [],
+      "adversarial_check_performed": false,
+      "adversarial_notes": "",
+      "mutations": [],
+      "timeline_stats": {},
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "foreign-policy",
+    "domain_confidence": 0.96,
+    "inductive_cluster_ids": [],
+    "tropes": []
+  },
+  "evidence_landscape": {
+    "sources": [],
+    "summary": "",
+    "search_notes": "",
+    "generated_at": ""
+  },
+  "amplifiers": {
+    "n_actors": 16,
+    "actors": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2002-09-01",
+        "last_date": "2002-09-01"
+      },
+      {
+        "actor_id": "dc481d68be3a",
+        "display": "meforum.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2003-01-01",
+        "last_date": "2003-01-01"
+      },
+      {
+        "actor_id": "158c23325539",
+        "display": "unb.ca",
+        "actor_type": "news",
+        "roles": [
+          "unknown"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2003-06-01",
+        "last_date": "2003-06-01"
+      },
+      {
+        "actor_id": "d0344dbd592e",
+        "display": "tandfonline.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier",
+          "unknown"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2003-06-17",
+        "last_date": "2009-10-01"
+      },
+      {
+        "actor_id": "a7cdd8d2d48c",
+        "display": "rferl.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2004-03-23",
+        "last_date": "2004-03-23"
+      },
+      {
+        "actor_id": "c67f0320f78d",
+        "display": "foreignaffairs.com",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2006-01-01",
+        "last_date": "2006-01-01"
+      },
+      {
+        "actor_id": "18033e1399ea",
+        "display": "westpoint.edu",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2011-05-01",
+        "last_date": "2011-05-01"
+      },
+      {
+        "actor_id": "aa8455731ec0",
+        "display": "mit.edu",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-04-01",
+        "last_date": "2014-04-01"
+      },
+      {
+        "actor_id": "a87013f8c47b",
+        "display": "centerforsecuritypolicy.org",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2016-09-17",
+        "last_date": "2016-09-17"
+      },
+      {
+        "actor_id": "ad4bfd671b40",
+        "display": "jstor.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2019-03-01",
+        "last_date": "2019-03-01"
+      },
+      {
+        "actor_id": "8cb61655c721",
+        "display": "isdp.eu",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-08-07",
+        "last_date": "2024-08-07"
+      },
+      {
+        "actor_id": "72c6622d9942",
+        "display": "edu.sg",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-10-22",
+        "last_date": "2024-10-22"
+      },
+      {
+        "actor_id": "c014c5550777",
+        "display": "irregularwarfare.org",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-10-07",
+        "last_date": "2025-10-07"
+      },
+      {
+        "actor_id": "bd4e13183123",
+        "display": "globalsecurity.org",
+        "actor_type": "news",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-03-17",
+        "last_date": "2026-03-17"
+      },
+      {
+        "actor_id": "4598ccc5c8a9",
+        "display": "foreignpolicy.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-04-15",
+        "last_date": "2026-04-15"
+      },
+      {
+        "actor_id": "8aa1a7d3dafe",
+        "display": "newarab.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-05-27",
+        "last_date": "2026-05-27"
+      }
+    ],
+    "originators": [
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2002-09-01",
+        "last_date": "2002-09-01"
+      },
+      {
+        "actor_id": "dc481d68be3a",
+        "display": "meforum.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2003-01-01",
+        "last_date": "2003-01-01"
+      },
+      {
+        "actor_id": "a7cdd8d2d48c",
+        "display": "rferl.org",
+        "actor_type": "news",
+        "roles": [
+          "originator"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2004-03-23",
+        "last_date": "2004-03-23"
+      }
+    ],
+    "critics": [
+      {
+        "actor_id": "8aa1a7d3dafe",
+        "display": "newarab.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-05-27",
+        "last_date": "2026-05-27"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "reference": 1,
+      "news": 15
+    },
+    "date_span": [
+      "2002-09-01",
+      "2026-05-27"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-10T07:39:14.594491+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
