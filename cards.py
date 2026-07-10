@@ -546,6 +546,225 @@ def render_png(cd, out_path):
 
 
 # ---------------------------------------------------------------------------
+# event cards: the framing fan (Mockup B — equal cells, carrier names)
+# ---------------------------------------------------------------------------
+
+def event_card_data(ev):
+    """Card data for an event analysis: the fan of competing framings.
+    Equal-weight cells by design (P5 rule: carrier counts are search-bounded,
+    so no sized bars — unit dots + names); sorted by carrier count, capped at
+    8 cells with the remainder counted honestly."""
+    framings = ev.get("framings") or []
+    if len(framings) < 2:
+        return None
+    cells = []
+    for f in framings:
+        carriers = f.get("carriers") or []
+        cells.append({
+            "name": f.get("name") or "",
+            "question": f.get("question") or "",
+            "claim": f.get("key_claim") or "",
+            "n": len(carriers),
+            "names": [c.get("name") or "" for c in carriers if c.get("name")],
+        })
+    cells.sort(key=lambda c: -c["n"])
+    sf = ev.get("shared_foundation") or {}
+    agrees = (sf.get("summary") or "").split(". ")[0].strip()
+    # the summary's own preamble is redundant after "Everyone agrees:"
+    agrees = re.sub(r"^All (?:\w+ )?(?:framings|sides) (?:accept|agree)( that)?\s*",
+                    "", agrees, flags=re.I)
+    if agrees:
+        agrees = agrees[0].upper() + agrees[1:]
+        if not agrees.endswith("."):
+            agrees += "."
+    else:
+        facts = [v.get("statement") or "" for v in sf.get("verified_facts") or []]
+        agrees = " ".join(facts[:2])
+    return {
+        "analysis_id": ev.get("analysis_id") or "",
+        "title": (ev.get("event") or "").strip(),
+        "n_framings": len(framings),
+        "cells": cells[:8],
+        "n_hidden": max(0, len(framings) - 8),
+        "agrees": agrees,
+        "headline": f"{len(framings)} competing framings.",
+    }
+
+
+def render_event_png(cd, out_path):
+    img = Image.new("RGB", (W, H), PAPER)
+    d = ImageDraw.Draw(img, "RGBA")
+    d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
+                        outline=GRID, width=1)
+    ML, MR = 70, W - 70
+    cw = MR - ML
+
+    d.text((ML, 52), "T R I B U T A R Y   ·   E V E N T   A N A L Y S I S",
+           font=_font(22, "semibold"), fill=INK3)
+
+    f_head = _fit(d, cd["headline"], "bold", 64, cw)
+    d.text((ML, 90), cd["headline"], font=f_head, fill=INK1)
+
+    f_title = _font(26)
+    ty = 178
+    for ln in _wrap(d, cd["title"], f_title, cw, 2):
+        d.text((ML, ty), ln, font=f_title, fill=INK2)
+        ty += 35
+
+    # "everyone agrees" strip — the shared foundation, then the contest
+    if cd["agrees"]:
+        f_a = _font(20)
+        d.rounded_rectangle([ML, 256, MR, 322], radius=10, fill=(244, 243, 239))
+        lines = _wrap(d, "Everyone agrees: " + cd["agrees"] +
+                      " The contest is over what it means.", f_a, cw - 40, 2)
+        ay = 264
+        for ln in lines:
+            d.text((ML + 20, ay), ln, font=f_a, fill=INK2)
+            ay += 27
+
+    # the fan: 2 x 4 equal cells — framing name over unit dots + carrier names
+    f_name, f_car = _font(21, "semibold"), _font(17)
+    col_w = (cw - 60) // 2
+    top = 340
+    for i, c in enumerate(cd["cells"]):
+        x = ML + (i % 2) * (col_w + 60)
+        y = top + (i // 2) * 52
+        d.text((x, y), _ellipsize(d, c["name"], f_name, col_w), font=f_name, fill=INK1)
+        dots_n = min(c["n"], 10)
+        for j in range(dots_n):
+            dx = x + j * 12
+            d.ellipse([dx, y + 33, dx + 8, y + 41], fill=BLUE)
+        names = ", ".join(c["names"][:2]) + \
+            (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
+        d.text((x + dots_n * 12 + 6, y + 27),
+               _ellipsize(d, f'{c["n"]} · {names}', f_car, col_w - dots_n * 12 - 6),
+               font=f_car, fill=INK3)
+
+    if cd["n_hidden"]:
+        d.text((ML, top + 4 * 52 + 2), f'+ {cd["n_hidden"]} more framings',
+               font=_font(17), fill=INK3)
+
+    d.line([ML, 562, MR, 562], fill=GRID, width=2)
+    f_f = _font(19)
+    d.text((ML, 570), 'dots = carriers recorded per framing — a sample surfaced by search, not a census',
+           font=f_f, fill=INK3)
+    d.text((ML, 594), 'framing boundaries are AI judgments · AI-generated, not human-reviewed',
+           font=f_f, fill=INK3)
+    f_wm = _font(24, "semibold")
+    d.text((MR - d.textlength("tributary", font=f_wm), 578), "tributary",
+           font=f_wm, fill=BLUE_DEEP)
+
+    img.save(out_path, "PNG")
+
+
+def render_event_page(cd, out_path):
+    aid = cd["analysis_id"]
+    event_href = f"../../fingerprint_viewer.html?load=gallery/events/{aid}.json"
+    og_img = f"{SITE}gallery/cards/{aid}.png"
+    og_url = f"{SITE}gallery/cards/{aid}.html"
+    og_desc = (f"{cd['title']} Everyone agrees on the base facts; the contest is over "
+               f"what they mean. Carriers shown per framing are a sample, not a census. "
+               f"AI-generated, not human-reviewed.")
+
+    cells_html = "\n".join(
+        f'''<div class="fcell">
+      <div class="fname">{esc(c["name"])}</div>
+      <div class="fq">{esc(c["question"])}</div>
+      <div class="dots">{'<span class="dot"></span>' * min(c["n"], 10)}
+        <span class="fcount">{c["n"]} carrier{"s" if c["n"] != 1 else ""}</span></div>
+      <div class="fcar">{esc(", ".join(c["names"][:3]) + (f' +{len(c["names"]) - 3}' if len(c["names"]) > 3 else ""))}</div>
+    </div>''' for c in cd["cells"])
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(cd["headline"])} — Tributary</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tributary">
+<meta property="og:title" content="One event, {cd["n_framings"]} competing framings.">
+<meta property="og:description" content="{esc(og_desc)}">
+<meta property="og:image" content="{esc(og_img)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(cd["headline"])} {esc(cd["title"])}">
+<meta property="og:url" content="{esc(og_url)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="{esc(og_desc)}">
+<style>
+  :root {{ color-scheme: light; }}
+  * {{ box-sizing: border-box; }}
+  body {{ margin: 0; background: #f9f9f7; color: #0b0b0b;
+         font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5; }}
+  .wrap {{ max-width: 820px; margin: 0 auto; padding: 2.2rem 1.2rem 3rem; }}
+  .card {{ background: #fcfcfb; border: 1px solid rgba(11,11,11,0.10); border-radius: 12px;
+          padding: 1.4rem 1.6rem 1.1rem; box-shadow: 0 1px 3px rgba(11,11,11,0.04); }}
+  .kicker {{ font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+            color: #898781; margin-bottom: 0.5rem; }}
+  .headline {{ font-size: 1.6rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.3rem; }}
+  .title {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1rem; }}
+  .agree {{ background: #f4f3ef; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
+           color: #52514e; margin: 0 0 1.1rem; }}
+  .agree strong {{ color: #0b0b0b; }}
+  .fgrid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }}
+  .fcell {{ border: 1px solid #e1e0d9; border-radius: 10px; padding: 0.8rem 0.95rem; }}
+  .fname {{ font-weight: 600; font-size: 0.95rem; }}
+  .fq {{ color: #52514e; font-size: 0.82rem; font-style: italic; margin: 0.15rem 0 0.4rem; }}
+  .fcar {{ color: #898781; font-size: 0.8rem; margin-top: 0.35rem; }}
+  .dots {{ display: flex; gap: 4px; align-items: center; }}
+  .dot {{ width: 9px; height: 9px; border-radius: 50%; background: #2a78d6; }}
+  .fcount {{ font-size: 0.78rem; color: #898781; margin-left: 4px; white-space: nowrap; }}
+  .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 1rem; padding-top: 0.65rem;
+              font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
+              flex-wrap: wrap; gap: 0.4rem; }}
+  .cta {{ display: inline-block; margin: 1.3rem 0 0; background: #2a78d6; color: #fff;
+         text-decoration: none; font-weight: 600; font-size: 0.95rem;
+         padding: 0.55rem 1.1rem; border-radius: 8px; }}
+  .cta:hover {{ background: #184f95; }}
+  .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
+             color: #898781; font-size: 0.82rem; }}
+  .honesty a {{ color: #2a78d6; text-decoration: none; }}
+  @media (max-width: 640px) {{ .fgrid {{ grid-template-columns: 1fr; }} }}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="kicker">Tributary · event analysis</div>
+    <div class="headline">{esc(cd["headline"])}</div>
+    <p class="title">{esc(cd["title"])}</p>
+    {f'<div class="agree"><strong>Everyone agrees:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
+    <div class="fgrid">
+{cells_html}
+    </div>
+    {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
+    <div class="cardfoot">
+      <span>dots = carriers recorded per framing — a sample surfaced by search, not a census · framing boundaries are AI judgments</span>
+      <span>AI-generated, not human-reviewed</span>
+    </div>
+  </div>
+
+  <a class="cta" href="{esc(event_href)}">See the full analysis — every framing, carrier, and receipt →</a>
+
+  <p class="honesty">
+    This card is AI-generated and not yet human-reviewed. Carrier lists are a sample of
+    coverage surfaced by web search — absence of an outlet is not evidence it ignored the
+    story. Equal cell sizes are deliberate: we did not measure each framing's true share
+    of the discourse. Card image for sharing: <a href="{aid}.png">PNG</a>.<br>
+    <a href="{REPO_URL}/blob/main/METHODOLOGY.md">How it’s made</a> ·
+    <a href="{REPO_URL}/blob/main/CORRECTIONS.md">Corrections log</a> ·
+    <a href="{REPO_URL}/issues/new/choose">Suggest a correction</a> ·
+    <a href="../../index.html">Tributary</a>
+  </p>
+</div>
+</body>
+</html>
+"""
+    out_path.write_text(html, encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
 # share page (the tap-through artifact)
 # ---------------------------------------------------------------------------
 
@@ -729,6 +948,9 @@ def main():
     ap.add_argument("--fp", action="append", default=None, metavar="ID",
                     help="explicit fingerprint id (repeatable); default: every "
                          "event-linked trace in the gallery")
+    ap.add_argument("--event", action="append", default=None, metavar="ID",
+                    help="render a framing-fan card for this event analysis id "
+                         "(repeatable; explicit only — no default event set)")
     ap.add_argument("--as-of", default=None,
                     help="age anchor date YYYY-MM-DD (default: today)")
     ap.add_argument("--gallery-dir", default=str(ROOT / "gallery"))
@@ -764,6 +986,26 @@ def main():
         rendered += 1
         print(f"[cards] {fid}: {cd['headline']}  ({cd['n_uses']} uses, "
               f"{len(cd['outlets'])} carriers named)", file=sys.stderr)
+
+    for aid in args.event or []:
+        p = gallery / "events" / f"{aid}.json"
+        if not p.exists():
+            print(f"[cards] --event {aid}: no gallery/events/{aid}.json — skipped",
+                  file=sys.stderr)
+            continue
+        ecd = event_card_data(json.loads(p.read_text(encoding="utf-8")))
+        if not ecd:
+            print(f"[cards] --event {aid}: fewer than 2 framings — skipped",
+                  file=sys.stderr)
+            continue
+        render_event_png(ecd, cards_dir / f"{aid}.png")
+        render_event_page(ecd, cards_dir / f"{aid}.html")
+        index.append({"kind": "event", "analysis_id": aid,
+                      "headline": ecd["headline"], "phrase": ecd["title"][:200],
+                      "page": f"gallery/cards/{aid}.html",
+                      "image": f"gallery/cards/{aid}.png", "event_id": aid})
+        rendered += 1
+        print(f"[cards] {aid}: {ecd['headline']}  (event card)", file=sys.stderr)
 
     (cards_dir / "index.json").write_text(
         json.dumps({"count": rendered, "as_of": asof.isoformat(), "cards": index},
