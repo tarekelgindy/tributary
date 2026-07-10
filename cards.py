@@ -315,9 +315,12 @@ def card_data(fid, subject, asof):
 
     # points carry author/outlet names only — a bare article title standing in
     # a "who" list reads as a person and misleads; unknown carriers stay silent
+    ms = milestone_labels(dated)
     points = [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
                "who": (i.get("author") or host_outlet(i.get("source_url"))
-                       or "").strip().split(" (")[0]} for i in dated]
+                       or "").strip().split(" (")[0],
+               "role": (i.get("amplifier_role") or "unknown"),
+               "ms": ms.get(k, "")} for k, i in enumerate(dated)]
     return {
         "fingerprint_id": fid,
         "phrase": (fp.get("lexical") or {}).get("canonical_phrase") or "",
@@ -332,6 +335,8 @@ def card_data(fid, subject, asof):
         "last_human": fmt_date_human(last_inst.get("date") or ""),
         "points": points,
         "spikes": spike_clusters(points),
+        "who_strip": who_strip_text(dated),
+        "roles_present": [r for r in ROLE_ORDER if any(p["role"] == r for p in points)],
         "circles": circles,
         "outlets": outlets_flat,
         "event": event,
@@ -430,7 +435,8 @@ def timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=12, dot_gap=11):
             row = j // 2 if two_col else j
             dots.append({"x": X(pts[i]["frac"]) + col,
                          "y": axis_y - 13 - row * dot_gap,
-                         "ms": i == 0, "p": pts[i]})
+                         "ms": i == 0 or bool(pts[i].get("ms")),
+                         "p": pts[i]})
 
     # ticks: ~5, at nice year/month steps
     for step in (1 / 12, 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100):
@@ -461,6 +467,73 @@ PAPER, CARD_BG = (249, 249, 247), (252, 252, 251)
 GRID, BASELINE = (225, 224, 217), (195, 194, 183)
 BLUE, BLUE_DEEP = (42, 120, 214), (24, 79, 149)
 BLUE_WASH, BLUE_MID = (205, 226, 251), (134, 182, 239)
+
+# Role colors, hex verbatim from the viewer's ROLE_COLORS — the card must
+# read as the same instrument. Role labels are unaudited AI labels; the card
+# footer says so (Tarek's call 2026-07-10: viewer-parity visuals, caveat kept).
+ROLE_COLORS = {
+    "originator": "#c0392b", "early-amplifier": "#d68f1a",
+    "mass-amplifier": "#f0a500", "institutional-adoption": "#2a6fa3",
+    "critic": "#6f3e8e", "mention": "#888888", "unknown": "#bbbbbb",
+}
+ROLE_ORDER = ["originator", "early-amplifier", "mass-amplifier",
+              "institutional-adoption", "critic", "mention", "unknown"]
+_hex_rgb = lambda h: tuple(int(h.lstrip("#")[k:k + 2], 16) for k in (0, 2, 4))
+
+
+def _trunc(s, n):
+    s = str(s or "")
+    return s if len(s) <= n else s[:n - 1].rstrip() + "…"
+
+
+def milestone_labels(dated):
+    """{list index: label} — the genealogy's role-derived turning points,
+    mirroring the viewer's milestone rail (mutations excluded: a card has no
+    room for their receipts). The origin dot is enlarged but unlabeled here —
+    'First attested' already headlines the chart."""
+    def first_role(roles):
+        return next((k for k, i in enumerate(dated)
+                     if (i.get("amplifier_role") or "") in roles), None)
+    ms = {}
+    for label, k in (("First amplification", first_role(("early-amplifier", "mass-amplifier"))),
+                     ("Institutional adoption", first_role(("institutional-adoption",))),
+                     ("First documented pushback", first_role(("critic",)))):
+        if k is not None and k not in ms and k != 0:
+            ms[k] = label
+    return ms
+
+
+def who_strip_text(dated):
+    """The trace's cast in one line — Origin / Amplified by / Adopted by /
+    Pushback — ported from the viewer's whoStrip. Names are the product."""
+    def name(i):
+        # author or outlet only — a bare article title in a cast list reads
+        # as a person; unknown carriers stay out of the strip
+        return (i.get("author") or host_outlet(i.get("source_url")) or "").strip().split(" (")[0]
+
+    def uniq(items):
+        seen, out = set(), []
+        for i in items:
+            n = name(i)
+            if n and n not in seen:
+                seen.add(n)
+                out.append(i)
+        return out
+
+    by = lambda roles: uniq([i for i in dated if (i.get("amplifier_role") or "") in roles])
+    parts = []
+    origin = by(("originator",)) or uniq(dated[:1])
+    if origin:
+        m = re.match(r"^(\d{4})", str(origin[0].get("date") or ""))
+        parts.append(f'Origin: {_trunc(name(origin[0]), 34)}' + (f' ({m.group(1)})' if m else ''))
+    for label, items, mx in (("Amplified by", by(("early-amplifier", "mass-amplifier")), 3),
+                             ("Adopted by", by(("institutional-adoption",)), 2),
+                             ("Pushback", by(("critic",)), 2)):
+        if items:
+            shown = ", ".join(_trunc(name(i), 28) for i in items[:mx])
+            more = f" +{len(items) - mx}" if len(items) > mx else ""
+            parts.append(f"{label}: {shown}{more}")
+    return " · ".join(parts)
 
 
 def _font(size, weight="regular"):
@@ -536,18 +609,18 @@ def render_png(cd, out_path):
         d.text((ML, py), ln, font=f_phrase, fill=INK2)
         py += 40
 
-    # --- spread over time: each dot one recorded use; shading = cumulative
-    # share of observed uses; sequence, not influence -----------------------
-    axis_y, area_top = 500, 362   # area stays below the two chart labels
+    # --- spread over time, viewer-parity: role-colored dots, milestone
+    # labels, cumulative shading (sequence, not influence) -------------------
+    axis_y, area_top = 470, 362
     g = timeline_geometry(cd, ML, MR, axis_y, area_top)
 
-    d.polygon(g["area"], fill=BLUE_WASH + (150,))
+    d.polygon(g["area"], fill=BLUE_WASH + (120,))
     d.line(g["area"][:-1], fill=BLUE_MID, width=2)
     d.line([ML, axis_y, MR, axis_y], fill=BASELINE, width=2)
     for x, label in g["ticks"]:
         d.line([x, axis_y - 3, x, axis_y + 4], fill=BASELINE, width=2)
-        f_t = _font(19)
-        d.text((x - d.textlength(label, font=f_t) / 2, axis_y + 10), label,
+        f_t = _font(18)
+        d.text((x - d.textlength(label, font=f_t) / 2, axis_y + 9), label,
                font=f_t, fill=INK3)
 
     if g["marker"]:
@@ -556,11 +629,32 @@ def render_png(cd, out_path):
     for dot in g["dots"]:
         r = 7 if dot["ms"] else 5
         d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
-                  fill=BLUE_DEEP if dot["ms"] else BLUE,
-                  outline=CARD_BG, width=2)
+                  fill=_hex_rgb(ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])),
+                  outline=(68, 68, 68) if dot["ms"] else CARD_BG,
+                  width=2 if dot["ms"] else 2)
+
+    # milestone labels (viewer parity): two rows inside the chart top; a label
+    # colliding on its row tries the other row before giving up
+    f_msl = _font(16, "semibold")
+    ms_rows = {0: [], 1: []}
+    ms_dots = [dot for dot in g["dots"] if dot["p"].get("ms")]
+    row_pref = 0
+    for dot in sorted(ms_dots, key=lambda t: t["x"]):
+        label = dot["p"]["ms"]
+        w = d.textlength(label, font=f_msl)
+        lx = min(max(dot["x"] - w / 2, ML), MR - w)
+        fits = lambda row: not any(lx < p1 + 18 and lx + w > p0 - 18 for p0, p1 in ms_rows[row])
+        row = row_pref if fits(row_pref) else (1 - row_pref if fits(1 - row_pref) else None)
+        if row is None:
+            continue
+        ms_rows[row].append((lx, lx + w))
+        d.text((lx, 366 if row == 0 else 386), label, font=f_msl, fill=INK2)
+        row_pref = 1 - row
+    del ms_rows
 
     # bursts get named: who appears where the curve jumps (names + dates +
-    # counts only — no role claims; roles are unaudited AI labels)
+    # counts only — the burst is structural even where roles are not).
+    # Bursts sit in their own band below the milestone rows.
     f_sp, f_spn = _font(20, "semibold"), _font(17)
     placed = []
     for s in cd["spikes"]:
@@ -576,9 +670,9 @@ def render_png(cd, out_path):
         cx = g["X"]((s["f0"] + s["f1"]) / 2)
         lx = min(max(cx - w / 2, ML), MR - w)
         if any(lx < p1 + 24 and lx + w > p0 - 24 for p0, p1 in placed):
-            continue   # keep the bigger spike when labels would collide
+            continue   # bigger spikes win collisions
         placed.append((lx, lx + w))
-        ly = max(top - (58 if line2 else 34), area_top - 4)
+        ly = max(top - (58 if line2 else 34), 408)
         d.text((lx, ly), line1, font=f_sp, fill=INK1)
         if line2:
             d.text((lx, ly + 26), line2, font=f_spn, fill=INK2)
@@ -602,19 +696,29 @@ def render_png(cd, out_path):
         d.text((MR - d.textlength(names, font=f_sub), 332), names,
                font=f_sub, fill=INK3)
 
-    # --- footer: count + the honesty clauses, on the image itself ----------
-    d.line([ML, 546, MR, 546], fill=GRID, width=2)
+    # WHO strip: the cast in one line (names are the product)
+    if cd["who_strip"]:
+        f_who = _font(18)
+        d.text((ML, 506), _ellipsize(d, cd["who_strip"], f_who, cw),
+               font=f_who, fill=INK2)
+
+    # --- legend + honesty clauses, on the image itself ----------------------
+    d.line([ML, 540, MR, 540], fill=GRID, width=2)
+    f_leg = _font(16)
+    lx = ML
+    for role in cd["roles_present"]:
+        d.ellipse([lx, 553, lx + 10, 563], fill=_hex_rgb(ROLE_COLORS[role]))
+        d.text((lx + 15, 549), role, font=f_leg, fill=INK3)
+        lx += 15 + d.textlength(role, font=f_leg) + 18
     n_dots = len(cd["points"])
     counts = f'{cd["n_uses"]} recorded uses' + \
         (f' ({n_dots} dated)' if n_dots != cd["n_uses"] else '')
-    f_f = _font(19)
-    d.text((ML, 555), f'{counts} · each dot = one use from a cited source — a sample, not a census',
-           font=f_f, fill=INK3)
-    d.text((ML, 580), 'earliest found, not provably first · AI-traced, not human-reviewed',
-           font=f_f, fill=INK3)
+    d.text((ML, 578), f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
+                      f'earliest found, not provably first · AI-traced, not human-reviewed',
+           font=_font(16), fill=INK3)
     wordmark = "tributary"
-    f_wm = _font(24, "semibold")
-    d.text((MR - d.textlength(wordmark, font=f_wm), 565), wordmark,
+    f_wm = _font(22, "semibold")
+    d.text((MR - d.textlength(wordmark, font=f_wm), 549), wordmark,
            font=f_wm, fill=BLUE_DEEP)
 
     img.save(out_path, "PNG")
@@ -858,20 +962,21 @@ def _names_prose(outlets, with_dates=True):
 
 
 def svg_timeline(cd):
-    """The spread-over-time visual as a standalone inline SVG. Each dot is one
-    recorded dated use (hover for date + who); the dark dot is the earliest
-    found; the dashed line marks the event in the news."""
-    x0, x1, axis_y, area_top = 10, 750, 168, 58
+    """The spread-over-time visual as a standalone inline SVG, viewer-parity:
+    role-colored dots (hover shows milestone + date + who + role), milestone
+    labels, cumulative shading, dashed in-the-news marker."""
+    x0, x1, axis_y, area_top = 10, 750, 178, 88
     g = timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=10, dot_gap=9)
     today = cd["event"] or {}
     right_lbl = f'In the news {fmt_date_human(today.get("date") or "")}' if today \
         else f'Most recent use {cd["last_human"]}'
 
-    parts = [f'<svg viewBox="0 0 760 200" role="img" aria-label="Timeline of '
+    parts = [f'<svg viewBox="0 0 760 212" role="img" aria-label="Timeline of '
              f'{len(cd["points"])} recorded uses from {esc(cd["first_human"])}; '
              f'{esc(right_lbl)}">',
              '<style>.ms{font:600 15px system-ui;fill:#0b0b0b}'
              '.s{font:12.5px system-ui;fill:#898781}.t{font:11.5px system-ui;fill:#898781}'
+             '.msl{font:600 11.5px system-ui;fill:#52514e}'
              '</style>']
     pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in g["area"])
     edge = " ".join(f"{x:.1f},{y:.1f}" for x, y in g["area"][:-1])
@@ -886,13 +991,32 @@ def svg_timeline(cd):
                      f'x2="{g["marker"]["x"]:.1f}" y2="{axis_y - 2}" '
                      f'stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="5 4"/>')
     for dot in g["dots"]:
-        r = 5.5 if dot["ms"] else 4
-        fill = "#184f95" if dot["ms"] else "#2a78d6"
-        tip = f'{dot["p"]["date"]}' + (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "")
+        r = 6 if dot["ms"] else 4
+        fill = ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])
+        tip = (f'{dot["p"]["ms"]} — ' if dot["p"].get("ms") else "") + dot["p"]["date"] + \
+            (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "") + f' · {dot["p"]["role"]}'
         parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
-                     f'stroke="#fcfcfb" stroke-width="1.5"><title>{esc(tip)}</title></circle>')
+                     f'stroke="{"#444444" if dot["ms"] else "#fcfcfb"}" stroke-width="1.5">'
+                     f'<title>{esc(tip)}</title></circle>')
 
-    # bursts named: who appears where the curve jumps
+    # milestone labels (viewer parity): two rows; retry the other row on collision
+    ms_rows = {0: [], 1: []}
+    row_pref = 0
+    for dot in sorted((t for t in g["dots"] if t["p"].get("ms")), key=lambda t: t["x"]):
+        label = dot["p"]["ms"]
+        half = len(label) * 3.1
+        cx = min(max(dot["x"], x0 + half), x1 - half)
+        fits = lambda row: not any(cx - half < p1 + 12 and cx + half > p0 - 12
+                                   for p0, p1 in ms_rows[row])
+        row = row_pref if fits(row_pref) else (1 - row_pref if fits(1 - row_pref) else None)
+        if row is None:
+            continue
+        ms_rows[row].append((cx - half, cx + half))
+        parts.append(f'<text x="{cx:.1f}" y="{58 if row == 0 else 74}" '
+                     f'text-anchor="middle" class="msl">{esc(label)}</text>')
+        row_pref = 1 - row
+
+    # bursts named: who appears where the curve jumps (their own band)
     placed = []
     for s in cd["spikes"]:
         in_range = [dot["y"] for dot in g["dots"]
@@ -908,7 +1032,7 @@ def svg_timeline(cd):
         if any(cx - half < p1 + 16 and cx + half > p0 - 16 for p0, p1 in placed):
             continue
         placed.append((cx - half, cx + half))
-        ly = max(top - (42 if line2 else 24), area_top - 6)
+        ly = max(top - (42 if line2 else 24), 104)
         parts.append(f'<text x="{cx:.1f}" y="{ly:.1f}" text-anchor="middle" '
                      f'style="font:600 13.5px system-ui" fill="#0b0b0b">{esc(line1)}</text>')
         if line2:
@@ -923,6 +1047,12 @@ def svg_timeline(cd):
         parts.append(f'<text x="{x1}" y="38" text-anchor="end" class="s">{esc(names)}</text>')
     parts.append("</svg>")
     return "".join(parts)
+
+
+def legend_html(roles_present):
+    return "".join(
+        f'<span class="lg"><span class="lgdot" style="background:{ROLE_COLORS[r]}"></span>{esc(r)}</span>'
+        for r in roles_present)
 
 
 def render_page(cd, out_path):
@@ -988,6 +1118,13 @@ def render_page(cd, out_path):
   .headline {{ font-size: 1.75rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.15rem; }}
   .phrase {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1.1rem; }}
   .carried {{ color: #52514e; font-size: 0.85rem; margin: 0.5rem 0 0; }}
+  .who {{ color: #52514e; font-size: 0.86rem; margin: 0.55rem 0 0; line-height: 1.65; }}
+  .who strong {{ color: #0b0b0b; font-weight: 600; }}
+  .legend {{ margin: 0.5rem 0 0; font-size: 0.75rem; color: #898781; display: flex;
+            flex-wrap: wrap; gap: 0.35rem 0.9rem; }}
+  .lg {{ white-space: nowrap; }}
+  .lgdot {{ display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+           margin-right: 0.3rem; vertical-align: -1px; }}
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
@@ -1011,9 +1148,11 @@ def render_page(cd, out_path):
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="phrase">“{esc(cd["phrase"])}”</p>
     {svg_timeline(cd)}
+    {f'<p class="who">{esc(cd["who_strip"])}</p>' if cd["who_strip"] else ''}
+    <div class="legend">{legend_html(cd["roles_present"])}</div>
     {carried_note}
     <div class="cardfoot">
-      <span>{cd["n_uses"]} recorded uses · each dot = one use from a cited source — a sample, not a census · first attested {esc(cd["first_human"])}, the earliest we found</span>
+      <span>{cd["n_uses"]} recorded uses · one dot each, colored by role — a sample, not a census · roles are unaudited AI labels · first attested {esc(cd["first_human"])}, the earliest we found</span>
       <span>AI-traced, not human-reviewed</span>
     </div>
   </div>
@@ -1024,7 +1163,9 @@ def render_page(cd, out_path):
   <p class="honesty">
     This card is AI-generated and not yet human-reviewed. “First attested” is the earliest
     use our search found — attestation confidence as recorded by the pipeline: {cd["confidence"]:.2f} —
-    and an earlier one may exist. Dot order shows sequence, not influence. The full trace
+    and an earlier one may exist. Dot order shows sequence, not influence; hover any dot
+    for its date, source, and role. Role labels (originator / amplifier / adoption /
+    critic) are AI judgments that have not yet passed a human audit. The full trace
     shows every source, archive link, and verification status{", and the event page shows each carrier’s own quoted words" if cd["outlets"] else ""}.
     Card image for sharing: <a href="{fid}.png">PNG</a>.<br>
     <a href="{REPO_URL}/blob/main/METHODOLOGY.md">How it’s made</a> ·
