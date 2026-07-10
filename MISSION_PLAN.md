@@ -1,7 +1,7 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 1 — 1a, 1b done; next 1c (the artifact)
-> **Last updated:** 2026-07-09
+> **Status:** Phase 2 — 2a (share artifact) done; next 2b (distribution)
+> **Last updated:** 2026-07-10
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
 > without logging a decision in the Decision Log. Gates after Phase 1 must be facts about
@@ -173,12 +173,36 @@ in a typical capture week?
 
 ### 2a. The share artifact
 
-- [ ] Card design: **one number leads — claim age.** "Presented as breaking; first attested
+- [x] Card design: **one number leads — claim age.** "Presented as breaking; first attested
       2010." Everything else is tap-through.
-- [ ] Mini flow visual (origin → circles → today) as the tap-through / screenshot artifact.
-- [ ] Auto-generated plain-language summary sentence at the top of EVERY full trace page
+      (Instantiated from the approved mockup (design-mockups Mockup 1): headline is the
+      age of the earliest attestation — "This narrative is 23 years old." — phrase
+      beneath, all detail tap-through. Ages FLOOR (23 at 23.86, never 24) so the number
+      can only understate; the plan's sample copy "presented as breaking" was dropped as
+      a characterization of intent — the card shows first-attested vs. in-the-news dates
+      and lets the contrast speak. The hedge ("earliest found, not provably first ·
+      AI-traced, not human-reviewed") ships on the image itself, not just the page.)
+- [x] Mini flow visual (origin → circles → today) as the tap-through / screenshot artifact.
+      (On both the share page (inline SVG) and the OG PNG: first-attested date + source
+      → circle chips → the event in the news. Chips name only outlets whose linked page
+      is under their own domain — the own-voice rider's presentation cousin; the
+      WSJ-editorial-via-Daily-Beast quote correctly drops out and CBS News stands.
+      Traces without cross-circle carriage fall back to origin → N recorded uses → today.)
+- [x] Auto-generated plain-language summary sentence at the top of EVERY full trace page
       (structural facts only; this is legibility, not verdict).
-- [ ] Static share-card renderer (OG images) so cards unfurl properly when linked.
+      (plainSummaryHtml() in the viewer: earliest dated use + who (+ documented-by from
+      the URL host), total recorded uses, most recent use, idea-predates-phrasing note
+      when true, earliest-found hedge. Deterministic template — no model call; event/
+      article/agenda views hide it. Validated over four trace shapes incl. circa dates
+      and authorless articles, which are named by outlet domain, not their own headline.)
+- [x] Static share-card renderer (OG images) so cards unfurl properly when linked.
+      (cards.py: Pillow-rendered 1200×630 PNG + share page carrying og:/twitter: tags,
+      at gallery/cards/<id>.{png,html}; the standalone trace JSON publishes to
+      gallery/traces/ so the tap-through lands on the full trace — verified rendering
+      over HTTP; search index rebuilt. Default card set = traces a published event links
+      with claim_age basis "linked"; an embedding_lead attachment never headlines a card
+      (1b candidate discipline). Three cards staged: Odeh decapitation (23y), Arctic
+      imperative (17y), Trump-crypto foreign money (19mo).)
 
 ### 2b. Distribution (native, not broadcast)
 
@@ -275,6 +299,7 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-07-09 | Shared-but-buried coverage evidence = feed carriage OR news-sitemap match at the existing COVERED_THRESHOLD; featuring stays feed-only (position ≤ 5); presence bar ≥2 rated US outlets per side (one_side_only's own bar) | Feed-only coverage — the strict mirror of one_side_only | Feed-only found 0 buried of 21 both-circle stories in the validation week: anything feed-carried by 2+ outlets per side touches some top-5 within a week, so the strict mirror measures nothing. "Covered" should mean "wrote about it" — the sitemap census already provides that under the omission report's standard (49/115 buried once used). Honesty note: the risk direction flips here (a borderline sitemap match could overstate "both circles covered it"), so every sitemap receipt ships the matched article title/URL/similarity and the caveat names the failure mode; Gate 2's audit calibrates the threshold. |
 | 2026-07-09 | Recognition rule gains a rider: circle quotes must be in the outlet's OWN VOICE — relayed individual speech never stands as circle voice (METHODOLOGY Principle 4 updated) | Keep the letter-only quote rule | Tarek's review of the Platner intersection caught both representative quotes being relayed speech from individuals whose politics don't match the circle shown (Fetterman's takedown via CNN as the "left" voice; Bill Maher's line via a foxnews.com write-up as the "right" voice). The quote-only rule was satisfied in letter, failed in spirit. Root causes are systematic: the role→stance ladder counts relaying as championing (the expresses/reports construct that failed Gate 2.6b), and quote selection prefers champions. v0 fix is editorial (1c checkbox); a mechanical relay detector (news-typed carrier whose display names a person/show while the URL is an outlet domain) is future instrument work; Phase 4's recognition test is the gate for this class. |
 | 2026-07-09 | Beyond-L/R circle expansion acknowledged as an explicit goal and PARKED (new Park List row) rather than worked now | Start an independent/international/endogenous circle immediately | Tarek wants out of the L/R mould, but derailing Phase 1 for it would trade a committed gate for an uncommitted basis: AllSides is the only attributable membership source in hand, and endogenous circles (the preferred path — co-carriage clustering, mission-true, coalitions.py groundwork) need corpus scale and their own validation to survive hostile reading. The 1a schema means expansion is a new CIRCLES row + a new `basis`, not a refactor, so parking costs nothing structurally. |
+| 2026-07-10 | Share-card presentation honesty (2a): ages floor ("is 23 years old" at 23.86); circle chips require the quote's URL to sit under the named outlet's own domain; default card set is linked-basis claim-age traces only; "presented as breaking" copy dropped for date-vs-date contrast | Round ages the way issue-02's prose does ("24 years"); chips straight from intersection quotes; cards for every traced fingerprint; keep the plan's sample copy | A floored age is true under hostile reading ("is 23 years old" holds at 23.86; "24" doesn't) — issue-02's "across 24 years" describes an attestation *span*, so the two coexist, but cards are the artifact strangers screenshot and check. A chip naming an outlet whose quote lives on another outlet's domain would repeat the Fetterman/Maher relay trap in miniature (live case: WSJ-editorial-via-Daily-Beast excluded, CBS News stands). embedding_lead attachments are candidates by 1b definition — a candidate can't headline a share artifact. "Presented as breaking" asserts intent we didn't measure; showing first-attested next to in-the-news is the same punch, structurally. |
 
 ## Feedback Log
 
