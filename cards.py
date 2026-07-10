@@ -313,6 +313,11 @@ def card_data(fid, subject, asof):
         event = {"id": ev.get("analysis_id") or "", "title": ev.get("event") or "",
                  "date": ed, "framing": (row or {}).get("framing") or ""}
 
+    # points carry author/outlet names only — a bare article title standing in
+    # a "who" list reads as a person and misleads; unknown carriers stay silent
+    points = [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
+               "who": (i.get("author") or host_outlet(i.get("source_url"))
+                       or "").strip().split(" (")[0]} for i in dated]
     return {
         "fingerprint_id": fid,
         "phrase": (fp.get("lexical") or {}).get("canonical_phrase") or "",
@@ -325,8 +330,8 @@ def card_data(fid, subject, asof):
         "confidence": gl.get("attestation_confidence") or 0.0,
         "n_uses": len(log),
         "last_human": fmt_date_human(last_inst.get("date") or ""),
-        "points": [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
-                    "who": who_of(i)} for i in dated],
+        "points": points,
+        "spikes": spike_clusters(points),
         "circles": circles,
         "outlets": outlets_flat,
         "event": event,
@@ -337,6 +342,52 @@ def card_data(fid, subject, asof):
 # ---------------------------------------------------------------------------
 # timeline geometry (shared by the PNG and the SVG)
 # ---------------------------------------------------------------------------
+
+def _range_label(cluster):
+    def ym(s):
+        m = re.match(r"^(\d{4})(?:-(\d{1,2}))?", str(s or ""))
+        return (int(m.group(1)), int(m.group(2)) if m.group(2) else None) if m else (None, None)
+    y1, m1 = ym(cluster[0]["date"])
+    y2, m2 = ym(cluster[-1]["date"])
+    if y1 is None:
+        return ""
+    if y1 == y2:
+        if m1 and m2:
+            return f"{MONTHS[m1 - 1][:3]} {y1}" if m1 == m2 \
+                else f"{MONTHS[m1 - 1][:3]}–{MONTHS[m2 - 1][:3]} {y1}"
+        return str(y1)
+    return f"{y1}–{y2}"
+
+
+def spike_clusters(points, max_labels=2):
+    """Bursts of recorded uses — the places where the discussion jumped, and
+    who appears in them. Contiguous dated uses separated by less than ~4% of
+    the span (min 45 days) form a cluster; the biggest ones (>=3 uses) get
+    named. The origin's own cluster is skipped — it already has a label.
+    Structural on purpose: names, dates, counts — no role claims."""
+    span = max(points[-1]["frac"] - points[0]["frac"], 1 / 12)
+    gap = max(span * 0.04, 45 / 365)
+    clusters, cur = [], [points[0]]
+    for p in points[1:]:
+        if p["frac"] - cur[-1]["frac"] <= gap:
+            cur.append(p)
+        else:
+            clusters.append(cur)
+            cur = [p]
+    clusters.append(cur)
+    spikes = []
+    for c in clusters:
+        if len(c) < 3 or c[0] is points[0]:
+            continue
+        names, seen = [], set()
+        for p in c:
+            if p["who"] and p["who"] not in seen:
+                seen.add(p["who"])
+                names.append(p["who"])
+        spikes.append({"f0": c[0]["frac"], "f1": c[-1]["frac"], "n": len(c),
+                       "range": _range_label(c), "names": names})
+    spikes.sort(key=lambda s: -s["n"])
+    return spikes[:max_labels]
 
 def timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=12, dot_gap=11):
     """Positions for the spread-over-time chart: cumulative step-area top
@@ -397,7 +448,7 @@ def timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=12, dot_gap=11):
     marker = None
     if today_frac is not None and today_frac >= pts[-1]["frac"] - span * 0.001:
         marker = {"x": X(today_frac)}
-    return {"area": area, "dots": dots, "ticks": ticks, "marker": marker}
+    return {"area": area, "dots": dots, "ticks": ticks, "marker": marker, "X": X}
 
 
 # ---------------------------------------------------------------------------
@@ -507,6 +558,30 @@ def render_png(cd, out_path):
         d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
                   fill=BLUE_DEEP if dot["ms"] else BLUE,
                   outline=CARD_BG, width=2)
+
+    # bursts get named: who appears where the curve jumps (names + dates +
+    # counts only — no role claims; roles are unaudited AI labels)
+    f_sp, f_spn = _font(20, "semibold"), _font(17)
+    placed = []
+    for s in cd["spikes"]:
+        in_range = [dot["y"] for dot in g["dots"]
+                    if g["X"](s["f0"]) - 12 <= dot["x"] <= g["X"](s["f1"]) + 12]
+        top = min(in_range, default=axis_y - 13)
+        line1 = f'{s["n"]} uses · {s["range"]}'
+        line2 = _ellipsize(d, ", ".join(s["names"][:3]) +
+                           (f' +{len(s["names"]) - 3}' if len(s["names"]) > 3 else ""),
+                           f_spn, 400) if s["names"] else ""
+        w = max(d.textlength(line1, font=f_sp),
+                d.textlength(line2, font=f_spn) if line2 else 0)
+        cx = g["X"]((s["f0"] + s["f1"]) / 2)
+        lx = min(max(cx - w / 2, ML), MR - w)
+        if any(lx < p1 + 24 and lx + w > p0 - 24 for p0, p1 in placed):
+            continue   # keep the bigger spike when labels would collide
+        placed.append((lx, lx + w))
+        ly = max(top - (58 if line2 else 34), area_top - 4)
+        d.text((lx, ly), line1, font=f_sp, fill=INK1)
+        if line2:
+            d.text((lx, ly + 26), line2, font=f_spn, fill=INK2)
 
     # origin label (top-left of the chart, where the area is still low)
     f_ms, f_sub = _font(23, "semibold"), _font(19)
@@ -637,7 +712,7 @@ def render_event_png(cd, out_path):
         names = ", ".join(c["names"][:2]) + \
             (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
         d.text((x + dots_n * 12 + 6, y + 27),
-               _ellipsize(d, f'{c["n"]} · {names}', f_car, col_w - dots_n * 12 - 6),
+               _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, col_w - dots_n * 12 - 6),
                font=f_car, fill=INK3)
 
     if cd["n_hidden"]:
@@ -646,7 +721,7 @@ def render_event_png(cd, out_path):
 
     d.line([ML, 562, MR, 562], fill=GRID, width=2)
     f_f = _font(19)
-    d.text((ML, 570), 'dots = carriers recorded per framing — a sample surfaced by search, not a census',
+    d.text((ML, 570), 'dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted',
            font=f_f, fill=INK3)
     d.text((ML, 594), 'framing boundaries are AI judgments · AI-generated, not human-reviewed',
            font=f_f, fill=INK3)
@@ -671,7 +746,7 @@ def render_event_page(cd, out_path):
       <div class="fname">{esc(c["name"])}</div>
       <div class="fq">{esc(c["question"])}</div>
       <div class="dots">{'<span class="dot"></span>' * min(c["n"], 10)}
-        <span class="fcount">{c["n"]} carrier{"s" if c["n"] != 1 else ""}</span></div>
+        <span class="fcount">{c["n"]} recorded</span></div>
       <div class="fcar">{esc(", ".join(c["names"][:3]) + (f' +{len(c["names"]) - 3}' if len(c["names"]) > 3 else ""))}</div>
     </div>''' for c in cd["cells"])
 
@@ -740,7 +815,7 @@ def render_event_page(cd, out_path):
     </div>
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="cardfoot">
-      <span>dots = carriers recorded per framing — a sample surfaced by search, not a census · framing boundaries are AI judgments</span>
+      <span>dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted · framing boundaries are AI judgments</span>
       <span>AI-generated, not human-reviewed</span>
     </div>
   </div>
@@ -748,10 +823,11 @@ def render_event_page(cd, out_path):
   <a class="cta" href="{esc(event_href)}">See the full analysis — every framing, carrier, and receipt →</a>
 
   <p class="honesty">
-    This card is AI-generated and not yet human-reviewed. Carrier lists are a sample of
-    coverage surfaced by web search — absence of an outlet is not evidence it ignored the
-    story. Equal cell sizes are deliberate: we did not measure each framing's true share
-    of the discourse. Card image for sharing: <a href="{aid}.png">PNG</a>.<br>
+    This card is AI-generated and not yet human-reviewed. Carrier counts are a floor:
+    the sample is what web search surfaced, so smaller outlets and individual commentators
+    carrying a framing are systematically undercounted, and absence of an outlet is not
+    evidence it ignored the story. Equal cell sizes are deliberate: we did not measure
+    each framing's true share of the discourse. Card image for sharing: <a href="{aid}.png">PNG</a>.<br>
     <a href="{REPO_URL}/blob/main/METHODOLOGY.md">How it’s made</a> ·
     <a href="{REPO_URL}/blob/main/CORRECTIONS.md">Corrections log</a> ·
     <a href="{REPO_URL}/issues/new/choose">Suggest a correction</a> ·
@@ -815,6 +891,29 @@ def svg_timeline(cd):
         tip = f'{dot["p"]["date"]}' + (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "")
         parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
                      f'stroke="#fcfcfb" stroke-width="1.5"><title>{esc(tip)}</title></circle>')
+
+    # bursts named: who appears where the curve jumps
+    placed = []
+    for s in cd["spikes"]:
+        in_range = [dot["y"] for dot in g["dots"]
+                    if g["X"](s["f0"]) - 10 <= dot["x"] <= g["X"](s["f1"]) + 10]
+        top = min(in_range, default=axis_y - 13)
+        line1 = f'{s["n"]} uses · {s["range"]}'
+        line2 = ", ".join(s["names"][:3]) + \
+            (f' +{len(s["names"]) - 3}' if len(s["names"]) > 3 else "")
+        if len(line2) > 52:
+            line2 = line2[:51].rstrip() + "…"
+        half = max(len(line1) * 3.9, len(line2) * 3.2)
+        cx = min(max(g["X"]((s["f0"] + s["f1"]) / 2), x0 + half), x1 - half)
+        if any(cx - half < p1 + 16 and cx + half > p0 - 16 for p0, p1 in placed):
+            continue
+        placed.append((cx - half, cx + half))
+        ly = max(top - (42 if line2 else 24), area_top - 6)
+        parts.append(f'<text x="{cx:.1f}" y="{ly:.1f}" text-anchor="middle" '
+                     f'style="font:600 13.5px system-ui" fill="#0b0b0b">{esc(line1)}</text>')
+        if line2:
+            parts.append(f'<text x="{cx:.1f}" y="{ly + 17:.1f}" text-anchor="middle" '
+                         f'class="s">{esc(line2)}</text>')
     parts.append(f'<text x="{x0}" y="20" class="ms">First attested {esc(cd["first_human"])}</text>')
     if cd["first_who"]:
         parts.append(f'<text x="{x0}" y="38" class="s">{esc(cd["first_who"][:52])}</text>')
