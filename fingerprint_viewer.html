@@ -45,6 +45,9 @@ header h1 { margin: 0 0 0.4rem; font-size: 1.5rem; font-weight: 500; }
 #meta-bar { color: #777; font-size: 0.85rem; font-family: 'SF Mono', Menlo, monospace; }
 #meta-bar span { margin-right: 1.2rem; }
 #meta-bar strong { color: #555; font-weight: 500; }
+#plain-summary { margin: 0.7rem 0 0; color: #444; font-size: 0.95rem;
+                 line-height: 1.55; max-width: 62rem; }
+#plain-summary .hedge { color: #999; }
 
 #tabs {
   background: white;
@@ -756,6 +759,7 @@ circle.instance:hover { opacity: 0.7; }
   <header>
     <h1 id="claim-phrase"></h1>
     <div id="meta-bar"></div>
+    <p id="plain-summary" hidden></p>
   </header>
 
   <nav id="tabs">
@@ -956,6 +960,7 @@ function renderEventAnalysis(analysis) {
   dropZone.hidden = true;
   viewer.hidden = false;
   removeBackButton();
+  setPlainSummary('');
 
   document.getElementById('claim-phrase').textContent = analysis.event || '(event analysis)';
 
@@ -1270,6 +1275,7 @@ function renderFramingAttention(r) {
   dropZone.hidden = true;
   viewer.hidden = false;
   removeBackButton();
+  setPlainSummary('');
   document.getElementById('tabs').style.display = 'none';
 
   document.getElementById('claim-phrase').textContent =
@@ -1380,6 +1386,7 @@ function renderAgendaReport(report) {
   dropZone.hidden = true;
   viewer.hidden = false;
   removeBackButton();
+  setPlainSummary('');
   document.getElementById('tabs').style.display = 'none';
 
   const period = report.period || {};
@@ -1532,6 +1539,7 @@ function renderArticle(analysis) {
   dropZone.hidden = true;
   viewer.hidden = false;
   removeBackButton();
+  setPlainSummary('');
 
   document.getElementById('claim-phrase').textContent =
     analysis.source_title || analysis.source_url || '(source analysis)';
@@ -1677,6 +1685,8 @@ function render(fp) {
     ['Model', (fp.provenance || {}).model],
   ]);
 
+  setPlainSummary(plainSummaryHtml(fp));
+
   renderOverview(fp);
   renderLineages(fp);
   renderEvidence(fp);
@@ -1685,6 +1695,77 @@ function render(fp) {
     btn.onclick = () => switchTab(btn.dataset.tab);
   });
   switchTab('overview');
+}
+
+// The plain-language opener (Phase 2a): every full trace page starts with one
+// auto-generated sentence of structural facts — earliest dated use, its
+// source, how many uses follow, the most recent — so a reader who never opens
+// a log still leaves knowing what the trace holds. Deterministic template
+// prose; facts only, no verdicts (METHODOLOGY Principle 1). The lexical
+// "documented by" name comes from the URL host (short and always honest about
+// where the click lands); the verbose cited_via field stays in the log rows.
+function setPlainSummary(html) {
+  const el = document.getElementById('plain-summary');
+  if (!el) return;
+  el.hidden = !html;
+  el.innerHTML = html || '';
+}
+
+// Prose dates for the opener: month names spelled out; a stored day-01
+// usually encodes month-level knowledge, so it collapses to the month —
+// showing less precision than we have is never wrong, inventing more is.
+const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+function fmtDateProse(i) {
+  const raw = fmtAttDate(i);   // honors explicit year/circa/month precision
+  const m = String(raw).match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
+  if (!m) return raw;          // '~1900', '350 BCE', bare years pass through
+  const [, y, mo, d] = m;
+  if (!mo || (mo === '01' && (!d || d === '01'))) return y;
+  if (!d || d === '01') return `${MONTH_NAMES[+mo - 1]} ${y}`;
+  return `${MONTH_NAMES[+mo - 1]} ${+d}, ${y}`;
+}
+
+function plainSummaryHtml(fp) {
+  const gen = fp.genealogy || {};
+  const label = { lexical: 'this phrasing', conceptual: 'the idea behind it' };
+  const pick = ['lexical', 'conceptual'].map(k => {
+    const g = gen[k] || {};
+    const log = (g.attestation_log || []).filter(i => !isRelatedContext(i)).slice().sort(byDateAsc);
+    return { k, g, log, dated: log.filter(i => parseDateFrac(i.date) != null) };
+  }).filter(x => x.g.first_attested_date && x.dated.length);
+  if (!pick.length) {
+    return 'No dated uses are recorded for this narrative yet — the trace below holds its structure, carriers, and evidence, without a timeline.';
+  }
+  const p = pick[0];                       // phrasing leads when both are dated
+  const first = p.dated[0], last = p.dated[p.dated.length - 1];
+  // a parenthetical author suffix ("Andrew Chaikin (historian, citing …)")
+  // belongs in the log rows, not a one-line opener; an authorless article is
+  // named by its outlet when the domain is known, not by its own headline
+  const who = i => {
+    let w = (i.author || '').split(' (')[0].trim();
+    if (!w) {
+      try {
+        const h = new URL(i.source_url).hostname.replace(/^www\./, '').toLowerCase();
+        w = DOMAIN_OUTLETS[h] || DOMAIN_OUTLETS[h.split('.').slice(-2).join('.')] || '';
+      } catch (e) {}
+    }
+    return truncate(w || (i.source_title || '').split(' (')[0].trim(), 60);
+  };
+  const via = citedVia(first.source_url);
+  let s = `The earliest use of ${label[p.k]} we found is from <strong>${escapeHtml(fmtDateProse(first))}</strong>` +
+    (who(first) ? ` (${escapeHtml(who(first))}${via ? `, documented by ${escapeHtml(via)}` : ''})` : '') + '. ';
+  const n = p.log.length;
+  if (n > 1) {
+    s += `${n} recorded uses in all, the most recent from ${escapeHtml(fmtDateProse(last))}` +
+      (who(last) ? ` (${escapeHtml(who(last))})` : '') + '. ';
+  }
+  const o = pick[1];
+  if (o && parseDateFrac(o.g.first_attested_date) < parseDateFrac(p.g.first_attested_date)) {
+    s += `${o.k === 'conceptual' ? 'The idea behind it' : 'The exact phrasing'} is documented earlier still, from ${escapeHtml(fmtDateProse(o.dated[0]))}. `;
+  }
+  s += '<span class="hedge">Every date has its source and receipt below; “earliest found” is not “provably first.”</span>';
+  return s;
 }
 
 function addMeta(parent, label, value) {
