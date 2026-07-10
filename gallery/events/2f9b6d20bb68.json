@@ -370,7 +370,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -588,7 +588,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -618,7 +618,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -772,7 +772,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -986,7 +986,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1234,7 +1234,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1388,7 +1388,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1431,29 +1431,29 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "Israeli airstrikes struck the Nabatieh District and Tyre District in Lebanon, resulting in 19 deaths and 34 injuries according to reported figures.",
-    "rated_outlets": 4,
+    "rated_outlets": 5,
     "distribution": {
       "left": 0,
-      "lean-left": 3,
+      "lean-left": 4,
       "center": 0,
       "lean-right": 1,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 75,
+      "lean-left": 80,
       "center": 0,
-      "lean-right": 25,
+      "lean-right": 20,
       "right": 0
     },
-    "left_of_center": 3,
+    "left_of_center": 4,
     "center": 0,
     "right_of_center": 1,
-    "lean_index": -0.5,
-    "resolve_rate": 0.44,
+    "lean_index": -0.6,
+    "resolve_rate": 0.56,
     "skew": "balanced across the spectrum",
     "coverage_gap": {
-      "unrated_news_carriers": 5,
+      "unrated_news_carriers": 4,
       "examples": [
         {
           "carrier": "Times of Israel",
@@ -1462,10 +1462,6 @@
         {
           "carrier": "Haaretz",
           "domain": "haaretz.com"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "TRT World",
@@ -1486,6 +1482,14 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "domain"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
       },
       {
         "outlet": "CNN (Web News)",
@@ -1509,7 +1513,7 @@
         "bucket": "lean-right",
         "lean_num": 1,
         "source": "allsides",
-        "matched_by": "domain"
+        "matched_by": "alias"
       }
     ],
     "ecosystem": {
@@ -2144,5 +2148,570 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "2f9b6d20bb68",
+    "event": "Israeli airstrikes struck the Nabatieh District and Tyre District in Lebanon, resulting in 19 deaths and 34 injuries according to reported figures.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:washingtontimes.com",
+            "actor_display": "Washington Times",
+            "domain": "washingtontimes.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Times",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:haaretz.com",
+          "display": "Haaretz",
+          "domain": "haaretz.com"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:trtworld.com",
+          "display": "TRT World",
+          "domain": "trtworld.com"
+        },
+        {
+          "actor_key": "site:ms.now",
+          "display": "AP",
+          "domain": "ms.now"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "6750b445",
+        "framing": "Legitimate Military Targeting",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6750b445",
+        "framing": "Legitimate Military Targeting",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "85b3cc98",
+        "framing": "Civilian Harm & War Crimes",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "\"Pressure on the Lebanese government to disarm Hezbollah by force is stoking internal tensions\"",
+            "url": "https://www.aljazeera.com/news/2026/5/8/more-than-a-dozen-reported-killed-in-israeli-attacks-on-south-lebanon",
+            "archive_url": "",
+            "date": "2026-05-08"
+          },
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "\"killed at least 19 people, including four women and three children\"",
+            "url": "https://www.nbcnews.com/world/middle-east/israeli-strikes-southern-lebanon-kill-19-children-women-officials-say-rcna346044",
+            "archive_url": "",
+            "date": "2026-05-20"
+          }
+        ]
+      },
+      {
+        "framing_id": "85b3cc98",
+        "framing": "Civilian Harm & War Crimes",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e505ced5",
+        "framing": "Ceasefire Collapse & Diplomatic Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "\"Iran suspended negotiations over Israel's actions in Lebanon, which Tehran said 'violated' the ceasefire\"",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          },
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "\"Christian religious leaders from Lebanon's southern port city of Tyre called on the international community… to act quickly\"",
+            "url": "https://www.washingtonpost.com/world/2026/06/09/lebanon-israel-hezbollah-tyre-christian-district/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "e505ced5",
+        "framing": "Ceasefire Collapse & Diplomatic Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "70dc0a41",
+        "framing": "Humanitarian & Displacement Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "\"more than 1.2 million Lebanese displaced by Israeli strikes and evacuation orders since March 2\"",
+            "url": "https://www.nbcnews.com/world/lebanon/israel-captures-key-lebanon-site-crossing-litani-river-rcna347732",
+            "archive_url": "",
+            "date": "2026-06-02"
+          }
+        ]
+      },
+      {
+        "framing_id": "70dc0a41",
+        "framing": "Humanitarian & Displacement Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "78df88e7",
+        "framing": "Israeli Occupation & Territorial Expansion",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "\"Fears of a long-term occupation have also grown amid outright calls from some for Israel to take permanent control of southern Lebanon\"",
+            "url": "https://www.nbcnews.com/world/lebanon/israel-captures-key-lebanon-site-crossing-litani-river-rcna347732",
+            "archive_url": "",
+            "date": "2026-06-02"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "\"Netanyahu said… a large Israeli ground force was pushing deep into southern Lebanon to seize areas and to 'fortify' what he described as a 'security zone'\"",
+            "url": "https://www.aljazeera.com/news/2026/5/27/israeli-air-attack-kills-at-least-two-in-southern-lebanon",
+            "archive_url": "",
+            "date": "2026-05-27"
+          }
+        ]
+      },
+      {
+        "framing_id": "78df88e7",
+        "framing": "Israeli Occupation & Territorial Expansion",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ae9e88b1",
+        "framing": "Cultural & Heritage Destruction",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "\"Christian religious leaders… called on the international community… to act quickly to prevent Israel from attacking the Christian district\"",
+            "url": "https://www.washingtonpost.com/world/2026/06/09/lebanon-israel-hezbollah-tyre-christian-district/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "ae9e88b1",
+        "framing": "Cultural & Heritage Destruction",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "fe265e03",
+        "framing": "Hezbollah Accountability & Proxy War",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "\"In light of the repeated violations of the ceasefire agreement by the terrorist organisation Hezbollah, the IDF will act against it with great force\"",
+            "url": "https://www.aljazeera.com/news/2026/5/27/israeli-air-attack-kills-at-least-two-in-southern-lebanon",
+            "archive_url": "",
+            "date": "2026-05-27"
+          }
+        ]
+      },
+      {
+        "framing_id": "fe265e03",
+        "framing": "Hezbollah Accountability & Proxy War",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Times",
+            "stance": "champion",
+            "quote": "\"The latest fighting between Israel and Hezbollah began on March 2 with the Lebanese militant Hezbollah group firing rockets at Israel\"",
+            "url": "https://www.washingtontimes.com/news/2026/may/19/officials-say-israeli-strikes-southern-lebanon-kill-19-including/",
+            "archive_url": "",
+            "date": "2026-05-19"
+          }
+        ]
+      },
+      {
+        "framing_id": "9b9d0a40",
+        "framing": "U.S. Complicity & Arms Supply",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "\"The United States' imposition of a naval blockade is an act of war that has further destabilised the situation\"",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "9b9d0a40",
+        "framing": "U.S. Complicity & Arms Supply",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "2f9b6d20bb68",
+    "event": "Israeli airstrikes struck the Nabatieh District and Tyre District in Lebanon, resulting in 19 deaths and 34 injuries according to reported figures.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "fe265e03",
+          "framing": "Hezbollah Accountability & Proxy War",
+          "statement": "'Hezbollah Accountability & Proxy War' appears in 1/4 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 4,
+              "rate": 0.25,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Al Jazeera",
+                  "stance": "champion",
+                  "quote": "\"In light of the repeated violations of the ceasefire agreement by the terrorist organisation Hezbollah, the IDF will act against it with great force\"",
+                  "url": "https://www.aljazeera.com/news/2026/5/27/israeli-air-attack-kills-at-least-two-in-southern-lebanon",
+                  "archive_url": "",
+                  "date": "2026-05-27"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Washington Times",
+                  "stance": "champion",
+                  "quote": "\"The latest fighting between Israel and Hezbollah began on March 2 with the Lebanese militant Hezbollah group firing rockets at Israel\"",
+                  "url": "https://www.washingtontimes.com/news/2026/may/19/officials-say-israeli-strikes-southern-lebanon-kill-19-including/",
+                  "archive_url": "",
+                  "date": "2026-05-19"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 10,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

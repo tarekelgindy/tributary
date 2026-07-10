@@ -530,7 +530,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260616004843/https://frontofficesports.com/travel-visa-issues-hang-over-world-cup/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -962,7 +962,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260616004843/https://frontofficesports.com/travel-visa-issues-hang-over-world-cup/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1774,5 +1774,374 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "99e3275c7b53",
+    "event": "The United States permitted the Democratic Republic of Congo's national football team to participate in World Cup matches scheduled in the country despite healt",
+    "n_framings": 7,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:espn.com",
+          "display": "ESPN",
+          "domain": "espn.com"
+        },
+        {
+          "actor_key": "site:businessday.ng",
+          "display": "BusinessDay NG",
+          "domain": "businessday.ng"
+        },
+        {
+          "actor_key": "site:frontofficesports.com",
+          "display": "Front Office Sports",
+          "domain": "frontofficesports.com"
+        },
+        {
+          "actor_key": "site:vanguardngr.com",
+          "display": "Vanguard News Nigeria",
+          "domain": "vanguardngr.com"
+        },
+        {
+          "actor_key": "site:panafricafootball.com",
+          "display": "Pan Africa Football",
+          "domain": "panafricafootball.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "c4706e27",
+        "framing": "Public Health Precaution & Protocol Compliance",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c4706e27",
+        "framing": "Public Health Precaution & Protocol Compliance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f1ebd0c9",
+        "framing": "Selective Exemption & Double Standard",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f1ebd0c9",
+        "framing": "Selective Exemption & Double Standard",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "24bd40ea",
+        "framing": "Diplomatic & Bilateral Relations",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "I applaud FECOFA and FIFA for moving swiftly and decisively to make this responsible, reasonable determination",
+            "url": "https://www.aljazeera.com/sports/2026/5/28/world-cup-delegation-compliant-with-us-ebola-protocols-dr-congo-says",
+            "archive_url": "",
+            "date": "2026-05-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "24bd40ea",
+        "framing": "Diplomatic & Bilateral Relations",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5450dc30",
+        "framing": "African Fan & Supporter Access",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Expensive tickets and transport prices and a US travel ban mean few Haitians will be able to attend the matches",
+            "url": "https://www.aljazeera.com/amp/sports/2026/5/23/dr-congo-will-not-change-world-cup-preparations-despite-us-warning",
+            "archive_url": "",
+            "date": "2026-05-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "5450dc30",
+        "framing": "African Fan & Supporter Access",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a81c9e61",
+        "framing": "Use-of-Force vs. Commercial Pressure: FIFA & Host Nation Leverage",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "DR Congo will not change World Cup preparations despite US Ebola warning",
+            "url": "https://www.aljazeera.com/amp/sports/2026/5/23/dr-congo-will-not-change-world-cup-preparations-despite-us-warning",
+            "archive_url": "",
+            "date": "2026-05-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "a81c9e61",
+        "framing": "Use-of-Force vs. Commercial Pressure: FIFA & Host Nation Leverage",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "06f73f3d",
+        "framing": "Human Cost & Outbreak Severity in the DRC",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Families in Mongbwalu grieve as Ebola returns, exposing serious gaps in healthcare and outbreak preparedness",
+            "url": "https://www.aljazeera.com/amp/sports/2026/5/21/dr-congo-cancel-world-cup-training-camp-in-kinshasa-over-ebola-outbreak",
+            "archive_url": "",
+            "date": "2026-05-21"
+          }
+        ]
+      },
+      {
+        "framing_id": "06f73f3d",
+        "framing": "Human Cost & Outbreak Severity in the DRC",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c52acae2",
+        "framing": "Sports Integrity & Competitive Fairness",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Mayor of Spain's La Linea de la Concepcion bans friendly between DR Congo and Chile due to health concerns",
+            "url": "https://www.aljazeera.com/sports/2026/6/3/dr-congo-to-offset-ebola-threat-with-behind-closed-doors-world-cup-warm-up",
+            "archive_url": "",
+            "date": "2026-06-03"
+          }
+        ]
+      },
+      {
+        "framing_id": "c52acae2",
+        "framing": "Sports Integrity & Competitive Fairness",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "99e3275c7b53",
+    "event": "The United States permitted the Democratic Republic of Congo's national football team to participate in World Cup matches scheduled in the country despite healt",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 7,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 7,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

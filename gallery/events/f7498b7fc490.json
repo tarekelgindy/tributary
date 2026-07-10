@@ -456,7 +456,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260605073353/https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1590,7 +1590,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260702021440/https://www.congress.gov/crs_external_products/R/PDF/R48887/R48887.1.pdf",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1907,37 +1907,33 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin, requiring cessation of hostilities in Iran without congression",
-    "rated_outlets": 3,
+    "rated_outlets": 4,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 2,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 33,
-      "center": 67,
+      "lean-left": 50,
+      "center": 50,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 2,
     "right_of_center": 0,
-    "lean_index": -0.33,
-    "resolve_rate": 0.33,
-    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "lean_index": -0.5,
+    "resolve_rate": 0.44,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 6,
+      "unrated_news_carriers": 5,
       "examples": [
         {
           "carrier": "WNYC / The New Yorker (David Remnick interview with Rand Paul)",
           "domain": "wnyc.org"
-        },
-        {
-          "carrier": "NBC News / Frank Thorp V",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "AP (via Newser/PBS NewsHour/NBC Washington)",
@@ -1962,6 +1958,14 @@
       {
         "outlet": "CBS News",
         "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News / Frank Thorp V",
         "bucket": "lean-left",
         "lean_num": -1,
         "source": "allsides",
@@ -2793,5 +2797,483 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "f7498b7fc490",
+    "event": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin, requiring cessation of hostilities in Iran without congression",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:politifact.com",
+            "actor_display": "PolitiFact",
+            "domain": "politifact.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "PolitiFact",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:wnyc.org",
+          "display": "WNYC",
+          "domain": "wnyc.org"
+        },
+        {
+          "actor_key": "site:newser.com",
+          "display": "AP",
+          "domain": "newser.com"
+        },
+        {
+          "actor_key": "site:nola.com",
+          "display": "The Times-Picayune",
+          "domain": "nola.com"
+        },
+        {
+          "actor_key": "site:militarytimes.com",
+          "display": "Military Times",
+          "domain": "militarytimes.com"
+        },
+        {
+          "actor_key": "site:newsfromthestates.com",
+          "display": "News From the States",
+          "domain": "newsfromthestates.com"
+        },
+        {
+          "actor_key": "site:warcosts.org",
+          "display": "WarCosts.org",
+          "domain": "warcosts.org"
+        },
+        {
+          "actor_key": "site:nbcwashington.com",
+          "display": "CNBC",
+          "domain": "nbcwashington.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "99b6be3f",
+        "framing": "Constitutional War-Powers Violation",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "The vote marked the first time Cassidy supported advancing a war powers resolution.",
+            "url": "https://www.cbsnews.com/news/senate-iran-war-powers-eighth-vote-trump/",
+            "archive_url": "",
+            "date": "2026-05-19"
+          }
+        ]
+      },
+      {
+        "framing_id": "99b6be3f",
+        "framing": "Constitutional War-Powers Violation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4100a908",
+        "framing": "Executive War Prerogative / Negotiation Sabotage",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4100a908",
+        "framing": "Executive War Prerogative / Negotiation Sabotage",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "552903f2",
+        "framing": "Political Fallout / Lame-Duck Revenge",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Cassidy, who failed to advance to a runoff against Trump-endorsed challenger Rep. Julia Letlow, is now in the final months of his term.",
+            "url": "https://www.nbcnews.com/politics/congress/senate-advances-resolution-end-iran-war-trump-bill-cassidy-rcna346001",
+            "archive_url": "",
+            "date": "2026-05-19"
+          }
+        ]
+      },
+      {
+        "framing_id": "552903f2",
+        "framing": "Political Fallout / Lame-Duck Revenge",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "696f6fc4",
+        "framing": "Human & Economic Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "696f6fc4",
+        "framing": "Human & Economic Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5f8d3ac3",
+        "framing": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 2,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5f8d3ac3",
+        "framing": "Bipartisan Anti-War Momentum / GOP Crack-Up",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d00c8d2a",
+        "framing": "Congressional Oversight Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "PolitiFact",
+            "stance": "champion",
+            "quote": "Trump declared military action 'terminated' because of a ceasefire — a move that 'glossed over the fact that hostilities have continued periodically.'",
+            "url": "https://www.politifact.com/article/2026/jun/04/war-powers-vote-house-senate-iran/",
+            "archive_url": "",
+            "date": "2026-06-04"
+          }
+        ]
+      },
+      {
+        "framing_id": "d00c8d2a",
+        "framing": "Congressional Oversight Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "82fe9f6f",
+        "framing": "Strategic / Nuclear Security Imperative",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "82fe9f6f",
+        "framing": "Strategic / Nuclear Security Imperative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f9a353d7",
+        "framing": "Symbolic / Procedural Futility",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "PolitiFact",
+            "stance": "champion",
+            "quote": "There's still a long way to go before congressional action can stop Trump from continuing the war.",
+            "url": "https://www.politifact.com/article/2026/jun/04/war-powers-vote-house-senate-iran/",
+            "archive_url": "",
+            "date": "2026-06-04"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The vote remains largely symbolic. The resolution would need to pass in the Republican-controlled Senate.",
+            "url": "https://www.aljazeera.com/news/2026/6/4/unpatriotic-trump-decries-republicans-who-voted-to-constrain-iran-war",
+            "archive_url": "",
+            "date": "2026-06-04"
+          }
+        ]
+      },
+      {
+        "framing_id": "f9a353d7",
+        "framing": "Symbolic / Procedural Futility",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "f7498b7fc490",
+    "event": "The U.S. Senate passed a War Powers Resolution measure in a preliminary vote with a 50-47 margin, requiring cessation of hostilities in Iran without congression",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

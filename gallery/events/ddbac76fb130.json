@@ -1513,10 +1513,10 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "Turkish police conducted a raid on the headquarters of the Republican People's Party and removed individuals from the building.",
-    "rated_outlets": 2,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
-      "lean-left": 2,
+      "lean-left": 3,
       "center": 0,
       "lean-right": 0,
       "right": 0
@@ -1528,22 +1528,18 @@
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 2,
+    "left_of_center": 3,
     "center": 0,
     "right_of_center": 0,
     "lean_index": -1.0,
-    "resolve_rate": 0.18,
+    "resolve_rate": 0.27,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 9,
+      "unrated_news_carriers": 8,
       "examples": [
         {
           "carrier": "Balkan Insight (BIRN)",
           "domain": "balkaninsight.com"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "Foreign Policy",
@@ -1568,6 +1564,10 @@
         {
           "carrier": "Alhurra (US-funded Arabic/English broadcaster)",
           "domain": "alhurra.com"
+        },
+        {
+          "carrier": "World Socialist Web Site (WSWS)",
+          "domain": "wsws.org"
         }
       ]
     },
@@ -1580,6 +1580,14 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "name"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
       },
       {
         "outlet": "Washington Post",
@@ -2162,5 +2170,392 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "ddbac76fb130",
+    "event": "Turkish police conducted a raid on the headquarters of the Republican People's Party and removed individuals from the building.",
+    "n_framings": 7,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:balkaninsight.com",
+          "display": "Balkan Insight",
+          "domain": "balkaninsight.com"
+        },
+        {
+          "actor_key": "site:solidaritywithothers.com",
+          "display": "Solidarity with Others",
+          "domain": "solidaritywithothers.com"
+        },
+        {
+          "actor_key": "site:foreignpolicy.com",
+          "display": "Foreign Policy",
+          "domain": "foreignpolicy.com"
+        },
+        {
+          "actor_key": "site:albawaba.com",
+          "display": "Al Bawaba",
+          "domain": "albawaba.com"
+        },
+        {
+          "actor_key": "site:turkiyetoday.com",
+          "display": "Türkiye Today",
+          "domain": "turkiyetoday.com"
+        },
+        {
+          "actor_key": "site:erkansaka.net",
+          "display": "Erkan's Field Diary",
+          "domain": "erkansaka.net"
+        },
+        {
+          "actor_key": "site:al-monitor.com",
+          "display": "Al-Monitor",
+          "domain": "al-monitor.com"
+        },
+        {
+          "actor_key": "site:courthousenews.com",
+          "display": "AFP",
+          "domain": "courthousenews.com"
+        },
+        {
+          "actor_key": "site:alhurra.com",
+          "display": "Alhurra",
+          "domain": "alhurra.com"
+        },
+        {
+          "actor_key": "site:wsws.org",
+          "display": "World Socialist Web Site",
+          "domain": "wsws.org"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "92ac3f7c",
+        "framing": "Authoritarian Crackdown on Democracy",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Many observers have said the legal cases against the CHP are aimed at neutralizing the party ahead of the next election.",
+            "url": "https://www.nbcnews.com/world/asia/turkish-police-storm-offices-main-opposition-chp-party-firing-tear-gas-rubber-bullets-rcna346689",
+            "archive_url": "",
+            "date": "2026-05-25"
+          }
+        ]
+      },
+      {
+        "framing_id": "92ac3f7c",
+        "framing": "Authoritarian Crackdown on Democracy",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9c2115b0",
+        "framing": "Internal Opposition Fracture / Power Struggle",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9c2115b0",
+        "framing": "Internal Opposition Fracture / Power Struggle",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "048d2ab1",
+        "framing": "Use-of-Force / Human Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "Police stormed the offices of Turkey's main opposition CHP party on Sunday, firing tear gas and rubber bullets at party supporters and officials.",
+            "url": "https://www.washingtonpost.com/world/2026/05/24/turkey-opposition-chp-standoff/e31863d8-5757-11f1-8a9d-afb1148204e1_story.html",
+            "archive_url": "",
+            "date": "2026-05-24"
+          }
+        ]
+      },
+      {
+        "framing_id": "048d2ab1",
+        "framing": "Use-of-Force / Human Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e2970fc3",
+        "framing": "Electoral Strategy / Political Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e2970fc3",
+        "framing": "Electoral Strategy / Political Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "dcd53e40",
+        "framing": "Geopolitical Complicity / Western Silence",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "dcd53e40",
+        "framing": "Geopolitical Complicity / Western Silence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "22ba8a1f",
+        "framing": "Marxist / Class-Struggle Frame",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "22ba8a1f",
+        "framing": "Marxist / Class-Struggle Frame",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7cae051e",
+        "framing": "Historical Pattern / Institutional Precedent",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7cae051e",
+        "framing": "Historical Pattern / Institutional Precedent",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "ddbac76fb130",
+    "event": "Turkish police conducted a raid on the headquarters of the Republican People's Party and removed individuals from the building.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 7,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 2,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

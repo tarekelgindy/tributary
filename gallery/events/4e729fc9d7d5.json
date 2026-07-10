@@ -536,7 +536,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -566,7 +566,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -751,7 +751,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260615225338/https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -906,7 +906,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -936,7 +936,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260615225338/https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1026,7 +1026,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1181,7 +1181,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1306,7 +1306,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1521,7 +1521,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260615225338/https://www.npr.org/2026/06/04/g-s1-125942/israel-lebanon-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1581,7 +1581,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1676,7 +1676,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260626070659/https://www.cnn.com/2026/06/07/world/live-news/iran-war-trump-israel-lebanon",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1736,7 +1736,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2614,5 +2614,385 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "4e729fc9d7d5",
+    "event": "Israeli airstrikes in eastern and southern Lebanon resulted in at least 31 deaths and dozens of injuries, while both Hezbollah and Israel reported increased gro",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:news.cn",
+          "display": "Xinhua",
+          "domain": "news.cn"
+        },
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "3e5f00f5",
+        "framing": "International Law & War Crimes Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "3e5f00f5",
+        "framing": "International Law & War Crimes Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75b01b7b",
+        "framing": "Israeli Self-Defense & Counter-Terrorism",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75b01b7b",
+        "framing": "Israeli Self-Defense & Counter-Terrorism",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "70e01c97",
+        "framing": "Humanitarian / Human Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "70e01c97",
+        "framing": "Humanitarian / Human Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "21257548",
+        "framing": "Ceasefire Collapse & Diplomatic Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "21257548",
+        "framing": "Ceasefire Collapse & Diplomatic Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "08663815",
+        "framing": "Lebanese Sovereignty & State Integrity",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "08663815",
+        "framing": "Lebanese Sovereignty & State Integrity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b5bd376f",
+        "framing": "US-Israel Geopolitical Tension & Alliance Management",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "\"Trump's phone call with Netanyahu became heated as he pressed Israel to scale back its Lebanon offensive\"",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "b5bd376f",
+        "framing": "US-Israel Geopolitical Tension & Alliance Management",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d8e04d79",
+        "framing": "Hezbollah as Obstructionist Actor",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d8e04d79",
+        "framing": "Hezbollah as Obstructionist Actor",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "73ec0b89",
+        "framing": "Regional Escalation & Iran Proxy War",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "\"The latest strikes mark the worst escalation since the April ceasefire and resulted in more casualties across the region\"",
+            "url": "https://www.cnn.com/2026/06/07/world/live-news/iran-war-trump-israel-lebanon",
+            "archive_url": "http://web.archive.org/web/20260626070659/https://www.cnn.com/2026/06/07/world/live-news/iran-war-trump-israel-lebanon",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "73ec0b89",
+        "framing": "Regional Escalation & Iran Proxy War",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "4e729fc9d7d5",
+    "event": "Israeli airstrikes in eastern and southern Lebanon resulted in at least 31 deaths and dozens of injuries, while both Hezbollah and Israel reported increased gro",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 2,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

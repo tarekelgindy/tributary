@@ -2378,5 +2378,437 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "69ee2d0e170f",
+    "event": "Chinese Foreign Minister Wang Yi announced that China and the United States agreed to continue implementing previous trade agreements and establish trade and in",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 3,
+        "members_covering": [
+          {
+            "actor_key": "site:newsweek.com",
+            "actor_display": "newsweek.com",
+            "domain": "newsweek.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Newsweek",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:slate.com",
+            "actor_display": "Slate",
+            "domain": "slate.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "Slate",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:foreignpolicy.com",
+          "display": "Foreign Policy",
+          "domain": "foreignpolicy.com"
+        },
+        {
+          "actor_key": "site:realcleardefense.com",
+          "display": "RealClearDefense",
+          "domain": "realcleardefense.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "5cf84437",
+        "framing": "Trump Deal-Making Triumph",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Trump said he and Chinese President Xi Jinping made some 'fantastic trade deals'",
+            "url": "https://www.cbsnews.com/news/trump-wraps-up-visit-with-xi-in-china/",
+            "archive_url": "",
+            "date": "2026-05-15"
+          }
+        ]
+      },
+      {
+        "framing_id": "5cf84437",
+        "framing": "Trump Deal-Making Triumph",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a0e96935",
+        "framing": "Substance-Over-Symbolism Skepticism",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a0e96935",
+        "framing": "Substance-Over-Symbolism Skepticism",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8a1ebeed",
+        "framing": "Beijing Wins the Framing War",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8a1ebeed",
+        "framing": "Beijing Wins the Framing War",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e3a2bcf5",
+        "framing": "Taiwan Security Betrayal Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Slate",
+            "stance": "champion",
+            "quote": "many Asian and European leaders worried that Trump would relax America's security commitments to Taiwan in exchange for great trade deals",
+            "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+            "archive_url": "",
+            "date": "2026-05-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "e3a2bcf5",
+        "framing": "Taiwan Security Betrayal Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "55ed570d",
+        "framing": "Managed Competition / Strategic Decoupling Underway",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "55ed570d",
+        "framing": "Managed Competition / Strategic Decoupling Underway",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d302ecee",
+        "framing": "Tech War Unresolved / AI and Chips Left Out",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "newsweek.com",
+            "stance": "mention",
+            "quote": "all but ruling out a detente in the chip war, where U.S. export controls continue to ban the transfer of advanced semiconductors",
+            "url": "https://www.newsweek.com/trump-and-xi-score-own-wins-from-china-summit-11954080",
+            "archive_url": "",
+            "date": "2026-05-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "d302ecee",
+        "framing": "Tech War Unresolved / AI and Chips Left Out",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4ada7d5e",
+        "framing": "Geopolitical Realignment / G2 Normalization",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "Slate",
+            "stance": "champion",
+            "quote": "Trump thought that he could wing it and that his presumed friendship with Xi would pave the way for vast progress",
+            "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+            "archive_url": "",
+            "date": "2026-05-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "4ada7d5e",
+        "framing": "Geopolitical Realignment / G2 Normalization",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c5763cf5",
+        "framing": "Domestic Political Theater / Midterm Optics",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Slate",
+            "stance": "champion",
+            "quote": "restore his popularity before this fall's midterms",
+            "url": "https://slate.com/news-and-politics/2026/05/trump-xi-jinping-summit-taiwan-what-happened.html",
+            "archive_url": "",
+            "date": "2026-05-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "c5763cf5",
+        "framing": "Domestic Political Theater / Midterm Optics",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "69ee2d0e170f",
+    "event": "Chinese Foreign Minister Wang Yi announced that China and the United States agreed to continue implementing previous trade agreements and establish trade and in",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

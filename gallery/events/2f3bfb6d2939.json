@@ -932,7 +932,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260702021440/https://www.congress.gov/crs_external_products/R/PDF/R48887/R48887.1.pdf",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2173,5 +2173,420 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "2f3bfb6d2939",
+    "event": "Iranian Americans gathered at the Ferry Building in San Francisco on an unspecified date to express opposition to an immediate end to conflict with Iran, citing",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:city-journal.org",
+            "actor_display": "City Journal",
+            "domain": "city-journal.org",
+            "circle_id": "right-leaning",
+            "confidence": 0.47,
+            "basis": "allsides_snapshot",
+            "outlet": "City Journal",
+            "bucket": "right",
+            "label": "right",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:abc7news.com",
+          "display": "ABC7 San Francisco",
+          "domain": "abc7news.com"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:shomrim.news",
+          "display": "Shomrim",
+          "domain": "shomrim.news"
+        },
+        {
+          "actor_key": "site:sfstandard.com",
+          "display": "SF Standard",
+          "domain": "sfstandard.com"
+        },
+        {
+          "actor_key": "site:rferl.org",
+          "display": "Radio Free Europe",
+          "domain": "rferl.org"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "3ccbffde",
+        "framing": "Liberation Deferred",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "We're very close to taking that regime out",
+            "url": "https://www.cbsnews.com/sanfrancisco/news/iranian-americans-san-francisco-rally-oppose-immediate-end-war-iran/",
+            "archive_url": "",
+            "date": "2026-05-25"
+          }
+        ]
+      },
+      {
+        "framing_id": "3ccbffde",
+        "framing": "Liberation Deferred",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e6631dd6",
+        "framing": "Antiwar / Anti-Imperialism",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e6631dd6",
+        "framing": "Antiwar / Anti-Imperialism",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0eccf9b9",
+        "framing": "Diaspora Complexity / Community Division",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Though united in their desire for regime change, the two groups remain starkly divided",
+            "url": "https://www.cbsnews.com/sanfrancisco/news/us-iran-bombings-bay-area-reaction-iranian-community-divided-protests/",
+            "archive_url": "",
+            "date": "2026-03-02"
+          }
+        ]
+      },
+      {
+        "framing_id": "0eccf9b9",
+        "framing": "Diaspora Complexity / Community Division",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0d895f37",
+        "framing": "Human Cost / Civilian Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0d895f37",
+        "framing": "Human Cost / Civilian Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e4dad39d",
+        "framing": "Nuclear Proliferation / Security Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "If they have access to nuclear weapons, the world is going to pay for it.",
+            "url": "https://www.cbsnews.com/sanfrancisco/news/iranian-americans-san-francisco-rally-oppose-immediate-end-war-iran/",
+            "archive_url": "",
+            "date": "2026-05-25"
+          }
+        ]
+      },
+      {
+        "framing_id": "e4dad39d",
+        "framing": "Nuclear Proliferation / Security Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f8947ba9",
+        "framing": "Coordinated Infrastructure / Foreign Influence",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f8947ba9",
+        "framing": "Coordinated Infrastructure / Foreign Influence",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "City Journal",
+            "stance": "champion",
+            "quote": "a demonstration-industrial complex — a coordinated ecosystem in which organizations lean into their respective strengths",
+            "url": "https://www.city-journal.org/article/pro-iran-protests-answer-coalition-foreign-funding",
+            "archive_url": "",
+            "date": "2026-03-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "bbb68a5c",
+        "framing": "Self-Determination / Change From Within",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "The way we want to do it is that it has to change within the country",
+            "url": "https://www.cbsnews.com/sanfrancisco/news/us-iran-bombings-bay-area-reaction-iranian-community-divided-protests/",
+            "archive_url": "",
+            "date": "2026-03-02"
+          }
+        ]
+      },
+      {
+        "framing_id": "bbb68a5c",
+        "framing": "Self-Determination / Change From Within",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b0117efb",
+        "framing": "Political / Diplomatic Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b0117efb",
+        "framing": "Political / Diplomatic Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "2f3bfb6d2939",
+    "event": "Iranian Americans gathered at the Ferry Building in San Francisco on an unspecified date to express opposition to an immediate end to conflict with Iran, citing",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

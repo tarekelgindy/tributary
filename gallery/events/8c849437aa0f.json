@@ -2259,5 +2259,383 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "8c849437aa0f",
+    "event": "The Dutch cabinet approved a bill to ban imports of goods from Israeli settlements and announced plans to explore extending the ban to services and investments.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:nltimes.nl",
+          "display": "NL Times",
+          "domain": "nltimes.nl"
+        },
+        {
+          "actor_key": "site:qna.org.qa",
+          "display": "Qatar News Agency",
+          "domain": "qna.org.qa"
+        },
+        {
+          "actor_key": "site:i24news.tv",
+          "display": "i24NEWS",
+          "domain": "i24news.tv"
+        },
+        {
+          "actor_key": "site:trtworld.com",
+          "display": "TRT World",
+          "domain": "trtworld.com"
+        },
+        {
+          "actor_key": "site:jns.org",
+          "display": "JNS",
+          "domain": "jns.org"
+        },
+        {
+          "actor_key": "site:ejpress.org",
+          "display": "European Jewish Press",
+          "domain": "ejpress.org"
+        },
+        {
+          "actor_key": "site:clevelandjewishnews.com",
+          "display": "Cleveland Jewish News",
+          "domain": "clevelandjewishnews.com"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:europeanconservative.com",
+          "display": "europeanconservative.com",
+          "domain": "europeanconservative.com"
+        },
+        {
+          "actor_key": "site:tasnimnews.ir",
+          "display": "Tasnim News Agency",
+          "domain": "tasnimnews.ir"
+        },
+        {
+          "actor_key": "site:shiawaves.com",
+          "display": "Shia Waves",
+          "domain": "shiawaves.com"
+        },
+        {
+          "actor_key": "site:aawsat.com",
+          "display": "Asharq Al-Awsat",
+          "domain": "aawsat.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "4c955e9d",
+        "framing": "International Law Compliance",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4c955e9d",
+        "framing": "International Law Compliance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5529335a",
+        "framing": "Domestic & EU Legal Deficiency",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5529335a",
+        "framing": "Domestic & EU Legal Deficiency",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bdb9d7d4",
+        "framing": "European Geopolitical Escalation",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bdb9d7d4",
+        "framing": "European Geopolitical Escalation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7b34b44f",
+        "framing": "Antisemitism & Jewish Safety Alarm",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7b34b44f",
+        "framing": "Antisemitism & Jewish Safety Alarm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "876c98df",
+        "framing": "BDS Momentum & Palestinian Rights Victory",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "876c98df",
+        "framing": "BDS Momentum & Palestinian Rights Victory",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bf37288a",
+        "framing": "Political Symbolism Over Substance",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bf37288a",
+        "framing": "Political Symbolism Over Substance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "12418603",
+        "framing": "Two-State Solution Preservation",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "12418603",
+        "framing": "Two-State Solution Preservation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "70c2555e",
+        "framing": "Dutch Domestic Political Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "70c2555e",
+        "framing": "Dutch Domestic Political Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "8c849437aa0f",
+    "event": "The Dutch cabinet approved a bill to ban imports of goods from Israeli settlements and announced plans to explore extending the ban to services and investments.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 0,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

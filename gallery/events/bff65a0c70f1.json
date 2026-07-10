@@ -2114,5 +2114,382 @@
       "mean_jaccard": 0.091
     },
     "structure_note": "7 of 17 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "bff65a0c70f1",
+    "event": "Bahrain's interior minister announced that the country will prohibit mourning of former Iranian supreme leader Ali Khamenei during Ashura commemorations.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:thenationalnews.com",
+          "display": "The National",
+          "domain": "thenationalnews.com"
+        },
+        {
+          "actor_key": "site:newlinesmag.com",
+          "display": "New Lines Magazine",
+          "domain": "newlinesmag.com"
+        },
+        {
+          "actor_key": "site:iranintl.com",
+          "display": "Iran International",
+          "domain": "iranintl.com"
+        },
+        {
+          "actor_key": "site:abna24.com",
+          "display": "ABNA",
+          "domain": "abna24.com"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:news.cn",
+          "display": "Xinhua",
+          "domain": "news.cn"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "0bf0a1eb",
+        "framing": "National Security & Sovereignty Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0bf0a1eb",
+        "framing": "National Security & Sovereignty Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f8e2f22f",
+        "framing": "Religious Freedom Suppression",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f8e2f22f",
+        "framing": "Religious Freedom Suppression",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6eb0119b",
+        "framing": "Sectarian Fault-Line Reopening",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6eb0119b",
+        "framing": "Sectarian Fault-Line Reopening",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "06b4a46f",
+        "framing": "Iranian Ideological Infiltration Counter-Narrative",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "06b4a46f",
+        "framing": "Iranian Ideological Infiltration Counter-Narrative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8364f9f1",
+        "framing": "Shia Transnational Solidarity & Martyrdom",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "large crowds of Bahraini Shi'a took to the streets in peaceful demonstrations mourning his death",
+            "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+            "archive_url": "",
+            "date": "2026-03-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "8364f9f1",
+        "framing": "Shia Transnational Solidarity & Martyrdom",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75b44c90",
+        "framing": "Wartime Domestic Repression & Authoritarian Opportunism",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75b44c90",
+        "framing": "Wartime Domestic Repression & Authoritarian Opportunism",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2699c110",
+        "framing": "Gulf Regional Security Architecture",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Iran's retaliatory strikes across several Gulf states hosting U.S. assets",
+            "url": "https://www.aljazeera.com/features/2026/3/1/analysis-will-irans-establishment-collapse-after-the-killing-of-khamenei",
+            "archive_url": "",
+            "date": "2026-03-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "2699c110",
+        "framing": "Gulf Regional Security Architecture",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4f5551c5",
+        "framing": "Authenticity of Bahraini Shia Identity vs. Iranian Revolutionary Import",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4f5551c5",
+        "framing": "Authenticity of Bahraini Shia Identity vs. Iranian Revolutionary Import",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "bff65a0c70f1",
+    "event": "Bahrain's interior minister announced that the country will prohibit mourning of former Iranian supreme leader Ali Khamenei during Ashura commemorations.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 2,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

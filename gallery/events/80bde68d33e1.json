@@ -555,7 +555,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -615,7 +615,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -709,7 +709,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260628142822/https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -739,7 +739,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260628142822/https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1107,7 +1107,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1137,7 +1137,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1752,7 +1752,7 @@
         "bucket": "lean-right",
         "lean_num": 1,
         "source": "allsides",
-        "matched_by": "domain"
+        "matched_by": "alias"
       }
     ],
     "ecosystem": {
@@ -2389,5 +2389,516 @@
       "mean_jaccard": 0.185
     },
     "structure_note": "6 of 17 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "80bde68d33e1",
+    "event": "Israeli airstrikes in Beirut, Lebanon resulted in at least two deaths and 11 injuries; Israel stated the strikes targeted Hezbollah infrastructure.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:washingtontimes.com",
+            "actor_display": "Washington Times",
+            "domain": "washingtontimes.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Times",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:political.org",
+          "display": "political.org",
+          "domain": "political.org"
+        },
+        {
+          "actor_key": "site:military.com",
+          "display": "Associated Press",
+          "domain": "military.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "fa386916",
+        "framing": "Legitimate Self-Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "fa386916",
+        "framing": "Legitimate Self-Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Times",
+            "stance": "champion",
+            "quote": "Israeli Prime Minister Benjamin Netanyahu's office said the strikes were in retaliation for the Iranian-backed Hezbollah militant group firing at northern Israel",
+            "url": "https://www.washingtontimes.com/news/2026/jun/7/days-us-supported-ceasefire-deal-israel-strikes-beiruts-southern/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "79e3a5c0",
+        "framing": "Ceasefire Sabotage",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israeli airstrikes hit Beirut's southern suburbs days after a renewed ceasefire took effect, prompting what Israel said were multiple missile barrages from Iran",
+            "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "79e3a5c0",
+        "framing": "Ceasefire Sabotage",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e4da0d31",
+        "framing": "Civilian Human Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "At least two people have been killed and 11 wounded in an Israeli air attack on a densely populated civilian neighbourhood in Beirut's southern suburbs",
+            "url": "https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel",
+            "archive_url": "http://web.archive.org/web/20260628142822/https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "e4da0d31",
+        "framing": "Civilian Human Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9ceed7e7",
+        "framing": "Regional Escalation Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 2,
+        "rate": 1.0,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Iran launched multiple barrages of missiles toward Israel on Sunday, after Israeli warplanes struck the southern suburbs of Beirut, threatening to unravel a recently renewed ceasefire",
+            "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+            "archive_url": "",
+            "date": "2026-06-07"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Iran fires missiles at Israel after Beirut attack 'crossed all red lines'",
+            "url": "https://www.aljazeera.com/news/2026/6/7/iran-fires-missiles-at-israel-after-beirut-attack-crossed-all-red-lines",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "9ceed7e7",
+        "framing": "Regional Escalation Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Times",
+            "stance": "mention",
+            "quote": "The fighting in Lebanon threatens efforts to end the Iran war and reopen the Strait of Hormuz, a key transit point for oil and gas",
+            "url": "https://www.washingtontimes.com/news/2026/jun/7/days-us-supported-ceasefire-deal-israel-strikes-beiruts-southern/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "f5bda033",
+        "framing": "Israeli Domestic Politics & Netanyahu's War Calculus",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f5bda033",
+        "framing": "Israeli Domestic Politics & Netanyahu's War Calculus",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Times",
+            "stance": "mention",
+            "quote": "Netanyahu, who faces elections later this year, wants to press ahead with Israel's offensive",
+            "url": "https://www.washingtontimes.com/news/2026/jun/7/days-us-supported-ceasefire-deal-israel-strikes-beiruts-southern/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "d82e82d3",
+        "framing": "Hezbollah Accountability & Iran Proxy War",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d82e82d3",
+        "framing": "Hezbollah Accountability & Iran Proxy War",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Times",
+            "stance": "champion",
+            "quote": "Hezbollah has scathingly rejected the U.S.-brokered deal and urged Lebanon to end its direct talks with Israel",
+            "url": "https://www.washingtontimes.com/news/2026/jun/7/days-us-supported-ceasefire-deal-israel-strikes-beiruts-southern/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "6481a2fe",
+        "framing": "U.S. Complicity & Diplomatic Credibility",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6481a2fe",
+        "framing": "U.S. Complicity & Diplomatic Credibility",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0d83a77c",
+        "framing": "International Humanitarian Law & War Crimes",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0d83a77c",
+        "framing": "International Humanitarian Law & War Crimes",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "80bde68d33e1",
+    "event": "Israeli airstrikes in Beirut, Lebanon resulted in at least two deaths and 11 injuries; Israel stated the strikes targeted Hezbollah infrastructure.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "9ceed7e7",
+          "framing": "Regional Escalation Risk",
+          "statement": "'Regional Escalation Risk' appears in 2/2 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 2,
+              "n_total": 2,
+              "rate": 1.0,
+              "stances": {
+                "champion": 2,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 2,
+              "quotes": [
+                {
+                  "outlet": "NBC News",
+                  "stance": "champion",
+                  "quote": "Iran launched multiple barrages of missiles toward Israel on Sunday, after Israeli warplanes struck the southern suburbs of Beirut, threatening to unravel a recently renewed ceasefire",
+                  "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+                  "archive_url": "",
+                  "date": "2026-06-07"
+                },
+                {
+                  "outlet": "Al Jazeera",
+                  "stance": "champion",
+                  "quote": "Iran fires missiles at Israel after Beirut attack 'crossed all red lines'",
+                  "url": "https://www.aljazeera.com/news/2026/6/7/iran-fires-missiles-at-israel-after-beirut-attack-crossed-all-red-lines",
+                  "archive_url": "",
+                  "date": "2026-06-07"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 0,
+                "mention": 1,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Washington Times",
+                  "stance": "mention",
+                  "quote": "The fighting in Lebanon threatens efforts to end the Iran war and reopen the Strait of Hormuz, a key transit point for oil and gas",
+                  "url": "https://www.washingtontimes.com/news/2026/jun/7/days-us-supported-ceasefire-deal-israel-strikes-beiruts-southern/",
+                  "archive_url": "",
+                  "date": "2026-06-07"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "left-leaning",
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 4
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

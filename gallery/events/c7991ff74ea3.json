@@ -2439,5 +2439,445 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "c7991ff74ea3",
+    "event": "Two missiles were fired toward Israel; one was intercepted and one did not reach Israeli territory.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:foxnews.com",
+            "actor_display": "Fox News",
+            "domain": "foxnews.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Fox Online News",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:bloomberg.com",
+          "display": "Bloomberg",
+          "outlet": "Bloomberg",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:globalsecurity.org",
+          "display": "GlobalSecurity.org",
+          "domain": "globalsecurity.org"
+        },
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "0f2659e2",
+        "framing": "Ceasefire Breach / Diplomatic Derailment",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0f2659e2",
+        "framing": "Ceasefire Breach / Diplomatic Derailment",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7a89c1e7",
+        "framing": "Iranian Aggression / Israel's Right to Defend",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7a89c1e7",
+        "framing": "Iranian Aggression / Israel's Right to Defend",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "Tehran launches ballistic missile assault on Israel; IDF confirms strikes in central Iran",
+            "url": "https://www.foxnews.com/live-news/us-airstrikes-iran-israel-lebanon-war-june-7",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "d49a9dd2",
+        "framing": "Escalation Cycle / Mutual Provocation",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Iran and Israel have halted mutual missile and drone attacks which were launched overnight — the first exchanged strikes since a ceasefire started in early April.",
+            "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "d49a9dd2",
+        "framing": "Escalation Cycle / Mutual Provocation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "35a099d8",
+        "framing": "Trump / U.S. Credibility and Deal-Making",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Netanyahu's second direct operational defiance of Washington within a week.",
+            "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "35a099d8",
+        "framing": "Trump / U.S. Credibility and Deal-Making",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "18f5e1fc",
+        "framing": "Iranian Justification / Retaliation Framing",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Tehran had repeatedly warned that it would intervene in support of Hezbollah if Israel targeted the Lebanese capital.",
+            "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "18f5e1fc",
+        "framing": "Iranian Justification / Retaliation Framing",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "760b636d",
+        "framing": "Air Defense Technology & Military Capability",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "What makes ballistic missiles especially dangerous is their combination of long range, high speed, and how difficult they are to intercept.",
+            "url": "https://www.aljazeera.com/news/2025/6/16/israel-iran-conflict-how-ballistic-missiles-work-and-where-can-they-reach",
+            "archive_url": "",
+            "date": "2025-06-16"
+          }
+        ]
+      },
+      {
+        "framing_id": "760b636d",
+        "framing": "Air Defense Technology & Military Capability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0ed3763f",
+        "framing": "Civilian Safety & Human Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0ed3763f",
+        "framing": "Civilian Safety & Human Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f4bc8725",
+        "framing": "Western Media Bias / Information War",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "When the United States or Israel launches strikes, their actions are frequently framed as 'self-defence', 'retaliation', 'deterrence.'",
+            "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "f4bc8725",
+        "framing": "Western Media Bias / Information War",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "c7991ff74ea3",
+    "event": "Two missiles were fired toward Israel; one was intercepted and one did not reach Israeli territory.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

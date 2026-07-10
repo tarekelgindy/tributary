@@ -2014,37 +2014,33 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine resulted in at least 10 deaths and 106 injuries.",
-    "rated_outlets": 2,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 50,
-      "center": 50,
+      "lean-left": 67,
+      "center": 33,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -0.5,
-    "resolve_rate": 0.33,
+    "lean_index": -0.67,
+    "resolve_rate": 0.5,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 4,
+      "unrated_news_carriers": 3,
       "examples": [
         {
           "carrier": "RFE/RL",
           "domain": "rferl.org"
-        },
-        {
-          "carrier": "NBC News (Reuters pool reporting)",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "Good Morning America / ABC News",
@@ -2065,6 +2061,14 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "domain"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News (Reuters pool reporting)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
       },
       {
         "outlet": "PBS NewsHour",
@@ -2726,5 +2730,469 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "e545635929b5",
+    "event": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine resulted in at least 10 deaths and 106 injuries.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 3,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:rferl.org",
+          "display": "RFE/RL",
+          "domain": "rferl.org"
+        },
+        {
+          "actor_key": "site:goodmorningamerica.com",
+          "display": "Good Morning America",
+          "domain": "goodmorningamerica.com"
+        },
+        {
+          "actor_key": "site:defenceukraine.com",
+          "display": "Defence Ukraine",
+          "domain": "defenceukraine.com"
+        },
+        {
+          "actor_key": "site:outlookindia.com",
+          "display": "Outlook India",
+          "domain": "outlookindia.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "9f34319e",
+        "framing": "War Crimes & Civilian Atrocity",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Ukraine's Deputy Foreign Minister Mariana Betsa said on X that it was 'another massacre of children by Russians'",
+            "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "9f34319e",
+        "framing": "War Crimes & Civilian Atrocity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "97db8849",
+        "framing": "Human Cost & Civilian Suffering",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "'What were they targeting?' said Hanna, a resident of the destroyed building, told Reuters",
+            "url": "https://www.nbcnews.com/world/ukraine/russia-hits-ukraine-drones-missiles-kills-least-seven-kharkiv-rcna262213",
+            "archive_url": "",
+            "date": "2026-03-08"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Among the dead were a primary school teacher and her son, a second-grade student, as well as a 13-year-old girl and her mother",
+            "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "97db8849",
+        "framing": "Human Cost & Civilian Suffering",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "85d13c5a",
+        "framing": "Air Defense Gap & Western Military Aid",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 2,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "85d13c5a",
+        "framing": "Air Defense Gap & Western Military Aid",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7841af89",
+        "framing": "Peace Process Disruption",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The attack comes as US-brokered peace negotiations remain deadlocked",
+            "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+            "archive_url": "",
+            "date": "2026-03-07"
+          },
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "A U.S.-led diplomatic push for a settlement has brought two rounds of direct peace talks…the sides remain far apart",
+            "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "7841af89",
+        "framing": "Peace Process Disruption",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "cc3abca5",
+        "framing": "Russia's Military Justification",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "mention",
+            "quote": "The Russian Defense Ministry on Saturday said that its forces carried out a nighttime strike on Ukrainian military targets",
+            "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "cc3abca5",
+        "framing": "Russia's Military Justification",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e7c7c7b6",
+        "framing": "Geopolitical Distraction & Western Attention Deficit",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e7c7c7b6",
+        "framing": "Geopolitical Distraction & Western Attention Deficit",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b12aa67d",
+        "framing": "Escalation Symmetry & Both-Sides Aerial War",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 1
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "mention",
+            "quote": "Monday's talks unfolded a day after a string of stunning long-range attacks by both sides",
+            "url": "https://www.cbsnews.com/news/russia-ukraine-war-drone-missile-attack-targets-kharkiv/",
+            "archive_url": "",
+            "date": "2026-06-07"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "oppose",
+            "quote": "Zelenskyy visited front-line positions near Druzhkivka on Friday, telling troops that battlefield strength would determine Ukraine's hand at the negotiating table",
+            "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "b12aa67d",
+        "framing": "Escalation Symmetry & Both-Sides Aerial War",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "35873d67",
+        "framing": "New Weapons Technology & Escalation Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Russia kills 10 in Ukraine strike including children with new missile",
+            "url": "https://www.aljazeera.com/news/2026/3/7/russia-kills-10-in-ukraine-strike-including-children-using-new-missile",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "35873d67",
+        "framing": "New Weapons Technology & Escalation Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "e545635929b5",
+    "event": "A Russian missile and drone attack on Kharkiv Oblast, Ukraine resulted in at least 10 deaths and 106 injuries.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 9,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

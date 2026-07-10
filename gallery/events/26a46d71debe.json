@@ -2187,5 +2187,386 @@
       "mean_jaccard": 0.28
     },
     "structure_note": "3 of 12 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "26a46d71debe",
+    "event": "Florentino Pérez was re-elected president of Real Madrid in a vote against candidate Enrique Riquelme.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:abcnews.com",
+            "actor_display": "ABC News",
+            "domain": "abcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.85,
+            "basis": "allsides_snapshot",
+            "outlet": "ABC News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:espn.com",
+          "display": "ESPN",
+          "domain": "espn.com"
+        },
+        {
+          "actor_key": "site:foxsports.com",
+          "display": "Fox Sports",
+          "domain": "foxsports.com"
+        },
+        {
+          "actor_key": "site:tntsports.co.uk",
+          "display": "TNT Sports",
+          "domain": "tntsports.co.uk"
+        },
+        {
+          "actor_key": "site:managingmadrid.com",
+          "display": "Managing Madrid",
+          "domain": "managingmadrid.com"
+        },
+        {
+          "actor_key": "site:beinsports.com",
+          "display": "beIN SPORTS",
+          "domain": "beinsports.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "d47c823b",
+        "framing": "Democratic Legitimacy & Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d47c823b",
+        "framing": "Democratic Legitimacy & Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "92c51b5e",
+        "framing": "Sporting Performance & Managerial Vision",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "Pérez's victory will pave the way for him to bring back Portuguese coach José Mourinho for a second stint at Madrid",
+            "url": "https://abcnews.com/Politics/wireStory/prez-elected-real-madrid-president-pave-mourinhos-return-133670358",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "92c51b5e",
+        "framing": "Sporting Performance & Managerial Vision",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "08138ed4",
+        "framing": "Ownership Identity & Privatization Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "08138ed4",
+        "framing": "Ownership Identity & Privatization Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4cad63a2",
+        "framing": "Incumbency Power & Institutional Entrenchment",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "mention",
+            "quote": "Pérez has also been criticized for last year floating the idea of selling 10% of the club to private investors",
+            "url": "https://abcnews.com/Politics/wireStory/prez-elected-real-madrid-president-pave-mourinhos-return-133670358",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "4cad63a2",
+        "framing": "Incumbency Power & Institutional Entrenchment",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "02a5df15",
+        "framing": "Generational Change & Reform Momentum",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "mention",
+            "quote": "Despite being relatively unknown to the wider public, the 37-year-old Riquelme mounted a credible campaign after getting the backing of former Madrid players",
+            "url": "https://abcnews.com/Politics/wireStory/prez-elected-real-madrid-president-pave-mourinhos-return-133670358",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "02a5df15",
+        "framing": "Generational Change & Reform Momentum",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ac1b7cb0",
+        "framing": "Galáctico Spectacle & Transfer Theater",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ac1b7cb0",
+        "framing": "Galáctico Spectacle & Transfer Theater",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "49e4e77d",
+        "framing": "Institutional Continuity & Legacy Mandate",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "49e4e77d",
+        "framing": "Institutional Continuity & Legacy Mandate",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6aabd8d3",
+        "framing": "Spanish Football Identity & National Team Disconnect",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6aabd8d3",
+        "framing": "Spanish Football Identity & National Team Disconnect",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "26a46d71debe",
+    "event": "Florentino Pérez was re-elected president of Real Madrid in a vote against candidate Enrique Riquelme.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 3,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

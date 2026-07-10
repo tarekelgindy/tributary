@@ -256,7 +256,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707124103/https://truthsocial.com/@realDonaldTrump",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1912,37 +1912,33 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international ac",
-    "rated_outlets": 2,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 0,
       "lean-right": 1,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 50,
+      "lean-left": 67,
       "center": 0,
-      "lean-right": 50,
+      "lean-right": 33,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 0,
     "right_of_center": 1,
-    "lean_index": 0.0,
-    "resolve_rate": 0.33,
+    "lean_index": -0.33,
+    "resolve_rate": 0.5,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 4,
+      "unrated_news_carriers": 3,
       "examples": [
         {
           "carrier": "Iran International",
           "domain": "iranintl.com"
-        },
-        {
-          "carrier": "NBC News (Barbara Slavin / Stimson Center)",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "Xinhua / Global Times",
@@ -1963,6 +1959,14 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "name"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News (Barbara Slavin / Stimson Center)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
       },
       {
         "outlet": "The Telegraph - UK",
@@ -2740,5 +2744,410 @@
       "mean_jaccard": 0.157
     },
     "structure_note": "6 of 34 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "57797a20c1d1",
+    "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international ac",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:iranintl.com",
+          "display": "Iran International",
+          "domain": "iranintl.com"
+        },
+        {
+          "actor_key": "site:news.cn",
+          "display": "Xinhua",
+          "domain": "news.cn"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:thedailyguardian.com",
+          "display": "Pakistan Today",
+          "domain": "thedailyguardian.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "645ff2cd",
+        "framing": "Justice & Retribution",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "645ff2cd",
+        "framing": "Justice & Retribution",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ef8243b3",
+        "framing": "International Law & Sovereignty Violation",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ef8243b3",
+        "framing": "International Law & Sovereignty Violation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "895f1c92",
+        "framing": "Iranian Liberation & Regime Collapse",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "mention",
+            "quote": "Slavin told Al Jazeera that Iran 'has a plan' in place and that a council 'may already have been running the country.'",
+            "url": "https://www.nbcnews.com/world/iran/live-blog/israel-iran-live-updates-rcna261099",
+            "archive_url": "",
+            "date": "2026-03-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "895f1c92",
+        "framing": "Iranian Liberation & Regime Collapse",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "51fe1266",
+        "framing": "Regional Escalation & Catastrophic Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Al Jazeera reported that 'the killing of Iranian Supreme Leader Ali Khamenei has triggered sharp reactions across the world as leaders warn of escalation and regional instability.'",
+            "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces",
+            "archive_url": "",
+            "date": "2026-03-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "51fe1266",
+        "framing": "Regional Escalation & Catastrophic Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ddeb8604",
+        "framing": "Martyrdom & Resistance",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 3,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ddeb8604",
+        "framing": "Martyrdom & Resistance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5bda61f6",
+        "framing": "Diplomatic Sabotage & Lost Peace",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Al Jazeera reported that Omani mediators observed a peace deal was 'within reach' including Iranian concessions on uranium stockpiles before the strike.",
+            "url": "https://www.aljazeera.com/news/2026/3/3/inside-the-us-israel-plan-to-assassinate-irans-khamenei",
+            "archive_url": "",
+            "date": "2026-03-03"
+          }
+        ]
+      },
+      {
+        "framing_id": "5bda61f6",
+        "framing": "Diplomatic Sabotage & Lost Peace",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8ac14404",
+        "framing": "Dynastic Succession & Regime Instability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8ac14404",
+        "framing": "Dynastic Succession & Regime Instability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7d135aa5",
+        "framing": "Human Cost & Civilian Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Al Jazeera reported that Israel struck two schools in Iran, killing at least 108 people at the Shajareh Tayyebeh girls' elementary school in Minab.",
+            "url": "https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports",
+            "archive_url": "",
+            "date": "2026-02-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "7d135aa5",
+        "framing": "Human Cost & Civilian Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "57797a20c1d1",
+    "event": "Following reports of an assassination attempt or death of Iranian Supreme Leader Ali Khamenei, various parties including Bahraini officials and international ac",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 4,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

@@ -363,7 +363,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260619055534/https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -606,7 +606,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260402153709/https://www.washingtonpost.com/national-security/2026/04/01/trump-commando-plan-seize-iran-uranium/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -797,7 +797,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260413152052/https://www.armscontrol.org/act/2026-03/focus/trumps-chaotic-and-reckless-iran-nuclear-policy",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -988,7 +988,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260521220512/https://www.ms.now/opinion/trump-iran-uranium-necessary-public-relations",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1048,7 +1048,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260619055534/https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1078,7 +1078,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260526064700/https://www.iranintl.com/en/202605253062",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1401,7 +1401,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260610003627/https://www.factcheck.org/2026/03/assessing-trumps-claims-on-irans-nuclear-and-missile-capabilities/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1431,7 +1431,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260518105912/https://www.factcheck.org/2026/04/factchecking-trumps-prime-time-address-on-iran/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1491,7 +1491,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260413152052/https://www.armscontrol.org/act/2026-03/focus/trumps-chaotic-and-reckless-iran-nuclear-policy",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1622,7 +1622,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260626053105/https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1652,7 +1652,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260626053105/https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1682,7 +1682,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260626053105/https://www.pbs.org/newshour/politics/trumps-emerging-plan-to-end-iran-war-draws-criticism-from-hard-line-republicans",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2746,5 +2746,493 @@
       "mean_jaccard": 0.042
     },
     "structure_note": "2 of 29 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "c70462cd7199",
+    "event": "U.S. President Trump stated that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 5,
+        "members_covering": [
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:newsweek.com",
+            "actor_display": "Newsweek",
+            "domain": "newsweek.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Newsweek",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:ms.now",
+            "actor_display": "MSNBC",
+            "domain": "ms.now",
+            "circle_id": "left-leaning",
+            "confidence": 0.68,
+            "basis": "allsides_snapshot",
+            "outlet": "MSNBC",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:scientificamerican.com",
+          "display": "Scientific American",
+          "outlet": "Scientific American",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:factcheck.org",
+          "display": "FactCheck.org",
+          "outlet": "FactCheck.org",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:israelnationalnews.com",
+          "display": "Israel National News",
+          "domain": "israelnationalnews.com"
+        },
+        {
+          "actor_key": "site:iranintl.com",
+          "display": "Iran International",
+          "domain": "iranintl.com"
+        },
+        {
+          "actor_key": "site:naturalnews.com",
+          "display": "RT",
+          "domain": "naturalnews.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "8799ce0f",
+        "framing": "Nonproliferation Imperative",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8799ce0f",
+        "framing": "Nonproliferation Imperative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2e311acf",
+        "framing": "Operational Feasibility & Military Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "Risky commando plan to seize Iran's uranium came at Trump's request",
+            "url": "https://www.washingtonpost.com/national-security/2026/04/01/trump-commando-plan-seize-iran-uranium/",
+            "archive_url": "http://web.archive.org/web/20260402153709/https://www.washingtonpost.com/national-security/2026/04/01/trump-commando-plan-seize-iran-uranium/",
+            "date": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "2e311acf",
+        "framing": "Operational Feasibility & Military Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75408462",
+        "framing": "Legality & Constitutional Authority",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "75408462",
+        "framing": "Legality & Constitutional Authority",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b9992a50",
+        "framing": "Diplomatic Leverage & Deal-Making",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 5,
+        "rate": 0.4,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "MSNBC",
+            "stance": "champion",
+            "quote": "When Trump told Hannity that 'I don't think it's necessary' to get the enriched uranium, he suggested he has a soft commitment to it.",
+            "url": "https://www.ms.now/opinion/trump-iran-uranium-necessary-public-relations",
+            "archive_url": "http://web.archive.org/web/20260521220512/https://www.ms.now/opinion/trump-iran-uranium-necessary-public-relations",
+            "date": "2026-05-15"
+          },
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Trump said the U.S. will work with Iran to retrieve and destroy its highly enriched uranium if he is able to cut a deal.",
+            "url": "https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
+            "archive_url": "http://web.archive.org/web/20260619055534/https://www.nbcnews.com/politics/donald-trump/trump-iran-destroy-uranium-deal-rcna348509",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "b9992a50",
+        "framing": "Diplomatic Leverage & Deal-Making",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "3d7a95c3",
+        "framing": "Global Economic & Energy Shock",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Newsweek",
+            "stance": "champion",
+            "quote": "Opening the Strait is the most important thing, so this deal is worth doing.",
+            "url": "https://www.newsweek.com/donald-trump-final-determination-iran-deal-pending-strait-hormuz-12009530",
+            "archive_url": "",
+            "date": "2026-05-30"
+          }
+        ]
+      },
+      {
+        "framing_id": "3d7a95c3",
+        "framing": "Global Economic & Energy Shock",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "28bd844c",
+        "framing": "Factual Accuracy & Intelligence Credibility",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Having highly enriched uranium does not mean having a weapon — it's just one step in a complex chain.",
+            "url": "https://www.nbcnews.com/world/iran/trump-said-obliterated-irans-nuclear-program-now-says-us-may-bomb-iran-rcna260383",
+            "archive_url": "",
+            "date": "2026-02-26"
+          }
+        ]
+      },
+      {
+        "framing_id": "28bd844c",
+        "framing": "Factual Accuracy & Intelligence Credibility",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a3dd0b2e",
+        "framing": "Hard-Right Betrayal / Deal Too Soft",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a3dd0b2e",
+        "framing": "Hard-Right Betrayal / Deal Too Soft",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2ab83b9a",
+        "framing": "Iranian Sovereignty & Resistance Narrative",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Iran will 'never respond to the language of threat and intimidation,' Araghchi said.",
+            "url": "https://www.aljazeera.com/news/2025/7/28/wipe-it-out-faster-trump-again-threatens-iran-over-nuclear-enrichment",
+            "archive_url": "",
+            "date": "2025-07-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "2ab83b9a",
+        "framing": "Iranian Sovereignty & Resistance Narrative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "c70462cd7199",
+    "event": "U.S. President Trump stated that the United States will seize and destroy Iran's highly enriched uranium, with or without Iranian cooperation.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

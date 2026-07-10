@@ -17,7 +17,7 @@
       "name": "Presidential Gaffe / Out-of-Touch Rhetoric",
       "question": "Did Trump's 'I love the inflation' statement reveal a president dangerously disconnected from ordinary Americans' economic pain?",
       "key_claim": "Trump's gleeful embrace of a 4.2% inflation rate proves he is indifferent to the financial suffering of working Americans.",
-      "description": "This framing treats the statement itself \u2014 'I love the inflation' \u2014 as the story, foregrounding the optics of a president celebrating rising prices while families struggle. It emphasizes the political and moral disconnect between the White House and the electorate.",
+      "description": "This framing treats the statement itself — 'I love the inflation' — as the story, foregrounding the optics of a president celebrating rising prices while families struggle. It emphasizes the political and moral disconnect between the White House and the electorate.",
       "emphasizes": "The verbatim quote, its political toxicity, consumer hardship, and Trump's prior remark that he doesn't 'think about Americans' financial situation'",
       "downplays": "Trump's stated rationale (that inflation will fall once the Iran war ends) and the broader context of his full remarks",
       "tone": "accusatory",
@@ -627,7 +627,7 @@
     {
       "framing_id": "47f4ab56",
       "name": "Policy Accountability / 'Trumpflation'",
-      "question": "Is Trump's own policy agenda \u2014 the Iran war, tariffs, and immigration enforcement \u2014 the root cause of the inflation surge, making this a self-inflicted wound?",
+      "question": "Is Trump's own policy agenda — the Iran war, tariffs, and immigration enforcement — the root cause of the inflation surge, making this a self-inflicted wound?",
       "key_claim": "Trump's war of choice in Iran, combined with his tariff and immigration policies, is the direct cause of the inflation spike, erasing all real wage gains of his second term.",
       "description": "This framing holds Trump's specific policy decisions responsible for the inflation surge, rejecting the 'external shock' defense. It links the Iran war, tariffs, and immigration crackdowns as a unified set of choices that predictably drove up prices.",
       "emphasizes": "Trump's pre-war tariff inflation, the 'war of choice' framing, real wage erosion, and Trump's own prior promises to cut energy costs on Day 1",
@@ -841,7 +841,7 @@
     {
       "framing_id": "0146eaaa",
       "name": "Fact-Check / Statistical Accuracy",
-      "question": "Are Trump's specific numerical claims about inflation \u2014 including his '1.7%' pre-war figure \u2014 accurate, and what does the data actually show?",
+      "question": "Are Trump's specific numerical claims about inflation — including his '1.7%' pre-war figure — accurate, and what does the data actually show?",
       "key_claim": "Trump's claim that inflation was 1.7% before the Iran war is false; pre-war inflation was between 2.4% and 2.7%, and the current rate exceeds every month of Biden's final year.",
       "description": "This framing focuses narrowly on the veracity of Trump's stated statistics, using BLS data to adjudicate specific claims. It is distinct from the broader accountability framing in that it is data-driven and acknowledges both what Trump got right and wrong.",
       "emphasizes": "Specific CPI and PCE figures, the gap between Trump's stated numbers and BLS data, and the historical comparison to Biden-era inflation",
@@ -995,7 +995,7 @@
     {
       "framing_id": "0086f0af",
       "name": "Human Cost / Working-Class Squeeze",
-      "question": "How are real Americans \u2014 workers, families, consumers \u2014 experiencing the inflation surge in their daily lives, and whose wages are being eroded?",
+      "question": "How are real Americans — workers, families, consumers — experiencing the inflation surge in their daily lives, and whose wages are being eroded?",
       "key_claim": "Inflation has now outpaced wage growth for several months, erasing all real wage gains of Trump's second term and hitting working-class households hardest through gas, groceries, and electricity.",
       "description": "This framing centers the lived experience of ordinary consumers rather than political blame or macroeconomic theory. It foregrounds specific price increases in everyday goods, the wage-price squeeze, and the disproportionate burden on lower-income households.",
       "emphasizes": "Real wage erosion, specific price increases (gas, groceries, airline fares, electricity), consumer sentiment, and the gap between Wall Street performance and Main Street pain",
@@ -1515,38 +1515,34 @@
       }
     }
   ],
-  "gap_analysis": "(framings-only \u2014 shared foundation, omissions, and gap analysis were skipped)",
+  "gap_analysis": "(framings-only — shared foundation, omissions, and gap analysis were skipped)",
   "fingerprints": [],
   "coverage_lean": {
     "event": "President Trump made a statement about inflation during a period when U.S. consumer prices were rising at their fastest rate in three years amid tensions relate",
-    "rated_outlets": 5,
+    "rated_outlets": 6,
     "distribution": {
       "left": 0,
-      "lean-left": 4,
+      "lean-left": 5,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 80,
-      "center": 20,
+      "lean-left": 83,
+      "center": 17,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 4,
+    "left_of_center": 5,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -0.8,
-    "resolve_rate": 0.62,
+    "lean_index": -0.83,
+    "resolve_rate": 0.75,
     "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 3,
+      "unrated_news_carriers": 2,
       "examples": [
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
-        },
         {
           "carrier": "The Globe and Mail",
           "domain": "theglobeandmail.com"
@@ -1559,6 +1555,14 @@
     },
     "non_news_carriers": 8,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "CBS News",
         "carrier": "CBS News",
@@ -1634,5 +1638,547 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "6a130362a7ec",
+    "event": "President Trump made a statement about inflation during a period when U.S. consumer prices were rising at their fastest rate in three years amid tensions relate",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 6,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:abcnews.com",
+            "actor_display": "ABC News",
+            "domain": "abcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.85,
+            "basis": "allsides_snapshot",
+            "outlet": "ABC News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:newrepublic.com",
+            "actor_display": "newrepublic.com",
+            "domain": "newrepublic.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "New Republic",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:ms.now",
+          "display": "Aaron Rupar",
+          "domain": "ms.now"
+        },
+        {
+          "actor_key": "site:theglobeandmail.com",
+          "display": "The Globe and Mail",
+          "domain": "theglobeandmail.com"
+        },
+        {
+          "actor_key": "site:commondreams.org",
+          "display": "Common Dreams",
+          "domain": "commondreams.org"
+        },
+        {
+          "actor_key": "site:epi.org",
+          "display": "Economic Policy Institute",
+          "domain": "epi.org"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:mishtalk.com",
+          "display": "MishTalk",
+          "domain": "mishtalk.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "47b0eb49",
+        "framing": "Presidential Gaffe / Out-of-Touch Rhetoric",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 6,
+        "rate": 0.333,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Trump says 'I love the inflation' as annual rate hits 3-year high",
+            "url": "https://www.nbcnews.com/politics/donald-trump/president-says-i-love-the-inflation-annual-rate-hits-3-year-high-rcna349509",
+            "archive_url": "",
+            "date": "2026-06-10"
+          },
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Trump says 'I love the inflation' because U.S. is 'taking out' Iranian oil",
+            "url": "https://www.cbsnews.com/news/trump-i-love-the-inflation-iran-oil/",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "47b0eb49",
+        "framing": "Presidential Gaffe / Out-of-Touch Rhetoric",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8f61b0b0",
+        "framing": "Context Defense / Quote Out of Context",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 6,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 2,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8f61b0b0",
+        "framing": "Context Defense / Quote Out of Context",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b2724c76",
+        "framing": "War-Caused Supply Shock / Temporary Inflation",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 6,
+        "rate": 0.333,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "Prices have since surged after the Iran war made oil and gas more expensive",
+            "url": "https://abcnews.com/US/wireStory/inflation-reached-3-year-high-month-iran-war-133735013",
+            "archive_url": "",
+            "date": "2026-06-10"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "US inflation jumped at its fastest pace in three years as the ongoing US-Israel war on Iran fuelled higher energy prices",
+            "url": "https://www.aljazeera.com/economy/2026/5/28/us-inflation-surges-to-three-year-high-amid-tensions-with-iran",
+            "archive_url": "",
+            "date": "2026-05-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "b2724c76",
+        "framing": "War-Caused Supply Shock / Temporary Inflation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "47f4ab56",
+        "framing": "Policy Accountability / 'Trumpflation'",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Tariffs and the stepped-up immigration enforcement are both contributing to higher prices, many economists say",
+            "url": "https://www.cnn.com/2025/09/12/business/inflation-data-prices-rising-trump-policies",
+            "archive_url": "",
+            "date": "2025-09-12"
+          }
+        ]
+      },
+      {
+        "framing_id": "47f4ab56",
+        "framing": "Policy Accountability / 'Trumpflation'",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0146eaaa",
+        "framing": "Fact-Check / Statistical Accuracy",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 6,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "In reality, the inflation rate was not 1.7% in any of the three months before the war",
+            "url": "https://www.cnn.com/2026/05/13/politics/fact-check-trump-inflation-claim",
+            "archive_url": "",
+            "date": "2026-05-13"
+          },
+          {
+            "outlet": "newrepublic.com",
+            "stance": "mention",
+            "quote": "'Americans are getting squeezed financially by inflation that's back at a three-year high'",
+            "url": "https://newrepublic.com/post/211598/inflation-three-year-high-trump-war-iran",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "0146eaaa",
+        "framing": "Fact-Check / Statistical Accuracy",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0086f0af",
+        "framing": "Human Cost / Working-Class Squeeze",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "newrepublic.com",
+            "stance": "champion",
+            "quote": "'The frustration for many Americans is that so many of the basics are up in price right now'",
+            "url": "https://newrepublic.com/post/211598/inflation-three-year-high-trump-war-iran",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "0086f0af",
+        "framing": "Human Cost / Working-Class Squeeze",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "46043c90",
+        "framing": "Monetary Policy / Fed Dilemma",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 6,
+        "rate": 0.333,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "Stubbornly high inflation has shifted the debate among Fed policymakers",
+            "url": "https://abcnews.com/US/wireStory/inflation-reached-3-year-high-month-iran-war-133735013",
+            "archive_url": "",
+            "date": "2026-06-10"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "'Price pressures are likely to persist over the next few months, and while the Fed cannot fix a supply shock, it cannot ignore one'",
+            "url": "https://www.aljazeera.com/economy/2026/5/28/us-inflation-surges-to-three-year-high-amid-tensions-with-iran",
+            "archive_url": "",
+            "date": "2026-05-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "46043c90",
+        "framing": "Monetary Policy / Fed Dilemma",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "50b22f3a",
+        "framing": "Electoral / Midterm Political Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Higher inflation is also coming in a midterm election year when Republicans are battling to keep control of the House and Senate",
+            "url": "https://www.cbsnews.com/news/trump-i-love-the-inflation-iran-oil/",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "50b22f3a",
+        "framing": "Electoral / Midterm Political Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "6a130362a7ec",
+    "event": "President Trump made a statement about inflation during a period when U.S. consumer prices were rising at their fastest rate in three years amid tensions relate",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 12,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

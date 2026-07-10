@@ -6206,5 +6206,358 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "55fe57fd9c41",
+    "event": "The US Supreme Court issued a decision upholding birthright citizenship.",
+    "n_framings": 5,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 3,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:dailykos.com",
+            "actor_display": "Daily Kos",
+            "domain": "dailykos.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Daily Kos",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:thefederalist.com",
+            "actor_display": "The Federalist",
+            "domain": "thefederalist.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "The Federalist",
+            "bucket": "right",
+            "label": "right",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:scotusblog.com",
+          "display": "SCOTUSblog",
+          "domain": "scotusblog.com"
+        },
+        {
+          "actor_key": "site:theglobeandmail.com",
+          "display": "The Globe and Mail",
+          "domain": "theglobeandmail.com"
+        },
+        {
+          "actor_key": "site:elpasomatters.org",
+          "display": "El Paso Matters",
+          "domain": "elpasomatters.org"
+        },
+        {
+          "actor_key": "site:talkingpointsmemo.com",
+          "display": "Talking Points Memo",
+          "domain": "talkingpointsmemo.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "6a5b70aa",
+        "framing": "Constitutional Vindication",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6a5b70aa",
+        "framing": "Constitutional Vindication",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "23cc20a1",
+        "framing": "Executive Overreach / Separation of Powers",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Trump's audacious bid to end birthright citizenship was not an entire loss at the Supreme Court",
+            "url": "https://www.cnn.com/2026/07/01/politics/trump-supreme-court-birthright-citizenship-major-accomplishment-analysis",
+            "archive_url": "",
+            "date": "2026-07-01"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The 6-3 ruling represents a major blow to Trump and his efforts to transform US immigration policy",
+            "url": "https://www.aljazeera.com/news/2026/6/30/us-supreme-court-rules-against-trump-order-to-end-birthright-citizenship",
+            "archive_url": "",
+            "date": "2026-06-30"
+          }
+        ]
+      },
+      {
+        "framing_id": "23cc20a1",
+        "framing": "Executive Overreach / Separation of Powers",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2dd7aac2",
+        "framing": "National Sovereignty / Immigration Abuse",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2dd7aac2",
+        "framing": "National Sovereignty / Immigration Abuse",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Federalist",
+            "stance": "champion",
+            "quote": "American citizenship is up for grabs by the highest foreign bidders",
+            "url": "https://thefederalist.com/2026/07/01/the-supreme-courts-abysmal-birthplace-citizenship-ruling-is-exactly-why-we-should-ban-surrogacy/",
+            "archive_url": "",
+            "date": "2026-07-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "33fc49f1",
+        "framing": "Human Cost / Immigrant Families",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "33fc49f1",
+        "framing": "Human Cost / Immigrant Families",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d8c5bfc8",
+        "framing": "Originalism Under Scrutiny",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Daily Kos",
+            "stance": "champion",
+            "quote": "That's not originalism. It's outcome-based jurisprudence.",
+            "url": "https://www.dailykos.com/stories/2026/7/2/800064124/courts/the-right-is-still-pissed-about-that-birthright-citizenship-decision/",
+            "archive_url": "",
+            "date": "2026-07-02"
+          }
+        ]
+      },
+      {
+        "framing_id": "d8c5bfc8",
+        "framing": "Originalism Under Scrutiny",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "55fe57fd9c41",
+    "event": "The US Supreme Court issued a decision upholding birthright citizenship.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 5,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 3,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

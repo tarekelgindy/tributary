@@ -339,7 +339,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -587,7 +587,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -771,7 +771,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1139,7 +1139,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2393,5 +2393,579 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "a9acca04fce3",
+    "event": "Iranian military officials stated that attacks on Israel would resume if Israel continues military operations against Lebanon.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:democracynow.org",
+            "actor_display": "democracynow.org",
+            "domain": "democracynow.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Democracy Now",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:foxnews.com",
+            "actor_display": "Fox News",
+            "domain": "foxnews.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Fox Online News",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:vaticannews.va",
+          "display": "Vatican News",
+          "domain": "vaticannews.va"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "f37205cb",
+        "framing": "Iran's Legitimate Deterrence",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "Iran's leaders want to 'extend their deterrence' to Lebanon",
+            "url": "https://www.democracynow.org/2026/6/8/iran_israel_renewed_strikes_trita_parsi",
+            "archive_url": "",
+            "date": "2026-06-08"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Iran has consistently stated that it will not entertain a peace deal that does not extend to Lebanon as well",
+            "url": "https://www.aljazeera.com/news/2026/6/8/how-lebanon-became-the-breaking-point-for-the-iran-war-ceasefire",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "f37205cb",
+        "framing": "Iran's Legitimate Deterrence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9e1f6c04",
+        "framing": "Iranian Aggression / Rogue State Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Lebanon will not have a future if it remains linked to Iran",
+            "url": "https://www.aljazeera.com/amp/news/2026/6/9/iran-war-day-102-trump-warns-israel-against-new-strikes-as-ceasefire-holds",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "9e1f6c04",
+        "framing": "Iranian Aggression / Rogue State Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "Israel is 'surrounded by enemies' and must defend itself",
+            "url": "https://www.foxnews.com/live-news/us-airstrikes-iran-israel-lebanon-war-june-7",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "c6154161",
+        "framing": "Diplomacy in Peril / Deal Collapse Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 4,
+        "rate": 0.75,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Israel's offensive against Hezbollah in Lebanon on Monday threatened to upend US efforts toward a preliminary peace agreement with Iran",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          },
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Trump told Israel and Iran to 'immediately stop shooting' at each other",
+            "url": "https://www.cbsnews.com/live-updates/iran-war-trump-israel-strikes-ceasefire-lebanon-beirut/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The ceasefire is also facing pressure from growing public disagreements between Israel and the United States",
+            "url": "https://www.aljazeera.com/amp/news/2026/6/9/iran-war-day-102-trump-warns-israel-against-new-strikes-as-ceasefire-holds",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "c6154161",
+        "framing": "Diplomacy in Peril / Deal Collapse Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1ff03395",
+        "framing": "Humanitarian Crisis / Human Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 2,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "94 percent of displaced people struggling to meet their basic needs",
+            "url": "https://www.aljazeera.com/news/2026/6/9/israel-kills-14-in-southern-lebanon-after-trading-fire-with-iran",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "1ff03395",
+        "framing": "Humanitarian Crisis / Human Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "58126430",
+        "framing": "Lebanon as Proxy Battlefield / Iranian Instrumentalization",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "58126430",
+        "framing": "Lebanon as Proxy Battlefield / Iranian Instrumentalization",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "The people of Lebanon have rejected Iran's proxy, Hizballah, and have told Iran to get out of their country",
+            "url": "https://www.foxnews.com/world/iran-threatens-end-ceasefire-over-hezbollahs-exclusion-from-truce-deal",
+            "archive_url": "",
+            "date": "2026-04-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "bbdf0c58",
+        "framing": "Israeli Defiance of US / Netanyahu Rogue Ally",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 4,
+        "rate": 0.75,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Trump at points used expletives to convey his disapproval of the planned offensive, which threatened to upend his efforts to broker a preliminary agreement with Iran",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Israel's decision to launch new strikes on Iran despite Trump's calls for restraint was intended to signal to the US that no lasting agreement with Tehran can ignore Israeli interests",
+            "url": "https://www.aljazeera.com/amp/news/2026/6/9/iran-war-day-102-trump-warns-israel-against-new-strikes-as-ceasefire-holds",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "How much power President Trump has over Netanyahu? He said he warned him not to do this",
+            "url": "https://www.democracynow.org/2026/6/8/iran_israel_renewed_strikes_trita_parsi",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "bbdf0c58",
+        "framing": "Israeli Defiance of US / Netanyahu Rogue Ally",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "45fb4d39",
+        "framing": "Regional Escalation / World War Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Israel and Iran traded fire on Monday, their war's 100th day, putting its already fragile truce in serious jeopardy and threatening to reignite all-out regional war",
+            "url": "https://www.cbsnews.com/live-updates/iran-us-war-israel-hezbollah-fighting-ceasefire-efforts/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The latest exchange of fire has heightened fears of a return to full-scale regional war",
+            "url": "https://www.aljazeera.com/news/2026/6/8/israel-and-iran-exchange-attacks-as-ceasefire-falters",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "45fb4d39",
+        "framing": "Regional Escalation / World War Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bc9859dc",
+        "framing": "International Law / War Crimes Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bc9859dc",
+        "framing": "International Law / War Crimes Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "a9acca04fce3",
+    "event": "Iranian military officials stated that attacks on Israel would resume if Israel continues military operations against Lebanon.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "9e1f6c04",
+          "framing": "Iranian Aggression / Rogue State Threat",
+          "statement": "'Iranian Aggression / Rogue State Threat' appears in 1/4 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 4,
+              "rate": 0.25,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Al Jazeera",
+                  "stance": "champion",
+                  "quote": "Lebanon will not have a future if it remains linked to Iran",
+                  "url": "https://www.aljazeera.com/amp/news/2026/6/9/iran-war-day-102-trump-warns-israel-against-new-strikes-as-ceasefire-holds",
+                  "archive_url": "",
+                  "date": "2026-06-09"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Fox News",
+                  "stance": "champion",
+                  "quote": "Israel is 'surrounded by enemies' and must defend itself",
+                  "url": "https://www.foxnews.com/live-news/us-airstrikes-iran-israel-lebanon-war-june-7",
+                  "archive_url": "",
+                  "date": "2026-06-07"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 13,
+        "right-leaning": 2
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

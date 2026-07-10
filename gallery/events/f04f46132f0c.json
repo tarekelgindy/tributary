@@ -1389,7 +1389,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707220436/https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2402,5 +2402,450 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "f04f46132f0c",
+    "event": "Iran's ambassador to Russia stated to Izvestia newspaper that the Strait of Hormuz would reopen under new conditions including transit fees set by Iran and Oman",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:thenation.com",
+            "actor_display": "The Nation",
+            "domain": "thenation.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.47,
+            "basis": "allsides_snapshot",
+            "outlet": "The Nation",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "NA",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:simplelaw.blog",
+          "display": "Simple Law Blog",
+          "domain": "simplelaw.blog"
+        },
+        {
+          "actor_key": "site:iz.ru",
+          "display": "Izvestia",
+          "domain": "iz.ru"
+        },
+        {
+          "actor_key": "site:yournews.com",
+          "display": "YourNews.com",
+          "domain": "yournews.com"
+        },
+        {
+          "actor_key": "site:turkiyetoday.com",
+          "display": "Türkiye Today",
+          "domain": "turkiyetoday.com"
+        },
+        {
+          "actor_key": "site:gulfnews.com",
+          "display": "Gulf News",
+          "domain": "gulfnews.com"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:oilprice.com",
+          "display": "OilPrice.com",
+          "domain": "oilprice.com"
+        },
+        {
+          "actor_key": "site:marineinsight.com",
+          "display": "Marine Insight",
+          "domain": "marineinsight.com"
+        },
+        {
+          "actor_key": "site:stratnewsglobal.com",
+          "display": "StratNews Global",
+          "domain": "stratnewsglobal.com"
+        },
+        {
+          "actor_key": "site:gulfbusiness.com",
+          "display": "Gulf Business",
+          "domain": "gulfbusiness.com"
+        },
+        {
+          "actor_key": "site:rferl.org",
+          "display": "Radio Free Europe",
+          "domain": "rferl.org"
+        },
+        {
+          "actor_key": "site:omanobserver.om",
+          "display": "Oman Observer",
+          "domain": "omanobserver.om"
+        },
+        {
+          "actor_key": "site:bairdmaritime.com",
+          "display": "Baird Maritime",
+          "domain": "bairdmaritime.com"
+        },
+        {
+          "actor_key": "site:clevelandjewishnews.com",
+          "display": "Cleveland Jewish News",
+          "domain": "clevelandjewishnews.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "fb76e71d",
+        "framing": "International Law Violation",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 1
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Nation",
+            "stance": "oppose",
+            "quote": "If Iran were a party to UNCLOS, it would be bound by this regime, and its regulatory actions would likely be unlawful",
+            "url": "https://www.thenation.com/article/world/iran-strait-of-hormuz-international-law/",
+            "archive_url": "",
+            "date": "2026-04-20"
+          }
+        ]
+      },
+      {
+        "framing_id": "fb76e71d",
+        "framing": "International Law Violation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "983fbae9",
+        "framing": "Iran's Sovereign Service-Fee Legitimacy",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "983fbae9",
+        "framing": "Iran's Sovereign Service-Fee Legitimacy",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "10f16e4f",
+        "framing": "US-Iran Peace Deal Obstacle",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Rubio said there is not a country in the world that should accept Iran's effort to create a tolling system",
+            "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-peace-talks-strait-of-hormuz-control/",
+            "archive_url": "",
+            "date": "2026-05-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "10f16e4f",
+        "framing": "US-Iran Peace Deal Obstacle",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6607190a",
+        "framing": "Global Energy Crisis & Economic Security",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6607190a",
+        "framing": "Global Energy Crisis & Economic Security",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0eba14b8",
+        "framing": "Iranian Geopolitical Leverage & War Narrative",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0eba14b8",
+        "framing": "Iranian Geopolitical Leverage & War Narrative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9dfca725",
+        "framing": "Oman's Diplomatic Tightrope",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "9dfca725",
+        "framing": "Oman's Diplomatic Tightrope",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "16658894",
+        "framing": "Human Cost & Shipping Worker Safety",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "16658894",
+        "framing": "Human Cost & Shipping Worker Safety",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "77ccf8b7",
+        "framing": "Russia as Information Conduit",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "77ccf8b7",
+        "framing": "Russia as Information Conduit",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "f04f46132f0c",
+    "event": "Iran's ambassador to Russia stated to Izvestia newspaper that the Strait of Hormuz would reopen under new conditions including transit fees set by Iran and Oman",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 1,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

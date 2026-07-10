@@ -2416,5 +2416,543 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "8afbdb10d8f9",
+    "event": "Disturbances occurred in Belfast and Newtownards, Northern Ireland following a knife attack.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 3,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:dailysignal.com",
+            "actor_display": "The Daily Signal",
+            "domain": "dailysignal.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "The Daily Signal",
+            "bucket": "right",
+            "label": "right",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:newsletter.co.uk",
+          "display": "The Newsletter",
+          "domain": "newsletter.co.uk"
+        },
+        {
+          "actor_key": "site:france24.com",
+          "display": "France 24",
+          "domain": "france24.com"
+        },
+        {
+          "actor_key": "site:rte.ie",
+          "display": "RTÉ News",
+          "domain": "rte.ie"
+        },
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:tempo.co",
+          "display": "en.tempo.co",
+          "domain": "tempo.co"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "ccf788a2",
+        "framing": "Immigration-System Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ccf788a2",
+        "framing": "Immigration-System Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Daily Signal",
+            "stance": "champion",
+            "quote": "Belfast Attack Exposes the Cost of Mass Migration Without Assimilation",
+            "url": "https://www.dailysignal.com/2026/06/09/uk-horror-belfast-attack-exposes-cost-of-mass-migration/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "914f3bc7",
+        "framing": "Far-Right Exploitation / Online Incitement",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Anti-immigrant and right-wing accounts on social media, particularly X, seized on the video, with many calling for protests.",
+            "url": "https://www.cnn.com/2026/06/09/europe/northern-ireland-knife-attack-belfast-intl",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Anti-immigrant protesters in the city of Belfast have torched vehicles and buildings",
+            "url": "https://www.aljazeera.com/news/2026/6/10/protesters-torch-cars-buildings-in-belfast-after-knife-attack",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "914f3bc7",
+        "framing": "Far-Right Exploitation / Online Incitement",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "87727bb0",
+        "framing": "Law Enforcement & Public Order",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "87727bb0",
+        "framing": "Law Enforcement & Public Order",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b12fc4cd",
+        "framing": "Human Cost / Victims on Both Sides",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 1,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Groups of masked men burning families out of their homes is nothing less than disgusting cowardice",
+            "url": "https://www.aljazeera.com/news/2026/6/10/protesters-torch-cars-buildings-in-belfast-after-knife-attack",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "CBS News",
+            "stance": "mention",
+            "quote": "The victim, a man in his 40s, was in serious condition with serious slash wounds to his face, eyes, neck and back",
+            "url": "https://www.cbsnews.com/news/belfast-northern-ireland-stabbing-far-right-calls-anti-immigration-protests/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "b12fc4cd",
+        "framing": "Human Cost / Victims on Both Sides",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "93d3fee9",
+        "framing": "Populist Legitimate-Grievance",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Only by protesting REPEATEDLY and LOUDLY will there be any change!!",
+            "url": "https://www.cnn.com/2026/06/09/europe/northern-ireland-knife-attack-belfast-intl",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "93d3fee9",
+        "framing": "Populist Legitimate-Grievance",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Daily Signal",
+            "stance": "champion",
+            "quote": "those who rush to politicize any event that they think confirms their own narrative, are quick to demand a suppression of any evidence that contradicts it",
+            "url": "https://www.dailysignal.com/2026/06/09/uk-horror-belfast-attack-exposes-cost-of-mass-migration/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "5b12fa12",
+        "framing": "Recurring Sectarian / Ethnic-Violence Pattern",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "The stabbing came a year after racially motivated riots rocked Northern Ireland following a sexual assault",
+            "url": "https://www.cbsnews.com/news/belfast-northern-ireland-stabbing-far-right-calls-anti-immigration-protests/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "5b12fa12",
+        "framing": "Recurring Sectarian / Ethnic-Violence Pattern",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "19b30389",
+        "framing": "Viral-Video / Platform-Responsibility",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "The knife attack was filmed by a witness and has since gone viral on social media.",
+            "url": "https://www.cnn.com/2026/06/09/europe/northern-ireland-knife-attack-belfast-intl",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "19b30389",
+        "framing": "Viral-Video / Platform-Responsibility",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "95799cbb",
+        "framing": "Rule of Law / Due Process",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "95799cbb",
+        "framing": "Rule of Law / Due Process",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "8afbdb10d8f9",
+    "event": "Disturbances occurred in Belfast and Newtownards, Northern Ireland following a knife attack.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "93d3fee9",
+          "framing": "Populist Legitimate-Grievance",
+          "statement": "'Populist Legitimate-Grievance' appears in 1/3 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 3,
+              "rate": 0.333,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "CNN",
+                  "stance": "champion",
+                  "quote": "Only by protesting REPEATEDLY and LOUDLY will there be any change!!",
+                  "url": "https://www.cnn.com/2026/06/09/europe/northern-ireland-knife-attack-belfast-intl",
+                  "archive_url": "",
+                  "date": "2026-06-09"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "The Daily Signal",
+                  "stance": "champion",
+                  "quote": "those who rush to politicize any event that they think confirms their own narrative, are quick to demand a suppression of any evidence that contradicts it",
+                  "url": "https://www.dailysignal.com/2026/06/09/uk-horror-belfast-attack-exposes-cost-of-mass-migration/",
+                  "archive_url": "",
+                  "date": "2026-06-09"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 8,
+        "right-leaning": 2
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

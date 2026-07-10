@@ -1792,37 +1792,33 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths in Gaza City, Deir al-Balah, and al-Mawasi during an active ceasefire.",
-    "rated_outlets": 6,
+    "rated_outlets": 7,
     "distribution": {
       "left": 0,
-      "lean-left": 4,
+      "lean-left": 5,
       "center": 2,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 67,
-      "center": 33,
+      "lean-left": 71,
+      "center": 29,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 4,
+    "left_of_center": 5,
     "center": 2,
     "right_of_center": 0,
-    "lean_index": -0.67,
-    "resolve_rate": 0.75,
+    "lean_index": -0.71,
+    "resolve_rate": 0.88,
     "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 2,
+      "unrated_news_carriers": 1,
       "examples": [
         {
           "carrier": "FDD's Long War Journal",
           "domain": "longwarjournal.org"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         }
       ]
     },
@@ -1839,6 +1835,14 @@
       {
         "outlet": "CNN (Web News)",
         "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
         "bucket": "lean-left",
         "lean_num": -1,
         "source": "allsides",
@@ -2612,5 +2616,664 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "f4afea2c4326",
+    "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths in Gaza City, Deir al-Balah, and al-Mawasi during an active ceasefire.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 5,
+        "members_covering": [
+          {
+            "actor_key": "site:go.com",
+            "actor_display": "ABC News",
+            "domain": "go.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "ABC News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:foxnews.com",
+            "actor_display": "Fox News",
+            "domain": "foxnews.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Fox Online News",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:longwarjournal.org",
+          "display": "FDD's Long War Journal",
+          "domain": "longwarjournal.org"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "20df9928",
+        "framing": "Ceasefire Violation & International Law",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Israel violated the ceasefire agreement at least 3,076 times from October 10, 2025 to May 31, 2026",
+            "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+            "archive_url": "",
+            "date": "2025-11-11"
+          }
+        ]
+      },
+      {
+        "framing_id": "20df9928",
+        "framing": "Ceasefire Violation & International Law",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2ba78d54",
+        "framing": "Israeli Security & Legitimate Self-Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "mention",
+            "quote": "Netanyahu instructed the military to carry out 'immediate, powerful strikes in the Gaza Strip'",
+            "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+            "archive_url": "",
+            "date": "2025-10-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "2ba78d54",
+        "framing": "Israeli Security & Legitimate Self-Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "Israel says Hamas violated ceasefire with multiple attacks leading to IDF response",
+            "url": "https://www.foxnews.com/world/israel-says-hamas-violated-ceasefire-multiple-attacks-leading-idf-response.amp",
+            "archive_url": "",
+            "date": "2025-10-20"
+          }
+        ]
+      },
+      {
+        "framing_id": "d9b44fba",
+        "framing": "Human Cost & Civilian Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 5,
+        "rate": 0.4,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "At least 25 Palestinians were killed in four Israeli airstrikes on Wednesday in a part of Gaza under Hamas control",
+            "url": "https://www.nbcnews.com/world/middle-east/israel-airstrikes-gaza-palestinians-killed-ceasefire-yellow-line-rcna244923",
+            "archive_url": "",
+            "date": "2025-11-21"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "They were killed on June 6 following Israeli bombardment of the Rimal shelter for Palestinians displaced by war",
+            "url": "https://www.aljazeera.com/news/2026/6/7/israeli-army-kills-nine-in-gaza-as-mediators-renew-diplomacy-in-cairo",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "d9b44fba",
+        "framing": "Human Cost & Civilian Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "10ccd669",
+        "framing": "Genocide & Structural Violence",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "its genocidal war on the besieged enclave continues unabated",
+            "url": "https://www.aljazeera.com/news/2026/1/18/israeli-attacks-wound-civilians-across-gaza-in-latest-ceasefire-violations",
+            "archive_url": "",
+            "date": "2026-01-18"
+          }
+        ]
+      },
+      {
+        "framing_id": "10ccd669",
+        "framing": "Genocide & Structural Violence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ed98e5dc",
+        "framing": "Trump Peace Plan & Diplomatic Stakes",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 5,
+        "rate": 0.4,
+        "stances": {
+          "champion": 1,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "The Trump administration has ramped up diplomatic efforts to bolster a shaky ceasefire",
+            "url": "https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+            "archive_url": "http://web.archive.org/web/20251021084335/https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+            "date": "2025-10-20"
+          },
+          {
+            "outlet": "ABC News",
+            "stance": "mention",
+            "quote": "The ceasefire in Gaza is broadly holding, despite sporadic clashes between the Israel Defense Forces and Gaza militants",
+            "url": "https://abcnews.go.com/International/live-updates/israel-gaza-live-updates-idf-claims-killing-2/?id=128903869",
+            "archive_url": "",
+            "date": "2026-01-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "ed98e5dc",
+        "framing": "Trump Peace Plan & Diplomatic Stakes",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "The most consequential diplomatic development of the year came in early October, when the Trump administration helped broker a ceasefire framework",
+            "url": "https://www.foxnews.com/world/trumps-peace-through-strength-2025-where-wars-stopped-rivals-came-table",
+            "archive_url": "",
+            "date": "2025-12-27"
+          }
+        ]
+      },
+      {
+        "framing_id": "355cf941",
+        "framing": "Humanitarian Crisis & Aid Blockade",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "hundreds of thousands of Palestinian families… continue to grapple with a lack of humanitarian supplies",
+            "url": "https://www.aljazeera.com/news/2025/12/22/israel-kills-two-palestinians-in-gaza-city-as-ceasefire-violations-mount",
+            "archive_url": "",
+            "date": "2025-12-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "355cf941",
+        "framing": "Humanitarian Crisis & Aid Blockade",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "44c65e6b",
+        "framing": "Fragile Ceasefire & Mutual Provocation",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 5,
+        "rate": 0.6,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israel and Hamas have traded blame for what both call violations of the U.S.-brokered truce",
+            "url": "https://www.nbcnews.com/world/middle-east/israel-airstrikes-gaza-palestinians-killed-ceasefire-yellow-line-rcna244923",
+            "archive_url": "",
+            "date": "2025-11-21"
+          },
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "The ceasefire in Gaza is broadly holding, despite sporadic clashes between the Israel Defense Forces and Gaza militants",
+            "url": "https://abcnews.go.com/International/live-updates/israel-gaza-live-updates-idf-claims-killing-2/?id=128903869",
+            "archive_url": "",
+            "date": "2026-01-08"
+          },
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Netanyahu instructed the military to carry out 'immediate, powerful strikes'… the US was notified of the decision",
+            "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+            "archive_url": "",
+            "date": "2025-10-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "44c65e6b",
+        "framing": "Fragile Ceasefire & Mutual Provocation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7f4d393b",
+        "framing": "US Complicity & Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Despite continuing attacks, the US insists that the 'ceasefire' is still holding",
+            "url": "https://www.aljazeera.com/news/2025/11/11/how-many-times-has-israel-violated-the-gaza-ceasefire-here-are-the-numbers",
+            "archive_url": "",
+            "date": "2025-11-11"
+          }
+        ]
+      },
+      {
+        "framing_id": "7f4d393b",
+        "framing": "US Complicity & Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "f4afea2c4326",
+    "event": "Israeli airstrikes resulted in at least 13 Palestinian deaths in Gaza City, Deir al-Balah, and al-Mawasi during an active ceasefire.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "ed98e5dc",
+          "framing": "Trump Peace Plan & Diplomatic Stakes",
+          "statement": "'Trump Peace Plan & Diplomatic Stakes' appears in 2/5 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 2,
+              "n_total": 5,
+              "rate": 0.4,
+              "stances": {
+                "champion": 1,
+                "mention": 1,
+                "oppose": 0
+              },
+              "asserting": 2,
+              "quotes": [
+                {
+                  "outlet": "The Washington Post",
+                  "stance": "champion",
+                  "quote": "The Trump administration has ramped up diplomatic efforts to bolster a shaky ceasefire",
+                  "url": "https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+                  "archive_url": "http://web.archive.org/web/20251021084335/https://www.washingtonpost.com/world/2025/10/20/israel-gaza-ceasefire-trump-witkoff/",
+                  "date": "2025-10-20"
+                },
+                {
+                  "outlet": "ABC News",
+                  "stance": "mention",
+                  "quote": "The ceasefire in Gaza is broadly holding, despite sporadic clashes between the Israel Defense Forces and Gaza militants",
+                  "url": "https://abcnews.go.com/International/live-updates/israel-gaza-live-updates-idf-claims-killing-2/?id=128903869",
+                  "archive_url": "",
+                  "date": "2026-01-08"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Fox News",
+                  "stance": "champion",
+                  "quote": "The most consequential diplomatic development of the year came in early October, when the Trump administration helped broker a ceasefire framework",
+                  "url": "https://www.foxnews.com/world/trumps-peace-through-strength-2025-where-wars-stopped-rivals-came-table",
+                  "archive_url": "",
+                  "date": "2025-12-27"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        },
+        {
+          "framing_id": "2ba78d54",
+          "framing": "Israeli Security & Legitimate Self-Defense",
+          "statement": "'Israeli Security & Legitimate Self-Defense' appears in 1/5 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 5,
+              "rate": 0.2,
+              "stances": {
+                "champion": 0,
+                "mention": 1,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "CNN",
+                  "stance": "mention",
+                  "quote": "Netanyahu instructed the military to carry out 'immediate, powerful strikes in the Gaza Strip'",
+                  "url": "https://www.cnn.com/2025/10/28/middleeast/israel-military-strikes-gaza-latam-intl",
+                  "archive_url": "",
+                  "date": "2025-10-28"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Fox News",
+                  "stance": "champion",
+                  "quote": "Israel says Hamas violated ceasefire with multiple attacks leading to IDF response",
+                  "url": "https://www.foxnews.com/world/israel-says-hamas-violated-ceasefire-multiple-attacks-leading-idf-response.amp",
+                  "archive_url": "",
+                  "date": "2025-10-20"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 11,
+        "right-leaning": 2
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

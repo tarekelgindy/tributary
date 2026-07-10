@@ -849,7 +849,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -879,7 +879,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260704043425/https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1189,7 +1189,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1219,7 +1219,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1499,7 +1499,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260623043401/https://time.com/article/2026/06/04/hezbollah-rejects-israel-lebanon-ceasefire-agreement-strikes/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1529,7 +1529,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707075117/https://en.wikipedia.org/wiki/2026_Lebanon_war",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1572,29 +1572,29 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "One paramedic was killed and four others were injured in two separate Israeli airstrikes in the Tyre District.",
-    "rated_outlets": 4,
+    "rated_outlets": 5,
     "distribution": {
       "left": 0,
-      "lean-left": 2,
+      "lean-left": 3,
       "center": 1,
       "lean-right": 1,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 50,
-      "center": 25,
-      "lean-right": 25,
+      "lean-left": 60,
+      "center": 20,
+      "lean-right": 20,
       "right": 0
     },
-    "left_of_center": 2,
+    "left_of_center": 3,
     "center": 1,
     "right_of_center": 1,
-    "lean_index": -0.25,
-    "resolve_rate": 0.44,
+    "lean_index": -0.4,
+    "resolve_rate": 0.56,
     "skew": "balanced across the spectrum",
     "coverage_gap": {
-      "unrated_news_carriers": 5,
+      "unrated_news_carriers": 4,
       "examples": [
         {
           "carrier": "Haaretz (as critic of the framing)",
@@ -1603,10 +1603,6 @@
         {
           "carrier": "Common Dreams",
           "domain": "commondreams.org"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "Press TV / GlobalSecurity.org",
@@ -1620,6 +1616,14 @@
     },
     "non_news_carriers": 7,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "Time Magazine",
         "carrier": "Time Magazine",
@@ -2342,5 +2346,448 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "513d66a53a20",
+    "event": "One paramedic was killed and four others were injured in two separate Israeli airstrikes in the Tyre District.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:foxnews.com",
+            "actor_display": "Fox News",
+            "domain": "foxnews.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Fox Online News",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:haaretz.com",
+          "display": "Haaretz",
+          "domain": "haaretz.com"
+        },
+        {
+          "actor_key": "site:dropsitenews.com",
+          "display": "Drop Site News",
+          "domain": "dropsitenews.com"
+        },
+        {
+          "actor_key": "site:commondreams.org",
+          "display": "Common Dreams",
+          "domain": "commondreams.org"
+        },
+        {
+          "actor_key": "site:time.com",
+          "display": "TIME",
+          "domain": "time.com"
+        },
+        {
+          "actor_key": "site:globalsecurity.org",
+          "display": "Press TV",
+          "domain": "globalsecurity.org"
+        },
+        {
+          "actor_key": "site:israelpalestinenews.org",
+          "display": "Israel Palestine News",
+          "domain": "israelpalestinenews.org"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "7a6f8252",
+        "framing": "IHL War Crimes Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7a6f8252",
+        "framing": "IHL War Crimes Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d7e59195",
+        "framing": "Hezbollah Human-Shield / Military Misuse Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d7e59195",
+        "framing": "Hezbollah Human-Shield / Military Misuse Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "IDF finds 'ambulance used by Hezbollah to conceal weapons'",
+            "url": "https://www.foxnews.com/video/6393797039112",
+            "archive_url": "",
+            "date": "2026-04-24"
+          }
+        ]
+      },
+      {
+        "framing_id": "f2411044",
+        "framing": "Human Cost / Humanitarian Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f2411044",
+        "framing": "Human Cost / Humanitarian Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "86ff1f04",
+        "framing": "Ceasefire Violation / Diplomatic Breakdown",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israeli strikes Tuesday on southern Lebanon came hours after the president's latest optimistic assessment",
+            "url": "https://www.nbcnews.com/world/iran/trump-iran-deal-israel-lebanon-strikes-tyre-christians-rcna349149",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "86ff1f04",
+        "framing": "Ceasefire Violation / Diplomatic Breakdown",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7a17da77",
+        "framing": "Double-Tap / Tactical Method Scrutiny",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7a17da77",
+        "framing": "Double-Tap / Tactical Method Scrutiny",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "dc83fef4",
+        "framing": "Hezbollah Accountability / Security Context",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "dc83fef4",
+        "framing": "Hezbollah Accountability / Security Context",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "3fd8a702",
+        "framing": "Systemic Pattern / Deliberate Targeting of Health Sector",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "3fd8a702",
+        "framing": "Systemic Pattern / Deliberate Targeting of Health Sector",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "fc3c38c6",
+        "framing": "Geopolitical Proxy / Iran-Linked Escalation",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 2,
+        "rate": 1.0,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israeli strikes risked renewed fighting with Tehran, a day after exchanges that had threatened a return to all-out war",
+            "url": "https://www.nbcnews.com/world/iran/trump-iran-deal-israel-lebanon-strikes-tyre-christians-rcna349149",
+            "archive_url": "",
+            "date": "2026-06-10"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "'Israel has made it a point to exclude southern Lebanon… saying it was going to continue targeting whatever they say is a potential threat'",
+            "url": "https://www.aljazeera.com/news/2026/6/9/israel-kills-14-in-southern-lebanon-after-trading-fire-with-iran",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "fc3c38c6",
+        "framing": "Geopolitical Proxy / Iran-Linked Escalation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "513d66a53a20",
+    "event": "One paramedic was killed and four others were injured in two separate Israeli airstrikes in the Tyre District.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 3,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

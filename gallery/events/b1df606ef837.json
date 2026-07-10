@@ -2492,5 +2492,533 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "b1df606ef837",
+    "event": "Greenlanders gathered in Nuuk to protest the opening of a new U.S. consulate.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 6,
+        "members_covering": [
+          {
+            "actor_key": "site:go.com",
+            "actor_display": "ABC News",
+            "domain": "go.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "ABC News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:alternet.org",
+            "actor_display": "Alternet",
+            "domain": "alternet.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.9,
+            "basis": "allsides_snapshot",
+            "outlet": "AlterNet",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:democracynow.org",
+            "actor_display": "democracynow.org",
+            "domain": "democracynow.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Democracy Now",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:grist.org",
+            "actor_display": "Grist",
+            "domain": "grist.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.45,
+            "basis": "allsides_snapshot",
+            "outlet": "Grist",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "NA",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:truthout.org",
+            "actor_display": "Truthout",
+            "domain": "truthout.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.45,
+            "basis": "allsides_snapshot",
+            "outlet": "TruthOut",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "NA",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:washingtonexaminer.com",
+            "actor_display": "Washington Examiner",
+            "domain": "washingtonexaminer.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Examiner",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:bloomberg.com",
+          "display": "Bloomberg",
+          "outlet": "Bloomberg",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:prismnews.com",
+          "display": "Prism News",
+          "domain": "prismnews.com"
+        },
+        {
+          "actor_key": "site:upi.com",
+          "display": "Nivi Christensen",
+          "domain": "upi.com"
+        },
+        {
+          "actor_key": "site:moderndiplomacy.eu",
+          "display": "Modern Diplomacy",
+          "domain": "moderndiplomacy.eu"
+        },
+        {
+          "actor_key": "site:fortune.com",
+          "display": "Fortune",
+          "domain": "fortune.com"
+        },
+        {
+          "actor_key": "site:thediplomat.com",
+          "display": "The Diplomat",
+          "domain": "thediplomat.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "f4f6132d",
+        "framing": "Greenlandic Self-Determination & Sovereignty",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 6,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f4f6132d",
+        "framing": "Greenlandic Self-Determination & Sovereignty",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "79f1bbf0",
+        "framing": "Arctic Geopolitical Competition & U.S. Strategic Interest",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 6,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "79f1bbf0",
+        "framing": "Arctic Geopolitical Competition & U.S. Strategic Interest",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "76abad25",
+        "framing": "Anti-Colonial / Indigenous Rights",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 6,
+        "rate": 0.5,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Grist",
+            "stance": "champion",
+            "quote": "Greenland is 90 percent Inuit… and is viewed as a model of Indigenous self-determination and sovereignty.",
+            "url": "https://grist.org/global-indigenous-affairs-desk/greenland-is-a-global-model-for-indigenous-self-governance-trumps-demands-for-the-island-threaten-that/",
+            "archive_url": "",
+            "date": "2026-01-22"
+          },
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "Greenland is not up for sale… Indigenous Greenlanders want their independence from both the U.S. and Denmark.",
+            "url": "https://www.democracynow.org/2026/1/7/greenland_trump",
+            "archive_url": "",
+            "date": "2026-01-07"
+          },
+          {
+            "outlet": "Truthout",
+            "stance": "champion",
+            "quote": "This hit a colonial nerve for Kalaallit and sparked feelings of fear of the risk of losing the hard-earned rights to their land.",
+            "url": "https://truthout.org/articles/greenland-is-not-for-sale-an-indigenous-activist-speaks-out-against-the-us/",
+            "archive_url": "",
+            "date": "2026-02-13"
+          }
+        ]
+      },
+      {
+        "framing_id": "76abad25",
+        "framing": "Anti-Colonial / Indigenous Rights",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a3c74d3c",
+        "framing": "Trump Foreign Policy Overreach & Alliance Damage",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Alternet",
+            "stance": "champion",
+            "quote": "Thursday's opening of a new U.S. consulate in Greenland's capital city of Nuuk did not go well for the Americans.",
+            "url": "https://www.alternet.org/news-politics/greenland-us/",
+            "archive_url": "",
+            "date": "2026-05-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "a3c74d3c",
+        "framing": "Trump Foreign Policy Overreach & Alliance Damage",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "00cc2fdc",
+        "framing": "Critical Minerals & Economic Opportunity",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 1
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Grist",
+            "stance": "oppose",
+            "quote": "The idea that we're going to walk in and in a year, start up mines… it's a complete and utter fantasy.",
+            "url": "https://grist.org/global-indigenous-affairs-desk/greenland-is-a-global-model-for-indigenous-self-governance-trumps-demands-for-the-island-threaten-that/",
+            "archive_url": "",
+            "date": "2026-01-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "00cc2fdc",
+        "framing": "Critical Minerals & Economic Opportunity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0b4ccbed",
+        "framing": "Greenlandic Independence Opportunity",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "Everybody is busy and stepping on Greenland to make a point that Donald Trump is a bad man.",
+            "url": "https://abcnews.go.com/International/greenland-relegated-stepping-stone-trump-europe-standoff-party/story?id=129374198",
+            "archive_url": "",
+            "date": "2026-01-21"
+          }
+        ]
+      },
+      {
+        "framing_id": "0b4ccbed",
+        "framing": "Greenlandic Independence Opportunity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "212c852a",
+        "framing": "Diplomatic Optics & Soft Power Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 6,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "212c852a",
+        "framing": "Diplomatic Optics & Soft Power Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Washington Examiner",
+            "stance": "champion",
+            "quote": "Greenlanders tell Americans 'go home' at rowdy opening of US Consulate",
+            "url": "https://www.washingtonexaminer.com/policy/foreign-policy/4579018/greenland-americans-go-home-us-consulate/",
+            "archive_url": "",
+            "date": "2026-05-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "7e088da9",
+        "framing": "Threat-Inflation & Fact-Check",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 6,
+        "rate": 0.167,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Vessel tracking data from maritime data and intelligence websites such as MarineTraffic do not show the presence of Chinese or Russian ships near Greenland.",
+            "url": "https://www.aljazeera.com/news/2026/1/7/do-russia-and-china-pose-a-national-security-threat-to-the-us-in-greenland",
+            "archive_url": "",
+            "date": "2026-01-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "7e088da9",
+        "framing": "Threat-Inflation & Fact-Check",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "b1df606ef837",
+    "event": "Greenlanders gathered in Nuuk to protest the opening of a new U.S. consulate.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

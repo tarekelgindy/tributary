@@ -1552,7 +1552,7 @@
         "bucket": "right",
         "lean_num": 2,
         "source": "allsides",
-        "matched_by": "name"
+        "matched_by": "alias"
       }
     ],
     "ecosystem": {
@@ -2178,5 +2178,502 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "9198aca2407e",
+    "event": "Pakistan Army field marshal Asim Munir visited Tehran, Iran.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:nypost.com",
+            "actor_display": "New York Post",
+            "domain": "nypost.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "New York Post",
+            "bucket": "right",
+            "label": "right",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:arabnews.pk",
+          "display": "Arab News Pakistan",
+          "domain": "arabnews.pk"
+        },
+        {
+          "actor_key": "site:houseofsaud.com",
+          "display": "House of Saud",
+          "domain": "houseofsaud.com"
+        },
+        {
+          "actor_key": "site:dropsitenews.com",
+          "display": "Drop Site News",
+          "domain": "dropsitenews.com"
+        },
+        {
+          "actor_key": "site:sdgnews.com",
+          "display": "SDG News",
+          "domain": "sdgnews.com"
+        },
+        {
+          "actor_key": "site:iranwire.com",
+          "display": "IranWire",
+          "domain": "iranwire.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "a0cb6de6",
+        "framing": "Peacemaker / Diplomatic Breakthrough",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The visit demonstrated Pakistan's 'unwavering resolve to facilitate a negotiated settlement… and to promote peace, stability and prosperity'",
+            "url": "https://www.aljazeera.com/news/2026/4/18/pakistan-pm-army-chief-wrap-up-key-trips-in-push-for-more-us-iran-talks",
+            "archive_url": "",
+            "date": "2026-04-18"
+          }
+        ]
+      },
+      {
+        "framing_id": "a0cb6de6",
+        "framing": "Peacemaker / Diplomatic Breakthrough",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "New York Post",
+            "stance": "champion",
+            "quote": "Trump praised Munir, saying he was 'doing a great job'",
+            "url": "https://nypost.com",
+            "archive_url": "",
+            "date": "2026-04-18"
+          }
+        ]
+      },
+      {
+        "framing_id": "3a336200",
+        "framing": "Strategic Contradiction / Alliance Trap",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "As the war escalates, analysts say that Pakistan's tightrope walk between two close partners could become harder and harder",
+            "url": "https://www.aljazeera.com/news/2026/3/7/caught-between-iran-and-saudi-arabia-can-pakistan-stay-neutral-for-long",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "3a336200",
+        "framing": "Strategic Contradiction / Alliance Trap",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "573ceb3e",
+        "framing": "Military Overreach / Civil-Democratic Erosion",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The 27th Amendment has drawn sharp criticism from opposition figures and independent analysts",
+            "url": "https://www.aljazeera.com/features/2026/4/23/india-to-iran-how-two-wars-shaped-the-rise-of-pakistans-asim-munir",
+            "archive_url": "",
+            "date": "2026-04-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "573ceb3e",
+        "framing": "Military Overreach / Civil-Democratic Erosion",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8374863b",
+        "framing": "Pakistan's Middle-Power Ascent",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The war against India a year ago led to Munir's elevation to the status of field marshal. Now he's playing peacemaker.",
+            "url": "https://www.aljazeera.com/features/2026/4/23/india-to-iran-how-two-wars-shaped-the-rise-of-pakistans-asim-munir",
+            "archive_url": "",
+            "date": "2026-04-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "8374863b",
+        "framing": "Pakistan's Middle-Power Ascent",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "35679a77",
+        "framing": "Iran's Domestic Fragmentation / IRGC Bypass Problem",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "35679a77",
+        "framing": "Iran's Domestic Fragmentation / IRGC Bypass Problem",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f60be98f",
+        "framing": "Pakistani Shia Community / Domestic Sectarian Fault Line",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Pakistan has a large Shia population which acts as a strong bridge between Islamabad and Tehran and the conflict has raised tensions with the government",
+            "url": "https://www.aljazeera.com/news/2026/3/7/caught-between-iran-and-saudi-arabia-can-pakistan-stay-neutral-for-long",
+            "archive_url": "",
+            "date": "2026-03-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "f60be98f",
+        "framing": "Pakistani Shia Community / Domestic Sectarian Fault Line",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "67e1fe2b",
+        "framing": "Risky Gamble / Mediation Overextension",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "We cannot necessarily say that we have reached a point where an agreement is close",
+            "url": "https://www.aljazeera.com/news/2026/5/22/pakistans-army-chief-in-iran-as-uss-rubio-says-slight-progress-in-talks",
+            "archive_url": "",
+            "date": "2026-05-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "67e1fe2b",
+        "framing": "Risky Gamble / Mediation Overextension",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5aa6ee65",
+        "framing": "Border Security & Bilateral Normalisation",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "mention",
+            "quote": "In May 2025, he travelled to Iran with Sharif and met Major-General Mohammad Bagheri, chief of the Iranian military's general staff",
+            "url": "https://www.aljazeera.com/features/2026/4/23/india-to-iran-how-two-wars-shaped-the-rise-of-pakistans-asim-munir",
+            "archive_url": "",
+            "date": "2026-04-23"
+          }
+        ]
+      },
+      {
+        "framing_id": "5aa6ee65",
+        "framing": "Border Security & Bilateral Normalisation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "9198aca2407e",
+    "event": "Pakistan Army field marshal Asim Munir visited Tehran, Iran.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "a0cb6de6",
+          "framing": "Peacemaker / Diplomatic Breakthrough",
+          "statement": "'Peacemaker / Diplomatic Breakthrough' appears in 1/1 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Al Jazeera",
+                  "stance": "champion",
+                  "quote": "The visit demonstrated Pakistan's 'unwavering resolve to facilitate a negotiated settlement… and to promote peace, stability and prosperity'",
+                  "url": "https://www.aljazeera.com/news/2026/4/18/pakistan-pm-army-chief-wrap-up-key-trips-in-push-for-more-us-iran-talks",
+                  "archive_url": "",
+                  "date": "2026-04-18"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "New York Post",
+                  "stance": "champion",
+                  "quote": "Trump praised Munir, saying he was 'doing a great job'",
+                  "url": "https://nypost.com",
+                  "archive_url": "",
+                  "date": "2026-04-18"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "left-leaning",
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 7,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

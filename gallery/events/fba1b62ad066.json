@@ -1733,29 +1733,29 @@
   "contributors": [],
   "coverage_lean": {
     "event": "A man opened fire in multiple locations in central Israel, killing one person and injuring five others, before being shot and killed by police.",
-    "rated_outlets": 3,
+    "rated_outlets": 4,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 2,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 33,
-      "center": 67,
+      "lean-left": 50,
+      "center": 50,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 2,
     "right_of_center": 0,
-    "lean_index": -0.33,
-    "resolve_rate": 0.33,
-    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "lean_index": -0.5,
+    "resolve_rate": 0.44,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 6,
+      "unrated_news_carriers": 5,
       "examples": [
         {
           "carrier": "Times of Israel",
@@ -1776,10 +1776,6 @@
         {
           "carrier": "CBC News",
           "domain": "cbc.ca"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         }
       ]
     },
@@ -1792,6 +1788,14 @@
         "lean_num": -1,
         "source": "allsides",
         "matched_by": "domain"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
       },
       {
         "outlet": "The Jerusalem Post",
@@ -2496,5 +2500,444 @@
       "mean_jaccard": 0.182
     },
     "structure_note": "9 of 19 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "fba1b62ad066",
+    "event": "A man opened fire in multiple locations in central Israel, killing one person and injuring five others, before being shot and killed by police.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:worldisraelnews.com",
+          "display": "World Israel News",
+          "domain": "worldisraelnews.com"
+        },
+        {
+          "actor_key": "site:ynetnews.com",
+          "display": "Ynet News",
+          "domain": "ynetnews.com"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:palestinechronicle.com",
+          "display": "Palestine Chronicle",
+          "domain": "palestinechronicle.com"
+        },
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:i24news.tv",
+          "display": "i24 News",
+          "domain": "i24news.tv"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "c57f5fdb",
+        "framing": "Terrorism / Security Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c57f5fdb",
+        "framing": "Terrorism / Security Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "bdbb0711",
+        "framing": "Political Exploitation / Far-Right Opportunism",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "'This is an apartheid regime': Critics decry Israel's new death penalty law",
+            "url": "https://www.aljazeera.com/news/2026/4/1/this-is-an-apartheid-regime-critics-decry-israels-new-death-penalty-law",
+            "archive_url": "",
+            "date": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "bdbb0711",
+        "framing": "Political Exploitation / Far-Right Opportunism",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b8cc0cb4",
+        "framing": "Cycle of Violence / Contextual Causation",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "A 35-year-old man was killed and five others injured in a series of shootings near the occupied West Bank",
+            "url": "https://www.nbcnews.com/world/israel/one-person-killed-attack-central-israel-rcna348846",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "b8cc0cb4",
+        "framing": "Cycle of Violence / Contextual Causation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "72fdd838",
+        "framing": "Arab-Israeli Identity / Internal Security Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "72fdd838",
+        "framing": "Arab-Israeli Identity / Internal Security Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5a7fd9a5",
+        "framing": "Resistance / Anti-Occupation Narrative",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "mention",
+            "quote": "Hamas said the shooting was 'a natural response to the crimes of the occupation'",
+            "url": "https://www.aljazeera.com/news/2025/9/8/shooting-in-jerusalem-kills-four-israeli-authorities-say",
+            "archive_url": "",
+            "date": "2025-09-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "5a7fd9a5",
+        "framing": "Resistance / Anti-Occupation Narrative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "72f1c458",
+        "framing": "Human Cost / Victim-Centered",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "72f1c458",
+        "framing": "Human Cost / Victim-Centered",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "be29f1b2",
+        "framing": "Collective Punishment / Israeli Military Response",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 2,
+        "rate": 1.0,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Palestinians in the West Bank are preparing themselves to face collective punishment from Israel in retaliation for the attack",
+            "url": "https://www.aljazeera.com/news/2025/9/8/shooting-in-jerusalem-kills-four-israeli-authorities-say",
+            "archive_url": "",
+            "date": "2025-09-08"
+          },
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israeli soldiers were deployed to one of the sites in central Israel and to a nearby Israeli settlement in the West Bank after the shootings",
+            "url": "https://www.nbcnews.com/world/israel/one-person-killed-attack-central-israel-rcna348846",
+            "archive_url": "",
+            "date": "2026-06-07"
+          }
+        ]
+      },
+      {
+        "framing_id": "be29f1b2",
+        "framing": "Collective Punishment / Israeli Military Response",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "33045df2",
+        "framing": "Death Penalty Law / Rule of Law",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "'Fundamentally, this is an apartheid regime,' Yair Dvir from B'Tselem told Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/4/1/this-is-an-apartheid-regime-critics-decry-israels-new-death-penalty-law",
+            "archive_url": "",
+            "date": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "33045df2",
+        "framing": "Death Penalty Law / Rule of Law",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "fba1b62ad066",
+    "event": "A man opened fire in multiple locations in central Israel, killing one person and injuring five others, before being shot and killed by police.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

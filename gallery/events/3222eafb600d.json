@@ -2431,5 +2431,441 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "3222eafb600d",
+    "event": "Israeli drone strikes resulted in two deaths in Rafah and Gaza City.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 3,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:democracynow.org",
+            "actor_display": "democracynow.org",
+            "domain": "democracynow.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Democracy Now",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:wafa.ps",
+          "display": "WAFA",
+          "domain": "wafa.ps"
+        },
+        {
+          "actor_key": "site:snopes.com",
+          "display": "Snopes",
+          "domain": "snopes.com"
+        },
+        {
+          "actor_key": "site:forward.com",
+          "display": "The Forward",
+          "domain": "forward.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "970d15f2",
+        "framing": "International Law & War Crimes Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "970d15f2",
+        "framing": "International Law & War Crimes Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "717ad197",
+        "framing": "Legitimate Military Self-Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "717ad197",
+        "framing": "Legitimate Military Self-Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "016f9e21",
+        "framing": "Human Cost & Civilian Suffering",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "At least 10 Palestinian people were killed while lining up to buy flour in an Israeli attack on Rafah",
+            "url": "https://www.aljazeera.com/news/2024/12/12/israeli-drone-attack-on-gaza-aid-convoy-kills-12-as-hunger-crisis-deepens",
+            "archive_url": "",
+            "date": "2024-12-12"
+          }
+        ]
+      },
+      {
+        "framing_id": "016f9e21",
+        "framing": "Human Cost & Civilian Suffering",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7215ce3b",
+        "framing": "Press Freedom & Journalistic Targeting",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "Gaza's Media Office says Wishah's killing reflects a 'systematic targeting and assassination' of Palestinian journalists by Israel",
+            "url": "https://www.democracynow.org/2026/4/9/headlines/israeli_drone_strike_kills_al_jazeera_correspondent_mohammed_wishah_in_gaza_city",
+            "archive_url": "",
+            "date": "2026-04-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "7215ce3b",
+        "framing": "Press Freedom & Journalistic Targeting",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b11b670a",
+        "framing": "IDF Operational Precision & Human-Shield Complexity",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b11b670a",
+        "framing": "IDF Operational Precision & Human-Shield Complexity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "3e4b051c",
+        "framing": "Genocide / Ethnic Cleansing",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 3,
+        "rate": 0.667,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "His death brings the total number of journalists killed in Gaza since October 2023 to 262",
+            "url": "https://www.democracynow.org/",
+            "archive_url": "",
+            "date": "2026-04-09"
+          },
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Protesters march to denounce the Biden administration's support of Israel, which has killed thousands of Palestinian civilians",
+            "url": "https://edition.cnn.com/2024/01/28/politics/us-troops-hostages-gaza-ceasefire/index.html",
+            "archive_url": "",
+            "date": "2023-12-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "3e4b051c",
+        "framing": "Genocide / Ethnic Cleansing",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ff574516",
+        "framing": "US Political Fallout & Foreign Policy Leverage",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 3,
+        "rate": 0.333,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Biden risks deepening Middle East conflict with pressure to respond to deadly troop attack",
+            "url": "https://edition.cnn.com/2024/01/28/politics/us-troops-hostages-gaza-ceasefire/index.html",
+            "archive_url": "",
+            "date": "2024-01-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "ff574516",
+        "framing": "US Political Fallout & Foreign Policy Leverage",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "669ee61d",
+        "framing": "Autonomous Drone Technology & Oversight",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 3,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "669ee61d",
+        "framing": "Autonomous Drone Technology & Oversight",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "3222eafb600d",
+    "event": "Israeli drone strikes resulted in two deaths in Rafah and Gaza City.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

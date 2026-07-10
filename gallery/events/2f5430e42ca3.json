@@ -516,7 +516,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630151116/https://www.dallasfed.org/research/economics/2026/0320",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1006,7 +1006,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260703185851/https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1500,7 +1500,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260703185851/https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1560,7 +1560,7 @@
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260708182125/https://www.congress.gov/crs-product/R45281",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1900,7 +1900,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260703185851/https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1960,7 +1960,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260703185851/https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1990,7 +1990,7 @@
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260708182125/https://www.congress.gov/crs-product/R45281",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2020,7 +2020,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260703185851/https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2890,5 +2890,360 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "2f5430e42ca3",
+    "event": "The United States Energy Information Administration reported that Middle Eastern oil producers reduced output by more than 11 million barrels per day following ",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:oilprice.com",
+          "display": "OilPrice.com",
+          "domain": "oilprice.com"
+        },
+        {
+          "actor_key": "site:kpler.com",
+          "display": "Kpler",
+          "domain": "kpler.com"
+        },
+        {
+          "actor_key": "site:instituteforenergyresearch.org",
+          "display": "Institute for Energy Research",
+          "domain": "instituteforenergyresearch.org"
+        },
+        {
+          "actor_key": "site:speedcommerce.com",
+          "display": "Speed Commerce",
+          "domain": "speedcommerce.com"
+        },
+        {
+          "actor_key": "site:thediplomat.com",
+          "display": "The Diplomat",
+          "domain": "thediplomat.com"
+        },
+        {
+          "actor_key": "site:fortune.com",
+          "display": "Fortune",
+          "domain": "fortune.com"
+        },
+        {
+          "actor_key": "site:discoveryalert.com.au",
+          "display": "Discovery Alert",
+          "domain": "discoveryalert.com.au"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "b1218349",
+        "framing": "Historic Supply Shock / Market Disruption",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b1218349",
+        "framing": "Historic Supply Shock / Market Disruption",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "10d6bd53",
+        "framing": "Energy Security Vulnerability / Chokepoint Dependence",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "10d6bd53",
+        "framing": "Energy Security Vulnerability / Chokepoint Dependence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "baa2032e",
+        "framing": "Geopolitical Power Realignment",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "baa2032e",
+        "framing": "Geopolitical Power Realignment",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "aa8ae413",
+        "framing": "Clean Energy Transition Catalyst",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "aa8ae413",
+        "framing": "Clean Energy Transition Catalyst",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8f82a947",
+        "framing": "U.S. Energy Independence / Domestic Production Vindication",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8f82a947",
+        "framing": "U.S. Energy Independence / Domestic Production Vindication",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c29fcca4",
+        "framing": "War Accountability / Pre-War Decision-Making",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c29fcca4",
+        "framing": "War Accountability / Pre-War Decision-Making",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e2c06e3f",
+        "framing": "Global South / Asymmetric Humanitarian Cost",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e2c06e3f",
+        "framing": "Global South / Asymmetric Humanitarian Cost",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5b397886",
+        "framing": "International Law and Freedom of Navigation",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5b397886",
+        "framing": "International Law and Freedom of Navigation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "2f5430e42ca3",
+    "event": "The United States Energy Information Administration reported that Middle Eastern oil producers reduced output by more than 11 million barrels per day following ",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 0,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

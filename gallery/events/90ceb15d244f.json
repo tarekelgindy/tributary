@@ -1781,7 +1781,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1872,42 +1872,46 @@
   "contributors": [],
   "coverage_lean": {
     "event": "Iran conducted military strikes against targets in Israel in 2026.",
-    "rated_outlets": 2,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 50,
-      "center": 50,
+      "lean-left": 67,
+      "center": 33,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -0.5,
-    "resolve_rate": 0.5,
+    "lean_index": -0.67,
+    "resolve_rate": 0.75,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 2,
+      "unrated_news_carriers": 1,
       "examples": [
         {
           "carrier": "Times of Israel",
           "domain": "timesofisrael.com"
-        },
-        {
-          "carrier": "NBC News (live blog)",
-          "domain": "nbcnews.com"
         }
       ]
     },
     "non_news_carriers": 10,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News (live blog)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "CNN (Web News)",
         "carrier": "CNN",
@@ -2614,5 +2618,402 @@
       "mean_jaccard": 0.102
     },
     "structure_note": "8 of 24 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "90ceb15d244f",
+    "event": "Iran conducted military strikes against targets in Israel in 2026.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "09ce8e7d",
+        "framing": "Legitimate Retaliation / Iranian Self-Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "09ce8e7d",
+        "framing": "Legitimate Retaliation / Iranian Self-Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f9f9b35a",
+        "framing": "Iranian Aggression / Threat to Israel and Regional Stability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f9f9b35a",
+        "framing": "Iranian Aggression / Threat to Israel and Regional Stability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0bde76c8",
+        "framing": "International Law / War Crimes Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0bde76c8",
+        "framing": "International Law / War Crimes Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "20f86224",
+        "framing": "Diplomacy Sabotaged / War of Choice",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "20f86224",
+        "framing": "Diplomacy Sabotaged / War of Choice",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8b2e2770",
+        "framing": "Human Cost / Civilian Suffering",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Iran has declared an end to its military operations against Israel, after the two sides exchanged a wave of attacks that threatened to tilt the Middle East back into all-out war",
+            "url": "https://www.nbcnews.com/world/iran/live-blog/live-updates-israel-iran-strikes-rcna346556",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "8b2e2770",
+        "framing": "Human Cost / Civilian Suffering",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f2a65f86",
+        "framing": "Nuclear Threat Elimination / Strategic Success",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f2a65f86",
+        "framing": "Nuclear Threat Elimination / Strategic Success",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "e063f352",
+        "framing": "Trump's War / Domestic Political Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 2,
+        "rate": 1.0,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israel's decision to attack Iran after Trump said publicly he would urge Netanyahu not to retaliate highlights an 'asymmetry' in the power dynamics between the U.S. and Israel",
+            "url": "https://www.nbcnews.com/world/iran/live-blog/live-updates-israel-iran-strikes-rcna346556",
+            "archive_url": "",
+            "date": "2026-06-08"
+          },
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "'There is real concern that Trump will reach a bad deal. Israel is trying to influence it as much as it can,' an Israeli official told CNN",
+            "url": "https://www.cnn.com/2026/05/12/middleeast/israel-iran-us-nuclear-deal-trump-intl",
+            "archive_url": "",
+            "date": "2026-05-12"
+          }
+        ]
+      },
+      {
+        "framing_id": "e063f352",
+        "framing": "Trump's War / Domestic Political Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f1b1cfee",
+        "framing": "Global Economic Shock / Strait of Hormuz Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "The Trump administration has released about 58 million barrels of oil (14%) from America's emergency stockpile in a bid to ease the supply crisis",
+            "url": "https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "archive_url": "http://web.archive.org/web/20260609001001/https://www.cnn.com/2026/06/01/world/live-news/iran-trump-lebanon-war-news",
+            "date": "2026-06-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "f1b1cfee",
+        "framing": "Global Economic Shock / Strait of Hormuz Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "90ceb15d244f",
+    "event": "Iran conducted military strikes against targets in Israel in 2026.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 4,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

@@ -2288,5 +2288,443 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "97e7de105a78",
+    "event": "Iranian Foreign Minister Abbas Araghchi and Pakistani Field Marshal Asim Munir held late-night talks.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:france24.com",
+          "display": "France 24",
+          "domain": "france24.com"
+        },
+        {
+          "actor_key": "site:pakobserver.net",
+          "display": "Pakistan Observer",
+          "domain": "pakobserver.net"
+        },
+        {
+          "actor_key": "site:outlookindia.com",
+          "display": "Outlook India",
+          "domain": "outlookindia.com"
+        },
+        {
+          "actor_key": "site:realclearworld.com",
+          "display": "RealClearWorld",
+          "domain": "realclearworld.com"
+        },
+        {
+          "actor_key": "site:fairobserver.com",
+          "display": "Fair Observer",
+          "domain": "fairobserver.com"
+        },
+        {
+          "actor_key": "site:sdgnews.com",
+          "display": "SDG News",
+          "domain": "sdgnews.com"
+        },
+        {
+          "actor_key": "site:openthemagazine.com",
+          "display": "Open Magazine",
+          "domain": "openthemagazine.com"
+        },
+        {
+          "actor_key": "site:theprint.in",
+          "display": "Tasnim News Agency",
+          "domain": "theprint.in"
+        },
+        {
+          "actor_key": "site:tribune.com.pk",
+          "display": "Express Tribune",
+          "domain": "tribune.com.pk"
+        },
+        {
+          "actor_key": "site:businesstoday.in",
+          "display": "Michael Rubin",
+          "domain": "businesstoday.in"
+        },
+        {
+          "actor_key": "site:deccanherald.com",
+          "display": "Deccan Herald",
+          "domain": "deccanherald.com"
+        },
+        {
+          "actor_key": "site:dailyhunt.in",
+          "display": "Dailyhunt",
+          "domain": "dailyhunt.in"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "ca509c50",
+        "framing": "Pakistan as Indispensable Peacemaker",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ca509c50",
+        "framing": "Pakistan as Indispensable Peacemaker",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4723753a",
+        "framing": "Military Overreach and Democratic Deficit",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4723753a",
+        "framing": "Military Overreach and Democratic Deficit",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "579bb0e4",
+        "framing": "Nuclear Nonproliferation at Stake",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The central question is whether the US has, implicitly, accepted Iran's core demand: end the war and settle the Strait of Hormuz first, with the nuclear programme to follow",
+            "url": "https://www.aljazeera.com/news/2026/5/6/has-the-us-accepted-irans-demand-to-settle-hormuz-first-nuclear-later",
+            "archive_url": "",
+            "date": "2026-05-06"
+          }
+        ]
+      },
+      {
+        "framing_id": "579bb0e4",
+        "framing": "Nuclear Nonproliferation at Stake",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ef20911e",
+        "framing": "Global Energy Crisis and Economic Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "The head of the International Energy Agency (IEA) has warned that the disruption already exceeds the combined oil crises of 1973 and 1979",
+            "url": "https://www.aljazeera.com/news/2026/3/24/pakistan-ready-to-host-us-iran-talks-can-latest-peace-push-work",
+            "archive_url": "",
+            "date": "2026-04-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "ef20911e",
+        "framing": "Global Energy Crisis and Economic Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "86bba3b2",
+        "framing": "Iranian Sovereignty and Resistance Narrative",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Araghchi had relayed messages through Pakistan outlining Tehran's red lines on nuclear issues and the Strait of Hormuz",
+            "url": "https://www.aljazeera.com/news/2026/4/27/iran-offers-hormuz-deal-without-nuclear-talks-as-it-seeks-broader-buy-in",
+            "archive_url": "",
+            "date": "2026-04-27"
+          }
+        ]
+      },
+      {
+        "framing_id": "86bba3b2",
+        "framing": "Iranian Sovereignty and Resistance Narrative",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8b76e469",
+        "framing": "Pakistan as US Proxy / Cynical Realpolitik",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8b76e469",
+        "framing": "Pakistan as US Proxy / Cynical Realpolitik",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ec9cf6eb",
+        "framing": "Geopolitical Realignment and Multipolar Moment",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ec9cf6eb",
+        "framing": "Geopolitical Realignment and Multipolar Moment",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ecd3e435",
+        "framing": "Fragile Diplomacy / Skepticism of a Real Deal",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Araghchi signalled scepticism over Washington's intentions, saying he had 'yet to see if the US is truly serious about diplomacy'",
+            "url": "https://www.aljazeera.com/amp/news/2026/4/26/irans-foreign-minister-leaves-pakistan-en-route-to-russia-for-more-talks",
+            "archive_url": "",
+            "date": "2026-04-26"
+          }
+        ]
+      },
+      {
+        "framing_id": "ecd3e435",
+        "framing": "Fragile Diplomacy / Skepticism of a Real Deal",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "97e7de105a78",
+    "event": "Iranian Foreign Minister Abbas Araghchi and Pakistani Field Marshal Asim Munir held late-night talks.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 6,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

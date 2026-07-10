@@ -490,7 +490,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260311072516/https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea%3B+Schools+Remain+Closed",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -520,7 +520,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609154958/https://greekreporter.com/2026/06/07/earthquake-evia-greece-athens/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -580,7 +580,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260609154958/https://greekreporter.com/2026/06/07/earthquake-evia-greece-athens/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -733,7 +733,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260311072516/https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea%3B+Schools+Remain+Closed",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -763,7 +763,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260622195424/https://www.euronews.com/my-europe/2026/06/07/greece-multiple-earthquakes-around-magnitude-52-hit-northern-evia",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -823,7 +823,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260311072516/https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea%3B+Schools+Remain+Closed",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -976,7 +976,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260311072516/https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea%3B+Schools+Remain+Closed",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1424,7 +1424,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260311072516/https://www.novinite.com/articles/232373/Earthquake+Activity+Persists+on+Greek+Island+of+Euboea%3B+Schools+Remain+Closed",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1484,7 +1484,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20251028022913/https://www.volcanodiscovery.com/earthquakes/greece.html",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1697,7 +1697,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260501040147/https://m.emsc.eu/",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1727,7 +1727,7 @@
           "verified": false,
           "verification_status": "unchecked",
           "verification_notes": "",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20240425105311/https://www.volcanodiscovery.com/earthquakes/greece/evia.html",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -2405,5 +2405,328 @@
       "mean_jaccard": 0.135
     },
     "structure_note": "4 of 12 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "17bd20ce7fed",
+    "event": "Two earthquakes with magnitudes 5.1 and 4.9 struck Euboea, Greece, resulting in building damage and landslides.",
+    "n_framings": 7,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:parapolitika.gr",
+          "display": "Parapolitika",
+          "domain": "parapolitika.gr"
+        },
+        {
+          "actor_key": "site:korcaboom.com",
+          "display": "Korcaboom.com",
+          "domain": "korcaboom.com"
+        },
+        {
+          "actor_key": "site:online.ua",
+          "display": "online.ua",
+          "domain": "online.ua"
+        },
+        {
+          "actor_key": "site:novinite.com",
+          "display": "Novinite",
+          "domain": "novinite.com"
+        },
+        {
+          "actor_key": "site:greekreporter.com",
+          "display": "Greek Reporter",
+          "domain": "greekreporter.com"
+        },
+        {
+          "actor_key": "site:euronews.com",
+          "display": "Euronews",
+          "domain": "euronews.com"
+        },
+        {
+          "actor_key": "site:volcanodiscovery.com",
+          "display": "VolcanoDiscovery",
+          "domain": "volcanodiscovery.com"
+        },
+        {
+          "actor_key": "site:travelandtourworld.com",
+          "display": "Travel and Tour World",
+          "domain": "travelandtourworld.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "c9d7a294",
+        "framing": "Human Cost & Lived Experience",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c9d7a294",
+        "framing": "Human Cost & Lived Experience",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2fd64104",
+        "framing": "Government & Civil Protection Response",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2fd64104",
+        "framing": "Government & Civil Protection Response",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1eee1c47",
+        "framing": "Foreshock / Escalation Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1eee1c47",
+        "framing": "Foreshock / Escalation Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c1d4a447",
+        "framing": "Infrastructure & Building Vulnerability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "c1d4a447",
+        "framing": "Infrastructure & Building Vulnerability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b35e8e9a",
+        "framing": "Tourism & Economic Reassurance",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b35e8e9a",
+        "framing": "Tourism & Economic Reassurance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "87e18175",
+        "framing": "Regional Seismic Pattern & Cumulative Risk",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "87e18175",
+        "framing": "Regional Seismic Pattern & Cumulative Risk",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d2c04c1b",
+        "framing": "Social Media & Citizen Witnessing",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d2c04c1b",
+        "framing": "Social Media & Citizen Witnessing",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "17bd20ce7fed",
+    "event": "Two earthquakes with magnitudes 5.1 and 4.9 struck Euboea, Greece, resulting in building damage and landslides.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 7,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 0,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

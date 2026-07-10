@@ -1251,7 +1251,7 @@
         "bucket": "lean-left",
         "lean_num": -1,
         "source": "allsides",
-        "matched_by": "domain"
+        "matched_by": "alias"
       },
       {
         "outlet": "Al Jazeera",
@@ -1526,5 +1526,387 @@
       "mean_jaccard": 0.083
     },
     "structure_note": "1 of 13 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "4f93ffc0152a",
+    "event": "Peru held a second round of presidential elections between Roberto Sánchez of Together for Peru and Keiko Fujimori of Popular Force.",
+    "n_framings": 4,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:bostonglobe.com",
+            "actor_display": "The Boston Globe",
+            "domain": "bostonglobe.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "The Boston Globe",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:democracynow.org",
+            "actor_display": "democracynow.org",
+            "domain": "democracynow.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Democracy Now",
+            "bucket": "left",
+            "label": "left",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:foxnews.com",
+            "actor_display": "Fox News",
+            "domain": "foxnews.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Fox Online News",
+            "bucket": "lean-right",
+            "label": "right-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        }
+      ],
+      "unrated": []
+    },
+    "rows": [
+      {
+        "framing_id": "e0149119",
+        "framing": "Electoral Integrity & Fraud Dispute",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 4,
+        "rate": 0.75,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "she has appeared to take a page from former president Donald Trump's playbook, leveling unsubstantiated accusations of fraud",
+            "url": "https://www.washingtonpost.com/world/2021/06/16/trump-playbook-peru-democracy/",
+            "archive_url": "",
+            "date": "2021-06-16"
+          },
+          {
+            "outlet": "The Boston Globe",
+            "stance": "champion",
+            "quote": "levying unsubstantiated accusations of fraud",
+            "url": "https://www.bostonglobe.com/2021/06/16/world/with-election-fraud-claims-perus-keiko-fujimori-takes-page-trump-playbook/",
+            "archive_url": "",
+            "date": "2021-06-16"
+          },
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "election monitors found no evidence of malfeasance",
+            "url": "https://www.aljazeera.com/news/2026/6/5/fujimori-vs-sanchez-what-to-know-about-perus-presidential-run-off-election",
+            "archive_url": "",
+            "date": "2026-06-05"
+          }
+        ]
+      },
+      {
+        "framing_id": "e0149119",
+        "framing": "Electoral Integrity & Fraud Dispute",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "eb005513",
+        "framing": "Left vs. Right Ideological Clash",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "eb005513",
+        "framing": "Left vs. Right Ideological Clash",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f83f5bb1",
+        "framing": "US Geopolitical Stakes",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "democracynow.org",
+            "stance": "champion",
+            "quote": "Trump administration conducting 'an unprecedented program of aggression' against leftists",
+            "url": "https://www.democracynow.org/2026/6/8/peruvian_presidential_runoff",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "f83f5bb1",
+        "framing": "US Geopolitical Stakes",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Fox News",
+            "stance": "champion",
+            "quote": "this election will determine whether Peru consolidates its alignment as a U.S. partner or devolves into deeper geopolitical contention",
+            "url": "https://www.foxnews.com/world/pro-us-conservative-faces-leftist-perus-high-stakes-presidential-runoff",
+            "archive_url": "",
+            "date": "2026-06-06"
+          }
+        ]
+      },
+      {
+        "framing_id": "310ac82e",
+        "framing": "Democratic Backsliding & Institutional Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "democracynow.org",
+            "stance": "mention",
+            "quote": "'democracy has been undermined' by Fujimori and her right-wing coalition",
+            "url": "https://www.democracynow.org/2026/6/8/peruvian_presidential_runoff",
+            "archive_url": "",
+            "date": "2026-06-08"
+          }
+        ]
+      },
+      {
+        "framing_id": "310ac82e",
+        "framing": "Democratic Backsliding & Institutional Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "4f93ffc0152a",
+    "event": "Peru held a second round of presidential elections between Roberto Sánchez of Together for Peru and Keiko Fujimori of Popular Force.",
+    "framing_intersection": {
+      "intersections": [
+        {
+          "framing_id": "f83f5bb1",
+          "framing": "US Geopolitical Stakes",
+          "statement": "'US Geopolitical Stakes' appears in 1/4 left-leaning pieces and 1/1 right-leaning pieces",
+          "per_circle": {
+            "left-leaning": {
+              "n_pieces": 1,
+              "n_total": 4,
+              "rate": 0.25,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "democracynow.org",
+                  "stance": "champion",
+                  "quote": "Trump administration conducting 'an unprecedented program of aggression' against leftists",
+                  "url": "https://www.democracynow.org/2026/6/8/peruvian_presidential_runoff",
+                  "archive_url": "",
+                  "date": "2026-06-08"
+                }
+              ]
+            },
+            "right-leaning": {
+              "n_pieces": 1,
+              "n_total": 1,
+              "rate": 1.0,
+              "stances": {
+                "champion": 1,
+                "mention": 0,
+                "oppose": 0
+              },
+              "asserting": 1,
+              "quotes": [
+                {
+                  "outlet": "Fox News",
+                  "stance": "champion",
+                  "quote": "this election will determine whether Peru consolidates its alignment as a U.S. partner or devolves into deeper geopolitical contention",
+                  "url": "https://www.foxnews.com/world/pro-us-conservative-faces-leftist-perus-high-stakes-presidential-runoff",
+                  "archive_url": "",
+                  "date": "2026-06-06"
+                }
+              ]
+            }
+          },
+          "strength": 1,
+          "thin_circles": [
+            "right-leaning"
+          ]
+        }
+      ],
+      "contested": [],
+      "n_framings": 4,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 1
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
   }
 }

@@ -1702,37 +1702,33 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "A man was arrested by police in Belfast, Northern Ireland after an incident involving an attempted attack on another man on a public street, which police design",
-    "rated_outlets": 3,
+    "rated_outlets": 4,
     "distribution": {
       "left": 0,
-      "lean-left": 2,
+      "lean-left": 3,
       "center": 0,
       "lean-right": 0,
       "right": 1
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 67,
+      "lean-left": 75,
       "center": 0,
       "lean-right": 0,
-      "right": 33
+      "right": 25
     },
-    "left_of_center": 2,
+    "left_of_center": 3,
     "center": 0,
     "right_of_center": 1,
-    "lean_index": 0.0,
-    "resolve_rate": 0.5,
-    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "lean_index": -0.25,
+    "resolve_rate": 0.67,
+    "skew": "balanced across the spectrum",
     "coverage_gap": {
-      "unrated_news_carriers": 3,
+      "unrated_news_carriers": 2,
       "examples": [
         {
           "carrier": "CBC News (Canada)",
           "domain": "cbc.ca"
-        },
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
         },
         {
           "carrier": "Euronews",
@@ -1742,6 +1738,14 @@
     },
     "non_news_carriers": 6,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "ABC News",
         "carrier": "ABC News (US)",
@@ -2409,5 +2413,483 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "cd7fc13767a5",
+    "event": "A man was arrested by police in Belfast, Northern Ireland after an incident involving an attempted attack on another man on a public street, which police design",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:abcnews.com",
+            "actor_display": "ABC News",
+            "domain": "abcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.85,
+            "basis": "allsides_snapshot",
+            "outlet": "ABC News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:newsweek.com",
+            "actor_display": "Newsweek",
+            "domain": "newsweek.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Newsweek",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 1,
+        "members_covering": [
+          {
+            "actor_key": "site:redstate.com",
+            "actor_display": "RedState",
+            "domain": "redstate.com",
+            "circle_id": "right-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Red State",
+            "bucket": "right",
+            "label": "right",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:sbs.com.au",
+          "display": "SBS News",
+          "domain": "sbs.com.au"
+        },
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:irishnews.com",
+          "display": "Irish News",
+          "domain": "irishnews.com"
+        },
+        {
+          "actor_key": "site:lbc.co.uk",
+          "display": "LBC",
+          "domain": "lbc.co.uk"
+        },
+        {
+          "actor_key": "site:euronews.com",
+          "display": "Euronews",
+          "domain": "euronews.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "918de7ca",
+        "framing": "Immigration Policy Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "918de7ca",
+        "framing": "Immigration Policy Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "RedState",
+            "stance": "champion",
+            "quote": "'When you import the Third World, you import the Third World's problems.'",
+            "url": "https://redstate.com/wardclark/2026/06/09/new-starmer-calls-belfast-stabbing-sickening-as-officials-suppress-migrant-video-n2203177",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "16f1f2b0",
+        "framing": "Far-Right Exploitation / Hijacking",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Graphic video of the incident was shared online by figures on the far right of British politics, who have called for mass anti-immigration protests.",
+            "url": "https://www.nbcnews.com/world/europe/anti-immigrant-protests-belfast-knife-attack-northern-ireland-rcna349329",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "16f1f2b0",
+        "framing": "Far-Right Exploitation / Hijacking",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "83643511",
+        "framing": "Criminal Justice & Due Process",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "ABC News",
+            "stance": "champion",
+            "quote": "Police and senior politicians urged people not to share images of the attack or spread disinformation about the incident.",
+            "url": "https://abcnews.com/International/wireStory/police-northern-ireland-arrest-man-after-violent-belfast-133706385",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "83643511",
+        "framing": "Criminal Justice & Due Process",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "6e86b954",
+        "framing": "Disinformation & Viral Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Newsweek",
+            "stance": "champion",
+            "quote": "Police and political leaders urged calm, warning that online posts and shared footage risk inflaming tensions and contributing to disorder.",
+            "url": "https://www.newsweek.com/belfast-stabbing-police-warn-of-sharing-video-after-brutal-attack-12048025",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "6e86b954",
+        "framing": "Disinformation & Viral Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1cdf3267",
+        "framing": "Civic Heroism & Community Resilience",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1cdf3267",
+        "framing": "Civic Heroism & Community Resilience",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d34f3f73",
+        "framing": "Northern Ireland's History of Sectarian Violence",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Northern Ireland saw more than a week of riots and disorder last June after two Romanian teenagers were charged with the attempted rape of a schoolgirl.",
+            "url": "https://www.cbsnews.com/news/belfast-northern-ireland-stabbing-far-right-calls-anti-immigration-protests/",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "d34f3f73",
+        "framing": "Northern Ireland's History of Sectarian Violence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "14aa732a",
+        "framing": "State Suppression of Information",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "14aa732a",
+        "framing": "State Suppression of Information",
+        "circle_id": "right-leaning",
+        "n_pieces": 1,
+        "n_total": 1,
+        "rate": 1.0,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "RedState",
+            "stance": "champion",
+            "quote": "Irish officials and law enforcement have urged the public not to circulate footage of the African migrant, citing concerns of unrest and 'misinformation.'",
+            "url": "https://redstate.com/wardclark/2026/06/09/new-starmer-calls-belfast-stabbing-sickening-as-officials-suppress-migrant-video-n2203177",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "c1c8361a",
+        "framing": "Migrant & Muslim Community Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Newsweek",
+            "stance": "champion",
+            "quote": "Dr. Raied Al-Wazzan of the Belfast Islamic Centre condemned the attack in 'the strongest way' on Tuesday.",
+            "url": "https://www.newsweek.com/belfast-stabbing-police-warn-of-sharing-video-after-brutal-attack-12048025",
+            "archive_url": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      {
+        "framing_id": "c1c8361a",
+        "framing": "Migrant & Muslim Community Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 1,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "cd7fc13767a5",
+    "event": "A man was arrested by police in Belfast, Northern Ireland after an incident involving an attempted attack on another man on a public street, which police design",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 3
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

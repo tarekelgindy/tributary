@@ -269,7 +269,7 @@
    "created_at": "2026-06-10T09:17:58.412541+00:00",
    "n_framings": 8,
    "n_actors": 32,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "dc468ff0398e",
@@ -467,7 +467,7 @@
    "created_at": "2026-06-10T09:04:40.883009+00:00",
    "n_framings": 8,
    "n_actors": 17,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "8b3c43cf2eb6",
@@ -503,7 +503,7 @@
    "created_at": "2026-06-10T09:02:30.865796+00:00",
    "n_framings": 8,
    "n_actors": 24,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "balanced across the spectrum"
   },
   {
    "id": "1ef280b91d55",
@@ -584,7 +584,7 @@
    "created_at": "2026-06-10T08:56:28.405841+00:00",
    "n_framings": 8,
    "n_actors": 23,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "69ee3987b883",
@@ -719,7 +719,7 @@
    "created_at": "2026-06-08T16:39:07.619504+00:00",
    "n_framings": 8,
    "n_actors": 19,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "11ffbce12296",
@@ -818,7 +818,7 @@
    "created_at": "2026-06-08T16:00:41.102901+00:00",
    "n_framings": 8,
    "n_actors": 26,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "90ceb15d244f",
@@ -902,6 +902,15 @@
    "skew": "balanced across the spectrum"
   },
   {
+   "id": "9577b8662adc",
+   "event": "Mohammed Odeh, identified as an Al-Qassam Brigades commander in Gaza, was killed in an Israeli airstrike on May 26 near Gaza City, along with his wife and three children, according to statements from ",
+   "event_date": "2026-05-26",
+   "created_at": "2026-06-10T08:52:14.105149+00:00",
+   "n_framings": 8,
+   "n_actors": 17,
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
+  },
+  {
    "id": "fcebe76e05c7",
    "event": "Real Madrid CF held a presidential election in 2026 to select its club president.",
    "event_date": "2026",
@@ -929,22 +938,13 @@
    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
   },
   {
-   "id": "9577b8662adc",
-   "event": "Mohammed Odeh, identified as an Al-Qassam Brigades commander in Gaza, was killed in an Israeli airstrike on May 26 near Gaza City, along with his wife and three children, according to statements from ",
-   "event_date": "2024-05-26",
-   "created_at": "2026-06-10T08:52:14.105149+00:00",
-   "n_framings": 8,
-   "n_actors": 17,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
-  },
-  {
    "id": "ee3188753452",
    "event": "Iraq and Syria closed their airspace and Damascus International Airport suspended operations following Iranian military strikes on Israel.",
    "event_date": "2024-04-14",
    "created_at": "2026-06-08T16:13:47.491688+00:00",
    "n_framings": 8,
    "n_actors": 26,
-   "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)"
+   "skew": "one-sided: no right-of-center coverage found (possible blindspot)"
   },
   {
    "id": "bd7ae8421b2d",

@@ -1443,29 +1443,29 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "The Israeli Defense Forces stated that they killed three individuals identified as Palestinian Islamic Jihad militants in the central Gaza Strip.",
-    "rated_outlets": 2,
+    "rated_outlets": 3,
     "distribution": {
       "left": 0,
-      "lean-left": 1,
+      "lean-left": 2,
       "center": 1,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 50,
-      "center": 50,
+      "lean-left": 67,
+      "center": 33,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 1,
+    "left_of_center": 2,
     "center": 1,
     "right_of_center": 0,
-    "lean_index": -0.5,
-    "resolve_rate": 0.25,
+    "lean_index": -0.67,
+    "resolve_rate": 0.38,
     "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
     "coverage_gap": {
-      "unrated_news_carriers": 6,
+      "unrated_news_carriers": 5,
       "examples": [
         {
           "carrier": "Jewish News Syndicate (JNS)",
@@ -1484,10 +1484,6 @@
           "domain": "algemeiner.com"
         },
         {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
-        },
-        {
           "carrier": "Haaretz (live blog)",
           "domain": "haaretz.com"
         }
@@ -1495,6 +1491,14 @@
     },
     "non_news_carriers": 5,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "Counter Currents",
         "carrier": "Associated Press (via Countercurrents/AP sourcing)",
@@ -2123,5 +2127,405 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "b579c91690e7",
+    "event": "The Israeli Defense Forces stated that they killed three individuals identified as Palestinian Islamic Jihad militants in the central Gaza Strip.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:countercurrents.org",
+            "actor_display": "Associated Press",
+            "domain": "countercurrents.org",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Counter Currents",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [],
+      "unrated": [
+        {
+          "actor_key": "site:jns.org",
+          "display": "Jewish News Syndicate",
+          "domain": "jns.org"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:breakingthenews.net",
+          "display": "Breaking the News",
+          "domain": "breakingthenews.net"
+        },
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:algemeiner.com",
+          "display": "Algemeiner",
+          "domain": "algemeiner.com"
+        },
+        {
+          "actor_key": "site:haaretz.com",
+          "display": "Haaretz",
+          "domain": "haaretz.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "0c493d06",
+        "framing": "Counter-Terrorism / Legitimate Self-Defense",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "0c493d06",
+        "framing": "Counter-Terrorism / Legitimate Self-Defense",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "91e80969",
+        "framing": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "91e80969",
+        "framing": "Ceasefire Integrity / Rules-of-Engagement Dispute",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "868a30c7",
+        "framing": "Human Cost / Civilian Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 2,
+        "rate": 1.0,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Israel's offensive in Gaza has already killed over 400 Palestinians, including women and children.",
+            "url": "https://www.nbcnews.com/news/world/live-blog/israel-hamas-war-hundreds-palestinians-killed-israeli-strikes-gaza-rcna196842",
+            "archive_url": "",
+            "date": "2025-03-18"
+          },
+          {
+            "outlet": "Associated Press",
+            "stance": "champion",
+            "quote": "IDF soldiers described ongoing indiscriminate killing of Palestinians including civilians despite a purported ceasefire.",
+            "url": "https://countercurrents.org/2026/05/ceasefire-is-a-joke-israeli-soldiers-recount-ongoing-indiscriminate-killings-in-gaza/",
+            "archive_url": "",
+            "date": "2026-05-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "868a30c7",
+        "framing": "Human Cost / Civilian Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ac55fd41",
+        "framing": "International Law / Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ac55fd41",
+        "framing": "International Law / Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "98598434",
+        "framing": "Ceasefire Fragility / Diplomatic Stakes",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "98598434",
+        "framing": "Ceasefire Fragility / Diplomatic Stakes",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1fb8443b",
+        "framing": "Militant Reconstitution / Persistent Threat",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1fb8443b",
+        "framing": "Militant Reconstitution / Persistent Threat",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "8a4850a2",
+        "framing": "Occupation / Settler-Colonial Violence",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Associated Press",
+            "stance": "champion",
+            "quote": "One IDF soldier said 'there was a general feeling that human lives are not valuable.'",
+            "url": "https://countercurrents.org/2026/05/ceasefire-is-a-joke-israeli-soldiers-recount-ongoing-indiscriminate-killings-in-gaza/",
+            "archive_url": "",
+            "date": "2026-05-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "8a4850a2",
+        "framing": "Occupation / Settler-Colonial Violence",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b13cd9b3",
+        "framing": "Verification / Information Warfare",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b13cd9b3",
+        "framing": "Verification / Information Warfare",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "b579c91690e7",
+    "event": "The Israeli Defense Forces stated that they killed three individuals identified as Palestinian Islamic Jihad militants in the central Gaza Strip.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 3,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

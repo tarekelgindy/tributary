@@ -423,7 +423,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260605073353/https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -885,7 +885,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260605073353/https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -945,7 +945,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260605073353/https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1035,7 +1035,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260605073353/https://www.npr.org/2026/06/03/nx-s1-5845102/house-iran-war-powers-vote",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1219,7 +1219,7 @@
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260708182125/https://www.congress.gov/crs-product/R45281",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1249,7 +1249,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260426161707/https://www.cnbc.com/2026/04/19/oil-price-iran-war-strait-hormuz-tanker.html",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1771,7 +1771,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260707220436/https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1814,34 +1814,30 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "The U.S. military reported intercepting four Iranian drones and conducting strikes on an Iranian drone station in Bandar Abbas, Hormozgan province, while statin",
-    "rated_outlets": 7,
+    "rated_outlets": 8,
     "distribution": {
       "left": 0,
-      "lean-left": 3,
+      "lean-left": 4,
       "center": 4,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 43,
-      "center": 57,
+      "lean-left": 50,
+      "center": 50,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 3,
+    "left_of_center": 4,
     "center": 4,
     "right_of_center": 0,
-    "lean_index": -0.43,
-    "resolve_rate": 0.5,
+    "lean_index": -0.5,
+    "resolve_rate": 0.57,
     "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 7,
+      "unrated_news_carriers": 6,
       "examples": [
-        {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
-        },
         {
           "carrier": "CBC News",
           "domain": "cbc.ca"
@@ -1870,6 +1866,14 @@
     },
     "non_news_carriers": 8,
     "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
       {
         "outlet": "Al Jazeera",
         "carrier": "Al Jazeera",
@@ -2661,5 +2665,506 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "fd33948b4a13",
+    "event": "The U.S. military reported intercepting four Iranian drones and conducting strikes on an Iranian drone station in Bandar Abbas, Hormozgan province, while statin",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 4,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:washingtonpost.com",
+            "actor_display": "The Washington Post",
+            "domain": "washingtonpost.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "Washington Post",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:cnbc.com",
+          "display": "CNBC",
+          "outlet": "CNBC",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:bloomberg.com",
+          "display": "Bloomberg",
+          "outlet": "Bloomberg",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:airandspaceforces.com",
+          "display": "Air & Space Forces Magazine",
+          "domain": "airandspaceforces.com"
+        },
+        {
+          "actor_key": "site:cbc.ca",
+          "display": "CBC News",
+          "domain": "cbc.ca"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:trtworld.com",
+          "display": "TRT World",
+          "domain": "trtworld.com"
+        },
+        {
+          "actor_key": "site:newsnationnow.com",
+          "display": "NewsNation",
+          "domain": "newsnationnow.com"
+        },
+        {
+          "actor_key": "site:armyrecognition.com",
+          "display": "Army Recognition",
+          "domain": "armyrecognition.com"
+        },
+        {
+          "actor_key": "site:businesstoday.in",
+          "display": "BusinessToday India",
+          "domain": "businesstoday.in"
+        },
+        {
+          "actor_key": "site:actionnewsjax.com",
+          "display": "Action News JAX",
+          "domain": "actionnewsjax.com"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "4802cb0e",
+        "framing": "Defensive Self-Help / Ceasefire Maintenance",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "The ground control station was targeted because a fifth drone was about to launch from there",
+            "url": "https://www.nbcnews.com/world/iran/us-military-carries-limited-attacks-southern-iran-us-official-says-rcna347254",
+            "archive_url": "",
+            "date": "2026-05-28"
+          }
+        ]
+      },
+      {
+        "framing_id": "4802cb0e",
+        "framing": "Defensive Self-Help / Ceasefire Maintenance",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4a1485f9",
+        "framing": "Ceasefire Collapse / Escalation Spiral",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "Iran fired a missile at an American air base in Kuwait … with both sides accusing the other of violating their shaky ceasefire",
+            "url": "https://www.nbcnews.com/world/iran/us-military-carries-limited-attacks-southern-iran-us-official-says-rcna347254",
+            "archive_url": "",
+            "date": "2026-05-29"
+          }
+        ]
+      },
+      {
+        "framing_id": "4a1485f9",
+        "framing": "Ceasefire Collapse / Escalation Spiral",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "4c8d095d",
+        "framing": "Iranian Sovereignty / U.S. Aggression",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "Trump did not seek congressional approval for the war, which he has attempted to label as a 'skirmish'",
+            "url": "https://www.aljazeera.com/news/2026/6/3/us-house-of-representatives-passes-war-powers-resolution-in-rebuke-to-trump",
+            "archive_url": "",
+            "date": "2026-06-03"
+          }
+        ]
+      },
+      {
+        "framing_id": "4c8d095d",
+        "framing": "Iranian Sovereignty / U.S. Aggression",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "7bff0cc6",
+        "framing": "War Powers / Constitutional Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 2,
+        "n_total": 4,
+        "rate": 0.5,
+        "stances": {
+          "champion": 2,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "The administration never sought such approval for Operation Epic Fury",
+            "url": "https://www.cnn.com/2026/06/03/politics/house-iran-war-powers-vote",
+            "archive_url": "",
+            "date": "2026-06-03"
+          },
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "growing impatience with a war Congress hasn't authorized",
+            "url": "https://www.washingtonpost.com/politics/2026/06/03/house-passes-war-powers-resolution-push-trump-end-iran-war/",
+            "archive_url": "",
+            "date": "2026-06-03"
+          }
+        ]
+      },
+      {
+        "framing_id": "7bff0cc6",
+        "framing": "War Powers / Constitutional Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f1f0665d",
+        "framing": "Global Economic / Energy Security Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "f1f0665d",
+        "framing": "Global Economic / Energy Security Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "20da5cec",
+        "framing": "Strategic Degradation / Military Effectiveness",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 1
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "oppose",
+            "quote": "certain critical munitions have run low, with the number used outstripping the number of anticipated replacements",
+            "url": "https://www.aljazeera.com/news/2026/6/3/us-house-of-representatives-passes-war-powers-resolution-in-rebuke-to-trump",
+            "archive_url": "",
+            "date": "2026-04-01"
+          }
+        ]
+      },
+      {
+        "framing_id": "20da5cec",
+        "framing": "Strategic Degradation / Military Effectiveness",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "b375ad59",
+        "framing": "Diplomatic Deal-Making / Political Fallout",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 4,
+        "rate": 0.25,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "The Washington Post",
+            "stance": "champion",
+            "quote": "growing impatience with a war Congress hasn't authorized",
+            "url": "https://www.washingtonpost.com/politics/2026/06/03/house-passes-war-powers-resolution-push-trump-end-iran-war/",
+            "archive_url": "",
+            "date": "2026-06-03"
+          }
+        ]
+      },
+      {
+        "framing_id": "b375ad59",
+        "framing": "Diplomatic Deal-Making / Political Fallout",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "062886b0",
+        "framing": "Regional Civilian / Third-Country Harm",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 4,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 1,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "062886b0",
+        "framing": "Regional Civilian / Third-Country Harm",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "fd33948b4a13",
+    "event": "The U.S. military reported intercepting four Iranian drones and conducting strikes on an Iranian drone station in Bandar Abbas, Hormozgan province, while statin",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }

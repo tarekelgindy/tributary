@@ -1,7 +1,3 @@
-<!-- DRAFT v2 — pending Tarek's editorial review before publishing (MISSION_PLAN 1c).
-     v2 rebuilds the issue insight-first per 2026-07-09 review: claim-age leads,
-     summaries cut. -->
-
 # Common Ground Report #1 — This Week in Narratives, Issue #2
 
 **July 2 – 9, 2026** · from [Tributary](https://tarekelgindy.github.io/tributary/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.

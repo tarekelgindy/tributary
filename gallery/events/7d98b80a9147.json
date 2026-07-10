@@ -922,7 +922,7 @@
           "verified": true,
           "verification_status": "verified",
           "verification_notes": "URL reachable (HTTP 200)",
-          "archive_url": "",
+          "archive_url": "http://web.archive.org/web/20260630043619/https://www.npr.org/2026/06/07/nx-s1-5849220/israel-lebanon-beirut-airstrike-ceasefire",
           "provenance": {
             "origin": "ai",
             "status": "ai_generated",
@@ -1671,29 +1671,29 @@
   "fingerprints": [],
   "coverage_lean": {
     "event": "An Israeli airstrike in Deir Qanoun an-Naher resulted in six deaths and six injuries, including two paramedics killed and three paramedics injured.",
-    "rated_outlets": 6,
+    "rated_outlets": 7,
     "distribution": {
       "left": 0,
-      "lean-left": 4,
+      "lean-left": 5,
       "center": 2,
       "lean-right": 0,
       "right": 0
     },
     "distribution_pct": {
       "left": 0,
-      "lean-left": 67,
-      "center": 33,
+      "lean-left": 71,
+      "center": 29,
       "lean-right": 0,
       "right": 0
     },
-    "left_of_center": 4,
+    "left_of_center": 5,
     "center": 2,
     "right_of_center": 0,
-    "lean_index": -0.67,
-    "resolve_rate": 0.4,
+    "lean_index": -0.71,
+    "resolve_rate": 0.47,
     "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
     "coverage_gap": {
-      "unrated_news_carriers": 9,
+      "unrated_news_carriers": 8,
       "examples": [
         {
           "carrier": "Drop Site News (Katrine Dige Houmøller)",
@@ -1724,8 +1724,8 @@
           "domain": "middleeasteye.net"
         },
         {
-          "carrier": "NBC News",
-          "domain": "nbcnews.com"
+          "carrier": "Naharnet",
+          "domain": "naharnet.com"
         }
       ]
     },
@@ -1734,6 +1734,14 @@
       {
         "outlet": "Newsweek",
         "carrier": "Newsweek",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
         "bucket": "lean-left",
         "lean_num": -1,
         "source": "allsides",
@@ -2504,5 +2512,505 @@
     "is_settled": false
   },
   "contributions": [],
-  "contributors": []
+  "contributors": [],
+  "circle_rollup": {
+    "analysis_id": "7d98b80a9147",
+    "event": "An Israeli airstrike in Deir Qanoun an-Naher resulted in six deaths and six injuries, including two paramedics killed and three paramedics injured.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 5,
+        "members_covering": [
+          {
+            "actor_key": "site:nbcnews.com",
+            "actor_display": "NBC News",
+            "domain": "nbcnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "NBCNews.com",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:newsweek.com",
+            "actor_display": "Newsweek",
+            "domain": "newsweek.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.76,
+            "basis": "allsides_snapshot",
+            "outlet": "Newsweek",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Medium",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:aljazeera.com",
+            "actor_display": "Al Jazeera",
+            "domain": "aljazeera.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.5,
+            "basis": "allsides_snapshot",
+            "outlet": "Al Jazeera",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "domain",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:usnews.com",
+            "actor_display": "US News & World Report",
+            "domain": "usnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.47,
+            "basis": "allsides_snapshot",
+            "outlet": "U.S. News & World Report",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "name",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:pbs.org",
+          "display": "PBS NewsHour",
+          "outlet": "PBS NewsHour",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:dropsitenews.com",
+          "display": "Drop Site News",
+          "domain": "dropsitenews.com"
+        },
+        {
+          "actor_key": "site:israelpalestinenews.org",
+          "display": "Israel-Palestine News",
+          "domain": "israelpalestinenews.org"
+        },
+        {
+          "actor_key": "site:timesofisrael.com",
+          "display": "The Times of Israel",
+          "domain": "timesofisrael.com"
+        },
+        {
+          "actor_key": "site:algemeiner.com",
+          "display": "Algemeiner",
+          "domain": "algemeiner.com"
+        },
+        {
+          "actor_key": "site:jpost.com",
+          "display": "The Jerusalem Post",
+          "domain": "jpost.com"
+        },
+        {
+          "actor_key": "site:haaretz.com",
+          "display": "Haaretz",
+          "domain": "haaretz.com"
+        },
+        {
+          "actor_key": "site:newarab.com",
+          "display": "The New Arab",
+          "domain": "newarab.com"
+        },
+        {
+          "actor_key": "site:arabnews.com",
+          "display": "Arab News",
+          "domain": "arabnews.com"
+        },
+        {
+          "actor_key": "site:middleeasteye.net",
+          "display": "Middle East Eye",
+          "domain": "middleeasteye.net"
+        },
+        {
+          "actor_key": "site:naharnet.com",
+          "display": "Naharnet",
+          "domain": "naharnet.com"
+        },
+        {
+          "actor_key": "site:aaj.tv",
+          "display": "Aaj English TV",
+          "domain": "aaj.tv"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "ea6774cc",
+        "framing": "War Crimes / IHL Violation",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "ea6774cc",
+        "framing": "War Crimes / IHL Violation",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "204f79f5",
+        "framing": "Counterterrorism / Military Necessity",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "204f79f5",
+        "framing": "Counterterrorism / Military Necessity",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d6d29980",
+        "framing": "Systematic Targeting of Healthcare / War on Medicine",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "d6d29980",
+        "framing": "Systematic Targeting of Healthcare / War on Medicine",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "88db2df6",
+        "framing": "Ceasefire Collapse / Diplomatic Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 3,
+        "n_total": 5,
+        "rate": 0.6,
+        "stances": {
+          "champion": 3,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Newsweek",
+            "stance": "champion",
+            "quote": "\"Israeli attacks on Lebanon come despite Trump's order to Israeli Prime Minister Benjamin Netanyahu to halt strikes.\"",
+            "url": "https://www.newsweek.com/israel-defies-trumps-ceasefire-with-new-strikes-lebanon-12047898",
+            "archive_url": "",
+            "date": "2026-06-09"
+          },
+          {
+            "outlet": "NBC News",
+            "stance": "champion",
+            "quote": "\"The Israeli military launched deadly new strikes in Lebanon... despite President Donald Trump saying both sides had agreed to de-escalate.\"",
+            "url": "https://www.nbcnews.com/world/lebanon/israel-hezbollah-attacks-lebanon-trump-iran-war-peace-talks-rcna348010",
+            "archive_url": "",
+            "date": "2026-06-03"
+          },
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "\"Trump has repeatedly suggested the two sides are close to a deal... but so far no agreement has materialized.\"",
+            "url": "https://www.cbsnews.com/live-updates/iran-war-trump-israel-strikes-ceasefire-lebanon-beirut/",
+            "archive_url": "",
+            "date": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "framing_id": "88db2df6",
+        "framing": "Ceasefire Collapse / Diplomatic Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "5c8468e7",
+        "framing": "Human Cost / Bearing Witness",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "Al Jazeera",
+            "stance": "champion",
+            "quote": "\"Video shows an Israeli air strike hitting paramedics responding to an earlier attack in southern Lebanon.\"",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/5/22/video-shows-israeli-strike-on-lebanese-child-and-paramedics",
+            "archive_url": "",
+            "date": "2026-05-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "5c8468e7",
+        "framing": "Human Cost / Bearing Witness",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "cd1d6b47",
+        "framing": "Hezbollah Responsibility / Dual-Use Shield",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "cd1d6b47",
+        "framing": "Hezbollah Responsibility / Dual-Use Shield",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "31936e7e",
+        "framing": "Collapse of Healthcare Access / Humanitarian Emergency",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 5,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "31936e7e",
+        "framing": "Collapse of Healthcare Access / Humanitarian Emergency",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "1cddcd8a",
+        "framing": "Information War / Credibility Contest",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 5,
+        "rate": 0.2,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "US News & World Report",
+            "stance": "champion",
+            "quote": "\"The military said it was examining claims that 'several uninvolved individuals in the area, who were not the targets of the strikes, were harmed'.\"",
+            "url": "https://www.usnews.com/news/world/articles/2026-05-22/israeli-strikes-kill-six-lebanese-medics-in-24-hours-health-ministry-says",
+            "archive_url": "",
+            "date": "2026-05-22"
+          }
+        ]
+      },
+      {
+        "framing_id": "1cddcd8a",
+        "framing": "Information War / Credibility Contest",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "common_ground": {
+    "analysis_id": "7d98b80a9147",
+    "event": "An Israeli airstrike in Deir Qanoun an-Naher resulted in six deaths and six injuries, including two paramedics killed and three paramedics injured.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 5,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
 }
