@@ -2,17 +2,20 @@
 Share cards — the Phase 2a artifact (claim age leads)
 =====================================================
 One card per traced narrative. The card's job is a single number — claim age
-("first attested 2002") — with everything else a tap-through into the full
-trace. Three renderings of the same design, per the approved mockup
-(mockups/design-mockups.html, Mockup 1):
+("first attested 2002") — over the trace's spread-over-time shape, with
+everything else a tap-through into the full trace. Three renderings of the
+same design, per the approved mockup (mockups/design-mockups.html, Mockup 1;
+Tarek's 2026-07-10 review restored the mockup's timeline as the card visual
+and demoted the L/R framing to one text line):
 
     gallery/cards/<fp_id>.png    1200x630 OG image, so links unfurl in chats,
                                  on Bluesky, and anywhere else that reads
                                  OpenGraph tags (rendered with Pillow — free,
                                  no browser, no API)
-    gallery/cards/<fp_id>.html   the share page those tags live on: the card,
-                                 the mini flow visual (origin -> circles ->
-                                 today), and the tap-through links into the
+    gallery/cards/<fp_id>.html   the share page those tags live on: the card
+                                 with its spread-over-time timeline (each dot
+                                 one recorded use; origin and in-the-news
+                                 labeled) and the tap-through links into the
                                  full trace and the event it surfaced in
     gallery/traces/<fp_id>.json  the standalone trace published so the
                                  tap-through has somewhere to land
@@ -33,9 +36,12 @@ headline a share card. Explicit --fp overrides accept any traced fingerprint.
 Language rules (METHODOLOGY Principles 1-4): no verdicts — the headline is a
 structural fact (age of the earliest attestation we found); the hedge
 "earliest found, not provably first" ships on the image itself, not just the
-page; circle chips name only outlets whose linked page is under their own
-domain (the own-voice rider's conservative cousin: a WSJ editorial quoted via
-the Daily Beast is not a left-circle carrier chip).
+page; timeline dots are role-unlabeled (role labels are unaudited AI labels
+and a card has no room for that caveat); outlets that carried the framing are
+named without lean labels — who carried it is the fact, the axis is not the
+focus. Carrier names appear only when the linked page is under the outlet's
+own domain (the own-voice rider's conservative cousin: a WSJ editorial quoted
+via the Daily Beast is not a CBS-style first-party carrier).
 """
 
 import argparse
@@ -82,6 +88,19 @@ def parse_date_conservative(s):
         return None
 
 
+def date_frac(s):
+    """Fractional year for PLOTTING (missing precision defaults early, like
+    the viewer's parseDateFrac — plot position is cosmetic; the age headline
+    keeps its separate conservative-late parse)."""
+    m = re.match(r"^(\d{4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?", str(s or ""))
+    if not m:
+        return None
+    y = int(m.group(1))
+    mo = int(m.group(2) or 1)
+    d = int(m.group(3) or 1)
+    return y + ((mo - 1) + (d - 1) / 31) / 12
+
+
 def fmt_date_human(s):
     """Honest display precision: a first-of-month/year date collapses to the
     month/year (we can't distinguish 'attested Sep 1' from month-only
@@ -120,8 +139,8 @@ def age_parts(first, asof):
 
 # Canonical outlet -> domain pairs for names that don't contain their domain
 # label. Everything else is judged by name-token vs host-label overlap; when
-# unsure we EXCLUDE the chip — a wrong circle chip is worse than a missing one
-# (the 1a membership-conservatism decision, applied to presentation).
+# unsure we EXCLUDE the name — a wrong carrier name is worse than a missing
+# one (the 1a membership-conservatism decision, applied to presentation).
 DOMAIN_OUTLETS = {
     "nytimes.com": "The New York Times", "washingtonpost.com": "The Washington Post",
     "wsj.com": "The Wall Street Journal", "cnn.com": "CNN", "foxnews.com": "Fox News",
@@ -153,7 +172,7 @@ def host_outlet(url):
 def outlet_is_first_party(name, url):
     """True only when the quote's URL is confidently under the named outlet's
     own domain. A relayed quote (WSJ editorial hosted on thedailybeast.com)
-    fails and is excluded from circle chips."""
+    fails and is excluded from the carried-by names."""
     m = re.match(r"https?://([^/]+)", str(url or ""))
     if not m or not name:
         return False
@@ -226,7 +245,7 @@ def collect_subjects(gallery_dir, fingerprints_dir, only_ids=None):
 
 def card_data(fid, subject, asof):
     """Everything both renderers need, or None when the trace has no dated
-    attestation (no age -> no card; the artifact IS the number)."""
+    attestation (no age, no timeline -> no card; the artifact IS the shape)."""
     fp, ev, row = subject["fp"], subject["event"], subject["row"]
     gen = fp.get("genealogy") or {}
     lineage, gl = None, None
@@ -247,19 +266,23 @@ def card_data(fid, subject, asof):
 
     log = [i for i in gl.get("attestation_log") or []
            if (i.get("claim_relation") or "") != "related-context"]
-    dated = sorted((i for i in log if parse_date_conservative(i.get("date"))),
-                   key=lambda i: parse_date_conservative(i.get("date")))
-    first_inst = dated[0] if dated else {}
-    last_inst = dated[-1] if dated else {}
+    dated = sorted((i for i in log if date_frac(i.get("date")) is not None),
+                   key=lambda i: date_frac(i.get("date")))
+    if not dated:
+        print(f"[cards] {fid}: no dated attestations — skipped", file=sys.stderr)
+        return None
+    first_inst, last_inst = dated[0], dated[-1]
     # origin label: author, else the outlet the dated URL belongs to, else the
     # source title (an authorless article shouldn't headline as its own title)
-    who = (first_inst.get("author") or host_outlet(first_inst.get("source_url"))
-           or first_inst.get("source_title") or "").strip()
+    def who_of(i):
+        return (i.get("author") or host_outlet(i.get("source_url"))
+                or i.get("source_title") or "").strip().split(" (")[0]
 
     n, unit = age_parts(first, asof)
     noun = "narrative" if lineage == "lexical" else "idea"
 
-    # circles: asserting outlets from the intersection row, first-party only
+    # who carried it around the event, names only, first-party only — the
+    # cross-circle fact lives in one line of page text, not in the visual
     circles = []
     for cname, cdata in ((row or {}).get("per_circle") or {}).items():
         outlets, seen = [], set()
@@ -269,14 +292,18 @@ def card_data(fid, subject, asof):
                 continue
             seen.add(o)
             outlets.append({"name": o, "date": q.get("date") or ""})
-        circles.append({"circle": cname, "outlets": outlets,
-                        "n_pieces": cdata.get("n_pieces", 0),
-                        "n_total": cdata.get("n_total", 0)})
+        circles.append({"circle": cname, "outlets": outlets})
     circles = [c for c in circles if c["outlets"]]
+    outlets_flat, seen = [], set()
+    for c in circles:
+        for o in c["outlets"]:
+            if o["name"] not in seen:
+                seen.add(o["name"])
+                outlets_flat.append(o)
 
     event = None
     if ev:
-        # today-node date: event_date, else the freshest circle quote, else
+        # in-the-news date: event_date, else the freshest carried quote, else
         # the analysis' own creation date
         ed = ev.get("event_date") or ""
         if not ed:
@@ -294,15 +321,83 @@ def card_data(fid, subject, asof):
         "age_text": f"{n} {unit}",
         "first_raw": first_raw,
         "first_human": fmt_date_human(first_raw),
-        "first_who": who,
+        "first_who": who_of(first_inst),
         "confidence": gl.get("attestation_confidence") or 0.0,
         "n_uses": len(log),
         "last_human": fmt_date_human(last_inst.get("date") or ""),
-        "last_who": (last_inst.get("author") or last_inst.get("source_title") or "").strip(),
+        "points": [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
+                    "who": who_of(i)} for i in dated],
         "circles": circles,
+        "outlets": outlets_flat,
         "event": event,
         "asof": asof.isoformat(),
     }
+
+
+# ---------------------------------------------------------------------------
+# timeline geometry (shared by the PNG and the SVG)
+# ---------------------------------------------------------------------------
+
+def timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=12, dot_gap=11):
+    """Positions for the spread-over-time chart: cumulative step-area top
+    edge, stacked dots (each = one recorded dated use), year/month ticks, and
+    the in-the-news marker. Pure structure — sequence, not influence."""
+    pts = cd["points"]
+    today = cd["event"] or {}
+    today_frac = date_frac(today.get("date") or "")
+    t0 = pts[0]["frac"]
+    t1 = max(pts[-1]["frac"], today_frac or pts[-1]["frac"])
+    span = max(t1 - t0, 1 / 12)
+    t0 -= span * 0.03
+    t1 += span * 0.03
+    span = t1 - t0
+    X = lambda t: x0 + (t - t0) / span * (x1 - x0)
+
+    # cumulative step outline (top edge), left to right
+    n = len(pts)
+    y_of = lambda c: axis_y - (c / n) * (axis_y - area_top)
+    steps, prev_y = [(x0, axis_y)], axis_y
+    for i, p in enumerate(pts):
+        if i + 1 < n and pts[i + 1]["frac"] - p["frac"] < 1e-9:
+            continue
+        x = X(p["frac"])
+        steps += [(x, prev_y), (x, y_of(i + 1))]
+        prev_y = y_of(i + 1)
+    steps.append((x1, prev_y))
+    area = steps + [(x1, axis_y)]
+
+    # dots, stacked per x-bucket (two columns when a cluster is dense)
+    buckets = {}
+    for i, p in enumerate(pts):
+        key = round(X(p["frac"]) / bucket_px) * bucket_px
+        buckets.setdefault(key, []).append(i)
+    dots = []
+    for key, idxs in buckets.items():
+        two_col = len(idxs) > 6
+        for j, i in enumerate(idxs):
+            col = (4.5 if j % 2 else -4.5) if two_col else 0
+            row = j // 2 if two_col else j
+            dots.append({"x": X(pts[i]["frac"]) + col,
+                         "y": axis_y - 13 - row * dot_gap,
+                         "ms": i == 0, "p": pts[i]})
+
+    # ticks: ~5, at nice year/month steps
+    for step in (1 / 12, 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100):
+        if span / step <= 6:
+            break
+    ticks, t = [], (int(t0 / step) + 1) * step
+    while t < t1 - span * 0.02:
+        y, mo = int(t // 1), int(round((t % 1) * 12))
+        if mo > 11:
+            y, mo = y + 1, 0
+        label = str(y) if step >= 1 else f"{MONTHS[mo][:3]} {y}"
+        ticks.append((X(t), label))
+        t += step
+
+    marker = None
+    if today_frac is not None and today_frac >= pts[-1]["frac"] - span * 0.001:
+        marker = {"x": X(today_frac)}
+    return {"area": area, "dots": dots, "ticks": ticks, "marker": marker}
 
 
 # ---------------------------------------------------------------------------
@@ -314,6 +409,7 @@ INK1, INK2, INK3 = (11, 11, 11), (82, 81, 78), (137, 135, 129)
 PAPER, CARD_BG = (249, 249, 247), (252, 252, 251)
 GRID, BASELINE = (225, 224, 217), (195, 194, 183)
 BLUE, BLUE_DEEP = (42, 120, 214), (24, 79, 149)
+BLUE_WASH, BLUE_MID = (205, 226, 251), (134, 182, 239)
 
 
 def _font(size, weight="regular"):
@@ -362,85 +458,88 @@ def _wrap(draw, text, font, max_w, max_lines):
     return lines[:max_lines]
 
 
-def _arrow(draw, x1, x2, y):
-    draw.line([x1, y, x2 - 10, y], fill=BASELINE, width=3)
-    draw.polygon([(x2, y), (x2 - 14, y - 7), (x2 - 14, y + 7)], fill=BASELINE)
-
-
-def _node_date(draw, x, y, w, big, small, who=None):
-    f_big = _fit(draw, big, "bold", 40, w)
-    draw.text((x, y), big, font=f_big, fill=INK1)
-    f_small = _font(21)
-    draw.text((x, y + 52), small, font=f_small, fill=INK3)
-    if who:
-        draw.text((x, y + 80), _ellipsize(draw, who, f_small, w), font=f_small, fill=INK2)
+def _dashed_vline(draw, x, y1, y2, color, dash=6, gap=5, width=2):
+    y = y1
+    while y < y2:
+        draw.line([x, y, x, min(y + dash, y2)], fill=color, width=width)
+        y += dash + gap
 
 
 def render_png(cd, out_path):
     img = Image.new("RGB", (W, H), PAPER)
-    d = ImageDraw.Draw(img)
+    d = ImageDraw.Draw(img, "RGBA")
     d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
                         outline=GRID, width=1)
     ML, MR = 70, W - 70   # content margins
     cw = MR - ML
 
     kicker = "T R I B U T A R Y   ·   N A R R A T I V E   T R A C E"
-    d.text((ML, 58), kicker, font=_font(22, "semibold"), fill=INK3)
+    d.text((ML, 56), kicker, font=_font(22, "semibold"), fill=INK3)
 
-    f_head = _fit(d, cd["headline"], "bold", 78, cw)
-    d.text((ML, 100), cd["headline"], font=f_head, fill=INK1)
+    f_head = _fit(d, cd["headline"], "bold", 74, cw)
+    d.text((ML, 96), cd["headline"], font=f_head, fill=INK1)
 
-    f_phrase = _font(31)
-    py = 215
+    f_phrase = _font(30)
+    py = 206
     for ln in _wrap(d, "“" + cd["phrase"] + "”", f_phrase, cw, 2):
         d.text((ML, py), ln, font=f_phrase, fill=INK2)
-        py += 42
+        py += 40
 
-    # --- mini flow strip: origin -> circles (or spread) -> today ------------
-    top = 330
-    x_origin, x_mid, x_today = ML, 430, 870
-    _node_date(d, x_origin, top, 300,
-               cd["first_human"], "first attested — earliest we found",
-               cd["first_who"] or None)
+    # --- spread over time: each dot one recorded use; shading = cumulative
+    # share of observed uses; sequence, not influence -----------------------
+    axis_y, area_top = 500, 362   # area stays below the two chart labels
+    g = timeline_geometry(cd, ML, MR, axis_y, area_top)
 
-    if cd["circles"]:
-        y = top - 4
-        f_o = _font(21)
-        for c in cd["circles"]:
-            names = ", ".join(o["name"] for o in c["outlets"][:2])
-            chip = _ellipsize(d, f'{c["circle"]} · {names}', f_o, 330)
-            bb = d.textbbox((x_mid, y), chip, font=f_o)
-            d.rounded_rectangle([x_mid - 14, y - 7, bb[2] + 14, y + 33],
-                                radius=17, outline=GRID, width=2)
-            d.text((x_mid, y), chip, font=f_o, fill=INK1)
-            y += 56
-        d.text((x_mid, y + 2), "carried in both circles (AllSides-rated)",
-               font=_font(19), fill=INK3)
-    else:
-        _node_date(d, x_mid, top, 330, f'{cd["n_uses"]} recorded uses',
-                   "spread " + cd["first_human"] + " → " + (cd["last_human"] or "present"))
+    d.polygon(g["area"], fill=BLUE_WASH + (150,))
+    d.line(g["area"][:-1], fill=BLUE_MID, width=2)
+    d.line([ML, axis_y, MR, axis_y], fill=BASELINE, width=2)
+    for x, label in g["ticks"]:
+        d.line([x, axis_y - 3, x, axis_y + 4], fill=BASELINE, width=2)
+        f_t = _font(19)
+        d.text((x - d.textlength(label, font=f_t) / 2, axis_y + 10), label,
+               font=f_t, fill=INK3)
 
+    if g["marker"]:
+        _dashed_vline(d, g["marker"]["x"], area_top - 14, axis_y - 2, BASELINE)
+
+    for dot in g["dots"]:
+        r = 7 if dot["ms"] else 5
+        d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
+                  fill=BLUE_DEEP if dot["ms"] else BLUE,
+                  outline=CARD_BG, width=2)
+
+    # origin label (top-left of the chart, where the area is still low)
+    f_ms, f_sub = _font(23, "semibold"), _font(19)
+    d.text((ML, 300), f'First attested {cd["first_human"]}', font=f_ms, fill=INK1)
+    if cd["first_who"]:
+        d.text((ML, 332), _ellipsize(d, cd["first_who"], f_sub, 430),
+               font=f_sub, fill=INK3)
+
+    # in-the-news label (top-right), carriers named without lean labels
     today = cd["event"] or {}
-    _node_date(d, x_today, top, MR - x_today,
-               fmt_date_human(today.get("date") or "") or "today",
-               "in the news",
-               (today.get("title") or "").strip() or None)
+    right_lbl = f'In the news {fmt_date_human(today.get("date") or "")}' if today \
+        else f'Most recent use {cd["last_human"]}'
+    tw = d.textlength(right_lbl, font=f_ms)
+    d.text((MR - tw, 300), right_lbl, font=f_ms, fill=INK1)
+    if cd["outlets"]:
+        names = " · ".join(o["name"] for o in cd["outlets"][:3])
+        names = _ellipsize(d, names, f_sub, 430)
+        d.text((MR - d.textlength(names, font=f_sub), 332), names,
+               font=f_sub, fill=INK3)
 
-    ay = top + 24
-    _arrow(d, x_origin + 310, x_mid - 26, ay)
-    _arrow(d, x_mid + 350, x_today - 26, ay)
-
-    # --- footer: count + the hedge, on the image itself. The first-attested
-    # date already headlines the flow strip; repeating it here cost the
-    # honesty clause its space (it got ellipsized) — the hedge wins.
-    d.line([ML, 545, MR, 545], fill=GRID, width=2)
-    foot = (f'{cd["n_uses"]} recorded uses · earliest found, not provably first'
-            f' · AI-traced, not human-reviewed')
-    d.text((ML, 560), _ellipsize(d, foot, _font(22), cw - 190),
-           font=_font(22), fill=INK3)
+    # --- footer: count + the honesty clauses, on the image itself ----------
+    d.line([ML, 546, MR, 546], fill=GRID, width=2)
+    n_dots = len(cd["points"])
+    counts = f'{cd["n_uses"]} recorded uses' + \
+        (f' ({n_dots} dated)' if n_dots != cd["n_uses"] else '')
+    f_f = _font(19)
+    d.text((ML, 555), f'{counts} · each dot = one use from a cited source — a sample, not a census',
+           font=f_f, fill=INK3)
+    d.text((ML, 580), 'earliest found, not provably first · AI-traced, not human-reviewed',
+           font=f_f, fill=INK3)
     wordmark = "tributary"
     f_wm = _font(24, "semibold")
-    d.text((MR - d.textlength(wordmark, font=f_wm), 558), wordmark,
+    d.text((MR - d.textlength(wordmark, font=f_wm), 565), wordmark,
            font=f_wm, fill=BLUE_DEEP)
 
     img.save(out_path, "PNG")
@@ -455,56 +554,55 @@ def esc(s):
             .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def svg_flow(cd):
-    """The mini flow visual, as a standalone inline SVG: origin -> circles ->
-    today. Deliberately screenshot-shaped; every fact on it also appears in
-    the page text for copy-paste and screen readers."""
+def _names_prose(outlets, with_dates=True):
+    bits = [o["name"] + (f' ({fmt_date_human(o["date"])})' if with_dates and o["date"] else "")
+            for o in outlets]
+    if len(bits) <= 1:
+        return "".join(bits)
+    return ", ".join(bits[:-1]) + " and " + bits[-1]
+
+
+def svg_timeline(cd):
+    """The spread-over-time visual as a standalone inline SVG. Each dot is one
+    recorded dated use (hover for date + who); the dark dot is the earliest
+    found; the dashed line marks the event in the news."""
+    x0, x1, axis_y, area_top = 10, 750, 168, 58
+    g = timeline_geometry(cd, x0, x1, axis_y, area_top, bucket_px=10, dot_gap=9)
     today = cd["event"] or {}
-    today_date = fmt_date_human(today.get("date") or "") or "today"
-    today_title = (today.get("title") or "").strip()
+    right_lbl = f'In the news {fmt_date_human(today.get("date") or "")}' if today \
+        else f'Most recent use {cd["last_human"]}'
 
-    def trunc(s, n):
-        return s if len(s) <= n else s[:n - 1].rstrip() + "…"
-
-    parts = [f'<svg viewBox="0 0 800 200" role="img" aria-label="Flow: first attested '
-             f'{esc(cd["first_human"])}, carried into circles, in the news {esc(today_date)}">']
-    parts.append('<style>.d{font:600 22px system-ui}.s{font:13px system-ui;fill:#898781}'
-                 '.w{font:13.5px system-ui;fill:#52514e}.c{font:600 13.5px system-ui;fill:#0b0b0b}'
-                 '</style>')
-
-    def arrow(x1, x2, y):
-        parts.append(f'<line x1="{x1}" y1="{y}" x2="{x2 - 8}" y2="{y}" stroke="#c3c2b7" stroke-width="2"/>'
-                     f'<path d="M {x2} {y} l -11 -5.5 v 11 z" fill="#c3c2b7"/>')
-
-    # origin
-    parts.append(f'<text x="0" y="86" class="d" fill="#0b0b0b">{esc(cd["first_human"])}</text>'
-                 f'<text x="0" y="108" class="s">first attested — earliest we found</text>')
+    parts = [f'<svg viewBox="0 0 760 200" role="img" aria-label="Timeline of '
+             f'{len(cd["points"])} recorded uses from {esc(cd["first_human"])}; '
+             f'{esc(right_lbl)}">',
+             '<style>.ms{font:600 15px system-ui;fill:#0b0b0b}'
+             '.s{font:12.5px system-ui;fill:#898781}.t{font:11.5px system-ui;fill:#898781}'
+             '</style>']
+    pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in g["area"])
+    edge = " ".join(f"{x:.1f},{y:.1f}" for x, y in g["area"][:-1])
+    parts.append(f'<polygon points="{pts}" fill="#cde2fb" fill-opacity="0.55"/>'
+                 f'<polyline points="{edge}" fill="none" stroke="#86b6ef" stroke-width="1.5"/>'
+                 f'<line x1="{x0}" y1="{axis_y}" x2="{x1}" y2="{axis_y}" stroke="#c3c2b7" stroke-width="1.5"/>')
+    for x, label in g["ticks"]:
+        parts.append(f'<line x1="{x:.1f}" y1="{axis_y - 3}" x2="{x:.1f}" y2="{axis_y + 3}" stroke="#c3c2b7"/>'
+                     f'<text x="{x:.1f}" y="{axis_y + 17}" text-anchor="middle" class="t">{esc(label)}</text>')
+    if g["marker"]:
+        parts.append(f'<line x1="{g["marker"]["x"]:.1f}" y1="{area_top - 12}" '
+                     f'x2="{g["marker"]["x"]:.1f}" y2="{axis_y - 2}" '
+                     f'stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="5 4"/>')
+    for dot in g["dots"]:
+        r = 5.5 if dot["ms"] else 4
+        fill = "#184f95" if dot["ms"] else "#2a78d6"
+        tip = f'{dot["p"]["date"]}' + (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "")
+        parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
+                     f'stroke="#fcfcfb" stroke-width="1.5"><title>{esc(tip)}</title></circle>')
+    parts.append(f'<text x="{x0}" y="20" class="ms">First attested {esc(cd["first_human"])}</text>')
     if cd["first_who"]:
-        parts.append(f'<text x="0" y="128" class="w">{esc(trunc(cd["first_who"], 34))}</text>')
-
-    if cd["circles"]:
-        y = 62
-        for c in cd["circles"]:
-            names = ", ".join(o["name"] for o in c["outlets"][:2])
-            chip = trunc(f'{c["circle"]} · {names}', 40)
-            wpx = int(len(chip) * 7.4) + 24
-            parts.append(f'<rect x="268" y="{y - 20}" width="{wpx}" height="30" rx="15" '
-                         f'fill="none" stroke="#e1e0d9" stroke-width="1.5"/>'
-                         f'<text x="280" y="{y}" class="c">{esc(chip)}</text>')
-            y += 44
-        parts.append(f'<text x="268" y="{y + 4}" class="s">carried in both circles (AllSides-rated)</text>')
-    else:
-        parts.append(f'<text x="268" y="86" class="d" fill="#0b0b0b">{cd["n_uses"]} recorded uses</text>'
-                     f'<text x="268" y="108" class="s">spread {esc(cd["first_human"])} → '
-                     f'{esc(cd["last_human"] or "present")}</text>')
-
-    parts.append(f'<text x="660" y="86" class="d" fill="#0b0b0b">{esc(today_date)}</text>'
-                 f'<text x="660" y="108" class="s">in the news</text>')
-    if today_title:
-        parts.append(f'<text x="660" y="128" class="w">{esc(trunc(today_title, 17))}</text>')
-
-    arrow(204, 256, 80)
-    arrow(608, 648, 80)
+        parts.append(f'<text x="{x0}" y="38" class="s">{esc(cd["first_who"][:52])}</text>')
+    parts.append(f'<text x="{x1}" y="20" text-anchor="end" class="ms">{esc(right_lbl)}</text>')
+    if cd["outlets"]:
+        names = " · ".join(o["name"] for o in cd["outlets"][:3])[:60]
+        parts.append(f'<text x="{x1}" y="38" text-anchor="end" class="s">{esc(names)}</text>')
     parts.append("</svg>")
     return "".join(parts)
 
@@ -517,21 +615,19 @@ def render_page(cd, out_path):
     og_url = f"{SITE}gallery/cards/{fid}.html"
     desc_bits = [f"“{cd['phrase']}” — first attested {cd['first_human']}.",
                  f"{cd['n_uses']} recorded uses."]
-    if cd["circles"]:
-        desc_bits.append("Carried by outlets in more than one circle.")
+    if cd["outlets"]:
+        desc_bits.append(f"Recently carried by {_names_prose(cd['outlets'][:3], with_dates=False)}.")
     desc_bits.append("Every date and source has a receipt. AI-traced, not human-reviewed.")
     og_desc = " ".join(desc_bits)
 
-    circles_note = ""
-    if cd["circles"]:
-        rows = []
-        for c in cd["circles"]:
-            names = ", ".join(f'{o["name"]}' + (f' ({fmt_date_human(o["date"])})' if o["date"] else "")
-                              for o in c["outlets"])
-            rows.append(f'<strong>{esc(c["circle"])}</strong>: {esc(names)} '
-                        f'— {c["n_pieces"]}/{c["n_total"]} pieces on this event')
-        circles_note = ('<p class="circles">' + " · ".join(rows) +
-                        '. Circle membership is AllSides’ rating of the outlet, not ours.</p>')
+    # the cross-circle fact, demoted to one sentence of page text — outlet
+    # names carry the point; the L/R axis is context, not the focus
+    carried_note = ""
+    if cd["outlets"]:
+        span_note = (" — outlets AllSides rates on opposite sides of center "
+                     "(their ratings, not ours)") if len(cd["circles"]) >= 2 else ""
+        carried_note = (f'<p class="carried">Recently carried by '
+                        f'{esc(_names_prose(cd["outlets"]))}{span_note}.</p>')
 
     event_link = ""
     if ev and ev.get("id"):
@@ -540,6 +636,9 @@ def render_page(cd, out_path):
             t = t[:90].rsplit(" ", 1)[0] + " …"
         event_link = (f'<a class="ctx" href="../../fingerprint_viewer.html?load=gallery/events/{esc(ev["id"])}.json">'
                       f'See it in the news: {esc(t)} →</a>')
+
+    alt = (f'{cd["headline"]} Timeline of {cd["n_uses"]} recorded uses from '
+           f'{cd["first_human"]} onward. “{cd["phrase"]}”')
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -554,7 +653,7 @@ def render_page(cd, out_path):
 <meta property="og:image" content="{esc(og_img)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{esc(cd["headline"])} “{esc(cd["phrase"])}” First attested {esc(cd["first_human"])}; {cd["n_uses"]} recorded uses.">
+<meta property="og:image:alt" content="{esc(alt)}">
 <meta property="og:url" content="{esc(og_url)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="{esc(og_desc)}">
@@ -570,7 +669,7 @@ def render_page(cd, out_path):
             color: #898781; margin-bottom: 0.5rem; }}
   .headline {{ font-size: 1.75rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.15rem; }}
   .phrase {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1.1rem; }}
-  .circles {{ color: #52514e; font-size: 0.85rem; margin: 0.4rem 0 0; }}
+  .carried {{ color: #52514e; font-size: 0.85rem; margin: 0.5rem 0 0; }}
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
@@ -593,10 +692,10 @@ def render_page(cd, out_path):
     <div class="kicker">Tributary · narrative trace</div>
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="phrase">“{esc(cd["phrase"])}”</p>
-    {svg_flow(cd)}
-    {circles_note}
+    {svg_timeline(cd)}
+    {carried_note}
     <div class="cardfoot">
-      <span>{cd["n_uses"]} recorded uses · first attested {esc(cd["first_human"])} — earliest we found, not provably first</span>
+      <span>{cd["n_uses"]} recorded uses · each dot = one use from a cited source — a sample, not a census · first attested {esc(cd["first_human"])}, the earliest we found</span>
       <span>AI-traced, not human-reviewed</span>
     </div>
   </div>
@@ -607,8 +706,8 @@ def render_page(cd, out_path):
   <p class="honesty">
     This card is AI-generated and not yet human-reviewed. “First attested” is the earliest
     use our search found — attestation confidence as recorded by the pipeline: {cd["confidence"]:.2f} —
-    and an earlier one may exist. The full trace shows every source, archive link, and
-    verification status{", and the event page shows each circle’s own quoted words" if cd["circles"] else ""}.
+    and an earlier one may exist. Dot order shows sequence, not influence. The full trace
+    shows every source, archive link, and verification status{", and the event page shows each carrier’s own quoted words" if cd["outlets"] else ""}.
     Card image for sharing: <a href="{fid}.png">PNG</a>.<br>
     <a href="{REPO_URL}/blob/main/METHODOLOGY.md">How it’s made</a> ·
     <a href="{REPO_URL}/blob/main/CORRECTIONS.md">Corrections log</a> ·
@@ -664,7 +763,7 @@ def main():
                       "event_id": (cd["event"] or {}).get("id", "")})
         rendered += 1
         print(f"[cards] {fid}: {cd['headline']}  ({cd['n_uses']} uses, "
-              f"circles={len(cd['circles'])})", file=sys.stderr)
+              f"{len(cd['outlets'])} carriers named)", file=sys.stderr)
 
     (cards_dir / "index.json").write_text(
         json.dumps({"count": rendered, "as_of": asof.isoformat(), "cards": index},

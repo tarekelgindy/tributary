@@ -183,11 +183,14 @@ in a typical capture week?
       and lets the contrast speak. The hedge ("earliest found, not provably first ·
       AI-traced, not human-reviewed") ships on the image itself, not just the page.)
 - [x] Mini flow visual (origin → circles → today) as the tap-through / screenshot artifact.
-      (On both the share page (inline SVG) and the OG PNG: first-attested date + source
-      → circle chips → the event in the news. Chips name only outlets whose linked page
-      is under their own domain — the own-voice rider's presentation cousin; the
-      WSJ-editorial-via-Daily-Beast quote correctly drops out and CBS News stands.
-      Traces without cross-circle carriage fall back to origin → N recorded uses → today.)
+      (Built as origin → circle chips → in-the-news, then superseded the same day on
+      Tarek's review: the card visual is now the SPREAD-OVER-TIME timeline — the
+      approved mockup's original — cumulative step-area, one dot per recorded use,
+      origin and in-the-news labeled, dashed event marker. The origin→circles→today
+      facts survive as the chart's end labels plus one line of page text; L/R circle
+      chips are gone from the visuals — carriers are named without lean labels
+      (de-emphasizing the L/R axis is standing direction). Names stay first-party-domain
+      gated: the WSJ-editorial-via-Daily-Beast quote drops out, CBS News stands.)
 - [x] Auto-generated plain-language summary sentence at the top of EVERY full trace page
       (structural facts only; this is legibility, not verdict).
       (plainSummaryHtml() in the viewer: earliest dated use + who (+ documented-by from
