@@ -1,44 +1,59 @@
-<!-- DRAFT — pending Tarek's editorial review before publishing (MISSION_PLAN 1c). -->
+<!-- DRAFT v2 — pending Tarek's editorial review before publishing (MISSION_PLAN 1c).
+     v2 rebuilds the issue insight-first per 2026-07-09 review: claim-age leads,
+     summaries cut. -->
 
 # Common Ground Report #1 — This Week in Narratives, Issue #2
 
 **July 2 – 9, 2026** · from [Tributary](https://tarekelgindy.github.io/tributary/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.
 
-Issue #1 asked what the week's agenda was. This issue asks a different question: **what do the two US media circles agree on — and what did their front pages bury?** "Circles" here means news outlets AllSides rates left/lean-left or right/lean-right (the ratings are [AllSides'](https://www.allsides.com/media-bias/ratings), not ours; we only aggregate them, and outlets rated center or unrated belong to neither circle). Everything below is structural — who carried what, with receipts — and every circle is voiced **only by its own outlets' quoted words, in the outlet's own voice**. Tributary never labels claims true or false. [How it's made](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) · [corrections log](https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md) · [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose)
-
-Two data windows feed this issue: the **capture week** (14 automated front-feed captures plus daily news-sitemap censuses, July 2–9, clustered into 2,619 stories) for the buried-stories section, and Tributary's **analyzed-event corpus** (108 events, 854 framings, built June–July 2026) for the framing and claim sections. Each section says which it uses.
+**The question this issue asks:** what do the left and right media circles actually agree on — how old is that agreement — and what did both sides cover that neither side's front page showed you? "Circles" means news outlets [AllSides](https://www.allsides.com/media-bias/ratings) rates left/lean-left or right/lean-right (their ratings, not ours; center and unrated outlets belong to neither). Every circle speaks below only in its own outlets' quoted words, in the outlet's own voice. Tributary never labels claims true or false. [Methodology](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) · [corrections](https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md) · [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose)
 
 ---
 
-## Where the circles' framings intersect
+## The shared framings are old. When one isn't, that's the story.
 
-For every analyzed event, we count which framings member outlets of *each* circle carried as primary sources — and a framing only counts as shared when both circles **asserted** it (championed or carried it straight). A framing one circle only *opposes* is contestation, not common ground, and is reported separately below.
+We traced the origin of three framings that member outlets of *both* circles carry. Two turn out to be decades-old policy arguments wearing this week's news; the third is twenty months old — and its birthday is the interesting part.
 
-**The finding first: intersections exist, but they are thin.** 15 of 108 events show at least one framing intersection (19 in total) — and in every single one, at least one circle's side rests on one or two outlets. We show the counts on every claim so you can weigh them yourself.
-
-**[Israel's killing of Hamas commander Mohammed Odeh](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json)** (late May 2026) — the framing **"Strategic Decapitation / Military Effectiveness"** appears in 1/3 left-leaning pieces and 1/1 right-leaning pieces:
+**24 years: "decapitation works."** When [Israel killed Hamas commander Mohammed Odeh](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json) in late May, outlets in both circles reached for the same frame — that killing commanders demonstrates intelligence penetration and collapses command structure:
 
 > **left-leaning** · NBC News (2026-05-27): "Israel said Wednesday it had killed Hamas' newly appointed armed wing chief in Gaza, days after it killed his predecessor"
 >
 > **right-leaning** · Fox News (2026-05-28): "With the deaths of its leaders and the collapse of strong centralized command, Hamas is turning into a smaller militia"
 
-**[Trump's crypto financial disclosure](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json)** — the framing **"Foreign Influence & National Security"** appears in 2/5 left-leaning pieces and 1/1 right-leaning pieces. Note the dates: the right-circle piece predates the July disclosure — the framing was already in circulation on the right months before this event:
+The trace finds this framing in the targeted-killing debates of the Second Intifada: attested from **September 2002** (Steven David's *Fatal Choices: Israel's Policy of Targeted Killing* — documented via Wikipedia; the original is a policy paper), with first-party receipts from **January 2003** (*Middle East Quarterly*, "The Logic of Israel's Targeted Killing") onward — 17 dated attestations across 24 years. Both circles are re-running a quarter-century-old argument, and neither invented it this week.
 
-> **left-leaning** · CBS News (2026-07-02): "The co-founder of Binance, Changpeng Zhao, received a pardon from Mr. Trump for financial crimes"
->
-> **right-leaning** · National Review (2026-02-17): "Now, it's out in the open. Will anyone care?"
-
-**[Greenland's PM snubbing the new US consulate](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/d030addb1054.json)** (May 2026) — **"Arctic Strategic Imperative"** appears in 1/2 left-leaning and 1/2 right-leaning pieces (both circles thin on this event — read the quotes, not the rates):
+**17 years: "the Arctic demands a US presence."** On [Greenland's PM snubbing the new US consulate](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/d030addb1054.json), both circles carried the strategic-imperative frame:
 
 > **left-leaning** · ABC News (2026-01-08): "Greenland's position above the Arctic Circle makes the world's largest island a key part of security strategy"
 >
 > **right-leaning** · The Gateway Pundit (2026-05-22): "The new US consulate in Nuuk shows the Donald J. Trump administration 'sharpening its focus on the Arctic'"
 
-**And the counterexample, because the filter has to cut both ways:** on the [Graham Platner allegations](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/b410bf787bf7.json), the framing "Media Bias & Journalistic Malpractice" is carried by both circles — but the left circle's only engagement is *opposition*. That is reported as **contested**, not as common ground. A tool that counted it as agreement would be manufacturing harmony.
+The trace anchors on **NSPD-66, the US Arctic policy directive signed January 9, 2009** (documented via Wikipedia; the directive is the source), carried through 2015 think-tank work ("The New Ice Curtain") to this spring. A seventeen-year-old doctrine, deployed by both circles as if it were a reaction to one snubbed ribbon-cutting. (Both circles are thin on this event — two rated outlets each — so weigh the quotes, not rates.)
+
+**20 months — and born 20 days after the election: "foreign money in Trump crypto buys policy."** On [Trump's crypto financial disclosure](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json), the foreign-influence framing appears in 2/5 left-leaning pieces and 1/1 right-leaning:
+
+> **left-leaning** · CBS News (2026-07-02): "The co-founder of Binance, Changpeng Zhao, received a pardon from Mr. Trump for financial crimes"
+>
+> **right-leaning** · National Review (2026-02-17): "Now, it's out in the open. Will anyone care?"
+
+Unlike the two above, this framing has no deep history to find. Earliest attestation: **November 25, 2024** — CNBC on Justin Sun's $30 million investment in World Liberty Financial, twenty days after the 2024 election. The trace's own adversarial pass explains why nothing earlier exists: before the election there was almost no foreign money in Trump-linked crypto to frame. A young framing shared across circles is a different object than an old one — it grew to cross-circle carriage in under two years, and you can watch it happen in the attestation log (14 entries: CNBC → watchdog reports → a Senate letter → this week's disclosure coverage). Note also the dates on the quotes: the right-circle piece predates the July disclosure by five months — the framing was in circulation on the right well before this event.
+
+*Trace honesty: these are single-run AI traces with an unmeasured error rate; "first attested" means earliest we found, not provably earliest that exists. Attestation confidence, as recorded by the pipeline: 0.9 / 0.82 / 0.62 respectively. Where the linked receipt is an encyclopedia page documenting an offline original, the trace says so.*
+
+## Shared but buried
+
+Of 2,619 stories clustered from the week's front feeds, **115 were covered by at least two rated US outlets on each side** of center (in feeds, or in the outlet's news-sitemap census). **49 of them were put in a top-5 feed slot by no outlet of either circle.** Both sides wrote these; neither side's front pages surfaced them ([full list with every receipt](https://github.com/tarekelgindy/tributary/blob/main/digests/shared_buried_2026-07-09_7d.json)):
+
+- **A Paris appeals court ruling could upend Marine Le Pen's 2027 presidential bid** — 4 left-circle outlets (ABC .88, HuffPost .82, NYT .79, NBC .77; sitemap-match similarity shown) and 4 right-circle (Newsmax .83, NY Post .80, Breitbart .79, Washington Examiner .74). Front-paged only by France 24 (international, position 3).
+- **Nigel Farage resigns as MP to force a special election** — 5 left-circle outlets and 5 right-circle, three of the right's in feeds but deep (Reason position 21, Breitbart 28, Daily Wire 48). Front-paged only by The Guardian (position 1 — AllSides-rated lean-left but non-US, so outside the circles as defined).
+- **US strikes on Iran after tanker attacks in the Strait of Hormuz** — 4 outlets each side (Washington Examiner in-feed at position 10; NYT sitemap .85, NY Post .89). Front-paged by Axios (center, position 1), Deutsche Welle and France 24 — and by no circle outlet.
+- **A second fatal shooting by a federal task force member in Memphis in four days** — NYT carried it at feed position 24, HuffPost/ABC sitemaps match at .95; Newsmax carried it at position 9, NY Post's nearest article (.68) covers the incident. Front-paged by The Hill (center, position 3).
+
+Caveats that matter: front feeds are a sample, not a census; "featured" = observed at position ≤5 in one of 14 captures; a borderline sitemap match can be adjacent coverage rather than the story (every receipt ships the matched title, URL and similarity so you can check); thresholds are uncalibrated until our published audit passes. This says nothing about *why* — only that both circles wrote it and neither front-paged it, in our sample.
 
 ## Same claim, both circles
 
-Cross-circle pairs of outlets' own published sentences asserting the same claim. Candidate pairs are proposed by local text similarity, then a strict same-claim judge (same subject, same attribution of responsibility, same asserted consequence) confirms or rejects each — **nothing appears here unconfirmed**. Of 8 candidates this corpus produced, the judge confirmed 3 and rejected 5, including the *highest-similarity* candidate (two Platner excerpts that turned out to assert different things — similarity alone cannot make this call):
+Cross-circle pairs of outlets' own published sentences asserting the same claim — proposed by local text similarity, then confirmed or rejected by a strict same-claim judge (same subject, same attribution of responsibility, same asserted consequence). **Nothing appears here unconfirmed.** The judge confirmed 3 of 8 candidates and rejected 5 — including the *highest-similarity* pair (0.85; two Platner excerpts asserting different things). Similarity alone cannot make this call:
 
 | Claim (judge's summary) | Left-circle source | Right-circle source |
 |---|---|---|
@@ -46,31 +61,21 @@ Cross-circle pairs of outlets' own published sentences asserting the same claim.
 | Israel killed Hamas's newly appointed armed-wing chief | NBC News: "Israel said Wednesday it had killed Hamas' newly appointed armed wing chief in Gaza, days after it killed his predecessor" | Fox News: (same piece as above) |
 | Greenlanders protested the US consulate opening with "go home" | Alternet: "'Go home USA': Greenlanders protest new American consulate as PM snubs opening" | Washington Examiner: "Greenlanders tell Americans 'go home' at rowdy opening of US Consulate" |
 
-Three confirmed pairs across 108 events is a sparse harvest, and we report it as such — the honest reading is that most events in this corpus simply don't have enough rated outlets on both sides speaking in their own voice about the same facts. Low overlap is a finding, not a malfunction.
+Three confirmed pairs across 108 analyzed events is sparse, and we say so. Low overlap is a finding, not a malfunction — most events in this corpus simply don't have enough rated outlets on both sides speaking in their own voice about the same facts.
 
-## Shared but buried
+## The wider count — and the counterexample
 
-The capture-week section. Of 2,619 stories clustered from the week's front feeds, **115 were covered by at least two rated US outlets on *each* side** of center (coverage = the story appeared in the outlet's front feed, or its news-sitemap census contains a matching article). Of those, 66 were put in a top-5 front-feed slot by at least one circle outlet. **The other 49 were feed-featured by neither circle** — stories both sides wrote about and neither side's front pages surfaced. A selection (the full machine-readable list with every receipt ships with this issue: [shared_buried_2026-07-09_7d.json](https://github.com/tarekelgindy/tributary/blob/main/digests/shared_buried_2026-07-09_7d.json)):
-
-- **A Paris appeals court ruling could upend Marine Le Pen's 2027 presidential bid** — covered by 4 left-circle outlets (ABC .88, HuffPost .82, NYT .79, NBC .77 — sitemap matches with similarity shown) and 4 right-circle outlets (Newsmax .83, NY Post .80, Breitbart .79, Washington Examiner .74). Front-paged only by France 24 (international, position 3).
-- **Nigel Farage resigns as MP to force a special election** — 5 left-circle outlets (NYT, ABC, HuffPost, NBC by sitemap) and 5 right-circle outlets, three of them in feeds but deep (Reason position 21, Breitbart 28, Daily Wire 48). Front-paged only by The Guardian (position 1 — rated lean-left by AllSides, but non-US, so outside the circles as we've defined them).
-- **US strikes on Iran after tanker attacks in the Strait of Hormuz** — 4 left-circle outlets (NYT sitemap .85 among them) and 4 right-circle (Washington Examiner in-feed at position 10, NY Post sitemap .89). Front-paged by Axios (center, position 1), Deutsche Welle and France 24 (international) — and by no circle outlet.
-- **A second fatal shooting by a federal task force member in Memphis in four days** — NYT carried it at feed position 24 (never top-5), HuffPost and ABC sitemaps match at .95; on the right, Newsmax carried it at position 9 and NY Post's nearest sitemap article (.68) covers the incident. Front-paged by The Hill (center, position 3).
-
-Read the caveats before quoting this: front feeds are a *sample* of attention, not a census; "featured" means observed at feed position ≤5 in at least one of 14 captures; a sitemap match at the threshold boundary can be *adjacent* coverage rather than the story itself — which is why every receipt above ships its similarity and the matched article is in the report data. The thresholds are uncalibrated until our published audit passes. None of this says *why* a story wasn't featured; it says only that it wasn't, in our sample.
-
-## How old is the common ground?
-
-This section attaches first-attestation dates from Tributary's trace engine to intersecting framings — so a framing that has circulated for a decade is distinguishable from one seeded last month. **This issue: none of the 19 intersecting framings has a completed trace yet**, so this section is honestly empty. To show what it will look like: on the [birthright citizenship event](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json) (*not* an intersection — too few rated right-circle outlets in that analysis), the "National Sovereignty / Immigration Abuse" framing traces to **August 18, 2010** — the framing deployed on ruling day was almost sixteen years old. That is the shape of finding this section exists for.
+Across the 108-event corpus, 15 events show at least one framing carried and *asserted* by both circles (19 intersections in total; every one thin — one or two outlets per side, counts shown on every claim). A framing one circle only **opposes** never counts: on the [Graham Platner allegations](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/b410bf787bf7.json), "Media Bias & Journalistic Malpractice" is carried by both circles — but the left circle's only engagement is opposition. That's reported as **contested**, not common ground. A tool that counted it as agreement would be manufacturing harmony.
 
 ## What we can't tell you (yet)
 
-- **Whether circle members would recognize these summaries as fair.** The quote-only rule above is a mechanical stand-in for the real test — cross-partisan raters scoring "is this a fair statement of what your side is saying?" (bar: ≥70% "fair" from the summarized circle). That test hasn't run yet. During this issue's own review we caught two cases where a quote satisfied the letter of the rule and failed its spirit — a left-rated outlet's writeup of Sen. Fetterman's attack on Platner, and a right-rated outlet's writeup of a Bill Maher monologue, each surfacing as its circle's "voice." Neither appears above; the [methodology](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) now requires circle quotes to be in the outlet's own voice.
-- **Anything about outlets we can't place.** The circles are built from AllSides' US-centric ratings, so international events resolve poorly — several analyses have one or zero rated right-circle carriers, which is a limit of the ratings source, not evidence about coverage.
-- **Two circles is a v0, not a worldview.** Left/right is where attributable ratings exist today. The schema is built for N circles, and deriving circles from observed co-carriage (instead of imported ratings) is on the roadmap — parked, publicly, until the current instrument passes its outward gates.
-- **Omission claims** ("outlet X never covered Y") remain unpublishable — our own audit is at 5/10 against a 9/10 bar, unchanged from Issue #1. [The log is public.](https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md)
-- **Stance labels are AI labels.** "Championed / carried / opposed" derives from AI role judgments that have not passed a human-agreement audit; the intersection counts inherit that uncertainty. The quotes are verbatim; weigh those.
+- **Whether circle members would recognize these summaries as fair.** The quote-only rule is a mechanical stand-in for the real test — cross-partisan raters scoring "is this a fair statement of what your side is saying?" (bar: ≥70% "fair"). It hasn't run. During this issue's own review we caught two quotes that satisfied the rule's letter and failed its spirit — a left-rated outlet's writeup of Sen. Fetterman's attack, a right-rated outlet's writeup of a Bill Maher monologue, each surfacing as its circle's "voice." Neither appears above; the [methodology](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) now requires circle quotes in the outlet's own voice.
+- **Trace error rate.** The three origin traces are single AI runs with mechanical URL verification but no human audit yet; a measured precision number is a committed roadmap item. Treat "first attested" as *earliest found*.
+- **Anything about outlets we can't place.** AllSides' ratings are US-centric, so international events resolve poorly — several analyses have one or zero rated right-circle carriers. That's a limit of the ratings source, not evidence about coverage.
+- **Two circles is a v0, not a worldview.** Left/right is where attributable ratings exist today. The schema supports N circles, and deriving circles from observed co-carriage rather than imported ratings is on the roadmap — parked, publicly, until the current instrument passes its outward gates.
+- **Omission claims** ("outlet X never covered Y") remain unpublishable — our audit stands at 5/10 against a 9/10 bar. [Log.](https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md)
+- **Stance labels are AI labels.** "Championed / carried / opposed" derives from AI role judgments not yet past a human-agreement audit; intersection counts inherit that uncertainty. The quotes are verbatim — weigh those.
 
 ---
 
-*Every claim above carries its receipts — outlet, date, URL, and similarity where a machine match is involved; the underlying JSON is public. Reply, cite, or tear it apart: [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose).*
+*Every claim carries its receipts — outlet, date, URL, archive link where one exists, and similarity where a machine match is involved. The underlying JSON is public. Reply, cite, or tear it apart: [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose).*
