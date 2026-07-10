@@ -1649,6 +1649,18 @@ function render(fp) {
   dropZone.hidden = true;
   viewer.hidden = false;
 
+  // The event/agenda/article views take over <main> wholesale, destroying
+  // the three tab panels a trace renders into — restore the skeleton when
+  // missing. Found live 2026-07-10 (reader test): every event→trace click
+  // died on a null panel since the event layout began replacing <main>.
+  const mainEl = document.querySelector('main');
+  if (mainEl && !mainEl.querySelector('section[data-panel]')) {
+    mainEl.innerHTML = `
+    <section data-panel="overview"></section>
+    <section data-panel="lineages" hidden></section>
+    <section data-panel="evidence" hidden></section>`;
+  }
+
   document.getElementById('claim-phrase').textContent =
     fp.lexical.canonical_phrase || '(no canonical phrase)';
 
