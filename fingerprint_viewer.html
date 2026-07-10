@@ -750,6 +750,8 @@ circle.instance:hover { opacity: 0.7; }
   <div id="error"></div>
 </div>
 
+<div id="loading" hidden style="max-width: 900px; margin: 4rem auto; padding: 0 2rem; color: #888; font-size: 0.95rem;">Loading trace…</div>
+
 <div id="viewer" hidden>
   <header>
     <h1 id="claim-phrase"></h1>
@@ -793,6 +795,7 @@ const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const errorDiv = document.getElementById('error');
 const viewer = document.getElementById('viewer');
+const loadingDiv = document.getElementById('loading');
 
 dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
 dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
@@ -839,6 +842,45 @@ function refHostName(url) {
 }
 function isReferenceHost(url) { return !!(url && refHostName(url)); }
 
+// Who is COMMUNICATING the carrier: when a carrier's name and its link's
+// domain are different outlets (a WSJ editorial quoted via a Daily Beast
+// article; a Bill Maher line via a foxnews.com write-up), the reader must
+// know whose page they will land on — the hosting outlet is part of the
+// provenance, not a detail. Canonical names mirror actors.py's domain map;
+// the check is deliberately conservative (no chip when unsure), because a
+// wrong "via" is worse than a missing one.
+const DOMAIN_OUTLETS = {
+  'nytimes.com': 'The New York Times', 'washingtonpost.com': 'The Washington Post',
+  'wsj.com': 'The Wall Street Journal', 'cnn.com': 'CNN', 'foxnews.com': 'Fox News',
+  'nbcnews.com': 'NBC News', 'cbsnews.com': 'CBS News', 'abcnews.com': 'ABC News',
+  'abcnews.go.com': 'ABC News', 'go.com': 'ABC News', 'apnews.com': 'Associated Press',
+  'reuters.com': 'Reuters', 'bbc.com': 'BBC', 'bbc.co.uk': 'BBC', 'npr.org': 'NPR',
+  'pbs.org': 'PBS NewsHour', 'aljazeera.com': 'Al Jazeera', 'time.com': 'TIME',
+  'axios.com': 'Axios', 'politico.com': 'Politico', 'thehill.com': 'The Hill',
+  'theguardian.com': 'The Guardian', 'nypost.com': 'New York Post',
+  'usatoday.com': 'USA Today', 'bloomberg.com': 'Bloomberg', 'forbes.com': 'Forbes',
+  'cnbc.com': 'CNBC', 'timesofisrael.com': 'The Times of Israel',
+  'jpost.com': 'The Jerusalem Post', 'snopes.com': 'Snopes',
+  'politifact.com': 'PolitiFact', 'factcheck.org': 'FactCheck.org',
+};
+const _normName = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+function viaChip(c) {
+  if (!c || !c.url || !c.name || isReferenceHost(c.url)) return '';
+  let host;
+  try { host = new URL(c.url).hostname.toLowerCase().replace(/^www\./, ''); }
+  catch (e) { return ''; }
+  const name = _normName(c.name);
+  if (!name) return '';
+  const reg2 = host.split('.').slice(-2).join('.');
+  const canon = _normName(DOMAIN_OUTLETS[host] || DOMAIN_OUTLETS[reg2] || '');
+  if (canon && (name.includes(canon) || canon.includes(name))) return '';
+  const labels = host.split('.').filter(l =>
+    l.length > 2 && !['com', 'org', 'net', 'gov', 'www'].includes(l));
+  if (!canon && !labels.length) return '';           // nothing to judge by
+  if (labels.some(l => name.includes(l) || l.includes(name))) return '';
+  return `<span class="carrier-refhost" title="this link goes to a page on ${escapeHtml(host)}, not a page under the named carrier's own control — the outlet hosting/relaying the words is part of the provenance">via ${escapeHtml(host)}</span>`;
+}
+
 function routeData(data) {
   if (data.is_framing_attention) {
     renderFramingAttention(data);
@@ -880,11 +922,18 @@ function loadFile(file) {
 // fetch can't work, so we say so instead of failing silently.
 const loadParam = new URLSearchParams(location.search).get('load');
 if (loadParam) {
-  errorDiv.textContent = 'Loading …';
+  // A shared ?load= link must NEVER open on drag-a-JSON instructions
+  // (reader test 2026-07-09: the drop-zone was the first thing visitors
+  // saw even on links that load content). Hide it before the fetch; it
+  // only returns if the load fails and the reader genuinely needs it.
+  dropZone.hidden = true;
+  loadingDiv.hidden = false;
   fetch(loadParam)
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(data => { errorDiv.textContent = ''; routeData(data); })
+    .then(data => { loadingDiv.hidden = true; errorDiv.textContent = ''; routeData(data); })
     .catch(e => {
+      loadingDiv.hidden = true;
+      dropZone.hidden = false;
       errorDiv.textContent = `Failed to load "${loadParam}": ${e.message}` +
         (location.protocol === 'file:'
           ? ' — ?load= needs the page served over HTTP; for local files, drag the JSON onto this page instead.'
@@ -985,10 +1034,11 @@ function renderEventAnalysis(analysis) {
       // named carrier's own words — say so instead of letting the label imply it.
       const refBadge = isReferenceHost(c.url)
         ? `<span class="carrier-refhost" title="this link goes to a reference/aggregator page about the event, not to the named carrier's own statement">via ${escapeHtml(refHostName(c.url))}</span>` : '';
+      const viaBadge = refBadge ? '' : viaChip(c);
       return `<div class="fr-carrier${bn ? ' is-bridge' : ''}${role === 'critic' ? ' is-oppose' : ''}">
         <span class="carrier-role ${role}">${escapeHtml(role)}</span>
         ${c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.name || c.url)}</a>` : `<span>${escapeHtml(c.name || '')}</span>`}
-        ${refBadge}${opposeBadge}${bridgeBadge}
+        ${refBadge}${viaBadge}${opposeBadge}${bridgeBadge}
         ${c.excerpt ? `<span class="carrier-excerpt"> — ${escapeHtml(c.excerpt)}</span>` : ''}
         ${provenanceBadge(c)}${verifyBadge(c)}${archiveBadge(c)}
       </div>`;
@@ -1732,19 +1782,27 @@ function verifyBadge(item) {
   const notes = item.verification_notes || '';
   if (status === 'unchecked' && !notes) return '';
   // Badge honesty (Phase 2.8-A): "✓ verified" is reserved for quote-found
-  // checks. A "verified" whose notes admit the quote was never checked is a
-  // reachability check and says so. (2.8-B gives the pipeline a real
-  // 'url-ok' status; this also handles that.)
+  // checks. A "verified" whose notes admit only the URL was checked (event
+  // carriers say "URL reachable (HTTP 200)") is a reachability check and
+  // says so. (2.8-B gives the pipeline a real 'url-ok' status too.)
   const urlOnly = status === 'url-ok' ||
-    (status === 'verified' && /quote not checked/i.test(notes));
+    (status === 'verified' && /quote not checked|^URL reachable/i.test(notes));
+  // Failure-direction honesty (found by reader test 2026-07-09): paywalled
+  // and bot-blocked pages return errors to our checker while loading fine
+  // in a browser — an error badge must not read as "this source is fake".
   const symbol = urlOnly ? '↻ URL reachable' : {
     'verified': '✓ verified',
-    'unchecked': '↻ unchecked',
-    'url-error': '✗ URL error',
-    'fetch-error': '✗ fetch error',
+    'unchecked': '↻ not yet checked',
+    'url-error': '⚠ couldn’t auto-check',
+    'fetch-error': '⚠ couldn’t auto-check',
     'quote-not-found': '⚠ quote not found',
   }[status] || status;
-  const tooltipParts = [urlOnly ? 'URL reachable — the quote itself was not checked' : status];
+  const tooltipParts = [urlOnly ? 'URL reachable — the quote itself was not checked'
+    : (status === 'url-error' || status === 'fetch-error')
+      ? 'our automated checker got an error fetching this URL — paywalled or bot-blocked pages often do this while opening fine in a browser; the link may still work'
+    : status === 'unchecked'
+      ? 'this citation has not been through the automated URL/quote check yet — not a failure'
+      : status];
   if (notes) tooltipParts.push(notes);
   const tooltip = tooltipParts.join(' — ');
   return `<span class="verify-badge ${urlOnly ? 'unchecked' : escapeHtml(status)}" title="${escapeHtml(tooltip)}">${escapeHtml(symbol)}</span>`;
