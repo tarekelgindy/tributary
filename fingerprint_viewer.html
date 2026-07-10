@@ -24,6 +24,12 @@ body {
   border: 2px dashed #ccc;
   transition: background-color 0.2s;
 }
+/* The author display:flex above silently defeats the [hidden] attribute
+   (UA display:none loses to any author display rule) — so every JS
+   "dropZone.hidden = true" did nothing and a full-viewport instruction
+   page always rendered above the loaded trace. Flagged by Tarek
+   repeatedly; root-caused 2026-07-10. This rule makes hidden mean it. */
+#drop-zone[hidden] { display: none; }
 #drop-zone.dragover { background: #f0eee5; border-color: #888; }
 #drop-zone h1 { margin: 0 0 0.5rem; font-weight: 500; font-size: 2rem; }
 #drop-zone p { color: #666; margin: 0 0 1.5rem; max-width: 560px; }
