@@ -47,6 +47,7 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 | X/Twitter integration | No third-party context mechanism; API hostile | Treat as screenshot marketing channel only |
 | Browser extension | High build cost, brutal distribution | Phase 3 gate passed + demand for personalization |
 | Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings |
+| Human contribution layer (reader finds what the automated pass missed — e.g. an earlier attestation — and it enters the record) | Explicit goal (Tarek, 2026-07-10; mission has always been human+AI side by side). The groundwork is DORMANT, not absent: models.py carries Provenance review states (ai_generated → human_confirmed / disputed / consensus), Contribution/Contributor types and settlement rules; the viewer's provenance badges light up human states automatically; earlier-attestation + correction issue templates exist as the v0 intake channel. What's missing is the flow that turns a filed issue into a recorded, credited contribution | After Gate 2 (multiplier feedback tells us who would actually contribute); a Phase-3-adjacent build. Until then the issue templates ARE the contribution channel — point people at them |
 
 ---
 
@@ -151,7 +152,12 @@ curation systematically buries agreement between circles. Mostly query-writing, 
       Principle 4 after Tarek's 2026-07-09 review — see Decision Log. Applied in the
       draft: WSJ-editorial-via-Daily-Beast receipt excluded from circle voice; the
       Fetterman/Maher catch disclosed in the issue's own "what we can't tell you".)
-- [ ] Publish it.
+- [x] Publish it.
+      (2026-07-10: `digests/issue-02.md` + HTML twin live; gallery resynced with the
+      three embedded origin traces, common_ground blocks, and 766 archive links; front
+      door leads with the claim-age finding. Insight-first v2 shape after Tarek's
+      review: claim-age contrast (24yr / 17yr / 20mo) leads; detail-is-the-product —
+      every claim routes to a trace/event page.)
 
 **Gate 1 (internal — THE LAST INTERNAL GATE):** Does measurable, non-trivial overlap exist
 in a typical capture week?
@@ -253,7 +259,7 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | Date | Gate | Result | Evidence | Notes |
 |---|---|---|---|---|
 | 2026-07-09 | 0 | PASS | Thesis rewritten around the loop (README top, INTRO, ABOUT.md); Park List committed; INCIDENT_PROTOCOL.md written; recognition gate defined in METHODOLOGY.md — commits 2db9034, 191ca9b, 7c39888 | Internal gate, trivial by design; the point was forcing the decisions into writing |
-| | 1 | | | |
+| 2026-07-10 | 1 | | Report #1 published with: 19 framing intersections across 15/108 events (3 traced to origins — 2002 / 2009 / 2024-11-25 — with receipts); 3 judge-confirmed cross-circle convergent claims (5 candidates rejected, incl. the highest-similarity one); 49 shared-but-buried stories of 115 both-circle stories in the capture week (receipts vetted; adjacent-coverage row excluded) | Result cell awaits Tarek's verdict. Instrument's read: bar met (≥1 intersection + ≥1 buried), with the honest caveat that every intersection is thin (1–2 outlets per side) — overlap exists but concentrates in a few events |
 | | 2 | | | |
 | | 3 | | | |
 | | 4 | | | |
