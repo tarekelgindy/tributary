@@ -10,7 +10,7 @@
 
 We traced the origin of three framings that member outlets of *both* circles carry. Two turn out to be decades-old policy arguments wearing this week's news; the third is twenty months old — and its birthday is the interesting part.
 
-**24 years: "decapitation works."** When [Israel killed Hamas commander Mohammed Odeh](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json) in late May, outlets in both circles reached for the same frame — that killing commanders demonstrates intelligence penetration and collapses command structure:
+**24 years: "decapitation works."** When [Israel killed Hamas commander Mohammed Odeh](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json) in late May, outlets in both circles carried the same frame — that killing commanders demonstrates intelligence penetration and collapses command structure. Fox News champions it; NBC carries it in straight reportage (a distinction the stance counts keep):
 
 > **left-leaning** · NBC News (2026-05-27): "Israel said Wednesday it had killed Hamas' newly appointed armed wing chief in Gaza, days after it killed his predecessor"
 >
