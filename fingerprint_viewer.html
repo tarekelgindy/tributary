@@ -51,6 +51,7 @@ header h1 { margin: 0 0 0.4rem; font-size: 1.5rem; font-weight: 500; }
 #meta-bar { color: #777; font-size: 0.85rem; font-family: 'SF Mono', Menlo, monospace; }
 #meta-bar span { margin-right: 1.2rem; }
 #meta-bar strong { color: #555; font-weight: 500; }
+#meta-bar .card-link a { color: #2a6fa3; text-decoration: none; font-weight: 600; }
 #plain-summary { margin: 0.7rem 0 0; color: #444; font-size: 0.95rem;
                  line-height: 1.55; max-width: 62rem; }
 #plain-summary .hedge { color: #999; }
@@ -975,6 +976,7 @@ function renderEventAnalysis(analysis) {
   addMetaText(meta, 'event analysis');
   if (analysis.event_date) addMeta(meta, 'event date', (analysis.event_date || '').split('T')[0]);
   addMeta(meta, 'framings', String((analysis.framings || []).length));
+  maybeCardLink(analysis.analysis_id);
 
   document.getElementById('tabs').style.display = 'none';
 
@@ -1692,6 +1694,7 @@ function render(fp) {
   ]);
 
   setPlainSummary(plainSummaryHtml(fp));
+  maybeCardLink(fp.fingerprint_id);
 
   renderOverview(fp);
   renderLineages(fp);
@@ -1778,6 +1781,32 @@ function addMeta(parent, label, value) {
   const span = document.createElement('span');
   span.innerHTML = `<strong>${escapeHtml(label)}:</strong> ${escapeHtml(value || '')}`;
   parent.appendChild(span);
+}
+
+// When the loaded trace/event has a share card (gallery/cards/index.json,
+// written by cards.py), link it from the meta bar — the card is this page's
+// shareable form. Silent no-op offline or when no card exists.
+let _cardsIndex = null;
+let _cardLinkFor = null;
+function maybeCardLink(id) {
+  if (!id) return;
+  _cardLinkFor = id;
+  const add = idx => {
+    if (_cardLinkFor !== id) return;   // user navigated on; stale callback
+    const hit = (idx.cards || []).find(c => c.fingerprint_id === id ||
+      c.event_id === id || c.claim_id === id || c.rebuttal_id === id);
+    const meta = document.getElementById('meta-bar');
+    if (!hit || !meta || meta.querySelector('.card-link')) return;
+    const span = document.createElement('span');
+    span.className = 'card-link';
+    span.innerHTML = `<a href="${escapeHtml(hit.page)}">share card →</a>`;
+    meta.appendChild(span);
+  };
+  if (_cardsIndex) { add(_cardsIndex); return; }
+  fetch('gallery/cards/index.json', { cache: 'no-store' })
+    .then(r => (r.ok ? r.json() : null))
+    .then(idx => { if (idx) { _cardsIndex = idx; add(idx); } })
+    .catch(() => {});
 }
 
 function addMetaText(parent, text) {
@@ -2573,10 +2602,34 @@ function drawSpreadTimeline(svgId, instances, milestones) {
     const key = Math.round(x / 8) * 8;
     (bucketed[key] = bucketed[key] || []).push({ inst, x });
   });
-  let msIdx = 0;
+  // Milestone labels: width-aware placement on two rows. Blind alternation
+  // stacked all labels at the same x when milestones cluster in time (a fresh
+  // narrative has origin/amplification/pushback within days — flagged by
+  // Tarek on a July-2026 trace where every label overprinted). A label tries
+  // row 1, then row 2, then stays unlabeled — its dot keeps the enlarged
+  // style and the tooltip still carries the milestone name.
+  const msRows = [[], []];
+  let msRowPref = 0;
+  const placeMsLabel = (x, label) => {
+    const half = truncate(label, 26).length * 2.9;   // ~5.8px/char at 9.5px
+    const cx = Math.min(Math.max(x, 8 + half), width - 8 - half);
+    const fits = row => !msRows[row].some(([a, b]) => cx - half < b + 10 && cx + half > a - 10);
+    const row = fits(msRowPref) ? msRowPref : (fits(1 - msRowPref) ? 1 - msRowPref : null);
+    if (row === null) return null;
+    msRows[row].push([cx - half, cx + half]);
+    msRowPref = 1 - row;
+    return { cx, y: row === 0 ? 24 : 38 };
+  };
   Object.values(bucketed).forEach(bucket => {
+    // Dense buckets (a story's breakout day) stack in two columns so ten
+    // same-day dots don't climb through the milestone-label band.
+    const twoCol = bucket.length > 6;
+    const rows = twoCol ? Math.ceil(bucket.length / 2) : bucket.length;
     bucket.forEach(({ inst, x }, idx) => {
-      const verticalOffset = (idx - (bucket.length - 1) / 2) * 12;
+      const row = twoCol ? Math.floor(idx / 2) : idx;
+      const colShift = twoCol ? (idx % 2 ? 4.5 : -4.5) : 0;
+      x += colShift;
+      const verticalOffset = (row - (rows - 1) / 2) * 12;
       const role = inst.amplifier_role || 'unknown';
       const color = ROLE_COLORS[role] || ROLE_COLORS.unknown;
       const msLabel = msMap.get(inst);
@@ -2594,14 +2647,16 @@ function drawSpreadTimeline(svgId, instances, milestones) {
       circle.addEventListener('click', () => showDetail(inst));
       svg.appendChild(circle);
       if (msLabel) {
-        const lbl = document.createElementNS(ns, 'text');
-        // Alternate label heights so neighbors don't collide.
-        lbl.setAttribute('x', x);
-        lbl.setAttribute('y', (msIdx++ % 2 === 0) ? 24 : 38);
-        lbl.setAttribute('text-anchor', x > width - 90 ? 'end' : (x < 90 ? 'start' : 'middle'));
-        lbl.setAttribute('class', 'ms-marker-label');
-        lbl.textContent = truncate(msLabel, 26);
-        svg.appendChild(lbl);
+        const spot = placeMsLabel(x, msLabel);
+        if (spot) {
+          const lbl = document.createElementNS(ns, 'text');
+          lbl.setAttribute('x', spot.cx);
+          lbl.setAttribute('y', spot.y);
+          lbl.setAttribute('text-anchor', 'middle');
+          lbl.setAttribute('class', 'ms-marker-label');
+          lbl.textContent = truncate(msLabel, 26);
+          svg.appendChild(lbl);
+        }
       }
     });
   });
