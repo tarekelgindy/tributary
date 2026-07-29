@@ -1,0 +1,1649 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "8e48743e23ca",
+  "event": "Cyclospora parasites were detected in food products distributed across the United States.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-07-29T05:22:43.108566+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "069fec17462a",
+        "statement": "Cyclospora parasites were detected in food products distributed across the United States",
+        "verified": true,
+        "source_url": "https://www.cdc.gov/cyclospora/outbreaks/",
+        "note": "CDC maintains outbreak investigation records; specific outbreak year/scope would need to be pinned to a particular incident",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.986961+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "33ff157fa82c",
+        "statement": "Taylor Farms de Mexico is a produce supplier that has been linked to Cyclospora contamination in past U.S. outbreaks",
+        "verified": true,
+        "source_url": "https://www.fda.gov/food/recalls-outbreaks-emergencies/",
+        "note": "FDA recall and outbreak databases document Taylor Farms involvement in multiple Cyclospora incidents",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987001+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3a80362f06dc",
+        "statement": "Cyclospora outbreaks in the U.S. have historically been associated with fresh produce imported from Mexico",
+        "verified": true,
+        "source_url": "https://www.cdc.gov/parasites/cyclosporiasis/",
+        "note": "CDC epidemiological summaries document geographic pattern across multiple outbreak years",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987013+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "55f573d9e4d1",
+        "statement": "This is the largest Cyclospora outbreak in U.S. history",
+        "verified": false,
+        "source_url": "",
+        "note": "Requires comparison across all documented U.S. Cyclospora outbreaks; 'largest' metric (cases, states, duration) is not specified and would need historical data verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987022+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ecac3e954b1e",
+        "statement": "CDC and FDA budget cuts directly reduced surveillance capacity and delayed outbreak detection/response",
+        "verified": false,
+        "source_url": "",
+        "note": "Causal link between specific budget reductions and outbreak response capability is asserted but requires detailed budget timeline, surveillance program documentation, and epidemiological impact analysis",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987029+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "1315c423425b",
+        "statement": "Taylor Farms' market dominance in produce supply amplified outbreak reach",
+        "verified": false,
+        "source_url": "",
+        "note": "Market share data and distribution volume would need to be quantified; the causal claim that concentration 'amplified' spread is interpretive",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987036+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "fda7034e845d",
+        "statement": "Taco Bell and Walmart received contaminated products from Taylor Farms in this outbreak",
+        "verified": false,
+        "source_url": "",
+        "note": "Specific retailer involvement in the current outbreak would need to be confirmed against FDA recall notices; past associations exist but current incident specifics vary",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987043+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "43efe859646e",
+        "statement": "Mexican agricultural authorities tested negative for Cyclospora in the implicated produce",
+        "verified": false,
+        "source_url": "https://www.fda.gov/food/recalls-outbreaks-emergencies/",
+        "note": "Mexican test results are sometimes reported in FDA outbreak summaries but availability and interpretation vary by incident",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-07-29T05:22:36.987049+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether budget cuts to CDC/FDA were the primary cause of delayed detection and response, or whether other factors (supply chain complexity, environmental persistence of Cyclospora) were more significant",
+      "Whether the outbreak reflects a systemic failure of U.S. food safety infrastructure or a manageable incident within normal outbreak response parameters",
+      "Whether Taylor Farms' market concentration is a structural problem requiring regulatory intervention, or whether voluntary recalls and traceability are adequate",
+      "Whether RFK Jr.'s fresh-produce advocacy is contradicted by the outbreak, or whether outbreaks are inevitable and separate from policy direction",
+      "Whether the Mexico origin indicates inadequate import inspection standards, or whether Cyclospora contamination is a natural agricultural risk present in all produce-growing regions",
+      "Whether the recall was sufficiently rapid and transparent, or whether it was delayed and inadequately communicated to consumers"
+    ],
+    "summary": "All framings accept that Cyclospora parasites were detected in U.S.-distributed food products, likely linked to a Mexican supplier (Taylor Farms), and that this represents a multi-state public health incident. The disagreements center on causation (budget cuts vs. supply chain structure vs. natural risk), adequacy of response, and what systemic changes are needed\u2014not on the basic fact of contamination or its geographic/supply-chain footprint."
+  },
+  "framings": [
+    {
+      "framing_id": "db9f30ec",
+      "name": "Public Health Emergency & Consumer Safety",
+      "question": "How sick are people, what foods are dangerous, and what should the public do right now?",
+      "key_claim": "The largest Cyclospora outbreak in U.S. history is spreading across dozens of states and consumers need immediate, actionable guidance to protect themselves.",
+      "description": "Focuses on case counts, geographic spread, symptom severity, and practical advice for consumers on what to eat or avoid.",
+      "emphasizes": "Scale of illness, affected foods, vulnerable populations, and step-by-step safety tips",
+      "downplays": "Systemic causes, political accountability, and supply-chain structural failures",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Cyclospora Outbreak 2026 Map, Foods to Avoid as Parasite Reaches 41 States",
+        "What food is safe to eat and what to avoid as cyclosporiasis outbreak surges"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "f81155a09b74",
+          "name": "CDC (Centers for Disease Control and Prevention)",
+          "url": "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "CDC, FDA, and public health officials in several states are investigating a multistate outbreak of Cyclospora infections linked to iceberg lettuce in 9 states.",
+          "date": "2026-07-26",
+          "role_evidence": "CDC is the primary source of case counts, traceback data, and consumer safety advisories that all other outlets cite",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821741+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "37f4a759face",
+          "name": "TODAY.com",
+          "url": "https://www.today.com/health/news/cyclospora-outbreak-parasite-foods-avoid-lettuce-map-cases-states-rcna589115",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The nation's largest outbreak of cyclospora, the parasite known for causing 'explosive diarrhea,' has now expanded to nine states.",
+          "date": "2026-07-28",
+          "role_evidence": "Broad consumer-facing coverage with maps, food lists, and safety tips driving mass public awareness",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821800+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cc9642bd13b7",
+          "name": "CNN Health",
+          "url": "https://www.cnn.com/2026/07/15/health/cyclosporiasis-parasite-food-safe-avoid",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "It's probably a good idea to avoid bagged lettuce products and bagged salad products for now.",
+          "date": "2026-07-15",
+          "role_evidence": "Early, high-traffic consumer guidance piece amplifying CDC/expert advice to a national audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821815+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Budget cuts to CDC/FDA surveillance and detection capacity that may have delayed outbreak identification",
+          "found_in_framing": "Government Accountability & Budget Cuts",
+          "impact": "Reader cannot assess whether the outbreak's scale was preventable through adequate funding, or evaluate systemic preparedness failures",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857342+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Market concentration at Taylor Farms and how a single supplier's distribution network amplified outbreak reach across dozens of states",
+          "found_in_framing": "Supply Chain & Corporate Accountability",
+          "impact": "Reader sees the outbreak as a natural disaster rather than a structural vulnerability in the food system that could be addressed through supply-chain diversification",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857385+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The contradiction between RFK Jr.'s fresh-produce promotion and reduced agency capacity to ensure safety",
+          "found_in_framing": "RFK Jr. / MAHA Political Stress Test",
+          "impact": "Reader cannot evaluate whether public health messaging aligns with actual food safety infrastructure",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857393+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Historical pattern of Cyclospora outbreaks linked to Mexican imports and questions about cross-border inspection adequacy",
+          "found_in_framing": "Imported Produce & Cross-Border Food Safety",
+          "impact": "Reader may not recognize a recurring vulnerability in the import supply chain or question whether import standards need strengthening",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857399+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-29T05:22:26.821829+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "839d4c17",
+      "name": "Government Accountability & Budget Cuts",
+      "question": "Did federal funding cuts and staffing reductions weaken the food safety system and slow the outbreak response?",
+      "key_claim": "Trump administration cuts to CDC and FDA budgets and surveillance programs left the U.S. unprepared to detect and contain this outbreak.",
+      "description": "Argues that the outbreak exposes the consequences of dismantling public health infrastructure, specifically the elimination of Cyclospora from FoodNet tracking and delayed food traceability rules.",
+      "emphasizes": "CDC/FDA budget cuts, eliminated surveillance programs, delayed traceability rules, overwhelmed state health departments",
+      "downplays": "The administration's counter-claims of maintained staffing, and the parasite's inherent difficulty to detect regardless of funding",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Cyclospora Boosts Fears That Worse Foodborne Outbreaks Are Ahead",
+        "Cyclospora outbreak tests RFK Jr.'s promise to overhaul food system, rebuild trust in CDC"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "b724a927b3c0",
+          "name": "KFF Health News",
+          "url": "https://kffhealthnews.org/public-health/cyclospora-outbreak-foodborne-monitoring-cdc-fda-trump-cuts-michigan/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "\"We are starting to see the consequences of an underfunded public health system in 2026,\" said Natasha Bagdasarian, Michigan's chief medical executive.",
+          "date": "2026-07-28",
+          "role_evidence": "Detailed investigative piece directly linking outbreak response failures to federal funding cuts, quoting state officials",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821845+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bf5c0ffd9406",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/23/cyclospora-outbreak-tests-rfk-jr-response-funding-cuts.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Cyclospora presents a test for HHS Secretary Robert F. Kennedy Jr.'s promise to overhaul the food system and restore confidence in the agencies overseeing it.",
+          "date": "2026-07-23",
+          "role_evidence": "Prominent early piece framing the outbreak explicitly as a test of RFK Jr.'s MAHA agenda against a backdrop of agency cuts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821855+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a71d8e8a0d1b",
+          "name": "Consumer Reports Advocacy",
+          "url": "https://advocacy.consumerreports.org/research/cyclospora-outbreak-2026-what-consumers-need-to-know/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Consumer Reports explains how cuts to CDC and FDA have weakened the food safety systems Americans depend on \u2014 and what Congress must do now.",
+          "date": "2026-07",
+          "role_evidence": "Major consumer advocacy organization formally adopting the budget-cuts framing and calling for Congressional action",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821871+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Immediate, actionable consumer safety guidance and the scale of illness affecting vulnerable populations",
+          "found_in_framing": "Public Health Emergency & Consumer Safety",
+          "impact": "Reader focused on blame may not know how to protect themselves or their families in real time",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857406+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical difficulty of detecting Cyclospora at the farm level regardless of funding levels, and the parasite's inherent detection challenges",
+          "found_in_framing": "Imported Produce & Cross-Border Food Safety",
+          "impact": "Reader may overestimate the degree to which budget restoration alone would have prevented this outbreak",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857411+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Market concentration at Taylor Farms and how supply-chain structure, independent of agency funding, enabled rapid multi-state spread",
+          "found_in_framing": "Supply Chain & Corporate Accountability",
+          "impact": "Reader attributes outbreak solely to government failure and may not recognize that structural supply-chain reforms are also necessary",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857416+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Bipartisan history of underfunded food safety across administrations, which contextualizes whether this is a Trump-specific failure",
+          "found_in_framing": "RFK Jr. / MAHA Political Stress Test",
+          "impact": "Reader may attribute systemic underfunding to a single administration rather than recognizing a long-standing bipartisan problem",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857420+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-29T05:22:26.821884+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3cc9b441",
+      "name": "Supply Chain & Corporate Accountability",
+      "question": "How did a single large produce supplier and fast-food chain allow contaminated food to reach consumers across 27+ states?",
+      "key_claim": "The concentration of the produce supply chain in a single large supplier (Taylor Farms de Mexico) and its distribution to major retailers and chains like Taco Bell and Walmart amplified the outbreak's reach.",
+      "description": "Centers on the role of industrial-scale food processing and distribution networks in turning a localized contamination event into a national crisis.",
+      "emphasizes": "Taylor Farms' market dominance, Taco Bell's supply relationship, Walmart distribution, voluntary (not mandatory) recall",
+      "downplays": "Regulatory framework that governs these suppliers, and the difficulty of detecting Cyclospora at the farm level",
+      "tone": "measured",
+      "sample_headlines": [
+        "Taylor Farms Recalls Iceberg Lettuce Sourced From Central Mexico",
+        "What the Cyclospora Outbreak Says About the Food Safety System"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "d870ecfa1eea",
+          "name": "Civil Eats",
+          "url": "https://civileats.com/2026/07/28/cyclosporiasis-outbreak/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Lettuce from Taylor Farms, one of the largest salad and produce processors in the country, has been linked to the outbreak and subsequently recalled.",
+          "date": "2026-07-28",
+          "role_evidence": "Food-systems journalism outlet providing the most detailed structural analysis of how supply chain concentration enabled the outbreak's scale",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821896+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "1c80859fdd32",
+          "name": "CBS News Texas",
+          "url": "https://www.cbsnews.com/texas/video/changes-in-eating-as-cyclospora-outbreak-grows/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "That lettuce was shipped nationwide by Taylor Farms, a huge distributor that supplies thousands of groceries and restaurants.",
+          "date": "2026-07-27",
+          "role_evidence": "Broadcast news segment highlighting Taylor Farms' nationwide distribution reach to a mass audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821904+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "dbac6767d64d",
+          "name": "FDA",
+          "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-9-state-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026",
+          "carrier_type": "institutional",
+          "amplifier_role": "mention",
+          "excerpt": "The FDA and CDC, in collaboration with state and local partners, are investigating a multistate outbreak of Cyclospora infections linked to iceberg lettuce sourced from central Mexico.",
+          "date": "2026-07",
+          "role_evidence": "FDA's traceback investigation formally identified Taylor Farms de Mexico as the source, anchoring the corporate accountability narrative",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821913+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Immediate consumer safety guidance and the scale of illness across vulnerable populations",
+          "found_in_framing": "Public Health Emergency & Consumer Safety",
+          "impact": "Reader focused on corporate structure may not know how to protect themselves or understand the human cost of the outbreak",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857426+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Budget cuts to CDC/FDA surveillance programs that reduced the government's ability to detect and trace the outbreak quickly",
+          "found_in_framing": "Government Accountability & Budget Cuts",
+          "impact": "Reader may blame corporations alone and not recognize that underfunded regulatory agencies also failed to detect the outbreak in time",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857431+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical difficulty of detecting Cyclospora at the farm level, which suggests that even well-resourced regulators face inherent detection challenges",
+          "found_in_framing": "Imported Produce & Cross-Border Food Safety",
+          "impact": "Reader may overestimate the degree to which supply-chain consolidation alone caused the outbreak, missing the role of parasite biology",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857436+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The regulatory framework that governs suppliers like Taylor Farms and whether current rules adequately address concentration risk",
+          "found_in_framing": "Government Accountability & Budget Cuts",
+          "impact": "Reader may blame corporate behavior without understanding the legal and regulatory environment that permits or constrains it",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857441+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-29T05:22:26.821923+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "19344347",
+      "name": "RFK Jr. / MAHA Political Stress Test",
+      "question": "Does this outbreak validate or undermine RFK Jr.'s 'Make America Healthy Again' agenda and his management of HHS?",
+      "key_claim": "The outbreak creates a direct contradiction between RFK Jr.'s promotion of fresh produce consumption and his agencies' reduced capacity to ensure that produce is safe.",
+      "description": "Frames the outbreak as a political and ideological test for the MAHA movement, scrutinizing whether Kennedy's food-system overhaul promises hold up under a real crisis.",
+      "emphasizes": "RFK Jr.'s public statements, the irony of a fresh-produce outbreak under a 'healthy food' agenda, his claim the outbreak is 'under control'",
+      "downplays": "Bipartisan history of underfunded food safety, and the technical complexity of Cyclospora detection independent of any administration",
+      "tone": "measured",
+      "sample_headlines": [
+        "Cyclospora outbreak tests RFK Jr.'s promise to overhaul food system, rebuild trust in CDC",
+        "I led the FDA's food safety and nutrition center. Here's what people are missing about the cyclospora outbreak"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "2057f9ed4df7",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/23/cyclospora-outbreak-tests-rfk-jr-response-funding-cuts.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Kennedy has repeatedly promised to rebuild trust in the CDC following the Covid-19 pandemic and restore its focus on infectious disease, and the cyclospora response gives him a chance to display any improvements.",
+          "date": "2026-07-23",
+          "role_evidence": "First major outlet to explicitly frame the outbreak as a direct test of RFK Jr.'s MAHA credibility",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821932+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "bd1d7913ad60",
+          "name": "STAT News (Susan Mayne, former FDA CFSAN Director)",
+          "url": "https://www.statnews.com/2026/07/24/cyclospora-outbreak-contradiction-eat-real-food-less-safety-monitoring/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "As health secretary Kennedy promotes more fruit and vegetable consumption, his agencies have cut back on monitoring food-borne illnesses.",
+          "date": "2026-07-24",
+          "role_evidence": "Op-ed by a former senior FDA official directly naming the MAHA contradiction, lending institutional credibility to the framing",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821940+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0fd466d24cd0",
+          "name": "The Hill",
+          "url": "https://thehill.com/policy/healthcare/5995350-cyclosporiasis-cyclospora-fda-food-safety/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "\"The U.S. food supply is safe,\" the FDA's acting deputy commissioner for food, Donald Prater, said Monday.",
+          "date": "2026-07-28",
+          "role_evidence": "Amplifies the political tension by juxtaposing the FDA's reassurances against 11,000+ cases, reaching a broad political-news audience",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821948+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Immediate consumer safety guidance and the scale of illness affecting vulnerable populations",
+          "found_in_framing": "Public Health Emergency & Consumer Safety",
+          "impact": "Reader focused on political irony may not know how to protect themselves or understand the outbreak's human impact",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857450+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Bipartisan history of underfunded food safety across administrations, which contextualizes whether this is a Trump/RFK Jr.-specific failure",
+          "found_in_framing": "Government Accountability & Budget Cuts",
+          "impact": "Reader may attribute systemic underfunding to RFK Jr. specifically rather than recognizing a long-standing bipartisan problem",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857456+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Market concentration at Taylor Farms and how supply-chain structure enabled rapid multi-state spread independent of RFK Jr.'s messaging",
+          "found_in_framing": "Supply Chain & Corporate Accountability",
+          "impact": "Reader may attribute the outbreak solely to RFK Jr.'s policies and miss structural supply-chain vulnerabilities",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857464+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The technical complexity of Cyclospora detection independent of any administration, and the parasite's inherent difficulty to detect",
+          "found_in_framing": "Imported Produce & Cross-Border Food Safety",
+          "impact": "Reader may overestimate the degree to which RFK Jr.'s policies alone caused the outbreak, missing biological and technical realities",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857469+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-29T05:22:26.821957+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b531817c",
+      "name": "Imported Produce & Cross-Border Food Safety",
+      "question": "Does the repeated linkage of Cyclospora outbreaks to Mexican-grown produce reveal a structural failure in import safety standards?",
+      "key_claim": "Cyclospora outbreaks in the U.S. are recurrently tied to fresh produce imported from Mexico, raising questions about whether import inspection and agricultural standards are adequate.",
+      "description": "Highlights the geographic origin of contaminated produce (central Mexico) and the historical pattern of U.S. Cyclospora outbreaks being linked to Mexican imports, framing this as a cross-border regulatory challenge.",
+      "emphasizes": "Mexican origin of Taylor Farms lettuce, FDA import alerts, historical pattern of Mexico-linked outbreaks, Mexican authorities' negative test results",
+      "downplays": "U.S.-side distribution and retail failures, and the fact that Cyclospora is endemic globally and difficult to test for anywhere",
+      "tone": "measured",
+      "sample_headlines": [
+        "The Cyclosporiasis Outbreak: A Wake-Up Call for Global Food Safety",
+        "Mexican health authorities say samples from Taylor Farms facility tested negative for cyclospora"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "277c3b86b486",
+          "name": "FDA (Import Alert 24-23)",
+          "url": "https://www.accessdata.fda.gov/CMS_IA/importalert_1148.html",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "FDA and state and local public health officials investigated recurring outbreaks (in 2012, 2013, 2014 and 2015) of cyclosporiasis associated with fresh cilantro from the state of Puebla, Mexico.",
+          "date": "2015",
+          "role_evidence": "FDA's own import alert formally established the recurring Mexico-origin pattern, providing the documentary foundation for this framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20260717215417/https://www.accessdata.fda.gov/cms_ia/importalert_1148.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821967+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "232fb0708683",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/24/cyclospora-cdc-says-outbreak-is-in-nine-states.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Mexican health authorities on Thursday said that samples of lettuce and water from the facility tested negative for cyclospora.",
+          "date": "2026-07-24",
+          "role_evidence": "Reported the cross-border evidentiary conflict between FDA traceback findings and Mexican government test results, sharpening the import-safety debate",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821974+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "356d717c5389",
+          "name": "Tecnol\u00f3gico de Monterrey / TecScience",
+          "url": "https://tecscience.tec.mx/en/health/the-cyclosporiasis-outbreak/",
+          "carrier_type": "academic",
+          "amplifier_role": "mention",
+          "excerpt": "It is a scientific, technological, and public health challenge that demands international cooperation, innovation, and continuous surveillance.",
+          "date": "2026-07",
+          "role_evidence": "Mexican academic institution offering a cross-border public health framing, representing the non-U.S. perspective on shared food safety responsibility",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:26.821985+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Immediate consumer safety guidance and the scale of illness affecting vulnerable populations",
+          "found_in_framing": "Public Health Emergency & Consumer Safety",
+          "impact": "Reader focused on import policy may not know how to protect themselves or understand the outbreak's human impact",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857475+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Budget cuts to CDC/FDA surveillance programs that reduced U.S. detection and traceability capacity",
+          "found_in_framing": "Government Accountability & Budget Cuts",
+          "impact": "Reader may blame Mexican imports and Mexican authorities while missing U.S.-side regulatory failures in detection and response",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857479+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Market concentration at Taylor Farms and how U.S.-side distribution and retail networks amplified the outbreak's reach",
+          "found_in_framing": "Supply Chain & Corporate Accountability",
+          "impact": "Reader may focus on import controls while missing that U.S. supply-chain structure and retail distribution were equally critical to the outbreak's scale",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857484+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The fact that Cyclospora is endemic globally and difficult to test for anywhere, not a uniquely Mexican problem",
+          "found_in_framing": "Public Health Emergency & Consumer Safety",
+          "impact": "Reader may develop an inaccurate perception that Mexican produce is inherently less safe, when the parasite's detection difficulty is universal",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-07-29T05:22:40.857489+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-07-29T05:22:26.821994+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the perspective of affected farmers and agricultural workers whose livelihoods face economic damage from recalls and reputational harm, regardless of culpability. Missing: the technical/scientific framing focused on detection methods, environmental conditions enabling Cyclospora persistence, and whether current testing protocols are adequate or outdated. Missing: the consumer behavior and market response angle\u2014how this shapes purchasing decisions, organic vs. conventional preferences, or trust in food systems. Missing: the international trade and economic competitiveness framing, where food safety incidents become leverage points in trade negotiations or affect specific exporting nations' market access.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Cyclospora parasites were detected in food products distributed across the United States.",
+    "rated_outlets": 4,
+    "distribution": {
+      "left": 0,
+      "lean-left": 2,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 50,
+      "center": 50,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.5,
+    "resolve_rate": 0.5,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 4,
+      "examples": [
+        {
+          "carrier": "TODAY.com",
+          "domain": "today.com"
+        },
+        {
+          "carrier": "KFF Health News",
+          "domain": "kffhealthnews.org"
+        },
+        {
+          "carrier": "Civil Eats",
+          "domain": "civileats.com"
+        },
+        {
+          "carrier": "STAT News (Susan Mayne, former FDA CFSAN Director)",
+          "domain": "statnews.com"
+        }
+      ]
+    },
+    "non_news_carriers": 5,
+    "matched": [
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN Health",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News Texas",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Hill",
+        "carrier": "The Hill",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 10,
+        "political": 0,
+        "social": 0,
+        "institutional": 4,
+        "academic": 1,
+        "other": 0
+      },
+      "vested_interest": 4,
+      "framings_with_vested": 4,
+      "n_framings": 5
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 5,
+    "n_actors": 12,
+    "framings": [
+      {
+        "framing_id": "db9f30ec",
+        "name": "Public Health Emergency & Consumer Safety",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "4877243d3031",
+            "display": "CDC",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "254eefa44fc7",
+            "display": "TODAY.com",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "839d4c17",
+        "name": "Government Accountability & Budget Cuts",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "a63d8b3298e9",
+            "display": "Consumer Reports Advocacy",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "53bc837b2a17",
+            "display": "KFF Health News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3cc9b441",
+        "name": "Supply Chain & Corporate Accountability",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "91cd61fe9f26",
+            "display": "Civil Eats",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "854b5d95b800",
+            "display": "FDA",
+            "actor_type": "organization",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "19344347",
+        "name": "RFK Jr. / MAHA Political Stress Test",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "3e0628a72c5f",
+            "display": "STAT News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b531817c",
+        "name": "Imported Produce & Cross-Border Food Safety",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "854b5d95b800",
+            "display": "FDA",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0410cc6ad192",
+            "display": "Tecnol\u00f3gico de Monterrey",
+            "actor_type": "academic",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Government Accountability & Budget Cuts",
+          "Imported Produce & Cross-Border Food Safety",
+          "RFK Jr. / MAHA Political Stress Test"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Public Health Emergency & Consumer Safety",
+        "b": "Government Accountability & Budget Cuts",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Public Health Emergency & Consumer Safety",
+        "b": "Supply Chain & Corporate Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Public Health Emergency & Consumer Safety",
+        "b": "RFK Jr. / MAHA Political Stress Test",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Public Health Emergency & Consumer Safety",
+        "b": "Imported Produce & Cross-Border Food Safety",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Government Accountability & Budget Cuts",
+        "b": "Supply Chain & Corporate Accountability",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Supply Chain & Corporate Accountability",
+        "b": "RFK Jr. / MAHA Political Stress Test",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Government Accountability & Budget Cuts",
+        "b": "RFK Jr. / MAHA Political Stress Test",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Government Accountability & Budget Cuts",
+        "b": "Imported Produce & Cross-Border Food Safety",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Supply Chain & Corporate Accountability",
+        "b": "Imported Produce & Cross-Border Food Safety",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "RFK Jr. / MAHA Political Stress Test",
+        "b": "Imported Produce & Cross-Border Food Safety",
+        "shared": 1,
+        "jaccard": 0.2
+      }
+    ],
+    "by_actor_type": {
+      "organization": 2,
+      "news": 8,
+      "person": 1,
+      "academic": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.083,
+      "siloed_share": 0.833,
+      "mean_jaccard": 0.08
+    },
+    "structure_note": "1 of 12 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "circle_rollup": {},
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-07-29T05:22:43.108527+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
