@@ -227,11 +227,18 @@ contributions named by default with anonymous allowed (Wikipedia model); Tarek i
 sole approver; nothing publishes unreviewed; zero API cost (mechanical checks only).*
 
 **A. Landing page focus**
-- [ ] Cut the "More traces" topic cards from the front door (corpus.html and the
+- [x] Cut the "More traces" topic cards from the front door (corpus.html and the
       search box remain the catalog paths).
-- [ ] Restructure the page around the two capabilities — upstream (claim → origin)
+      (Removed 2026-09-13; the .card/.kind styles stay — the search results use them.)
+- [x] Restructure the page around the two capabilities — upstream (claim → origin)
       and downstream (event → framings) — each with one exemplar and one action.
       Hero, search box, share-card gallery, and weekly reports stay.
+      (Page order now: search → "Upstream · Where a claim comes from" (carrots trace
+      card + trace-your-own action) → "Downstream · How narratives spread around an
+      event" (crypto-disclosure framing preview: everyone-agrees strip + 4 of 8
+      framing cells with carrier names, floor-not-census caveat on the card) →
+      weekly reports → share-card gallery. The small updown callout retired —
+      the sections ARE the callout now.)
 - [ ] 10-second test during the friends round: a first-time visitor can name both
       capabilities unprompted.
 

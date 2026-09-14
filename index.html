@@ -246,45 +246,55 @@
                 background: #e6e3da;
             }
 
-            /* upstream / downstream callout */
-            .updown {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 0.8rem;
-                margin: 0 0 1.8rem;
+            /* the two capabilities, as page sections */
+            .secsub {
+                color: #777;
+                font-size: 0.9rem;
+                margin: 0 0 0.7rem;
             }
-            .udcard {
-                background: #fff;
-                border: 1px solid #e5e5e5;
-                border-radius: 10px;
-                padding: 0.95rem 1.1rem;
+            .secact {
+                color: #777;
+                font-size: 0.85rem;
+                margin: 0.5rem 0 0.4rem;
             }
-            .udcard .udk {
-                font-size: 0.68rem;
-                font-weight: 700;
-                letter-spacing: 0.09em;
-                text-transform: uppercase;
-                color: #2a6fa3;
-                margin-bottom: 0.3rem;
-            }
-            .udcard .udt {
-                font-weight: 600;
-                font-size: 0.98rem;
-                margin-bottom: 0.25rem;
-            }
-            .udcard p {
-                color: #555;
-                font-size: 0.88rem;
-                margin: 0 0 0.5rem;
-            }
-            .udcard a {
+            .secact a {
                 color: #2a6fa3;
                 text-decoration: none;
-                font-size: 0.86rem;
                 font-weight: 600;
             }
+            .agree {
+                background: #f4f3ef;
+                border-radius: 8px;
+                padding: 0.6rem 0.9rem;
+                font-size: 0.88rem;
+                color: #555;
+                margin: 0 0 0.9rem;
+            }
+            .agree strong {
+                color: #222;
+            }
+            .fangrid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.7rem;
+                margin: 0 0 0.4rem;
+            }
+            .fcell {
+                border: 1px solid #e8e6df;
+                border-radius: 8px;
+                padding: 0.6rem 0.8rem;
+            }
+            .fcell .fname {
+                font-weight: 600;
+                font-size: 0.92rem;
+            }
+            .fcell .fcar {
+                color: #888;
+                font-size: 0.8rem;
+                margin-top: 0.2rem;
+            }
             @media (max-width: 640px) {
-                .updown { grid-template-columns: 1fr; }
+                .fangrid { grid-template-columns: 1fr; }
             }
 
             /* share-card gallery */
@@ -384,34 +394,12 @@
             </p>
             <div id="askresults" hidden></div>
 
-            <div class="updown">
-                <div class="udcard">
-                    <div class="udk">Upstream — where ideas come from</div>
-                    <div class="udt">Trace a claim to its origin</div>
-                    <p>
-                        The earliest recorded use we can find, who amplified
-                        it, how the wording mutated on the way — with a dated,
-                        linked receipt on every hop.
-                    </p>
-                    <a
-                        href="fingerprint_viewer.html?load=examples/fingerprint_carrots_eyesight.json"
-                        >see an origin trace →</a
-                    >
-                </div>
-                <div class="udcard">
-                    <div class="udk">Downstream — how narratives spread</div>
-                    <div class="udt">Map how an event's coverage splits</div>
-                    <p>
-                        The competing framings that form around one event —
-                        what each emphasizes, what it leaves out, and who
-                        carries it.
-                    </p>
-                    <a
-                        href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json"
-                        >see a framing map →</a
-                    >
-                </div>
-            </div>
+            <h2>Upstream · Where a claim comes from</h2>
+            <p class="secsub">
+                Trace a claim back to its earliest recorded use — who said it
+                first, who amplified it, how the wording changed on the way,
+                with a dated, linked receipt on every hop.
+            </p>
 
             <div class="hero">
                 <div class="kicker">A narrative trace</div>
@@ -478,11 +466,61 @@
                     >
                 </div>
             </div>
-            <p class="herounder">
-                Every trace looks like this: who originated it, who amplified
-                it, how it mutated, and the evidence on every hop. Politics gets
-                the same treatment — so do folk claims like this one.
+            <p class="secact">
+                Politics gets the same treatment as folk claims like this one.
+                Trace your own claim with the search box above, or
+                <a href="corpus.html">browse every published trace →</a>
             </p>
+
+            <h2>Downstream · How narratives spread around an event</h2>
+            <p class="secsub">
+                Map one event into the competing framings forming around it —
+                what each emphasizes, what it leaves out, and who carries it.
+            </p>
+
+            <div class="hero">
+                <div class="kicker">An event analysis</div>
+                <div class="claim">
+                    Trump's $1B crypto disclosure — 8 competing framings
+                </div>
+                <div class="agree">
+                    <strong>Everyone agrees:</strong> the disclosure reports
+                    over $1B in crypto-related income; the $TRUMP token fell
+                    sharply; Binance's founder was pardoned. The contest is
+                    over what it <em>means</em>.
+                </div>
+                <div class="fangrid">
+                    <div class="fcell">
+                        <div class="fname">Corruption &amp; Conflict of Interest</div>
+                        <div class="fcar">6 recorded · NPR / Linda Kenyon, Sen. Elizabeth Warren +4</div>
+                    </div>
+                    <div class="fcell">
+                        <div class="fname">Retail Investor Harm</div>
+                        <div class="fcar">6 recorded · Nansen (blockchain analytics), CNN Business +4</div>
+                    </div>
+                    <div class="fcell">
+                        <div class="fname">Crypto Market Structure &amp; Tokenomics</div>
+                        <div class="fcar">6 recorded · Nansen (blockchain analytics), DataWallet +4</div>
+                    </div>
+                    <div class="fcell">
+                        <div class="fname">Foreign Influence &amp; National Security</div>
+                        <div class="fcar">5 recorded · Wall Street Journal Editorial Board, Forbes / Zach Everson +3</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <span>4 of 8 framings shown · carrier counts are a floor
+                        from our search, not a census · framing boundaries are
+                        AI judgments · AI-generated, not human-reviewed</span>
+                    <a
+                        href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json"
+                        >open the full analysis →</a
+                    >
+                </div>
+            </div>
+            <p class="secact">
+                Map your own — paste a news event into the search box above.
+            </p>
+
 
             <h2>This week in narratives — weekly reports</h2>
             <div class="weekcard">
@@ -513,67 +551,6 @@
                 Every card links to the full receipts.
             </p>
             <div class="cardsgrid" id="cardsgrid" hidden></div>
-
-            <h2>More traces</h2>
-
-            <a
-                class="card"
-                href="fingerprint_viewer.html?load=examples/fingerprint_chewing_gum.json"
-            >
-                <span class="kind up">where it came from</span
-                ><span class="title"
-                    >“Chewing gum stays in your stomach for years”</span
-                >
-                <p>
-                    First recorded in a 1993 Star Tribune piece (documented by
-                    Snopes) and repeated for decades — with the fact-check wave
-                    that examined it and the social posts still carrying it.
-                </p>
-            </a>
-
-            <a
-                class="card"
-                href="fingerprint_viewer.html?load=examples/fingerprint_rigged_economy.json"
-            >
-                <span class="kind up">where it came from</span
-                ><span class="title"
-                    >“The economy is rigged against working people”</span
-                >
-                <p>
-                    The phrasing runs through three decades of US politics; the
-                    idea's current wave traces to early-20th-century labor
-                    politics — with the amplifiers, mutations, and evidence on
-                    each hop, and the older intellectual tradition kept as
-                    context, not lineage.
-                </p>
-            </a>
-
-            <a
-                class="card"
-                href="fingerprint_viewer.html?load=examples/event_platner_allegations.json"
-            >
-                <span class="kind down">how an event split</span
-                ><span class="title"
-                    >Misconduct allegations against a Senate candidate</span
-                >
-                <p>
-                    Eight competing framings of one contested story: the common
-                    ground beneath them, and who carries each.
-                </p>
-            </a>
-
-            <a
-                class="card"
-                href="fingerprint_viewer.html?load=examples/event_gaza_airstrikes.json"
-            >
-                <span class="kind down">how an event split</span
-                ><span class="title">Israeli airstrikes in Gaza</span>
-                <p>
-                    An international story where a US left/right axis doesn't
-                    map — the coalition view shows the real structure of the
-                    coverage.
-                </p>
-            </a>
 
             <div class="links">
                 <strong>Go deeper:</strong>
