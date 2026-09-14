@@ -1,7 +1,8 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 2 — 2a (share artifact) done; next 2b (distribution)
-> **Last updated:** 2026-07-10
+> **Status:** Phase 2 — 2a done; 2c (community layer) unparked 2026-09-13 and in build;
+> 2b distribution runs friends-first alongside. Gate 2 still closes the phase.
+> **Last updated:** 2026-09-13
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
 > without logging a decision in the Decision Log. Gates after Phase 1 must be facts about
@@ -47,7 +48,7 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 | X/Twitter integration | No third-party context mechanism; API hostile | Treat as screenshot marketing channel only |
 | Browser extension | High build cost, brutal distribution | Phase 3 gate passed + demand for personalization |
 | Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings |
-| Human contribution layer (reader finds what the automated pass missed — e.g. an earlier attestation — and it enters the record) | Explicit goal (Tarek, 2026-07-10; mission has always been human+AI side by side). The groundwork is DORMANT, not absent: models.py carries Provenance review states (ai_generated → human_confirmed / disputed / consensus), Contribution/Contributor types and settlement rules; the viewer's provenance badges light up human states automatically; earlier-attestation + correction issue templates exist as the v0 intake channel. What's missing is the flow that turns a filed issue into a recorded, credited contribution | After Gate 2 (multiplier feedback tells us who would actually contribute); a Phase-3-adjacent build. Until then the issue templates ARE the contribution channel — point people at them |
+| Human contribution layer (reader finds what the automated pass missed — e.g. an earlier attestation — and it enters the record) | Explicit goal (Tarek, 2026-07-10; mission has always been human+AI side by side). The groundwork is DORMANT, not absent: models.py carries Provenance review states (ai_generated → human_confirmed / disputed / consensus), Contribution/Contributor types and settlement rules; the viewer's provenance badges light up human states automatically; earlier-attestation + correction issue templates exist as the v0 intake channel. What's missing is the flow that turns a filed issue into a recorded, credited contribution | **UNPARKED 2026-09-13 → Phase 2c** (see Decision Log): the friends-first 2b cohort satisfies the park condition ("who would actually contribute") in substance, a gate early |
 
 ---
 
@@ -217,6 +218,55 @@ in a typical capture week?
       (Recognition test + distribution in one motion.)
 - [ ] Log every reply verbatim in `FEEDBACK_LOG.md`.
 
+### 2c. Community layer (unparked 2026-09-13 — see Decision Log)
+
+*Landing focus + human contributions + provenance-visible visuals. Adds NO gate:
+Gate 2 still closes Phase 2 on distribution evidence. 2c exists so the friends-first
+2b round doubles as the first-contributors round. v1 policy (Tarek, 2026-09-13):
+contributions named by default with anonymous allowed (Wikipedia model); Tarek is
+sole approver; nothing publishes unreviewed; zero API cost (mechanical checks only).*
+
+**A. Landing page focus**
+- [ ] Cut the "More traces" topic cards from the front door (corpus.html and the
+      search box remain the catalog paths).
+- [ ] Restructure the page around the two capabilities — upstream (claim → origin)
+      and downstream (event → framings) — each with one exemplar and one action.
+      Hero, search box, share-card gallery, and weekly reports stay.
+- [ ] 10-second test during the friends round: a first-time visitor can name both
+      capabilities unprompted.
+
+**B. Contribution flow v1**
+- [ ] Intake on every trace page ("Add what we missed"): two kinds for v1, mapped to
+      the existing ContributionKind enum — `add` (earlier attestation: URL + date +
+      quote + reason) and `confirm`/`dispute` (an existing element: which element,
+      what is wrong or right, receipt). Display-name field, anonymous checkbox;
+      contact optional and never displayed.
+- [ ] Transport: Cloudflare Worker route (reuse the request path's KV rate-cap
+      pattern) → repository_dispatch → GitHub Action.
+- [ ] The Action runs the existing mechanical verifier on the submission (URL
+      reachable, quote-found) and opens a review item. Nothing publishes unreviewed.
+- [ ] Approve step: one action that writes the Contribution into the fingerprint's
+      ledger (models.py Contribution/Contributor), transitions the target element's
+      Provenance (ai_generated → human_confirmed / disputed; new entries
+      human_added), credits the display name, commits, deploys.
+- [ ] Per-trace contributions strip + a public contribution record (git history is
+      the ledger — surface it).
+- [ ] METHODOLOGY.md section: a contribution is a claim with receipts — humans get
+      verification status and review states too; credit and anonymity policy stated.
+- [ ] Issue templates updated to point at the new flow (they remain the fallback lane).
+
+**C. Provenance-visible visuals** *(follows B — it displays what B creates)*
+- [ ] Dot vocabulary for provenance on all timelines (viewer + cards): AI-found =
+      filled dot (current); human_added / human_confirmed / disputed get visually
+      distinct states; legends updated.
+- [ ] Credit surfaces: milestone rail, WHO strip, contributions strip ("earlier
+      attestation found by <name>").
+- [ ] Execute Standing Discipline #5 where earned: traces with human review replace
+      the blanket "AI-generated, not human-reviewed" with a per-element
+      mixed-provenance summary.
+- [ ] Eye-catching pass within the P5 honesty rules (no magnitude encoding for
+      search-bounded counts).
+
 **Gate 2 (outward — 8 weeks from first card):**
 - **PASS (either):** (a) any single artifact shared by accounts from more than one cluster,
   OR (b) any unsolicited substantive reply/follow-up from the multiplier list.
@@ -304,6 +354,7 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-07-09 | Beyond-L/R circle expansion acknowledged as an explicit goal and PARKED (new Park List row) rather than worked now | Start an independent/international/endogenous circle immediately | Tarek wants out of the L/R mould, but derailing Phase 1 for it would trade a committed gate for an uncommitted basis: AllSides is the only attributable membership source in hand, and endogenous circles (the preferred path — co-carriage clustering, mission-true, coalitions.py groundwork) need corpus scale and their own validation to survive hostile reading. The 1a schema means expansion is a new CIRCLES row + a new `basis`, not a refactor, so parking costs nothing structurally. |
 | 2026-07-10 | Share-card presentation honesty (2a): ages floor ("is 23 years old" at 23.86); circle chips require the quote's URL to sit under the named outlet's own domain; default card set is linked-basis claim-age traces only; "presented as breaking" copy dropped for date-vs-date contrast | Round ages the way issue-02's prose does ("24 years"); chips straight from intersection quotes; cards for every traced fingerprint; keep the plan's sample copy | A floored age is true under hostile reading ("is 23 years old" holds at 23.86; "24" doesn't) — issue-02's "across 24 years" describes an attestation *span*, so the two coexist, but cards are the artifact strangers screenshot and check. A chip naming an outlet whose quote lives on another outlet's domain would repeat the Fetterman/Maher relay trap in miniature (live case: WSJ-editorial-via-Daily-Beast excluded, CBS News stands). embedding_lead attachments are candidates by 1b definition — a candidate can't headline a share artifact. "Presented as breaking" asserts intent we didn't measure; showing first-attested next to in-the-news is the same punch, structurally. |
 | 2026-07-10 | Instrument finding (counter-trace pilot): the fingerprint matcher treats a claim and its NEGATION as the same narrative — "vaccines do not cause autism" matched and served the "vaccines cause autism" fingerprint (stopword stripping drops "do not"; signature collision). Workaround: --force. Logged, not yet fixed | Fix the matcher now (negation-aware signatures); ignore | Same lesson as Gate 1's blame/consequence finding in new clothing: negation is identity-critical, surface similarity isn't identity. Risk if unfixed: the request path's match-and-serve could hand a myth's trace to someone asking about the debunk. Not fixed today because matcher changes need their own validation pass (cost/care), and the counter-trace pilot only needed --force; fix belongs with the next matcher work batch. |
+| 2026-09-13 | UNPARK the human contribution layer as Phase 2c (community layer: landing focus + contribution flow v1 + provenance-visible visuals). v1 policy: contributions named by default with anonymous allowed (the Wikipedia model); Tarek is sole approver; two contribution kinds first (`add` = earlier attestation, `confirm`/`dispute` = existing elements); no new gate — Gate 2 still closes Phase 2 on distribution evidence | Keep parked until after Gate 2 (the original park condition); open all six ContributionKinds at once; reputation/consensus review from day one | The park condition was "multiplier feedback tells us who would actually contribute" — the friends-first 2b decision supplies exactly that trusted first cohort, so the condition is met in substance a gate early, and outreach gets stronger when "is this fair?" can be followed by "you can fix it — credited." The build is cheap because the layer is dormant, not absent (models.py Contribution/Contributor/Provenance states; viewer badges light up automatically; issue templates as fallback lane). Sole-approver plus the Worker's rate caps keep the honesty rules intact: a human contribution is a claim with receipts, mechanically verified and review-stated, never automatic truth. Earlier-attestation leads because it is the flagship human-finds-what-AI-missed case (live example: the Platner trace's missing pre-July misconduct wave) and dispute/confirm is the cheapest write-back while exercising every badge state (live example: Tarek's Mayo Clinic catch, done by hand 2026-07-10). The Contributor reputation ladder already sketched in models.py stays OFF until contribution volume justifies it. |
 
 ## Feedback Log
 
