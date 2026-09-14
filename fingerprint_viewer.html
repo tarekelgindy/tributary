@@ -730,6 +730,38 @@ circle.instance:hover { opacity: 0.7; }
 .who-dot { color: #bbb; }
 .fr-carried { color: #777; font-size: 0.78rem; }
 
+/* Contribution box (Phase 2c-B): the reader adds what the automated pass
+   missed. Same page grammar as the cards; nothing here publishes without
+   maintainer review, and the strip above the form credits what did. */
+#contribute-box { margin: 2rem 2rem 0; padding: 1.1rem 1.3rem; background: #fff;
+                  border: 1px solid #e5e5e5; border-radius: 10px; }
+#contribute-box h2 { margin: 0 0 0.25rem; font-size: 1.05rem; font-weight: 600; }
+#contribute-box .sub { color: #777; font-size: 0.85rem; margin: 0 0 0.8rem; }
+.contrib-strip { background: #f4f6f2; border-radius: 8px; padding: 0.6rem 0.9rem;
+                 font-size: 0.86rem; color: #444; margin: 0 0 0.9rem; }
+.contrib-strip a { color: #2a6fa3; text-decoration: none; }
+.contrib-strip .ck { font-weight: 600; }
+#contribute-box form { display: grid; gap: 0.55rem; }
+#contribute-box .row { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+/* display:flex would silently defeat [hidden] (the July drop-zone lesson:
+   author display beats the UA hidden rule) — make hidden mean it */
+#contribute-box .row[hidden] { display: none; }
+#contribute-box label.opt { font-size: 0.84rem; color: #444; display: flex;
+                            align-items: center; gap: 0.35rem; }
+#contribute-box input[type=text], #contribute-box input[type=url],
+#contribute-box select, #contribute-box textarea {
+  font-family: inherit; font-size: 0.88rem; padding: 0.45rem 0.6rem;
+  border: 1px solid #ccc; border-radius: 6px; background: #fff; flex: 1;
+  min-width: 180px; }
+#contribute-box textarea { min-height: 3.2rem; resize: vertical; }
+#contribute-box .hint { color: #999; font-size: 0.78rem; margin: -0.3rem 0 0; }
+#contribute-box button { justify-self: start; padding: 0.5rem 1.1rem;
+  border: none; border-radius: 6px; background: #2a6fa3; color: #fff;
+  font-size: 0.9rem; cursor: pointer; }
+#contribute-box button:hover { background: #1c5580; }
+#contrib-msg { font-size: 0.88rem; color: #444; }
+#contrib-msg a { color: #2a6fa3; }
+
 /* Tier-3 footer: the honesty line stays visible on every view; instrument
    metadata (IDs, models, thresholds) collapses behind it. */
 #about-footer { margin: 2rem 0 3rem; padding: 0.9rem 2rem 0; border-top: 1px solid #e7e7e7; color: #777; font-size: 0.82rem; }
@@ -780,6 +812,7 @@ circle.instance:hover { opacity: 0.7; }
     <section data-panel="lineages" hidden></section>
     <section data-panel="evidence" hidden></section>
   </main>
+  <section id="contribute-box" hidden></section>
   <footer id="about-footer" hidden></footer>
 </div>
 
@@ -968,6 +1001,7 @@ function renderEventAnalysis(analysis) {
   viewer.hidden = false;
   removeBackButton();
   setPlainSummary('');
+  setContribute(null);
 
   document.getElementById('claim-phrase').textContent = analysis.event || '(event analysis)';
 
@@ -1284,6 +1318,7 @@ function renderFramingAttention(r) {
   viewer.hidden = false;
   removeBackButton();
   setPlainSummary('');
+  setContribute(null);
   document.getElementById('tabs').style.display = 'none';
 
   document.getElementById('claim-phrase').textContent =
@@ -1395,6 +1430,7 @@ function renderAgendaReport(report) {
   viewer.hidden = false;
   removeBackButton();
   setPlainSummary('');
+  setContribute(null);
   document.getElementById('tabs').style.display = 'none';
 
   const period = report.period || {};
@@ -1548,6 +1584,7 @@ function renderArticle(analysis) {
   viewer.hidden = false;
   removeBackButton();
   setPlainSummary('');
+  setContribute(null);
 
   document.getElementById('claim-phrase').textContent =
     analysis.source_title || analysis.source_url || '(source analysis)';
@@ -1694,6 +1731,7 @@ function render(fp) {
   ]);
 
   setPlainSummary(plainSummaryHtml(fp));
+  setContribute(fp);
   maybeCardLink(fp.fingerprint_id);
 
   renderOverview(fp);
@@ -1820,6 +1858,146 @@ function addMetaText(parent, text) {
 // IDs, schema/model/prompt versions, thresholds — collapses behind it.
 // P2 wants provenance AVAILABLE on every page, not ambient in every card.
 const REPO_URL = 'https://github.com/tarekelgindy/tributary';
+// Same Worker as the homepage request flow; the /contribute route requires
+// the Phase 2c-B worker.js deploy. If it isn't live yet (or errors), the
+// form falls back to the GitHub issue templates.
+const WORKER_URL = 'https://tributary-requests.tarek-elgindy.workers.dev';
+
+// ---------------------------------------------------------------------------
+// Contribution box (Phase 2c-B): humans add what the automated pass missed.
+// v1 kinds: an earlier use (add), or confirm/dispute an existing entry.
+// Named by default, anonymous allowed; every submission goes through
+// mechanical verification and maintainer review before it publishes.
+// ---------------------------------------------------------------------------
+function setContribute(fp) {
+  const box = document.getElementById('contribute-box');
+  if (!box) return;
+  if (!fp) { box.hidden = true; box.innerHTML = ''; return; }
+  box.hidden = false;
+
+  const strip = contributionsStripHtml(fp);
+  const entries = [];
+  ['lexical', 'conceptual'].forEach(lin => {
+    ((fp.genealogy?.[lin] || {}).attestation_log || []).forEach(i => {
+      if (i.instance_id) entries.push({ id: i.instance_id, lin,
+        label: `${fmtAttDate(i) || '?'} — ${truncate((i.author || i.source_title || 'unknown'), 48)} (${LINEAGE_LABEL[lin]})` });
+    });
+  });
+  const opts = entries.map(e =>
+    `<option value="${escapeHtml(e.id)}">${escapeHtml(e.label)}</option>`).join('');
+
+  box.innerHTML = `
+    ${strip}
+    <h2>Add what we missed</h2>
+    <p class="sub">Know an earlier use, or a problem with an entry? Contributions are
+      checked mechanically (URL, quote) and reviewed by a human maintainer before they
+      publish — then they appear here, credited. A contribution is a claim with
+      receipts, not a verdict.</p>
+    <form id="contrib-form">
+      <div class="row">
+        <label class="opt"><input type="radio" name="ckind" value="add" checked> I found an earlier use</label>
+        <label class="opt"><input type="radio" name="ckind" value="confirm" ${entries.length ? '' : 'disabled'}> Confirm an entry</label>
+        <label class="opt"><input type="radio" name="ckind" value="dispute" ${entries.length ? '' : 'disabled'}> Dispute an entry</label>
+      </div>
+      <div class="row" data-cf="add">
+        <input type="url" id="c-url" placeholder="Link to the source (required)">
+        <input type="text" id="c-date" placeholder="Date: YYYY or YYYY-MM-DD (required)" style="max-width:220px;">
+      </div>
+      <div class="row" data-cf="add">
+        <textarea id="c-quote" placeholder="The exact words used there (lets us verify the page automatically)"></textarea>
+      </div>
+      <div class="row" data-cf="add">
+        <input type="text" id="c-author" placeholder="Who wrote/said it (optional)">
+        <select id="c-lineage" style="max-width:220px;">
+          <option value="lexical">this phrasing</option>
+          <option value="conceptual">the underlying idea</option>
+        </select>
+      </div>
+      <div class="row" data-cf="element" hidden>
+        <select id="c-element">${opts}</select>
+      </div>
+      <div class="row">
+        <textarea id="c-reason" placeholder="Why? (required for disputes — what's wrong, ideally with a receipt)"></textarea>
+      </div>
+      <div class="row">
+        <input type="text" id="c-name" placeholder="Your name, as it should appear (credited publicly)">
+        <label class="opt"><input type="checkbox" id="c-anon"> contribute anonymously</label>
+      </div>
+      <div class="row">
+        <input type="text" id="c-contact" placeholder="Contact (optional — kept private, never published)">
+      </div>
+      <button type="submit">Submit for review</button>
+      <div id="contrib-msg"></div>
+    </form>`;
+
+  const form = document.getElementById('contrib-form');
+  const showFields = () => {
+    const kind = form.querySelector('input[name=ckind]:checked').value;
+    form.querySelectorAll('[data-cf=add]').forEach(el => el.hidden = kind !== 'add');
+    form.querySelector('[data-cf=element]').hidden = kind === 'add';
+  };
+  form.querySelectorAll('input[name=ckind]').forEach(r => r.addEventListener('change', showFields));
+  showFields();
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const kind = form.querySelector('input[name=ckind]:checked').value;
+    const msg = document.getElementById('contrib-msg');
+    const val = id => (document.getElementById(id).value || '').trim();
+    const body = {
+      kind, fingerprint_id: fp.fingerprint_id,
+      url: val('c-url'), date: val('c-date'), quote: val('c-quote'),
+      source_author: val('c-author'), lineage: val('c-lineage') || 'lexical',
+      element_id: kind === 'add' ? '' : val('c-element'),
+      reason: val('c-reason'), name: val('c-name'),
+      anonymous: document.getElementById('c-anon').checked,
+      contact: val('c-contact'),
+    };
+    if (kind === 'add' && (!/^https?:\/\//.test(body.url) || !/^\d{4}(-\d{2})?(-\d{2})?$/.test(body.date))) {
+      msg.textContent = 'An earlier use needs a link and a date (YYYY, YYYY-MM, or YYYY-MM-DD).';
+      return;
+    }
+    if (kind === 'dispute' && body.reason.length < 12) {
+      msg.textContent = 'A dispute needs a reason — say what is wrong.';
+      return;
+    }
+    msg.textContent = 'Submitting…';
+    try {
+      const r = await fetch(WORKER_URL + '/contribute', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.error || ('HTTP ' + r.status));
+      form.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);
+      msg.innerHTML = `<strong>Received</strong> (ref ${escapeHtml(data.ref || '')}). A human maintainer
+        reviews every contribution before it publishes — approved ones appear on this page,
+        credited to ${escapeHtml(body.anonymous || !body.name ? 'Anonymous' : body.name)}.`;
+    } catch (err) {
+      msg.innerHTML = `Couldn't submit in-page (${escapeHtml(err.message)}). The fallback lane works now:
+        <a href="${REPO_URL}/issues/new?template=earlier-attestation.md" target="_blank" rel="noopener">file an earlier use →</a> ·
+        <a href="${REPO_URL}/issues/new?template=correction.md" target="_blank" rel="noopener">file a correction →</a>`;
+    }
+  });
+}
+
+// The strip above the form: what humans have already added or reviewed here,
+// with credit — plus the public record (the file's own commit history).
+function contributionsStripHtml(fp) {
+  const contribs = fp.contributions || [];
+  if (!contribs.length) return '';
+  const KIND_LABEL = { add: 'earlier use added', confirm: 'confirmed an entry',
+    dispute: 'disputed an entry', edit: 'edit', flag: 'flag', add_context: 'context added' };
+  const items = contribs.slice(0, 6).map(c =>
+    `<span class="ck">${escapeHtml(KIND_LABEL[c.kind] || c.kind)}</span> by
+     ${escapeHtml(c.contributor_name || 'Anonymous')} (${escapeHtml((c.created_at || '').slice(0, 10))})`);
+  const more = contribs.length > 6 ? ` · +${contribs.length - 6} more` : '';
+  const rel = (loadParam && loadParam.startsWith('gallery/'))
+    ? loadParam : `gallery/traces/${fp.fingerprint_id}.json`;
+  return `<div class="contrib-strip">${contribs.length} human contribution${contribs.length === 1 ? '' : 's'}:
+    ${items.join(' · ')}${more} ·
+    <a href="${REPO_URL}/commits/main/${escapeHtml(rel)}" target="_blank" rel="noopener">contribution record →</a></div>`;
+}
 function setAbout(kind, pairs) {
   const el = document.getElementById('about-footer');
   if (!el) return;
@@ -2313,7 +2491,7 @@ function milestoneHtml(entry) {
 function logRowsHtml(log, grp) {
   return log.map((i, idx) => {
     const role = i.amplifier_role || 'unknown';
-    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
+    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span>${provenanceBadge(i)}<strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
       isRelatedContext(i) ? ' <span class="who-year">related context</span>' : ''}${
       i.describes_period ? ` <span class="who-year" title="a retrospective: dated by its own publication; describes ${escapeHtml(i.describes_period)}">retrospective</span>` : ''}</div>`;
   }).join('');
