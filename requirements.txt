@@ -1,5 +1,8 @@
 # Core (required)
-anthropic>=0.45.0
+# <1 pin: the 1.x SDK removed temperature from messages.create() signatures
+# (TypeError at call time); fingerprint.py's 0.x->1.x migration is queued —
+# unpin when it lands. Same pin lives in .github/workflows/trace-request.yml.
+anthropic>=0.45.0,<1
 httpx>=0.27.0
 
 # Semantic matcher (matcher.py — local embeddings, no API cost at query time).

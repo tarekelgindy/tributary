@@ -53,7 +53,11 @@ jobs:
           python-version: "3.12"
 
       - name: Install deps (generation needs only anthropic + httpx)
-        run: pip install --quiet anthropic httpx
+        # anthropic pinned <1: the 1.x SDK removed the temperature kwarg from
+        # messages.create() (TypeError), which silently broke every request
+        # between the 1.x release and 2026-09-14. The 0.x->1.x migration of
+        # fingerprint.py is queued work; unpin when it lands.
+        run: pip install --quiet "anthropic<1" httpx
 
       - name: Generate and publish
         env:
