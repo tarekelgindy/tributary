@@ -243,24 +243,45 @@ sole approver; nothing publishes unreviewed; zero API cost (mechanical checks on
       capabilities unprompted.
 
 **B. Contribution flow v1**
-- [ ] Intake on every trace page ("Add what we missed"): two kinds for v1, mapped to
+- [x] Intake on every trace page ("Add what we missed"): two kinds for v1, mapped to
       the existing ContributionKind enum — `add` (earlier attestation: URL + date +
       quote + reason) and `confirm`/`dispute` (an existing element: which element,
       what is wrong or right, receipt). Display-name field, anonymous checkbox;
       contact optional and never displayed.
-- [ ] Transport: Cloudflare Worker route (reuse the request path's KV rate-cap
+      (Viewer form 2026-09-13; element picker built from the attestation logs;
+      falls back to the issue templates until the Worker redeploy. Same-class
+      [hidden]-vs-display bug caught by pixel check and fixed with the July cure.)
+- [x] Transport: Cloudflare Worker route (reuse the request path's KV rate-cap
       pattern) → repository_dispatch → GitHub Action.
-- [ ] The Action runs the existing mechanical verifier on the submission (URL
+      (worker.js /contribute: own caps (20/day, 5/IP), field clipping, and the
+      PRIVACY SPLIT — contact lives only in Worker KV (90d), never in the dispatch,
+      repo, or issue. NEEDS TAREK: redeploy worker.js + create 3 labels — see
+      infra/cloudflare-setup.md addendum.)
+- [x] The Action runs the existing mechanical verifier on the submission (URL
       reachable, quote-found) and opens a review item. Nothing publishes unreviewed.
-- [ ] Approve step: one action that writes the Contribution into the fingerprint's
+      (contribute.py --intake: sync mirror of the pipeline's checks + Wayback
+      lookup; review issue labeled contribution-pending carries a human summary,
+      the check results, and the machine-readable JSON block. Validated live:
+      a real Snopes URL + quote came back "verified — matched fuzzy quote chunk".)
+- [x] Approve step: one action that writes the Contribution into the fingerprint's
       ledger (models.py Contribution/Contributor), transitions the target element's
       Provenance (ai_generated → human_confirmed / disputed; new entries
       human_added), credits the display name, commits, deploys.
-- [ ] Per-trace contributions strip + a public contribution record (git history is
+      (Label approve-contribution = publish; close = decline. contribute.py --apply
+      updates EVERY published copy (standalone + event-embedded) so they never
+      drift; an earlier-than-earliest add moves first_attested and downgrades
+      single-origin → earliest-found. Dry-run validated all three kinds including
+      the anonymous earliest-mover and a dispute (provenance → disputed, sticky).)
+- [x] Per-trace contributions strip + a public contribution record (git history is
       the ledger — surface it).
-- [ ] METHODOLOGY.md section: a contribution is a claim with receipts — humans get
+      (Strip credits each contribution by kind/name/date + "contribution record →"
+      link to the file's commit history; log rows now render the ✎/✓/⚠ provenance
+      badges — verified in real renders. Full visual treatment is C's job.)
+- [x] METHODOLOGY.md section: a contribution is a claim with receipts — humans get
       verification status and review states too; credit and anonymity policy stated.
-- [ ] Issue templates updated to point at the new flow (they remain the fallback lane).
+      ("Human contributions" section: symmetry rule, kinds, review flow, credit +
+      anonymity (Wikipedia model), contact privacy, approval-is-not-a-verdict.)
+- [x] Issue templates updated to point at the new flow (they remain the fallback lane).
 
 **C. Provenance-visible visuals** *(follows B — it displays what B creates)*
 - [ ] Dot vocabulary for provenance on all timelines (viewer + cards): AI-found =

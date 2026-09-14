@@ -58,3 +58,27 @@ Push — the site switches from GitHub-issue links to the in-window flow.
   status/permalink-out. When volume justifies it, the GitHub-Actions executor
   behind it swaps for a container service without touching the site or the
   Worker API.
+
+---
+
+## Phase 2c-B addendum: the /contribute route (human contributions)
+
+The contribution flow reuses this exact Worker — **no new bindings, no new
+secrets**. One action needed:
+
+1. **Redeploy the Worker**: paste the current `infra/worker.js` over the
+   deployed script (Cloudflare dashboard → the worker → Edit code → Deploy).
+   That adds `POST /contribute`, which relays submissions to the
+   `contributions` GitHub workflow and keeps the optional contact field in
+   private KV only (90 days, `contrib:<ref>` keys) — contact never enters
+   the public repo.
+2. **Create three labels** on the GitHub repo (Settings → Labels), same as
+   the trace-request labels once needed: `contribution-pending`,
+   `contribution-rejected`, `approve-contribution`. Adding
+   `approve-contribution` to a review issue IS the publish action; closing
+   the issue declines it.
+3. Optional env vars on the Worker: `CONTRIB_DAILY_CAP` (default 20),
+   `CONTRIB_PER_IP_CAP` (default 5).
+
+Until the redeploy, the trace-page form falls back to the GitHub issue
+templates automatically — nothing breaks, it just isn't in-window yet.

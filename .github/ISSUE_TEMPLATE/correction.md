@@ -5,6 +5,10 @@ title: "Correction: "
 labels: correction
 ---
 
+> Tip: to confirm or dispute a specific attestation entry, the trace page's
+> **"Add what we missed"** form submits it in-window and credits you once approved.
+> For anything else — or if the form is down — this template is the right place.
+
 **Link to the trace** (the viewer permalink you were looking at):
 
 **What the trace claims:**

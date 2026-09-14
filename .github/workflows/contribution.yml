@@ -1,0 +1,116 @@
+# Human contributions (Phase 2c-B): intake -> review -> credited write-back.
+#
+#   1. repository_dispatch "contribution" — sent by the Cloudflare Worker's
+#      /contribute route when a reader submits from a trace page. This job
+#      runs the mechanical checks (URL reachable, quote-on-page, Wayback)
+#      and files a review issue labeled `contribution-pending`.
+#      NOTHING PUBLISHES AT INTAKE.
+#   2. The maintainer approves by adding the `approve-contribution` label
+#      (only collaborators can label — that IS the gate). The apply job
+#      writes the contribution into every published copy of the fingerprint
+#      with credited provenance, commits, and closes the issue. Declining
+#      is just closing the issue.
+#
+# Untrusted text (dispatch payload, issue body) flows exclusively through
+# env vars — never interpolated into scripts. Contact details never reach
+# this workflow at all: the Worker keeps them in private KV only.
+name: contributions
+
+on:
+  repository_dispatch:
+    types: [contribution]
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: contributions
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    if: github.event_name == 'repository_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install --quiet httpx
+      - name: Validate, verify, and file the review issue
+        env:
+          CONTRIB_KIND: ${{ github.event.client_payload.kind }}
+          CONTRIB_FP: ${{ github.event.client_payload.fingerprint_id }}
+          CONTRIB_URL: ${{ github.event.client_payload.url }}
+          CONTRIB_DATE: ${{ github.event.client_payload.date }}
+          CONTRIB_QUOTE: ${{ github.event.client_payload.quote }}
+          CONTRIB_SOURCE_AUTHOR: ${{ github.event.client_payload.source_author }}
+          CONTRIB_REASON: ${{ github.event.client_payload.reason }}
+          CONTRIB_ELEMENT: ${{ github.event.client_payload.element_id }}
+          CONTRIB_LINEAGE: ${{ github.event.client_payload.lineage }}
+          CONTRIB_NAME: ${{ github.event.client_payload.name }}
+          CONTRIB_ANON: ${{ github.event.client_payload.anonymous }}
+          CONTRIB_REF: ${{ github.event.client_payload.ref }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python contribute.py --intake --out review.md | tee intake.out
+          TITLE=$(grep '^TITLE=' intake.out | head -1 | cut -d= -f2-)
+          VALID=$(grep '^VALID=' intake.out | head -1 | cut -d= -f2-)
+          LABEL=$([ "$VALID" = "yes" ] && echo contribution-pending || echo contribution-rejected)
+          gh issue create --title "$TITLE" --body-file review.md --label "$LABEL" \
+            || gh issue create --title "$TITLE" --body-file review.md
+          # (fallback create-without-label covers a missing label on the repo;
+          #  the maintainer sees the issue either way)
+
+  apply:
+    if: >
+      github.event.action == 'labeled' &&
+      github.event.label.name == 'approve-contribution'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install --quiet httpx
+      - name: Apply the approved contribution
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python contribute.py --apply | tee apply.out
+          SUMMARY=$(grep '^SUMMARY=' apply.out | head -1 | cut -d= -f2-)
+          BY=$(grep '^BY=' apply.out | head -1 | cut -d= -f2-)
+          URL=$(grep '^URL=' apply.out | head -1 | cut -d= -f2-)
+
+          git config user.name "tributary-contribution-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add gallery
+          git commit -m "Contribution #$ISSUE_NUMBER by $BY: $SUMMARY"
+          git pull --rebase origin main
+          git push origin main
+
+          gh issue comment "$ISSUE_NUMBER" --body "Published — $SUMMARY, credited to $BY.
+
+          Live (after the Pages deploy, ~1–2 min): $URL
+
+          The contribution is recorded in the trace's own ledger with its verification status; the commit history is the public contribution record."
+          gh issue close "$ISSUE_NUMBER" --reason completed
+
+      - name: Report apply failure on the issue
+        if: failure()
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Apply failed — see the run log. The label can be re-added to retry once the cause is fixed." || true

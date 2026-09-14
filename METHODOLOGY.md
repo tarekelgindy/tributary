@@ -65,6 +65,22 @@ What each Tributary output claims, how it is produced, and — just as important
 
 ---
 
+## Human contributions
+
+Tributary's outputs are AI-generated, but the record is not AI-owned: readers can add what the automated pass missed, and human and AI material live side by side with their provenance visible. The design rule is symmetry — **a contribution is a claim with receipts**, and it gets exactly the treatment AI output gets: mechanical verification, a provenance label, a review state, and a public correction path. Approval is never a truth verdict; it means the receipt checks out well enough to enter the record with its verification status shown.
+
+**What can be contributed (v1):**
+- **An earlier use** of a narrative — a URL, a date, and ideally the exact words used there. If the date precedes the recorded earliest, the trace's "first attested" moves, credited to the contributor (and a `single-origin` status honestly downgrades to `earliest-found`).
+- **Confirming or disputing an existing entry** — affirming an entry is right, or challenging its date, attribution, or role, with a reason. Disputes mark the element `disputed` until resolved; they are sticky on purpose.
+
+**How it works:** the form on every trace page submits to the same rate-capped relay the trace-request flow uses. An automated job runs the mechanical checks (is the URL reachable? does the quoted text actually appear on the page? is there a Wayback snapshot?) and files the submission for review. **Nothing publishes unreviewed** — a maintainer approves or declines each one (sole-approver at current scale; the schema carries consensus/settlement rules for when the community outgrows that). A failed quote check is not automatically disqualifying — paywalled and offline-original sources fail mechanical checks while being perfectly good receipts; the maintainer judges.
+
+**Credit and anonymity:** contributions are credited by the display name given — the Wikipedia model: named by default, anonymous allowed. Contact details, if offered, are stored privately for follow-up only; they never appear in the public repo, the review record, or the page. The full contribution history is public by construction: every approved contribution is a commit on the trace's own file ("contribution record" on the trace page).
+
+**Where it shows:** approved contributions appear in the trace's ledger and on the page — the contributions strip credits each one, contributed entries carry a `✎ human` provenance badge, confirmed entries `✓ confirmed`, disputed ones `⚠ disputed`. Elements without human review keep their AI-generated label; the goal is per-element honesty, not a page-level shrug.
+
+---
+
 ## Error rate
 
 **Not yet measured.** A precision audit (manually verifying a random sample of ~50 attestations from the public corpus) is a committed roadmap item; the result — including the audit itself — will be published here. Until then, treat every figure above as carrying an unquantified error rate; that is precisely why the viewer shows verification badges per-citation instead of asking you to trust the whole.

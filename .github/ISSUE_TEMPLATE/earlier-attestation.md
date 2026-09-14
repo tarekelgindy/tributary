@@ -5,6 +5,10 @@ title: "Earlier sighting: "
 labels: earlier-attestation
 ---
 
+> Tip: the trace page itself now has an **"Add what we missed"** form that submits
+> this in-window, runs the URL/quote checks automatically, and credits you by name
+> (or anonymously) once approved. This template remains the fallback lane.
+
 **Link to the trace** (the viewer permalink):
 
 **Which lineage** (the exact phrasing, or the underlying idea):
