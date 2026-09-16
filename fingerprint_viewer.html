@@ -143,6 +143,10 @@ section { animation: fadein 0.2s; }
 }
 .role-legend div { display: flex; align-items: center; gap: 0.4rem; }
 .role-legend .dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; }
+.role-legend .dot-diamond { background: #fff; border: 2px solid #444; border-radius: 2px;
+                            transform: rotate(45deg); width: 0.55rem; height: 0.55rem; }
+.role-legend .dot-ring { background: #fff; border: 2px solid #2e7d32;
+                         width: 0.55rem; height: 0.55rem; }
 
 .timeline-block { margin-bottom: 1.8rem; }
 .timeline-block .timeline-header {
@@ -827,6 +831,20 @@ const ROLE_COLORS = {
   'unknown':                 '#bbb',
 };
 const ROLE_ORDER = ['originator','early-amplifier','mass-amplifier','institutional-adoption','critic','mention','unknown'];
+// Provenance vocabulary (Phase 2c-C), on channels the charts haven't spent:
+// SHAPE = origin (human-found -> diamond), RING = review state. Fill stays
+// the role, size stays the milestone. Renders only when a trace earned it.
+const PROV_RING = { 'human_confirmed': '#2e7d32', 'consensus': '#1b5e20',
+                    'disputed': '#d97706', 'retracted': '#d97706' };
+function provTipSuffix(inst) {
+  const p = inst.provenance || {};
+  const bits = [];
+  if (p.origin === 'human') bits.push('added by ' + (p.contributor_name || 'a contributor'));
+  if (p.status === 'human_confirmed') bits.push('human-confirmed');
+  else if (p.status === 'consensus') bits.push('consensus');
+  else if (p.status === 'disputed' || p.status === 'retracted') bits.push(p.status);
+  return bits.length ? ' · ' + bits.join(' · ') : '';
+}
 // Reader-facing names for the two genealogy lineages (internal keys stay
 // lexical/conceptual in the data).
 const LINEAGE_LABEL = { 'lexical': 'phrasing', 'conceptual': 'idea' };
@@ -1724,11 +1742,22 @@ function render(fp) {
   const scope = fp.scope || {};
   const window = (scope.time_window_start || '—') + ' to ' + (scope.time_window_end || 'present');
   addMeta(meta, 'scope', `${scope.language || 'en'} · ${scope.region || 'global'} · ${window}`);
+  // Per-element honesty (Standing Discipline #5): once humans have touched a
+  // trace, the blanket "not yet human-reviewed" would be false — count instead.
+  const _allLogs = (fp.genealogy?.lexical?.attestation_log || [])
+    .concat(fp.genealogy?.conceptual?.attestation_log || []);
+  const _reviewed = _allLogs.filter(i => {
+    const st = (i.provenance || {}).status;
+    return st && st !== 'ai_generated';
+  }).length;
+  const _nContrib = (fp.contributions || []).length;
   setAbout('narrative trace', [
     ['Fingerprint ID', fp.fingerprint_id],
     ['Schema version', fp.taxonomy_version],
     ['Model', (fp.provenance || {}).model],
-  ]);
+  ], _nContrib
+    ? `AI-generated narrative trace · ${_nContrib} human contribution${_nContrib === 1 ? '' : 's'} · ${_reviewed} of ${_allLogs.length} log entries carry a human review state — the rest are not yet reviewed.`
+    : null);
 
   setPlainSummary(plainSummaryHtml(fp));
   setContribute(fp);
@@ -1998,7 +2027,9 @@ function contributionsStripHtml(fp) {
     ${items.join(' · ')}${more} ·
     <a href="${REPO_URL}/commits/main/${escapeHtml(rel)}" target="_blank" rel="noopener">contribution record →</a></div>`;
 }
-function setAbout(kind, pairs) {
+function setAbout(kind, pairs, honesty) {
+  // `honesty` (Standing Discipline #5): a per-element mixed-provenance line
+  // replaces the blanket disclaimer the moment a trace has earned better.
   const el = document.getElementById('about-footer');
   if (!el) return;
   const rows = (pairs || [])
@@ -2006,7 +2037,7 @@ function setAbout(kind, pairs) {
     .map(([k, v]) => `<div><span class="label">${escapeHtml(k)}</span><span class="value">${escapeHtml(String(v))}</span></div>`)
     .join('');
   el.innerHTML = `
-    <div class="about-line">AI-generated ${escapeHtml(kind)} — not yet human-reviewed.
+    <div class="about-line">${honesty ? escapeHtml(honesty) : `AI-generated ${escapeHtml(kind)} — not yet human-reviewed.`}
       <a href="${REPO_URL}/blob/main/METHODOLOGY.md" target="_blank" rel="noopener">How it's made</a> ·
       <a href="${REPO_URL}/blob/main/CORRECTIONS.md" target="_blank" rel="noopener">Corrections log</a> ·
       <a href="${REPO_URL}/issues/new/choose" target="_blank" rel="noopener">Suggest a correction</a></div>
@@ -2480,10 +2511,12 @@ function milestoneHtml(entry) {
   const i = entry.inst;
   const role = i.amplifier_role || 'unknown';
   const via = citedViaOf(i);
+  const prov = i.provenance || {};
   return `<div class="ms-item role-${role}">
-    <div class="ms-head"><span class="ms-when">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span><span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
+    <div class="ms-head"><span class="ms-when">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="ms-label">${escapeHtml(entry.label)}</span><span class="role-tag ${role}">${escapeHtml(role)}</span>${provenanceBadge(i)}<span class="ms-lineage">${escapeHtml(LINEAGE_LABEL[entry.lineage] || entry.lineage)}</span></div>
     <div class="ms-who">${escapeHtml(i.author || '')}${i.source_title ? ' — ' + escapeHtml(i.source_title) : ''}${i.source_url ? ` <a href="${escapeHtml(i.source_url)}" target="_blank" rel="noopener">↗</a>` : ''}${
-      via ? ` <span class="who-year" title="the dated source is documented in ${escapeHtml(via)}'s citations — the link goes there, not to the original">documented by ${escapeHtml(via)}</span>` : ''}</div>
+      via ? ` <span class="who-year" title="the dated source is documented in ${escapeHtml(via)}'s citations — the link goes there, not to the original">documented by ${escapeHtml(via)}</span>` : ''}${
+      prov.origin === 'human' ? ` <span class="who-year">— found by ${escapeHtml(prov.contributor_name || 'a contributor')}</span>` : ''}</div>
     ${i.exact_quote ? `<div class="ms-quote">“${escapeHtml(truncate(i.exact_quote, 220))}”</div>` : ''}
   </div>`;
 }
@@ -2528,10 +2561,12 @@ function whoStrip(lexLog, conLog) {
   const origin = lexOrigin.length ? lexOrigin
     : uniq(all.filter(i => (i.amplifier_role || '') === 'originator'));
   const via = origin.length ? citedViaOf(origin[0]) : '';
+  const originProv = origin.length ? (origin[0].provenance || {}) : {};
   const originSeg = origin.length
     ? `<span class="who-seg"><strong>Origin:</strong> ${escapeHtml(truncate(nameOf(origin[0]), 36))}${
         yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))}${
-        via ? `, documented by ${escapeHtml(via)}` : ''})</span>` : ''}</span>`
+        via ? `, documented by ${escapeHtml(via)}` : ''})</span>` : ''}${
+        originProv.origin === 'human' ? ` <span class="who-year">— found by ${escapeHtml(originProv.contributor_name || 'a contributor')}</span>` : ''}</span>`
     : '';
   const parts = [
     originSeg,
@@ -2630,11 +2665,26 @@ function renderLineages(fp) {
   const lexLog = lex.attestation_log || [];
   const conLog = con.attestation_log || [];
 
+  // The provenance vocabulary joins the legend only when this trace earned it
+  const provStates = (() => {
+    const s = new Set();
+    lexLog.concat(conLog).forEach(i => {
+      const p = i.provenance || {};
+      if (p.origin === 'human') s.add('human-added');
+      if (p.status === 'human_confirmed' || p.status === 'consensus') s.add('human-confirmed');
+      if (p.status === 'disputed' || p.status === 'retracted') s.add('disputed');
+    });
+    return [...s].sort();
+  })();
   panel.innerHTML = `
     <div class="role-legend">
       ${ROLE_ORDER.map(role => `
         <div><span class="dot" style="background:${ROLE_COLORS[role]};"></span> ${role}</div>
       `).join('')}
+      ${provStates.map(s => s === 'human-added'
+        ? `<div><span class="dot dot-diamond"></span> human-added</div>`
+        : `<div><span class="dot dot-ring" style="border-color:${s === 'human-confirmed' ? '#2e7d32' : '#d97706'};"></span> ${s}</div>`
+      ).join('')}
     </div>
 
     <div class="timeline-block">
@@ -2811,19 +2861,53 @@ function drawSpreadTimeline(svgId, instances, milestones) {
       const role = inst.amplifier_role || 'unknown';
       const color = ROLE_COLORS[role] || ROLE_COLORS.unknown;
       const msLabel = msMap.get(inst);
-      const circle = document.createElementNS(ns, 'circle');
-      circle.setAttribute('cx', x);
-      circle.setAttribute('cy', axisY - 16 + verticalOffset);
-      circle.setAttribute('r', msLabel ? 7 : 4.5);
-      circle.setAttribute('fill', color);
-      circle.setAttribute('stroke', msLabel ? '#444' : 'white');
-      circle.setAttribute('stroke-width', msLabel ? 2 : 1.5);
-      circle.setAttribute('class', 'instance');
+      // Provenance vocabulary: human-found entries are diamonds, review
+      // states ring the dot (green confirmed, amber disputed). Fill stays
+      // the role, size stays the milestone.
+      const prov = inst.provenance || {};
+      const ring = PROV_RING[prov.status] || null;
+      const human = prov.origin === 'human';
+      const r = msLabel ? 7 : 4.5;
+      const cy = axisY - 16 + verticalOffset;
+      let dot;
+      if (human) {
+        dot = document.createElementNS(ns, 'path');
+        const rr = r + 1.5;
+        dot.setAttribute('d', `M ${x} ${cy - rr} L ${x + rr} ${cy} L ${x} ${cy + rr} L ${x - rr} ${cy} Z`);
+      } else {
+        dot = document.createElementNS(ns, 'circle');
+        dot.setAttribute('cx', x);
+        dot.setAttribute('cy', cy);
+        dot.setAttribute('r', r);
+      }
+      if (ring) {
+        // review-state ring as an outer halo, so it reads on any role fill
+        // (an amber stroke on an orange dot is invisible)
+        let halo;
+        if (human) {
+          halo = document.createElementNS(ns, 'path');
+          const ro = r + 4.5;
+          halo.setAttribute('d', `M ${x} ${cy - ro} L ${x + ro} ${cy} L ${x} ${cy + ro} L ${x - ro} ${cy} Z`);
+        } else {
+          halo = document.createElementNS(ns, 'circle');
+          halo.setAttribute('cx', x);
+          halo.setAttribute('cy', cy);
+          halo.setAttribute('r', r + 3);
+        }
+        halo.setAttribute('fill', 'none');
+        halo.setAttribute('stroke', ring);
+        halo.setAttribute('stroke-width', 2);
+        svg.appendChild(halo);
+      }
+      dot.setAttribute('fill', color);
+      dot.setAttribute('stroke', msLabel || human ? '#444' : 'white');
+      dot.setAttribute('stroke-width', msLabel ? 2 : 1.5);
+      dot.setAttribute('class', 'instance');
       const title = document.createElementNS(ns, 'title');
-      title.textContent = `${msLabel ? msLabel + ' — ' : ''}${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}`;
-      circle.appendChild(title);
-      circle.addEventListener('click', () => showDetail(inst));
-      svg.appendChild(circle);
+      title.textContent = `${msLabel ? msLabel + ' — ' : ''}${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}${provTipSuffix(inst)}`;
+      dot.appendChild(title);
+      dot.addEventListener('click', () => showDetail(inst));
+      svg.appendChild(dot);
       if (msLabel) {
         const spot = placeMsLabel(x, msLabel);
         if (spot) {
