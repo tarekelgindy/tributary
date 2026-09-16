@@ -336,6 +336,7 @@ def card_data(fid, subject, asof):
         "points": points,
         "spikes": spike_clusters(points),
         "who_strip": who_strip_text(dated),
+        "cast_deck": cast_deck(dated),
         "n_contrib": len(fp.get("contributions") or []),
         "roles_present": [r for r in ROLE_ORDER if any(p["role"] == r for p in points)],
         "prov_present": _prov_states(points),
@@ -539,6 +540,36 @@ def milestone_labels(dated):
     return ms
 
 
+def cast_deck(dated):
+    """The cast line that rides under the headline (Tarek, 2026-09-15: WHO
+    gets billing, not just the strip at the bottom): 'Origin: X · amplified
+    by A, B +n'. Role vocabulary is the established, footer-caveated one."""
+    name = lambda i: (i.get("author") or host_outlet(i.get("source_url"))
+                      or "").strip().split(" (")[0]
+
+    def uniq_names(items):
+        seen, out = set(), []
+        for i in items:
+            n = name(i)
+            if n and n not in seen:
+                seen.add(n)
+                out.append(n)
+        return out
+
+    origin = uniq_names([i for i in dated if (i.get("amplifier_role") or "") == "originator"]) \
+        or uniq_names(dated[:1])
+    amps = [n for n in uniq_names([i for i in dated if (i.get("amplifier_role") or "")
+                                   in ("early-amplifier", "mass-amplifier")])
+            if not origin or n != origin[0]]
+    parts = []
+    if origin:
+        parts.append(f"Origin: {origin[0]}")
+    if amps:
+        more = f" +{len(amps) - 2}" if len(amps) > 2 else ""
+        parts.append("amplified by " + ", ".join(amps[:2]) + more)
+    return " · ".join(parts)
+
+
 def who_strip_text(dated):
     """The trace's cast in one line — Origin / Amplified by / Adopted by /
     Pushback — ported from the viewer's whoStrip. Names are the product."""
@@ -707,14 +738,19 @@ def render_png(cd, out_path):
     kicker = "T R I B U T A R Y   ·   N A R R A T I V E   T R A C E"
     d.text((ML, 56), kicker, font=_font(22, "semibold"), fill=INK3)
 
-    f_head = _fit(d, cd["headline"], "bold", 74, cw)
-    d.text((ML, 96), cd["headline"], font=f_head, fill=INK1)
+    f_head = _fit(d, cd["headline"], "bold", 68, cw)
+    d.text((ML, 86), cd["headline"], font=f_head, fill=INK1)
 
-    f_phrase = _font(30)
-    py = 206
+    # the cast gets billing right under the number (WHO before the quote)
+    if cd["cast_deck"]:
+        d.text((ML, 182), _ellipsize(d, cd["cast_deck"], _font(22, "semibold"), cw),
+               font=_font(22, "semibold"), fill=INK1)
+
+    f_phrase = _font(26)
+    py = 214
     for ln in _wrap(d, "“" + cd["phrase"] + "”", f_phrase, cw, 2):
         d.text((ML, py), ln, font=f_phrase, fill=INK2)
-        py += 40
+        py += 34
 
     # --- spread over time, viewer-parity: role-colored dots, milestone
     # labels, cumulative shading (sequence, not influence) -------------------
@@ -1468,7 +1504,7 @@ def render_page(cd, out_path):
     ev = cd["event"]
     og_img = f"{SITE}gallery/cards/{fid}.png"
     og_url = f"{SITE}gallery/cards/{fid}.html"
-    desc_bits = [f"“{cd['phrase']}” — first attested {cd['first_human']}.",
+    desc_bits = ([f"{cd['cast_deck']}."] if cd["cast_deck"] else []) +         [f"“{cd['phrase']}” — first attested {cd['first_human']}.",
                  f"{cd['n_uses']} recorded uses."]
     if cd["outlets"]:
         desc_bits.append(f"Recently carried by {_names_prose(cd['outlets'][:3], with_dates=False)}.")
@@ -1534,6 +1570,7 @@ def render_page(cd, out_path):
   .kicker {{ font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
             color: #898781; margin-bottom: 0.5rem; }}
   .headline {{ font-size: 1.75rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.15rem; }}
+  .deck {{ font-weight: 600; font-size: 0.95rem; margin: 0 0 0.15rem; }}
   .phrase {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1.1rem; }}
   .carried {{ color: #52514e; font-size: 0.85rem; margin: 0.5rem 0 0; }}
   .who {{ color: #52514e; font-size: 0.86rem; margin: 0.55rem 0 0; line-height: 1.65; }}
@@ -1567,6 +1604,7 @@ def render_page(cd, out_path):
   <div class="card">
     <div class="kicker">Tributary · narrative trace</div>
     <div class="headline">{esc(cd["headline"])}</div>
+    {f'<p class="deck">{esc(cd["cast_deck"])}</p>' if cd["cast_deck"] else ''}
     <p class="phrase">“{esc(cd["phrase"])}”</p>
     {svg_timeline(cd)}
     {f'<p class="who">{esc(cd["who_strip"])}</p>' if cd["who_strip"] else ''}
