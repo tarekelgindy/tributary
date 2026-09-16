@@ -730,6 +730,10 @@ circle.instance:hover { opacity: 0.7; }
 /* WHO strip: the trace's cast in one line (origin, amplifiers, adopters, pushback) */
 .who-strip { margin: 0.55rem 0 0.4rem; font-size: 0.85rem; color: #444; line-height: 1.7; }
 .who-strip strong { color: #222; font-weight: 600; }
+.who-name { color: #2a6fa3; cursor: pointer; border-bottom: 1px dotted #a7c4dd; }
+.who-name:hover { border-bottom-style: solid; }
+.who-name.active { background: #dcebf7; border-radius: 3px; padding: 0 0.15rem;
+                   font-weight: 600; border-bottom: none; }
 .who-year { color: #999; }
 .who-dot { color: #bbb; }
 .fr-carried { color: #777; font-size: 0.78rem; }
@@ -850,6 +854,8 @@ function provTipSuffix(inst) {
 const LINEAGE_LABEL = { 'lexical': 'phrasing', 'conceptual': 'idea' };
 
 let currentFP = null;
+let actorHighlight = null;   // WHO highlight: set by clicking a name in the
+                             // strip; timelines dim every other source's dots
 let currentArticle = null;   // set when viewing a multi-claim source analysis
 let currentEvent = null;     // set when viewing a downstream event analysis
 
@@ -1759,6 +1765,7 @@ function render(fp) {
     ? `AI-generated narrative trace · ${_nContrib} human contribution${_nContrib === 1 ? '' : 's'} · ${_reviewed} of ${_allLogs.length} log entries carry a human review state — the rest are not yet reviewed.`
     : null);
 
+  actorHighlight = null;
   setPlainSummary(plainSummaryHtml(fp));
   setContribute(fp);
   maybeCardLink(fp.fingerprint_id);
@@ -1828,13 +1835,20 @@ function plainSummaryHtml(fp) {
     }
     return truncate(w || (i.source_title || '').split(' (')[0].trim(), 60);
   };
+  // WHO leads (Tarek, 2026-09-15): the source gets the bold, the date gets
+  // the parenthesis — determining WHO creates and amplifies is the mission;
+  // the date is supporting evidence.
   const via = citedVia(first.source_url);
-  let s = `The earliest use of ${label[p.k]} we found is from <strong>${escapeHtml(fmtDateProse(first))}</strong>` +
-    (who(first) ? ` (${escapeHtml(who(first))}${via ? `, documented by ${escapeHtml(via)}` : ''})` : '') + '. ';
+  const w1 = who(first);
+  let s = w1
+    ? `<strong>${escapeHtml(w1)}</strong> is the earliest source we found for ${label[p.k]} (${escapeHtml(fmtDateProse(first))}${via ? `, documented by ${escapeHtml(via)}` : ''}). `
+    : `The earliest use of ${label[p.k]} we found is from <strong>${escapeHtml(fmtDateProse(first))}</strong>. `;
   const n = p.log.length;
   if (n > 1) {
-    s += `${n} recorded uses in all, the most recent from ${escapeHtml(fmtDateProse(last))}` +
-      (who(last) ? ` (${escapeHtml(who(last))})` : '') + '. ';
+    const w2 = who(last);
+    s += `${n} recorded uses in all, most recently ${w2
+      ? `${escapeHtml(w2)} (${escapeHtml(fmtDateProse(last))})`
+      : escapeHtml(fmtDateProse(last))}. `;
   }
   const o = pick[1];
   if (o && parseDateFrac(o.g.first_attested_date) < parseDateFrac(p.g.first_attested_date)) {
@@ -2549,9 +2563,12 @@ function whoStrip(lexLog, conLog) {
     return out;
   };
   const byRoles = roles => uniq(all.filter(i => roles.includes(i.amplifier_role || '')));
+  // Each name is clickable: click -> that source's dots light up on the
+  // timeline (WHO gets a visual channel, not just supporting text).
+  const nameSpan = i => `<span class="who-name" data-actor="${escapeHtml(nameOf(i))}" title="click to light up this source's recorded uses on the timeline">${escapeHtml(truncate(nameOf(i), 32))}</span>`;
   const seg = (label, items, max) => {
     if (!items.length) return '';
-    const shown = items.slice(0, max).map(i => escapeHtml(truncate(nameOf(i), 32)));
+    const shown = items.slice(0, max).map(nameSpan);
     const more = items.length > max ? ` +${items.length - max}` : '';
     return `<span class="who-seg"><strong>${label}:</strong> ${shown.join(', ')}${more}</span>`;
   };
@@ -2563,9 +2580,9 @@ function whoStrip(lexLog, conLog) {
   const via = origin.length ? citedViaOf(origin[0]) : '';
   const originProv = origin.length ? (origin[0].provenance || {}) : {};
   const originSeg = origin.length
-    ? `<span class="who-seg"><strong>Origin:</strong> ${escapeHtml(truncate(nameOf(origin[0]), 36))}${
+    ? `<span class="who-seg"><strong>Origin:</strong> <span class="who-name" data-actor="${escapeHtml(nameOf(origin[0]))}" title="click to light up this source's recorded uses on the timeline">${escapeHtml(truncate(nameOf(origin[0]), 36))}</span>${
         yearOf(origin[0]) ? ` <span class="who-year">(${escapeHtml(yearOf(origin[0]))}${
-        via ? `, documented by ${escapeHtml(via)}` : ''})</span>` : ''}${
+        via ? `, documented by ${escapeHtml(truncate(via, 26))}` : ''})</span>` : ''}${
         originProv.origin === 'human' ? ` <span class="who-year">— found by ${escapeHtml(originProv.contributor_name || 'a contributor')}</span>` : ''}</span>`
     : '';
   const parts = [
@@ -2621,9 +2638,9 @@ function renderOverview(fp) {
   panel.innerHTML = `
     <div class="card">
       <h2>Spread over time — ${lexLog.length ? 'this phrasing' : 'the underlying idea'}</h2>
-      <svg class="timeline-svg" id="spread-overview"></svg>
       ${whoStrip(lexLog, conLog)}
-      <div class="ms-caveat">Observed sequence of dated attestations from the cited sources — a sparse sample, not a census. Order shows sequence, not influence. Shading: cumulative share of observed attestations. Click a dot for detail.</div>
+      <svg class="timeline-svg" id="spread-overview"></svg>
+      <div class="ms-caveat">Observed sequence of dated attestations from the cited sources — a sparse sample, not a census. Order shows sequence, not influence. Shading: cumulative share of observed attestations. Click a dot for detail; click a name above to light up that source's uses.</div>
       <div id="instance-detail-overview"></div>
     </div>
 
@@ -2645,6 +2662,17 @@ function renderOverview(fp) {
       </div>
     </details>
   `;
+
+  // Click a WHO-strip name to light up that source's dots on the timeline.
+  panel.querySelectorAll('.who-name').forEach(el => {
+    el.addEventListener('click', () => {
+      const name = el.getAttribute('data-actor') || '';
+      actorHighlight = actorHighlight === name ? null : name;
+      panel.querySelectorAll('.who-name').forEach(n =>
+        n.classList.toggle('active', actorHighlight !== null && n.getAttribute('data-actor') === actorHighlight));
+      document.querySelectorAll('.timeline-svg').forEach(applyActorHighlight);
+    });
+  });
 
   // Click a log row to unfold the full instance detail in place.
   panel.querySelectorAll('.log-row').forEach(row => {
@@ -2897,12 +2925,14 @@ function drawSpreadTimeline(svgId, instances, milestones) {
         halo.setAttribute('fill', 'none');
         halo.setAttribute('stroke', ring);
         halo.setAttribute('stroke-width', 2);
+        halo.setAttribute('data-actor', (inst.author || inst.source_title || '').trim());
         svg.appendChild(halo);
       }
       dot.setAttribute('fill', color);
       dot.setAttribute('stroke', msLabel || human ? '#444' : 'white');
       dot.setAttribute('stroke-width', msLabel ? 2 : 1.5);
       dot.setAttribute('class', 'instance');
+      dot.setAttribute('data-actor', (inst.author || inst.source_title || '').trim());
       const title = document.createElementNS(ns, 'title');
       title.textContent = `${msLabel ? msLabel + ' — ' : ''}${inst.date || '?'} · ${(inst.author || 'unknown')} · ${role}${provTipSuffix(inst)}`;
       dot.appendChild(title);
@@ -2921,6 +2951,15 @@ function drawSpreadTimeline(svgId, instances, milestones) {
         }
       }
     });
+  });
+  applyActorHighlight(svg);
+}
+
+// Dim every source except the clicked one; redraws (tab switches) re-apply.
+function applyActorHighlight(svg) {
+  svg.querySelectorAll('[data-actor]').forEach(el => {
+    el.style.opacity = (actorHighlight && el.getAttribute('data-actor') !== actorHighlight)
+      ? '0.15' : '';
   });
 }
 
