@@ -320,7 +320,7 @@ def card_data(fid, subject, asof):
                "who": (i.get("author") or host_outlet(i.get("source_url"))
                        or "").strip().split(" (")[0],
                "role": (i.get("amplifier_role") or "unknown"),
-               "ms": ms.get(k, "")} for k, i in enumerate(dated)]
+               "ms": ms.get(k, ""), **_prov_fields(i)} for k, i in enumerate(dated)]
     return {
         "fingerprint_id": fid,
         "phrase": (fp.get("lexical") or {}).get("canonical_phrase") or "",
@@ -336,7 +336,9 @@ def card_data(fid, subject, asof):
         "points": points,
         "spikes": spike_clusters(points),
         "who_strip": who_strip_text(dated),
+        "n_contrib": len(fp.get("contributions") or []),
         "roles_present": [r for r in ROLE_ORDER if any(p["role"] == r for p in points)],
+        "prov_present": _prov_states(points),
         "circles": circles,
         "outlets": outlets_flat,
         "event": event,
@@ -480,6 +482,40 @@ ROLE_ORDER = ["originator", "early-amplifier", "mass-amplifier",
               "institutional-adoption", "critic", "mention", "unknown"]
 _hex_rgb = lambda h: tuple(int(h.lstrip("#")[k:k + 2], 16) for k in (0, 2, 4))
 
+# Provenance vocabulary (Phase 2c-C), on channels the charts haven't spent:
+# SHAPE = origin (human-found -> diamond, AI-found -> circle); RING COLOR =
+# review state (green human-confirmed, dark-green consensus, amber disputed);
+# fill stays the role, size stays the milestone. States render only when a
+# trace has earned them — no vocabulary tax on untouched traces.
+PROV_RING = {"human_confirmed": "#2e7d32", "consensus": "#1b5e20",
+             "disputed": "#d97706", "retracted": "#d97706"}
+
+
+def _prov_fields(inst):
+    p = inst.get("provenance") or {}
+    return {"porigin": p.get("origin") or "ai",
+            "pstatus": p.get("status") or "ai_generated",
+            "by": (p.get("contributor_name") or "").strip()}
+
+
+def _prov_tip(pt):
+    bits = []
+    if pt.get("porigin") == "human":
+        bits.append("added by " + (pt.get("by") or "a contributor"))
+    st = pt.get("pstatus")
+    if st in ("human_confirmed", "consensus"):
+        bits.append("human-confirmed" if st == "human_confirmed" else "consensus")
+    elif st in ("disputed", "retracted"):
+        bits.append(st)
+    return (" · " + " · ".join(bits)) if bits else ""
+
+
+def _prov_states(points):
+    return sorted({s for p in points for s in (
+        (["human-added"] if p.get("porigin") == "human" else []) +
+        (["human-confirmed"] if p.get("pstatus") in ("human_confirmed", "consensus") else []) +
+        (["disputed"] if p.get("pstatus") in ("disputed", "retracted") else []))})
+
 
 def _trunc(s, n):
     s = str(s or "")
@@ -582,6 +618,77 @@ def _wrap(draw, text, font, max_w, max_lines):
     return lines[:max_lines]
 
 
+def _draw_dot(d, x, y, r, pt, ms):
+    """One attestation dot with the full vocabulary: role fill, milestone
+    size handled by caller via r, human-origin diamond, review-state ring.
+    Rings sit outside a card-background halo so they read on ANY role fill
+    (amber-on-orange was invisible without the gap)."""
+    fill = _hex_rgb(ROLE_COLORS.get(pt.get("role", "unknown"), ROLE_COLORS["unknown"]))
+    ring = PROV_RING.get(pt.get("pstatus") or "")
+    if pt.get("porigin") == "human":
+        rr = r + 2
+        d.polygon([(x, y - rr), (x + rr, y), (x, y + rr), (x - rr, y)],
+                  fill=fill, outline=(68, 68, 68), width=2)
+        if ring:
+            ro = rr + 4
+            d.polygon([(x, y - ro), (x + ro, y), (x, y + ro), (x - ro, y)],
+                      outline=_hex_rgb(ring), width=3)
+    else:
+        d.ellipse([x - r, y - r, x + r, y + r], fill=fill,
+                  outline=(68, 68, 68) if ms else CARD_BG, width=2)
+        if ring:
+            ro = r + 4
+            d.ellipse([x - ro, y - ro, x + ro, y + ro],
+                      outline=_hex_rgb(ring), width=3)
+
+
+def _svg_dot(x, y, r, pt, ms, tip):
+    fill = ROLE_COLORS.get(pt.get("role", "unknown"), ROLE_COLORS["unknown"])
+    ring = PROV_RING.get(pt.get("pstatus") or "")
+    tip = tip + _prov_tip(pt)
+    title = f"<title>{esc(tip)}</title>"
+    out = ""
+    if pt.get("porigin") == "human":
+        rr = r + 1.5
+        shape = (f'<path d="M {x:.1f} {y - rr:.1f} L {x + rr:.1f} {y:.1f} '
+                 f'L {x:.1f} {y + rr:.1f} L {x - rr:.1f} {y:.1f} Z" fill="{fill}" '
+                 f'stroke="#444444" stroke-width="1.5">{title}</path>')
+        if ring:
+            ro = rr + 3
+            out = (f'<path d="M {x:.1f} {y - ro:.1f} L {x + ro:.1f} {y:.1f} '
+                   f'L {x:.1f} {y + ro:.1f} L {x - ro:.1f} {y:.1f} Z" fill="none" '
+                   f'stroke="{ring}" stroke-width="2"/>')
+        return out + shape
+    shape = (f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{fill}" '
+             f'stroke="{"#444444" if ms else "#fcfcfb"}" stroke-width="1.5">{title}</circle>')
+    if ring:   # halo gap keeps the ring legible on any role fill
+        out = (f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 3:.1f}" fill="none" '
+               f'stroke="{ring}" stroke-width="2"/>')
+    return out + shape
+
+
+def _draw_legend(d, x, y, roles, prov, max_x):
+    """Role swatches + (only when earned) the provenance vocabulary. Stops
+    before the wordmark rather than overprinting it."""
+    f_leg = _font(16)
+    for kind, label in [("role", r) for r in roles] + [("prov", s) for s in prov]:
+        w = d.textlength(label, font=f_leg)
+        if x + 15 + w + 18 > max_x:
+            break
+        if kind == "role":
+            d.ellipse([x, y + 4, x + 10, y + 14], fill=_hex_rgb(ROLE_COLORS[label]))
+        elif label == "human-added":
+            d.polygon([(x + 5, y + 2), (x + 11, y + 9), (x + 5, y + 16), (x - 1, y + 9)],
+                      fill=CARD_BG, outline=(68, 68, 68), width=2)
+        else:
+            ring = _hex_rgb(PROV_RING["human_confirmed" if label == "human-confirmed"
+                                      else "disputed"])
+            d.ellipse([x, y + 4, x + 10, y + 14], fill=CARD_BG, outline=ring, width=2)
+        d.text((x + 15, y), label, font=f_leg, fill=INK3)
+        x += 15 + w + 18
+    return x
+
+
 def _dashed_vline(draw, x, y1, y2, color, dash=6, gap=5, width=2):
     y = y1
     while y < y2:
@@ -627,11 +734,7 @@ def render_png(cd, out_path):
         _dashed_vline(d, g["marker"]["x"], area_top - 14, axis_y - 2, BASELINE)
 
     for dot in g["dots"]:
-        r = 7 if dot["ms"] else 5
-        d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
-                  fill=_hex_rgb(ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])),
-                  outline=(68, 68, 68) if dot["ms"] else CARD_BG,
-                  width=2 if dot["ms"] else 2)
+        _draw_dot(d, dot["x"], dot["y"], 7 if dot["ms"] else 5, dot["p"], dot["ms"])
 
     # milestone labels (viewer parity): two rows inside the chart top; a label
     # colliding on its row tries the other row before giving up
@@ -704,19 +807,16 @@ def render_png(cd, out_path):
 
     # --- legend + honesty clauses, on the image itself ----------------------
     d.line([ML, 540, MR, 540], fill=GRID, width=2)
-    f_leg = _font(16)
-    lx = ML
-    for role in cd["roles_present"]:
-        d.ellipse([lx, 553, lx + 10, 563], fill=_hex_rgb(ROLE_COLORS[role]))
-        d.text((lx + 15, 549), role, font=f_leg, fill=INK3)
-        lx += 15 + d.textlength(role, font=f_leg) + 18
+    _draw_legend(d, ML, 549, cd["roles_present"], cd["prov_present"], MR - 130)
     n_dots = len(cd["points"])
     counts = f'{cd["n_uses"]} recorded uses' + \
         (f' ({n_dots} dated)' if n_dots != cd["n_uses"] else '')
-    d.text((ML, 578), _ellipsize(d,
-           f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
-           f'earliest found, not provably first · AI-traced, not human-reviewed', _font(16), cw),
-           font=_font(16), fill=INK3)
+    tail = (f'AI-traced · {cd["n_contrib"]} human contribution'
+            f'{"" if cd["n_contrib"] == 1 else "s"}' if cd["n_contrib"]
+            else 'AI-traced, not human-reviewed')
+    foot = (f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
+            f'earliest found, not provably first · {tail}')
+    d.text((ML, 578), foot, font=_fit(d, foot, "regular", 16, cw, min_size=13), fill=INK3)
     wordmark = "tributary"
     f_wm = _font(22, "semibold")
     d.text((MR - d.textlength(wordmark, font=f_wm), 549), wordmark,
@@ -755,8 +855,8 @@ def _vs_side(fp):
     who = lambda i: (i.get("author") or host_outlet(i.get("source_url"))
                      or "").strip().split(" (")[0]
     points = [{"frac": date_frac(i.get("date")), "date": i.get("date") or "",
-               "who": who(i), "role": (i.get("amplifier_role") or "unknown")}
-              for i in dated]
+               "who": who(i), "role": (i.get("amplifier_role") or "unknown"),
+               **_prov_fields(i)} for i in dated]
     idea_note = ""
     conc = gen.get("conceptual") or {}
     if lineage == "lexical" and conc.get("first_attested_date"):
@@ -792,7 +892,8 @@ def vs_card_data(claim_fp, counter_fp):
     roles = [r for r in ROLE_ORDER
              if any(p["role"] == r for p in a["points"] + b["points"])]
     return {"claim": a, "counter": b, "headline": headline,
-            "roles_present": roles}
+            "roles_present": roles,
+            "prov_present": _prov_states(a["points"] + b["points"])}
 
 
 def _stack_dots(pts, X, base_y, bucket_px=12, gap=10):
@@ -869,10 +970,7 @@ def render_vs_png(vcd, out_path):
         d.text((ML, base - 60), f'{label} · {side["n_uses"]} recorded uses',
                font=f_trk, fill=INK3)
         for dot in _stack_dots(side["points"], X, base):
-            r = 6 if dot["ms"] else 5
-            d.ellipse([dot["x"] - r, dot["y"] - r, dot["x"] + r, dot["y"] + r],
-                      fill=_hex_rgb(ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])),
-                      outline=(68, 68, 68) if dot["ms"] else CARD_BG, width=2)
+            _draw_dot(d, dot["x"], dot["y"], 6 if dot["ms"] else 5, dot["p"], dot["ms"])
     d.line([ML, axis_y, MR, axis_y], fill=BASELINE, width=2)
     f_t = _font(18)
     for t, label in _ticks_for(t0, t1):
@@ -883,12 +981,7 @@ def render_vs_png(vcd, out_path):
 
     # legend + honesty clauses
     d.line([ML, 540, MR, 540], fill=GRID, width=2)
-    f_leg = _font(16)
-    lx = ML
-    for role in vcd["roles_present"]:
-        d.ellipse([lx, 553, lx + 10, 563], fill=_hex_rgb(ROLE_COLORS[role]))
-        d.text((lx + 15, 549), role, font=f_leg, fill=INK3)
-        lx += 15 + d.textlength(role, font=f_leg) + 18
+    _draw_legend(d, ML, 549, vcd["roles_present"], vcd["prov_present"], MR - 130)
     d.text((ML, 578), _ellipsize(d,
            'separately-sampled traces — dot counts aren’t comparable volumes · '
            'roles are unaudited AI labels · earliest found, not provably first · '
@@ -916,13 +1009,10 @@ def svg_vs(vcd):
         parts.append(f'<line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}" stroke="#e1e0d9" stroke-width="1.5"/>'
                      f'<text x="{x0}" y="{base - 52}" class="trk">{esc(label)} · {side["n_uses"]} RECORDED USES</text>')
         for dot in _stack_dots(side["points"], X, base, bucket_px=10, gap=9):
-            r = 5.5 if dot["ms"] else 4
-            fill = ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])
             tip = ("first attested — " if dot["ms"] else "") + dot["p"]["date"] + \
                 (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "") + f' · {dot["p"]["role"]}'
-            parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
-                         f'stroke="{"#444444" if dot["ms"] else "#fcfcfb"}" stroke-width="1.5">'
-                         f'<title>{esc(tip)}</title></circle>')
+            parts.append(_svg_dot(dot["x"], dot["y"], 5.5 if dot["ms"] else 4,
+                                  dot["p"], dot["ms"], tip))
     parts.append(f'<line x1="{x0}" y1="{axis_y}" x2="{x1}" y2="{axis_y}" stroke="#c3c2b7" stroke-width="1.5"/>')
     for t, label in _ticks_for(t0, t1):
         x = X(t)
@@ -981,6 +1071,9 @@ def render_vs_page(vcd, out_path, slug):
   .lg {{ white-space: nowrap; }}
   .lgdot {{ display: inline-block; width: 9px; height: 9px; border-radius: 50%;
            margin-right: 0.3rem; vertical-align: -1px; }}
+  .lgdiamond {{ border-radius: 1px; background: #fcfcfb; border: 2px solid #444;
+             transform: rotate(45deg); width: 7px; height: 7px; }}
+  .lgring {{ background: #fcfcfb; border: 2px solid #2e7d32; width: 7px; height: 7px; }}
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
@@ -1003,7 +1096,7 @@ def render_vs_page(vcd, out_path, slug):
     {side_html(a, "The claim")}
     {side_html(b, "The rebuttal")}
     {svg_vs(vcd)}
-    <div class="legend">{legend_html(vcd["roles_present"])}</div>
+    <div class="legend">{legend_html(vcd["roles_present"], vcd["prov_present"])}</div>
     <div class="cardfoot">
       <span>two separately-sampled traces — dot counts are not comparable volumes · roles are unaudited AI labels · earliest found, not provably first</span>
       <span>AI-traced, not human-reviewed</span>
@@ -1300,13 +1393,10 @@ def svg_timeline(cd):
                      f'x2="{g["marker"]["x"]:.1f}" y2="{axis_y - 2}" '
                      f'stroke="#c3c2b7" stroke-width="1.5" stroke-dasharray="5 4"/>')
     for dot in g["dots"]:
-        r = 6 if dot["ms"] else 4
-        fill = ROLE_COLORS.get(dot["p"]["role"], ROLE_COLORS["unknown"])
         tip = (f'{dot["p"]["ms"]} — ' if dot["p"].get("ms") else "") + dot["p"]["date"] + \
             (f' · {dot["p"]["who"]}' if dot["p"]["who"] else "") + f' · {dot["p"]["role"]}'
-        parts.append(f'<circle cx="{dot["x"]:.1f}" cy="{dot["y"]:.1f}" r="{r}" fill="{fill}" '
-                     f'stroke="{"#444444" if dot["ms"] else "#fcfcfb"}" stroke-width="1.5">'
-                     f'<title>{esc(tip)}</title></circle>')
+        parts.append(_svg_dot(dot["x"], dot["y"], 6 if dot["ms"] else 4,
+                              dot["p"], dot["ms"], tip))
 
     # milestone labels (viewer parity): two rows; retry the other row on collision
     ms_rows = {0: [], 1: []}
@@ -1358,10 +1448,18 @@ def svg_timeline(cd):
     return "".join(parts)
 
 
-def legend_html(roles_present):
-    return "".join(
+def legend_html(roles_present, prov_present=()):
+    out = "".join(
         f'<span class="lg"><span class="lgdot" style="background:{ROLE_COLORS[r]}"></span>{esc(r)}</span>'
         for r in roles_present)
+    for s in prov_present:
+        if s == "human-added":
+            out += '<span class="lg"><span class="lgdot lgdiamond"></span>human-added</span>'
+        else:
+            ring = PROV_RING["human_confirmed" if s == "human-confirmed" else "disputed"]
+            out += (f'<span class="lg"><span class="lgdot lgring" '
+                    f'style="border-color:{ring}"></span>{esc(s)}</span>')
+    return out
 
 
 def render_page(cd, out_path):
@@ -1396,6 +1494,17 @@ def render_page(cd, out_path):
 
     alt = (f'{cd["headline"]} Timeline of {cd["n_uses"]} recorded uses from '
            f'{cd["first_human"]} onward. “{cd["phrase"]}”')
+
+    # Standing Discipline #5: the blanket disclaimer is replaced the moment a
+    # trace earns better — per-element review states do the talking then.
+    nc = cd["n_contrib"]
+    foot_right = (f'AI-traced · {nc} human contribution{"" if nc == 1 else "s"}'
+                  if nc else 'AI-traced, not human-reviewed')
+    honesty_open = ((f'This card is AI-generated; the trace behind it carries {nc} credited '
+                     f'human contribution{"" if nc == 1 else "s"}, and every element shows '
+                     f'its own review state — diamond dots were found by people, ringed '
+                     f'dots were human-reviewed.')
+                    if nc else 'This card is AI-generated and not yet human-reviewed.')
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1434,6 +1543,9 @@ def render_page(cd, out_path):
   .lg {{ white-space: nowrap; }}
   .lgdot {{ display: inline-block; width: 9px; height: 9px; border-radius: 50%;
            margin-right: 0.3rem; vertical-align: -1px; }}
+  .lgdiamond {{ border-radius: 1px; background: #fcfcfb; border: 2px solid #444;
+             transform: rotate(45deg); width: 7px; height: 7px; }}
+  .lgring {{ background: #fcfcfb; border: 2px solid #2e7d32; width: 7px; height: 7px; }}
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
@@ -1458,11 +1570,11 @@ def render_page(cd, out_path):
     <p class="phrase">“{esc(cd["phrase"])}”</p>
     {svg_timeline(cd)}
     {f'<p class="who">{esc(cd["who_strip"])}</p>' if cd["who_strip"] else ''}
-    <div class="legend">{legend_html(cd["roles_present"])}</div>
+    <div class="legend">{legend_html(cd["roles_present"], cd["prov_present"])}</div>
     {carried_note}
     <div class="cardfoot">
       <span>{cd["n_uses"]} recorded uses · one dot each, colored by role — a sample, not a census · roles are unaudited AI labels · first attested {esc(cd["first_human"])}, the earliest we found</span>
-      <span>AI-traced, not human-reviewed</span>
+      <span>{esc(foot_right)}</span>
     </div>
   </div>
 
@@ -1470,7 +1582,7 @@ def render_page(cd, out_path):
   {event_link}
 
   <p class="honesty">
-    This card is AI-generated and not yet human-reviewed. “First attested” is the earliest
+    {honesty_open} “First attested” is the earliest
     use our search found — attestation confidence as recorded by the pipeline: {cd["confidence"]:.2f} —
     and an earlier one may exist. Dot order shows sequence, not influence; hover any dot
     for its date, source, and role. Role labels (originator / amplifier / adoption /

@@ -284,16 +284,39 @@ sole approver; nothing publishes unreviewed; zero API cost (mechanical checks on
 - [x] Issue templates updated to point at the new flow (they remain the fallback lane).
 
 **C. Provenance-visible visuals** *(follows B — it displays what B creates)*
-- [ ] Dot vocabulary for provenance on all timelines (viewer + cards): AI-found =
+- [x] Dot vocabulary for provenance on all timelines (viewer + cards): AI-found =
       filled dot (current); human_added / human_confirmed / disputed get visually
       distinct states; legends updated.
-- [ ] Credit surfaces: milestone rail, WHO strip, contributions strip ("earlier
+      (2026-09-15. Encoding on unspent channels: SHAPE = origin (human-found →
+      diamond), RING = review state (green confirmed / dark-green consensus /
+      amber disputed), fill stays role, size stays milestone — every combination
+      legible. Rings are outer halos with a gap after amber-on-orange proved
+      invisible as a plain stroke (caught by pixel check, both surfaces).
+      Legends grow the vocabulary only on traces that earned it. Tooltips carry
+      "added by <name>" / review state. Same helpers drive trace cards, vs
+      cards, and the viewer.)
+- [x] Credit surfaces: milestone rail, WHO strip, contributions strip ("earlier
       attestation found by <name>").
-- [ ] Execute Standing Discipline #5 where earned: traces with human review replace
+      (Milestone rail gains the provenance badge + "found by <name>"; WHO strip
+      credits a human-found origin; the strip from B already credits per
+      contribution. Validated on a live-rendered test trace where a contribution
+      moved the origin: the milestone reads "1980-06 · This phrasing first
+      attested · ✎ human · found by Ada Weaver" and the card headline honestly
+      re-aged from 33 to 46 years — the loop compounds.)
+- [x] Execute Standing Discipline #5 where earned: traces with human review replace
       the blanket "AI-generated, not human-reviewed" with a per-element
       mixed-provenance summary.
-- [ ] Eye-catching pass within the P5 honesty rules (no magnitude encoding for
+      (Viewer footer: "AI-generated narrative trace · N human contributions ·
+      R of T log entries carry a human review state — the rest are not yet
+      reviewed." Card footer + share-page honesty swap the same way. Blanket
+      wording remains wherever no human has touched the trace — it stays true
+      there.)
+- [x] Eye-catching pass within the P5 honesty rules (no magnitude encoding for
       search-bounded counts).
+      (Deliberately restrained: the halo rings and diamonds ARE the eye-catcher —
+      they mark exactly the elements with the strongest provenance story, and
+      nothing else gained visual weight. No sized bars, no new magnitude
+      encodings.)
 
 **Gate 2 (outward — 8 weeks from first card):**
 - **PASS (either):** (a) any single artifact shared by accounts from more than one cluster,
