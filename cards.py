@@ -158,6 +158,7 @@ DOMAIN_OUTLETS = {
 }
 
 _norm = lambda s: re.sub(r"[^a-z0-9]", "", (s or "").lower())
+HEX12_FP = re.compile(r"^[a-f0-9]{12}$")
 
 
 def host_outlet(url):
@@ -233,13 +234,15 @@ def collect_subjects(gallery_dir, fingerprints_dir, only_ids=None):
         for fid in only_ids:
             if fid in subjects:
                 continue
-            standalone = fingerprints_dir / f"{fid}.json"
-            if standalone.exists():
-                subjects[fid] = {"fp": json.loads(standalone.read_text(encoding="utf-8")),
-                                 "event": None, "row": None}
+            for src in (fingerprints_dir / f"{fid}.json",
+                        gallery_dir / "traces" / f"{fid}.json"):
+                if src.exists():
+                    subjects[fid] = {"fp": json.loads(src.read_text(encoding="utf-8")),
+                                     "event": None, "row": None}
+                    break
             else:
-                print(f"[cards] --fp {fid}: no fingerprints/{fid}.json and no "
-                      f"linked event — skipped", file=sys.stderr)
+                print(f"[cards] --fp {fid}: no local or published copy found "
+                      f"— skipped", file=sys.stderr)
     return subjects
 
 
@@ -604,9 +607,11 @@ def who_strip_text(dated):
 
 
 def _font(size, weight="regular"):
-    names = {"bold": ["segoeuib.ttf", "arialbd.ttf"],
-             "semibold": ["seguisb.ttf", "segoeuib.ttf", "arialbd.ttf"],
-             "regular": ["segoeui.ttf", "arial.ttf"]}[weight]
+    # DejaVu fallbacks let CI (ubuntu runners) render cards for freshly
+    # fulfilled trace requests — different face, same layout math via _fit.
+    names = {"bold": ["segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
+             "semibold": ["seguisb.ttf", "segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
+             "regular": ["segoeui.ttf", "arial.ttf", "dejavu/DejaVuSans.ttf", "DejaVuSans.ttf"]}[weight]
     for n in names:
         for base in (Path("C:/Windows/Fonts"), Path("/usr/share/fonts/truetype")):
             f = base / n
@@ -1650,6 +1655,9 @@ def main():
     ap.add_argument("--event", action="append", default=None, metavar="ID",
                     help="render a framing-fan card for this event analysis id "
                          "(repeatable; explicit only — no default event set)")
+    ap.add_argument("--all-traces", action="store_true",
+                    help="also render a card for every standalone trace in "
+                         "gallery/traces/ (the every-trace-exports policy)")
     ap.add_argument("--vs", action="append", default=None, metavar="CLAIM:REBUTTAL",
                     help="render a claim-vs-rebuttal two-track card from two "
                          "fingerprint ids (repeatable; explicit only)")
@@ -1667,7 +1675,11 @@ def main():
     cards_dir.mkdir(parents=True, exist_ok=True)
     traces_dir.mkdir(parents=True, exist_ok=True)
 
-    subjects = collect_subjects(gallery, fpdir, set(args.fp) if args.fp else None)
+    only = set(args.fp) if args.fp else None
+    if args.all_traces:
+        only = (only or set()) | {p.stem for p in (gallery / "traces").glob("*.json")
+                                  if HEX12_FP.match(p.stem)}
+    subjects = collect_subjects(gallery, fpdir, only)
     index, rendered = [], 0
     for fid, subject in sorted(subjects.items()):
         cd = card_data(fid, subject, asof)
@@ -1743,8 +1755,22 @@ def main():
         rendered += 1
         print(f"[cards] {aid}: {ecd['headline']}  (event card)", file=sys.stderr)
 
-    (cards_dir / "index.json").write_text(
-        json.dumps({"count": rendered, "as_of": asof.isoformat(), "cards": index},
+    # MERGE into the existing index — an incremental run (CI cards a single
+    # fresh trace) must never wipe other traces' entries, or every other
+    # viewer Share button dies with them.
+    merged = {}
+    idx_path = cards_dir / "index.json"
+    if idx_path.exists():
+        try:
+            for c in json.loads(idx_path.read_text(encoding="utf-8")).get("cards") or []:
+                merged[c.get("page")] = c
+        except (json.JSONDecodeError, OSError):
+            pass
+    for c in index:
+        merged[c.get("page")] = c
+    cards = sorted(merged.values(), key=lambda c: c.get("page", ""))
+    idx_path.write_text(
+        json.dumps({"count": len(cards), "as_of": asof.isoformat(), "cards": cards},
                    indent=1, ensure_ascii=False), encoding="utf-8")
     build_search_index(gallery)   # new gallery/traces JSONs join the search corpus
     print(f"[cards] {rendered} cards -> {cards_dir}. "

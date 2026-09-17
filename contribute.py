@@ -380,6 +380,7 @@ def apply_mode(gallery, body):
 
     print(f"[contribute] applied: {summary}", file=sys.stderr)
     print(f"SUMMARY={summary}")
+    print(f"FPID={record['fingerprint_id']}")
     print(f"BY={record['display_name']}")
     print(f"FILES={' '.join(touched)}")
     print(f"URL=https://tarekelgindy.github.io/tributary/fingerprint_viewer.html"

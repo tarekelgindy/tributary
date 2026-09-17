@@ -41,7 +41,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install deps
-        run: pip install --quiet httpx
+        run: pip install --quiet httpx pillow
       - name: Validate, verify, and file the review issue
         env:
           CONTRIB_KIND: ${{ github.event.client_payload.kind }}
@@ -80,7 +80,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install deps
-        run: pip install --quiet httpx
+        run: pip install --quiet httpx pillow
       - name: Apply the approved contribution
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
@@ -90,6 +90,9 @@ jobs:
           set -euo pipefail
           python contribute.py --apply | tee apply.out
           SUMMARY=$(grep '^SUMMARY=' apply.out | head -1 | cut -d= -f2-)
+          FPID=$(grep '^FPID=' apply.out | head -1 | cut -d= -f2-)
+          # a contribution can move a trace's origin — refresh its share card
+          python cards.py --fp "$FPID" || echo "::warning::card refresh failed for $FPID"
           BY=$(grep '^BY=' apply.out | head -1 | cut -d= -f2-)
           URL=$(grep '^URL=' apply.out | head -1 | cut -d= -f2-)
 

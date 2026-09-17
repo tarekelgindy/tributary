@@ -57,7 +57,7 @@ jobs:
         # messages.create() (TypeError), which silently broke every request
         # between the 1.x release and 2026-09-14. The 0.x->1.x migration of
         # fingerprint.py is queued work; unpin when it lands.
-        run: pip install --quiet "anthropic<1" httpx
+        run: pip install --quiet "anthropic<1" httpx pillow
 
       - name: Generate and publish
         env:
@@ -132,6 +132,12 @@ jobs:
           fi
 
           python publish.py   # exports events/, rebuilds gallery index + search index
+
+          # every published trace gets a share card (viewer's Share button
+          # depends on it); DejaVu fallback fonts on CI, never fatal
+          if [ "$IS_EVENT" != "1" ]; then
+            python cards.py --fp "$ID" || echo "::warning::card render failed for $ID"
+          fi
 
           git config user.name "tributary-trace-bot"
           git config user.email "actions@users.noreply.github.com"
