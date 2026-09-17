@@ -233,6 +233,12 @@ sole approver; nothing publishes unreviewed; zero API cost (mechanical checks on
 - [x] Restructure the page around the two capabilities — upstream (claim → origin)
       and downstream (event → framings) — each with one exemplar and one action.
       Hero, search box, share-card gallery, and weekly reports stay.
+      (2026-09-16 follow-on, Tarek's pre-friends review: the single shared query box
+      split into TWO per-capability panels, each with a concept graphic (streams
+      converging to one source vs one idea branching out), its own kind-scoped
+      search, and a big one-click request button on miss — the old small
+      request links were easy to overlook. Each panel sits at the top of its
+      section, above its exemplar.)
       (Page order now: search → "Upstream · Where a claim comes from" (carrots trace
       card + trace-your-own action) → "Downstream · How narratives spread around an
       event" (crypto-disclosure framing preview: everyone-agrees strip + 4 of 8

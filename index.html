@@ -161,47 +161,95 @@
             }
 
             /* the question box — ask your own question, get a trace or request one */
-            .askbox {
+            /* per-capability query panels: concept art + scoped search + request */
+            .qpanel {
+                display: flex;
+                gap: 1.2rem;
+                align-items: flex-start;
+                background: #fff;
+                border: 1px solid #dcdad2;
+                border-radius: 12px;
+                padding: 1.05rem 1.2rem;
+                margin: 0 0 0.9rem;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            }
+            .qart {
+                width: 168px;
+                flex: 0 0 168px;
+                height: auto;
+                margin-top: 0.35rem;
+            }
+            .qmain {
+                flex: 1;
+                min-width: 0;
+            }
+            .qtitle {
+                font-weight: 650;
+                font-size: 1.05rem;
+                margin-bottom: 0.5rem;
+            }
+            .qrow {
                 display: flex;
                 gap: 0.5rem;
-                margin: 0 0 0.4rem;
             }
-            .askbox input {
+            .qrow input {
                 flex: 1;
-                padding: 0.65rem 0.9rem;
+                min-width: 0;
+                padding: 0.6rem 0.85rem;
                 font-size: 0.95rem;
                 border: 1px solid #ccc;
                 border-radius: 8px;
                 background: #fff;
                 font-family: inherit;
             }
-            .askbox input:focus {
+            .qrow input:focus {
                 outline: 2px solid #2a6fa3;
                 border-color: #2a6fa3;
             }
-            .askbox button {
-                padding: 0.65rem 1.2rem;
+            .qrow button {
+                padding: 0.6rem 1.15rem;
                 font-size: 0.9rem;
                 border: none;
                 border-radius: 8px;
                 background: #2a6fa3;
                 color: #fff;
                 cursor: pointer;
+                white-space: nowrap;
             }
-            .askbox button:hover {
+            .qrow button:hover {
                 background: #1c5580;
             }
-            .asknote {
+            .qhint {
                 color: #999;
                 font-size: 0.78rem;
-                margin: 0 0 1.6rem;
+                margin: 0.45rem 0 0;
             }
-            #askresults {
-                margin: 0 0 1.6rem;
+            .qresults {
+                margin-top: 0.7rem;
             }
-            #askresults .card {
+            .qresults .card {
                 margin-bottom: 0.5rem;
                 padding: 0.7rem 1rem;
+            }
+            .reqbtn {
+                display: inline-block;
+                margin-top: 0.55rem;
+                background: #2a6fa3;
+                color: #fff !important;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.92rem;
+                padding: 0.55rem 1.15rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .reqbtn:hover {
+                background: #1c5580;
+            }
+            @media (max-width: 640px) {
+                .qpanel { flex-direction: column; }
+                .qart { width: 150px; flex: 0 0 auto; }
             }
             .askmiss {
                 background: #f4f3ef;
@@ -376,23 +424,7 @@
                 >
             </p>
 
-            <div class="askbox">
-                <input
-                    id="ask"
-                    type="search"
-                    placeholder="Where does a narrative come from? Paste a claim, a phrase, or an event…"
-                    aria-label="Search traces"
-                />
-                <button id="askbtn">Search traces</button>
-            </div>
-            <p class="asknote">
-                Claims and phrases get an <strong>origin trace</strong> (who
-                said it first, who spread it); events get a
-                <strong>framing map</strong> (how coverage split). If we haven't
-                traced yours yet, request it — generation usually takes 5–10
-                minutes (daily capacity is capped; overflow runs the next day).
-            </p>
-            <div id="askresults" hidden></div>
+            
 
             <h2>Upstream · Where a claim comes from</h2>
             <p class="secsub">
@@ -400,6 +432,29 @@
                 first, who amplified it, how the wording changed on the way,
                 with a dated, linked receipt on every hop.
             </p>
+
+            <div class="qpanel">
+                <svg class="qart" viewBox="0 0 220 84" aria-hidden="true">
+                    <path d="M 202 14 C 130 14 95 40 42 41" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <path d="M 206 42 C 150 42 110 42 42 42" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <path d="M 202 70 C 130 70 95 44 42 43" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <circle cx="202" cy="14" r="4" fill="#8fb2d0"/><circle cx="182" cy="16" r="3" fill="#a9c4da"/>
+                    <circle cx="206" cy="42" r="4" fill="#8fb2d0"/><circle cx="184" cy="42" r="3" fill="#a9c4da"/>
+                    <circle cx="202" cy="70" r="4" fill="#8fb2d0"/><circle cx="182" cy="68" r="3" fill="#a9c4da"/>
+                    <circle cx="120" cy="25" r="3" fill="#a9c4da"/><circle cx="115" cy="42" r="3" fill="#a9c4da"/><circle cx="120" cy="59" r="3" fill="#a9c4da"/>
+                    <circle cx="34" cy="42" r="9" fill="#1c4d74" stroke="#fff" stroke-width="2.5"/>
+                    <text x="34" y="76" text-anchor="middle" fill="#999" font-size="10">the source</text>
+                </svg>
+                <div class="qmain">
+                    <div class="qtitle">Trace a claim to its origin</div>
+                    <div class="qrow">
+                        <input id="ask-up" type="search" placeholder="Paste a claim or phrase — e.g. “carrots improve your eyesight”" aria-label="Trace a claim to its origin" />
+                        <button id="askbtn-up">Trace origin</button>
+                    </div>
+                    <p class="qhint">Finds who said it first and who amplified it, with a dated receipt on every hop. Not traced yet? Requesting takes one click — it generates in ~5–10 minutes.</p>
+                    <div id="askresults-up" class="qresults" hidden></div>
+                </div>
+            </div>
 
             <div class="hero">
                 <div class="kicker">A narrative trace</div>
@@ -478,6 +533,28 @@
                 what each emphasizes, what it leaves out, and who carries it.
             </p>
 
+            <div class="qpanel">
+                <svg class="qart" viewBox="0 0 220 84" aria-hidden="true">
+                    <path d="M 26 42 C 90 40 120 14 190 13" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <path d="M 26 42 C 100 42 140 42 190 42" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <path d="M 26 42 C 90 44 120 70 190 71" fill="none" stroke="#b9cfe2" stroke-width="2"/>
+                    <circle cx="20" cy="42" r="7" fill="#2a6fa3" stroke="#fff" stroke-width="2"/>
+                    <circle cx="192" cy="13" r="4.5" fill="#2a6fa3"/><circle cx="206" cy="10" r="3" fill="#8fb2d0"/><circle cx="205" cy="20" r="3" fill="#8fb2d0"/>
+                    <circle cx="192" cy="42" r="4.5" fill="#5a8fc0"/><circle cx="207" cy="38" r="3" fill="#a9c4da"/><circle cx="206" cy="48" r="3" fill="#a9c4da"/>
+                    <circle cx="192" cy="71" r="4.5" fill="#7fa8c9"/><circle cx="206" cy="67" r="3" fill="#a9c4da"/><circle cx="204" cy="77" r="3" fill="#8fb2d0"/>
+                    <text x="120" y="80" text-anchor="middle" fill="#999" font-size="10">how it spreads</text>
+                </svg>
+                <div class="qmain">
+                    <div class="qtitle">Map how an event’s coverage splits</div>
+                    <div class="qrow">
+                        <input id="ask-down" type="search" placeholder="Describe a news event — e.g. “Trump’s $1B crypto disclosure”" aria-label="Map how an event’s coverage splits" />
+                        <button id="askbtn-down">Map framings</button>
+                    </div>
+                    <p class="qhint">Shows the competing framings forming around one event and who carries each. Not mapped yet? Requesting takes one click — ~5–10 minutes.</p>
+                    <div id="askresults-down" class="qresults" hidden></div>
+                </div>
+            </div>
+
             <div class="hero">
                 <div class="kicker">An event analysis</div>
                 <div class="claim">
@@ -517,9 +594,7 @@
                     >
                 </div>
             </div>
-            <p class="secact">
-                Map your own — paste a news event into the search box above.
-            </p>
+            
 
 
             <h2>This week in narratives — weekly reports</h2>
@@ -589,10 +664,6 @@
                 // fully in-window requests; empty = fall back to GitHub-issue links.
                 const WORKER_URL =
                     "https://tributary-requests.tarek-elgindy.workers.dev";
-                const input = document.getElementById("ask");
-                const btn = document.getElementById("askbtn");
-                const out = document.getElementById("askresults");
-                let index = null;
                 const esc = (s) =>
                     String(s == null ? "" : s).replace(
                         /[&<>"']/g,
@@ -605,40 +676,11 @@
                                 "'": "&#39;",
                             })[c],
                     );
-                const STOP = new Set([
-                    "the",
-                    "a",
-                    "an",
-                    "of",
-                    "to",
-                    "in",
-                    "on",
-                    "for",
-                    "and",
-                    "or",
-                    "is",
-                    "are",
-                    "was",
-                    "were",
-                    "be",
-                    "about",
-                    "with",
-                    "that",
-                    "this",
-                    "it",
-                    "at",
-                    "by",
-                    "from",
-                    "does",
-                    "do",
-                    "did",
-                    "why",
-                    "how",
-                    "what",
-                    "when",
-                    "who",
-                    "where",
-                ]);
+                const STOP = new Set(
+                    "the a an of to in on for and or is are was were be about with that this it at by from does do did why how what when who where".split(
+                        " ",
+                    ),
+                );
                 const toks = (q) =>
                     q
                         .toLowerCase()
@@ -646,31 +688,18 @@
                         .split(/[^a-z0-9]+/)
                         .filter((t) => t && !STOP.has(t));
 
-                function requestBlock(q) {
-                    if (!WORKER_URL) {
-                        const mk = (prefix) =>
-                            "https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title=" +
-                            encodeURIComponent(prefix + ": " + q.slice(0, 120));
-                        return `<div class="askmiss">We haven't traced that yet.
-        <a href="${mk("Trace request")}" target="_blank" rel="noopener">Request an origin trace →</a>
-        <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
-        <a href="${mk("Event request")}" target="_blank" rel="noopener">Request an event framing map →</a>
-        <span style="color:#999;">(for a news event)</span><br>
-        <span style="color:#777; font-size:0.85rem;">Generation usually takes 5–10 minutes — the permalink
-        is posted back on your request when it's live.</span></div>`;
-                    }
-                    return `<div class="askmiss" id="askmiss">We haven't traced that yet.
-      <a href="#" data-kind="claim" class="askreq">Request an origin trace →</a>
-      <span style="color:#999;">(for a claim or phrase)</span> &nbsp;·&nbsp;
-      <a href="#" data-kind="event" class="askreq">Request an event framing map →</a>
-      <span style="color:#999;">(for a news event)</span><br>
-      <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span></div>`;
+                let index = null;
+                async function loadIndex() {
+                    if (index) return index;
+                    index =
+                        (await (await fetch("gallery/search_index.json")).json())
+                            .items || [];
+                    return index;
                 }
 
-                // In-window request flow: POST to the Worker, poll status, swap in the
-                // permalink when the trace publishes. The visitor never leaves the page.
-                async function submitRequest(q, kind) {
-                    const box = document.getElementById("askmiss");
+                // In-window request flow: POST to the Worker, poll status, swap
+                // in the permalink. The visitor never leaves the page.
+                async function submitRequest(q, kind, box) {
                     const label =
                         kind === "event" ? "event framing map" : "origin trace";
                     box.innerHTML = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
@@ -695,7 +724,6 @@
                             "Could not reach the request service — please try again.";
                         return;
                     }
-
                     const started = Date.now();
                     const poll = setInterval(async () => {
                         if (Date.now() - started > 20 * 60 * 1000) {
@@ -705,19 +733,19 @@
                             return;
                         }
                         try {
-                            const s = await (
+                            const st = await (
                                 await fetch(
                                     WORKER_URL +
                                         "/status?id=" +
                                         encodeURIComponent(id),
                                 )
                             ).json();
-                            if (s.state === "done" && s.url) {
+                            if (st.state === "done" && st.url) {
                                 clearInterval(poll);
-                                box.innerHTML = `<strong>Done.</strong> <a href="${esc(s.url)}">Open your ${label} →</a>
+                                box.innerHTML = `<strong>Done.</strong> <a href="${esc(st.url)}">Open your ${label} →</a>
             <br><span style="color:#777; font-size:0.85rem;">AI-generated and labeled as such — sources on
             every hop, corrections welcome.</span>`;
-                            } else if (s.state === "failed") {
+                            } else if (st.state === "failed") {
                                 clearInterval(poll);
                                 box.innerHTML =
                                     "Generation failed on our side — sorry. It has been logged; please try again later.";
@@ -728,79 +756,107 @@
                     }, 10000);
                 }
 
-                document.addEventListener("click", (e) => {
-                    const a = e.target.closest && e.target.closest(".askreq");
-                    if (!a) return;
-                    e.preventDefault();
-                    submitRequest((input.value || "").trim(), a.dataset.kind);
-                });
+                // One search per capability: each panel only searches (and only
+                // requests) its own kind — origin traces up, framing maps down.
+                function wirePanel(suffix, indexKind, reqKind, reqLabel) {
+                    const input = document.getElementById("ask-" + suffix);
+                    const btn = document.getElementById("askbtn-" + suffix);
+                    const out = document.getElementById("askresults-" + suffix);
+                    if (!input || !btn || !out) return;
 
-                async function search() {
-                    const q = (input.value || "").trim();
-                    if (!q) return;
-                    out.hidden = false;
-                    out.innerHTML = '<p style="color:#888;">Searching…</p>';
-                    if (!index) {
-                        try {
-                            index =
-                                (
-                                    await (
-                                        await fetch("gallery/search_index.json")
-                                    ).json()
-                                ).items || [];
-                        } catch (e) {
-                            out.innerHTML = requestBlock(q);
-                            return;
+                    const missBlock = (q, soft) => {
+                        const lead = soft
+                            ? "Not what you were looking for?"
+                            : "We haven’t traced that yet.";
+                        if (!WORKER_URL) {
+                            const gh =
+                                "https://github.com/tarekelgindy/tributary/issues/new?template=trace-request.md&title=" +
+                                encodeURIComponent(
+                                    (reqKind === "event"
+                                        ? "Event request: "
+                                        : "Trace request: ") + q.slice(0, 120),
+                                );
+                            return `<div class="askmiss" id="askmiss-${suffix}">${lead}<br>
+        <a class="reqbtn" href="${gh}" target="_blank" rel="noopener">Request this ${reqLabel} →</a><br>
+        <span style="color:#777; font-size:0.85rem;">The permalink is posted back on your request when it’s live.</span></div>`;
                         }
-                    }
-                    const qt = toks(q);
-                    const qn = qt.join(" ");
-                    const scored = index
-                        .map((it) => {
-                            const hay = (
-                                it.title +
-                                " " +
-                                (it.keys || []).join(" ")
-                            ).toLowerCase();
-                            let s = 0,
-                                hits = 0;
-                            for (const t of qt)
-                                if (hay.includes(t)) {
-                                    hits++;
-                                    s += t.length > 3 ? 2 : 1;
-                                }
-                            if (qn && hay.includes(qn)) s += 4;
-                            return { it, s, hits };
-                        })
-                        .filter(
-                            (x) => x.s >= 3 && (x.hits >= 2 || qt.length === 1),
-                        )
-                        .sort((a, b) => b.s - a.s)
-                        .slice(0, 4);
+                        return `<div class="askmiss" id="askmiss-${suffix}">${lead}<br>
+      <button class="reqbtn" id="askreq-${suffix}">Request this ${reqLabel} →</button><br>
+      <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span></div>`;
+                    };
 
-                    out.innerHTML =
-                        (scored.length
-                            ? scored
-                                  .map(
-                                      ({ it }) => `
+                    async function search() {
+                        const q = (input.value || "").trim();
+                        if (!q) return;
+                        out.hidden = false;
+                        out.innerHTML = '<p style="color:#888;">Searching…</p>';
+                        let items;
+                        try {
+                            items = (await loadIndex()).filter(
+                                (it) => it.kind === indexKind,
+                            );
+                        } catch (e) {
+                            items = [];
+                        }
+                        const qt = toks(q);
+                        const qn = qt.join(" ");
+                        const scored = items
+                            .map((it) => {
+                                const hay = (
+                                    it.title +
+                                    " " +
+                                    (it.keys || []).join(" ")
+                                ).toLowerCase();
+                                let sc = 0,
+                                    hits = 0;
+                                for (const t of qt)
+                                    if (hay.includes(t)) {
+                                        hits++;
+                                        sc += t.length > 3 ? 2 : 1;
+                                    }
+                                if (qn && hay.includes(qn)) sc += 4;
+                                return { it, sc, hits };
+                            })
+                            .filter(
+                                (x) =>
+                                    x.sc >= 3 &&
+                                    (x.hits >= 2 || qt.length === 1),
+                            )
+                            .sort((a, b) => b.sc - a.sc)
+                            .slice(0, 4);
+
+                        out.innerHTML =
+                            scored
+                                .map(
+                                    ({ it }) => `
       <a class="card" href="${esc(it.url)}">
         <span class="kind ${it.kind === "trace" ? "up" : "down"}">${it.kind === "trace" ? "narrative trace" : "event analysis"}</span>
         <span class="title">${esc(it.title)}</span>
       </a>`,
-                                  )
-                                  .join("")
-                            : "") + requestBlock(q);
-                    if (scored.length) {
-                        out.innerHTML = out.innerHTML.replace(
-                            "We haven't traced that yet.",
-                            "Not what you were looking for?",
+                                )
+                                .join("") + missBlock(q, scored.length > 0);
+                        const reqBtn = document.getElementById(
+                            "askreq-" + suffix,
                         );
+                        if (reqBtn)
+                            reqBtn.addEventListener("click", () =>
+                                submitRequest(
+                                    (input.value || "").trim(),
+                                    reqKind,
+                                    document.getElementById(
+                                        "askmiss-" + suffix,
+                                    ),
+                                ),
+                            );
                     }
+                    btn.addEventListener("click", search);
+                    input.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter") search();
+                    });
                 }
-                btn.addEventListener("click", search);
-                input.addEventListener("keydown", (e) => {
-                    if (e.key === "Enter") search();
-                });
+
+                wirePanel("up", "trace", "claim", "origin trace");
+                wirePanel("down", "event", "event", "framing map");
             })();
 
             // Share-card gallery: rendered from gallery/cards/index.json
