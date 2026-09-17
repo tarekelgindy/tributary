@@ -447,6 +447,12 @@ section { animation: fadein 0.2s; }
 .prov-badge.prov-disputed  { background: #f9e5c0; color: #6a4308; }
 .prov-badge.prov-retracted { background: #fad7d1; color: #832018; }
 #meta-bar .prov-badge { margin-left: 0.2rem; }
+/* the share affordance is a real button, not a footnote (Tarek, 2026-09-16) */
+.share-card-btn { display: inline-block; background: #2a6fa3; color: #fff !important;
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                  font-size: 0.82rem; font-weight: 600; padding: 0.32rem 0.8rem;
+                  border-radius: 7px; text-decoration: none; vertical-align: middle; }
+.share-card-btn:hover { background: #1c5580; }
 
 /* Downstream EventAnalysis view */
 .event-intro { margin-bottom: 1.2rem; }
@@ -1880,7 +1886,7 @@ function maybeCardLink(id) {
     if (!hit || !meta || meta.querySelector('.card-link')) return;
     const span = document.createElement('span');
     span.className = 'card-link';
-    span.innerHTML = `<a href="${escapeHtml(hit.page)}">share card →</a>`;
+    span.innerHTML = `<a class="share-card-btn" href="${escapeHtml(hit.page)}" title="a shareable image of this trace — unfurls when linked, PNG download on the page">Share card →</a>`;
     meta.appendChild(span);
   };
   if (_cardsIndex) { add(_cardsIndex); return; }

@@ -435,23 +435,24 @@
 
             <div class="qpanel">
                 <svg class="qart" viewBox="0 0 220 84" aria-hidden="true">
-                    <path d="M 202 14 C 130 14 95 40 42 41" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <path d="M 206 42 C 150 42 110 42 42 42" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <path d="M 202 70 C 130 70 95 44 42 43" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <circle cx="202" cy="14" r="4" fill="#8fb2d0"/><circle cx="182" cy="16" r="3" fill="#a9c4da"/>
-                    <circle cx="206" cy="42" r="4" fill="#8fb2d0"/><circle cx="184" cy="42" r="3" fill="#a9c4da"/>
-                    <circle cx="202" cy="70" r="4" fill="#8fb2d0"/><circle cx="182" cy="68" r="3" fill="#a9c4da"/>
-                    <circle cx="120" cy="25" r="3" fill="#a9c4da"/><circle cx="115" cy="42" r="3" fill="#a9c4da"/><circle cx="120" cy="59" r="3" fill="#a9c4da"/>
-                    <circle cx="34" cy="42" r="9" fill="#1c4d74" stroke="#fff" stroke-width="2.5"/>
-                    <text x="34" y="76" text-anchor="middle" fill="#999" font-size="10">the source</text>
+                    <path d="M 206 24 C 165 12 155 58 112 52 C 84 48 66 43 44 42" fill="none" stroke="#b9cfe2" stroke-width="2.5"/>
+                    <circle cx="206" cy="24" r="4.5" fill="#8fb2d0"/>
+                    <circle cx="168" cy="21" r="3.5" fill="#a9c4da"/>
+                    <circle cx="146" cy="40" r="3.5" fill="#a9c4da"/>
+                    <circle cx="112" cy="52" r="3.5" fill="#a9c4da"/>
+                    <circle cx="78" cy="45" r="3.5" fill="#a9c4da"/>
+                    <path d="M 58 38 L 48 42 L 58 46" fill="none" stroke="#8fb2d0" stroke-width="2"/>
+                    <circle cx="32" cy="42" r="9" fill="#1c4d74" stroke="#fff" stroke-width="2.5"/>
+                    <text x="206" y="14" text-anchor="middle" fill="#999" font-size="10">today</text>
+                    <text x="32" y="76" text-anchor="middle" fill="#999" font-size="10">the source</text>
                 </svg>
                 <div class="qmain">
                     <div class="qtitle">Trace a claim to its origin</div>
                     <div class="qrow">
-                        <input id="ask-up" type="search" placeholder="Paste a claim or phrase — e.g. “carrots improve your eyesight”" aria-label="Trace a claim to its origin" />
+                        <input id="ask-up" type="search" placeholder="Paste a claim or phrase…" aria-label="Trace a claim to its origin" />
                         <button id="askbtn-up">Trace origin</button>
                     </div>
-                    <p class="qhint">Finds who said it first and who amplified it, with a dated receipt on every hop. Not traced yet? Requesting takes one click — it generates in ~5–10 minutes.</p>
+                    <p class="qhint">e.g. “carrots improve your eyesight” — finds who said it first and who amplified it, with a dated receipt on every hop. Not traced yet? One click to request (~5–10 min).</p>
                     <div id="askresults-up" class="qresults" hidden></div>
                 </div>
             </div>
@@ -547,10 +548,10 @@
                 <div class="qmain">
                     <div class="qtitle">Map how an event’s coverage splits</div>
                     <div class="qrow">
-                        <input id="ask-down" type="search" placeholder="Describe a news event — e.g. “Trump’s $1B crypto disclosure”" aria-label="Map how an event’s coverage splits" />
+                        <input id="ask-down" type="search" placeholder="Describe a news event…" aria-label="Map how an event’s coverage splits" />
                         <button id="askbtn-down">Map framings</button>
                     </div>
-                    <p class="qhint">Shows the competing framings forming around one event and who carries each. Not mapped yet? Requesting takes one click — ~5–10 minutes.</p>
+                    <p class="qhint">e.g. “the Cyclospora food recall” — shows the competing framings forming around one event and who carries each. Not mapped yet? One click to request (~5–10 min).</p>
                     <div id="askresults-down" class="qresults" hidden></div>
                 </div>
             </div>
@@ -558,38 +559,38 @@
             <div class="hero">
                 <div class="kicker">An event analysis</div>
                 <div class="claim">
-                    Trump's $1B crypto disclosure — 8 competing framings
+                    A parasite in the US food supply — 5 competing framings
                 </div>
                 <div class="agree">
-                    <strong>Everyone agrees:</strong> the disclosure reports
-                    over $1B in crypto-related income; the $TRUMP token fell
-                    sharply; Binance's founder was pardoned. The contest is
-                    over what it <em>means</em>.
+                    <strong>Everyone agrees:</strong> Cyclospora parasites were
+                    found in food distributed across the US, likely via one
+                    supplier's imported produce — a multi-state public-health
+                    incident. The contest is over what it <em>means</em>.
                 </div>
                 <div class="fangrid">
                     <div class="fcell">
-                        <div class="fname">Corruption &amp; Conflict of Interest</div>
-                        <div class="fcar">6 recorded · NPR / Linda Kenyon, Sen. Elizabeth Warren +4</div>
+                        <div class="fname">Public Health Emergency &amp; Consumer Safety</div>
+                        <div class="fcar">3 recorded · CDC, TODAY.com, CNN Health</div>
                     </div>
                     <div class="fcell">
-                        <div class="fname">Retail Investor Harm</div>
-                        <div class="fcar">6 recorded · Nansen (blockchain analytics), CNN Business +4</div>
+                        <div class="fname">Supply Chain &amp; Corporate Accountability</div>
+                        <div class="fcar">3 recorded · Civil Eats, CBS News Texas, FDA</div>
                     </div>
                     <div class="fcell">
-                        <div class="fname">Crypto Market Structure &amp; Tokenomics</div>
-                        <div class="fcar">6 recorded · Nansen (blockchain analytics), DataWallet +4</div>
+                        <div class="fname">Government Accountability &amp; Budget Cuts</div>
+                        <div class="fcar">3 recorded · KFF Health News, CNBC, Consumer Reports</div>
                     </div>
                     <div class="fcell">
-                        <div class="fname">Foreign Influence &amp; National Security</div>
-                        <div class="fcar">5 recorded · Wall Street Journal Editorial Board, Forbes / Zach Everson +3</div>
+                        <div class="fname">Imported Produce &amp; Cross-Border Food Safety</div>
+                        <div class="fcar">3 recorded · FDA (Import Alert 24-23), CNBC +1</div>
                     </div>
                 </div>
                 <div class="foot">
-                    <span>4 of 8 framings shown · carrier counts are a floor
+                    <span>4 of 5 framings shown · carrier counts are a floor
                         from our search, not a census · framing boundaries are
                         AI judgments · AI-generated, not human-reviewed</span>
                     <a
-                        href="fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json"
+                        href="fingerprint_viewer.html?load=gallery/events/8e48743e23ca.json"
                         >open the full analysis →</a
                     >
                 </div>
@@ -597,39 +598,14 @@
             
 
 
-            <h2>This week in narratives — weekly reports</h2>
-            <div class="weekcard">
-                <div class="wtitle">
-                    June 28 – July 5: the birthright ruling, a $1B crypto
-                    disclosure, and a 16-year-old talking point
-                </div>
-                <p>
-                    Built from 27 automated captures of 36 outlets: the week's
-                    shared agenda, what each front page led with, which stories
-                    only one side carried — and the "birth tourism loophole"
-                    framing traced back to a 2010 call-in debate.
-                </p>
-                <div class="chips">
-                    <a
-                        href="fingerprint_viewer.html?load=gallery/events/55fe57fd9c41.json"
-                        >The birthright ruling — 5 framings, all traced</a
-                    >
-                    <a href="digests/issue-01.html">Read issue #1 →</a>
-                    <a href="digests/issue-02.html">Issue #2 (July 2 – 9) →</a>
-                </div>
-            </div>
+            
 
-            <h2>Share cards</h2>
-            <p class="herounder">
-                One image per finding — a claim's age over its spread, an
-                event's competing framings, or a claim beside its rebuttal.
-                Every card links to the full receipts.
-            </p>
-            <div class="cardsgrid" id="cardsgrid" hidden></div>
+            
 
             <div class="links">
                 <strong>Go deeper:</strong>
                 <a href="corpus.html">browse all published traces</a> ·
+                <a href="digests/issue-02.html">weekly report archive</a> ·
                 <a href="https://github.com/tarekelgindy/tributary"
                     >GitHub repo</a
                 >
@@ -859,42 +835,7 @@
                 wirePanel("down", "event", "event", "framing map");
             })();
 
-            // Share-card gallery: rendered from gallery/cards/index.json
-            // (written by cards.py). Section stays hidden if the fetch fails.
-            (async () => {
-                const grid = document.getElementById("cardsgrid");
-                if (!grid) return;
-                try {
-                    const idx = await (
-                        await fetch("gallery/cards/index.json", {
-                            cache: "no-store",
-                        })
-                    ).json();
-                    const esc = (s) =>
-                        String(s || "").replace(
-                            /[&<>"]/g,
-                            (c) =>
-                                ({
-                                    "&": "&amp;",
-                                    "<": "&lt;",
-                                    ">": "&gt;",
-                                    '"': "&quot;",
-                                })[c],
-                        );
-                    const cards = idx.cards || [];
-                    if (!cards.length) return;
-                    grid.innerHTML = cards
-                        .map(
-                            (c) => `<a class="cardthumb" href="${esc(c.page)}">
-                        <img src="${esc(c.image)}" alt="${esc(c.headline)}" loading="lazy">
-                        <span class="ct">${esc(c.headline)}</span></a>`,
-                        )
-                        .join("");
-                    grid.hidden = false;
-                } catch (e) {
-                    /* no cards published — section stays hidden */
-                }
-            })();
+            
         </script>
     </body>
 </html>
