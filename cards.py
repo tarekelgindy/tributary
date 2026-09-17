@@ -339,7 +339,7 @@ def card_data(fid, subject, asof):
         "points": points,
         "spikes": spike_clusters(points),
         "who_strip": who_strip_text(dated),
-        "cast_deck": cast_deck(dated),
+        "cast": cast(dated),
         "n_contrib": len(fp.get("contributions") or []),
         "roles_present": [r for r in ROLE_ORDER if any(p["role"] == r for p in points)],
         "prov_present": _prov_states(points),
@@ -543,10 +543,10 @@ def milestone_labels(dated):
     return ms
 
 
-def cast_deck(dated):
-    """The cast line that rides under the headline (Tarek, 2026-09-15: WHO
-    gets billing, not just the strip at the bottom): 'Origin: X · amplified
-    by A, B +n'. Role vocabulary is the established, footer-caveated one."""
+def cast(dated):
+    """WHO leads the card (Tarek, 2026-09-16): the origin name is headline
+    material, amplifiers ride the deck. Role vocabulary stays the established,
+    footer-caveated one; a role-less trace falls back to 'Earliest recorded'."""
     name = lambda i: (i.get("author") or host_outlet(i.get("source_url"))
                       or "").strip().split(" (")[0]
 
@@ -559,18 +559,17 @@ def cast_deck(dated):
                 out.append(n)
         return out
 
-    origin = uniq_names([i for i in dated if (i.get("amplifier_role") or "") == "originator"]) \
-        or uniq_names(dated[:1])
+    role_origin = uniq_names([i for i in dated
+                              if (i.get("amplifier_role") or "") == "originator"])
+    origin = role_origin or uniq_names(dated[:1])
+    origin_name = origin[0] if origin else ""
     amps = [n for n in uniq_names([i for i in dated if (i.get("amplifier_role") or "")
                                    in ("early-amplifier", "mass-amplifier")])
-            if not origin or n != origin[0]]
-    parts = []
-    if origin:
-        parts.append(f"Origin: {origin[0]}")
-    if amps:
-        more = f" +{len(amps) - 2}" if len(amps) > 2 else ""
-        parts.append("amplified by " + ", ".join(amps[:2]) + more)
-    return " · ".join(parts)
+            if n != origin_name]
+    more = f" +{len(amps) - 2}" if len(amps) > 2 else ""
+    return {"origin_name": origin_name,
+            "origin_label": "Origin" if role_origin else "Earliest recorded",
+            "amps": ("amplified by " + ", ".join(amps[:2]) + more) if amps else ""}
 
 
 def who_strip_text(dated):
@@ -743,16 +742,26 @@ def render_png(cd, out_path):
     kicker = "T R I B U T A R Y   ·   N A R R A T I V E   T R A C E"
     d.text((ML, 56), kicker, font=_font(22, "semibold"), fill=INK3)
 
-    f_head = _fit(d, cd["headline"], "bold", 68, cw)
-    d.text((ML, 86), cd["headline"], font=f_head, fill=INK1)
-
-    # the cast gets billing right under the number (WHO before the quote)
-    if cd["cast_deck"]:
-        d.text((ML, 182), _ellipsize(d, cd["cast_deck"], _font(22, "semibold"), cw),
+    # WHO leads (Tarek, 2026-09-16): the source is the headline; age rides the
+    # deck and the chart label. Traces with no nameable source keep the age
+    # headline — an empty name would be a worse hero than an honest number.
+    who_lead = cd["cast"]["origin_name"]
+    if who_lead:
+        eyebrow = f'{cd["cast"]["origin_label"]} · {cd["first_human"]}'
+        d.text((ML, 84), eyebrow, font=_font(22, "semibold"), fill=INK3)
+        f_head = _fit(d, who_lead, "bold", 56, cw, min_size=30)
+        d.text((ML, 114), _ellipsize(d, who_lead, f_head, cw), font=f_head, fill=INK1)
+        deck_bits = [b for b in (cd["cast"]["amps"],
+                                 f'{cd["age_text"]} old',
+                                 f'{cd["n_uses"]} recorded uses') if b]
+        d.text((ML, 190), _ellipsize(d, " · ".join(deck_bits), _font(22, "semibold"), cw),
                font=_font(22, "semibold"), fill=INK1)
+    else:
+        f_head = _fit(d, cd["headline"], "bold", 68, cw)
+        d.text((ML, 86), cd["headline"], font=f_head, fill=INK1)
 
     f_phrase = _font(26)
-    py = 214
+    py = 222
     for ln in _wrap(d, "“" + cd["phrase"] + "”", f_phrase, cw, 2):
         d.text((ML, py), ln, font=f_phrase, fill=INK2)
         py += 34
@@ -824,7 +833,7 @@ def render_png(cd, out_path):
     # origin label (top-left of the chart, where the area is still low)
     f_ms, f_sub = _font(23, "semibold"), _font(19)
     d.text((ML, 300), f'First attested {cd["first_human"]}', font=f_ms, fill=INK1)
-    if cd["first_who"]:
+    if cd["first_who"] and not cd["cast"]["origin_name"]:
         d.text((ML, 332), _ellipsize(d, cd["first_who"], f_sub, 430),
                font=f_sub, fill=INK3)
 
@@ -1509,8 +1518,14 @@ def render_page(cd, out_path):
     ev = cd["event"]
     og_img = f"{SITE}gallery/cards/{fid}.png"
     og_url = f"{SITE}gallery/cards/{fid}.html"
-    desc_bits = ([f"{cd['cast_deck']}."] if cd["cast_deck"] else []) +         [f"“{cd['phrase']}” — first attested {cd['first_human']}.",
-                 f"{cd['n_uses']} recorded uses."]
+    c = cd["cast"]
+    who_lead = c["origin_name"]
+    page_head = (f'{c["origin_label"]}: {who_lead}' if who_lead else cd["headline"])
+    og_title = (f'{who_lead} — {c["origin_label"].lower()} of “{cd["phrase"][:60]}”'
+                if who_lead else cd["headline"])
+    desc_bits = ([c["amps"][0].upper() + c["amps"][1:] + "."] if c["amps"] else []) + \
+        [f"“{cd['phrase']}” — first attested {cd['first_human']} ({cd['age_text']} old).",
+         f"{cd['n_uses']} recorded uses."]
     if cd["outlets"]:
         desc_bits.append(f"Recently carried by {_names_prose(cd['outlets'][:3], with_dates=False)}.")
     desc_bits.append("Every date and source has a receipt. AI-traced, not human-reviewed.")
@@ -1533,7 +1548,7 @@ def render_page(cd, out_path):
         event_link = (f'<a class="ctx" href="../../fingerprint_viewer.html?load=gallery/events/{esc(ev["id"])}.json">'
                       f'See it in the news: {esc(t)} →</a>')
 
-    alt = (f'{cd["headline"]} Timeline of {cd["n_uses"]} recorded uses from '
+    alt = (f'{page_head}. Timeline of {cd["n_uses"]} recorded uses from '
            f'{cd["first_human"]} onward. “{cd["phrase"]}”')
 
     # Standing Discipline #5: the blanket disclaimer is replaced the moment a
@@ -1552,10 +1567,10 @@ def render_page(cd, out_path):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(cd["headline"])} — Tributary</title>
+<title>{esc(page_head)} — Tributary</title>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tributary">
-<meta property="og:title" content="{esc(cd["headline"])}">
+<meta property="og:title" content="{esc(og_title)}">
 <meta property="og:description" content="{esc(og_desc)}">
 <meta property="og:image" content="{esc(og_img)}">
 <meta property="og:image:width" content="1200">
@@ -1575,6 +1590,8 @@ def render_page(cd, out_path):
   .kicker {{ font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
             color: #898781; margin-bottom: 0.5rem; }}
   .headline {{ font-size: 1.75rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.15rem; }}
+  .eyebrow {{ font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+             text-transform: uppercase; color: #898781; margin-bottom: 0.1rem; }}
   .deck {{ font-weight: 600; font-size: 0.95rem; margin: 0 0 0.15rem; }}
   .phrase {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1.1rem; }}
   .carried {{ color: #52514e; font-size: 0.85rem; margin: 0.5rem 0 0; }}
@@ -1608,8 +1625,9 @@ def render_page(cd, out_path):
 <div class="wrap">
   <div class="card">
     <div class="kicker">Tributary · narrative trace</div>
-    <div class="headline">{esc(cd["headline"])}</div>
-    {f'<p class="deck">{esc(cd["cast_deck"])}</p>' if cd["cast_deck"] else ''}
+    {f'<div class="eyebrow">{esc(c["origin_label"])} · {esc(cd["first_human"])}</div>' if who_lead else ''}
+    <div class="headline">{esc(who_lead) if who_lead else esc(cd["headline"])}</div>
+    <p class="deck">{esc(" · ".join(b for b in (c["amps"], f'{cd["age_text"]} old', f'{cd["n_uses"]} recorded uses') if b))}</p>
     <p class="phrase">“{esc(cd["phrase"])}”</p>
     {svg_timeline(cd)}
     {f'<p class="who">{esc(cd["who_strip"])}</p>' if cd["who_strip"] else ''}
@@ -1627,7 +1645,7 @@ def render_page(cd, out_path):
   <p class="honesty">
     {honesty_open} “First attested” is the earliest
     use our search found — attestation confidence as recorded by the pipeline: {cd["confidence"]:.2f} —
-    and an earlier one may exist. Dot order shows sequence, not influence; hover any dot
+    and an earlier one may exist. Dot order shows sequence, not influence, and the shaded area shows the share of recorded uses accumulated by each date — the tempo of our sample, not audience reach; hover any dot
     for its date, source, and role. Role labels (originator / amplifier / adoption /
     critic) are AI judgments that have not yet passed a human audit. The full trace
     shows every source, archive link, and verification status{", and the event page shows each carrier’s own quoted words" if cd["outlets"] else ""}.
