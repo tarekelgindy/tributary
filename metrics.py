@@ -98,6 +98,12 @@ def main():
     by_country = Counter(r.get("country") or "(unknown)" for r in records)
     print("\nBy country:  " + " · ".join(f"{c}: {n}" for c, n in by_country.most_common(12)))
 
+    def region_label(r):
+        c = r.get("country") or "(unknown)"
+        return f'{r["region"]}, {c}' if r.get("region") else f"{c} (no region)"
+    by_region = Counter(region_label(r) for r in records)
+    print("By region:   " + " · ".join(f"{lbl}: {n}" for lbl, n in by_region.most_common(12)))
+
     searches = [r for r in records if r["type"] == "search"]
     if searches:
         print(f"\nSearches ({len(searches)}):")
