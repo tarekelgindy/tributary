@@ -559,16 +559,23 @@ def cast(dated):
                 out.append(n)
         return out
 
-    role_origin = uniq_names([i for i in dated
-                              if (i.get("amplifier_role") or "") == "originator"])
-    origin = role_origin or uniq_names(dated[:1])
-    origin_name = origin[0] if origin else ""
+    role_originators = [i for i in dated
+                        if (i.get("amplifier_role") or "") == "originator"]
+    origin_entry = next((i for i in role_originators if name(i)), None)
+    origin_label = "Origin" if origin_entry is not None else "Earliest recorded"
+    if origin_entry is None:
+        origin_entry = next((i for i in dated if name(i)), None)
+    origin_name = name(origin_entry) if origin_entry is not None else ""
+    # the eyebrow date belongs to the HEADLINED entity's own entry — pairing
+    # the trace's first-attested date with a later originator's name would
+    # claim they said it earlier than recorded (caught on the first CI card)
+    origin_date = fmt_date_human(origin_entry.get("date") or "") if origin_entry is not None else ""
     amps = [n for n in uniq_names([i for i in dated if (i.get("amplifier_role") or "")
                                    in ("early-amplifier", "mass-amplifier")])
             if n != origin_name]
     more = f" +{len(amps) - 2}" if len(amps) > 2 else ""
-    return {"origin_name": origin_name,
-            "origin_label": "Origin" if role_origin else "Earliest recorded",
+    return {"origin_name": origin_name, "origin_label": origin_label,
+            "origin_date": origin_date,
             "amps": ("amplified by " + ", ".join(amps[:2]) + more) if amps else ""}
 
 
@@ -747,7 +754,7 @@ def render_png(cd, out_path):
     # headline — an empty name would be a worse hero than an honest number.
     who_lead = cd["cast"]["origin_name"]
     if who_lead:
-        eyebrow = f'{cd["cast"]["origin_label"]} · {cd["first_human"]}'
+        eyebrow = f'{cd["cast"]["origin_label"]} · {cd["cast"]["origin_date"] or cd["first_human"]}'
         d.text((ML, 84), eyebrow, font=_font(22, "semibold"), fill=INK3)
         f_head = _fit(d, who_lead, "bold", 56, cw, min_size=30)
         d.text((ML, 114), _ellipsize(d, who_lead, f_head, cw), font=f_head, fill=INK1)
@@ -1625,7 +1632,7 @@ def render_page(cd, out_path):
 <div class="wrap">
   <div class="card">
     <div class="kicker">Tributary · narrative trace</div>
-    {f'<div class="eyebrow">{esc(c["origin_label"])} · {esc(cd["first_human"])}</div>' if who_lead else ''}
+    {f'<div class="eyebrow">{esc(c["origin_label"])} · {esc(c["origin_date"] or cd["first_human"])}</div>' if who_lead else ''}
     <div class="headline">{esc(who_lead) if who_lead else esc(cd["headline"])}</div>
     <p class="deck">{esc(" · ".join(b for b in (c["amps"], f'{cd["age_text"]} old', f'{cd["n_uses"]} recorded uses') if b))}</p>
     <p class="phrase">“{esc(cd["phrase"])}”</p>
