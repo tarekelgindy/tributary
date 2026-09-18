@@ -559,12 +559,20 @@ def cast(dated):
                 out.append(n)
         return out
 
+    # Hero rule (spot-check 2026-09-18): a name headlines ONLY when it is
+    # honestly the story — the role-originator, or the actual first entry.
+    # The earlier fallback ("first entry with a name") crowned mid-log people
+    # as "Earliest recorded" on charged traces (a real clinician on the
+    # 5G-covid card). No honest hero -> the card keeps the age headline.
+    # (No receipt gate here: historical origins legitimately fail mechanical
+    # URL checks — print-era receipts — and the per-citation badges on the
+    # trace page carry that honesty.)
     role_originators = [i for i in dated
                         if (i.get("amplifier_role") or "") == "originator"]
     origin_entry = next((i for i in role_originators if name(i)), None)
     origin_label = "Origin" if origin_entry is not None else "Earliest recorded"
-    if origin_entry is None:
-        origin_entry = next((i for i in dated if name(i)), None)
+    if origin_entry is None and name(dated[0]):
+        origin_entry = dated[0]
     origin_name = name(origin_entry) if origin_entry is not None else ""
     # the eyebrow date belongs to the HEADLINED entity's own entry — pairing
     # the trace's first-attested date with a later originator's name would
