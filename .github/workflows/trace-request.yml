@@ -147,6 +147,18 @@ jobs:
           git push origin main
 
           URL="https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=$REL"
+
+          # Don't report "done" until Pages is actually serving the file —
+          # the push-to-deploy gap is 2-4 min, and a visitor who clicks the
+          # fresh link inside it gets a 404 (happened live 2026-09-18).
+          # Proceed after ~5 min regardless; the link heals on its own.
+          for i in $(seq 1 30); do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+              "https://tarekelgindy.github.io/tributary/$REL" || echo 0)
+            [ "$CODE" = "200" ] && break
+            sleep 10
+          done
+
           if [ -n "${REQUEST_ID:-}" ]; then
             curl -sS -X POST "$WORKER_URL/complete" \
               -H "Content-Type: application/json" \
