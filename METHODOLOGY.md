@@ -79,6 +79,8 @@ Tributary's outputs are AI-generated, but the record is not AI-owned: readers ca
 
 **Where it shows:** approved contributions appear in the trace's ledger and on the page — the contributions strip credits each one, contributed entries carry a `✎ human` provenance badge, confirmed entries `✓ confirmed`, disputed ones `⚠ disputed`. Elements without human review keep their AI-generated label; the goal is per-element honesty, not a page-level shrug.
 
+**Usage measurement:** the site records aggregate usage only — page views, search terms, and trace/contribution requests, each tagged with the visitor's country/region/city as reported by the CDN. **No IP addresses, cookies, fingerprints, or identities are stored**; IPs exist solely in short-lived (48h) rate-limit counters that keep request capacity fair. Retention: 180 days. This exists so we can honestly answer "is anyone using this, and from where" — the same standard of measurement we apply to narratives applies to ourselves.
+
 ---
 
 ## Error rate

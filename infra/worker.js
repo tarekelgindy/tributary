@@ -24,6 +24,18 @@
  *     public repo, or the review issue.
  *     Optional env vars: CONTRIB_DAILY_CAP (default 20),
  *                        CONTRIB_PER_IP_CAP (default 5)
+ *
+ *   Usage metrics (2026-09-18) — privacy-first by design: every log record
+ *   carries Cloudflare's country/region/city and NEVER the IP address (IPs
+ *   exist only in the 2-day rate-limit counters above). Disclosed on the
+ *   site footer.
+ *   POST /ping     {type: "view"|"search", path?, q?, kind?} -> {ok}
+ *     fire-and-forget beacon from the site (page views, search terms).
+ *   GET  /metrics  (X-Callback-Secret header) -> {records: [...], cursor?}
+ *     maintainer-only export; metrics.py aggregates it locally.
+ *   NB: Workers KV free tier allows ~1,000 writes/day — each ping is one
+ *   write. Fine at current traffic; revisit (Analytics Engine) if the site
+ *   ever sees thousands of daily views.
  */
 
 const REPO = "tarekelgindy/tributary";
@@ -44,6 +56,23 @@ function cors(request) {
 
 const json = (obj, status, headers) =>
   new Response(JSON.stringify(obj), { status, headers });
+
+// Usage log record: WHAT happened and WHERE FROM (CF-provided geo), never who.
+async function logEvent(env, request, type, extra) {
+  try {
+    const cf = request.cf || {};
+    const rec = {
+      t: new Date().toISOString(),
+      type,
+      country: cf.country || "",
+      region: cf.region || "",
+      city: cf.city || "",
+      ...extra,
+    };
+    const key = "log:" + rec.t + ":" + crypto.randomUUID().slice(0, 8);
+    await env.STATUS.put(key, JSON.stringify(rec), { expirationTtl: 180 * 86400 });
+  } catch (e) { /* metrics must never break the product */ }
+}
 
 export default {
   async fetch(request, env) {
@@ -88,8 +117,10 @@ export default {
       const ipKey = "ip:" + day + ":" + ip;
       const dayCount = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
       const ipCount = parseInt((await env.STATUS.get(ipKey)) || "0", 10);
-      if (dayCount >= dailyCap)
+      if (dayCount >= dailyCap) {
+        await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 0, why: "daily-cap" });
         return json({ error: "Today's generation capacity is used up — please try again tomorrow." }, 429, h);
+      }
       if (ipCount >= perIpCap)
         return json({ error: "You've reached today's per-visitor limit — please try again tomorrow." }, 429, h);
 
@@ -116,6 +147,7 @@ export default {
       await env.STATUS.put("req:" + id, JSON.stringify({
         state: "running", subject, kind, created: new Date().toISOString(),
       }), { expirationTtl: 7 * 86400 });
+      await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 1 });
 
       return json({ id }, 200, h);
     }
@@ -180,7 +212,44 @@ export default {
         ...payload, contact: clip(b.contact, 200), created: new Date().toISOString(),
       }), { expirationTtl: 90 * 86400 });
 
+      await logEvent(env, request, "contribution", { kind, fp });
       return json({ ok: true, ref }, 200, h);
+    }
+
+    if (url.pathname === "/ping" && request.method === "POST") {
+      const b = await request.json().catch(() => null);
+      const type = b && (b.type === "view" || b.type === "search") ? b.type : "";
+      if (!type) return json({ ok: false }, 400, h);
+      // soft per-IP daily cap so a stuck tab can't burn the KV write budget
+      const day = new Date().toISOString().slice(0, 10);
+      const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+      const pKey = "pip:" + day + ":" + ip;
+      const pCount = parseInt((await env.STATUS.get(pKey)) || "0", 10);
+      if (pCount >= 200) return json({ ok: true }, 200, h);
+      await env.STATUS.put(pKey, String(pCount + 1), { expirationTtl: 2 * 86400 });
+      const clip = (v, n) => String(v || "").slice(0, n);
+      await logEvent(env, request, type, type === "search"
+        ? { kind: clip(b.kind, 12), q: clip(b.q, 140) }
+        : { path: clip(b.path, 180) });
+      return json({ ok: true }, 200, h);
+    }
+
+    if (url.pathname === "/metrics" && request.method === "GET") {
+      if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
+        return json({ error: "forbidden" }, 403, h);
+      const cursor = url.searchParams.get("cursor") || undefined;
+      const list = await env.STATUS.list({ prefix: "log:", limit: 500, cursor });
+      const records = [];
+      for (let i = 0; i < list.keys.length; i += 50) {
+        const vals = await Promise.all(
+          list.keys.slice(i, i + 50).map((k) => env.STATUS.get(k.name)),
+        );
+        for (const v of vals) if (v) records.push(JSON.parse(v));
+      }
+      return json({
+        records,
+        cursor: list.list_complete ? null : list.cursor,
+      }, 200, h);
     }
 
     return json({ error: "not found" }, 404, h);

@@ -1008,7 +1008,13 @@ if (loadParam) {
   // kept showing its pre-update state).
   fetch(loadParam, { cache: 'no-store' })
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(data => { loadingDiv.hidden = true; errorDiv.textContent = ''; routeData(data); })
+    .then(data => {
+      loadingDiv.hidden = true; errorDiv.textContent = ''; routeData(data);
+      // aggregate usage beacon (country-level via the Worker; no IP stored)
+      try { fetch(WORKER_URL + '/ping', { method: 'POST',
+        headers: { 'Content-Type': 'application/json' }, keepalive: true,
+        body: JSON.stringify({ type: 'view', path: loadParam.slice(0, 180) }) }).catch(() => {}); } catch (e) {}
+    })
     .catch(e => {
       loadingDiv.hidden = true;
       dropZone.hidden = false;

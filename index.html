@@ -621,6 +621,12 @@
                 >
             </div>
             <footer>
+                Usage is measured in aggregate only — country-level counts of
+                views and queries; no IP addresses or identities are stored
+                (<a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md"
+                    >details</a
+                >).<br />
                 All analyses are AI-generated and labeled as such on every page;
                 none are yet human-reviewed. Spotted an error or an earlier use
                 of a narrative?
@@ -663,6 +669,21 @@
                         .replace(/["“”'’]/g, "")
                         .split(/[^a-z0-9]+/)
                         .filter((t) => t && !STOP.has(t));
+
+                // Usage beacon: fire-and-forget, geo comes from Cloudflare
+                // server-side (country/city), no IP is ever stored. Disclosed
+                // in the footer.
+                const ping = (payload) => {
+                    try {
+                        fetch(WORKER_URL + "/ping", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(payload),
+                            keepalive: true,
+                        }).catch(() => {});
+                    } catch (e) {}
+                };
+                ping({ type: "view", path: "/" });
 
                 let index = null;
                 async function loadIndex() {
@@ -764,6 +785,7 @@
                     async function search() {
                         const q = (input.value || "").trim();
                         if (!q) return;
+                        ping({ type: "search", kind: indexKind, q: q.slice(0, 140) });
                         out.hidden = false;
                         out.innerHTML = '<p style="color:#888;">Searching…</p>';
                         let items;
