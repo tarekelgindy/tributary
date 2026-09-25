@@ -605,7 +605,7 @@
                 <div class="foot">
                     <span
                         >13 recorded uses 1940–2025 · 17 social sightings
-                        2014–2026 · AI-traced, not human-reviewed</span
+                        2014–2026 · a dated receipt on every hop</span
                     >
                     <a
                         href="fingerprint_viewer.html?load=examples/fingerprint_carrots_eyesight.json"
@@ -680,8 +680,7 @@
                 </div>
                 <div class="foot">
                     <span>4 of 5 framings shown · carrier counts are a floor
-                        from our search, not a census · framing boundaries are
-                        AI judgments · AI-generated, not human-reviewed</span>
+                        from our search, not a census</span>
                     <a
                         href="fingerprint_viewer.html?load=gallery/events/8e48743e23ca.json"
                         >open the full analysis →</a
@@ -721,9 +720,9 @@
                     href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md"
                     >details</a
                 >).<br />
-                All analyses are AI-generated and labeled as such on every page;
-                none are yet human-reviewed. Spotted an error or an earlier use
-                of a narrative?
+                Analyses are AI-generated, with provenance and verification
+                labels on every element of every page. Spotted an error or an
+                earlier use of a narrative?
                 <a
                     href="https://github.com/tarekelgindy/tributary/issues/new/choose"
                     >Suggest a correction</a
@@ -856,8 +855,8 @@
                             if (st.state === "done" && st.url) {
                                 clearInterval(poll);
                                 box.innerHTML = `<strong>Done.</strong> <a href="${esc(st.url)}">Open your ${label} →</a>
-            <br><span style="color:#777; font-size:0.85rem;">AI-generated and labeled as such — sources on
-            every hop, corrections welcome.</span>`;
+            <br><span style="color:#777; font-size:0.85rem;">Sources on every hop — provenance labels
+            throughout, corrections welcome.</span>`;
                             } else if (st.state === "failed") {
                                 clearInterval(poll);
                                 box.innerHTML =
