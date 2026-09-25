@@ -207,10 +207,11 @@
             }
             .qrow {
                 display: flex;
+                flex-wrap: wrap; /* phones: the button drops below the input */
                 gap: 0.5rem;
             }
             .qrow input {
-                flex: 1;
+                flex: 1 1 200px;
                 min-width: 0;
                 padding: 0.6rem 0.85rem;
                 font-size: 0.95rem;
