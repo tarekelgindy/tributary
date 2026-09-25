@@ -4,9 +4,16 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Tributary — see where narratives come from</title>
+        <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
         <style>
             :root {
                 color-scheme: light;
+                --up: #2a6fa3;
+                --up-dark: #1c5580;
+                --down: #1f7a68;
+                --down-dark: #155e4f;
+                --ink: #12333e;
+                --cream: #f3efe4;
             }
             * {
                 box-sizing: border-box;
@@ -26,14 +33,15 @@
                 padding: 2.8rem 1.2rem 4rem;
             }
             h1 {
-                font-size: 1.9rem;
-                margin: 0 0 0.35rem;
-                letter-spacing: -0.01em;
+                font-size: 2.5rem;
+                line-height: 1.12;
+                margin: 0 0 0.55rem;
+                letter-spacing: -0.02em;
             }
             .tagline {
                 color: #444;
-                margin: 0 0 0.4rem;
-                font-size: 1.08rem;
+                margin: 0 0 0.5rem;
+                font-size: 1.14rem;
             }
             .nolabel {
                 color: #777;
@@ -46,12 +54,12 @@
                 text-decoration: none;
             }
             h2 {
-                font-size: 0.82rem;
+                font-size: 0.85rem;
                 font-weight: 600;
                 color: #555;
                 text-transform: uppercase;
                 letter-spacing: 0.07em;
-                margin: 2.4rem 0 0.8rem;
+                margin: 3rem 0 0.8rem;
             }
 
             .card {
@@ -84,7 +92,7 @@
                 background: #2a6fa3;
             }
             .kind.down {
-                background: #5a4b8a;
+                background: var(--down);
             }
             .card .title {
                 font-weight: 600;
@@ -399,20 +407,106 @@
                 color: #2a6fa3;
                 text-decoration: none;
             }
+
+            /* masthead: the identity band */
+            .mast {
+                background: var(--ink);
+            }
+            .mastin {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0.72rem 1.2rem;
+                display: flex;
+                align-items: center;
+            }
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 0.62rem;
+                color: var(--cream);
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.24rem;
+                letter-spacing: 0.012em;
+            }
+            .brand svg {
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+            .mastnav {
+                margin-left: auto;
+                display: flex;
+                gap: 1.15rem;
+            }
+            .mastnav a {
+                color: rgba(243, 239, 228, 0.72);
+                text-decoration: none;
+                font-size: 0.86rem;
+            }
+            .mastnav a:hover {
+                color: var(--cream);
+            }
+            @media (max-width: 560px) {
+                .mastnav { display: none; }
+            }
+
+            /* live corpus stats strip */
+            .stats {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.35rem 1.7rem;
+                color: #666;
+                font-size: 0.9rem;
+                padding: 0.7rem 0;
+                margin: 0 0 2.2rem;
+                border-top: 1px solid #e5e2d9;
+                border-bottom: 1px solid #e5e2d9;
+            }
+            .stats strong {
+                color: #1c1c1c;
+                font-weight: 700;
+            }
+
+            /* the two directions carry their own color */
+            .sec-up h2 { color: var(--up); }
+            .sec-down h2 { color: var(--down); }
+            .sec-up .qpanel { border-top: 3px solid var(--up); }
+            .sec-down .qpanel { border-top: 3px solid var(--down); }
+            .sec-down .qrow button,
+            .sec-down .reqbtn { background: var(--down); }
+            .sec-down .qrow button:hover,
+            .sec-down .reqbtn:hover { background: var(--down-dark); }
+            .sec-down .qrow input:focus {
+                outline-color: var(--down);
+                border-color: var(--down);
+            }
+            .sec-down .secact a,
+            .sec-down .askmiss a,
+            .sec-down .foot a { color: var(--down); }
         </style>
     </head>
     <body>
+        <header class="mast">
+            <div class="mastin">
+                <a class="brand" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#f3efe4" stroke-linecap="round"><path stroke-width="4.6" d="M32 6 C 32 14, 21 17, 21 26 C 21 35, 43 33, 43 42 C 43 51, 32 53, 32 59"/><path stroke-width="4.6" d="M32 6 C 32 14, 43 17, 43 26 C 43 35, 21 33, 21 42 C 21 51, 32 53, 32 59"/><path stroke-width="3" d="M10 15 C 13 22, 18 24, 21 26"/><path stroke-width="3" d="M54 49 C 51 43, 46 42, 43 42"/></g></svg><span>Tributary</span></a>
+                <nav class="mastnav">
+                    <a href="corpus.html">all traces</a>
+                    <a href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md">methodology</a>
+                    <a href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md">corrections</a>
+                </nav>
+            </div>
+        </header>
         <div class="wrap">
-            <h1>Tributary</h1>
+            <h1>Let’s do our research together.</h1>
             <p class="tagline">
-                Let’s do our research together — who said it first, who spread
-                it, and what it leaves out.
+                Who said it first, who spread it, and what it leaves out —
+                Tributary traces narratives across the internet and shows the
+                receipts.
             </p>
             <p class="nolabel">
-                Tributary traces narratives across the internet and shows the
-                receipts — news events, political framings, folk claims. It
-                never labels claims true or false; it shows provenance you can
-                verify.
+                News events, political framings, folk claims — it never labels
+                any of them true or false; it shows provenance you can verify.
                 <a
                     href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md"
                     >methodology</a
@@ -426,6 +520,9 @@
 
             
 
+            <p class="stats" id="stats" hidden></p>
+
+            <section class="sec-up">
             <h2>Upstream · Where a claim comes from</h2>
             <p class="secsub">
                 Trace a claim back to its earliest recorded use — who said it
@@ -527,7 +624,9 @@
                 Trace your own claim with the search box above, or
                 <a href="corpus.html">browse every published trace →</a>
             </p>
+            </section>
 
+            <section class="sec-down">
             <h2>Downstream · How narratives spread around an event</h2>
             <p class="secsub">
                 Map one event into the competing framings forming around it —
@@ -536,13 +635,13 @@
 
             <div class="qpanel">
                 <svg class="qart" viewBox="0 0 220 84" aria-hidden="true">
-                    <path d="M 26 42 C 90 40 120 14 190 13" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <path d="M 26 42 C 100 42 140 42 190 42" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <path d="M 26 42 C 90 44 120 70 190 71" fill="none" stroke="#b9cfe2" stroke-width="2"/>
-                    <circle cx="20" cy="42" r="7" fill="#2a6fa3" stroke="#fff" stroke-width="2"/>
-                    <circle cx="192" cy="13" r="4.5" fill="#2a6fa3"/><circle cx="206" cy="10" r="3" fill="#8fb2d0"/><circle cx="205" cy="20" r="3" fill="#8fb2d0"/>
-                    <circle cx="192" cy="42" r="4.5" fill="#5a8fc0"/><circle cx="207" cy="38" r="3" fill="#a9c4da"/><circle cx="206" cy="48" r="3" fill="#a9c4da"/>
-                    <circle cx="192" cy="71" r="4.5" fill="#7fa8c9"/><circle cx="206" cy="67" r="3" fill="#a9c4da"/><circle cx="204" cy="77" r="3" fill="#8fb2d0"/>
+                    <path d="M 26 42 C 90 40 120 14 190 13" fill="none" stroke="#bcd9cf" stroke-width="2"/>
+                    <path d="M 26 42 C 100 42 140 42 190 42" fill="none" stroke="#bcd9cf" stroke-width="2"/>
+                    <path d="M 26 42 C 90 44 120 70 190 71" fill="none" stroke="#bcd9cf" stroke-width="2"/>
+                    <circle cx="20" cy="42" r="7" fill="#1f7a68" stroke="#fff" stroke-width="2"/>
+                    <circle cx="192" cy="13" r="4.5" fill="#1f7a68"/><circle cx="206" cy="10" r="3" fill="#79b3a3"/><circle cx="205" cy="20" r="3" fill="#79b3a3"/>
+                    <circle cx="192" cy="42" r="4.5" fill="#3e8f7c"/><circle cx="207" cy="38" r="3" fill="#a3c9bc"/><circle cx="206" cy="48" r="3" fill="#a3c9bc"/>
+                    <circle cx="192" cy="71" r="4.5" fill="#5ea391"/><circle cx="206" cy="67" r="3" fill="#a3c9bc"/><circle cx="204" cy="77" r="3" fill="#79b3a3"/>
                     <text x="120" y="80" text-anchor="middle" fill="#999" font-size="10">how it spreads</text>
                 </svg>
                 <div class="qmain">
@@ -595,6 +694,7 @@
                     >
                 </div>
             </div>
+            </section>
             
 
 
@@ -693,6 +793,23 @@
                             .items || [];
                     return index;
                 }
+
+                // Live corpus counts for the stats strip — the same index
+                // the search uses; the numbers grow as the corpus does.
+                (async () => {
+                    try {
+                        const items = await loadIndex();
+                        const t = items.filter((i) => i.kind === "trace").length;
+                        const e = items.filter((i) => i.kind === "event").length;
+                        const el = document.getElementById("stats");
+                        el.innerHTML =
+                            "<span><strong>" + t + "</strong> narratives traced</span>" +
+                            "<span><strong>" + e + "</strong> events mapped</span>" +
+                            "<span>a dated receipt on every hop</span>" +
+                            "<span>reader contributions open</span>";
+                        el.hidden = false;
+                    } catch (e) {}
+                })();
 
                 // In-window request flow: POST to the Worker, poll status, swap
                 // in the permalink. The visitor never leaves the page.
