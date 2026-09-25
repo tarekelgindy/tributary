@@ -484,6 +484,52 @@
             .sec-down .secact a,
             .sec-down .askmiss a,
             .sec-down .foot a { color: var(--down); }
+
+            /* closing invitation: the contribution call */
+            .contrib-cta {
+                background: var(--ink);
+                color: var(--cream);
+                border-radius: 14px;
+                padding: 1.5rem 1.7rem 1.3rem;
+                margin: 3rem 0 0;
+            }
+            .contrib-cta .ctatitle {
+                font-size: 1.25rem;
+                font-weight: 700;
+                letter-spacing: -0.01em;
+                margin-bottom: 0.5rem;
+            }
+            .contrib-cta p {
+                margin: 0 0 0.9rem;
+                color: rgba(243, 239, 228, 0.85);
+                font-size: 0.95rem;
+            }
+            .contrib-cta .ctalinks {
+                display: flex;
+                gap: 0.8rem 1.6rem;
+                flex-wrap: wrap;
+                margin: 0;
+            }
+            .contrib-cta .ctalinks a {
+                color: #fff;
+                background: var(--up);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.92rem;
+                padding: 0.55rem 1.05rem;
+                border-radius: 8px;
+            }
+            .contrib-cta .ctalinks a:hover { background: var(--up-dark); }
+            .contrib-cta .ctalinks a.ghost {
+                background: transparent;
+                border: 1px solid rgba(243, 239, 228, 0.45);
+                color: var(--cream);
+                font-weight: 500;
+            }
+            .contrib-cta .ctalinks a.ghost:hover {
+                border-color: var(--cream);
+                background: rgba(243, 239, 228, 0.08);
+            }
         </style>
     </head>
     <body>
@@ -507,7 +553,7 @@
 
             <p class="stats" id="stats" hidden></p>
 
-            <section class="sec-up">
+            <section class="sec-up" id="up">
             <h2>Upstream · Where a claim comes from</h2>
             <p class="secsub">
                 Trace a claim back to its earliest recorded use — who said it
@@ -695,10 +741,28 @@
 
             
 
+            <section class="contrib-cta">
+                <div class="ctatitle">
+                    Do you have unique insight into where information
+                    originates? Add a human contribution!
+                </div>
+                <p>
+                    Every trace page has an <em>“Add what we missed”</em> form:
+                    add a use we missed, suggest a correction to a role, date,
+                    or attribution — or move an origin earlier than we found
+                    it. Approved contributions publish on the trace itself,
+                    credited to you.
+                </p>
+                <p class="ctalinks">
+                    <a href="corpus.html">Find a trace to contribute to →</a>
+                    <a href="#up" class="ghost">Not traced yet? Request it above, then add
+                        what you know ↑</a>
+                </p>
+            </section>
+
             <div class="links">
                 <strong>Go deeper:</strong>
                 <a href="corpus.html">browse all published traces</a> ·
-                <a href="digests/issue-02.html">weekly report archive</a> ·
                 <a href="https://github.com/tarekelgindy/tributary"
                     >GitHub repo</a
                 >
@@ -713,26 +777,6 @@
                     >roadmap</a
                 >
             </div>
-            <footer>
-                Usage is measured in aggregate only — country-level counts of
-                views and queries; no IP addresses or identities are stored
-                (<a
-                    href="https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md"
-                    >details</a
-                >).<br />
-                Analyses are AI-generated, with provenance and verification
-                labels on every element of every page. Spotted an error or an
-                earlier use of a narrative?
-                <a
-                    href="https://github.com/tarekelgindy/tributary/issues/new/choose"
-                    >Suggest a correction</a
-                >
-                ·
-                <a
-                    href="https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md"
-                    >past corrections</a
-                >.
-            </footer>
         </div>
         <script>
             // The question box: lexical match against gallery/search_index.json; misses
