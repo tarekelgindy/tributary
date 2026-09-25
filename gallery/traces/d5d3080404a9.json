@@ -1,7 +1,7 @@
 {
   "fingerprint_id": "d5d3080404a9",
   "created_at": "2026-09-14T04:59:38.931008+00:00",
-  "last_updated": "2026-09-25T08:39:51.372016+00:00",
+  "last_updated": "2026-09-25T09:19:28.375673+00:00",
   "taxonomy_version": "0.1",
   "scope": {
     "language": "en",
@@ -673,17 +673,19 @@
           "archive_url": "",
           "provenance": {
             "origin": "ai",
-            "status": "ai_generated",
+            "status": "human_confirmed",
             "model": "claude-sonnet-4-6",
             "contributor_id": "",
             "contributor_name": "",
             "created_at": "2026-09-25T08:39:04.239510+00:00",
             "confidence": 0.98,
             "reasoning": "",
-            "confirmations": [],
+            "confirmations": [
+              "ada2305c87cb"
+            ],
             "disputes": [],
             "revisions": [],
-            "confirmation_count": 0,
+            "confirmation_count": 1,
             "dispute_count": 0,
             "is_settled": false
           }
@@ -2437,6 +2439,36 @@
     "dispute_count": 0,
     "is_settled": false
   },
-  "contributions": [],
-  "contributors": []
+  "contributions": [
+    {
+      "contribution_id": "ada2305c87cb",
+      "kind": "confirm",
+      "target_element_id": "f46bf1e7e5fd",
+      "target_element_type": "attested_instance",
+      "contributor_id": "7ee5821d824f",
+      "contributor_name": "Tarek Elgindy",
+      "reason": "",
+      "payload": {
+        "url": "",
+        "date": "",
+        "quote": "",
+        "source_author": "",
+        "role": "",
+        "lineage": "lexical"
+      },
+      "created_at": "2026-09-25T09:10:02.285612+00:00",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0
+    }
+  ],
+  "contributors": [
+    {
+      "contributor_id": "7ee5821d824f",
+      "display_name": "Tarek Elgindy",
+      "reputation": 0,
+      "contributions_count": 1,
+      "joined_at": "2026-09-25T09:10:02.285612+00:00"
+    }
+  ]
 }
