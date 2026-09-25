@@ -179,20 +179,26 @@ export default {
 
       const ref = crypto.randomUUID().replace(/-/g, "").slice(0, 16);
       const clip = (v, n) => String(v || "").slice(0, n);
+      // GitHub caps repository_dispatch client_payload at 10 TOP-LEVEL
+      // properties — the flat shape silently 422'd every contribution
+      // (found in the first end-to-end dry run, 2026-09-24). Everything
+      // beyond the routing fields rides nested under data.
       const payload = {
         kind,
         fingerprint_id: fp,
-        url: clip(b.url, 500),
-        date: clip(b.date, 10),
-        quote: clip(b.quote, 600),
-        source_author: clip(b.source_author, 120),
-        reason: clip(b.reason, 600),
-        element_id: clip(b.element_id, 12),
-        role: clip(b.role, 30),
-        lineage: b.lineage === "conceptual" ? "conceptual" : "lexical",
-        name: clip(b.name, 80),
-        anonymous: b.anonymous ? "1" : "",
         ref,
+        data: {
+          url: clip(b.url, 500),
+          date: clip(b.date, 10),
+          quote: clip(b.quote, 600),
+          source_author: clip(b.source_author, 120),
+          reason: clip(b.reason, 600),
+          element_id: clip(b.element_id, 12),
+          role: clip(b.role, 30),
+          lineage: b.lineage === "conceptual" ? "conceptual" : "lexical",
+          name: clip(b.name, 80),
+          anonymous: b.anonymous ? "1" : "",
+        },
       };
 
       const dispatch = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
