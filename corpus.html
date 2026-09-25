@@ -27,8 +27,13 @@
   .mastnav a:hover { color: var(--cream); }
   .wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
   h1 { font-size: 1.7rem; margin: 0 0 0.3rem; letter-spacing: -0.01em; }
-  .sub { color: #666; font-size: 0.92rem; margin: 0 0 2rem; }
+  .sub { color: #666; font-size: 0.92rem; margin: 0 0 1.2rem; }
   .sub a { color: var(--up); text-decoration: none; }
+  #filter { width: 100%; padding: 0.7rem 1rem; font-size: 1rem; font-family: inherit;
+            border: 1px solid #ccc; border-radius: 10px; background: #fff; }
+  #filter:focus { outline: 2px solid var(--up); border-color: var(--up); }
+  .fhint { color: #888; font-size: 0.85rem; margin: 0.5rem 0 0; }
+  .fhint a { color: var(--up); text-decoration: none; }
   h2 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
        letter-spacing: 0.07em; margin: 2.6rem 0 0.4rem; }
   .sec-up h2 { color: var(--up); }
@@ -59,8 +64,10 @@
 </header>
 <div class="wrap">
   <h1>The public corpus</h1>
-  <p class="sub">Everything published so far, newest first — searchable from the
-     <a href="index.html">homepage</a>, browsable here.</p>
+  <p class="sub">Everything published so far, newest first.</p>
+  <input id="filter" type="search" placeholder="Search traces and events — try a topic, outlet, or claim…"
+         aria-label="Search the corpus" autocomplete="off">
+  <p class="fhint" id="fhint" hidden></p>
 
   <section class="sec-up">
     <h2 id="up-count">Upstream · Origin traces</h2>
@@ -76,33 +83,57 @@
 </div>
 <script>
 // Both lists render from gallery/index.json (written by publish.py, derived
-// from the published record in gallery/).
+// from the published record in gallery/). The search box is a live filter
+// over everything already loaded — no requests, instant.
 fetch('gallery/index.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
   .then(idx => {
     const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
       c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-
     const traces = idx.traces || [];
-    document.getElementById('trace-list').innerHTML = traces.length ? traces.map(t => `
+    const entries = idx.entries || [];
+
+    const traceCard = t => `
       <a class="card" href="fingerprint_viewer.html?load=gallery/traces/${esc(t.id)}.json">
         <span class="kind up">origin trace</span><span class="title">${esc(t.claim || '(untitled)')}</span>
         <p>${t.first_attested ? 'first recorded ' + esc(String(t.first_attested).slice(0, 10)) + ' · ' : ''}${
           t.n_uses} recorded uses${
           t.idea_first ? ' · the idea documented from ' + esc(String(t.idea_first).slice(0, 4)) : ''}</p>
-      </a>`).join('') : '<p class="empty">No published origin traces yet.</p>';
-    if (traces.length) document.getElementById('up-count').textContent =
-      'Upstream · ' + traces.length + ' origin traces';
-
-    const entries = idx.entries || [];
-    document.getElementById('event-list').innerHTML = entries.length ? entries.map(e => `
+      </a>`;
+    const eventCard = e => `
       <a class="card" href="fingerprint_viewer.html?load=gallery/events/${esc(e.id)}.json">
         <span class="kind down">event analysis</span><span class="title">${esc(e.event)}</span>
         <p>${e.event_date ? esc(String(e.event_date).slice(0, 10)) + ' · ' : ''}${e.n_framings} framings${
           e.n_actors ? ' · ' + e.n_actors + ' actors' : ''}${e.skew ? ' · coverage: ' + esc(e.skew) : ''}</p>
-      </a>`).join('') : '<p class="empty">No published events yet.</p>';
-    if (entries.length) document.getElementById('down-count').textContent =
-      'Downstream · ' + entries.length + ' event framing maps';
+      </a>`;
+
+    // every-token-must-match filter over the card's full text
+    const hay = o => JSON.stringify(o).toLowerCase();
+    const match = (o, toks) => { const h = hay(o); return toks.every(t => h.includes(t)); };
+
+    function render(q) {
+      const toks = (q || '').toLowerCase().split(/\s+/).filter(Boolean);
+      const ts = toks.length ? traces.filter(t => match(t, toks)) : traces;
+      const es = toks.length ? entries.filter(e => match(e, toks)) : entries;
+      document.getElementById('trace-list').innerHTML = ts.length
+        ? ts.map(traceCard).join('')
+        : `<p class="empty">${toks.length ? 'No origin traces match.' : 'No published origin traces yet.'}</p>`;
+      document.getElementById('event-list').innerHTML = es.length
+        ? es.map(eventCard).join('')
+        : `<p class="empty">${toks.length ? 'No event maps match.' : 'No published events yet.'}</p>`;
+      document.getElementById('up-count').textContent =
+        'Upstream · ' + ts.length + (toks.length ? ' matching' : '') + ' origin traces';
+      document.getElementById('down-count').textContent =
+        'Downstream · ' + es.length + (toks.length ? ' matching' : '') + ' event framing maps';
+      const hint = document.getElementById('fhint');
+      if (toks.length && !ts.length && !es.length) {
+        hint.innerHTML = 'Nothing published matches — you can request it from the <a href="index.html">homepage</a> (~5–10 min).';
+        hint.hidden = false;
+      } else hint.hidden = true;
+    }
+
+    render('');
+    document.getElementById('filter').addEventListener('input', e => render(e.target.value));
   })
   .catch(() => {
     const msg = '<p class="empty">Could not load the corpus index.</p>';
