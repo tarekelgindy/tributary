@@ -75,7 +75,32 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
             "skew": lean.get("skew", ""),
         })
     entries.sort(key=lambda e: (e["event_date"] or e["created_at"]), reverse=True)
-    index = {"count": len(entries), "entries": entries}
+
+    # Upstream origin traces get the same treatment (corpus.html lists both
+    # directions since 2026-09-25): derived from gallery/traces/, newest first.
+    traces = []
+    for p in sorted((gallery_dir / "traces").glob("*.json")):
+        try:
+            fp = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        gen = fp.get("genealogy") or {}
+        lex = gen.get("lexical") or {}
+        con = gen.get("conceptual") or {}
+        log = [i for i in lex.get("attestation_log") or []
+               if (i.get("claim_relation") or "") != "related-context"]
+        traces.append({
+            "id": fp.get("fingerprint_id") or p.stem,
+            "claim": ((fp.get("lexical") or {}).get("canonical_phrase") or "")[:200],
+            "first_attested": lex.get("first_attested_date") or "",
+            "idea_first": con.get("first_attested_date") or "",
+            "n_uses": len(log),
+            "created_at": fp.get("created_at") or "",
+        })
+    traces.sort(key=lambda t: t["created_at"], reverse=True)
+
+    index = {"count": len(entries), "entries": entries,
+             "n_traces": len(traces), "traces": traces}
     (gallery_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False), encoding="utf-8")
     build_search_index(gallery_dir)
