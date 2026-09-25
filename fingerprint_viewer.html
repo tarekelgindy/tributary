@@ -711,6 +711,11 @@ details.cov-backdrop .coverage-card { margin: 0.8rem; border-left-width: 4px; }
 .log-row:hover { background: #faf9f4; }
 .log-row .date { font-family: 'SF Mono', Menlo, monospace; color: #555; margin-right: 0.5rem; }
 .log-row .role-tag { font-size: 0.64rem; margin-right: 0.4rem; }
+.log-row .row-edit { float: right; border: none; background: none; color: #c5c5c5;
+  cursor: pointer; font-size: 0.85rem; padding: 0 0.25rem; line-height: 1.3; }
+.log-row .row-edit:hover { color: #2a6fa3; }
+.detail-edit-link { color: #2a6fa3; cursor: pointer; font-size: 0.82rem;
+  text-decoration: underline dotted; }
 .log-detail { margin: 0.4rem 0 0.6rem; }
 
 .empty { color: #999; font-style: italic; margin: 0; }
@@ -1919,11 +1924,39 @@ const REPO_URL = 'https://github.com/tarekelgindy/tributary';
 const WORKER_URL = 'https://tributary-requests.tarek-elgindy.workers.dev';
 
 // ---------------------------------------------------------------------------
-// Contribution box (Phase 2c-B): humans add what the automated pass missed.
-// v1 kinds: an earlier use (add), or confirm/dispute an existing entry.
-// Named by default, anonymous allowed; every submission goes through
-// mechanical verification and maintainer review before it publishes.
+// Contribution box (Phase 2c-B; v2 2026-09-24 after friends-round feedback):
+// humans add what the automated pass missed OR correct what it got wrong.
+// Kinds: add a use (any date), edit (structured correction: role / date /
+// attribution / receipt), confirm, dispute. Named by default, anonymous
+// allowed; every submission goes through mechanical verification and
+// maintainer review before it publishes.
 // ---------------------------------------------------------------------------
+
+// Entry point for the per-entry "✎" affordances (log rows, instance
+// details): jump to the form with "Suggest a correction" preselected and
+// the entry already picked.
+function prefillContribution(eid) {
+  const form = document.getElementById('contrib-form');
+  if (!form) return;
+  const radio = form.querySelector('input[name=ckind][value=edit]');
+  if (radio && !radio.disabled) {
+    radio.checked = true;
+    radio.dispatchEvent(new Event('change'));
+  }
+  const sel = document.getElementById('c-element');
+  if (sel && eid) sel.value = eid;
+  const box = document.getElementById('contribute-box');
+  if (box) box.scrollIntoView({ behavior: 'smooth' });
+  const reason = document.getElementById('c-reason');
+  if (reason) setTimeout(() => reason.focus({ preventScroll: true }), 400);
+}
+// instance-detail cards are inserted dynamically (log unfold, timeline
+// dots) — delegate their correction links at the document level
+document.addEventListener('click', e => {
+  const link = e.target.closest ? e.target.closest('.detail-edit-link') : null;
+  if (link) prefillContribution(link.getAttribute('data-eid') || '');
+});
+
 function setContribute(fp) {
   const box = document.getElementById('contribute-box');
   if (!box) return;
@@ -1943,14 +1976,15 @@ function setContribute(fp) {
 
   box.innerHTML = `
     ${strip}
-    <h2>Add what we missed</h2>
-    <p class="sub">Know an earlier use, or a problem with an entry? Contributions are
-      checked mechanically (URL, quote) and reviewed by a human maintainer before they
-      publish — then they appear here, credited. A contribution is a claim with
-      receipts, not a verdict.</p>
+    <h2>Add what we missed — or fix what we got wrong</h2>
+    <p class="sub">Know a use we missed, a wrong role or date, or a better receipt?
+      Contributions are checked mechanically (URL, quote) and reviewed by a human
+      maintainer before they publish — then they appear here, credited. A contribution
+      is a claim with receipts, not a verdict.</p>
     <form id="contrib-form">
       <div class="row">
-        <label class="opt"><input type="radio" name="ckind" value="add" checked> I found an earlier use</label>
+        <label class="opt"><input type="radio" name="ckind" value="add" checked> Add a use we missed</label>
+        <label class="opt"><input type="radio" name="ckind" value="edit" ${entries.length ? '' : 'disabled'}> Suggest a correction</label>
         <label class="opt"><input type="radio" name="ckind" value="confirm" ${entries.length ? '' : 'disabled'}> Confirm an entry</label>
         <label class="opt"><input type="radio" name="ckind" value="dispute" ${entries.length ? '' : 'disabled'}> Dispute an entry</label>
       </div>
@@ -1958,6 +1992,8 @@ function setContribute(fp) {
         <input type="url" id="c-url" placeholder="Link to the source (required)">
         <input type="text" id="c-date" placeholder="Date: YYYY or YYYY-MM-DD (required)" style="max-width:220px;">
       </div>
+      <p class="hint" data-cf="add">Any date helps — and if it's earlier than our earliest,
+        the trace's recorded origin moves, credited to you.</p>
       <div class="row" data-cf="add">
         <textarea id="c-quote" placeholder="The exact words used there (lets us verify the page automatically)"></textarea>
       </div>
@@ -1971,8 +2007,26 @@ function setContribute(fp) {
       <div class="row" data-cf="element" hidden>
         <select id="c-element">${opts}</select>
       </div>
+      <div class="row" data-cf="edit" hidden>
+        <select id="c-erole" style="max-width:280px;">
+          <option value="">Role: keep as recorded</option>
+          <option value="originator">originator (coined it — say what shows that)</option>
+          <option value="early-amplifier">early-amplifier</option>
+          <option value="mass-amplifier">mass-amplifier</option>
+          <option value="institutional-adoption">institutional-adoption</option>
+          <option value="critic">critic (examines or disputes it)</option>
+          <option value="mention">mention</option>
+        </select>
+        <input type="text" id="c-edate" placeholder="Corrected date (optional)" style="max-width:220px;">
+      </div>
+      <div class="row" data-cf="edit" hidden>
+        <input type="text" id="c-eauthor" placeholder="Corrected attribution — who really wrote/said it (optional)">
+        <input type="url" id="c-eurl" placeholder="Better receipt link (optional)">
+      </div>
+      <p class="hint" data-cf="edit" hidden>Change whichever fields are wrong and leave the rest;
+        the entry keeps a visible note recording what changed and why.</p>
       <div class="row">
-        <textarea id="c-reason" placeholder="Why? (required for disputes — what's wrong, ideally with a receipt)"></textarea>
+        <textarea id="c-reason" placeholder="Why? (required for corrections and disputes — what's wrong and how you know)"></textarea>
       </div>
       <div class="row">
         <input type="text" id="c-name" placeholder="Your name, as it should appear (credited publicly)">
@@ -1989,6 +2043,7 @@ function setContribute(fp) {
   const showFields = () => {
     const kind = form.querySelector('input[name=ckind]:checked').value;
     form.querySelectorAll('[data-cf=add]').forEach(el => el.hidden = kind !== 'add');
+    form.querySelectorAll('[data-cf=edit]').forEach(el => el.hidden = kind !== 'edit');
     form.querySelector('[data-cf=element]').hidden = kind === 'add';
   };
   form.querySelectorAll('input[name=ckind]').forEach(r => r.addEventListener('change', showFields));
@@ -2001,16 +2056,34 @@ function setContribute(fp) {
     const val = id => (document.getElementById(id).value || '').trim();
     const body = {
       kind, fingerprint_id: fp.fingerprint_id,
-      url: val('c-url'), date: val('c-date'), quote: val('c-quote'),
-      source_author: val('c-author'), lineage: val('c-lineage') || 'lexical',
+      url: kind === 'edit' ? val('c-eurl') : val('c-url'),
+      date: kind === 'edit' ? val('c-edate') : val('c-date'),
+      quote: kind === 'add' ? val('c-quote') : '',
+      source_author: kind === 'edit' ? val('c-eauthor') : val('c-author'),
+      role: kind === 'edit' ? val('c-erole') : '',
+      lineage: val('c-lineage') || 'lexical',
       element_id: kind === 'add' ? '' : val('c-element'),
       reason: val('c-reason'), name: val('c-name'),
       anonymous: document.getElementById('c-anon').checked,
       contact: val('c-contact'),
     };
     if (kind === 'add' && (!/^https?:\/\//.test(body.url) || !/^\d{4}(-\d{2})?(-\d{2})?$/.test(body.date))) {
-      msg.textContent = 'An earlier use needs a link and a date (YYYY, YYYY-MM, or YYYY-MM-DD).';
+      msg.textContent = 'An added use needs a link and a date (YYYY, YYYY-MM, or YYYY-MM-DD).';
       return;
+    }
+    if (kind === 'edit') {
+      if (!body.role && !body.date && !body.source_author && !body.url) {
+        msg.textContent = 'Propose at least one change — a role, date, attribution, or a better link.';
+        return;
+      }
+      if (body.date && !/^\d{4}(-\d{2})?(-\d{2})?$/.test(body.date)) {
+        msg.textContent = 'The corrected date must be YYYY, YYYY-MM, or YYYY-MM-DD.';
+        return;
+      }
+      if (body.reason.length < 12) {
+        msg.textContent = 'A correction needs a reason — what is wrong and how you know.';
+        return;
+      }
     }
     if (kind === 'dispute' && body.reason.length < 12) {
       msg.textContent = 'A dispute needs a reason — say what is wrong.';
@@ -2041,8 +2114,9 @@ function setContribute(fp) {
 function contributionsStripHtml(fp) {
   const contribs = fp.contributions || [];
   if (!contribs.length) return '';
-  const KIND_LABEL = { add: 'earlier use added', confirm: 'confirmed an entry',
-    dispute: 'disputed an entry', edit: 'edit', flag: 'flag', add_context: 'context added' };
+  const KIND_LABEL = { add: 'use added', confirm: 'confirmed an entry',
+    dispute: 'disputed an entry', edit: 'corrected an entry', flag: 'flag',
+    add_context: 'context added' };
   const items = contribs.slice(0, 6).map(c =>
     `<span class="ck">${escapeHtml(KIND_LABEL[c.kind] || c.kind)}</span> by
      ${escapeHtml(c.contributor_name || 'Anonymous')} (${escapeHtml((c.created_at || '').slice(0, 10))})`);
@@ -2550,7 +2624,9 @@ function milestoneHtml(entry) {
 function logRowsHtml(log, grp) {
   return log.map((i, idx) => {
     const role = i.amplifier_role || 'unknown';
-    return `<div class="log-row" data-grp="${grp}" data-i="${idx}"><span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span>${provenanceBadge(i)}<strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
+    return `<div class="log-row" data-grp="${grp}" data-i="${idx}">${
+      i.instance_id ? `<button type="button" class="row-edit" data-eid="${escapeHtml(i.instance_id)}" title="something wrong here? suggest a correction — reviewed before it publishes">✎</button>` : ''
+      }<span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span>${provenanceBadge(i)}<strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
       isRelatedContext(i) ? ' <span class="who-year">related context</span>' : ''}${
       i.describes_period ? ` <span class="who-year" title="a retrospective: dated by its own publication; describes ${escapeHtml(i.describes_period)}">retrospective</span>` : ''}</div>`;
   }).join('');
@@ -2683,6 +2759,15 @@ function renderOverview(fp) {
       panel.querySelectorAll('.who-name').forEach(n =>
         n.classList.toggle('active', actorHighlight !== null && n.getAttribute('data-actor') === actorHighlight));
       document.querySelectorAll('.timeline-svg').forEach(applyActorHighlight);
+    });
+  });
+
+  // Per-row ✎ jumps to the contribution form with the entry preselected;
+  // stopPropagation keeps the row's own unfold behavior out of it.
+  panel.querySelectorAll('.row-edit').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      prefillContribution(btn.getAttribute('data-eid') || '');
     });
   });
 
@@ -3014,6 +3099,7 @@ function instanceDetailHtml(inst) {
       ${(verifyBadge(inst) || archiveBadge(inst)) ? `<div class="field"><span class="label">Verification</span>${verifyBadge(inst)}${archiveBadge(inst)}</div>` : ''}
       ${inst.source_url ? `<div class="field"><span class="label">Source</span><a href="${escapeHtml(inst.source_url)}" target="_blank" rel="noopener">${escapeHtml(inst.source_url)}</a>${
         citedViaOf(inst) ? `<div style="color:#777; font-size:0.8rem; margin-top:0.15rem;">The dated source is documented by ${escapeHtml(citedViaOf(inst))}; the original is not directly linked (often print or offline).</div>` : ''}</div>` : ''}
+      ${inst.instance_id ? `<div class="field"><span class="detail-edit-link" data-eid="${escapeHtml(inst.instance_id)}" title="propose a role, date, attribution, or receipt change — reviewed by a maintainer before it publishes">✎ Something wrong here? Suggest a correction</span></div>` : ''}
     </div>
   `;
 }

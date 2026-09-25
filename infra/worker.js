@@ -16,7 +16,8 @@
  *   POST /request   {subject, kind: "claim"|"event"} -> {id} | 429 | 400
  *   GET  /status?id=... -> {state: running|done|failed|unknown, url?}
  *   POST /complete  {id, state, url?}  (X-Callback-Secret header) -> {ok}
- *   POST /contribute (Phase 2c-B) {kind, fingerprint_id, ...} -> {ok, ref}
+ *   POST /contribute (Phase 2c-B; v2 kinds add/edit/confirm/dispute)
+ *     {kind, fingerprint_id, ...} -> {ok, ref}
  *     Relays a reader contribution to the contributions workflow for
  *     mechanical verification + maintainer review. PRIVACY SPLIT: the
  *     optional contact field is stored ONLY here in KV (90 days, for
@@ -155,14 +156,14 @@ export default {
     if (url.pathname === "/contribute" && request.method === "POST") {
       const b = await request.json().catch(() => null);
       if (!b) return json({ error: "bad request" }, 400, h);
-      const kind = ["add", "confirm", "dispute"].includes(b.kind) ? b.kind : "";
+      const kind = ["add", "edit", "confirm", "dispute"].includes(b.kind) ? b.kind : "";
       const fp = /^[a-f0-9]{12}$/.test(String(b.fingerprint_id || "")) ? b.fingerprint_id : "";
       if (!kind || !fp)
         return json({ error: "Missing or malformed contribution fields." }, 400, h);
       if (kind === "add" && !/^https?:\/\/.{4,}/.test(String(b.url || "")))
-        return json({ error: "An earlier-use contribution needs a link to the source." }, 400, h);
+        return json({ error: "An added use needs a link to the source." }, 400, h);
       if (kind !== "add" && !/^[a-f0-9]{12}$/.test(String(b.element_id || "")))
-        return json({ error: "Pick which entry you are confirming or disputing." }, 400, h);
+        return json({ error: "Pick which entry this is about." }, 400, h);
 
       // ---- rate limits (separate counters from trace requests) ----
       const day = new Date().toISOString().slice(0, 10);
@@ -187,6 +188,7 @@ export default {
         source_author: clip(b.source_author, 120),
         reason: clip(b.reason, 600),
         element_id: clip(b.element_id, 12),
+        role: clip(b.role, 30),
         lineage: b.lineage === "conceptual" ? "conceptual" : "lexical",
         name: clip(b.name, 80),
         anonymous: b.anonymous ? "1" : "",

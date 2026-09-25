@@ -52,6 +52,7 @@ jobs:
           CONTRIB_SOURCE_AUTHOR: ${{ github.event.client_payload.source_author }}
           CONTRIB_REASON: ${{ github.event.client_payload.reason }}
           CONTRIB_ELEMENT: ${{ github.event.client_payload.element_id }}
+          CONTRIB_ROLE: ${{ github.event.client_payload.role }}
           CONTRIB_LINEAGE: ${{ github.event.client_payload.lineage }}
           CONTRIB_NAME: ${{ github.event.client_payload.name }}
           CONTRIB_ANON: ${{ github.event.client_payload.anonymous }}
@@ -80,7 +81,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install deps
-        run: pip install --quiet httpx pillow
+        # anthropic<1: apply refreshes timeline_stats via fingerprint.py's
+        # compute_timeline_stats, and fingerprint.py imports the SDK (same
+        # pin rationale as trace-request.yml)
+        run: pip install --quiet "anthropic<1" httpx pillow
       - name: Apply the approved contribution
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}

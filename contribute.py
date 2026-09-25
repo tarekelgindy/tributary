@@ -15,8 +15,10 @@ contribution. Two modes, called by .github/workflows/contribution.yml:
              parse the review issue's JSON block and write the contribution
              into the published fingerprint: a ledger entry
              (models.Contribution), a contributor record, and the effect —
-             a new attestation with human_added provenance, or a
-             confirm/dispute transition on an existing element's Provenance.
+             a new attestation with human_added provenance, a structured
+             correction (edit: role/date/attribution/receipt, applied with
+             a dated note), or a confirm/dispute transition on an existing
+             element's Provenance.
              Updates every published copy (gallery/traces/ standalone +
              gallery/events/ embedded) so they never drift.
 
@@ -53,7 +55,13 @@ HEX12 = re.compile(r"^[a-f0-9]{12}$")
 DATE_RE = re.compile(r"^\d{4}(-\d{2})?(-\d{2})?$")
 JSON_BLOCK = re.compile(r"```json\s*(\{.*?\})\s*```", re.S)
 
-V1_KINDS = {"add", "confirm", "dispute"}   # edit/flag/add_context wait for v2
+# v2 (2026-09-24, friends-round feedback: "hard to contribute origins/
+# amplifiers that differ from what the AI found"): add is any-date, and
+# edit = a structured correction (role/date/attribution/receipt) applied
+# with a dated note, exactly the convention maintainer corrections use.
+KINDS = {"add", "confirm", "dispute", "edit"}   # flag/add_context wait
+ROLES = {"originator", "early-amplifier", "mass-amplifier",
+         "institutional-adoption", "critic", "mention"}
 
 
 # ---------------------------------------------------------------------------
@@ -157,6 +165,7 @@ def read_payload():
         "source_author": g("CONTRIB_SOURCE_AUTHOR")[:120],
         "reason": g("CONTRIB_REASON")[:600],
         "element_id": g("CONTRIB_ELEMENT").lower(),
+        "role": g("CONTRIB_ROLE").lower()[:30],
         "lineage": g("CONTRIB_LINEAGE").lower() or "lexical",
         "name": g("CONTRIB_NAME")[:80],
         "anonymous": g("CONTRIB_ANON").lower() in ("1", "true", "yes", "on"),
@@ -168,8 +177,9 @@ def read_payload():
 def intake(gallery, out_path):
     p = read_payload()
     problems = []
-    if p["kind"] not in V1_KINDS:
-        problems.append(f"unsupported kind {p['kind']!r} (v1: add / confirm / dispute)")
+    if p["kind"] not in KINDS:
+        problems.append(f"unsupported kind {p['kind']!r} "
+                        "(supported: add / edit / confirm / dispute)")
     if not HEX12.match(p["fingerprint_id"]):
         problems.append("fingerprint id must be 12 hex chars")
     copies = find_copies(gallery, p["fingerprint_id"]) if not problems else []
@@ -183,11 +193,27 @@ def intake(gallery, out_path):
 
     if p["kind"] == "add":
         if not re.match(r"^https?://", p["url"] or ""):
-            problems.append("an earlier-attestation contribution needs an http(s) receipt URL")
+            problems.append("an added use needs an http(s) receipt URL")
         if not DATE_RE.match(p["date"] or ""):
             problems.append("date must be YYYY, YYYY-MM, or YYYY-MM-DD")
         if p["lineage"] not in ("lexical", "conceptual"):
             problems.append("lineage must be lexical or conceptual")
+    elif p["kind"] == "edit":
+        if not HEX12.match(p["element_id"]):
+            problems.append("a correction needs the target entry's id")
+        elif fp is not None and find_element(fp, p["element_id"])[0] is None:
+            problems.append(f"no attestation-log entry {p['element_id']} on this trace")
+        if not any(p[k] for k in ("role", "date", "source_author", "url")):
+            problems.append("a correction needs at least one proposed change "
+                            "(role, date, attribution, or receipt link)")
+        if p["role"] and p["role"] not in ROLES:
+            problems.append("proposed role must be one of: " + ", ".join(sorted(ROLES)))
+        if p["date"] and not DATE_RE.match(p["date"]):
+            problems.append("date must be YYYY, YYYY-MM, or YYYY-MM-DD")
+        if p["url"] and not re.match(r"^https?://", p["url"]):
+            problems.append("the proposed receipt must be an http(s) URL")
+        if len(p["reason"]) < 12:
+            problems.append("a correction needs a reason (what is wrong and how you know)")
     else:
         if not HEX12.match(p["element_id"]):
             problems.append("confirm/dispute needs the target entry's id")
@@ -221,7 +247,13 @@ def intake(gallery, out_path):
     record = {**p, "display_name": display, "checks": checks, "valid": not problems,
               "problems": problems}
 
-    kind_line = {"add": f"earlier attestation ({p['date']}, {p['url'][:80]})",
+    edit_bits = ", ".join(filter(None, [
+        p["role"] and f"role -> {p['role']}",
+        p["date"] and f"date -> {p['date']}",
+        p["source_author"] and f"attribution -> {p['source_author']}",
+        p["url"] and f"receipt -> {p['url'][:60]}"]))
+    kind_line = {"add": f"a use we missed ({p['date']}, {p['url'][:80]})",
+                 "edit": f"correction to entry {p['element_id']}: {edit_bits}",
                  "confirm": f"confirm entry {p['element_id']}",
                  "dispute": f"dispute entry {p['element_id']}"}.get(p["kind"], p["kind"])
     phrase = ((fp or {}).get("lexical") or {}).get("canonical_phrase", "")[:100]
@@ -268,6 +300,42 @@ def _date_key(s):
     return (int(m.group(1)), int(m.group(2) or 12), int(m.group(3) or 31))
 
 
+def _refresh_stats(gl):
+    """Recompute timeline_stats after the log changed. Best-effort: the
+    stats function lives in fingerprint.py (which imports anthropic); if
+    that import is unavailable the stale stats stay — the viewer's own
+    rendering derives most figures live."""
+    try:
+        from types import SimpleNamespace
+        from fingerprint import compute_timeline_stats
+        rec = SimpleNamespace(attestation_log=[
+            SimpleNamespace(**i) for i in gl.get("attestation_log") or []])
+        gl["timeline_stats"] = compute_timeline_stats(rec)
+    except Exception as e:
+        print(f"[contribute] stats refresh skipped ({type(e).__name__})",
+              file=sys.stderr)
+
+
+def _refresh_lineage(gl):
+    """After an edit changed dates/roles: re-derive the lineage's earliest
+    fields from the asserting entries, and downgrade a single-origin claim
+    that no longer has an originator-labeled entry backing it."""
+    log = gl.get("attestation_log") or []
+    asserting = [i for i in log
+                 if (i.get("claim_relation") or "") != "related-context"
+                 and _date_key(i.get("date"))]
+    if asserting:
+        earliest = min(asserting, key=lambda i: _date_key(i.get("date")))
+        if gl.get("first_attested_date") != earliest.get("date"):
+            gl["first_attested_date"] = earliest.get("date")
+            gl["first_attested_source"] = earliest.get("source_url", "")
+            gl["primary_origin_id"] = earliest.get("instance_id", "")
+    if gl.get("status") == "single-origin" and not any(
+            (i.get("amplifier_role") or "") == "originator" for i in asserting):
+        gl["status"] = "earliest-found"
+    _refresh_stats(gl)
+
+
 def contributor_id_for(record):
     if record["anonymous"] or not record["name"]:
         return "anon-" + hashlib.sha256(
@@ -289,7 +357,7 @@ def apply_to_fp(fp, record):
         contributor_id=cid, contributor_name=display,
         reason=record.get("reason", ""),
         payload={k: record.get(k, "") for k in
-                 ("url", "date", "quote", "source_author", "lineage")},
+                 ("url", "date", "quote", "source_author", "role", "lineage")},
         created_at=record["submitted_at"],
     )
 
@@ -321,6 +389,52 @@ def apply_to_fp(fp, record):
             if gl.get("status") == "single-origin":
                 gl["status"] = "earliest-found"   # the single-origin claim just broke
             summary += f"; new earliest for the {record['lineage']} lineage"
+        _refresh_stats(gl)
+    elif record["kind"] == "edit":
+        lin, entry = find_element(fp, record["element_id"])
+        if entry is None:
+            raise SystemExit(f"[contribute] apply: element {record['element_id']} not found")
+        day = (record["submitted_at"] or "")[:10]
+        reason = record.get("reason", "")
+        changes = []
+        if record.get("role"):
+            old = entry.get("amplifier_role") or "unknown"
+            entry["amplifier_role"] = record["role"]
+            entry["role_evidence"] = ((entry.get("role_evidence") or "")
+                + f" [{day} correction by {display}: role {old} -> "
+                  f"{record['role']} — {reason}]").strip()
+            changes.append(f"role {old} -> {record['role']}")
+        if record.get("date"):
+            changes.append(f"date {entry.get('date') or '?'} -> {record['date']}")
+            entry["date"] = record["date"]
+        if record.get("source_author"):
+            changes.append(f"attribution {entry.get('author') or '?'} -> "
+                           f"{record['source_author']}")
+            entry["author"] = record["source_author"]
+        if record.get("url"):
+            entry["source_url"] = record["url"]
+            # the proposed receipt was mechanically checked at intake
+            entry["verification_status"] = checks.get("verification_status", "unchecked")
+            entry["verification_notes"] = checks.get("verification_notes", "")
+            entry["verified"] = checks.get("verification_status") == "verified"
+            if checks.get("archive_url"):
+                entry["archive_url"] = checks["archive_url"]
+            changes.append("receipt URL replaced (re-checked at intake)")
+        if [c for c in changes if not c.startswith("role ")]:
+            entry["evidence"] = ((entry.get("evidence") or "")
+                + f" [{day} correction by {display}: "
+                  f"{'; '.join(c for c in changes if not c.startswith('role '))}"
+                  f" — {reason}]").strip()
+        prov = entry.get("provenance") or Provenance().to_dict()
+        prov.setdefault("edits", []).append(contribution.contribution_id)
+        # a maintainer-approved correction IS a human review of the entry;
+        # it also resolves a standing dispute (the record of it remains)
+        if prov.get("status") in ("ai_generated", "disputed", ""):
+            prov["status"] = "human_confirmed"
+        entry["provenance"] = prov
+        _refresh_lineage(fp["genealogy"][lin])
+        summary = (f"correction on {lin} entry {record['element_id']}: "
+                   + "; ".join(changes))
     else:
         lin, entry = find_element(fp, record["element_id"])
         if entry is None:
@@ -363,7 +477,7 @@ def apply_mode(gallery, body):
     if not record.get("valid"):
         raise SystemExit("[contribute] apply: this submission was rejected at intake "
                          f"({'; '.join(record.get('problems') or ['unknown'])})")
-    if record.get("kind") not in V1_KINDS:
+    if record.get("kind") not in KINDS:
         raise SystemExit(f"[contribute] apply: unsupported kind {record.get('kind')!r}")
 
     copies = find_copies(gallery, record["fingerprint_id"])
