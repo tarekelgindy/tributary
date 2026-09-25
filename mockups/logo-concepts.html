@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tributary — logo concepts (river flows)</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: #f7f6f3; color: #222; margin: 0; line-height: 1.5; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 2.2rem 1.2rem 4rem; }
+  h1 { font-size: 1.5rem; margin: 0 0 0.2rem; }
+  .sub { color: #666; font-size: 0.9rem; margin: 0 0 1.8rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+  .concept { background: #fff; border: 1px solid #e2dfd7; border-radius: 12px; padding: 1.1rem 1.2rem; }
+  .concept h2 { font-size: 1rem; margin: 0 0 0.15rem; }
+  .concept .why { color: #666; font-size: 0.83rem; margin: 0 0 0.9rem; min-height: 3.6em; }
+  .row { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+  .tile { background: #12333e; border-radius: 16px; width: 96px; height: 96px;
+          display: flex; align-items: center; justify-content: center; }
+  .tile svg { width: 72px; height: 72px; }
+  .mast { background: #12333e; border-radius: 8px; padding: 0.5rem 0.9rem;
+          display: flex; align-items: center; gap: 0.55rem; color: #f3efe4;
+          font-weight: 700; font-size: 1.1rem; }
+  .mast svg { width: 27px; height: 27px; }
+  .fav { display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
+         color: #999; font-size: 0.68rem; }
+  .fav .fbox { background: #12333e; border-radius: 4px; width: 16px; height: 16px;
+               display: flex; align-items: center; justify-content: center; }
+  .fav svg { width: 13px; height: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Logo concepts — river flows</h1>
+  <p class="sub">Same stroke language throughout (cream on ink, round caps). Each shown at hero,
+     masthead, and favicon scale — a mark has to survive all three.</p>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const CONCEPTS = [
+  ["A · Braided river (current)",
+   "Channels split, weave, and rejoin around islands — reads in both directions, like the product.",
+   `<path stroke-width="4.6" d="M32 6 C 32 14, 21 17, 21 26 C 21 35, 43 33, 43 42 C 43 51, 32 53, 32 59"/>
+    <path stroke-width="4.6" d="M32 6 C 32 14, 43 17, 43 26 C 43 35, 21 33, 21 42 C 21 51, 32 53, 32 59"/>
+    <path stroke-width="3" d="M10 15 C 13 22, 18 24, 21 26"/>
+    <path stroke-width="3" d="M54 49 C 51 43, 46 42, 43 42"/>`],
+
+  ["B · Confluence",
+   "Tributaries merging into one river — literally the name. Sources join, the stream strengthens; the upstream story.",
+   `<path stroke-width="5.4" d="M32 32 C 32 42, 32 50, 32 58"/>
+    <path stroke-width="3.6" d="M13 8 C 16 20, 24 27, 31 32"/>
+    <path stroke-width="3.6" d="M51 8 C 48 20, 40 27, 33 32"/>
+    <path stroke-width="3.6" d="M32 6 C 32 16, 32 24, 32 32"/>`],
+
+  ["C · Narrows",
+   "Streams converge to a waist, then fan back out — both directions in one mark: many sources in, many framings out.",
+   `<path stroke-width="4.2" d="M16 6 C 22 16, 28 22, 32 28"/>
+    <path stroke-width="4.2" d="M48 6 C 42 16, 36 22, 32 28"/>
+    <path stroke-width="5.2" d="M32 27 L 32 37"/>
+    <path stroke-width="4.2" d="M32 36 C 28 42, 22 48, 16 58"/>
+    <path stroke-width="4.2" d="M32 36 C 36 42, 42 48, 48 58"/>`],
+
+  ["D · Meander",
+   "One river, drawn as one unbroken stroke, wandering the way real rivers do. The most minimal; quietly elegant.",
+   `<path stroke-width="5" d="M12 12 C 40 6, 50 20, 34 27 C 16 34, 14 44, 34 48 C 46 50, 50 54, 52 58"/>
+    <circle cx="17" cy="24" r="2.6" fill="#f3efe4" stroke="none"/>`],
+
+  ["E · The island",
+   "One channel splits around a single island and rejoins — a claim diverges and returns to source. Symmetric, iconic, eye-like.",
+   `<path stroke-width="5" d="M32 6 C 32 14, 22 18, 22 31 C 22 44, 32 48, 32 58"/>
+    <path stroke-width="5" d="M32 6 C 32 14, 42 18, 42 31 C 42 44, 32 48, 32 58"/>`],
+
+  ["F · Watershed",
+   "A dendritic drainage network — every stream feeds the main stem. The provenance tree drawn as hydrology; the strongest concept match.",
+   `<path stroke-width="5" d="M30 58 C 31 46, 30 32, 26 10"/>
+    <path stroke-width="3.2" d="M10 14 C 17 20, 23 24, 27 27"/>
+    <path stroke-width="3.2" d="M52 18 C 45 24, 37 29, 29 34"/>
+    <path stroke-width="3.2" d="M14 38 C 20 41, 25 43, 29 45"/>
+    <path stroke-width="2.4" d="M48 44 C 43 47, 37 49, 30 51"/>`],
+
+  ["G · Current",
+   "Three staggered flow-lines — the map-maker's symbol for moving water. Abstract and calm, but the least specific to 'tributary'.",
+   `<path stroke-width="4.4" d="M10 19 C 19 12, 27 26, 37 19 C 44 14, 50 17, 54 16"/>
+    <path stroke-width="4.4" d="M10 33 C 19 26, 27 40, 37 33 C 44 28, 50 31, 54 30"/>
+    <path stroke-width="4.4" d="M10 47 C 19 40, 27 54, 37 47"/>`],
+];
+
+const svg = (paths, cls) =>
+  `<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#f3efe4" stroke-linecap="round">${paths}</g></svg>`;
+
+document.getElementById('grid').innerHTML = CONCEPTS.map(([name, why, paths]) => `
+  <div class="concept">
+    <h2>${name}</h2>
+    <p class="why">${why}</p>
+    <div class="row">
+      <div class="tile">${svg(paths)}</div>
+      <div>
+        <div class="mast">${svg(paths)}<span>Tributary</span></div>
+        <div style="height:0.5rem"></div>
+        <div class="fav"><div class="fbox">${svg(paths)}</div>favicon</div>
+      </div>
+    </div>
+  </div>`).join('');
+</script>
+</body>
+</html>
