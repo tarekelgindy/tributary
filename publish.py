@@ -31,7 +31,8 @@ ROOT = Path(__file__).resolve().parent
 def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     out_events = gallery_dir / "events"
     out_events.mkdir(parents=True, exist_ok=True)
-    entries, skipped = [], 0
+    # Stage 1: copy qualifying analyses from the staging dir into the gallery.
+    skipped = 0
     for p in sorted(events_dir.glob("*.json")):
         if p.name == "corpus_index.json":
             continue
@@ -46,10 +47,26 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
             continue
         aid = ev.get("analysis_id") or p.stem
         shutil.copyfile(p, out_events / f"{aid}.json")
+
+    # Stage 2: the index is derived from gallery/events/ itself — the
+    # published record — NEVER from the staging dir. CI fulfillment runs
+    # execute this script on a runner whose events/ staging dir is
+    # gitignored-empty, and rebuilding the index from staging wiped the
+    # live corpus listing to zero on every request (found 2026-09-25;
+    # the same replace-instead-of-merge disease as the cards index wipe).
+    entries = []
+    for p in sorted(out_events.glob("*.json")):
+        try:
+            ev = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        framings = ev.get("framings") or []
+        if not ev.get("is_event_analysis") or len(framings) < min_framings:
+            continue
         lean = ev.get("coverage_lean") or {}
         coal = ev.get("coalition") or {}
         entries.append({
-            "id": aid,
+            "id": ev.get("analysis_id") or p.stem,
             "event": (ev.get("event") or "")[:200],
             "event_date": ev.get("event_date") or "",
             "created_at": ev.get("created_at") or "",
