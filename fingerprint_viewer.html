@@ -2004,6 +2004,17 @@ function setContribute(fp) {
           <option value="conceptual">the underlying idea</option>
         </select>
       </div>
+      <div class="row" data-cf="add">
+        <select id="c-role" style="max-width:320px;" title="how this use sits in the spread — optional; the reviewer judges either way">
+          <option value="">Its role in the spread: let the reviewer judge</option>
+          <option value="originator">originator (coined it — say what shows that)</option>
+          <option value="early-amplifier">early-amplifier (spread it early)</option>
+          <option value="mass-amplifier">mass-amplifier (spread it wide)</option>
+          <option value="institutional-adoption">institutional-adoption (an institution embraced it)</option>
+          <option value="critic">critic (examines or disputes it)</option>
+          <option value="mention">mention (references it in passing)</option>
+        </select>
+      </div>
       <div class="row" data-cf="element" hidden>
         <select id="c-element">${opts}</select>
       </div>
@@ -2060,7 +2071,7 @@ function setContribute(fp) {
       date: kind === 'edit' ? val('c-edate') : val('c-date'),
       quote: kind === 'add' ? val('c-quote') : '',
       source_author: kind === 'edit' ? val('c-eauthor') : val('c-author'),
-      role: kind === 'edit' ? val('c-erole') : '',
+      role: kind === 'edit' ? val('c-erole') : (kind === 'add' ? val('c-role') : ''),
       lineage: val('c-lineage') || 'lexical',
       element_id: kind === 'add' ? '' : val('c-element'),
       reason: val('c-reason'), name: val('c-name'),

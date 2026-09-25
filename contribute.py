@@ -45,8 +45,8 @@ from pathlib import Path
 
 import httpx
 
-from models import (AttestedInstance, Contribution, ContributionKind,
-                    Contributor, Provenance)
+from models import (AmplifierRole, AttestedInstance, Contribution,
+                    ContributionKind, Contributor, Provenance)
 
 ROOT = Path(__file__).resolve().parent
 UTC_NOW = lambda: datetime.now(timezone.utc).isoformat()
@@ -198,6 +198,8 @@ def intake(gallery, out_path):
             problems.append("date must be YYYY, YYYY-MM, or YYYY-MM-DD")
         if p["lineage"] not in ("lexical", "conceptual"):
             problems.append("lineage must be lexical or conceptual")
+        if p["role"] and p["role"] not in ROLES:   # optional on adds
+            problems.append("role must be one of: " + ", ".join(sorted(ROLES)))
     elif p["kind"] == "edit":
         if not HEX12.match(p["element_id"]):
             problems.append("a correction needs the target entry's id")
@@ -252,7 +254,9 @@ def intake(gallery, out_path):
         p["date"] and f"date -> {p['date']}",
         p["source_author"] and f"attribution -> {p['source_author']}",
         p["url"] and f"receipt -> {p['url'][:60]}"]))
-    kind_line = {"add": f"a use we missed ({p['date']}, {p['url'][:80]})",
+    kind_line = {"add": f"a use we missed ({p['date']}"
+                        + (f", as {p['role']}" if p["role"] else "")
+                        + f", {p['url'][:80]})",
                  "edit": f"correction to entry {p['element_id']}: {edit_bits}",
                  "confirm": f"confirm entry {p['element_id']}",
                  "dispute": f"dispute entry {p['element_id']}"}.get(p["kind"], p["kind"])
@@ -369,6 +373,10 @@ def apply_to_fp(fp, record):
             date=record["date"], source_url=record["url"],
             author=record.get("source_author", ""),
             exact_quote=record.get("quote", ""),
+            amplifier_role=(AmplifierRole(record["role"]) if record.get("role")
+                            else AmplifierRole.UNKNOWN),
+            role_evidence=(f"Role proposed by {display} at submission "
+                           "(maintainer-reviewed)." if record.get("role") else ""),
             evidence=f"Contributed by {display}"
                      + (f": {record['reason']}" if record.get("reason") else ""),
             verification_status=checks.get("verification_status", "unchecked"),
