@@ -627,6 +627,7 @@ def _font(size, weight="regular"):
     names = {"bold": ["segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
              "semibold": ["seguisb.ttf", "segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
              "bolditalic": ["seguisbi.ttf", "segoeuiz.ttf", "arialbi.ttf", "dejavu/DejaVuSans-BoldOblique.ttf", "DejaVuSans-BoldOblique.ttf"],
+             "italic": ["segoeuii.ttf", "ariali.ttf", "dejavu/DejaVuSans-Oblique.ttf", "DejaVuSans-Oblique.ttf"],
              "regular": ["segoeui.ttf", "arial.ttf", "dejavu/DejaVuSans.ttf", "DejaVuSans.ttf"]}[weight]
     for n in names:
         for base in (Path("C:/Windows/Fonts"), Path("/usr/share/fonts/truetype")):
@@ -1405,7 +1406,7 @@ def render_event_png(cd, out_path):
         BQX0, BQX1 = 506, 836                  # question boxes
         MX = 494                                # mouths
         for fq_s, fb_s, lh in ((13.5, 13, 17), (12.5, 12, 15.5), (12, 11.5, 14.5)):
-            f_q = _font(fq_s, "bolditalic")
+            f_q = _font(fq_s, "italic")
             f_bn = _font(fb_s, "semibold")
             f_cr = _font(max(fb_s - 1.5, 10.5))
             boxes = []
@@ -1584,7 +1585,7 @@ def svg_event_delta(cd):
             ty += 21
         for ln in qlines:
             parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="15.5" '
-                         f'font-weight="650" font-style="italic" fill="#0b0b0b">{esc(ln)}</text>')
+                         f'font-style="italic" fill="#0b0b0b">{esc(ln)}</text>')
             ty += 21
         for ln in c_wrapped[i]:
             parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="13" '
