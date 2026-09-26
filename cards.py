@@ -1576,7 +1576,7 @@ def svg_event_delta(cd):
         names = ", ".join(c["names"][:2])
         if len(c["names"]) > 2:
             names += f' +{len(c["names"]) - 2}'
-        parts.append(f'<text x="{QX0 - 34}" y="{y - 16:.0f}" text-anchor="end" '
+        parts.append(f'<text x="{QX0 - 34}" y="{y - 19:.0f}" text-anchor="end" '
                      f'font-size="13.5" font-weight="650" fill="#155e4f">'
                      f'{esc(names if len(names) <= 34 else names[:33].rstrip() + "…")}</text>')
         parts.append(f'<rect x="{QX0 - 12}" y="{y - bh / 2:.0f}" width="{1060 - QX0 + 12}" '

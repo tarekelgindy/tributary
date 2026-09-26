@@ -1047,6 +1047,79 @@ function removeBackButton() {
   if (b) b.remove();
 }
 
+// The event delta figure (mirrors cards.py svg_event_delta, 2026-09-26):
+// bulleted common-ground facts as the headwater, teal channels with the
+// carriers riding each approach, framing-name + full-question boxes at the
+// mouths. The share card and the page now OPEN with the same figure —
+// arrival continuity for anyone who clicked an unfurl. <=5 framings.
+function eventDeltaSvg(analysis) {
+  const frs = analysis.framings || [];
+  if (frs.length < 2 || frs.length > 5) return '';
+  const sf = analysis.shared_foundation || {};
+  const verified = (sf.verified_facts || []).map(v => v.statement || '').filter(Boolean);
+  const nU = (sf.unverified_shared_claims || []).length;
+  const wrapc = (s, width, maxLines) => {
+    const words = String(s || '').split(/\s+/).filter(Boolean);
+    const lines = []; let cur = '';
+    for (const w of words) {
+      if ((cur + ' ' + w).trim().length <= width) cur = (cur + ' ' + w).trim();
+      else { lines.push(cur); cur = w; if (maxLines && lines.length === maxLines) break; }
+    }
+    if (cur && (!maxLines || lines.length < maxLines)) lines.push(cur);
+    return lines;
+  };
+  const factLines = [];
+  verified.forEach(v => {
+    wrapc(v, 30).forEach((ln, li) => factLines.push((li === 0 ? '•  ' : '    ') + ln));
+    factLines.push('');
+  });
+  const blkH = 52 + factLines.length * 19 + (nU ? 20 : 0);
+  const cells = frs.map(fr => ({
+    name: fr.name || '', question: fr.question || '',
+    names: (fr.carriers || []).map(c => c.name).filter(Boolean),
+  }));
+  const qW = cells.map(c => wrapc(c.question, 44));
+  const nW = cells.map(c => wrapc(c.name, 46, 2));
+  const rowH = cells.map((c, i) => Math.max((nW[i].length + qW[i].length) * 21 + 26, 66));
+  const totalQ = rowH.reduce((a, b) => a + b + 8, -8);
+  const H = Math.max(blkH + 60, totalQ + 60, 440);
+  const cy = H / 2, SX1 = 268, QX0 = 600, k = cells.length;
+  const p = [`<svg viewBox="0 0 1080 ${H.toFixed(0)}" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto;" font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-label="The shared common ground splitting into ${k} framing questions">`];
+  const by0 = cy - blkH / 2;
+  p.push(`<rect x="20" y="${by0.toFixed(0)}" width="248" height="${blkH.toFixed(0)}" rx="14" fill="#f0eee6" stroke="#1f7a68" stroke-width="2"/>`);
+  p.push(`<text x="144" y="${(by0 + 26).toFixed(0)}" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.5" fill="#155e4f">COMMON GROUND</text>`);
+  let yy = by0 + 50;
+  factLines.forEach(ln => {
+    if (ln) p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="13.5" fill="#28382f">${escapeHtml(ln)}</text>`);
+    yy += ln ? 19 : 8;
+  });
+  if (nU) p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="12" fill="#96741e">+ ${nU} claims repeated by all, unverified</text>`);
+  const ys = []; let acc = 0;
+  rowH.forEach(rh => { ys.push(cy - totalQ / 2 + acc + rh / 2); acc += rh + 8; });
+  cells.forEach((c, i) => {
+    const y = ys[i], bh = rowH[i] - 8;
+    const y0 = cy + (i - (k - 1) / 2) * 11;
+    p.push(`<path d="M ${SX1} ${y0.toFixed(0)} C ${SX1 + 100} ${(y0 + (y - y0) * 0.35).toFixed(0)}, ${QX0 - 140} ${(y - (y - y0) * 0.14).toFixed(0)}, ${QX0 - 24} ${y.toFixed(0)}" fill="none" stroke="#1f7a68" stroke-width="3"/>`);
+    p.push(`<circle cx="${QX0 - 22}" cy="${y.toFixed(0)}" r="5" fill="#1f7a68"/>`);
+    let names = c.names.slice(0, 2).join(', ');
+    if (c.names.length > 2) names += ` +${c.names.length - 2}`;
+    if (names.length > 34) names = names.slice(0, 33).replace(/\s+$/, '') + '…';
+    p.push(`<text x="${QX0 - 34}" y="${(y - 19).toFixed(0)}" text-anchor="end" font-size="13.5" font-weight="650" fill="#155e4f">${escapeHtml(names)}</text>`);
+    p.push(`<rect x="${QX0 - 12}" y="${(y - bh / 2).toFixed(0)}" width="${1060 - QX0 + 12}" height="${bh.toFixed(0)}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>`);
+    let ty = y - bh / 2 + 24;
+    nW[i].forEach(ln => {
+      p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="15" font-weight="700" fill="#155e4f">${escapeHtml(ln)}</text>`);
+      ty += 21;
+    });
+    qW[i].forEach(ln => {
+      p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="15.5" font-weight="650" fill="#0b0b0b">${escapeHtml(ln)}</text>`);
+      ty += 21;
+    });
+  });
+  p.push('</svg>');
+  return `<div class="card" style="padding:1.05rem 1.15rem 0.8rem;">${p.join('')}</div>`;
+}
+
 function renderEventAnalysis(analysis) {
   currentEvent = analysis;
   currentArticle = null;
@@ -1120,10 +1193,13 @@ function renderEventAnalysis(analysis) {
       contestLine = `${top.join(', ')}${names.size > 3 ? ` +${names.size - 3} more` : ''}`;
     }
   }
+  // The delta figure opens the page (card-first, Tarek 2026-09-26); when it
+  // renders, the glance strip drops its common-ground line — stated once.
+  const deltaHtml = eventDeltaSvg(analysis);
   const glanceHtml = `
     <div class="event-glance">
       <div class="glance-stat"><strong>${nFramings}</strong>framing${nFramings === 1 ? '' : 's'}</div>
-      ${commonLine ? `<div class="glance-common"><span class="glance-lbl">Common ground</span>${escapeHtml(truncate(commonLine, 200))}</div>` : ''}
+      ${commonLine && !deltaHtml ? `<div class="glance-common"><span class="glance-lbl">Common ground</span>${escapeHtml(truncate(commonLine, 200))}</div>` : ''}
       ${contestLine ? `<div class="glance-contest"${contestTip ? ` title="${escapeHtml(contestTip)}"` : ''}><span class="glance-lbl">Who's most active</span>${escapeHtml(contestLine)}</div>` : ''}
     </div>`;
 
@@ -1189,6 +1265,7 @@ function renderEventAnalysis(analysis) {
 
   const main = document.querySelector('main');
   main.innerHTML = `
+    ${deltaHtml}
     ${glanceHtml}
     ${sharedHtml}
     ${renderCoalition(co)}
