@@ -1080,7 +1080,8 @@ function eventDeltaSvg(analysis) {
   }));
   const qW = cells.map(c => wrapc(c.question, 44));
   const nW = cells.map(c => wrapc(c.name, 46, 2));
-  const rowH = cells.map((c, i) => Math.max((nW[i].length + qW[i].length) * 21 + 26, 66));
+  const cW = cells.map(c => wrapc(c.names.join(', '), 52, 2));
+  const rowH = cells.map((c, i) => Math.max((nW[i].length + qW[i].length) * 21 + cW[i].length * 17 + 30, 66));
   const totalQ = rowH.reduce((a, b) => a + b + 8, -8);
   const H = Math.max(blkH + 60, totalQ + 60, 440);
   const cy = H / 2, SX1 = 268, QX0 = 600, k = cells.length;
@@ -1101,11 +1102,6 @@ function eventDeltaSvg(analysis) {
     const y0 = cy + (i - (k - 1) / 2) * 11;
     p.push(`<path id="vch${i}" d="M ${SX1} ${y0.toFixed(0)} C ${SX1 + 100} ${(y0 + (y - y0) * 0.35).toFixed(0)}, ${QX0 - 140} ${(y - (y - y0) * 0.14).toFixed(0)}, ${QX0 - 24} ${y.toFixed(0)}" fill="none" stroke="#1f7a68" stroke-width="3"/>`);
     p.push(`<circle cx="${QX0 - 22}" cy="${y.toFixed(0)}" r="5" fill="#1f7a68"/>`);
-    let names = c.names.slice(0, 2).join(', ');
-    if (c.names.length > 2) names += ` +${c.names.length - 2}`;
-    if (names.length > 34) names = names.slice(0, 33).replace(/\s+$/, '') + '…';
-    const off = 12 + (2 - Math.abs(i - (k - 1) / 2)) * 14;
-    p.push(`<text font-size="13.5" font-weight="650" fill="#155e4f"><textPath href="#vch${i}" startOffset="${off.toFixed(0)}%"><tspan dy="-6">${escapeHtml(names)}</tspan></textPath></text>`);
     p.push(`<rect x="${QX0 - 12}" y="${(y - bh / 2).toFixed(0)}" width="${1060 - QX0 + 12}" height="${bh.toFixed(0)}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>`);
     let ty = y - bh / 2 + 24;
     nW[i].forEach(ln => {
@@ -1115,6 +1111,10 @@ function eventDeltaSvg(analysis) {
     qW[i].forEach(ln => {
       p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="15.5" font-weight="650" font-style="italic" fill="#0b0b0b">${escapeHtml(ln)}</text>`);
       ty += 21;
+    });
+    cW[i].forEach(ln => {
+      p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="13" fill="#898781">${escapeHtml(ln)}</text>`);
+      ty += 17;
     });
   });
   p.push('</svg>');
@@ -1270,8 +1270,10 @@ function renderEventAnalysis(analysis) {
     ${glanceHtml}
     ${sharedHtml}
     ${renderCoalition(co)}
-    <h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings <span style="font-weight:400; text-transform:none; letter-spacing:0; color:#888;">— each asks a different question; click a card for carriers and detail</span></h2>
-    <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>
+    ${deltaHtml ? `<details class="collapse"><summary>Carrier receipts &amp; framing detail — every source linked, each framing traceable</summary><div class="body">
+    <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div></div></details>`
+    : `<h2 style="font-size:0.85rem; font-weight:500; color:#555; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 0.7rem;">Competing Framings <span style="font-weight:400; text-transform:none; letter-spacing:0; color:#888;">— each asks a different question; click a card for carriers and detail</span></h2>
+    <div class="framings-grid">${framingsHtml || '<p class="empty">No framings identified.</p>'}</div>`}
     ${renderCoverageBackdrop(analysis.coverage_lean)}
     ${analysis.gap_analysis ? `<div class="card event-gap-card"><h2>What May Be Missing</h2><p style="color:#444;">${escapeHtml(analysis.gap_analysis)}</p></div>` : ''}
   `;

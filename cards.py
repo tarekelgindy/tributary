@@ -1407,14 +1407,18 @@ def render_event_png(cd, out_path):
         for fq_s, fb_s, lh in ((13.5, 13, 17), (12.5, 12, 15.5), (12, 11.5, 14.5)):
             f_q = _font(fq_s, "bolditalic")
             f_bn = _font(fb_s, "semibold")
+            f_cr = _font(max(fb_s - 1.5, 10.5))
             boxes = []
             for c in cells:
                 nlines = _wrap(d, c["name"], f_bn, BQX1 - BQX0 - 28, 2)
                 qlines = _wrap(d, c.get("question") or "", f_q,
                                BQX1 - BQX0 - 28, 9)
-                boxes.append((nlines, qlines,
-                              int(len(nlines) * lh + len(qlines) * lh + 20)))
-            total = sum(b[2] + 7 for b in boxes) - 7
+                car = ", ".join(c["names"])
+                cline = _ellipsize(d, car, f_cr, BQX1 - BQX0 - 28) if car else ""
+                boxes.append((nlines, qlines, cline,
+                              int((len(nlines) + len(qlines)) * lh
+                                  + (lh - 2 if cline else 0) + 22)))
+            total = sum(b[3] + 7 for b in boxes) - 7
             if total <= 460:
                 break
         top = max(131, cy - total / 2)
@@ -1422,39 +1426,15 @@ def render_event_png(cd, out_path):
             top = max(131, 592 - total)
         ys, acc = [], 0
         for b in boxes:
-            ys.append(top + acc + b[2] / 2)
-            acc += b[2] + 7
+            ys.append(top + acc + b[3] / 2)
+            acc += b[3] + 7
         for i, c in enumerate(cells):
             y = ys[i]
-            nlines, qlines, bh = boxes[i]
+            nlines, qlines, cline, bh = boxes[i]
             y0 = cy + (i - (k - 1) / 2) * 11
             pts = _bez((SX1, y0), (SX1 + 100, y0 + (y - y0) * 0.35),
                        (MX - 120, y - (y - y0) * 0.14), (MX - 6, y), n=60)
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
-            # carriers along the line
-            names = ", ".join(c["names"][:2]) +                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
-            # carriers ride their curve (Tarek 2026-09-26): ONE lead
-            # carrier + "+N" keeps labels short enough that staggered
-            # offsets stay collision-free even in the converging fan
-            lead = c["names"][0] if c["names"] else ""
-            extra = len(c["names"]) - 1
-            label = _ellipsize(d, lead + (f" +{extra}" if extra > 0 else ""),
-                               f_car, 130)
-            # outer channels get LATE offsets (their long arcs have fully
-            # separated by then); the flat middle takes the early zone
-            off = 0.52 - (2 - abs(i - (k - 1) / 2)) * 0.16
-            p_lo = pts[int(off * (len(pts) - 1))]
-            p_hi = pts[min(int((off + 0.2) * (len(pts) - 1)), len(pts) - 1)]
-            ang = math.degrees(math.atan2(p_hi[1] - p_lo[1], p_hi[0] - p_lo[0]))
-            tw = int(d.textlength(label, font=f_car)) + 8
-            timg = Image.new("RGBA", (tw, 24), (0, 0, 0, 0))
-            ImageDraw.Draw(timg).text((4, 2), label, font=f_car,
-                                      fill=EV_TEAL_DEEP + (255,))
-            timg = timg.rotate(-ang, expand=True,
-                               resample=Image.Resampling.BICUBIC)
-            img.paste(timg, (int((p_lo[0] + p_hi[0]) / 2 - timg.width / 2),
-                             int((p_lo[1] + p_hi[1]) / 2 - timg.height / 2 - 10)),
-                      timg)
             # the framing box: name + question, never ellipsized
             by = y - bh / 2
             d.rounded_rectangle([BQX0, by, BQX1, by + bh], radius=10,
@@ -1468,6 +1448,8 @@ def render_event_png(cd, out_path):
             for ln in qlines:
                 d.text((BQX0 + 14, ty), ln, font=f_q, fill=INK1)
                 ty += lh
+            if cline:
+                d.text((BQX0 + 14, ty + 1), cline, font=f_cr, fill=INK3)
         # disputes column: every recorded point that fits, honest overflow
         if cd["disputes"]:
             dy0, dy1 = 140, 596
@@ -1554,8 +1536,9 @@ def svg_event_delta(cd):
     # box rows (framing name + question) drive the mouth positions
     q_wrapped = [wrapc(c.get("question") or "", 44) for c in cells]
     n_wrapped = [wrapc(c["name"], 46, 2) for c in cells]
-    row_h = [max((len(n) + len(q)) * 21 + 26, 66)
-             for n, q in zip(n_wrapped, q_wrapped)]
+    c_wrapped = [wrapc(", ".join(c["names"]), 52, 2) for c in cells]
+    row_h = [max((len(n) + len(q)) * 21 + len(cw) * 17 + 30, 66)
+             for n, q, cw in zip(n_wrapped, q_wrapped, c_wrapped)]
     total_q = sum(row_h)
     H = max(blk_h + 60, total_q + 60, 440)
     cy = H / 2
@@ -1591,14 +1574,7 @@ def svg_event_delta(cd):
                      f'{y0 + (y - y0) * 0.35:.0f}, {QX0 - 140} {y - (y - y0) * 0.14:.0f}, '
                      f'{QX0 - 24} {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>')
         parts.append(f'<circle cx="{QX0 - 22}" cy="{y:.0f}" r="5" fill="#1f7a68"/>')
-        names = ", ".join(c["names"][:2])
-        if len(c["names"]) > 2:
-            names += f' +{len(c["names"]) - 2}'
-        off = 12 + (2 - abs(i - (k - 1) / 2)) * 14
-        parts.append(f'<text font-size="13.5" font-weight="650" fill="#155e4f">'
-                     f'<textPath href="#epch{i}" startOffset="{off:.0f}%">'
-                     f'<tspan dy="-6">{esc(names if len(names) <= 34 else names[:33].rstrip() + "…")}</tspan>'
-                     f'</textPath></text>')
+
         parts.append(f'<rect x="{QX0 - 12}" y="{y - bh / 2:.0f}" width="{1060 - QX0 + 12}" '
                      f'height="{bh:.0f}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>')
         ty = y - bh / 2 + 24
@@ -1610,6 +1586,10 @@ def svg_event_delta(cd):
             parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="15.5" '
                          f'font-weight="650" font-style="italic" fill="#0b0b0b">{esc(ln)}</text>')
             ty += 21
+        for ln in c_wrapped[i]:
+            parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="13" '
+                         f'fill="#898781">{esc(ln)}</text>')
+            ty += 17
     parts.append("</svg>")
     return chr(10).join(parts)
 
