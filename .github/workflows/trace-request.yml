@@ -125,9 +125,24 @@ jobs:
             # stories): ~$0.70/request, DAILY_CAP 10 -> ceiling ~$7/day.
             python fingerprint.py "$SUBJECT" --evidence --conceptual --save --max-searches 4 > out.json
             ID=$(grep -o '\[saved fingerprint: [a-f0-9]*\]' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
+            # Match-and-serve outputs (judge-gated, polarity-aware since
+            # 2026-09-25): a lexical or semantic hit serves an existing
+            # fingerprint instead of generating; POLARITY=negation marks a
+            # request that negates the served claim (viewer shows the note).
+            if [ -z "$ID" ]; then
+              ID=$(grep -o '\[matched existing fingerprint: [a-f0-9]\{12\}' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
+            fi
+            if [ -z "$ID" ]; then
+              ID=$(grep -oE 'serve_(cached|negation) -> [a-f0-9]{12}|lexical_variant -> [a-f0-9]{12}' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
+            fi
+            POLARITY=$(grep -c '^POLARITY=negation' out.json || true)
             REL="gallery/traces/$ID.json"
             mkdir -p gallery/traces
-            cp "fingerprints/$ID.json" "gallery/traces/$ID.json"
+            # freshly generated -> copy from the store; served-from-cache ->
+            # the published copy already exists
+            if [ -f "fingerprints/$ID.json" ]; then
+              cp "fingerprints/$ID.json" "gallery/traces/$ID.json"
+            fi
           fi
           if [ -z "$ID" ]; then
             say "Generation ran but no output was saved — a maintainer will look at the run log."
@@ -145,11 +160,17 @@ jobs:
           git config user.name "tributary-trace-bot"
           git config user.email "actions@users.noreply.github.com"
           git add gallery
-          git commit -m "Trace request ${ISSUE_NUMBER:+#$ISSUE_NUMBER }${REQUEST_ID:+[$REQUEST_ID] }: $SUBJECT ($REL)"
-          git pull --rebase origin main
-          git push origin main
+          # a served-from-cache hit changes nothing -> nothing to commit
+          if ! git diff --cached --quiet; then
+            git commit -m "Trace request ${ISSUE_NUMBER:+#$ISSUE_NUMBER }${REQUEST_ID:+[$REQUEST_ID] }: $SUBJECT ($REL)"
+            git pull --rebase origin main
+            git push origin main
+          fi
 
           URL="https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=$REL"
+          if [ "${POLARITY:-0}" != "0" ]; then
+            URL="$URL&polarity=negation"
+          fi
 
           # Don't report "done" until Pages is actually serving the file —
           # the push-to-deploy gap is 2-4 min, and a visitor who clicks the

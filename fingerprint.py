@@ -3864,12 +3864,46 @@ async def _cli(args):
         # precision, kept as the first line of dedup.
         existing = store.find_matching(lexical)
         if existing and not args.force:
-            print(json.dumps(lexical.to_dict(), indent=2))
-            print(
-                f"[matched existing fingerprint: {existing} — "
-                f"L2 and L4 skipped to avoid cost. Pass --force to regenerate.]"
-            )
-            return
+            # Polarity guard (2026-09-25): the stopword-stripped signature is
+            # negation-blind — "X does not cause Y" collides with "X causes Y"
+            # (recorded 2026-07-10 on the vaccines pair, Decision Log). A
+            # lexical hit no longer serves without the same-claim judge, with
+            # polarity explicit in its verdict. On "negation" the match still
+            # serves — a claim and its denial share one genealogy — but with
+            # a POLARITY marker so the presentation says so out loud. On
+            # "different" (or judge failure) nothing serves from this path.
+            canon = (store.index.get(existing) or {}).get("canonical_phrase", "")
+            verdict = None
+            try:
+                from matcher import Matcher
+                verdict = Matcher(args.store_dir).confirm(args.claim, canon or existing)
+            except Exception as e:  # noqa: BLE001 — no judge, no serving
+                print(f"[lexical match {existing} NOT served: polarity judge "
+                      f"unavailable ({type(e).__name__}) -> generating]",
+                      file=sys.stderr)
+            if verdict and verdict.get("relation") == "same":
+                print(json.dumps(lexical.to_dict(), indent=2))
+                print(
+                    f"[matched existing fingerprint: {existing} — polarity-"
+                    f"confirmed ({verdict['why']}); L2 and L4 skipped to "
+                    f"avoid cost. Pass --force to regenerate.]"
+                )
+                return
+            if verdict and verdict.get("relation") == "negation":
+                print(json.dumps(lexical.to_dict(), indent=2))
+                print("POLARITY=negation")
+                print(
+                    f"[matched existing fingerprint: {existing} — the request "
+                    f"NEGATES this claim ({verdict['why']}). Serving the "
+                    f"claim's genealogy with a polarity note: the claim is "
+                    f"where the history is. Pass --force to trace the denial "
+                    f"as its own narrative.]"
+                )
+                return
+            if verdict:
+                print(f"[lexical match {existing} rejected by polarity judge "
+                      f"({verdict.get('relation')}: {verdict.get('why')}) "
+                      f"-> generating]", file=sys.stderr)
         # Semantic matcher (Phase 1): local embeddings find the candidate;
         # a Haiku judge confirms same-claim (same blame, same consequence)
         # before anything serves. Gate 1 (2026-06-10): embedding-only serving
@@ -3883,12 +3917,16 @@ async def _cli(args):
                 from matcher import Matcher
                 m = Matcher(args.store_dir)
                 r = m.match(args.claim) if args.trust_matcher else m.match_confirmed(args.claim)
-                if r.decision in ("serve_cached", "lexical_variant") and r.best:
+                if r.decision in ("serve_cached", "lexical_variant", "serve_negation") and r.best:
                     note = (f"[semantic match: {r.decision} -> "
                             f"{r.best.fingerprint_id} "
                             f"\"{r.best.canonical_phrase[:60]}\" "
                             f"(L1 {r.best.l1_sim:.2f} / L2 {r.best.l2_sim:.2f}"
                             f"{'; confirmed: ' + r.confirm['why'] if r.confirm else ''})]")
+                    if r.decision == "serve_negation":
+                        print("POLARITY=negation")
+                        note += (" [the request NEGATES the matched claim — "
+                                 "serving its genealogy with a polarity note]")
                     if r.decision == "lexical_variant":
                         m.attach_variant(r.best.fingerprint_id, args.claim)
                         note += " [attached as phrase variant]"

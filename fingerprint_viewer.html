@@ -1770,6 +1770,23 @@ function render(fp) {
   document.getElementById('claim-phrase').textContent =
     fp.lexical.canonical_phrase || '(no canonical phrase)';
 
+  // Polarity note (2026-09-25): a request that NEGATES this claim is served
+  // this trace — the claim is where the history is — but never silently.
+  // The serving pipeline appends ?polarity=negation to the permalink.
+  document.getElementById('polarity-banner')?.remove();
+  if (new URLSearchParams(location.search).get('polarity') === 'negation') {
+    document.querySelector('main')?.insertAdjacentHTML('beforebegin',
+      `<div id="polarity-banner" style="max-width:1160px;margin:0.9rem auto 0;
+        padding:0.8rem 1.2rem;background:#fdf3e0;border:1px solid #e8c98a;
+        border-radius:10px;font-size:0.92rem;color:#5a4a24;">
+        <strong>You asked about the denial of this claim.</strong>
+        This trace follows the claim itself — which is where the recorded
+        history is: who started it, who spread it, who pushed back.
+        Want the denial traced as its own narrative?
+        <a href="index.html#up" style="color:#2a6fa3;font-weight:600;
+        text-decoration:none;">Request a counter-trace →</a></div>`);
+  }
+
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
   addMetaText(meta, 'narrative trace');

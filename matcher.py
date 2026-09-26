@@ -53,10 +53,12 @@ EXACT_THRESHOLD = 0.95  # near-exact phrasing — still confirmed before serving
 # Stage-2 judge prompt — validated against the 30 human-labeled Gate 1 pairs
 # (4/4 same confirmed; 14/15 different rejected, incl. the embedding stage's
 # false positive; its own single error sat below the candidate threshold).
-CONFIRM_SYSTEM = """You judge whether two short texts assert the SAME claim — strictly.
-Same means: same subject, same attribution of responsibility/blame, and the same asserted conclusion or consequence. Mere topical overlap is NOT same. A claim that assigns blame differs from one that stays neutral on blame. A claim asserting a consequence differs from one that only states the event.
+CONFIRM_SYSTEM = """You judge the relation between the claims two short texts assert — strictly.
+"same": same subject, same attribution of responsibility/blame, and the same asserted conclusion or consequence, with the SAME polarity. Mere topical overlap is NOT same. A claim that assigns blame differs from one that stays neutral on blame. A claim asserting a consequence differs from one that only states the event.
+"negation": the texts address the same claim with OPPOSITE polarity — one asserts it, the other denies, negates, or debunks it (e.g. "X causes Y" vs "X does not cause Y").
+"different": anything else — different subject, blame, or consequence, or only topical overlap.
 Input: JSON list of {"id", "a", "b"}.
-Output ONLY JSON: {"judgments": [{"id": 0, "same": true|false, "why": "<= 8 words"}, ...]}"""
+Output ONLY JSON: {"judgments": [{"id": 0, "relation": "same"|"negation"|"different", "same": true|false, "why": "<= 8 words"}, ...]} — "same" is true ONLY when relation is "same"."""
 
 _DEFAULT_DIR = Path(__file__).resolve().parent / "fingerprints"
 
@@ -256,7 +258,10 @@ class Matcher:
         text = "".join(b.text for b in resp.content
                        if getattr(b, "type", "") == "text")
         j = (_parse_json_safe(text) or {}).get("judgments") or [{}]
-        return {"same": bool(j[0].get("same", False)),
+        relation = str(j[0].get("relation", "")).lower()
+        if relation not in ("same", "negation", "different"):
+            relation = "same" if j[0].get("same") else "different"
+        return {"same": relation == "same", "relation": relation,
                 "why": str(j[0].get("why", ""))}
 
     def match_confirmed(self, text: str, hi: float = HI_THRESHOLD,
@@ -272,9 +277,16 @@ class Matcher:
             try:
                 verdict = self.confirm(text, r.best.canonical_phrase)
             except Exception as e:  # noqa: BLE001 — no confirmation, no serving
-                verdict = {"same": False, "why": f"confirm unavailable: {type(e).__name__}"}
+                verdict = {"same": False, "relation": "different",
+                           "why": f"confirm unavailable: {type(e).__name__}"}
             r.confirm = verdict
-            if not verdict["same"]:
+            if verdict.get("relation") == "negation":
+                # Polarity guard (2026-09-25): a claim and its denial share
+                # one genealogy, so the match is real — but it must never
+                # serve silently as if the texts agreed. Callers surface it
+                # with an explicit polarity note.
+                r.decision = "serve_negation"
+            elif not verdict["same"]:
                 r.decision = "review"
         return r
 
