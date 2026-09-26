@@ -1099,12 +1099,13 @@ function eventDeltaSvg(analysis) {
   cells.forEach((c, i) => {
     const y = ys[i], bh = rowH[i] - 8;
     const y0 = cy + (i - (k - 1) / 2) * 11;
-    p.push(`<path d="M ${SX1} ${y0.toFixed(0)} C ${SX1 + 100} ${(y0 + (y - y0) * 0.35).toFixed(0)}, ${QX0 - 140} ${(y - (y - y0) * 0.14).toFixed(0)}, ${QX0 - 24} ${y.toFixed(0)}" fill="none" stroke="#1f7a68" stroke-width="3"/>`);
+    p.push(`<path id="vch${i}" d="M ${SX1} ${y0.toFixed(0)} C ${SX1 + 100} ${(y0 + (y - y0) * 0.35).toFixed(0)}, ${QX0 - 140} ${(y - (y - y0) * 0.14).toFixed(0)}, ${QX0 - 24} ${y.toFixed(0)}" fill="none" stroke="#1f7a68" stroke-width="3"/>`);
     p.push(`<circle cx="${QX0 - 22}" cy="${y.toFixed(0)}" r="5" fill="#1f7a68"/>`);
     let names = c.names.slice(0, 2).join(', ');
     if (c.names.length > 2) names += ` +${c.names.length - 2}`;
     if (names.length > 34) names = names.slice(0, 33).replace(/\s+$/, '') + '…';
-    p.push(`<text x="${QX0 - 34}" y="${(y - 19).toFixed(0)}" text-anchor="end" font-size="13.5" font-weight="650" fill="#155e4f">${escapeHtml(names)}</text>`);
+    const off = 12 + (2 - Math.abs(i - (k - 1) / 2)) * 14;
+    p.push(`<text font-size="13.5" font-weight="650" fill="#155e4f"><textPath href="#vch${i}" startOffset="${off.toFixed(0)}%"><tspan dy="-6">${escapeHtml(names)}</tspan></textPath></text>`);
     p.push(`<rect x="${QX0 - 12}" y="${(y - bh / 2).toFixed(0)}" width="${1060 - QX0 + 12}" height="${bh.toFixed(0)}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>`);
     let ty = y - bh / 2 + 24;
     nW[i].forEach(ln => {
@@ -1112,7 +1113,7 @@ function eventDeltaSvg(analysis) {
       ty += 21;
     });
     qW[i].forEach(ln => {
-      p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="15.5" font-weight="650" fill="#0b0b0b">${escapeHtml(ln)}</text>`);
+      p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="15.5" font-weight="650" font-style="italic" fill="#0b0b0b">${escapeHtml(ln)}</text>`);
       ty += 21;
     });
   });

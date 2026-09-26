@@ -626,6 +626,7 @@ def _font(size, weight="regular"):
     # fulfilled trace requests — different face, same layout math via _fit.
     names = {"bold": ["segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
              "semibold": ["seguisb.ttf", "segoeuib.ttf", "arialbd.ttf", "dejavu/DejaVuSans-Bold.ttf", "DejaVuSans-Bold.ttf"],
+             "bolditalic": ["seguisbi.ttf", "segoeuiz.ttf", "arialbi.ttf", "dejavu/DejaVuSans-BoldOblique.ttf", "DejaVuSans-BoldOblique.ttf"],
              "regular": ["segoeui.ttf", "arial.ttf", "dejavu/DejaVuSans.ttf", "DejaVuSans.ttf"]}[weight]
     for n in names:
         for base in (Path("C:/Windows/Fonts"), Path("/usr/share/fonts/truetype")):
@@ -1404,7 +1405,7 @@ def render_event_png(cd, out_path):
         BQX0, BQX1 = 506, 836                  # question boxes
         MX = 494                                # mouths
         for fq_s, fb_s, lh in ((13.5, 13, 17), (12.5, 12, 15.5), (12, 11.5, 14.5)):
-            f_q = _font(fq_s, "semibold")
+            f_q = _font(fq_s, "bolditalic")
             f_bn = _font(fb_s, "semibold")
             boxes = []
             for c in cells:
@@ -1432,11 +1433,28 @@ def render_event_png(cd, out_path):
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
             # carriers along the line
             names = ", ".join(c["names"][:2]) +                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
-            # carriers hug the flat approach just before their own mouth —
-            # box spacing guarantees adjacent labels can never collide
-            label = _ellipsize(d, names, f_car, 205)
-            lw = d.textlength(label, font=f_car)
-            d.text((MX - 14 - lw, y - 22), label, font=f_car, fill=EV_TEAL_DEEP)
+            # carriers ride their curve (Tarek 2026-09-26): ONE lead
+            # carrier + "+N" keeps labels short enough that staggered
+            # offsets stay collision-free even in the converging fan
+            lead = c["names"][0] if c["names"] else ""
+            extra = len(c["names"]) - 1
+            label = _ellipsize(d, lead + (f" +{extra}" if extra > 0 else ""),
+                               f_car, 130)
+            # outer channels get LATE offsets (their long arcs have fully
+            # separated by then); the flat middle takes the early zone
+            off = 0.52 - (2 - abs(i - (k - 1) / 2)) * 0.16
+            p_lo = pts[int(off * (len(pts) - 1))]
+            p_hi = pts[min(int((off + 0.2) * (len(pts) - 1)), len(pts) - 1)]
+            ang = math.degrees(math.atan2(p_hi[1] - p_lo[1], p_hi[0] - p_lo[0]))
+            tw = int(d.textlength(label, font=f_car)) + 8
+            timg = Image.new("RGBA", (tw, 24), (0, 0, 0, 0))
+            ImageDraw.Draw(timg).text((4, 2), label, font=f_car,
+                                      fill=EV_TEAL_DEEP + (255,))
+            timg = timg.rotate(-ang, expand=True,
+                               resample=Image.Resampling.BICUBIC)
+            img.paste(timg, (int((p_lo[0] + p_hi[0]) / 2 - timg.width / 2),
+                             int((p_lo[1] + p_hi[1]) / 2 - timg.height / 2 - 10)),
+                      timg)
             # the framing box: name + question, never ellipsized
             by = y - bh / 2
             d.rounded_rectangle([BQX0, by, BQX1, by + bh], radius=10,
@@ -1569,16 +1587,18 @@ def svg_event_delta(cd):
         nlines, qlines = n_wrapped[i], q_wrapped[i]
         bh = row_h[i] - 8
         y0 = cy + (i - (k - 1) / 2) * 11
-        parts.append(f'<path d="M {SX1} {y0:.0f} C {SX1 + 100} '
+        parts.append(f'<path id="epch{i}" d="M {SX1} {y0:.0f} C {SX1 + 100} '
                      f'{y0 + (y - y0) * 0.35:.0f}, {QX0 - 140} {y - (y - y0) * 0.14:.0f}, '
                      f'{QX0 - 24} {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>')
         parts.append(f'<circle cx="{QX0 - 22}" cy="{y:.0f}" r="5" fill="#1f7a68"/>')
         names = ", ".join(c["names"][:2])
         if len(c["names"]) > 2:
             names += f' +{len(c["names"]) - 2}'
-        parts.append(f'<text x="{QX0 - 34}" y="{y - 19:.0f}" text-anchor="end" '
-                     f'font-size="13.5" font-weight="650" fill="#155e4f">'
-                     f'{esc(names if len(names) <= 34 else names[:33].rstrip() + "…")}</text>')
+        off = 12 + (2 - abs(i - (k - 1) / 2)) * 14
+        parts.append(f'<text font-size="13.5" font-weight="650" fill="#155e4f">'
+                     f'<textPath href="#epch{i}" startOffset="{off:.0f}%">'
+                     f'<tspan dy="-6">{esc(names if len(names) <= 34 else names[:33].rstrip() + "…")}</tspan>'
+                     f'</textPath></text>')
         parts.append(f'<rect x="{QX0 - 12}" y="{y - bh / 2:.0f}" width="{1060 - QX0 + 12}" '
                      f'height="{bh:.0f}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>')
         ty = y - bh / 2 + 24
@@ -1588,7 +1608,7 @@ def svg_event_delta(cd):
             ty += 21
         for ln in qlines:
             parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="15.5" '
-                         f'font-weight="650" fill="#0b0b0b">{esc(ln)}</text>')
+                         f'font-weight="650" font-style="italic" fill="#0b0b0b">{esc(ln)}</text>')
             ty += 21
     parts.append("</svg>")
     return chr(10).join(parts)
@@ -1599,6 +1619,7 @@ def render_event_page(cd, out_path):
     event_href = f"../../fingerprint_viewer.html?load=gallery/events/{aid}.json"
     og_img = f"{SITE}gallery/cards/{aid}.png"
     og_url = f"{SITE}gallery/cards/{aid}.html"
+    figure = svg_event_delta(cd)
     og_desc = (f"{cd['title']} Everyone agrees on the base facts; the contest is over "
                f"what they mean. Carriers shown per framing are a sample, not a census. "
                f"AI-generated, not human-reviewed.")
@@ -1616,10 +1637,10 @@ def render_event_page(cd, out_path):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(cd["headline"])} — Tributary</title>
+<title>{esc(cd["title"][:70])} — Tributary</title>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tributary">
-<meta property="og:title" content="One event, {cd["n_framings"]} competing framings.">
+<meta property="og:title" content="{esc(cd["title"][:90])}">
 <meta property="og:description" content="{esc(og_desc)}">
 <meta property="og:image" content="{esc(og_img)}">
 <meta property="og:image:width" content="1200">
@@ -1675,13 +1696,10 @@ def render_event_page(cd, out_path):
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="kicker">Tributary · event map</div>
-    <div class="headline">{esc(cd["headline"])}</div>
-    <p class="title">{esc(cd["title"])}</p>
-    {svg_event_delta(cd)}
-    <div class="fgrid">
-{cells_html}
-    </div>
+    <div class="kicker">Tributary · event map · {cd["n_framings"]} framings</div>
+    <div class="headline">{esc(cd["title"])}</div>
+    {figure}
+    {"" if figure else f'<div class="fgrid">{cells_html}</div>'}
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="found">
       {f'<h3 class="fh-uv">Repeated by all sides, unverified</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["unverified"]) + '</ul>' if cd["unverified"] else ''}
