@@ -1397,47 +1397,59 @@ def render_event_png(cd, out_path):
             d.text((SX0 + 18, yy), txt, font=fnt, fill=col)
             yy += 19
 
-        # channels + names riding the lines + bold questions, no ellipses
-        f_q = _font(15, "semibold")
-        f_name = _font(14, "semibold")
-        all_qlines = [_wrap(d, c.get("question") or "", f_q, QX1 - QX0, 9)
-                      for c in cells]
-        row_h = [max(len(q) * 20 + 14, 58) for q in all_qlines]
-        total = sum(row_h)
+        # channels carry the CARRIERS (who pushes the narrative rides the
+        # water); each mouth ends in a box holding the framing name AND its
+        # question (2026-09-26 refinement — no name/label redundancy).
+        f_car = _font(13, "semibold")
+        BQX0, BQX1 = 506, 836                  # question boxes
+        MX = 494                                # mouths
+        for fq_s, fb_s, lh in ((13.5, 13, 17), (12.5, 12, 15.5), (12, 11.5, 14.5)):
+            f_q = _font(fq_s, "semibold")
+            f_bn = _font(fb_s, "semibold")
+            boxes = []
+            for c in cells:
+                nlines = _wrap(d, c["name"], f_bn, BQX1 - BQX0 - 28, 2)
+                qlines = _wrap(d, c.get("question") or "", f_q,
+                               BQX1 - BQX0 - 28, 9)
+                boxes.append((nlines, qlines,
+                              int(len(nlines) * lh + len(qlines) * lh + 20)))
+            total = sum(b[2] + 7 for b in boxes) - 7
+            if total <= 460:
+                break
+        top = max(131, cy - total / 2)
+        if top + total > 592:
+            top = max(131, 592 - total)
         ys, acc = [], 0
-        for rh in row_h:
-            ys.append(cy - total / 2 + acc + rh / 2)
-            acc += rh
+        for b in boxes:
+            ys.append(top + acc + b[2] / 2)
+            acc += b[2] + 7
         for i, c in enumerate(cells):
             y = ys[i]
+            nlines, qlines, bh = boxes[i]
             y0 = cy + (i - (k - 1) / 2) * 11
-            pts = _bez((SX1, y0), (SX1 + 118, y0 + (y - y0) * 0.35),
-                       (QX0 - 148, y - (y - y0) * 0.14), (QX0 - 20, y), n=60)
+            pts = _bez((SX1, y0), (SX1 + 100, y0 + (y - y0) * 0.35),
+                       (MX - 120, y - (y - y0) * 0.14), (MX - 6, y), n=60)
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
-            d.ellipse([QX0 - 23, y - 5, QX0 - 13, y + 5], fill=EV_TEAL)
-            # name along the line: rendered on its own layer, rotated to the
-            # local chord angle (PIL has no text-on-path), pasted just above
-            off = 0.16 + (2 - abs(i - (k - 1) / 2)) * 0.11
-            p_lo = pts[int(off * (len(pts) - 1))]
-            p_hi = pts[min(int((off + 0.14) * (len(pts) - 1)), len(pts) - 1)]
-            ang = math.degrees(math.atan2(p_hi[1] - p_lo[1], p_hi[0] - p_lo[0]))
-            name = c["name"].split(" & ")[0].split(" / ")[0]
-            name = _ellipsize(d, name, f_name, 235)
-            tw = int(d.textlength(name, font=f_name)) + 8
-            timg = Image.new("RGBA", (tw, 26), (0, 0, 0, 0))
-            ImageDraw.Draw(timg).text((4, 2), name, font=f_name,
-                                      fill=EV_TEAL_DEEP + (255,))
-            timg = timg.rotate(-ang, expand=True,
-                               resample=Image.Resampling.BICUBIC)
-            nx = (p_lo[0] + p_hi[0]) / 2 - timg.width / 2
-            ny = (p_lo[1] + p_hi[1]) / 2 - timg.height / 2 - 11
-            img.paste(timg, (int(nx), int(ny)), timg)
-            # the question, bold, fully wrapped (high max_lines => no cut)
-            qlines = all_qlines[i]
-            qy = y - (len(qlines) * 20) / 2 + 2
+            # carriers along the line
+            names = ", ".join(c["names"][:2]) +                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
+            # carriers hug the flat approach just before their own mouth —
+            # box spacing guarantees adjacent labels can never collide
+            label = _ellipsize(d, names, f_car, 205)
+            lw = d.textlength(label, font=f_car)
+            d.text((MX - 14 - lw, y - 22), label, font=f_car, fill=EV_TEAL_DEEP)
+            # the framing box: name + question, never ellipsized
+            by = y - bh / 2
+            d.rounded_rectangle([BQX0, by, BQX1, by + bh], radius=10,
+                                fill=CARD_BG, outline=EV_TEAL, width=1)
+            d.ellipse([MX - 5, y - 5, MX + 5, y + 5], fill=EV_TEAL)
+            ty = by + 9
+            for ln in nlines:
+                d.text((BQX0 + 14, ty), ln, font=f_bn, fill=EV_TEAL_DEEP)
+                ty += lh
+            ty += 2
             for ln in qlines:
-                d.text((QX0, qy), ln, font=f_q, fill=INK1)
-                qy += 20
+                d.text((BQX0 + 14, ty), ln, font=f_q, fill=INK1)
+                ty += lh
         # disputes column: every recorded point that fits, honest overflow
         if cd["disputes"]:
             dy0, dy1 = 140, 596
@@ -1521,9 +1533,11 @@ def svg_event_delta(cd):
         fact_lines.append("")
     blk_h = 52 + len(fact_lines) * 19 + (20 if cd["unverified"] else 0)
 
-    # question rows drive the mouth positions
-    q_wrapped = [wrapc(c.get("question") or "", 40) for c in cells]
-    row_h = [max(len(q) * 22 + 16, 62) for q in q_wrapped]
+    # box rows (framing name + question) drive the mouth positions
+    q_wrapped = [wrapc(c.get("question") or "", 44) for c in cells]
+    n_wrapped = [wrapc(c["name"], 46, 2) for c in cells]
+    row_h = [max((len(n) + len(q)) * 21 + 26, 66)
+             for n, q in zip(n_wrapped, q_wrapped)]
     total_q = sum(row_h)
     H = max(blk_h + 60, total_q + 60, 440)
     cy = H / 2
@@ -1552,22 +1566,30 @@ def svg_event_delta(cd):
         acc += rh
     for i, c in enumerate(cells):
         y = ys[i]
+        nlines, qlines = n_wrapped[i], q_wrapped[i]
+        bh = row_h[i] - 8
         y0 = cy + (i - (k - 1) / 2) * 11
-        pid = f"evch{i}"
-        parts.append(f'<path id="{pid}" d="M {SX1} {y0:.0f} C {SX1 + 120} '
-                     f'{y0 + (y - y0) * 0.35:.0f}, {QX0 - 150} {y - (y - y0) * 0.14:.0f}, '
-                     f'{QX0 - 22} {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>')
-        parts.append(f'<circle cx="{QX0 - 20}" cy="{y:.0f}" r="5" fill="#1f7a68"/>')
-        off = 14 + (2 - abs(i - (k - 1) / 2)) * 11
-        name = c["name"].split(" & ")[0].split(" / ")[0]
-        parts.append(f'<text font-size="14" font-weight="650" fill="#155e4f">'
-                     f'<textPath href="#{pid}" startOffset="{off:.0f}%">'
-                     f'<tspan dy="-6">{esc(name)}</tspan></textPath></text>')
-        qy = y - (len(q_wrapped[i]) * 22) / 2 + 16
-        for ln in q_wrapped[i]:
-            parts.append(f'<text x="{QX0}" y="{qy:.0f}" font-size="17" '
+        parts.append(f'<path d="M {SX1} {y0:.0f} C {SX1 + 100} '
+                     f'{y0 + (y - y0) * 0.35:.0f}, {QX0 - 140} {y - (y - y0) * 0.14:.0f}, '
+                     f'{QX0 - 24} {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>')
+        parts.append(f'<circle cx="{QX0 - 22}" cy="{y:.0f}" r="5" fill="#1f7a68"/>')
+        names = ", ".join(c["names"][:2])
+        if len(c["names"]) > 2:
+            names += f' +{len(c["names"]) - 2}'
+        parts.append(f'<text x="{QX0 - 34}" y="{y - 16:.0f}" text-anchor="end" '
+                     f'font-size="13.5" font-weight="650" fill="#155e4f">'
+                     f'{esc(names if len(names) <= 34 else names[:33].rstrip() + "…")}</text>')
+        parts.append(f'<rect x="{QX0 - 12}" y="{y - bh / 2:.0f}" width="{1060 - QX0 + 12}" '
+                     f'height="{bh:.0f}" rx="10" fill="#fcfcfb" stroke="#1f7a68" stroke-width="1"/>')
+        ty = y - bh / 2 + 24
+        for ln in nlines:
+            parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="15" '
+                         f'font-weight="700" fill="#155e4f">{esc(ln)}</text>')
+            ty += 21
+        for ln in qlines:
+            parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="15.5" '
                          f'font-weight="650" fill="#0b0b0b">{esc(ln)}</text>')
-            qy += 22
+            ty += 21
     parts.append("</svg>")
     return chr(10).join(parts)
 
@@ -1657,14 +1679,12 @@ def render_event_page(cd, out_path):
     <div class="kicker">Tributary · event map</div>
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="title">{esc(cd["title"])}</p>
-    {f'<div class="agree"><strong>Common ground:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
     {svg_event_delta(cd)}
     <div class="fgrid">
 {cells_html}
     </div>
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="found">
-      {f'<h3 class="fh-cg">Common ground — verified shared facts</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["verified"]) + '</ul>' if cd["verified"] else ''}
       {f'<h3 class="fh-uv">Repeated by all sides, unverified</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["unverified"]) + '</ul>' if cd["unverified"] else ''}
       {f'<h3 class="fh-dp">The actual points of disagreement</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["disputes"]) + '</ul>' if cd["disputes"] else ''}
     </div>
