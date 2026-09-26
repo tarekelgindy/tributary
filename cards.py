@@ -45,6 +45,7 @@ via the Daily Beast is not a CBS-style first-party carrier).
 """
 
 import argparse
+import math
 import calendar
 import json
 import re
@@ -1342,64 +1343,126 @@ def render_event_png(cd, out_path):
     ML, MR = 60, W - 60
     cw = MR - ML
 
-    title = (cd["title"] or "").rstrip(".") + " —"
-    f_h = _fit(d, title, "bold", 38, cw)
-    d.text((ML, 92), _ellipsize(d, title, f_h, cw), font=f_h, fill=INK1)
     nword = _NUMWORD.get(cd["n_framings"], str(cd["n_framings"]))
-    d.text((ML, 138), f"{nword} competing framings.", font=_font(36, "bold"),
+    suffix = f" — {nword} competing framings."
+    title = (cd["title"] or "").rstrip(".")
+    f_h = _fit(d, title + suffix, "bold", 34, cw, min_size=22)
+    title = _ellipsize(d, title, f_h, cw - d.textlength(suffix, font=f_h))
+    d.text((ML, 88), title, font=f_h, fill=INK1)
+    d.text((ML + d.textlength(title, font=f_h), 88), suffix, font=f_h,
            fill=EV_TEAL)
 
     cells = cd["cells"]
 
     if cd["n_framings"] <= 5:
-        # --- the delta, fed by the common-ground pool ---
-        # The channels don't spring from a bare dot: they emerge from the
-        # shared pool every framing drinks from, drawn as two strata —
-        # verified facts (teal) and repeated-but-unverified claims (amber).
+        # --- delta v3 (Tarek's spec, 2026-09-26): the common-ground facts,
+        # bulleted, ARE the headwater; teal channels carry the framing names
+        # along the lines; each mouth ends in the framing's own QUESTION
+        # (bold, never ellipsized — questions are short and complete where
+        # emphases and disputes truncate badly); all recorded points of
+        # disagreement fill the right column, cut only when space runs out.
         k = len(cells)
-        cy = 312
-        d.ellipse([66, cy - 11, 88, cy + 11], fill=EV_INK)
-        d.line([88, cy, 112, cy], fill=EV_INK, width=3)
-        px0, px1 = 112, 254
-        ph = 96
-        n_v, n_u = len(cd["verified"]), len(cd["unverified"])
-        d.rounded_rectangle([px0, cy - ph // 2, px1, cy + ph // 2], radius=10,
-                            fill=EV_TEAL)
-        if n_u:
-            d.rounded_rectangle([px0, cy, px1, cy + ph // 2], radius=10,
-                                fill=(214, 189, 122))
-            d.rectangle([px0, cy - 10, px1, cy + 10], fill=EV_TEAL)
-            d.rectangle([px0, cy, px1, cy + 12], fill=(214, 189, 122))
-        f_pool = _font(14, "semibold")
-        t1 = f"{n_v} verified facts"
-        d.text(((px0 + px1) / 2 - d.textlength(t1, font=f_pool) / 2,
-                cy - ph // 4 - 9), t1, font=f_pool, fill=EV_CREAM)
-        if n_u:
-            t2 = f"{n_u} unverified, shared"
-            d.text(((px0 + px1) / 2 - d.textlength(t2, font=f_pool) / 2,
-                    cy + ph // 4 - 9), t2, font=f_pool, fill=(74, 56, 14))
-        f_ev = _font(14)
-        lbl = "the event · common ground"
-        d.text(((px0 + px1) / 2 - d.textlength(lbl, font=f_ev) / 2,
-                cy + ph // 2 + 8), lbl, font=f_ev, fill=INK3)
+        SX0, SX1 = 30, 268                     # source block
+        QX0, QX1 = 578, 828                    # questions column
+        DX0, DX1 = 846, W - 30                 # disputes column
+        cy = 362
 
-        spacing = {2: 104, 3: 86, 4: 66}.get(k, 50)
-        f_name, f_car = _font(20, "semibold"), _font(15)
+        # source block: bulleted verified facts (+ unverified count)
+        f_lbl = _font(13, "bold")
+        f_fact = _font(14)
+        blk_lines = []                          # (text, font, color) | None gap
+        for v in cd["verified"]:
+            for li, ln in enumerate(_wrap(d, v, f_fact, SX1 - SX0 - 46, 5)):
+                blk_lines.append((("•  " if li == 0 else "   ") + ln,
+                                  f_fact, (40, 56, 47)))
+            blk_lines.append(None)
+            if len(blk_lines) > 22:
+                break
+        if cd["unverified"]:
+            blk_lines.append((f'+ {len(cd["unverified"])} claims repeated '
+                              'by all, unverified', _font(12), (116, 92, 30)))
+        blk_h = 46 + sum(6 if b is None else 19 for b in blk_lines) + 16
+        by0 = max(150, cy - blk_h // 2)
+        d.rounded_rectangle([SX0, by0, SX1, by0 + blk_h], radius=14,
+                            fill=EV_BED, outline=EV_TEAL, width=2)
+        t = "COMMON GROUND"
+        d.text(((SX0 + SX1) / 2 - d.textlength(t, font=f_lbl) / 2, by0 + 14),
+               t, font=f_lbl, fill=EV_TEAL_DEEP)
+        yy = by0 + 42
+        for b in blk_lines:
+            if b is None:
+                yy += 6
+                continue
+            txt, fnt, col = b
+            d.text((SX0 + 18, yy), txt, font=fnt, fill=col)
+            yy += 19
+
+        # channels + names riding the lines + bold questions, no ellipses
+        f_q = _font(15, "semibold")
+        f_name = _font(14, "semibold")
+        all_qlines = [_wrap(d, c.get("question") or "", f_q, QX1 - QX0, 9)
+                      for c in cells]
+        row_h = [max(len(q) * 20 + 14, 58) for q in all_qlines]
+        total = sum(row_h)
+        ys, acc = [], 0
+        for rh in row_h:
+            ys.append(cy - total / 2 + acc + rh / 2)
+            acc += rh
         for i, c in enumerate(cells):
-            y = cy + (i - (k - 1) / 2) * spacing
-            y0 = cy + (i - (k - 1) / 2) * (ph / max(k, 2) * 0.8)
-            pts = _bez((px1, y0), (310, y0 + (y - y0) * 0.35),
-                       (365, y - (y - y0) * 0.18), (424, y))
+            y = ys[i]
+            y0 = cy + (i - (k - 1) / 2) * 11
+            pts = _bez((SX1, y0), (SX1 + 118, y0 + (y - y0) * 0.35),
+                       (QX0 - 148, y - (y - y0) * 0.14), (QX0 - 20, y), n=60)
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
-            d.ellipse([421, y - 5, 431, y + 5], fill=EV_TEAL)
-            d.text((444, y - 23), _ellipsize(d, c["name"], f_name, MR - 444),
-                   font=f_name, fill=INK1)
-            names = ", ".join(c["names"][:2]) + \
-                (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
-            d.text((444, y + 1),
-                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, MR - 444),
-                   font=f_car, fill=INK3)
-        _foundation_band(d, cd, ML, MR, 448, 584, dispute_lines=2)
+            d.ellipse([QX0 - 23, y - 5, QX0 - 13, y + 5], fill=EV_TEAL)
+            # name along the line: rendered on its own layer, rotated to the
+            # local chord angle (PIL has no text-on-path), pasted just above
+            off = 0.16 + (2 - abs(i - (k - 1) / 2)) * 0.11
+            p_lo = pts[int(off * (len(pts) - 1))]
+            p_hi = pts[min(int((off + 0.14) * (len(pts) - 1)), len(pts) - 1)]
+            ang = math.degrees(math.atan2(p_hi[1] - p_lo[1], p_hi[0] - p_lo[0]))
+            name = c["name"].split(" & ")[0].split(" / ")[0]
+            name = _ellipsize(d, name, f_name, 235)
+            tw = int(d.textlength(name, font=f_name)) + 8
+            timg = Image.new("RGBA", (tw, 26), (0, 0, 0, 0))
+            ImageDraw.Draw(timg).text((4, 2), name, font=f_name,
+                                      fill=EV_TEAL_DEEP + (255,))
+            timg = timg.rotate(-ang, expand=True,
+                               resample=Image.Resampling.BICUBIC)
+            nx = (p_lo[0] + p_hi[0]) / 2 - timg.width / 2
+            ny = (p_lo[1] + p_hi[1]) / 2 - timg.height / 2 - 11
+            img.paste(timg, (int(nx), int(ny)), timg)
+            # the question, bold, fully wrapped (high max_lines => no cut)
+            qlines = all_qlines[i]
+            qy = y - (len(qlines) * 20) / 2 + 2
+            for ln in qlines:
+                d.text((QX0, qy), ln, font=f_q, fill=INK1)
+                qy += 20
+        # disputes column: every recorded point that fits, honest overflow
+        if cd["disputes"]:
+            dy0, dy1 = 140, 596
+            d.rounded_rectangle([DX0, dy0, DX1, dy1], radius=12,
+                                fill=(248, 239, 233))
+            d.line([DX0 + 2, dy0 + 10, DX0 + 2, dy1 - 10], fill=EV_RUST, width=3)
+            d.text((DX0 + 20, dy0 + 14), "POINTS OF DISAGREEMENT",
+                   font=_font(12, "bold"), fill=EV_RUST)
+            f_d = _font(12)
+            yy = dy0 + 44
+            shown = 0
+            for dt in cd["disputes"]:
+                lines = _wrap(d, dt, f_d, DX1 - DX0 - 40, 5)
+                if yy + len(lines) * 16 > dy1 - 26:
+                    break
+                for li, ln in enumerate(lines):
+                    d.text((DX0 + 20, yy), ("·  " if li == 0 else "   ") + ln,
+                           font=f_d, fill=(90, 56, 44))
+                    yy += 16
+                yy += 7
+                shown += 1
+            if shown < len(cd["disputes"]):
+                d.text((DX0 + 20, yy),
+                       f'+ {len(cd["disputes"]) - shown} more on the full analysis',
+                       font=_font(11.5), fill=EV_RUST)
     else:
         # --- the grid fallback (concept B) for crowded events ---
         _foundation_band(d, cd, ML, MR, 184, 288, dispute_lines=1)
@@ -1426,54 +1489,87 @@ def render_event_png(cd, out_path):
 
 
 def svg_event_delta(cd):
-    """The delta figure for the share page: common-ground pool (verified
-    stratum teal, unverified stratum amber) feeding one equal channel per
-    framing. Only for events small enough to draw (<=5 framings)."""
+    """The delta figure for the share page, matching the card (2026-09-26
+    spec): bulleted common-ground facts as the headwater, teal channels with
+    the framing names riding the lines (real textPath here), each framing's
+    question — bold, never ellipsized — at its mouth. Disputes live in the
+    page's own list below the figure. <=5 framings only."""
     if cd["n_framings"] > 5:
         return ""
     cells = cd["cells"]
     k = len(cells)
-    cy = 210
-    spacing = {2: 104, 3: 86, 4: 70}.get(k, 58)
-    n_v, n_u = len(cd["verified"]), len(cd["unverified"])
-    px0, px1, ph = 24, 170, 96
-    trunc = lambda s, n: s if len(s) <= n else s[:n - 1].rstrip() + "…"
-    parts = [
-        f'<svg viewBox="0 0 1080 420" xmlns="http://www.w3.org/2000/svg" '
-        f'font-family="system-ui, -apple-system, Segoe UI, sans-serif" '
-        f'role="img" aria-label="One event splitting into {k} framings, all '
-        f'fed by the shared common-ground pool">',
-        f'<circle cx="12" cy="{cy}" r="9" fill="#12333e"/>',
-        f'<rect x="{px0}" y="{cy - ph // 2}" width="{px1 - px0}" height="{ph if not n_u else ph // 2}" rx="10" fill="#1f7a68"/>',
-    ]
-    if n_u:
-        parts += [
-            f'<rect x="{px0}" y="{cy}" width="{px1 - px0}" height="{ph // 2}" rx="10" fill="#d6bd7a"/>',
-            f'<rect x="{px0}" y="{cy - 12}" width="{px1 - px0}" height="12" fill="#1f7a68"/>',
-            f'<rect x="{px0}" y="{cy}" width="{px1 - px0}" height="12" fill="#d6bd7a"/>',
-        ]
-    parts += [
-        f'<text x="{(px0 + px1) / 2}" y="{cy - ph // 4 + 5}" fill="#f3efe4" font-size="14" font-weight="600" text-anchor="middle">{n_v} verified facts</text>',
-    ]
-    if n_u:
-        parts.append(
-            f'<text x="{(px0 + px1) / 2}" y="{cy + ph // 4 + 5}" fill="#4a380e" font-size="14" font-weight="600" text-anchor="middle">{n_u} unverified, shared</text>')
-    parts.append(
-        f'<text x="{(px0 + px1) / 2}" y="{cy + ph // 2 + 22}" fill="#898781" font-size="13" text-anchor="middle">the event · common ground</text>')
+
+    def wrapc(s_, width, max_lines=99):
+        words, lines, cur = s_.split(), [], ""
+        for w in words:
+            if len(cur) + len(w) + 1 <= width:
+                cur = (cur + " " + w).strip()
+            else:
+                lines.append(cur)
+                cur = w
+                if len(lines) == max_lines:
+                    break
+        if cur and len(lines) < max_lines:
+            lines.append(cur)
+        return lines
+
+    # source block: bulleted verified facts
+    fact_lines = []
+    for v in cd["verified"]:
+        for li, ln in enumerate(wrapc(v, 30)):
+            fact_lines.append(("•  " if li == 0 else "    ") + ln)
+        fact_lines.append("")
+    blk_h = 52 + len(fact_lines) * 19 + (20 if cd["unverified"] else 0)
+
+    # question rows drive the mouth positions
+    q_wrapped = [wrapc(c.get("question") or "", 40) for c in cells]
+    row_h = [max(len(q) * 22 + 16, 62) for q in q_wrapped]
+    total_q = sum(row_h)
+    H = max(blk_h + 60, total_q + 60, 440)
+    cy = H / 2
+    SX1, QX0 = 268, 600
+
+    parts = [f'<svg viewBox="0 0 1080 {H:.0f}" xmlns="http://www.w3.org/2000/svg" '
+             f'font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" '
+             f'aria-label="The shared common ground splitting into {k} framing questions">']
+    by0 = cy - blk_h / 2
+    parts.append(f'<rect x="20" y="{by0:.0f}" width="248" height="{blk_h:.0f}" rx="14" '
+                 f'fill="#f0eee6" stroke="#1f7a68" stroke-width="2"/>')
+    parts.append(f'<text x="144" y="{by0 + 26:.0f}" text-anchor="middle" font-size="13" '
+                 f'font-weight="700" letter-spacing="1.5" fill="#155e4f">COMMON GROUND</text>')
+    yy = by0 + 50
+    for ln in fact_lines:
+        if ln:
+            parts.append(f'<text x="38" y="{yy:.0f}" font-size="13.5" fill="#28382f">{esc(ln)}</text>')
+        yy += 19 if ln else 8
+    if cd["unverified"]:
+        parts.append(f'<text x="38" y="{yy:.0f}" font-size="12" fill="#96741e">'
+                     f'+ {len(cd["unverified"])} claims repeated by all, unverified</text>')
+
+    ys, acc = [], 0
+    for rh in row_h:
+        ys.append(cy - total_q / 2 + acc + rh / 2)
+        acc += rh
     for i, c in enumerate(cells):
-        y = cy + (i - (k - 1) / 2) * spacing
-        y0 = cy + (i - (k - 1) / 2) * (ph / max(k, 2) * 0.8)
-        names = ", ".join(c["names"][:2])
-        if len(c["names"]) > 2:
-            names += f' +{len(c["names"]) - 2}'
-        parts += [
-            f'<path d="M {px1} {y0:.0f} C 250 {y0 + (y - y0) * 0.35:.0f}, 300 {y - (y - y0) * 0.18:.0f}, 352 {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>',
-            f'<circle cx="354" cy="{y:.0f}" r="5" fill="#1f7a68"/>',
-            f'<text x="372" y="{y - 4:.0f}" fill="#0b0b0b" font-size="19" font-weight="600">{esc(trunc(c["name"], 58))}</text>',
-            f'<text x="372" y="{y + 18:.0f}" fill="#898781" font-size="14">{c["n"]} recorded · {esc(trunc(names, 64))}</text>',
-        ]
+        y = ys[i]
+        y0 = cy + (i - (k - 1) / 2) * 11
+        pid = f"evch{i}"
+        parts.append(f'<path id="{pid}" d="M {SX1} {y0:.0f} C {SX1 + 120} '
+                     f'{y0 + (y - y0) * 0.35:.0f}, {QX0 - 150} {y - (y - y0) * 0.14:.0f}, '
+                     f'{QX0 - 22} {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>')
+        parts.append(f'<circle cx="{QX0 - 20}" cy="{y:.0f}" r="5" fill="#1f7a68"/>')
+        off = 14 + (2 - abs(i - (k - 1) / 2)) * 11
+        name = c["name"].split(" & ")[0].split(" / ")[0]
+        parts.append(f'<text font-size="14" font-weight="650" fill="#155e4f">'
+                     f'<textPath href="#{pid}" startOffset="{off:.0f}%">'
+                     f'<tspan dy="-6">{esc(name)}</tspan></textPath></text>')
+        qy = y - (len(q_wrapped[i]) * 22) / 2 + 16
+        for ln in q_wrapped[i]:
+            parts.append(f'<text x="{QX0}" y="{qy:.0f}" font-size="17" '
+                         f'font-weight="650" fill="#0b0b0b">{esc(ln)}</text>')
+            qy += 22
     parts.append("</svg>")
-    return "\n".join(parts)
+    return chr(10).join(parts)
 
 
 def render_event_page(cd, out_path):
