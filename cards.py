@@ -1226,6 +1226,11 @@ def event_card_data(ev):
     else:
         facts = [v.get("statement") or "" for v in sf.get("verified_facts") or []]
         agrees = " ".join(facts[:2])
+    verified = [v.get("statement") or "" for v in sf.get("verified_facts") or []]
+    unverified = [str(u.get("statement") if isinstance(u, dict) else u)
+                  for u in sf.get("unverified_shared_claims") or []]
+    disputes = [str(x.get("statement") if isinstance(x, dict) else x)
+                for x in sf.get("points_of_disagreement") or []]
     return {
         "analysis_id": ev.get("analysis_id") or "",
         "title": (ev.get("event") or "").strip(),
@@ -1233,6 +1238,9 @@ def event_card_data(ev):
         "cells": cells[:8],
         "n_hidden": max(0, len(framings) - 8),
         "agrees": agrees,
+        "verified": [v for v in verified if v],
+        "unverified": [u for u in unverified if u],
+        "disputes": [x for x in disputes if x],
         "headline": f"{len(framings)} competing framings.",
     }
 
@@ -1247,8 +1255,10 @@ EV_INK = (18, 51, 62)
 EV_CREAM = (243, 239, 228)
 EV_TEAL = (31, 122, 104)
 EV_TEAL_DEEP = (21, 94, 79)
-EV_BED = (227, 239, 233)
-EV_BED_TXT = (40, 56, 47)
+EV_BED = (240, 238, 230)
+EV_BED_TXT = (40, 50, 47)
+EV_AMBER = (150, 116, 30)
+EV_RUST = (156, 74, 56)
 _NUMWORD = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
             7: "seven", 8: "eight", 9: "nine"}
 
@@ -1284,6 +1294,39 @@ def _event_band(d):
     d.text((W - 60 - d.textlength(lbl, font=f), 22), lbl, fill=(157, 180, 186), font=f)
 
 
+def _foundation_band(d, cd, ML, MR, top, bottom, dispute_lines=2):
+    """The riverbed, three voices: what is verified and shared (common
+    ground), what all sides repeat unverified, and the actual dispute.
+    One compressed line per voice — the tap-through page carries the
+    full lists."""
+    cw = MR - ML
+    d.rounded_rectangle([ML, top, MR, bottom], radius=12, fill=EV_BED)
+    lx, tx = ML + 22, ML + 250
+    f_lbl, f_t = _font(14, "bold"), _font(16)
+    y = top + 12
+
+    def row(label, color, text, lines=1):
+        nonlocal y
+        d.text((lx, y + 1), label, font=f_lbl, fill=color)
+        for ln in _wrap(d, text, f_t, MR - 22 - tx, lines):
+            d.text((tx, y), ln, font=f_t, fill=EV_BED_TXT)
+            y += 23
+        y += 5
+
+    if cd["verified"] or cd["agrees"]:
+        n = len(cd["verified"])
+        lead = cd["verified"][0] if cd["verified"] else cd["agrees"]
+        row("COMMON GROUND", EV_TEAL_DEEP,
+            (f"{n} verified shared facts · " if n else "") + lead, 1)
+    if cd["unverified"]:
+        row("REPEATED, UNVERIFIED", EV_AMBER,
+            f'{len(cd["unverified"])} claims all sides repeat · '
+            f'e.g. {cd["unverified"][0]}', 1)
+    if cd["disputes"]:
+        more = f' (+{len(cd["disputes"]) - 1} more)' if len(cd["disputes"]) > 1 else ""
+        row("THE REAL DISPUTE", EV_RUST, cd["disputes"][0] + more, dispute_lines)
+
+
 def _event_footer(d, ML, MR):
     f_f = _font(15)
     d.text((ML, 600), "carrier counts are a floor from our search, not a census "
@@ -1307,18 +1350,16 @@ def render_event_png(cd, out_path):
            fill=EV_TEAL)
 
     cells = cd["cells"]
-    agree_text = ((cd["agrees"] + " The contest is over what it means.")
-                  if cd["agrees"] else "")
 
     if cd["n_framings"] <= 5:
         # --- the delta ---
         k = len(cells)
-        cy = 330
+        cy = 312
         d.ellipse([92, cy - 13, 118, cy + 13], fill=EV_INK)
         f_ev = _font(15)
         d.text((105 - d.textlength("the event", font=f_ev) / 2, cy + 26),
                "the event", font=f_ev, fill=INK3)
-        spacing = {2: 110, 3: 92, 4: 72}.get(k, 58)
+        spacing = {2: 104, 3: 86, 4: 66}.get(k, 50)
         f_name, f_car = _font(20, "semibold"), _font(15)
         for i, c in enumerate(cells):
             y = cy + (i - (k - 1) / 2) * spacing
@@ -1327,39 +1368,23 @@ def render_event_png(cd, out_path):
                        (315, y - (y - cy) * 0.16), (418, y))
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
             d.ellipse([415, y - 5, 425, y + 5], fill=EV_TEAL)
-            d.text((438, y - 24), _ellipsize(d, c["name"], f_name, MR - 438),
+            d.text((438, y - 23), _ellipsize(d, c["name"], f_name, MR - 438),
                    font=f_name, fill=INK1)
             names = ", ".join(c["names"][:2]) + \
                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
             d.text((438, y + 1),
                    _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, MR - 438),
                    font=f_car, fill=INK3)
-        if agree_text:
-            d.rounded_rectangle([ML, 492, MR, 580], radius=12, fill=EV_BED)
-            d.text((ML + 22, 502), f'ALL {cd["n_framings"]} AGREE:',
-                   font=_font(15, "bold"), fill=EV_TEAL_DEEP)
-            f_a = _font(17)
-            ay = 526
-            for ln in _wrap(d, agree_text, f_a, cw - 44, 2):
-                d.text((ML + 22, ay), ln, font=f_a, fill=EV_BED_TXT)
-                ay += 23
+        _foundation_band(d, cd, ML, MR, 448, 584, dispute_lines=2)
     else:
         # --- the grid fallback (concept B) for crowded events ---
-        if agree_text:
-            d.rounded_rectangle([ML, 190, MR, 262], radius=12, fill=EV_BED)
-            d.text((ML + 22, 199), f'ALL {cd["n_framings"]} AGREE:',
-                   font=_font(15, "bold"), fill=EV_TEAL_DEEP)
-            f_a = _font(16)
-            ay = 220
-            for ln in _wrap(d, agree_text, f_a, cw - 44, 2):
-                d.text((ML + 22, ay), ln, font=f_a, fill=EV_BED_TXT)
-                ay += 21
+        _foundation_band(d, cd, ML, MR, 184, 288, dispute_lines=1)
         f_name, f_car = _font(20, "semibold"), _font(15)
         col_w = (cw - 60) // 2
-        top = 288
+        top = 306
         for i, c in enumerate(cells):
             x = ML + (i % 2) * (col_w + 60)
-            y = top + (i // 2) * 68
+            y = top + (i // 2) * 62
             d.ellipse([x, y + 6, x + 10, y + 16], fill=EV_TEAL)
             d.text((x + 18, y), _ellipsize(d, c["name"], f_name, col_w - 18),
                    font=f_name, fill=INK1)
@@ -1369,7 +1394,7 @@ def render_event_png(cd, out_path):
                    _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, col_w - 18),
                    font=f_car, fill=INK3)
         if cd["n_hidden"]:
-            d.text((ML, top + 4 * 68 + 2), f'+ {cd["n_hidden"]} more framings '
+            d.text((ML, top + 4 * 62 + 2), f'+ {cd["n_hidden"]} more framings '
                    'on the full analysis', font=_font(15), fill=INK3)
 
     _event_footer(d, ML, MR)
@@ -1434,6 +1459,14 @@ def render_event_page(cd, out_path):
   .dots {{ display: flex; gap: 4px; align-items: center; }}
   .dot {{ width: 9px; height: 9px; border-radius: 50%; background: #2a78d6; }}
   .fcount {{ font-size: 0.78rem; color: #898781; margin-left: 4px; white-space: nowrap; }}
+  .found {{ margin-top: 1.1rem; }}
+  .found h3 {{ font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
+              text-transform: uppercase; margin: 1rem 0 0.3rem; }}
+  .fh-cg {{ color: #155e4f; }}
+  .fh-uv {{ color: #96741e; }}
+  .fh-dp {{ color: #9c4a38; }}
+  .found ul {{ margin: 0; padding-left: 1.15rem; color: #3d3c39; font-size: 0.88rem; }}
+  .found li {{ margin-bottom: 0.3rem; }}
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 1rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
@@ -1453,11 +1486,16 @@ def render_event_page(cd, out_path):
     <div class="kicker">Tributary · event map</div>
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="title">{esc(cd["title"])}</p>
-    {f'<div class="agree"><strong>All {cd["n_framings"]} agree:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
+    {f'<div class="agree"><strong>Common ground:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
     <div class="fgrid">
 {cells_html}
     </div>
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
+    <div class="found">
+      {f'<h3 class="fh-cg">Common ground — verified shared facts</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["verified"]) + '</ul>' if cd["verified"] else ''}
+      {f'<h3 class="fh-uv">Repeated by all sides, unverified</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["unverified"]) + '</ul>' if cd["unverified"] else ''}
+      {f'<h3 class="fh-dp">The actual points of disagreement</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["disputes"]) + '</ul>' if cd["disputes"] else ''}
+    </div>
     <div class="cardfoot">
       <span>dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted · framing boundaries are AI judgments</span>
       <span>framing boundaries are AI judgments</span>

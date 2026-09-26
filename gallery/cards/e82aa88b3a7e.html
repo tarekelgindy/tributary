@@ -27,7 +27,7 @@
             color: #898781; margin-bottom: 0.5rem; }
   .headline { font-size: 1.6rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.3rem; }
   .title { color: #52514e; font-size: 0.95rem; margin: 0 0 1rem; }
-  .agree { background: #f4f3ef; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
+  .agree { background: #e3efe9; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
            color: #52514e; margin: 0 0 1.1rem; }
   .agree strong { color: #0b0b0b; }
   .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
@@ -38,13 +38,21 @@
   .dots { display: flex; gap: 4px; align-items: center; }
   .dot { width: 9px; height: 9px; border-radius: 50%; background: #2a78d6; }
   .fcount { font-size: 0.78rem; color: #898781; margin-left: 4px; white-space: nowrap; }
+  .found { margin-top: 1.1rem; }
+  .found h3 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
+              text-transform: uppercase; margin: 1rem 0 0.3rem; }
+  .fh-cg { color: #155e4f; }
+  .fh-uv { color: #96741e; }
+  .fh-dp { color: #9c4a38; }
+  .found ul { margin: 0; padding-left: 1.15rem; color: #3d3c39; font-size: 0.88rem; }
+  .found li { margin-bottom: 0.3rem; }
   .cardfoot { border-top: 1px solid #e1e0d9; margin-top: 1rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }
-  .cta { display: inline-block; margin: 1.3rem 0 0; background: #2a78d6; color: #fff;
+  .cta { display: inline-block; margin: 1.3rem 0 0; background: #1f7a68; color: #fff;
          text-decoration: none; font-weight: 600; font-size: 0.95rem;
          padding: 0.55rem 1.1rem; border-radius: 8px; }
-  .cta:hover { background: #184f95; }
+  .cta:hover { background: #155e4f; }
   .honesty { margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }
   .honesty a { color: #2a78d6; text-decoration: none; }
@@ -54,10 +62,10 @@
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="kicker">Tributary · event analysis</div>
+    <div class="kicker">Tributary · event map</div>
     <div class="headline">8 competing framings.</div>
     <p class="title">A financial disclosure document reported that Donald Trump received over 1 billion dollars in income or value from cryptocurrency-related ventures.</p>
-    <div class="agree"><strong>Everyone agrees:</strong> Trump disclosed over $1 billion in crypto-related income, that he has financial interests in crypto ventures including World Liberty Financial, that the $TRUMP token experienced a major price decline, and that he pardoned Binance's CZ. The contest is over what it <em>means</em>.</div>
+    <div class="agree"><strong>Common ground:</strong> Trump disclosed over $1 billion in crypto-related income, that he has financial interests in crypto ventures including World Liberty Financial, that the $TRUMP token experienced a major price decline, and that he pardoned Binance's CZ. The contest is over what it <em>means</em>.</div>
     <div class="fgrid">
 <div class="fcell">
       <div class="fname">Corruption &amp; Conflict of Interest</div>
@@ -117,9 +125,14 @@
     </div>
     </div>
     
+    <div class="found">
+      <h3 class="fh-cg">Common ground — verified shared facts</h3><ul><li>A financial disclosure document reported that Donald Trump received over $1 billion in income or value from cryptocurrency-related ventures.</li><li>Trump's financial disclosure was 927 pages in length.</li><li>The $TRUMP token experienced a significant price decline from its peak.</li><li>Trump pardoned Changpeng Zhao (CZ), founder of Binance.</li><li>Trump disclosed a financial interest in World Liberty Financial (WLF).</li></ul>
+      <h3 class="fh-uv">Repeated by all sides, unverified</h3><ul><li>The UAE sovereign wealth fund invested $500 million in World Liberty Financial.</li><li>Trump earned $636 million specifically from the $TRUMP token.</li><li>988,905 retail wallets holding $TRUMP experienced losses.</li><li>Pakistan's government signed an MOU with World Liberty Financial.</li><li>The $TRUMP token's tokenomics allocate 80% of supply to Trump entities and 20% to the public.</li><li>Obama's final financial disclosure was 8 pages; Biden's was 11 pages.</li><li>Trump's disclosure filing incurred late fees and required a 45-day extension.</li></ul>
+      <h3 class="fh-dp">The actual points of disagreement</h3><ul><li>Whether Trump's crypto income constitutes a conflict of interest or self-dealing (Corruption framing) vs. whether it is legally permissible and reflects business success (Presidential Success framing)</li><li>Whether foreign investment in Trump crypto ventures represents a national security threat and pay-to-play channel (Foreign Influence framing) vs. whether outside fund managers handle his assets independently</li><li>Whether the $TRUMP token's structure and collapse caused systematic harm to retail investors (Retail Investor Harm framing) vs. whether retail participation in meme coins is a voluntary, speculative choice</li><li>Whether the 927-page disclosure represents unprecedented transparency (Presidential Transparency framing) or a document so vast it obscures rather than clarifies (Legislative Capture framing)</li><li>Whether Trump's crypto policy (GENIUS Act, deregulation) is a quid pro quo for personal enrichment (Corruption framing) vs. whether it reflects a coherent 'America First' crypto agenda (Presidential Success framing)</li><li>Whether the timing of the disclosure during Senate crypto bill negotiations poisoned legislative integrity (Legislative Capture framing) vs. whether it is irrelevant to the merits of crypto policy</li><li>Whether Trump's crypto dealings are politically reckless and will damage the GOP (Conservative Institutional Alarm framing) vs. whether they are legally sound and politically defensible</li><li>Whether meme coin tokenomics expose a regulatory gap that allows insider profit-taking (Crypto Market Structure framing) vs. whether meme coins are inherently speculative and require no special regulation</li></ul>
+    </div>
     <div class="cardfoot">
       <span>dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted · framing boundaries are AI judgments</span>
-      <span>AI-generated, not human-reviewed</span>
+      <span>framing boundaries are AI judgments</span>
     </div>
   </div>
 
