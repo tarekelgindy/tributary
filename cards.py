@@ -1490,7 +1490,7 @@ def render_event_png(cd, out_path):
             names = ", ".join(c["names"][:2]) + \
                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
             d.text((x + 18, y + 26),
-                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, col_w - 18),
+                   _ellipsize(d, names, f_car, col_w - 18),
                    font=f_car, fill=INK3)
         if cd["n_hidden"]:
             d.text((ML, top + 4 * 62 + 2), f'+ {cd["n_hidden"]} more framings '
@@ -1607,8 +1607,7 @@ def render_event_page(cd, out_path):
         f'''<div class="fcell">
       <div class="fname">{esc(c["name"])}</div>
       <div class="fq">{esc(c["question"])}</div>
-      <div class="dots">{'<span class="dot"></span>' * min(c["n"], 10)}
-        <span class="fcount">{c["n"]} recorded</span></div>
+      <div class="dots">{'<span class="dot"></span>' * min(c["n"], 10)}</div>
       <div class="fcar">{esc(", ".join(c["names"][:3]) + (f' +{len(c["names"]) - 3}' if len(c["names"]) > 3 else ""))}</div>
     </div>''' for c in cd["cells"])
 
