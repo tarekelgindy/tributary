@@ -752,13 +752,9 @@ def _dashed_vline(draw, x, y1, y2, color, dash=6, gap=5, width=2):
 def render_png(cd, out_path):
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img, "RGBA")
-    d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
-                        outline=GRID, width=1)
+    _event_band(d, "O R I G I N   T R A C E")
     ML, MR = 70, W - 70   # content margins
     cw = MR - ML
-
-    kicker = "T R I B U T A R Y   ·   N A R R A T I V E   T R A C E"
-    d.text((ML, 56), kicker, font=_font(22, "semibold"), fill=INK3)
 
     # WHO leads (Tarek, 2026-09-16): the source is the headline; age rides the
     # deck and the chart label. Traces with no nameable source keep the age
@@ -879,16 +875,17 @@ def render_png(cd, out_path):
     n_dots = len(cd["points"])
     counts = f'{cd["n_uses"]} recorded uses' + \
         (f' ({n_dots} dated)' if n_dots != cd["n_uses"] else '')
-    tail = (f'AI-traced · {cd["n_contrib"]} human contribution'
-            f'{"" if cd["n_contrib"] == 1 else "s"}' if cd["n_contrib"]
-            else 'AI-traced, not human-reviewed')
-    foot = (f'{counts}, one dot each — a sample, not a census · roles are unaudited AI labels · '
-            f'earliest found, not provably first · {tail}')
-    d.text((ML, 578), foot, font=_fit(d, foot, "regular", 16, cw, min_size=13), fill=INK3)
-    wordmark = "tributary"
-    f_wm = _font(22, "semibold")
-    d.text((MR - d.textlength(wordmark, font=f_wm), 549), wordmark,
-           font=f_wm, fill=BLUE_DEEP)
+    tail = (f' · {cd["n_contrib"]} human contribution'
+            f'{"" if cd["n_contrib"] == 1 else "s"}' if cd["n_contrib"] else "")
+    foot = (f'{counts}, one dot each — a sample, not a census · roles are '
+            f'unaudited AI labels · earliest found, not provably first{tail}')
+    url = "tarekelgindy.github.io/tributary"
+    f_url = _font(15)
+    uw = d.textlength(url, font=f_url)
+    d.text((ML, 578), foot,
+           font=_fit(d, foot, "regular", 16, cw - uw - 24, min_size=13),
+           fill=INK3)
+    d.text((MR - uw, 579), url, font=f_url, fill=INK3)
 
     img.save(out_path, "PNG")
 
@@ -1004,14 +1001,10 @@ def _ticks_for(t0, t1):
 def render_vs_png(vcd, out_path):
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img, "RGBA")
-    d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
-                        outline=GRID, width=1)
+    _event_band(d, "C L A I M   V S   R E B U T T A L")
     ML, MR = 70, W - 70
     cw = MR - ML
     a, b = vcd["claim"], vcd["counter"]
-
-    d.text((ML, 52), "T R I B U T A R Y   ·   C L A I M   &   R E B U T T A L",
-           font=_font(22, "semibold"), fill=INK3)
     f_head = _fit(d, vcd["headline"], "bold", 64, cw)
     d.text((ML, 90), vcd["headline"], font=f_head, fill=INK1)
 
@@ -1145,13 +1138,13 @@ def render_vs_page(vcd, out_path, slug):
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
-  .cta {{ display: inline-block; margin: 1.3rem 0.9rem 0 0; background: #2a78d6; color: #fff;
+  .cta {{ display: inline-block; margin: 1.3rem 0.9rem 0 0; background: #2a6fa3; color: #fff;
          text-decoration: none; font-weight: 600; font-size: 0.9rem;
          padding: 0.5rem 1rem; border-radius: 8px; }}
   .cta:hover {{ background: #184f95; }}
   .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }}
-  .honesty a {{ color: #2a78d6; text-decoration: none; }}
+  .honesty a {{ color: #2a6fa3; text-decoration: none; }}
   svg {{ width: 100%; height: auto; display: block; margin: 0.6rem 0 0; }}
   @media (max-width: 640px) {{ .headline {{ font-size: 1.35rem; }} }}
 </style>
@@ -1167,7 +1160,7 @@ def render_vs_page(vcd, out_path, slug):
     <div class="legend">{legend_html(vcd["roles_present"], vcd["prov_present"])}</div>
     <div class="cardfoot">
       <span>two separately-sampled traces — dot counts are not comparable volumes · roles are unaudited AI labels · earliest found, not provably first</span>
-      <span>AI-traced, not human-reviewed</span>
+      <span>earliest found, not provably first</span>
     </div>
   </div>
 
@@ -1276,7 +1269,7 @@ def _bez(p0, p1, p2, p3, n=44):
     return pts
 
 
-def _event_band(d):
+def _event_band(d, label="E V E N T   M A P"):
     d.rectangle([0, 0, W, 64], fill=EV_INK)
     S, OX, OY = 0.56, 28, 14
 
@@ -1292,7 +1285,7 @@ def _event_band(d):
     path(_bez((51, 8), (48, 20), (40, 27), (33, 32)), 2)
     path(_bez((32, 6), (32, 16), (32, 24), (32, 32)), 2)
     d.text((74, 16), "Tributary", font=_font(24, "bold"), fill=EV_CREAM)
-    lbl = "E V E N T   M A P"
+    lbl = label
     f = _font(16, "semibold")
     d.text((W - 60 - d.textlength(lbl, font=f), 22), lbl, fill=(157, 180, 186), font=f)
 
@@ -1701,7 +1694,7 @@ def render_event_page(cd, out_path):
   .cta:hover {{ background: #155e4f; }}
   .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }}
-  .honesty a {{ color: #2a78d6; text-decoration: none; }}
+  .honesty a {{ color: #2a6fa3; text-decoration: none; }}
   @media (max-width: 640px) {{ .fgrid {{ grid-template-columns: 1fr; }} }}
 </style>
 </head>
@@ -1954,15 +1947,15 @@ def render_page(cd, out_path):
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 0.9rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
-  .cta {{ display: inline-block; margin: 1.3rem 0 0; background: #2a78d6; color: #fff;
+  .cta {{ display: inline-block; margin: 1.3rem 0 0; background: #2a6fa3; color: #fff;
          text-decoration: none; font-weight: 600; font-size: 0.95rem;
          padding: 0.55rem 1.1rem; border-radius: 8px; }}
   .cta:hover {{ background: #184f95; }}
-  .ctx {{ display: inline-block; margin: 1.3rem 0 0 0.9rem; color: #2a78d6; text-decoration: none;
+  .ctx {{ display: inline-block; margin: 1.3rem 0 0 0.9rem; color: #2a6fa3; text-decoration: none;
          font-size: 0.9rem; }}
   .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }}
-  .honesty a {{ color: #2a78d6; text-decoration: none; }}
+  .honesty a {{ color: #2a6fa3; text-decoration: none; }}
   svg {{ width: 100%; height: auto; display: block; margin: 0.4rem 0 0; }}
   @media (max-width: 640px) {{ .headline {{ font-size: 1.4rem; }} }}
 </style>
@@ -1970,7 +1963,7 @@ def render_page(cd, out_path):
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="kicker">Tributary · narrative trace</div>
+    <div class="kicker">Tributary · origin trace</div>
     {f'<div class="eyebrow">{esc(c["origin_label"])} · {esc(c["origin_date"] or cd["first_human"])}</div>' if who_lead else ''}
     <div class="headline">{esc(who_lead) if who_lead else esc(cd["headline"])}</div>
     <p class="deck">{esc(" · ".join(b for b in (c["amps"], f'{cd["age_text"]} old', f'{cd["n_uses"]} recorded uses') if b))}</p>
