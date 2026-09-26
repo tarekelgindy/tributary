@@ -1054,7 +1054,7 @@ function removeBackButton() {
 // arrival continuity for anyone who clicked an unfurl. <=5 framings.
 function eventDeltaSvg(analysis) {
   const frs = analysis.framings || [];
-  if (frs.length < 2 || frs.length > 5) return '';
+  if (frs.length < 2 || frs.length > 8) return '';
   const sf = analysis.shared_foundation || {};
   const verified = (sf.verified_facts || []).map(v => v.statement || '').filter(Boolean);
   const nU = (sf.unverified_shared_claims || []).length;
@@ -1082,7 +1082,8 @@ function eventDeltaSvg(analysis) {
     });
   }
   const blkH = 46 + factLines.reduce((a, [t]) => a + (t === 'G' ? 8 : t === 'L' ? 24 : 19), 0);
-  const cells = frs.map(fr => ({
+  const shown = frs.slice(0, 8);
+  const cells = shown.map(fr => ({
     name: fr.name || '', question: fr.question || '',
     names: (fr.carriers || []).map(c => c.name).filter(Boolean),
   }));
@@ -1126,6 +1127,7 @@ function eventDeltaSvg(analysis) {
       ty += 17;
     });
   });
+  if (frs.length > 8) p.push(`<text x="${QX0}" y="${(H - 14).toFixed(0)}" font-size="13" fill="#898781">+ ${frs.length - 8} more framings below</text>`);
   p.push('</svg>');
   return `<div class="card" style="padding:1.05rem 1.15rem 0.8rem;">${p.join('')}</div>`;
 }

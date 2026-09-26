@@ -1525,7 +1525,7 @@ def svg_event_delta(cd):
     the framing names riding the lines (real textPath here), each framing's
     question — bold, never ellipsized — at its mouth. Disputes live in the
     page's own list below the figure. <=5 framings only."""
-    if cd["n_framings"] > 5:
+    if cd["n_framings"] > 8:
         return ""
     cells = cd["cells"]
     k = len(cells)
@@ -1618,6 +1618,10 @@ def svg_event_delta(cd):
             parts.append(f'<text x="{QX0}" y="{ty:.0f}" font-size="13" '
                          f'fill="#898781">{esc(ln)}</text>')
             ty += 17
+    if cd["n_hidden"]:
+        parts.append(f'<text x="{QX0}" y="{H - 14:.0f}" font-size="13" '
+                     f'fill="#898781">+ {cd["n_hidden"]} more framings on the '
+                     f'full analysis</text>')
     parts.append("</svg>")
     return chr(10).join(parts)
 
