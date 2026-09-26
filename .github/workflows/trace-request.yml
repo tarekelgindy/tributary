@@ -151,10 +151,12 @@ jobs:
 
           python publish.py   # exports events/, rebuilds gallery index + search index
 
-          # every published trace gets a share card (viewer's Share button
-          # depends on it); DejaVu fallback fonts on CI, never fatal
+          # every published trace and event gets a share card (viewer's Share
+          # button depends on it); DejaVu fallback fonts on CI, never fatal
           if [ "$IS_EVENT" != "1" ]; then
             python cards.py --fp "$ID" || echo "::warning::card render failed for $ID"
+          else
+            python cards.py --event "$ID" || echo "::warning::event card render failed for $ID"
           fi
 
           git config user.name "tributary-trace-bot"

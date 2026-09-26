@@ -1237,69 +1237,142 @@ def event_card_data(ev):
     }
 
 
+# Delta design (2026-09-25, Tarek's pick from mockups/event-card-concepts.html):
+# the brand drawn as data — one event flows in, splits into equal channels
+# (P5: carrier counts are floors, never magnitudes), and every channel runs
+# over the same riverbed: the shared-ground band. Events with >5 framings
+# fall back to the restyled two-column grid (concept B) for room.
+
+EV_INK = (18, 51, 62)
+EV_CREAM = (243, 239, 228)
+EV_TEAL = (31, 122, 104)
+EV_TEAL_DEEP = (21, 94, 79)
+EV_BED = (227, 239, 233)
+EV_BED_TXT = (40, 56, 47)
+_NUMWORD = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+            7: "seven", 8: "eight", 9: "nine"}
+
+
+def _bez(p0, p1, p2, p3, n=44):
+    pts = []
+    for i in range(n + 1):
+        t = i / n
+        mt = 1 - t
+        pts.append((mt**3 * p0[0] + 3 * mt**2 * t * p1[0] + 3 * mt * t**2 * p2[0] + t**3 * p3[0],
+                    mt**3 * p0[1] + 3 * mt**2 * t * p1[1] + 3 * mt * t**2 * p2[1] + t**3 * p3[1]))
+    return pts
+
+
+def _event_band(d):
+    d.rectangle([0, 0, W, 64], fill=EV_INK)
+    S, OX, OY = 0.56, 28, 14
+
+    def path(pts64, w):
+        pts = [(OX + x * S, OY + y * S) for x, y in pts64]
+        d.line(pts, fill=EV_CREAM, width=w, joint="curve")
+        for p in (pts[0], pts[-1]):
+            r = w / 2
+            d.ellipse([p[0] - r, p[1] - r, p[0] + r, p[1] + r], fill=EV_CREAM)
+
+    path(_bez((32, 32), (32, 42), (32, 50), (32, 58)), 3)
+    path(_bez((13, 8), (16, 20), (24, 27), (31, 32)), 2)
+    path(_bez((51, 8), (48, 20), (40, 27), (33, 32)), 2)
+    path(_bez((32, 6), (32, 16), (32, 24), (32, 32)), 2)
+    d.text((74, 16), "Tributary", font=_font(24, "bold"), fill=EV_CREAM)
+    lbl = "E V E N T   M A P"
+    f = _font(16, "semibold")
+    d.text((W - 60 - d.textlength(lbl, font=f), 22), lbl, fill=(157, 180, 186), font=f)
+
+
+def _event_footer(d, ML, MR):
+    f_f = _font(15)
+    d.text((ML, 600), "carrier counts are a floor from our search, not a census "
+                      "· framing boundaries are AI judgments", font=f_f, fill=INK3)
+    url = "tarekelgindy.github.io/tributary"
+    d.text((MR - d.textlength(url, font=f_f), 600), url, font=f_f, fill=INK3)
+
+
 def render_event_png(cd, out_path):
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img, "RGBA")
-    d.rounded_rectangle([24, 24, W - 24, H - 24], radius=18, fill=CARD_BG,
-                        outline=GRID, width=1)
-    ML, MR = 70, W - 70
+    _event_band(d)
+    ML, MR = 60, W - 60
     cw = MR - ML
 
-    d.text((ML, 52), "T R I B U T A R Y   ·   E V E N T   A N A L Y S I S",
-           font=_font(22, "semibold"), fill=INK3)
+    title = (cd["title"] or "").rstrip(".") + " —"
+    f_h = _fit(d, title, "bold", 38, cw)
+    d.text((ML, 92), _ellipsize(d, title, f_h, cw), font=f_h, fill=INK1)
+    nword = _NUMWORD.get(cd["n_framings"], str(cd["n_framings"]))
+    d.text((ML, 138), f"{nword} competing framings.", font=_font(36, "bold"),
+           fill=EV_TEAL)
 
-    f_head = _fit(d, cd["headline"], "bold", 64, cw)
-    d.text((ML, 90), cd["headline"], font=f_head, fill=INK1)
+    cells = cd["cells"]
+    agree_text = ((cd["agrees"] + " The contest is over what it means.")
+                  if cd["agrees"] else "")
 
-    f_title = _font(26)
-    ty = 178
-    for ln in _wrap(d, cd["title"], f_title, cw, 2):
-        d.text((ML, ty), ln, font=f_title, fill=INK2)
-        ty += 35
+    if cd["n_framings"] <= 5:
+        # --- the delta ---
+        k = len(cells)
+        cy = 330
+        d.ellipse([92, cy - 13, 118, cy + 13], fill=EV_INK)
+        f_ev = _font(15)
+        d.text((105 - d.textlength("the event", font=f_ev) / 2, cy + 26),
+               "the event", font=f_ev, fill=INK3)
+        spacing = {2: 110, 3: 92, 4: 72}.get(k, 58)
+        f_name, f_car = _font(20, "semibold"), _font(15)
+        for i, c in enumerate(cells):
+            y = cy + (i - (k - 1) / 2) * spacing
+            pts = _bez((118, cy + (i - (k - 1) / 2) * 1.6),
+                       (240, cy + (y - cy) * 0.28),
+                       (315, y - (y - cy) * 0.16), (418, y))
+            d.line(pts, fill=EV_TEAL, width=3, joint="curve")
+            d.ellipse([415, y - 5, 425, y + 5], fill=EV_TEAL)
+            d.text((438, y - 24), _ellipsize(d, c["name"], f_name, MR - 438),
+                   font=f_name, fill=INK1)
+            names = ", ".join(c["names"][:2]) + \
+                (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
+            d.text((438, y + 1),
+                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, MR - 438),
+                   font=f_car, fill=INK3)
+        if agree_text:
+            d.rounded_rectangle([ML, 492, MR, 580], radius=12, fill=EV_BED)
+            d.text((ML + 22, 502), f'ALL {cd["n_framings"]} AGREE:',
+                   font=_font(15, "bold"), fill=EV_TEAL_DEEP)
+            f_a = _font(17)
+            ay = 526
+            for ln in _wrap(d, agree_text, f_a, cw - 44, 2):
+                d.text((ML + 22, ay), ln, font=f_a, fill=EV_BED_TXT)
+                ay += 23
+    else:
+        # --- the grid fallback (concept B) for crowded events ---
+        if agree_text:
+            d.rounded_rectangle([ML, 190, MR, 262], radius=12, fill=EV_BED)
+            d.text((ML + 22, 199), f'ALL {cd["n_framings"]} AGREE:',
+                   font=_font(15, "bold"), fill=EV_TEAL_DEEP)
+            f_a = _font(16)
+            ay = 220
+            for ln in _wrap(d, agree_text, f_a, cw - 44, 2):
+                d.text((ML + 22, ay), ln, font=f_a, fill=EV_BED_TXT)
+                ay += 21
+        f_name, f_car = _font(20, "semibold"), _font(15)
+        col_w = (cw - 60) // 2
+        top = 288
+        for i, c in enumerate(cells):
+            x = ML + (i % 2) * (col_w + 60)
+            y = top + (i // 2) * 68
+            d.ellipse([x, y + 6, x + 10, y + 16], fill=EV_TEAL)
+            d.text((x + 18, y), _ellipsize(d, c["name"], f_name, col_w - 18),
+                   font=f_name, fill=INK1)
+            names = ", ".join(c["names"][:2]) + \
+                (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
+            d.text((x + 18, y + 26),
+                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, col_w - 18),
+                   font=f_car, fill=INK3)
+        if cd["n_hidden"]:
+            d.text((ML, top + 4 * 68 + 2), f'+ {cd["n_hidden"]} more framings '
+                   'on the full analysis', font=_font(15), fill=INK3)
 
-    # "everyone agrees" strip — the shared foundation, then the contest
-    if cd["agrees"]:
-        f_a = _font(20)
-        d.rounded_rectangle([ML, 256, MR, 322], radius=10, fill=(244, 243, 239))
-        lines = _wrap(d, "Everyone agrees: " + cd["agrees"] +
-                      " The contest is over what it means.", f_a, cw - 40, 2)
-        ay = 264
-        for ln in lines:
-            d.text((ML + 20, ay), ln, font=f_a, fill=INK2)
-            ay += 27
-
-    # the fan: 2 x 4 equal cells — framing name over unit dots + carrier names
-    f_name, f_car = _font(21, "semibold"), _font(17)
-    col_w = (cw - 60) // 2
-    top = 340
-    for i, c in enumerate(cd["cells"]):
-        x = ML + (i % 2) * (col_w + 60)
-        y = top + (i // 2) * 52
-        d.text((x, y), _ellipsize(d, c["name"], f_name, col_w), font=f_name, fill=INK1)
-        dots_n = min(c["n"], 10)
-        for j in range(dots_n):
-            dx = x + j * 12
-            d.ellipse([dx, y + 33, dx + 8, y + 41], fill=BLUE)
-        names = ", ".join(c["names"][:2]) + \
-            (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
-        d.text((x + dots_n * 12 + 6, y + 27),
-               _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, col_w - dots_n * 12 - 6),
-               font=f_car, fill=INK3)
-
-    if cd["n_hidden"]:
-        d.text((ML, top + 4 * 52 + 2), f'+ {cd["n_hidden"]} more framings',
-               font=_font(17), fill=INK3)
-
-    d.line([ML, 562, MR, 562], fill=GRID, width=2)
-    f_f = _font(19)
-    d.text((ML, 570), 'dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted',
-           font=f_f, fill=INK3)
-    d.text((ML, 594), 'framing boundaries are AI judgments · AI-generated, not human-reviewed',
-           font=f_f, fill=INK3)
-    f_wm = _font(24, "semibold")
-    d.text((MR - d.textlength("tributary", font=f_wm), 578), "tributary",
-           font=f_wm, fill=BLUE_DEEP)
-
+    _event_footer(d, ML, MR)
     img.save(out_path, "PNG")
 
 
@@ -1350,7 +1423,7 @@ def render_event_page(cd, out_path):
             color: #898781; margin-bottom: 0.5rem; }}
   .headline {{ font-size: 1.6rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 0.3rem; }}
   .title {{ color: #52514e; font-size: 0.95rem; margin: 0 0 1rem; }}
-  .agree {{ background: #f4f3ef; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
+  .agree {{ background: #e3efe9; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
            color: #52514e; margin: 0 0 1.1rem; }}
   .agree strong {{ color: #0b0b0b; }}
   .fgrid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }}
@@ -1364,10 +1437,10 @@ def render_event_page(cd, out_path):
   .cardfoot {{ border-top: 1px solid #e1e0d9; margin-top: 1rem; padding-top: 0.65rem;
               font-size: 0.78rem; color: #898781; display: flex; justify-content: space-between;
               flex-wrap: wrap; gap: 0.4rem; }}
-  .cta {{ display: inline-block; margin: 1.3rem 0 0; background: #2a78d6; color: #fff;
+  .cta {{ display: inline-block; margin: 1.3rem 0 0; background: #1f7a68; color: #fff;
          text-decoration: none; font-weight: 600; font-size: 0.95rem;
          padding: 0.55rem 1.1rem; border-radius: 8px; }}
-  .cta:hover {{ background: #184f95; }}
+  .cta:hover {{ background: #155e4f; }}
   .honesty {{ margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }}
   .honesty a {{ color: #2a78d6; text-decoration: none; }}
@@ -1377,17 +1450,17 @@ def render_event_page(cd, out_path):
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="kicker">Tributary · event analysis</div>
+    <div class="kicker">Tributary · event map</div>
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="title">{esc(cd["title"])}</p>
-    {f'<div class="agree"><strong>Everyone agrees:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
+    {f'<div class="agree"><strong>All {cd["n_framings"]} agree:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
     <div class="fgrid">
 {cells_html}
     </div>
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="cardfoot">
       <span>dots = carriers our search recorded — a floor, not a census; smaller outlets and individual voices are undercounted · framing boundaries are AI judgments</span>
-      <span>AI-generated, not human-reviewed</span>
+      <span>framing boundaries are AI judgments</span>
     </div>
   </div>
 
