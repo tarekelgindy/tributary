@@ -1352,28 +1352,52 @@ def render_event_png(cd, out_path):
     cells = cd["cells"]
 
     if cd["n_framings"] <= 5:
-        # --- the delta ---
+        # --- the delta, fed by the common-ground pool ---
+        # The channels don't spring from a bare dot: they emerge from the
+        # shared pool every framing drinks from, drawn as two strata —
+        # verified facts (teal) and repeated-but-unverified claims (amber).
         k = len(cells)
         cy = 312
-        d.ellipse([92, cy - 13, 118, cy + 13], fill=EV_INK)
-        f_ev = _font(15)
-        d.text((105 - d.textlength("the event", font=f_ev) / 2, cy + 26),
-               "the event", font=f_ev, fill=INK3)
+        d.ellipse([66, cy - 11, 88, cy + 11], fill=EV_INK)
+        d.line([88, cy, 112, cy], fill=EV_INK, width=3)
+        px0, px1 = 112, 254
+        ph = 96
+        n_v, n_u = len(cd["verified"]), len(cd["unverified"])
+        d.rounded_rectangle([px0, cy - ph // 2, px1, cy + ph // 2], radius=10,
+                            fill=EV_TEAL)
+        if n_u:
+            d.rounded_rectangle([px0, cy, px1, cy + ph // 2], radius=10,
+                                fill=(214, 189, 122))
+            d.rectangle([px0, cy - 10, px1, cy + 10], fill=EV_TEAL)
+            d.rectangle([px0, cy, px1, cy + 12], fill=(214, 189, 122))
+        f_pool = _font(14, "semibold")
+        t1 = f"{n_v} verified facts"
+        d.text(((px0 + px1) / 2 - d.textlength(t1, font=f_pool) / 2,
+                cy - ph // 4 - 9), t1, font=f_pool, fill=EV_CREAM)
+        if n_u:
+            t2 = f"{n_u} unverified, shared"
+            d.text(((px0 + px1) / 2 - d.textlength(t2, font=f_pool) / 2,
+                    cy + ph // 4 - 9), t2, font=f_pool, fill=(74, 56, 14))
+        f_ev = _font(14)
+        lbl = "the event · common ground"
+        d.text(((px0 + px1) / 2 - d.textlength(lbl, font=f_ev) / 2,
+                cy + ph // 2 + 8), lbl, font=f_ev, fill=INK3)
+
         spacing = {2: 104, 3: 86, 4: 66}.get(k, 50)
         f_name, f_car = _font(20, "semibold"), _font(15)
         for i, c in enumerate(cells):
             y = cy + (i - (k - 1) / 2) * spacing
-            pts = _bez((118, cy + (i - (k - 1) / 2) * 1.6),
-                       (240, cy + (y - cy) * 0.28),
-                       (315, y - (y - cy) * 0.16), (418, y))
+            y0 = cy + (i - (k - 1) / 2) * (ph / max(k, 2) * 0.8)
+            pts = _bez((px1, y0), (310, y0 + (y - y0) * 0.35),
+                       (365, y - (y - y0) * 0.18), (424, y))
             d.line(pts, fill=EV_TEAL, width=3, joint="curve")
-            d.ellipse([415, y - 5, 425, y + 5], fill=EV_TEAL)
-            d.text((438, y - 23), _ellipsize(d, c["name"], f_name, MR - 438),
+            d.ellipse([421, y - 5, 431, y + 5], fill=EV_TEAL)
+            d.text((444, y - 23), _ellipsize(d, c["name"], f_name, MR - 444),
                    font=f_name, fill=INK1)
             names = ", ".join(c["names"][:2]) + \
                 (f' +{len(c["names"]) - 2}' if len(c["names"]) > 2 else "")
-            d.text((438, y + 1),
-                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, MR - 438),
+            d.text((444, y + 1),
+                   _ellipsize(d, f'{c["n"]} recorded · {names}', f_car, MR - 444),
                    font=f_car, fill=INK3)
         _foundation_band(d, cd, ML, MR, 448, 584, dispute_lines=2)
     else:
@@ -1399,6 +1423,57 @@ def render_event_png(cd, out_path):
 
     _event_footer(d, ML, MR)
     img.save(out_path, "PNG")
+
+
+def svg_event_delta(cd):
+    """The delta figure for the share page: common-ground pool (verified
+    stratum teal, unverified stratum amber) feeding one equal channel per
+    framing. Only for events small enough to draw (<=5 framings)."""
+    if cd["n_framings"] > 5:
+        return ""
+    cells = cd["cells"]
+    k = len(cells)
+    cy = 210
+    spacing = {2: 104, 3: 86, 4: 70}.get(k, 58)
+    n_v, n_u = len(cd["verified"]), len(cd["unverified"])
+    px0, px1, ph = 24, 170, 96
+    trunc = lambda s, n: s if len(s) <= n else s[:n - 1].rstrip() + "…"
+    parts = [
+        f'<svg viewBox="0 0 1080 420" xmlns="http://www.w3.org/2000/svg" '
+        f'font-family="system-ui, -apple-system, Segoe UI, sans-serif" '
+        f'role="img" aria-label="One event splitting into {k} framings, all '
+        f'fed by the shared common-ground pool">',
+        f'<circle cx="12" cy="{cy}" r="9" fill="#12333e"/>',
+        f'<rect x="{px0}" y="{cy - ph // 2}" width="{px1 - px0}" height="{ph if not n_u else ph // 2}" rx="10" fill="#1f7a68"/>',
+    ]
+    if n_u:
+        parts += [
+            f'<rect x="{px0}" y="{cy}" width="{px1 - px0}" height="{ph // 2}" rx="10" fill="#d6bd7a"/>',
+            f'<rect x="{px0}" y="{cy - 12}" width="{px1 - px0}" height="12" fill="#1f7a68"/>',
+            f'<rect x="{px0}" y="{cy}" width="{px1 - px0}" height="12" fill="#d6bd7a"/>',
+        ]
+    parts += [
+        f'<text x="{(px0 + px1) / 2}" y="{cy - ph // 4 + 5}" fill="#f3efe4" font-size="14" font-weight="600" text-anchor="middle">{n_v} verified facts</text>',
+    ]
+    if n_u:
+        parts.append(
+            f'<text x="{(px0 + px1) / 2}" y="{cy + ph // 4 + 5}" fill="#4a380e" font-size="14" font-weight="600" text-anchor="middle">{n_u} unverified, shared</text>')
+    parts.append(
+        f'<text x="{(px0 + px1) / 2}" y="{cy + ph // 2 + 22}" fill="#898781" font-size="13" text-anchor="middle">the event · common ground</text>')
+    for i, c in enumerate(cells):
+        y = cy + (i - (k - 1) / 2) * spacing
+        y0 = cy + (i - (k - 1) / 2) * (ph / max(k, 2) * 0.8)
+        names = ", ".join(c["names"][:2])
+        if len(c["names"]) > 2:
+            names += f' +{len(c["names"]) - 2}'
+        parts += [
+            f'<path d="M {px1} {y0:.0f} C 250 {y0 + (y - y0) * 0.35:.0f}, 300 {y - (y - y0) * 0.18:.0f}, 352 {y:.0f}" fill="none" stroke="#1f7a68" stroke-width="3"/>',
+            f'<circle cx="354" cy="{y:.0f}" r="5" fill="#1f7a68"/>',
+            f'<text x="372" y="{y - 4:.0f}" fill="#0b0b0b" font-size="19" font-weight="600">{esc(trunc(c["name"], 58))}</text>',
+            f'<text x="372" y="{y + 18:.0f}" fill="#898781" font-size="14">{c["n"]} recorded · {esc(trunc(names, 64))}</text>',
+        ]
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def render_event_page(cd, out_path):
@@ -1457,7 +1532,7 @@ def render_event_page(cd, out_path):
   .fq {{ color: #52514e; font-size: 0.82rem; font-style: italic; margin: 0.15rem 0 0.4rem; }}
   .fcar {{ color: #898781; font-size: 0.8rem; margin-top: 0.35rem; }}
   .dots {{ display: flex; gap: 4px; align-items: center; }}
-  .dot {{ width: 9px; height: 9px; border-radius: 50%; background: #2a78d6; }}
+  .dot {{ width: 9px; height: 9px; border-radius: 50%; background: #1f7a68; }}
   .fcount {{ font-size: 0.78rem; color: #898781; margin-left: 4px; white-space: nowrap; }}
   .found {{ margin-top: 1.1rem; }}
   .found h3 {{ font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
@@ -1487,6 +1562,7 @@ def render_event_page(cd, out_path):
     <div class="headline">{esc(cd["headline"])}</div>
     <p class="title">{esc(cd["title"])}</p>
     {f'<div class="agree"><strong>Common ground:</strong> {esc(cd["agrees"])} The contest is over what it <em>means</em>.</div>' if cd["agrees"] else ''}
+    {svg_event_delta(cd)}
     <div class="fgrid">
 {cells_html}
     </div>
