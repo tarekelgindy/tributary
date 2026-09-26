@@ -1381,8 +1381,26 @@ def render_event_png(cd, out_path):
             if len(blk_lines) > 22:
                 break
         if cd["unverified"]:
-            blk_lines.append((f'+ {len(cd["unverified"])} claims repeated '
-                              'by all, unverified', _font(12), (116, 92, 30)))
+            blk_lines.append(None)
+            blk_lines.append(("REPEATED BY ALL, UNVERIFIED",
+                              _font(11, "bold"), EV_AMBER))
+            shown_u = 0
+            f_uv = _font(13)
+            # height budget, not row count: the block must clear the footer
+            h_used = 46 + sum(6 if b is None else 19 for b in blk_lines) + 40
+            for u in cd["unverified"]:
+                ulines = _wrap(d, u, f_uv, SX1 - SX0 - 46, 4)
+                if h_used + len(ulines) * 19 + 6 > 436:
+                    break
+                for li, ln in enumerate(ulines):
+                    blk_lines.append((("•  " if li == 0 else "   ") + ln,
+                                      f_uv, (110, 88, 28)))
+                h_used += len(ulines) * 19 + 6
+                blk_lines.append(None)
+                shown_u += 1
+            if shown_u < len(cd["unverified"]):
+                blk_lines.append((f'+ {len(cd["unverified"]) - shown_u} more, '
+                                  'unverified', _font(11.5), EV_AMBER))
         blk_h = 46 + sum(6 if b is None else 19 for b in blk_lines) + 16
         by0 = max(150, cy - blk_h // 2)
         d.rounded_rectangle([SX0, by0, SX1, by0 + blk_h], radius=14,
@@ -1530,9 +1548,16 @@ def svg_event_delta(cd):
     fact_lines = []
     for v in cd["verified"]:
         for li, ln in enumerate(wrapc(v, 30)):
-            fact_lines.append(("•  " if li == 0 else "    ") + ln)
-        fact_lines.append("")
-    blk_h = 52 + len(fact_lines) * 19 + (20 if cd["unverified"] else 0)
+            fact_lines.append(("F", ("•  " if li == 0 else "    ") + ln))
+        fact_lines.append(("G", ""))
+    if cd["unverified"]:
+        fact_lines.append(("L", "REPEATED BY ALL, UNVERIFIED"))
+        for u in cd["unverified"]:
+            for li, ln in enumerate(wrapc(u, 30)):
+                fact_lines.append(("U", ("•  " if li == 0 else "    ") + ln))
+            fact_lines.append(("G", ""))
+    blk_h = 46 + sum(8 if t == "G" else (24 if t == "L" else 19)
+                     for t, _ in fact_lines)
 
     # box rows (framing name + question) drive the mouth positions
     q_wrapped = [wrapc(c.get("question") or "", 44) for c in cells]
@@ -1554,13 +1579,15 @@ def svg_event_delta(cd):
     parts.append(f'<text x="144" y="{by0 + 26:.0f}" text-anchor="middle" font-size="13" '
                  f'font-weight="700" letter-spacing="1.5" fill="#155e4f">COMMON GROUND</text>')
     yy = by0 + 50
-    for ln in fact_lines:
-        if ln:
+    for t, ln in fact_lines:
+        if t == "F":
             parts.append(f'<text x="38" y="{yy:.0f}" font-size="13.5" fill="#28382f">{esc(ln)}</text>')
-        yy += 19 if ln else 8
-    if cd["unverified"]:
-        parts.append(f'<text x="38" y="{yy:.0f}" font-size="12" fill="#96741e">'
-                     f'+ {len(cd["unverified"])} claims repeated by all, unverified</text>')
+        elif t == "L":
+            yy += 5
+            parts.append(f'<text x="38" y="{yy:.0f}" font-size="10.5" font-weight="700" letter-spacing="1" fill="#96741e">{esc(ln)}</text>')
+        elif t == "U":
+            parts.append(f'<text x="38" y="{yy:.0f}" font-size="13" fill="#6e5814">{esc(ln)}</text>')
+        yy += 8 if t == "G" else 19
 
     ys, acc = [], 0
     for rh in row_h:
@@ -1683,7 +1710,6 @@ def render_event_page(cd, out_path):
     {"" if figure else f'<div class="fgrid">{cells_html}</div>'}
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="found">
-      {f'<h3 class="fh-uv">Repeated by all sides, unverified</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["unverified"]) + '</ul>' if cd["unverified"] else ''}
       {f'<h3 class="fh-dp">The actual points of disagreement</h3><ul>' + "".join(f"<li>{esc(x)}</li>" for x in cd["disputes"]) + '</ul>' if cd["disputes"] else ''}
     </div>
     <div class="cardfoot">

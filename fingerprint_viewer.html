@@ -1068,12 +1068,20 @@ function eventDeltaSvg(analysis) {
     if (cur && (!maxLines || lines.length < maxLines)) lines.push(cur);
     return lines;
   };
+  const uvList = (sf.unverified_shared_claims || []).map(u => (u && u.statement) || String(u || '')).filter(Boolean);
   const factLines = [];
   verified.forEach(v => {
-    wrapc(v, 30).forEach((ln, li) => factLines.push((li === 0 ? '•  ' : '    ') + ln));
-    factLines.push('');
+    wrapc(v, 30).forEach((ln, li) => factLines.push(['F', (li === 0 ? '•  ' : '    ') + ln]));
+    factLines.push(['G', '']);
   });
-  const blkH = 52 + factLines.length * 19 + (nU ? 20 : 0);
+  if (uvList.length) {
+    factLines.push(['L', 'REPEATED BY ALL, UNVERIFIED']);
+    uvList.forEach(u => {
+      wrapc(u, 30).forEach((ln, li) => factLines.push(['U', (li === 0 ? '•  ' : '    ') + ln]));
+      factLines.push(['G', '']);
+    });
+  }
+  const blkH = 46 + factLines.reduce((a, [t]) => a + (t === 'G' ? 8 : t === 'L' ? 24 : 19), 0);
   const cells = frs.map(fr => ({
     name: fr.name || '', question: fr.question || '',
     names: (fr.carriers || []).map(c => c.name).filter(Boolean),
@@ -1090,11 +1098,12 @@ function eventDeltaSvg(analysis) {
   p.push(`<rect x="20" y="${by0.toFixed(0)}" width="248" height="${blkH.toFixed(0)}" rx="14" fill="#f0eee6" stroke="#1f7a68" stroke-width="2"/>`);
   p.push(`<text x="144" y="${(by0 + 26).toFixed(0)}" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.5" fill="#155e4f">COMMON GROUND</text>`);
   let yy = by0 + 50;
-  factLines.forEach(ln => {
-    if (ln) p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="13.5" fill="#28382f">${escapeHtml(ln)}</text>`);
-    yy += ln ? 19 : 8;
+  factLines.forEach(([t, ln]) => {
+    if (t === 'F') p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="13.5" fill="#28382f">${escapeHtml(ln)}</text>`);
+    else if (t === 'L') { yy += 5; p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="10.5" font-weight="700" letter-spacing="1" fill="#96741e">${escapeHtml(ln)}</text>`); }
+    else if (t === 'U') p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="13" fill="#6e5814">${escapeHtml(ln)}</text>`);
+    yy += t === 'G' ? 8 : 19;
   });
-  if (nU) p.push(`<text x="38" y="${yy.toFixed(0)}" font-size="12" fill="#96741e">+ ${nU} claims repeated by all, unverified</text>`);
   const ys = []; let acc = 0;
   rowH.forEach(rh => { ys.push(cy - totalQ / 2 + acc + rh / 2); acc += rh + 8; });
   cells.forEach((c, i) => {
@@ -1161,8 +1170,7 @@ function renderEventAnalysis(analysis) {
       ${sf.summary ? `<div class="sf-summary">${escapeHtml(sf.summary)}</div>` : ''}
       ${verified.length ? `<div class="sf-section-label">Verified shared facts</div>
         ${verified.map(f => `<div class="sf-fact">${escapeHtml(f.statement || '')}${f.verified ? '<span class="sf-verified-tag">✓ verifiable</span>' : ''}</div>`).join('')}` : ''}
-      ${unverified.length ? `<div class="sf-section-label">Shared but unverified</div>
-        ${unverified.map(f => `<div class="sf-fact unverified">${escapeHtml(f.statement || '')}</div>`).join('')}` : ''}
+
       ${disagreements.length ? `<div class="sf-section-label">Points of disagreement</div>
         ${disagreements.map(p => `<div class="sf-disagreement">${escapeHtml(p)}</div>`).join('')}` : ''}
     </div>`;
