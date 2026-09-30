@@ -1,0 +1,3084 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "234bbbb46761",
+  "event": "US 30-year mortgage rates exceeded 7 percent.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-09-30T06:51:38.595153+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "cf827c9c8fec",
+        "statement": "US 30-year mortgage rates exceeded 7 percent",
+        "verified": true,
+        "source_url": "https://www.freddiemac.com/pmms",
+        "note": "Freddie Mac Primary Mortgage Market Survey is the authoritative weekly tracker; rates crossed 7% in late 2022 and have remained elevated through 2023–2024",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595307+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "59f2a4501a9e",
+        "statement": "Mortgage rates are mechanically linked to 10-year Treasury yields plus a mortgage-backed securities (MBS) spread",
+        "verified": true,
+        "source_url": "https://www.federalreserve.gov",
+        "note": "Standard bond-market transmission mechanism; MBS spreads typically 150–200 basis points above 10-year Treasury",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595344+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3b9037ed9b8e",
+        "statement": "The Federal Reserve raised the federal funds rate from near-zero in 2022–2023 in response to inflation",
+        "verified": true,
+        "source_url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+        "note": "Fed funds rate raised from 0–0.25% (Dec 2021) to 5.25–5.50% (July 2023) and held through 2024",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595355+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8a0781d64f51",
+        "statement": "30-year mortgage rates in the 1980s–1990s frequently exceeded 7 percent, with peaks above 10 percent",
+        "verified": true,
+        "source_url": "https://www.freddiemac.com/pmms/pmmshistoricaldata",
+        "note": "Historical Freddie Mac data shows rates of 10%+ in 1981–1982, 8%+ in 1994–1995",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595363+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "91ec63f8bf56",
+        "statement": "Pandemic-era mortgage rates (2020–2021) fell below 3 percent",
+        "verified": true,
+        "source_url": "https://www.freddiemac.com/pmms/pmmshistoricaldata",
+        "note": "Rates hit historic lows of 2.65–2.71% in late 2021",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595370+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "09e769f44eda",
+        "statement": "Home prices in the US reached record nominal levels in 2021–2022",
+        "verified": true,
+        "source_url": "https://www.zillow.com/research/zhvi/",
+        "note": "Case-Shiller and Zillow indices show peak nominal prices in 2022; prices have moderated but remain elevated",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595377+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "7e32ffd7e7d7",
+        "statement": "Housing inventory (months of supply) declined significantly from 2020–2023",
+        "verified": true,
+        "source_url": "https://www.realtor.org/research-and-statistics",
+        "note": "NAR data shows inventory fell from ~4 months (2020) to ~2–3 months (2023–2024)",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595383+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f393f83bec8f",
+        "statement": "Existing homeowners with sub-3% mortgages have strong financial incentive not to sell and refinance at 7%",
+        "verified": true,
+        "source_url": "https://www.federalreserve.gov/datadownload",
+        "note": "Simple arithmetic: a $300k mortgage at 2.5% costs ~$1,200/month; at 7% costs ~$2,000/month",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595387+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "a51326810bfd",
+        "statement": "The US engaged in a war with Iran that directly caused oil price spikes and inflation expectations",
+        "verified": false,
+        "source_url": "",
+        "note": "No declared war with Iran occurred during the 2022–2024 period when rates exceeded 7%. There were escalations (e.g., Soleimani killing Jan 2020, Oct 2024 missile strikes) but no formal war declaration. Framings conflate geopolitical tension with direct causation.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595396+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "3b71b5776520",
+        "statement": "Mortgage rates are 'unaffordable' for first-time buyers and millennials",
+        "verified": false,
+        "source_url": "",
+        "note": "Affordability is a relative and subjective measure. Verified: monthly payments are higher at 7% than at 3%; unverified: whether this constitutes structural unattainability vs. reduced but still viable homeownership for some cohorts",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595400+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "d67cf3c09829",
+        "statement": "Zoning and NIMBYism are the primary drivers of housing unaffordability",
+        "verified": false,
+        "source_url": "",
+        "note": "Widely cited in housing research but causality is debated; supply constraints are real, but their relative weight vs. demand, rates, and prices is contested",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595403+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b296c3638953",
+        "statement": "Fed Chair Warsh has taken a 'hawkish stance' resisting Trump's rate-cut demands",
+        "verified": false,
+        "source_url": "",
+        "note": "Trump has publicly called for rate cuts; Warsh's actual policy positions and statements would need direct attribution to verify",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-09-30T06:51:27.595407+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether 7% rates represent a crisis or a return to historical normality",
+      "Whether the primary driver is Fed policy, geopolitical shocks (Iran), structural housing supply, or the lock-in effect of existing low-rate mortgages",
+      "Whether the Iran conflict materially caused the rate rise or is a post-hoc correlation",
+      "Whether the White House or the Fed bears primary responsibility for high rates",
+      "Whether high rates are the disease or a symptom of deeper structural problems (supply, zoning)",
+      "Whether homeownership is structurally unattainable for a generation or merely more expensive than the pandemic anomaly",
+      "Whether central bank independence should yield to political pressure for rate cuts"
+    ],
+    "summary": "All framings accept that 30-year mortgage rates exceeded 7%, that this is mechanically linked to 10-year Treasury yields and Fed policy, that pandemic-era sub-3% rates were historically anomalous, and that housing inventory has tightened. They diverge sharply on causation (Fed vs. geopolitics vs. supply), on whether this is crisis or normalization, and on which policy lever (monetary, fiscal, zoning, supply) should be the focus."
+  },
+  "framings": [
+    {
+      "framing_id": "719082eb",
+      "name": "Generational Affordability Crisis",
+      "question": "Who is being locked out of homeownership, and how deep is the harm to their financial futures?",
+      "key_claim": "7% mortgage rates, compounded by record home prices, have made homeownership structurally unattainable for millennials and first-time buyers in a way that will define generational wealth inequality.",
+      "description": "This framing centers the human cost on younger and lower-income would-be buyers, arguing that the rate milestone is not merely a market fluctuation but a structural barrier that widens the wealth gap between existing homeowners and renters.",
+      "emphasizes": "Monthly payment shock, generational wealth gap, first-time buyer exclusion, the compounding effect of high prices AND high rates simultaneously",
+      "downplays": "Macroeconomic rationale for rate hikes, historical context showing rates were higher in the 1980s–90s, the role of supply constraints vs. rate levels",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Mortgage rates at 7% a 'tragedy' for homebuyers",
+        "Mortgage rates top 7% as housing affordability crisis deepens"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "07517a5ab129",
+          "name": "Redfin CEO Glenn Kelman / Yahoo Finance",
+          "url": "https://www.aol.com/finance/mortgage-rates-7-tragedy-homebuyers-160045924.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "'It's a tragedy… We pulled the ladder up just as millennials were coming of home-buying age'",
+          "date": "2023-08-01",
+          "role_evidence": "Kelman coined the 'tragedy' framing and the generational ladder metaphor, widely picked up by financial media",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20231001095832/https://www.aol.com/finance/mortgage-rates-7-tragedy-homebuyers-160045924.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728122+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d4766ac9b33f",
+          "name": "Benzinga",
+          "url": "https://benzinga.com/economics/macro-economic-events/23/08/33900584/us-housing-market-faces-affordability-crisis-amid-skyrocketing-mortgage-rates",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The U.S. housing market is grappling with its worst affordability crisis in nearly 40 years.",
+          "date": "2023-08-17",
+          "role_evidence": "Early financial-media amplifier framing 7% rates as a 40-year affordability nadir",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20251109000518/https://www.benzinga.com/economics/macro-economic-events/23/08/33900584/us-housing-market-faces-affordability-crisis-amid-skyrocketing-mortgage-rates",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728171+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e0cf5958929c",
+          "name": "CBS News",
+          "url": "https://cbsnews.com/amp/news/mortgage-interest-rates-8-percent-homebuying",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Higher borrowing costs and elevated residential real estate prices have made home buying unaffordable for a larger swath of buyers",
+          "date": "2023-10-19",
+          "role_evidence": "Broadcast network coverage drove mass-audience adoption of the affordability-crisis frame",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728180+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f1ceb11f8096",
+          "name": "WFLX / Gray DC",
+          "url": "https://www.wflx.com/2026/09/24/mortgage-rates-top-7-housing-affordability-crisis-deepens/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "First-time buyers face rising costs as economy weighs on voters ahead of November elections",
+          "date": "2026-09-24",
+          "role_evidence": "Local TV syndication of Gray DC report spread the generational-affordability frame to regional audiences nationwide",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728193+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9f63e53b7111",
+          "name": "Fortune",
+          "url": "https://fortune.com/2026/09/22/mortgage-rates-7-percent-housing-affordability/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Rates approaching 7% could push more people to delay buying a house in an already squeezed market.",
+          "date": "2026-09-22",
+          "role_evidence": "High-traffic business outlet amplifying the buyer-exclusion narrative ahead of the 7% crossing",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728201+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728210+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "93dac3c4",
+      "name": "War-Driven Inflation Accountability",
+      "question": "Did the Trump administration's decision to go to war with Iran directly cause mortgage rates to spike, and who bears political responsibility?",
+      "key_claim": "The U.S. war with Iran drove up oil prices and inflation expectations, which pushed bond yields and mortgage rates above 7%, making the White House—not the Fed—the proximate cause.",
+      "description": "This framing draws a direct causal line from the February 2026 Iran conflict to rising energy prices, inflation, bond-market anxiety, and ultimately the 7% mortgage rate, assigning political blame to the Trump administration's foreign policy decision.",
+      "emphasizes": "The timing correlation between the Iran war start and rate climb, dollar-cost calculations for typical buyers, Trump's 2024 campaign promises on housing costs",
+      "downplays": "Pre-existing inflationary pressures, the Fed's independent role, structural housing supply deficits",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Mortgage Rates Climb Back Above 7% Due To Trump's Inflation",
+        "Trump's War in Iran Is Increasing Mortgage Rates",
+        "NEW: Mortgage Rates Hit Nine-Month High, as Trump's Trade War and War With Iran Make Homeownership a Pipe Dream"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "caca215b0a84",
+          "name": "Center for American Progress",
+          "url": "https://www.americanprogress.org/article/trumps-war-in-iran-is-increasing-mortgage-rates/",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The Trump administration's reckless war of choice in Iran is spreading death and destruction, and American consumers are also seeing rising prices",
+          "date": "2026-03-20",
+          "role_evidence": "CAP published the first detailed dollar-cost analysis linking the Iran war to mortgage rate increases, establishing the causal narrative",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260424042153/https://www.americanprogress.org/article/trumps-war-in-iran-is-increasing-mortgage-rates/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728223+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "95bcf7576554",
+          "name": "Democratic National Committee",
+          "url": "https://democrats.org/news/new-mortgage-rates-hit-nine-month-high-as-trumps-trade-war-and-war-with-iran-make-homeownership-a-pipe-dream/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Donald Trump's reckless trade war and war with Iran have sent prices through the roof, worsening the housing crisis",
+          "date": "2026-05-27",
+          "role_evidence": "The DNC formally adopted this framing in official party communications, institutionalizing it as a campaign message",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728230+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5430dabf8bf",
+          "name": "Capitol Dispatch (Substack)",
+          "url": "https://capitoldispatch.substack.com/p/mortgage-rates-climb-back-above-7",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Mortgage rates rose back above 7% for the first time since early 2025, up from under 6% before the Iran war began",
+          "date": "2026-09-29",
+          "role_evidence": "Independent newsletter amplifying the Iran-war-to-mortgage-rate causal chain with specific before/after rate comparisons",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728235+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b3f7f94ed616",
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/09/24/nx-s1-5977796/mortgage-rates-freddie-mac-homebuying",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Rates have climbed more than a full percentage point since the U.S. war against Iran started.",
+          "date": "2026-09-24",
+          "role_evidence": "NPR's headline explicitly linked the rate milestone to the Iran war start, reaching a large public-radio audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728241+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ab9184de57a7",
+          "name": "AOL Finance / MaddowBlog",
+          "url": "https://www.aol.com/articles/mortgage-rates-reach-7-despite-181528000.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Mortgage rates reach 7%, despite Trump's misguided 2024 campaign promises",
+          "date": "2026-09-28",
+          "role_evidence": "Explicitly tied the rate milestone to broken campaign promises, amplifying the political-accountability angle",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728247+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728257+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a5ac0128",
+      "name": "Fed Policy & Bond Market Mechanics",
+      "question": "What macroeconomic and monetary-policy forces actually drive mortgage rates, and is the Fed's tightening cycle working as intended?",
+      "key_claim": "Mortgage rates above 7% are the direct result of the Fed's inflation-fighting rate hikes and surging 10-year Treasury yields, which are functioning as designed even if painful for housing.",
+      "description": "This framing treats the 7% rate as a predictable, technically explicable outcome of monetary policy transmission through bond markets, emphasizing the Fed's mandate and the mechanics of how Treasury yields flow into mortgage pricing.",
+      "emphasizes": "10-year Treasury yield as the proximate driver, Fed's inflation mandate, MBS spread dynamics, the distinction between the federal funds rate and mortgage rates",
+      "downplays": "Political culpability, human cost to individual buyers, structural supply-side factors",
+      "tone": "measured",
+      "sample_headlines": [
+        "Mortgage rates break past 7% as bond yields surge, deepening U.S. housing gridlock",
+        "Mortgage rates stay near 7% with Fed, Treasury moves in focus",
+        "What Determines the Rate on a 30-Year Mortgage?"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "0e6ddf6faf58",
+          "name": "Fannie Mae Research",
+          "url": "https://www.fanniemae.com/research-and-insights/publications/housing-insights/rate-30-year-mortgage",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "The Federal Reserve's balance sheet actions are the main factor driving the difference in the secondary spread.",
+          "date": "2024-11-01",
+          "role_evidence": "Fannie Mae's institutional research established the authoritative technical explanation of what drives mortgage rates beyond the Fed funds rate",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728267+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9431a03466b5",
+          "name": "Dallas Fed / Federal Reserve Bank of Dallas",
+          "url": "https://www.dallasfed.org/research/economics/2026/0507",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "The Treasury maturity that most closely resembles the duration characteristics of a mortgage is seven to 10 years",
+          "date": "2026-05-07",
+          "role_evidence": "Federal Reserve regional bank publishing technical analysis of mortgage rate drivers, lending institutional credibility to the bond-market mechanics frame",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728272+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "994dbb9988e4",
+          "name": "NPR / Scott Horsley",
+          "url": "https://www.npr.org/2026/09/26/nx-s1-5980302/mortgage-rates-break-past-7-as-bond-yields-surge-deepening-u-s-housing-gridlock",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Mortgages are typically pegged to the rate on 10-year government bonds, and that 10-year Treasury yield has jumped sharply",
+          "date": "2026-09-26",
+          "role_evidence": "NPR's explainer-style coverage foregrounded bond-market mechanics over political blame, reaching a broad public audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728278+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a862abeb9a2b",
+          "name": "HousingWire",
+          "url": "https://www.housingwire.com/articles/rates-near-7-fed-treasury/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Analysts tie mortgage rates near 7% to Fed inflation concerns and Treasury buyback plans",
+          "date": "2026-09-01",
+          "role_evidence": "Industry trade publication consistently framing rate moves through monetary-policy and bond-market lens for professional housing audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728283+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "546298008b27",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/09/23/mortgage-interest-rates-7-percent",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The flip side of more rapid U.S. growth is higher long-term interest rates, with homebuyers particularly poised to take it on the chin.",
+          "date": "2026-09-23",
+          "role_evidence": "Axios framed the rate rise as a byproduct of strong economic growth and bond-market dynamics, not political failure",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260929074517/https://www.axios.com/2026/09/23/mortgage-interest-rates-7-percent",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728288+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e4b42b48d750",
+          "name": "Bankrate",
+          "url": "https://www.bankrate.com/mortgages/federal-reserve-and-mortgage-rates/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "As the funds rate grew, so did mortgage rates, with the 30-year rate breaching 8 percent in October 2023.",
+          "date": "2024-01-01",
+          "role_evidence": "Consumer finance outlet providing ongoing technical context on Fed-to-mortgage transmission",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728294+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728300+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "41d4b046",
+      "name": "Housing Supply Structural Failure",
+      "question": "Would lower mortgage rates even solve the housing crisis, or is chronic underbuilding and zoning dysfunction the root cause?",
+      "key_claim": "The 7% rate is a symptom, not the disease: decades of restrictive zoning, NIMBYism, and underbuilding have created a structural supply deficit that makes housing unaffordable regardless of interest rates.",
+      "description": "This framing argues that focusing on mortgage rates misdiagnoses the problem. The real crisis is a multi-million-unit housing shortage caused by land-use regulation, post-2008 construction collapse, and local political resistance to density—issues that rate cuts alone cannot fix.",
+      "emphasizes": "Inventory deficit, zoning and land-use barriers, NIMBYism, the lock-in effect of existing owners, the need for supply-side reform",
+      "downplays": "The immediate pain of rate increases, monetary policy choices, political blame",
+      "tone": "measured",
+      "sample_headlines": [
+        "Don't let this housing crisis go to waste",
+        "Addressing the Housing Affordability Crisis Requires Increasing Housing Supply",
+        "Why America's housing crisis has hit a new inflection point"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "342d94d88604",
+          "name": "Axios / Neil Irwin",
+          "url": "https://www.axios.com/2023/09/19/housing-affordability-crisis",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The only solution is more supply, but it won't be forthcoming as long as homebuilders are skittish about rates and affordability.",
+          "date": "2023-09-19",
+          "role_evidence": "Axios framed the 7%+ rate environment as exposing a pre-existing supply failure, not creating a new one",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260713104810/https://www.axios.com/2023/09/19/housing-affordability-crisis",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728306+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "216eb3d46710",
+          "name": "CBRE Investment Management",
+          "url": "https://www.cbreim.com/insights/articles/digging-out-of-the-us-housing-affordability-crisis",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "A complicated web of local, state and federal regulations, particularly around zoning, continue to be the greatest obstacle to increasing supply.",
+          "date": "2024-01-01",
+          "role_evidence": "Institutional real-estate research explicitly named regulation—not rates—as the primary obstacle, establishing the supply-structural frame",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260905154404/https://www.cbreim.com/insights/articles/digging-out-of-the-us-housing-affordability-crisis",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728312+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "428854b201da",
+          "name": "Center on Budget and Policy Priorities (CBPP)",
+          "url": "https://www.cbpp.org/research/housing/addressing-the-housing-affordability-crisis-requires-increasing-housing-supply-and",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Policymakers should act aggressively to promote supply increases in places that need more homes.",
+          "date": "2025-06-01",
+          "role_evidence": "Left-leaning policy institution formally adopting the supply-first frame, showing its cross-ideological appeal",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260627112132/https://www.cbpp.org/research/housing/addressing-the-housing-affordability-crisis-requires-increasing-housing-supply-and",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728318+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d70e1c469b2f",
+          "name": "The Hill (Opinion)",
+          "url": "https://thehill.com/opinion/finance/5669693-zoning-reform-housing-supply/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Overly restrictive zoning, cautious lending and anti-development politics created a long freeze in housing production",
+          "date": "2026-01-01",
+          "role_evidence": "Op-ed in high-traffic political outlet amplifying the zoning-reform supply narrative to a broad policy audience",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260824052428/https://thehill.com/opinion/finance/5669693-zoning-reform-housing-supply/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728324+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3172ef06bdce",
+          "name": "Congressional Research Service",
+          "url": "https://www.congress.gov/crs-product/R48892",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Increasing regulatory costs, restrictive zoning and land use, and changing demographics have contributed to supply issues.",
+          "date": "2026-01-01",
+          "role_evidence": "Nonpartisan congressional research body formally documenting the supply-structural diagnosis, lending bipartisan institutional weight",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260403121059/https://www.congress.gov/crs-product/R48892",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728331+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e98c1a9be3d4",
+          "name": "Freddie Mac / Sam Khater",
+          "url": "https://qz.com/us-mortgage-rates-7-percent-freddie-mac-092426",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "'Demand has been impacted by affordability headwinds, but low inventory remains the root cause of stalling home sales'",
+          "date": "2026-09-25",
+          "role_evidence": "Freddie Mac's chief economist explicitly pushed back on rate-centric narratives by naming inventory as the root cause",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260925053513/https://qz.com/us-mortgage-rates-7-percent-freddie-mac-092426",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728336+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728342+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "32734808",
+      "name": "Frozen Market / Lock-In Effect",
+      "question": "How does the rate environment trap both buyers and sellers, and what does market paralysis mean for the broader economy?",
+      "key_claim": "7% rates have created a 'golden handcuff' lock-in effect where existing owners refuse to sell their low-rate mortgages, choking inventory and paradoxically keeping prices high even as demand falls.",
+      "description": "This framing focuses on the market-mechanics paradox: high rates simultaneously suppress buyer demand and seller supply, creating a frozen, low-transaction market where prices don't fall as expected. It is primarily an economic and real-estate-industry lens.",
+      "emphasizes": "Rate lock-in among existing homeowners, inventory collapse, transaction volume decline, the self-reinforcing freeze dynamic",
+      "downplays": "Political causation, generational equity concerns, long-term structural supply issues",
+      "tone": "measured",
+      "sample_headlines": [
+        "Mortgage rates top 7%, dealing a further blow to the frozen housing market",
+        "Mortgage rates break past 7% as bond yields surge, deepening U.S. housing gridlock",
+        "America's housing affordability crisis makes a comeback"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "acd1241198ab",
+          "name": "CNN / Matt Egan",
+          "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Mortgage rates reached a grim milestone this week, topping 7% for the first time since January 2025 and reaching their highest level during either of Donald Trump's presidential terms.",
+          "date": "2026-09-24",
+          "role_evidence": "CNN's 'frozen housing market' headline framing was widely syndicated and set the dominant media narrative for the week",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728347+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f631f7b73e7f",
+          "name": "Axios",
+          "url": "https://www.axios.com/2024/02/21/mortgage-rates-housing-affordability",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Spiking mortgage rates and high home prices — a dreadful combination that brought America's housing market to a standstill",
+          "date": "2024-02-21",
+          "role_evidence": "Axios introduced the 'standstill' / frozen-market framing in early 2024, before it became the dominant media shorthand",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260712155748/https://www.axios.com/2024/02/21/mortgage-rates-housing-affordability",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728354+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "33c68f485c44",
+          "name": "Bright MLS / Lisa Sturtevant",
+          "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+          "carrier_type": "institutional",
+          "amplifier_role": "originator",
+          "excerpt": "'The 7% threshold is a foreboding psychological barrier' that could create 'a chilling effect on the market'",
+          "date": "2026-09-24",
+          "role_evidence": "Sturtevant's 'psychological barrier' and 'chilling effect' language was quoted across virtually every major outlet, originating the freeze metaphor",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728359+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8fdeb681e13b",
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-27/why-us-mortgage-rates-are-above-7-again",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "This was supposed to be the year that sidelined US homebuyers got some relief.",
+          "date": "2026-09-27",
+          "role_evidence": "Bloomberg's explainer framed the 7% crossing as a betrayal of market expectations, amplifying the frozen-market narrative to financial audiences",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728364+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a50d72b8710e",
+          "name": "Mortgage Bankers Association / Mike Fratantoni",
+          "url": "https://www.axios.com/2024/02/21/mortgage-rates-housing-affordability",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'Potential homebuyers are quite sensitive to these rate changes, as affordability is strained with both higher rates and higher home values'",
+          "date": "2024-02-21",
+          "role_evidence": "MBA's trade data on collapsing application volumes provided the empirical backbone for the frozen-market framing",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260712155748/https://www.axios.com/2024/02/21/mortgage-rates-housing-affordability",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728369+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728374+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "2d13706f",
+      "name": "Historical Normalization / Rates Are Not Exceptional",
+      "question": "Are 7% mortgage rates actually historically unusual, or have buyers and media lost perspective after a decade of anomalously cheap money?",
+      "key_claim": "7% mortgage rates are close to the long-run historical average and the real anomaly was the sub-3% pandemic era; the current pain reflects a return to normal, not a crisis.",
+      "description": "This framing contextualizes the 7% rate against the full historical record—where the 50-year average is near 7.7%—arguing that the crisis narrative is partly a product of recency bias after an unprecedented era of near-zero rates.",
+      "emphasizes": "Long-run historical average rates, the abnormality of 2020–2021 sub-3% rates, the fact that 7% is below the 1980s–90s norm",
+      "downplays": "The compounding effect of today's much higher home prices, generational wealth effects, the structural supply deficit",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Mortgage Rate History: Chart & Trends Over Time",
+        "30-Year Fixed Mortgage Rate Holds Stable at 7% After Fed Hike",
+        "'Expect 7% as the new normal'"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "a5b9b5c2571f",
+          "name": "The Mortgage Reports",
+          "url": "https://themortgagereports.com/61853/30-year-mortgage-rates-chart",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Between April 1971 and February 2026, 30-year fixed-rate mortgages averaged 7.70%.",
+          "date": "2026-02-01",
+          "role_evidence": "Mortgage industry publication consistently publishing the long-run average data that anchors the normalization argument",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728380+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "d3b82b8cbe94",
+          "name": "Lawrence Yun / National Association of Realtors",
+          "url": "https://thehill.com/business/6109550-mortgage-rates-surpass-seven-percent/",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "'Expect 7% as the new normal. Job additions will be the one factor that can support homebuying'",
+          "date": "2026-09-18",
+          "role_evidence": "NAR's chief economist publicly normalized 7% rates, lending institutional credibility to the recalibration frame",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728385+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7aebde55d2ac",
+          "name": "Norada Real Estate Investments",
+          "url": "https://www.noradarealestate.com/blog/30-year-fixed-mortgage-rate-holds-stable-at-7-after-fed-hike/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The 30-year fixed mortgage rate is holding near 7% after the Fed's 25 bp hike, largely because markets had already priced in the move.",
+          "date": "2026-09-18",
+          "role_evidence": "Real-estate investment media framing 7% as a stable, priced-in equilibrium rather than a shock",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728389+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8f2609312ec6",
+          "name": "NAR Principal Economist Nadia Evangelou",
+          "url": "https://www.wdrbwave.com/2026/09/24/mortgage-rates-top-7-housing-affordability-crisis-deepens/",
+          "carrier_type": "institutional",
+          "amplifier_role": "critic",
+          "excerpt": "'I don't think 7% will stop the market'",
+          "date": "2026-09-24",
+          "role_evidence": "NAR researcher explicitly pushed back on the crisis framing, arguing 7% is not a market-stopper",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728397+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0abd8e31a2f2",
+          "name": "CNN / context paragraph",
+          "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Mortgage rates remain well below the 7.79% peak they hit in 2023, when inflation was running at decades-high levels.",
+          "date": "2026-09-24",
+          "role_evidence": "Even crisis-framed outlets included historical context paragraphs that partially normalized the 7% level",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728401+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728408+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "09c32f89",
+      "name": "Trump vs. Fed Political Conflict",
+      "question": "Is the White House's pressure on the Federal Reserve to cut rates appropriate, and who is responsible for the political standoff over monetary policy?",
+      "key_claim": "The 7% mortgage rate has become a proxy battleground between a president demanding rate cuts and an independent Fed resisting political interference, raising questions about central bank independence.",
+      "description": "This framing treats the rate milestone as a symptom of a constitutional and institutional conflict between the executive branch and the Federal Reserve, with mortgage rates as the visible casualty of that standoff.",
+      "emphasizes": "Trump's public demands for rate cuts, Fed Chair Warsh's hawkish stance, the tension between political and monetary authority, the independence of the central bank",
+      "downplays": "The underlying inflation data driving Fed decisions, the structural housing supply problem, the human cost to individual buyers",
+      "tone": "measured",
+      "sample_headlines": [
+        "Mortgage rates jump after Warsh's Jackson Hole remarks",
+        "Benchmark mortgage rate tops 7 percent, highest in 2 years"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "99ab95174dd0",
+          "name": "The Hill",
+          "url": "https://thehill.com/business/6109550-mortgage-rates-surpass-seven-percent/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump has urged the FOMC to slash interest rates, which indirectly impact mortgage rates.",
+          "date": "2026-09-25",
+          "role_evidence": "The Hill's widely-syndicated report explicitly juxtaposed Trump's rate-cut demands with the Fed's hike, framing the conflict for a political audience",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728413+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a488a82fccb7",
+          "name": "CNN / Matt Egan",
+          "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump placed the blame for the subsequent rise in mortgage rates squarely on the Fed's shoulders.",
+          "date": "2026-09-24",
+          "role_evidence": "CNN foregrounded the Trump-Fed blame dynamic as a key narrative thread in its flagship rate coverage",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728418+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b7986a3cd5a0",
+          "name": "HousingWire",
+          "url": "https://www.housingwire.com/articles/rates-near-7-fed-treasury/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "This week's increases were largely tied to comments made Friday by Federal Reserve Chair Kevin Warsh at the Jackson Hole Economic Symposium.",
+          "date": "2026-09-01",
+          "role_evidence": "Industry trade outlet tracking the Warsh-Trump friction as a market-moving variable for housing professionals",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728424+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "31a6c08bc63d",
+          "name": "Norada Real Estate / context note",
+          "url": "https://www.noradarealestate.com/blog/30-year-fixed-mortgage-rate-holds-stable-at-7-after-fed-hike/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "For the political and policy backdrop behind the hike, see the unanimous Fed hike and Trump–Warsh interest-rate friction.",
+          "date": "2026-09-18",
+          "role_evidence": "Real-estate investment media acknowledging the Trump-Warsh political dimension as relevant context for rate forecasting",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728430+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728436+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "40918d52",
+      "name": "Geopolitical Risk Premium",
+      "question": "How much of the mortgage rate increase is attributable to war-driven energy inflation and bond-market risk repricing, independent of domestic policy?",
+      "key_claim": "The Iran conflict injected a geopolitical risk premium into oil markets and inflation expectations that mechanically transmitted into Treasury yields and mortgage rates, a dynamic that transcends any single administration's policy choices.",
+      "description": "This framing treats the rate rise as primarily a function of global energy markets and investor risk-repricing in response to the Iran war, positioning it as an external shock rather than a domestic policy failure or political choice.",
+      "emphasizes": "Oil price transmission to inflation, bond-market investor behavior, the 10-year Treasury yield surge, the war as an exogenous shock",
+      "downplays": "Pre-existing domestic inflation, the administration's decision to initiate the conflict, structural housing supply issues",
+      "tone": "measured",
+      "sample_headlines": [
+        "Continued Iran conflict raises mortgage rate risk into late 2026",
+        "Why US Homebuyers Are Facing 7% Mortgage Rates Again"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "73f40252b777",
+          "name": "HousingWire / Logan Mohtashami",
+          "url": "https://www.housingwire.com/articles/iran-conflict-mortgage-rates/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "A longer Iran conflict could keep energy prices and inflation elevated, pushing the Fed toward a more hawkish stance.",
+          "date": "2026-06-01",
+          "role_evidence": "HousingWire published the first detailed scenario analysis of how Iran war duration would mechanically affect mortgage rate trajectories",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728442+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a010b919a655",
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-27/why-us-mortgage-rates-are-above-7-again",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Then, the Iran war and fears about rising inflation came along.",
+          "date": "2026-09-27",
+          "role_evidence": "Bloomberg's explainer framed the Iran war as the key exogenous shock disrupting what was expected to be a year of rate relief",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728447+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "da5fa18bf79f",
+          "name": "Quartz (qz.com)",
+          "url": "https://qz.com/us-mortgage-rates-7-percent-freddie-mac-092426",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The conflict with Iran has also contributed to higher oil prices and renewed inflation concerns, feeding upward pressure on bond yields",
+          "date": "2026-09-25",
+          "role_evidence": "Quartz explicitly traced the geopolitical transmission mechanism from Iran conflict to oil to inflation to bond yields to mortgage rates",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260925053513/https://qz.com/us-mortgage-rates-7-percent-freddie-mac-092426",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728451+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "fe19ade622a4",
+          "name": "Briefs.co",
+          "url": "https://www.briefs.co/news/us-mortgage-rates-climb-above-7-percent/",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "The climb started back in February, when the outbreak of the Iran war lifted energy costs and revived inflation worries.",
+          "date": "2026-09-24",
+          "role_evidence": "Financial news aggregator presenting the geopolitical-shock framing as the primary causal explanation for the rate climb",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728456+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3bed66f20781",
+          "name": "NPR / Scott Horsley",
+          "url": "https://www.npr.org/2026/09/26/nx-s1-5980302/mortgage-rates-break-past-7-as-bond-yields-surge-deepening-u-s-housing-gridlock",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The rising prices of fuel, groceries - everything else - was reflected in the turbulent government bond market this week.",
+          "date": "2026-09-26",
+          "role_evidence": "NPR's radio report traced the geopolitical-to-bond-market transmission chain for a mass public audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-09-30T06:51:13.728461+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-09-30T06:51:13.728466+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the construction industry's perspective on how higher rates affect builder margins, labor demand, and project viability—distinct from supply-side housing shortage arguments. Missing: international capital flows and foreign investor behavior (who may be pulling out or doubling down on US real estate). Missing: the positive framing that higher rates restore saver incentives and reduce speculative excess. Missing: regional/sectoral variation—how rates differentially impact rural vs. urban markets, commercial vs. residential, or specific metros with different affordability baselines.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "US 30-year mortgage rates exceeded 7 percent.",
+    "rated_outlets": 6,
+    "distribution": {
+      "left": 0,
+      "lean-left": 2,
+      "center": 4,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 33,
+      "center": 67,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 2,
+    "center": 4,
+    "right_of_center": 0,
+    "lean_index": -0.33,
+    "resolve_rate": 0.38,
+    "skew": "insufficient rated coverage to judge skew (DB is US-centric; many carriers unrated)",
+    "coverage_gap": {
+      "unrated_news_carriers": 10,
+      "examples": [
+        {
+          "carrier": "Redfin CEO Glenn Kelman / Yahoo Finance",
+          "domain": "aol.com"
+        },
+        {
+          "carrier": "Benzinga",
+          "domain": "benzinga.com"
+        },
+        {
+          "carrier": "WFLX / Gray DC",
+          "domain": "wflx.com"
+        },
+        {
+          "carrier": "Fortune",
+          "domain": "fortune.com"
+        },
+        {
+          "carrier": "Capitol Dispatch (Substack)",
+          "domain": "capitoldispatch.substack.com"
+        },
+        {
+          "carrier": "HousingWire",
+          "domain": "housingwire.com"
+        },
+        {
+          "carrier": "Bankrate",
+          "domain": "bankrate.com"
+        },
+        {
+          "carrier": "The Mortgage Reports",
+          "domain": "themortgagereports.com"
+        }
+      ]
+    },
+    "non_news_carriers": 9,
+    "matched": [
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN / Matt Egan",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NPR Online News",
+        "carrier": "NPR",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Axios",
+        "carrier": "Axios",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Hill",
+        "carrier": "The Hill (Opinion)",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Bloomberg",
+        "carrier": "Bloomberg",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 29,
+        "political": 1,
+        "social": 0,
+        "institutional": 11,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 12,
+      "framings_with_vested": 5,
+      "n_framings": 8
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 8,
+    "n_actors": 29,
+    "framings": [
+      {
+        "framing_id": "719082eb",
+        "name": "Generational Affordability Crisis",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c56645ac75f4",
+            "display": "Redfin CEO Glenn Kelman",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "359f76d9710f",
+            "display": "Benzinga",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "b2071de706c4",
+            "display": "Fortune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "be4cfe8a6704",
+            "display": "WFLX",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "93dac3c4",
+        "name": "War-Driven Inflation Accountability",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c56645ac75f4",
+            "display": "Redfin CEO Glenn Kelman",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e1ee5991a7c6",
+            "display": "Capitol Dispatch",
+            "actor_type": "blog",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6456c0b3c8a3",
+            "display": "Center for American Progress",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "868c6854d444",
+            "display": "Democratic National Committee",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "a5ac0128",
+        "name": "Fed Policy & Bond Market Mechanics",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b05bde365841",
+            "display": "HousingWire",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2d73b95afa5b",
+            "display": "Dallas Fed",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "42fa11065123",
+            "display": "Fannie Mae Research",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7e01cabb7fd6",
+            "display": "Bankrate",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "41d4b046",
+        "name": "Housing Supply Structural Failure",
+        "n_carriers": 6,
+        "primary": 6,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8571c03a0bce",
+            "display": "CBRE Investment Management",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "b6964aa5bb14",
+            "display": "Center on Budget and Policy Priorities",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "40c61480e0ea",
+            "display": "Congressional Research Service",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6e9ec5588051",
+            "display": "Freddie Mac",
+            "actor_type": "person",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "32734808",
+        "name": "Frozen Market / Lock-In Effect",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 2,
+        "carriers": [
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d57395e314a5",
+            "display": "Bloomberg",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "684741423596",
+            "display": "Bright MLS",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "066239fce408",
+            "display": "Mortgage Bankers Association",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "2d13706f",
+        "name": "Historical Normalization / Rates Are Not Exceptional",
+        "n_carriers": 6,
+        "primary": 5,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "fe46c2137ee4",
+            "display": "Lawrence Yun",
+            "actor_type": "person",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "421f18e8dade",
+            "display": "Norada Real Estate",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "986db8eb67fc",
+            "display": "The Mortgage Reports",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": true
+          },
+          {
+            "actor_id": "e69c47203df3",
+            "display": "NAR Principal Economist Nadia Evangelou",
+            "actor_type": "organization",
+            "stance": "oppose",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "09c32f89",
+        "name": "Trump vs. Fed Political Conflict",
+        "n_carriers": 4,
+        "primary": 4,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b05bde365841",
+            "display": "HousingWire",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "421f18e8dade",
+            "display": "Norada Real Estate",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "40918d52",
+        "name": "Geopolitical Risk Premium",
+        "n_carriers": 5,
+        "primary": 5,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "d57395e314a5",
+            "display": "Bloomberg",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "b05bde365841",
+            "display": "HousingWire",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c87dd74f348d",
+            "display": "NPR",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d7bbb02ded23",
+            "display": "Quartz",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "f0d10222ce59",
+            "display": "Briefs.co",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "c87dd74f348d",
+        "display": "NPR",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Fed Policy & Bond Market Mechanics",
+          "Geopolitical Risk Premium",
+          "War-Driven Inflation Accountability"
+        ]
+      },
+      {
+        "actor_id": "b05bde365841",
+        "display": "HousingWire",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Fed Policy & Bond Market Mechanics",
+          "Geopolitical Risk Premium",
+          "Trump vs. Fed Political Conflict"
+        ]
+      },
+      {
+        "actor_id": "0c78698c2453",
+        "display": "Axios",
+        "actor_type": "news",
+        "n_framings": 3,
+        "framings": [
+          "Fed Policy & Bond Market Mechanics",
+          "Frozen Market / Lock-In Effect",
+          "Housing Supply Structural Failure"
+        ]
+      },
+      {
+        "actor_id": "c56645ac75f4",
+        "display": "Redfin CEO Glenn Kelman",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Generational Affordability Crisis",
+          "War-Driven Inflation Accountability"
+        ]
+      },
+      {
+        "actor_id": "2c2b079fb9d9",
+        "display": "The Hill",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Housing Supply Structural Failure",
+          "Trump vs. Fed Political Conflict"
+        ]
+      },
+      {
+        "actor_id": "922a54b2a6d6",
+        "display": "CNN",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Frozen Market / Lock-In Effect",
+          "Trump vs. Fed Political Conflict"
+        ]
+      },
+      {
+        "actor_id": "d57395e314a5",
+        "display": "Bloomberg",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Frozen Market / Lock-In Effect",
+          "Geopolitical Risk Premium"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Fed Policy & Bond Market Mechanics",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Housing Supply Structural Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Frozen Market / Lock-In Effect",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Historical Normalization / Rates Are Not Exceptional",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "Geopolitical Risk Premium",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Housing Supply Structural Failure",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Frozen Market / Lock-In Effect",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Historical Normalization / Rates Are Not Exceptional",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Fed Policy & Bond Market Mechanics",
+        "b": "Historical Normalization / Rates Are Not Exceptional",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Housing Supply Structural Failure",
+        "b": "Geopolitical Risk Premium",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Historical Normalization / Rates Are Not Exceptional",
+        "b": "Geopolitical Risk Premium",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Fed Policy & Bond Market Mechanics",
+        "b": "Housing Supply Structural Failure",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "Housing Supply Structural Failure",
+        "b": "Historical Normalization / Rates Are Not Exceptional",
+        "shared": 1,
+        "jaccard": 0.091
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Fed Policy & Bond Market Mechanics",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Fed Policy & Bond Market Mechanics",
+        "b": "Frozen Market / Lock-In Effect",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Housing Supply Structural Failure",
+        "b": "Frozen Market / Lock-In Effect",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Frozen Market / Lock-In Effect",
+        "b": "Historical Normalization / Rates Are Not Exceptional",
+        "shared": 1,
+        "jaccard": 0.1
+      },
+      {
+        "a": "Generational Affordability Crisis",
+        "b": "War-Driven Inflation Accountability",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "War-Driven Inflation Accountability",
+        "b": "Geopolitical Risk Premium",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Fed Policy & Bond Market Mechanics",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Housing Supply Structural Failure",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Frozen Market / Lock-In Effect",
+        "b": "Geopolitical Risk Premium",
+        "shared": 1,
+        "jaccard": 0.111
+      },
+      {
+        "a": "Frozen Market / Lock-In Effect",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Trump vs. Fed Political Conflict",
+        "b": "Geopolitical Risk Premium",
+        "shared": 1,
+        "jaccard": 0.125
+      },
+      {
+        "a": "Fed Policy & Bond Market Mechanics",
+        "b": "Geopolitical Risk Premium",
+        "shared": 2,
+        "jaccard": 0.222
+      },
+      {
+        "a": "Historical Normalization / Rates Are Not Exceptional",
+        "b": "Trump vs. Fed Political Conflict",
+        "shared": 3,
+        "jaccard": 0.429
+      }
+    ],
+    "by_actor_type": {
+      "news": 16,
+      "official": 1,
+      "organization": 5,
+      "blog": 1,
+      "person": 6
+    },
+    "connectivity": {
+      "bridge_ratio": 0.241,
+      "siloed_share": 0.724,
+      "mean_jaccard": 0.073
+    },
+    "structure_note": "7 of 29 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects — or splits — which lenses."
+  },
+  "circle_rollup": {
+    "analysis_id": "234bbbb46761",
+    "event": "US 30-year mortgage rates exceeded 7 percent.",
+    "n_framings": 8,
+    "circles": [
+      {
+        "key": "circle:left-leaning",
+        "circle_id": "left-leaning",
+        "name": "Left-leaning circle",
+        "description": "News outlets AllSides rates left or lean-left.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "left",
+          "lean-left"
+        ],
+        "n_covering": 2,
+        "members_covering": [
+          {
+            "actor_key": "site:cnn.com",
+            "actor_display": "CNN",
+            "domain": "cnn.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.95,
+            "basis": "allsides_snapshot",
+            "outlet": "CNN (Web News)",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "High",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          },
+          {
+            "actor_key": "site:cbsnews.com",
+            "actor_display": "CBS News",
+            "domain": "cbsnews.com",
+            "circle_id": "left-leaning",
+            "confidence": 0.52,
+            "basis": "allsides_snapshot",
+            "outlet": "CBS News",
+            "bucket": "lean-left",
+            "label": "left-center",
+            "rating_source": "allsides",
+            "rating_confidence": "Low or Initial Rating",
+            "matched_by": "alias",
+            "as_of": "2019-10-18"
+          }
+        ]
+      },
+      {
+        "key": "circle:right-leaning",
+        "circle_id": "right-leaning",
+        "name": "Right-leaning circle",
+        "description": "News outlets AllSides rates right or lean-right.",
+        "basis": "allsides_snapshot",
+        "buckets": [
+          "right",
+          "lean-right"
+        ],
+        "n_covering": 0,
+        "members_covering": []
+      }
+    ],
+    "unassigned": {
+      "center": [
+        {
+          "actor_key": "site:npr.org",
+          "display": "NPR",
+          "outlet": "NPR Online News",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:axios.com",
+          "display": "Axios",
+          "outlet": "Axios",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:thehill.com",
+          "display": "The Hill",
+          "outlet": "The Hill",
+          "bucket": "center"
+        },
+        {
+          "actor_key": "site:bloomberg.com",
+          "display": "Bloomberg",
+          "outlet": "Bloomberg",
+          "bucket": "center"
+        }
+      ],
+      "unrated": [
+        {
+          "actor_key": "site:aol.com",
+          "display": "Redfin CEO Glenn Kelman",
+          "domain": "aol.com"
+        },
+        {
+          "actor_key": "site:benzinga.com",
+          "display": "Benzinga",
+          "domain": "benzinga.com"
+        },
+        {
+          "actor_key": "site:wflx.com",
+          "display": "WFLX",
+          "domain": "wflx.com"
+        },
+        {
+          "actor_key": "site:fortune.com",
+          "display": "Fortune",
+          "domain": "fortune.com"
+        },
+        {
+          "actor_key": "site:housingwire.com",
+          "display": "HousingWire",
+          "domain": "housingwire.com"
+        },
+        {
+          "actor_key": "site:bankrate.com",
+          "display": "Bankrate",
+          "domain": "bankrate.com"
+        },
+        {
+          "actor_key": "site:themortgagereports.com",
+          "display": "The Mortgage Reports",
+          "domain": "themortgagereports.com"
+        },
+        {
+          "actor_key": "site:noradarealestate.com",
+          "display": "Norada Real Estate",
+          "domain": "noradarealestate.com"
+        },
+        {
+          "actor_key": "site:qz.com",
+          "display": "Quartz",
+          "domain": "qz.com"
+        },
+        {
+          "actor_key": "site:briefs.co",
+          "display": "Briefs.co",
+          "domain": "briefs.co"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "framing_id": "719082eb",
+        "framing": "Generational Affordability Crisis",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CBS News",
+            "stance": "champion",
+            "quote": "Higher borrowing costs and elevated residential real estate prices have made home buying unaffordable for a larger swath of buyers",
+            "url": "https://cbsnews.com/amp/news/mortgage-interest-rates-8-percent-homebuying",
+            "archive_url": "",
+            "date": "2023-10-19"
+          }
+        ]
+      },
+      {
+        "framing_id": "719082eb",
+        "framing": "Generational Affordability Crisis",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "93dac3c4",
+        "framing": "War-Driven Inflation Accountability",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "93dac3c4",
+        "framing": "War-Driven Inflation Accountability",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a5ac0128",
+        "framing": "Fed Policy & Bond Market Mechanics",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "a5ac0128",
+        "framing": "Fed Policy & Bond Market Mechanics",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "41d4b046",
+        "framing": "Housing Supply Structural Failure",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "41d4b046",
+        "framing": "Housing Supply Structural Failure",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "32734808",
+        "framing": "Frozen Market / Lock-In Effect",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Mortgage rates reached a grim milestone this week, topping 7% for the first time since January 2025 and reaching their highest level during either of Donald Trump's presidential terms.",
+            "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+            "archive_url": "",
+            "date": "2026-09-24"
+          }
+        ]
+      },
+      {
+        "framing_id": "32734808",
+        "framing": "Frozen Market / Lock-In Effect",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "2d13706f",
+        "framing": "Historical Normalization / Rates Are Not Exceptional",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 0,
+          "mention": 1,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "mention",
+            "quote": "Mortgage rates remain well below the 7.79% peak they hit in 2023, when inflation was running at decades-high levels.",
+            "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+            "archive_url": "",
+            "date": "2026-09-24"
+          }
+        ]
+      },
+      {
+        "framing_id": "2d13706f",
+        "framing": "Historical Normalization / Rates Are Not Exceptional",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "09c32f89",
+        "framing": "Trump vs. Fed Political Conflict",
+        "circle_id": "left-leaning",
+        "n_pieces": 1,
+        "n_total": 2,
+        "rate": 0.5,
+        "stances": {
+          "champion": 1,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": [
+          {
+            "outlet": "CNN",
+            "stance": "champion",
+            "quote": "Trump placed the blame for the subsequent rise in mortgage rates squarely on the Fed's shoulders.",
+            "url": "https://www.cnn.com/2026/09/24/economy/mortgage-rate-tops-7-percent",
+            "archive_url": "",
+            "date": "2026-09-24"
+          }
+        ]
+      },
+      {
+        "framing_id": "09c32f89",
+        "framing": "Trump vs. Fed Political Conflict",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "40918d52",
+        "framing": "Geopolitical Risk Premium",
+        "circle_id": "left-leaning",
+        "n_pieces": 0,
+        "n_total": 2,
+        "rate": 0.0,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      },
+      {
+        "framing_id": "40918d52",
+        "framing": "Geopolitical Risk Premium",
+        "circle_id": "right-leaning",
+        "n_pieces": 0,
+        "n_total": 0,
+        "rate": null,
+        "stances": {
+          "champion": 0,
+          "mention": 0,
+          "oppose": 0
+        },
+        "n_relays": 0,
+        "representative_quotes": []
+      }
+    ],
+    "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only",
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them.",
+      "attribution_url": "https://www.allsides.com/media-bias/ratings"
+    }
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-09-30T06:51:38.595117+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": [],
+  "common_ground": {
+    "analysis_id": "234bbbb46761",
+    "event": "US 30-year mortgage rates exceeded 7 percent.",
+    "framing_intersection": {
+      "intersections": [],
+      "contested": [],
+      "n_framings": 8,
+      "note": "too few rated member outlets in left-leaning, right-leaning (<3 covering this event) — rates for that circle are not meaningful, read the raw counts and quotes only"
+    },
+    "convergent_claims": {
+      "n_claim_units": {
+        "left-leaning": 4,
+        "right-leaning": 0
+      },
+      "pairs": [],
+      "dropped_candidates": 0,
+      "confirm_run": false,
+      "note": "pairs are embedding-stage candidates only; nothing is labeled convergent without the stage-2 judge (--confirm)"
+    },
+    "claim_age_attached": 0,
+    "membership_basis": {
+      "basis": "allsides_snapshot",
+      "as_of": "2019-10-18",
+      "source_note": "Ratings are AllSides' — Tributary only aggregates them."
+    }
+  }
+}
