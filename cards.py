@@ -2044,10 +2044,15 @@ def main():
             continue
         render_png(cd, cards_dir / f"{fid}.png")
         render_page(cd, cards_dir / f"{fid}.html")
-        # publish the standalone trace so the tap-through lands on it
+        # publish the standalone trace so the tap-through lands on it —
+        # but NEVER overwrite an existing published copy: gallery/ is the
+        # record (it carries conceptual upgrades, corrections, and human
+        # contributions the builder-local store lacks). Third instance of
+        # the stale-source-overwrites-published-record class, 2026-09-30.
         src = fpdir / f"{fid}.json"
-        if src.exists():
-            shutil.copyfile(src, traces_dir / f"{fid}.json")
+        dst = traces_dir / f"{fid}.json"
+        if src.exists() and not dst.exists():
+            shutil.copyfile(src, dst)
         index.append({"fingerprint_id": fid, "headline": cd["headline"],
                       "phrase": cd["phrase"], "first_attested": cd["first_raw"],
                       "as_of": cd["asof"],
@@ -2082,8 +2087,10 @@ def main():
         slug = f"vs-{cid}-{rid}"
         render_vs_png(vcd, cards_dir / f"{slug}.png")
         render_vs_page(vcd, cards_dir / f"{slug}.html", slug)
-        for fid in (cid, rid):   # tap-throughs need both traces published
-            shutil.copyfile(fpdir / f"{fid}.json", traces_dir / f"{fid}.json")
+        for fid in (cid, rid):   # tap-throughs need both traces published;
+            dst = traces_dir / f"{fid}.json"   # never overwrite the record
+            if not dst.exists():
+                shutil.copyfile(fpdir / f"{fid}.json", dst)
         index.append({"kind": "vs", "headline": vcd["headline"],
                       "phrase": vcd["claim"]["phrase"],
                       "claim_id": cid, "rebuttal_id": rid,
