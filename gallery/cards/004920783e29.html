@@ -30,6 +30,8 @@
   .agree { background: #e3efe9; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
            color: #52514e; margin: 0 0 1.1rem; }
   .agree strong { color: #0b0b0b; }
+  .figwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 700px) { .figwrap svg { min-width: 720px; } }
   .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .fcell { border: 1px solid #e1e0d9; border-radius: 10px; padding: 0.8rem 0.95rem; }
   .fname { font-weight: 600; font-size: 0.95rem; }
@@ -55,7 +57,7 @@
   .cta:hover { background: #155e4f; }
   .honesty { margin-top: 2.2rem; padding-top: 0.9rem; border-top: 1px solid #e1e0d9;
              color: #898781; font-size: 0.82rem; }
-  .honesty a { color: #2a78d6; text-decoration: none; }
+  .honesty a { color: #2a6fa3; text-decoration: none; }
   @media (max-width: 640px) { .fgrid { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -64,7 +66,7 @@
   <div class="card">
     <div class="kicker">Tributary · event map · 5 framings</div>
     <div class="headline">Macklemore was removed from Ed Sheeran's US tour following a speech in which he expressed support for Palestine.</div>
-    <svg viewBox="0 0 1080 875" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-label="The shared common ground splitting into 5 framing questions">
+    <div class="figwrap"><svg viewBox="0 0 1080 875" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-label="The shared common ground splitting into 5 framing questions">
 <rect x="20" y="30" width="248" height="815" rx="14" fill="#f0eee6" stroke="#1f7a68" stroke-width="2"/>
 <text x="144" y="56" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="1.5" fill="#155e4f">COMMON GROUND</text>
 <text x="38" y="80" font-size="13.5" fill="#28382f">•  Macklemore performed a speech</text>
@@ -146,7 +148,7 @@
 <text x="600" y="734" font-size="15.5" font-style="italic" fill="#0b0b0b">sides a defensible position for a global</text>
 <text x="600" y="754" font-size="15.5" font-style="italic" fill="#0b0b0b">superstar, or a form of complicity?</text>
 <text x="600" y="776" font-size="13" fill="#898781">Good Morning America / ABC News, Slate, Billboard</text>
-</svg>
+</svg></div>
     
     
     <div class="found">

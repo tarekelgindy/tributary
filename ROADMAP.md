@@ -1,5 +1,8 @@
 # Tributary — Roadmap
 
+> **SUPERSEDED (2026-07-09):** the plan of record is now [MISSION_PLAN.md](MISSION_PLAN.md). This document is kept for the phase history and gate results it records (Phases 0–2.9); its numbering and priorities no longer govern.
+
+
 **Mission:** make the identity-information landscape visible and measurable — where information comes from, who amplifies it, what each ecosystem covers and omits — so that people, and the journalists and organizers who serve them, can see the structure behind what they read. Tributary does not adjudicate truth. It targets *mutual legibility* (you can see the shape of your information world and others') and *shared structural facts* (who said what first, who covered what, who never mentioned it).
 
 This document is both a public commitment and the working plan. Phases are gated: each gate is evidence that must exist before the next phase starts. Standing principles govern all work in every phase.

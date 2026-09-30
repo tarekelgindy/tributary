@@ -1669,6 +1669,8 @@ def render_event_page(cd, out_path):
   .agree {{ background: #e3efe9; border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.88rem;
            color: #52514e; margin: 0 0 1.1rem; }}
   .agree strong {{ color: #0b0b0b; }}
+  .figwrap {{ overflow-x: auto; -webkit-overflow-scrolling: touch; }}
+  @media (max-width: 700px) {{ .figwrap svg {{ min-width: 720px; }} }}
   .fgrid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }}
   .fcell {{ border: 1px solid #e1e0d9; border-radius: 10px; padding: 0.8rem 0.95rem; }}
   .fname {{ font-weight: 600; font-size: 0.95rem; }}
@@ -1703,7 +1705,7 @@ def render_event_page(cd, out_path):
   <div class="card">
     <div class="kicker">Tributary · event map · {cd["n_framings"]} framings</div>
     <div class="headline">{esc(cd["title"])}</div>
-    {figure}
+    <div class="figwrap">{figure}</div>
     {"" if figure else f'<div class="fgrid">{cells_html}</div>'}
     {f'<p class="fcar" style="margin-top:0.6rem;">+ {cd["n_hidden"]} more framings on the full analysis.</p>' if cd["n_hidden"] else ''}
     <div class="found">

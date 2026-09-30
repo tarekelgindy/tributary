@@ -171,6 +171,8 @@
                 text-decoration: none;
                 font-weight: 600;
             }
+            .figwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            @media (max-width: 640px) { .figwrap svg { min-width: 560px; } }
             .herounder {
                 color: #777;
                 font-size: 0.85rem;
@@ -713,7 +715,7 @@
                 <div class="claim">
                     A parasite in the US food supply — 5 competing framings
                 </div>
-                <svg viewBox="0 0 660 454" role="img" aria-label="The shared common ground splitting into 5 framing questions" style="display:block;width:100%;height:auto;">
+                <div class="figwrap"><svg viewBox="0 0 660 454" role="img" aria-label="The shared common ground splitting into 5 framing questions" style="display:block;width:100%;height:auto;">
                     <rect x="6" y="148" width="178" height="158" rx="10" fill="#f0eee6" stroke="#1f7a68" stroke-width="1.5"/>
                     <text x="95" y="168" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.2" fill="#155e4f">COMMON GROUND</text>
                     <text x="18" y="186" font-size="10.5" fill="#28382f">Cyclospora parasites were</text>
@@ -762,7 +764,7 @@
                     <text x="308" y="401" font-size="11" font-style="italic" fill="#1c1c1c">outbreaks to Mexican-grown produce reveal a</text>
                     <text x="308" y="415" font-size="11" font-style="italic" fill="#1c1c1c">structural failure in import safety</text>
                     <text x="308" y="429" font-size="11" font-style="italic" fill="#1c1c1c">standards?</text>
-                    </svg>
+                    </svg></div>
                 <div class="foot">
                     <span>framing boundaries are AI judgments · carriers and receipts on the full analysis</span>
                     <a
@@ -811,8 +813,8 @@
                 >
                 ·
                 <a
-                    href="https://github.com/tarekelgindy/tributary/blob/main/ROADMAP.md"
-                    >roadmap</a
+                    href="https://github.com/tarekelgindy/tributary/blob/main/MISSION_PLAN.md"
+                    >mission plan</a
                 >
             </div>
         </div>

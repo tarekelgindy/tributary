@@ -6,6 +6,8 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
 <style>
 .mast { background: #12333e; }
+.figure-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 700px) { .figure-card svg { min-width: 720px; } }
 .mastin { margin: 0 auto; padding: 0.72rem 1.2rem; display: flex; align-items: center; }
 .brand { display: flex; align-items: center; gap: 0.62rem; color: #f3efe4;
          text-decoration: none; font-weight: 700; font-size: 1.24rem; }
@@ -1129,7 +1131,7 @@ function eventDeltaSvg(analysis) {
   });
   if (frs.length > 8) p.push(`<text x="${QX0}" y="${(H - 14).toFixed(0)}" font-size="13" fill="#898781">+ ${frs.length - 8} more framings below</text>`);
   p.push('</svg>');
-  return `<div class="card" style="padding:1.05rem 1.15rem 0.8rem;">${p.join('')}</div>`;
+  return `<div class="card figure-card" style="padding:1.05rem 1.15rem 0.8rem;">${p.join('')}</div>`;
 }
 
 function renderEventAnalysis(analysis) {
@@ -1422,7 +1424,7 @@ function renderCoalition(co) {
         <h2 style="margin:0;">Who's Amplifying What</h2>
         <span class="cov-sub">${co.n_actors || 0} actors across ${co.n_framings || 0} framings${typeline ? ' — ' + typeline : ''}</span>
       </div>
-      <p class="coal-intro">Each framing is a different <em>question</em> being asked about this event. The actors below each carry <strong>more than one</strong> framing — the connectors that cut across the lenses (everyone else sits under a single framing). This maps <em>who amplifies which narrative</em>, not where a source sits on a left/right axis.</p>
+      <p class="coal-intro">${(co.bridges || []).length} of ${co.n_actors || '?'} recorded actors carry <strong>more than one</strong> framing — the connectors that cut across the lenses. Everyone else carries exactly one and is listed under it in the framing detail. This maps <em>who amplifies which narrative</em>, not where a source sits on a left/right axis.</p>
       <div class="coal-bridges">${bridgesHtml}</div>
       ${more}
       ${contestedHtml}
