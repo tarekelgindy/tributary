@@ -915,6 +915,17 @@
                             "<span>a dated receipt on every hop</span>" +
                             "<span>reader contributions open</span>";
                         el.hidden = false;
+                        // Budget transparency, front and center: the same
+                        // /budget counters the miss-block meter uses.
+                        const b = await fetchBudget();
+                        if (b && b.cap > 0) {
+                            const left = Math.max(0, b.cap - b.used);
+                            el.innerHTML +=
+                                left > 0
+                                    ? "<span><strong>" + left + "</strong> of " + b.cap +
+                                      " free community traces left today</span>"
+                                    : "<span>today's free trace budget is spent — new requests queue</span>";
+                        }
                     } catch (e) {}
                 })();
 

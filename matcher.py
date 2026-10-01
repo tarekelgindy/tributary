@@ -278,22 +278,44 @@ class Matcher:
         claims are the same. The two stages fail differently (embeddings miss
         blame/consequence; the judge can misread borderline stance), so
         serving requires both — measured composite false positives on the
-        Gate 1 calibration set: zero."""
+        Gate 1 calibration set: zero.
+
+        Same-polarity preference (2026-10-01, mirrors the lexical path's
+        live finding): when the best neighbor judges "negation", any other
+        neighbor that also clears the serve bands is judged too — a "same"
+        verdict on a lower neighbor beats a banner on the top one. The
+        banner only appears when no same-polarity trace exists."""
         r = self.match(text, hi=hi, lo=lo, top=top)
         if r.decision in ("serve_cached", "lexical_variant") and r.best:
-            try:
-                verdict = self.confirm(text, r.best.canonical_phrase)
-            except Exception as e:  # noqa: BLE001 — no confirmation, no serving
-                verdict = {"same": False, "relation": "different",
-                           "why": f"confirm unavailable: {type(e).__name__}"}
-            r.confirm = verdict
-            if verdict.get("relation") == "negation":
-                # Polarity guard (2026-09-25): a claim and its denial share
-                # one genealogy, so the match is real — but it must never
-                # serve silently as if the texts agreed. Callers surface it
-                # with an explicit polarity note.
+            serveable = [n for n in r.neighbors
+                         if self._decide(n, hi, lo) in ("serve_cached",
+                                                        "lexical_variant")]
+            negation = None
+            verdict = None
+            for n in serveable[:3]:   # bound judge spend
+                try:
+                    verdict = self.confirm(text, n.canonical_phrase)
+                except Exception as e:  # noqa: BLE001 — no confirmation, no serving
+                    verdict = {"same": False, "relation": "different",
+                               "why": f"confirm unavailable: {type(e).__name__}"}
+                    negation = None   # judge down: nothing serves
+                    break
+                relation = verdict.get("relation")
+                if relation == "same":
+                    r.best, r.confirm = n, verdict
+                    r.decision = self._decide(n, hi, lo)
+                    return r
+                if relation == "negation" and negation is None:
+                    # Polarity guard (2026-09-25): a claim and its denial
+                    # share one genealogy, so the match is real — but it
+                    # must never serve silently as if the texts agreed.
+                    # Callers surface it with an explicit polarity note.
+                    negation = (n, verdict)
+            if negation is not None:
+                r.best, r.confirm = negation
                 r.decision = "serve_negation"
-            elif not verdict["same"]:
+            else:
+                r.confirm = verdict
                 r.decision = "review"
         return r
 

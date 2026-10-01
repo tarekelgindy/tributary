@@ -3694,19 +3694,33 @@ class FingerprintStore:
         return json.loads(path.read_text(encoding="utf-8"))
 
     def find_matching(self, lexical: LexicalLayer) -> Optional[str]:
-        """Return an existing fingerprint_id if its lexical signature matches.
-        v1 matching: exact stopword_stripped_signature match, or ≥2 shared
-        diagnostic n-grams (case-insensitive)."""
+        """First lexical-signature match, or None (see find_matching_all)."""
+        all_ = self.find_matching_all(lexical)
+        return all_[0] if all_ else None
+
+    def find_matching_all(self, lexical: LexicalLayer) -> list:
+        """ALL fingerprint_ids whose lexical signature matches, exact-signature
+        hits before n-gram hits. v1 matching per candidate: exact
+        stopword_stripped_signature match, or ≥2 shared diagnostic n-grams
+        (case-insensitive). Returning every candidate matters because the
+        signature is negation-blind: a claim and its published rebuttal
+        collide on one signature, and the first-hit-wins behavior served
+        whichever sorted first (live case 2026-10-01: "Do vaccines cause
+        autism?" drew the rebuttal trace + banner while the same-polarity
+        myth trace sat one entry later). The caller judges candidates in
+        order and prefers a same-polarity serve."""
         sig = lexical.stopword_stripped_signature
         new_ngrams = {n.lower() for n in lexical.diagnostic_ngrams}
 
+        sig_hits, ngram_hits = [], []
         for fp_id, meta in self.index.items():
             if sig and meta.get("stopword_stripped_signature") == sig:
-                return fp_id
+                sig_hits.append(fp_id)
+                continue
             existing = {n.lower() for n in meta.get("diagnostic_ngrams", [])}
             if len(new_ngrams & existing) >= 2:
-                return fp_id
-        return None
+                ngram_hits.append(fp_id)
+        return sig_hits + ngram_hits
 
 
 # ---------------------------------------------------------------------------
@@ -3862,8 +3876,8 @@ async def _cli(args):
         store = FingerprintStore(args.store_dir)
         # Cheap lexical pre-filter (exact signature / shared n-grams) — high
         # precision, kept as the first line of dedup.
-        existing = store.find_matching(lexical)
-        if existing and not args.force:
+        candidates = store.find_matching_all(lexical)
+        if candidates and not args.force:
             # Polarity guard (2026-09-25): the stopword-stripped signature is
             # negation-blind — "X does not cause Y" collides with "X causes Y"
             # (recorded 2026-07-10 on the vaccines pair, Decision Log). A
@@ -3872,24 +3886,49 @@ async def _cli(args):
             # serves — a claim and its denial share one genealogy — but with
             # a POLARITY marker so the presentation says so out loud. On
             # "different" (or judge failure) nothing serves from this path.
-            canon = (store.index.get(existing) or {}).get("canonical_phrase", "")
-            verdict = None
+            # Same-polarity preference (2026-10-01): when a claim AND its
+            # rebuttal are both published, their signatures collide — judge
+            # every colliding candidate (bounded) and serve a "same" verdict
+            # over a "negation" one, so the banner only appears when no
+            # same-polarity trace exists.
+            judge = None
             try:
                 from matcher import Matcher
-                verdict = Matcher(args.store_dir).confirm(args.claim, canon or existing)
+                judge = Matcher(args.store_dir)
             except Exception as e:  # noqa: BLE001 — no judge, no serving
-                print(f"[lexical match {existing} NOT served: polarity judge "
-                      f"unavailable ({type(e).__name__}) -> generating]",
+                print(f"[lexical match {candidates[0]} NOT served: polarity "
+                      f"judge unavailable ({type(e).__name__}) -> generating]",
                       file=sys.stderr)
-            if verdict and verdict.get("relation") == "same":
-                print(json.dumps(lexical.to_dict(), indent=2))
-                print(
-                    f"[matched existing fingerprint: {existing} — polarity-"
-                    f"confirmed ({verdict['why']}); L2 and L4 skipped to "
-                    f"avoid cost. Pass --force to regenerate.]"
-                )
-                return
-            if verdict and verdict.get("relation") == "negation":
+            negation_hit = None
+            if judge is not None:
+                for existing in candidates[:3]:   # bound judge spend
+                    canon = (store.index.get(existing) or {}).get("canonical_phrase", "")
+                    try:
+                        verdict = judge.confirm(args.claim, canon or existing)
+                    except Exception as e:  # noqa: BLE001 — no judge, no serving
+                        print(f"[lexical match {existing} NOT served: polarity "
+                              f"judge unavailable ({type(e).__name__}) -> "
+                              f"generating]", file=sys.stderr)
+                        negation_hit = None   # judge down: nothing serves
+                        break
+                    relation = verdict.get("relation")
+                    if relation == "same":
+                        print(json.dumps(lexical.to_dict(), indent=2))
+                        print(
+                            f"[matched existing fingerprint: {existing} — polarity-"
+                            f"confirmed ({verdict['why']}); L2 and L4 skipped to "
+                            f"avoid cost. Pass --force to regenerate.]"
+                        )
+                        return
+                    if relation == "negation":
+                        if negation_hit is None:
+                            negation_hit = (existing, verdict)
+                        continue
+                    print(f"[lexical match {existing} rejected by polarity judge "
+                          f"({relation}: {verdict.get('why')}) "
+                          f"-> next candidate or generating]", file=sys.stderr)
+            if negation_hit is not None:
+                existing, verdict = negation_hit
                 print(json.dumps(lexical.to_dict(), indent=2))
                 print("POLARITY=negation")
                 print(
@@ -3900,10 +3939,6 @@ async def _cli(args):
                     f"as its own narrative.]"
                 )
                 return
-            if verdict:
-                print(f"[lexical match {existing} rejected by polarity judge "
-                      f"({verdict.get('relation')}: {verdict.get('why')}) "
-                      f"-> generating]", file=sys.stderr)
         # Semantic matcher (Phase 1): local embeddings find the candidate;
         # a Haiku judge confirms same-claim (same blame, same consequence)
         # before anything serves. Gate 1 (2026-06-10): embedding-only serving
