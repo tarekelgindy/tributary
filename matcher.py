@@ -53,10 +53,17 @@ EXACT_THRESHOLD = 0.95  # near-exact phrasing — still confirmed before serving
 # Stage-2 judge prompt — validated against the 30 human-labeled Gate 1 pairs
 # (4/4 same confirmed; 14/15 different rejected, incl. the embedding stage's
 # false positive; its own single error sat below the candidate threshold).
+# Question rule added 2026-10-01 after the first hydrated-store serve test:
+# the judge read "Do vaccines cause autism?" vs "vaccines cause autism" as
+# "different speech acts" and rejected the serve — but readers overwhelmingly
+# phrase requests as questions, so every question missed the cache. Re-ran
+# the 30 Gate 1 pairs + 6 question-form cases under the amended prompt
+# before shipping (results in the Decision Log, 2026-10-01).
 CONFIRM_SYSTEM = """You judge the relation between the claims two short texts assert — strictly.
 "same": same subject, same attribution of responsibility/blame, and the same asserted conclusion or consequence, with the SAME polarity. Mere topical overlap is NOT same. A claim that assigns blame differs from one that stays neutral on blame. A claim asserting a consequence differs from one that only states the event.
 "negation": the texts address the same claim with OPPOSITE polarity — one asserts it, the other denies, negates, or debunks it (e.g. "X causes Y" vs "X does not cause Y").
 "different": anything else — different subject, blame, or consequence, or only topical overlap.
+A text phrased as a QUESTION addresses the claim it asks about — judge that claim, never the speech act. "Do X cause Y?", "Is it true that X causes Y?", and "Where did the claim that X causes Y come from?" all address the claim "X causes Y": relation "same" when the other text asserts that claim. A question about the denial ("Is it true X doesn't cause Y?") addresses the denial: relation "negation". A question is never "different" merely for being a question.
 Input: JSON list of {"id", "a", "b"}.
 Output ONLY JSON: {"judgments": [{"id": 0, "relation": "same"|"negation"|"different", "same": true|false, "why": "<= 8 words"}, ...]} — "same" is true ONLY when relation is "same"."""
 
