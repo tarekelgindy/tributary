@@ -1,8 +1,9 @@
 # Tributary Mission Plan — Common Ground & Provenance Loop
 
-> **Status:** Phase 2 — 2a done; 2c (community layer) unparked 2026-09-13 and in build;
-> 2b distribution runs friends-first alongside. Gate 2 still closes the phase.
-> **Last updated:** 2026-09-13
+> **Status:** Phase 2 — 2a done; 2c (community layer) live; 2d (scale readiness)
+> built 2026-10-01 awaiting Worker redeploy; 2b distribution runs friends-first
+> alongside. Gate 2 still closes the phase.
+> **Last updated:** 2026-10-01
 > **How to use this file:** This is the working plan of record. Step through phases in order.
 > Every task is a checkbox. Every phase ends in a **gate** — do not proceed past a failed gate
 > without logging a decision in the Decision Log. Gates after Phase 1 must be facts about
@@ -49,6 +50,8 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 | Browser extension | High build cost, brutal distribution | Phase 3 gate passed + demand for personalization |
 | Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings |
 | Human contribution layer (reader finds what the automated pass missed — e.g. an earlier attestation — and it enters the record) | Explicit goal (Tarek, 2026-07-10; mission has always been human+AI side by side). The groundwork is DORMANT, not absent: models.py carries Provenance review states (ai_generated → human_confirmed / disputed / consensus), Contribution/Contributor types and settlement rules; the viewer's provenance badges light up human states automatically; earlier-attestation + correction issue templates exist as the v0 intake channel. What's missing is the flow that turns a filed issue into a recorded, credited contribution | **UNPARKED 2026-09-13 → Phase 2c** (see Decision Log): the friends-first 2b cohort satisfies the park condition ("who would actually contribute") in substance, a gate early |
+| Sponsor-a-trace payments (Stripe link, no accounts: past the free budget, "$2 runs it now, publishes publicly, carries your credit"). Tarek's call 2026-10-01: wants this as a future option — it funds the project without ads (a stated fear) and inverts the viral-overload problem into a flywheel (demand funds supply; the corpus grows; match rates rise; every future question gets cheaper). Crediting the requester is native grammar — provenance of the question is just more provenance | Building payment infra before there is a demand pulse is effort the free tier doesn't need yet; the graceful-degradation pieces (queue, meter, serves) protect week one without it | The budget meter pegs / the queue is regularly nonempty, or a funding conversation needs a self-serve support mechanism |
+| Bring-your-own-API-key lane (journalist/researcher pastes their own Anthropic key; traces run on their bill, never stored). Small build, big safety valve; later becomes the institutional tier (a newsroom funds its own lane) | Same sequencing logic: no power-user demand signal yet; key-handling UX deserves care (never stored, never logged — the privacy posture must match the metrics standard) | First org pilot asks for volume, or sponsor-a-trace ships |
 | Wikipedia-style community governance of contributions (explicit goal — Tarek, 2026-09-24: sole-approver is "fine for the moment"; he eventually wants a community model). The machinery is already sketched and deliberately OFF: models.py's Contributor reputation ladder (annotated "Wikipedia-style") and Provenance consensus/settlement rules (confirmations with no disputes settle an element). Graduation path when volume justifies: (1) auto-publish `confirm`s only — they change review state, never content; (2) trusted repeat contributors graduate to lighter review via the ladder; (3) consensus settlement replaces per-item maintainer approval; sole-approver remains the backstop for adds/edits longest | Loosening review before there is a community means one bad actor writes into published traces with the site's credibility attached; the honesty rules (receipts, mechanical checks, visible review states) are load-bearing at every stage. Volume decides, not architecture — the ladder needs real contributors to rank | Real contribution volume (friends round tells us); first candidates: auto-publish confirms once a handful of good-faith contributors exist |
 
 ---
@@ -325,6 +328,38 @@ sole approver; nothing publishes unreviewed; zero API cost (mechanical checks on
       nothing else gained visual weight. No sized bars, no new magnitude
       encodings.)
 
+### 2d. Scale readiness (2026-10-01 — see Decision Log; adds NO gate)
+
+*Answers the existential question Tarek raised before outreach: "if this goes
+viral, the caps make the moment of maximum attention the moment of maximum
+disappointment." Posture: reading is free and infinite (static corpus); the
+generation budget becomes a VISIBLE, FAIR economy where the degraded
+experience is "wait", never "no". Payment tiers are designed but parked.*
+
+- [x] Match-and-serve ON in the public request path: `hydrate_store.py` fills
+      the CI runner's empty store from `gallery/traces/` (one direction only —
+      gallery stays canonical), `matcher.py --backfill` embeds it; the
+      workflow installs CPU torch non-fatally (lexical + polarity-judge
+      serving works without it). A duplicate request now costs ~a judge call
+      (~$0.01), not a generation (~$0.70).
+- [x] Serves refund the budget: the workflow detects served-vs-generated and
+      the Worker's /complete gives the day-counter slot back — the cap buys
+      N NOVEL traces/day, serves are unlimited.
+- [x] Queue, don't reject: past the daily cap the Worker queues the request
+      (same status id, state `queued`, position returned); per-IP cap stays a
+      hard stop (abuse guard, counts queued too). Hourly `queue-drain.yml`
+      cron asks the Worker to dispatch oldest-first as budget frees.
+- [x] Budget transparency on the ask boxes: public /budget endpoint
+      ("N of M free traces left today" / "budget spent — requests queue"),
+      queued-state UX in the homepage request flow.
+- [ ] NEEDS TAREK: redeploy infra/worker.js (queue + /drain + /budget +
+      served-refund); set Worker env DAILY_CAP=25 when sharing publicly
+      (launch posture: ~$17.50/day worst case; per-IP stays 3); set a
+      console.anthropic.com monthly budget backstop (~$150) first.
+- [ ] First real-traffic review: after the first spike (or 2 weeks of public
+      sharing), read the metrics (served rate, queue depth, daily-cap
+      pressure) and re-tune cap + drain cadence on evidence.
+
 **Gate 2 (outward — 8 weeks from first card):**
 - **PASS (either):** (a) any single artifact shared by accounts from more than one cluster,
   OR (b) any unsolicited substantive reply/follow-up from the multiplier list.
@@ -420,6 +455,9 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-09-24 | Contribution flow v2, jumped to the front of the queue on the first friends-round feedback ("the biggest thing: it's very difficult to make additions about origins, amplifiers etc that might differ from what the AI agents are finding" — logged in FEEDBACK_LOG.md). Three changes: `add` is now any-date (mid-history amplifiers, not just earlier-than-earliest); new `edit` kind = structured correction (role/date/attribution/receipt) applied with a dated on-entry note — the same convention maintainer corrections use — plus origin/status/stats recompute; and per-entry "✎ suggest a correction" affordances on every log row and instance detail that prefill the form. Review model unchanged: mechanical checks, sole approver, nothing publishes unreviewed | Keep v1 scope and coach contributors through disputes; or open free-text edits without structure | Feedback names the exact gap v1 deliberately deferred (edit kind). Structured fields keep corrections reviewable and mechanically checkable where free text would not be; the dated-note convention means human corrections are exactly as auditable as maintainer ones. Requires a Worker redeploy (kind whitelist + role field) — flagged to Tarek. |
 | 2026-09-25 | The homepage sheds the blanket “AI-generated, not human-reviewed” disclaimer (Tarek's call, with the landing polish): exemplar footers carry scope facts instead (receipts, floor-not-census); the page footer says analyses are AI-generated with per-element provenance/verification labels. Artifact-level honesty is UNCHANGED — per-citation badges, provenance labels, card hedges, METHODOLOGY's one-line statement | Keep the blanket phrase on the homepage; or remove disclosure everywhere | Standing Discipline #5 already replaced the blanket shrug with per-element states where they're load-bearing — the artifacts. Homepage previews link directly to fully labeled pages, so the front-door repetition taxed trust without adding information; and “none are yet human-reviewed” was going stale as human contributions became real. |
 | 2026-09-25 (later) | Polarity guard on match-and-serve (pre-distribution, prompted by an external claude.ai review Tarek relayed; the negation collision was our own 2026-07-10 Decision Log row): the same-claim judge is now three-way (same / negation / different) and gates BOTH dedup paths — the lexical signature pre-filter previously served with no judge at all. On “negation” the matched trace still serves (a claim and its denial share one genealogy) but never silently: POLARITY marker → viewer banner (“You asked about the denial…”) + counter-trace offer. Validated against the recorded vaccines collision. Workflow now parses served-match outputs (it previously couldn't — latent). Also shipped: gen_error_audit.py, the pre-registered n=100 attestation precision audit (5 fields + roles separate, Wilson CIs, seeded sample committed in audits/) awaiting Tarek's blind grading | Ship the signature fix (retain negation tokens) immediately too; or route negation matches to fresh generation | The signature fix needs its own validation pass and stays queued; serve-with-banner beats route-to-fresh because the claim's trace is where the history is — the failure was silence, not retrieval. Error rate: labeling hours are necessarily Tarek's (blind), target before wide outreach, not before friends. |
+
+| 2026-10-01 | Scale readiness (2d) adopted ahead of outreach, answering Tarek's existential question ("if I post this to Reddit and it goes viral, the caps make it fail exactly when it matters"). Posture: reading stays free and infinite (static corpus — what actually goes viral is a link to an artifact); the generation budget becomes a VISIBLE, FAIR, eventually SELF-FUNDING economy. Shipped now: match-and-serve ON (hydrate_store.py fills the CI runner's empty store from gallery — the entire two-stage guarded pipeline existed since June but matched against an empty directory in CI, so every duplicate paid full price); queue-not-reject past the daily cap (hourly drain cron; per-IP cap stays hard); serves refund the day counter (the cap buys NOVEL traces only); public /budget endpoint + homepage meter + queued-state UX. Launch posture when sharing publicly: DAILY_CAP=25 (~$17.50/day worst case), PER_IP_CAP=3, console monthly budget backstop ~$150 set first. Payment tiers (sponsor-a-trace, BYO-key) designed and PARKED — see Park List | Keep hard 429s and raise the cap with funding; build payments now; pre-pay a huge corpus up front | A hard "try again tomorrow" at the moment of maximum attention converts a viral spike into mass disappointment; a queue converts it into latency plus a visible, honest story ("today's community budget"), which is Tributary's brand posture anyway. Serves had to stop consuming budget or popular (= heavily duplicated) days would exhaust the cap on requests that cost ~a cent. Payments parked because the free-tier degradation pieces protect week one without payment infra, and demand evidence should shape the mechanism. Deploy order is safe in both directions: the old Worker ignores served:true and 404s /drain harmlessly |
+| 2026-10-01 (later) | The polarity judge learns that QUESTIONS address claims: CONFIRM_SYSTEM gains a question rule after the first hydrated-store serve test failed honestly — the lexical prefilter matched "Do vaccines cause autism?" to the published vaccines trace, but the judge rejected the serve as "different speech acts" (a question asserts nothing, strictly). Readers overwhelmingly phrase requests as questions, so every question-form duplicate would miss the cache and pay full generation — a serve-rate killer found by the first real test. Revalidated before shipping: the 30 Gate-1 pairs score IDENTICALLY to the original prompt (4/4 same confirmed, 14/15 different rejected; the single judge error is the same Iran pair, cosine 0.826 — below the 0.85 candidate threshold, so composite false positives stay ZERO), and 6 new question-form cases all pass: question→same, question-about-denial→negation, different-subject question→different, origin question ("where did the claim come from")→same | Normalize questions to declaratives before matching (fragile string surgery); leave it and accept question-form cache misses | The judge was being asked the wrong question: for serving, the relation that matters is between the claims the texts ADDRESS, not their speech acts. Prompt change over query rewriting because the judge sees both texts in context and the rule survives forms rewriting can't anticipate ("where did X come from"). The matcher-changes-need-validation discipline (2026-07-10) was followed: full regression + targeted new cases, one batched Haiku call (~$0.01) |
 
 ## Feedback Log
 

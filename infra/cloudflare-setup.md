@@ -82,3 +82,29 @@ secrets**. One action needed:
 
 Until the redeploy, the trace-page form falls back to the GitHub issue
 templates automatically — nothing breaks, it just isn't in-window yet.
+
+---
+
+## Scale-readiness addendum (2026-10-01): queue, budget meter, serve refunds
+
+The scale posture (MISSION_PLAN 2d): past the daily budget, requests QUEUE
+instead of failing; match-and-serve answers duplicates from the published
+corpus for ~a cent; a public `/budget` endpoint powers the site's
+transparency meter. Same Worker, **no new bindings or secrets**. To turn on:
+
+1. **Redeploy the Worker**: paste the current `infra/worker.js` over the
+   deployed script. That adds:
+   - queue-not-reject on `POST /request` (per-IP cap still 429s — abuse guard),
+   - `GET /budget` (public counters for the homepage meter),
+   - `POST /drain` (callback-secret-gated; the hourly `queue-drain.yml`
+     cron calls it to dispatch queued requests as budget frees),
+   - serve refunds on `/complete` (a request answered from the corpus gives
+     its budget slot back — the cap buys NOVEL traces only).
+2. **When sharing publicly, raise the cap**: Worker → Settings → Variables →
+   `DAILY_CAP=25` (launch posture: ~$17.50/day worst case at ~$0.70/trace;
+   match-and-serve + the queue absorb spikes above it). Leave `PER_IP_CAP=3`.
+3. **Set the hard backstop first**: console.anthropic.com → Billing →
+   monthly budget limit (~$150). The caps are pacing; this is the ceiling.
+
+Deploy order doesn't matter: the workflow's `served:true` flag is ignored by
+the old Worker, and the drain cron 404s harmlessly until the redeploy.
