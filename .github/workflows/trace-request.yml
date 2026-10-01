@@ -59,6 +59,33 @@ jobs:
         # fingerprint.py is queued work; unpin when it lands.
         run: pip install --quiet "anthropic<1" httpx pillow
 
+      - name: Cache caches (pip wheels + the pinned embedding model)
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: trace-request-semantic-v1
+
+      - name: Install semantic-matcher deps (optional stage)
+        # CPU-only torch: the default Linux torch wheel bundles CUDA (~2.5GB)
+        # this runner can't use. Failure is non-fatal by design — fingerprint.py
+        # degrades to lexical + polarity-judge serving without the matcher.
+        continue-on-error: true
+        run: |
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet sentence-transformers
+
+      - name: Hydrate match-and-serve store from the published corpus
+        # fingerprints/ is gitignored and therefore EMPTY on this runner —
+        # which silently disabled match-and-serve from launch until 2026-10-01:
+        # every duplicate request paid full generation price. Hydration flows
+        # ONE direction (gallery -> store; gallery stays canonical), then the
+        # backfill embeds the store for the semantic stage.
+        run: |
+          python hydrate_store.py --force
+          python matcher.py --backfill || echo "::warning::matcher backfill failed - semantic stage disabled this run (lexical + judge still serve)"
+
       - name: Generate and publish
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -136,6 +163,14 @@ jobs:
               ID=$(grep -oE 'serve_(cached|negation) -> [a-f0-9]{12}|lexical_variant -> [a-f0-9]{12}' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
             fi
             POLARITY=$(grep -c '^POLARITY=negation' out.json || true)
+            # Served vs generated: a fresh run prints "[saved fingerprint:";
+            # a match-and-serve answer doesn't. The Worker refunds the daily
+            # budget slot for serves (the cap buys NOVEL traces only).
+            SERVED=0
+            if [ -n "$ID" ] && ! grep -q '\[saved fingerprint:' out.json; then
+              SERVED=1
+              echo "::notice::served from the published corpus: $ID (no generation cost)"
+            fi
             REL="gallery/traces/$ID.json"
             mkdir -p gallery/traces
             # freshly generated -> copy from the store; served-from-cache ->
@@ -186,10 +221,13 @@ jobs:
           done
 
           if [ -n "${REQUEST_ID:-}" ]; then
+            DONE="{\"id\":\"$REQUEST_ID\",\"state\":\"done\",\"url\":\"$URL\""
+            if [ "${SERVED:-0}" = "1" ]; then DONE="$DONE,\"served\":true"; fi
+            DONE="$DONE}"
             curl -sS -X POST "$WORKER_URL/complete" \
               -H "Content-Type: application/json" \
               -H "X-Callback-Secret: $CALLBACK_SECRET" \
-              -d "{\"id\":\"$REQUEST_ID\",\"state\":\"done\",\"url\":\"$URL\"}" || true
+              -d "$DONE" || true
           else
             gh issue comment "$ISSUE_NUMBER" --body "Traced and published: $URL
 
