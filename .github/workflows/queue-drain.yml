@@ -1,0 +1,33 @@
+# Drain the request queue (scale posture, 2026-10-01): when the daily budget
+# is spent, the Worker QUEUES trace requests instead of rejecting them
+# (infra/worker.js /request -> /drain). This cron asks the Worker once an hour
+# to dispatch whatever today's remaining budget allows, oldest first — so the
+# queue empties the moment the UTC day rolls over, without anyone resubmitting.
+#
+# The PAT never leaves the Worker; this job only knows the callback secret.
+name: drain-request-queue
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  drain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask the Worker to dispatch queued requests
+        env:
+          WORKER_URL: ${{ secrets.WORKER_URL }}
+          CALLBACK_SECRET: ${{ secrets.CALLBACK_SECRET }}
+        run: |
+          set -euo pipefail
+          if [ -z "${WORKER_URL:-}" ]; then
+            echo "WORKER_URL secret not set — nothing to drain."
+            exit 0
+          fi
+          curl -sS -X POST "$WORKER_URL/drain" \
+            -H "X-Callback-Secret: $CALLBACK_SECRET"

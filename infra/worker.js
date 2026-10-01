@@ -13,9 +13,22 @@
  * Optional env vars: DAILY_CAP (default 10), PER_IP_CAP (default 3)
  *
  * Routes:
- *   POST /request   {subject, kind: "claim"|"event"} -> {id} | 429 | 400
- *   GET  /status?id=... -> {state: running|done|failed|unknown, url?}
- *   POST /complete  {id, state, url?}  (X-Callback-Secret header) -> {ok}
+ *   POST /request   {subject, kind: "claim"|"event"}
+ *                   -> {id} | {id, queued, position} | 429 | 400
+ *     Scale posture (2026-10-01): the daily cap QUEUES instead of rejecting —
+ *     the degraded experience is "wait", never "no". Only the per-IP cap
+ *     still 429s (it's an abuse guard, not a budget). Queued requests hold
+ *     state "queued" until /drain dispatches them as budget frees up.
+ *   GET  /status?id=... -> {state: queued|running|done|failed|unknown, url?}
+ *   GET  /budget    -> {cap, used, queued}   (public, for the site's meter)
+ *   POST /drain     (X-Callback-Secret) -> {dispatched, left_in_queue}
+ *     Dispatches queued requests oldest-first up to today's remaining
+ *     budget. Called hourly by .github/workflows/queue-drain.yml — the PAT
+ *     never leaves this Worker; the cron only knows the callback secret.
+ *   POST /complete  {id, state, url?, served?}  (X-Callback-Secret) -> {ok}
+ *     served:true = the workflow answered from the published corpus instead
+ *     of generating (match-and-serve); the day counter is refunded so serves
+ *     never consume generation budget — the cap is N NOVEL traces/day.
  *   POST /contribute (Phase 2c-B; v2 kinds add/edit/confirm/dispute)
  *     {kind, fingerprint_id, ...} -> {ok, ref}
  *     Relays a reader contribution to the contributions workflow for
@@ -97,9 +110,71 @@ export default {
       const rec = raw ? JSON.parse(raw) : {};
       rec.state = body.state === "done" ? "done" : "failed";
       if (body.url) rec.url = String(body.url).slice(0, 500);
+      if (body.served) rec.served = true;
       rec.finished = new Date().toISOString();
       await env.STATUS.put("req:" + body.id, JSON.stringify(rec), { expirationTtl: 7 * 86400 });
+      // Match-and-serve refund: a request answered from the published corpus
+      // cost ~a judge call, not a generation — give the budget slot back.
+      // (If the UTC day rolled over mid-run, this refunds the new day — a
+      // once-a-day off-by-one we accept for counter simplicity.)
+      if (body.served && body.state === "done") {
+        const dayKey = "count:" + new Date().toISOString().slice(0, 10);
+        const n = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
+        if (n > 0) await env.STATUS.put(dayKey, String(n - 1), { expirationTtl: 2 * 86400 });
+      }
       return json({ ok: true }, 200, h);
+    }
+
+    if (url.pathname === "/budget" && request.method === "GET") {
+      // Public transparency meter: how much of today's free generation
+      // budget is used, and how deep the queue is. Counters only — no
+      // subjects, no geo, and deliberately NOT logged (it's read-often).
+      const day = new Date().toISOString().slice(0, 10);
+      const cap = parseInt(env.DAILY_CAP || "10", 10);
+      const used = parseInt((await env.STATUS.get("count:" + day)) || "0", 10);
+      const q = await env.STATUS.list({ prefix: "queue:", limit: 1000 });
+      return json({ cap, used: Math.min(used, cap), queued: q.keys.length }, 200, h);
+    }
+
+    if (url.pathname === "/drain" && request.method === "POST") {
+      if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
+        return json({ error: "forbidden" }, 403, h);
+      const day = new Date().toISOString().slice(0, 10);
+      const dayKey = "count:" + day;
+      const cap = parseInt(env.DAILY_CAP || "10", 10);
+      let used = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
+      const list = await env.STATUS.list({ prefix: "queue:", limit: 1000 });
+      // ISO-timestamped keys sort lexicographically = chronologically: FIFO.
+      const keys = list.keys.map((k) => k.name).sort();
+      let dispatched = 0;
+      for (const key of keys) {
+        if (used >= cap) break;
+        const raw = await env.STATUS.get(key);
+        if (!raw) { continue; }
+        const item = JSON.parse(raw);
+        const dispatch = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + env.GITHUB_PAT,
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "tributary-request-worker",
+          },
+          body: JSON.stringify({
+            event_type: "trace-request",
+            client_payload: { subject: item.subject, kind: item.kind, request_id: item.id },
+          }),
+        });
+        if (dispatch.status !== 204) break; // upstream trouble — retry next drain
+        await env.STATUS.put("req:" + item.id, JSON.stringify({
+          state: "running", subject: item.subject, kind: item.kind,
+          created: item.created, dequeued: new Date().toISOString(),
+        }), { expirationTtl: 7 * 86400 });
+        await env.STATUS.delete(key);
+        used += 1;
+        dispatched += 1;
+        await env.STATUS.put(dayKey, String(used), { expirationTtl: 2 * 86400 });
+      }
+      return json({ dispatched, left_in_queue: keys.length - dispatched }, 200, h);
     }
 
     if (url.pathname === "/request" && request.method === "POST") {
@@ -118,14 +193,31 @@ export default {
       const ipKey = "ip:" + day + ":" + ip;
       const dayCount = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
       const ipCount = parseInt((await env.STATUS.get(ipKey)) || "0", 10);
-      if (dayCount >= dailyCap) {
-        await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 0, why: "daily-cap" });
-        return json({ error: "Today's generation capacity is used up — please try again tomorrow." }, 429, h);
-      }
+      // Per-IP first: it's the abuse guard and the only hard "no" left —
+      // queued requests count toward it too, so one visitor can't fill
+      // the whole queue.
       if (ipCount >= perIpCap)
         return json({ error: "You've reached today's per-visitor limit — please try again tomorrow." }, 429, h);
 
       const id = crypto.randomUUID().replace(/-/g, "").slice(0, 16);
+
+      // Daily budget spent -> QUEUE, don't reject (2026-10-01). The entry
+      // waits in KV until /drain dispatches it as budget frees up — same
+      // status id, same polling; the visitor just waits longer.
+      if (dayCount >= dailyCap) {
+        const created = new Date().toISOString();
+        const q = await env.STATUS.list({ prefix: "queue:", limit: 1000 });
+        const position = q.keys.length + 1;
+        await env.STATUS.put("queue:" + created + ":" + id, JSON.stringify({
+          id, subject, kind, created,
+        }), { expirationTtl: 7 * 86400 });
+        await env.STATUS.put("req:" + id, JSON.stringify({
+          state: "queued", subject, kind, created, position,
+        }), { expirationTtl: 7 * 86400 });
+        await env.STATUS.put(ipKey, String(ipCount + 1), { expirationTtl: 2 * 86400 });
+        await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 1, why: "queued" });
+        return json({ id, queued: true, position }, 200, h);
+      }
 
       const dispatch = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
         method: "POST",

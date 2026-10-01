@@ -867,6 +867,31 @@
                 };
                 ping({ type: "view", path: "/" });
 
+                // Budget transparency: one fetch per page view, shared by both
+                // panels. The meter shows how much of today's free community
+                // budget remains; past it, requests queue instead of failing.
+                let budgetPromise = null;
+                function fetchBudget() {
+                    if (!budgetPromise)
+                        budgetPromise = fetch(WORKER_URL + "/budget")
+                            .then((r) => r.json())
+                            .catch(() => null);
+                    return budgetPromise;
+                }
+                async function fillBudgetNote(suffix) {
+                    const el = document.getElementById("budget-" + suffix);
+                    if (!el) return;
+                    const b = await fetchBudget();
+                    if (!b || !(b.cap > 0)) return;
+                    const left = Math.max(0, b.cap - b.used);
+                    el.textContent =
+                        left > 0
+                            ? `Community budget today: ${left} of ${b.cap} free traces left.`
+                            : `Today's free budget is spent — new requests join the queue` +
+                              (b.queued ? ` (${b.queued} waiting)` : "") +
+                              ` and run as capacity frees up.`;
+                }
+
                 let index = null;
                 async function loadIndex() {
                     if (index) return index;
@@ -898,9 +923,13 @@
                 async function submitRequest(q, kind, box) {
                     const label =
                         kind === "event" ? "event framing map" : "origin trace";
-                    box.innerHTML = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
+                    const generatingMsg = `<strong>Generating your ${label}…</strong> This usually takes 5–10 minutes —
       real web searches and source verification are happening. You can keep this tab open.`;
+                    box.innerHTML = generatingMsg;
                     let id;
+                    // Past the daily budget the Worker queues instead of
+                    // rejecting; the same id polls through queued -> running.
+                    let queued = false;
                     try {
                         const r = await fetch(WORKER_URL + "/request", {
                             method: "POST",
@@ -915,17 +944,25 @@
                             return;
                         }
                         id = data.id;
+                        if (data.queued) {
+                            queued = true;
+                            const pos = Number(data.position) || 0;
+                            box.innerHTML = `<strong>Today's free budget is spent — you're${pos ? " #" + pos : ""} in line.</strong>
+      Your ${label} runs automatically as capacity frees up (usually within a day). Keep this tab open,
+      or come back and search for it here once it's published.`;
+                        }
                     } catch (e) {
                         box.innerHTML =
                             "Could not reach the request service — please try again.";
                         return;
                     }
-                    const started = Date.now();
+                    let started = Date.now();
                     const poll = setInterval(async () => {
-                        if (Date.now() - started > 20 * 60 * 1000) {
+                        if (Date.now() - started > (queued ? 15 : 20) * 60 * 1000) {
                             clearInterval(poll);
-                            box.innerHTML =
-                                "This is taking longer than expected — the trace may still land; try your search again in a few minutes.";
+                            box.innerHTML = queued
+                                ? "Still in line — your " + label + " runs when capacity frees up (usually within a day). Come back and search for it here; it publishes automatically."
+                                : "This is taking longer than expected — the trace may still land; try your search again in a few minutes.";
                             return;
                         }
                         try {
@@ -936,6 +973,11 @@
                                         encodeURIComponent(id),
                                 )
                             ).json();
+                            if (queued && st.state === "running") {
+                                queued = false;
+                                started = Date.now(); // the 20-min clock starts at dequeue
+                                box.innerHTML = generatingMsg;
+                            }
                             if (st.state === "done" && st.url) {
                                 clearInterval(poll);
                                 box.innerHTML = `<strong>Done.</strong> <a href="${esc(st.url)}">Open your ${label} →</a>
@@ -978,7 +1020,8 @@
                         }
                         return `<div class="askmiss" id="askmiss-${suffix}">${lead}<br>
       <button class="reqbtn" id="askreq-${suffix}">Request this ${reqLabel} →</button><br>
-      <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span></div>`;
+      <span style="color:#777; font-size:0.85rem;">Runs right here — usually 5–10 minutes.</span>
+      <span id="budget-${suffix}" style="display:block; color:#777; font-size:0.85rem;"></span></div>`;
                     };
 
                     async function search() {
@@ -1045,6 +1088,7 @@
                                     ),
                                 ),
                             );
+                        fillBudgetNote(suffix);
                     }
                     btn.addEventListener("click", search);
                     input.addEventListener("keydown", (e) => {
