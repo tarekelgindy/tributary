@@ -352,10 +352,18 @@ experience is "wait", never "no". Payment tiers are designed but parked.*
 - [x] Budget transparency on the ask boxes: public /budget endpoint
       ("N of M free traces left today" / "budget spent — requests queue"),
       queued-state UX in the homepage request flow.
-- [ ] NEEDS TAREK: redeploy infra/worker.js (queue + /drain + /budget +
-      served-refund); set Worker env DAILY_CAP=25 when sharing publicly
-      (launch posture: ~$17.50/day worst case; per-IP stays 3); set a
-      console.anthropic.com monthly budget backstop (~$150) first.
+- [x] NEEDS TAREK (done 2026-10-06): worker.js redeployed (queue + /drain +
+      /budget + served-refund + new-domain CORS); console budget backstop
+      ($150/mo) set; credentials rotated to encrypted Secrets after the PAT
+      expired silently + both values surfaced as plaintext Text vars.
+      REMAINING at public launch: set Worker env DAILY_CAP=25
+      (~$17.50/day worst case; per-IP stays 3).
+- [x] Health canary (2026-10-06, after the SECOND silent-death incident):
+      Worker /health (secret-gated no-op dispatch proves the PAT; the call
+      itself proves callback-secret sync and Worker liveness) + daily
+      health-canary.yml also checking site HTTPS and agenda-data freshness
+      (<24h); failures open ONE GitHub issue, deduped. NEEDS TAREK: one
+      worker.js paste to activate /health.
 - [ ] First real-traffic review: after the first spike (or 2 weeks of public
       sharing), read the metrics (served rate, queue depth, daily-cap
       pressure) and re-tune cap + drain cadence on evidence.
