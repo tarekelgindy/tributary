@@ -138,6 +138,34 @@ export default {
       return json({ cap, used: Math.min(used, cap), queued: q.keys.length }, 200, h);
     }
 
+    if (url.pathname === "/health" && request.method === "GET") {
+      // Health canary (2026-10-06): the request lane has died silently twice
+      // (unpinned SDK 2026-09-14; expired PAT found 2026-10-06 by a manual
+      // test). This route lets .github/workflows/health-canary.yml prove,
+      // daily, that the Worker is up, the caller's CALLBACK_SECRET matches,
+      // and the PAT can still dispatch — via a no-op event type nothing
+      // subscribes to, so the probe never triggers a workflow or spends.
+      if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
+        return json({ error: "forbidden" }, 403, h);
+      const r = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + env.GITHUB_PAT,
+          "Accept": "application/vnd.github+json",
+          "User-Agent": "tributary-request-worker",
+        },
+        body: JSON.stringify({ event_type: "health-canary" }),
+      });
+      const day = new Date().toISOString().slice(0, 10);
+      const used = parseInt((await env.STATUS.get("count:" + day)) || "0", 10);
+      const q = await env.STATUS.list({ prefix: "queue:", limit: 1000 });
+      return json({
+        ok: r.status === 204,
+        pat_dispatch_status: r.status,
+        used, queued: q.keys.length,
+      }, r.status === 204 ? 200 : 500, h);
+    }
+
     if (url.pathname === "/drain" && request.method === "POST") {
       if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
         return json({ error: "forbidden" }, 403, h);

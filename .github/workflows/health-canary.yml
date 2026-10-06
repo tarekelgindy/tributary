@@ -1,0 +1,80 @@
+# Health canary (2026-10-06): the request lane has now died silently twice —
+# the unpinned SDK (2026-09-14, ~6 weeks unnoticed) and the expired Worker
+# PAT (2026-10-06, found by a manual test, not by the system). This daily
+# probe makes that whole failure class LOUD: it checks everything a
+# visitor-facing request depends on and opens a GitHub issue the day
+# something breaks. One open canary issue at a time — no spam.
+name: health-canary
+
+on:
+  schedule:
+    - cron: "23 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe the Worker, the site, and the capture cron
+        env:
+          WORKER_URL: ${{ secrets.WORKER_URL }}
+          CALLBACK_SECRET: ${{ secrets.CALLBACK_SECRET }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -u
+          FAILS=""
+
+          # 1. Worker /health — one probe, three proofs: the Worker is up,
+          #    the repo's CALLBACK_SECRET matches the Worker's (the probe
+          #    authenticates with it), and the Worker's GITHUB_PAT can still
+          #    dispatch (no-op event type; triggers nothing, costs nothing).
+          CODE=$(curl -sS -o health.json -w "%{http_code}" --max-time 30 \
+            -H "X-Callback-Secret: $CALLBACK_SECRET" "$WORKER_URL/health" || echo 000)
+          if [ "$CODE" != "200" ]; then
+            FAILS="$FAILS
+          - Worker /health: HTTP $CODE — the PAT is expired/revoked, CALLBACK_SECRET is out of sync between the repo and the Worker, or the Worker is down. Body: $(head -c 200 health.json 2>/dev/null || true)"
+          fi
+
+          # 2. The site itself, over HTTPS with a valid certificate.
+          SCODE=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 30 \
+            https://tributary.tools/ || echo 000)
+          if [ "$SCODE" != "200" ]; then
+            FAILS="$FAILS
+          - https://tributary.tools/ returned HTTP $SCODE (DNS, Pages, or certificate problem; 000 = TLS/connect failure)."
+          fi
+
+          # 3. The capture instrument: agenda-data commits every 6 hours and
+          #    has since June — silence longer than a day means breakage.
+          LAST=$(gh api "repos/$GITHUB_REPOSITORY/commits?sha=agenda-data&per_page=1" \
+            --jq '.[0].commit.committer.date' 2>/dev/null || echo "")
+          if [ -z "$LAST" ]; then
+            FAILS="$FAILS
+          - Could not read the agenda-data branch's latest commit."
+          else
+            AGE_H=$(( ( $(date -u +%s) - $(date -u -d "$LAST" +%s) ) / 3600 ))
+            if [ "$AGE_H" -gt 24 ]; then
+              FAILS="$FAILS
+          - Capture cron silent: last agenda-data commit is ${AGE_H}h old ($LAST)."
+            fi
+          fi
+
+          if [ -z "$FAILS" ]; then
+            echo "all healthy: worker+PAT+secret OK, site 200, capture fresh"
+            exit 0
+          fi
+
+          echo "FAILURES:$FAILS"
+          OPEN=$(gh issue list --state open --search 'Health canary failing in:title' \
+            --json number --jq 'length')
+          if [ "$OPEN" = "0" ]; then
+            gh issue create --title "Health canary failing" --body "The daily health canary found problems:
+          $FAILS
+
+          Most likely fixes: rotate the Worker's GITHUB_PAT (fine-grained, tributary repo only, Contents: Read and write) and/or re-sync CALLBACK_SECRET in BOTH places — the Worker's secrets and this repo's Actions secrets. Steps: infra/cloudflare-setup.md."
+          fi
+          exit 1
