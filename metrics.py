@@ -10,6 +10,9 @@ addresses — see METHODOLOGY "Usage measurement".
     python metrics.py            # digest of everything logged (180-day TTL)
     python metrics.py --days 7   # restrict to the last N days
     python metrics.py --raw      # dump raw records as JSON lines
+    python metrics.py --regions  # day-by-day breakdown by region; (NEW) marks
+                                 # a region's first-ever appearance in the log
+                                 # (combine with --days to window the table)
 
 Secret resolution: keys/cloudfare_callback_secret.txt, else CALLBACK_SECRET
 in the environment (also in .env).
@@ -63,17 +66,52 @@ def geo(r):
     return ", ".join(b for b in bits if b) or "(unknown)"
 
 
+def region_label(r):
+    c = r.get("country") or "(unknown)"
+    return f'{r["region"]}, {c}' if r.get("region") else f"{c} (no region)"
+
+
+def regions_table(all_records, windowed):
+    """Day × region: how usage spreads. first-seen is computed over the FULL
+    log (not the window) so (NEW) marks a region's first-ever appearance."""
+    first_seen = {}
+    for r in all_records:                       # chronologically sorted
+        first_seen.setdefault(region_label(r), (r.get("t") or "")[:10])
+
+    by_day = {}
+    for r in windowed:
+        by_day.setdefault((r.get("t") or "")[:10], []).append(r)
+
+    print(f"=== Daily usage by region · {len(windowed)} events · "
+          f"{len(by_day)} active days ===")
+    print("(NEW) = that region's first-ever appearance in the log\n")
+    for day in sorted(by_day):
+        rows = by_day[day]
+        tmix = " · ".join(f"{k}: {n}" for k, n in
+                          Counter(r["type"] for r in rows).most_common())
+        print(f"{day}  {len(rows):>4} events   ({tmix})")
+        regions = Counter(region_label(r) for r in rows)
+        parts = [f"{lbl}: {n}" + (" (NEW)" if first_seen.get(lbl) == day else "")
+                 for lbl, n in regions.most_common()]
+        shown, extra = parts[:8], len(parts) - 8
+        print(f"            {' · '.join(shown)}"
+              f"{f' · +{extra} more regions' if extra > 0 else ''}")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Aggregate the site's usage log.")
     ap.add_argument("--days", type=int, default=0, help="only the last N days")
     ap.add_argument("--raw", action="store_true", help="dump raw JSON lines")
+    ap.add_argument("--regions", action="store_true",
+                    help="day-by-day usage per region, (NEW) on first appearance")
     args = ap.parse_args()
 
-    records = fetch_all(load_secret())
+    all_records = fetch_all(load_secret())
+    all_records.sort(key=lambda r: r.get("t") or "")
+    records = all_records
     if args.days:
         floor = (datetime.now(timezone.utc) - timedelta(days=args.days)).isoformat()
         records = [r for r in records if (r.get("t") or "") >= floor]
-    records.sort(key=lambda r: r.get("t") or "")
 
     if args.raw:
         for r in records:
@@ -83,6 +121,10 @@ def main():
     if not records:
         print("No usage records yet (logging starts when the updated Worker "
               "is deployed).")
+        return
+
+    if args.regions:
+        regions_table(all_records, records)
         return
 
     types = Counter(r["type"] for r in records)
@@ -98,9 +140,6 @@ def main():
     by_country = Counter(r.get("country") or "(unknown)" for r in records)
     print("\nBy country:  " + " · ".join(f"{c}: {n}" for c, n in by_country.most_common(12)))
 
-    def region_label(r):
-        c = r.get("country") or "(unknown)"
-        return f'{r["region"]}, {c}' if r.get("region") else f"{c} (no region)"
     by_region = Counter(region_label(r) for r in records)
     print("By region:   " + " · ".join(f"{lbl}: {n}" for lbl, n in by_region.most_common(12)))
 
