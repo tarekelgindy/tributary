@@ -1,6 +1,6 @@
 # Common Ground Report #2 — This Week in Narratives, Issue #3
 
-**September 23 – 30, 2026** · from [Tributary](https://tarekelgindy.github.io/tributary/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.
+**September 23 – 30, 2026** · from [Tributary](https://tributary.tools/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.
 
 **The question this issue asks:** what did the left and right media circles both cover this week that neither side's front feed showed you? "Circles" means news outlets [AllSides](https://www.allsides.com/media-bias/ratings) rates left/lean-left or right/lean-right (their ratings, not ours). Every quote below is an outlet's own headline, in its own voice. Tributary never labels claims true or false. [Methodology](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) · [corrections](https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md) · [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose)
 
@@ -74,7 +74,7 @@ A story that touches both circles' hot buttons — migration and far-right activ
 
 ## Where the week's biggest pocketbook story lived
 
-Thirty-year mortgage rates crossed **7% for the first time since January 2025**. We mapped the coverage: [**8 competing framings, 36 distinct carriers**](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/234bbbb46761.json) — from *Generational Affordability Crisis* to *Historical Normalization (“rates aren't exceptional”)* to *War-Driven Inflation Accountability*. The structural finding: the carriers are overwhelmingly financial and trade press (Bloomberg, Bankrate, HousingWire, the Dallas Fed) plus advocacy shops on the left; **not one right-of-center rated outlet appears in our sample**. The biggest kitchen-table story of the week was told almost entirely outside the partisan spectrum — worth knowing before anyone calls it “ignored.” (Carrier counts are a floor from our search, not a census.) There's a [shareable map of the framings](https://tarekelgindy.github.io/tributary/gallery/cards/234bbbb46761.html).
+Thirty-year mortgage rates crossed **7% for the first time since January 2025**. We mapped the coverage: [**8 competing framings, 36 distinct carriers**](https://tributary.tools/fingerprint_viewer.html?load=gallery/events/234bbbb46761.json) — from *Generational Affordability Crisis* to *Historical Normalization (“rates aren't exceptional”)* to *War-Driven Inflation Accountability*. The structural finding: the carriers are overwhelmingly financial and trade press (Bloomberg, Bankrate, HousingWire, the Dallas Fed) plus advocacy shops on the left; **not one right-of-center rated outlet appears in our sample**. The biggest kitchen-table story of the week was told almost entirely outside the partisan spectrum — worth knowing before anyone calls it “ignored.” (Carrier counts are a floor from our search, not a census.) There's a [shareable map of the framings](https://tributary.tools/gallery/cards/234bbbb46761.html).
 
 ## What we can't tell you
 

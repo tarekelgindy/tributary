@@ -505,7 +505,7 @@ def apply_mode(gallery, body):
     print(f"FPID={record['fingerprint_id']}")
     print(f"BY={record['display_name']}")
     print(f"FILES={' '.join(touched)}")
-    print(f"URL=https://tarekelgindy.github.io/tributary/fingerprint_viewer.html"
+    print(f"URL=https://tributary.tools/fingerprint_viewer.html"
           f"?load=gallery/traces/{record['fingerprint_id']}.json")
     return 0
 

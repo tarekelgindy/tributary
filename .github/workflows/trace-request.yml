@@ -210,7 +210,7 @@ jobs:
             git push origin main
           fi
 
-          URL="https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=$REL"
+          URL="https://tributary.tools/fingerprint_viewer.html?load=$REL"
           if [ "${POLARITY:-0}" != "0" ]; then
             URL="$URL&polarity=negation"
           fi
@@ -221,7 +221,7 @@ jobs:
           # Proceed after ~5 min regardless; the link heals on its own.
           for i in $(seq 1 30); do
             CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-              "https://tarekelgindy.github.io/tributary/$REL" || echo 0)
+              "https://tributary.tools/$REL" || echo 0)
             [ "$CODE" = "200" ] && break
             sleep 10
           done

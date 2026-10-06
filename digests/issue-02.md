@@ -1,6 +1,6 @@
 # Common Ground Report #1 — This Week in Narratives, Issue #2
 
-**July 2 – 9, 2026** · from [Tributary](https://tarekelgindy.github.io/tributary/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.
+**July 2 – 9, 2026** · from [Tributary](https://tributary.tools/), an open instrument that traces where narratives come from, who amplifies them, and what different information ecosystems see.
 
 **The question this issue asks:** what do the left and right media circles actually agree on — how old is that agreement — and what did both sides cover that neither side's front page showed you? "Circles" means news outlets [AllSides](https://www.allsides.com/media-bias/ratings) rates left/lean-left or right/lean-right (their ratings, not ours; center and unrated outlets belong to neither). Every circle speaks below only in its own outlets' quoted words, in the outlet's own voice. Tributary never labels claims true or false. [Methodology](https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md) · [corrections](https://github.com/tarekelgindy/tributary/blob/main/CORRECTIONS.md) · [suggest a correction](https://github.com/tarekelgindy/tributary/issues/new/choose)
 
@@ -10,7 +10,7 @@
 
 We traced the origin of three framings that member outlets of *both* circles carry. Two turn out to be decades-old policy arguments wearing this week's news; the third is twenty months old — and its birthday is the interesting part.
 
-**24 years: "decapitation works."** When [Israel killed Hamas commander Mohammed Odeh](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json) in late May, outlets in both circles carried the same frame — that killing commanders demonstrates intelligence penetration and collapses command structure. Fox News champions it; NBC carries it in straight reportage (a distinction the stance counts keep):
+**24 years: "decapitation works."** When [Israel killed Hamas commander Mohammed Odeh](https://tributary.tools/fingerprint_viewer.html?load=gallery/events/9577b8662adc.json) in late May, outlets in both circles carried the same frame — that killing commanders demonstrates intelligence penetration and collapses command structure. Fox News champions it; NBC carries it in straight reportage (a distinction the stance counts keep):
 
 > **left-leaning** · NBC News (2026-05-27): "Israel said Wednesday it had killed Hamas' newly appointed armed wing chief in Gaza, days after it killed his predecessor"
 >
@@ -18,7 +18,7 @@ We traced the origin of three framings that member outlets of *both* circles car
 
 The trace finds this framing in the targeted-killing debates of the Second Intifada: attested from **September 2002** (Steven David's *Fatal Choices: Israel's Policy of Targeted Killing* — documented via Wikipedia; the original is a policy paper), with first-party receipts from **January 2003** (*Middle East Quarterly*, "The Logic of Israel's Targeted Killing") onward — 17 dated attestations across 24 years. Both circles are re-running a quarter-century-old argument, and neither invented it this week.
 
-**17 years: "the Arctic demands a US presence."** On [Greenland's PM snubbing the new US consulate](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/d030addb1054.json), both circles carried the strategic-imperative frame:
+**17 years: "the Arctic demands a US presence."** On [Greenland's PM snubbing the new US consulate](https://tributary.tools/fingerprint_viewer.html?load=gallery/events/d030addb1054.json), both circles carried the strategic-imperative frame:
 
 > **left-leaning** · ABC News (2026-01-08): "Greenland's position above the Arctic Circle makes the world's largest island a key part of security strategy"
 >
@@ -26,7 +26,7 @@ The trace finds this framing in the targeted-killing debates of the Second Intif
 
 The trace anchors on **NSPD-66, the US Arctic policy directive signed January 9, 2009** (documented via Wikipedia; the directive is the source), carried through 2015 think-tank work ("The New Ice Curtain") to this spring. A seventeen-year-old doctrine, deployed by both circles as if it were a reaction to one snubbed ribbon-cutting. (Both circles are thin on this event — two rated outlets each — so weigh the quotes, not rates.)
 
-**20 months — and born 20 days after the election: "foreign money in Trump crypto buys policy."** On [Trump's crypto financial disclosure](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json), the foreign-influence framing appears in 2/5 left-leaning pieces and 1/1 right-leaning:
+**20 months — and born 20 days after the election: "foreign money in Trump crypto buys policy."** On [Trump's crypto financial disclosure](https://tributary.tools/fingerprint_viewer.html?load=gallery/events/e82aa88b3a7e.json), the foreign-influence framing appears in 2/5 left-leaning pieces and 1/1 right-leaning:
 
 > **left-leaning** · CBS News (2026-07-02): "The co-founder of Binance, Changpeng Zhao, received a pardon from Mr. Trump for financial crimes"
 >
@@ -61,7 +61,7 @@ Three confirmed pairs across 108 analyzed events is sparse, and we say so. Low o
 
 ## The wider count — and the counterexample
 
-Across the 108-event corpus, 15 events show at least one framing carried and *asserted* by both circles (19 intersections in total; every one thin — one or two outlets per side, counts shown on every claim). A framing one circle only **opposes** never counts: on the [Graham Platner allegations](https://tarekelgindy.github.io/tributary/fingerprint_viewer.html?load=gallery/events/b410bf787bf7.json), "Media Bias & Journalistic Malpractice" is carried by both circles — but the left circle's only engagement is opposition. That's reported as **contested**, not common ground. A tool that counted it as agreement would be manufacturing harmony.
+Across the 108-event corpus, 15 events show at least one framing carried and *asserted* by both circles (19 intersections in total; every one thin — one or two outlets per side, counts shown on every claim). A framing one circle only **opposes** never counts: on the [Graham Platner allegations](https://tributary.tools/fingerprint_viewer.html?load=gallery/events/b410bf787bf7.json), "Media Bias & Journalistic Malpractice" is carried by both circles — but the left circle's only engagement is opposition. That's reported as **contested**, not common ground. A tool that counted it as agreement would be manufacturing harmony.
 
 ## What we can't tell you (yet)
 

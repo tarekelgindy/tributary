@@ -23,7 +23,7 @@ and the common ground every side accepts). No truth verdicts, ever — only
 structural claims a reader can check, each with its receipt attached.
 
 This week's Common Ground Report is a fair sample of what it does:
-https://tarekelgindy.github.io/tributary/digests/issue-03.html
+https://tributary.tools/digests/issue-03.html
 (One finding: of 294 stories both left- and right-rated outlets covered last
 week, 95 never made anyone's top-of-feed — the agreement is real and it is
 systematically the least visible thing in the feed.)
@@ -32,7 +32,7 @@ Three things that might matter to you specifically:
 
 1. Everything has a stable permalink and public JSON — every trace, every
    event map, every share figure can be cited, embedded, or re-analyzed.
-   Browse: https://tarekelgindy.github.io/tributary/corpus.html
+   Browse: https://tributary.tools/corpus.html
 2. The methodology and the corrections log are public, including our
    failures and their root causes. Readers can contribute corrections on any
    trace — named, reviewed, and credited, Wikipedia-style.
@@ -62,7 +62,7 @@ week, unattended, it records what left- and right-rated outlets both covered
 and neither front-paged. Last week: 294 shared stories, 95 buried — one in
 three of everything both sides agreed was worth covering.
 
-The current weekly report: https://tarekelgindy.github.io/tributary/digests/issue-03.html
+The current weekly report: https://tributary.tools/digests/issue-03.html
 How it works, including what it refuses to claim: https://github.com/tarekelgindy/tributary/blob/main/METHODOLOGY.md
 
 What makes it different from a media-bias chart:
