@@ -54,14 +54,16 @@
 
 const REPO = "tarekelgindy/tributary";
 const ALLOWED_ORIGINS = new Set([
-  "https://tarekelgindy.github.io",
+  "https://tributary.tools",
+  "https://www.tributary.tools",
+  "https://tarekelgindy.github.io",   // transition: old URLs 301 here, cached pages may still call
   "http://localhost:8000",
 ]);
 
 function cors(request) {
   const origin = request.headers.get("Origin") || "";
   return {
-    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.has(origin) ? origin : "https://tarekelgindy.github.io",
+    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.has(origin) ? origin : "https://tributary.tools",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Content-Type": "application/json",

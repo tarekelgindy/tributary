@@ -59,7 +59,7 @@ from PIL import Image, ImageDraw, ImageFont
 from publish import build_search_index
 
 ROOT = Path(__file__).resolve().parent
-SITE = "https://tarekelgindy.github.io/tributary/"
+SITE = "https://tributary.tools/"
 REPO_URL = "https://github.com/tarekelgindy/tributary"
 
 # ---------------------------------------------------------------------------
@@ -879,7 +879,7 @@ def render_png(cd, out_path):
             f'{"" if cd["n_contrib"] == 1 else "s"}' if cd["n_contrib"] else "")
     foot = (f'{counts}, one dot each — a sample, not a census · roles are '
             f'unaudited AI labels · earliest found, not provably first{tail}')
-    url = "tarekelgindy.github.io/tributary"
+    url = "tributary.tools"
     f_url = _font(15)
     uw = d.textlength(url, font=f_url)
     d.text((ML, 578), foot,
@@ -1327,7 +1327,7 @@ def _event_footer(d, ML, MR):
     f_f = _font(15)
     d.text((ML, 600), "carrier counts are a floor from our search, not a census "
                       "· framing boundaries are AI judgments", font=f_f, fill=INK3)
-    url = "tarekelgindy.github.io/tributary"
+    url = "tributary.tools"
     d.text((MR - d.textlength(url, font=f_f), 600), url, font=f_f, fill=INK3)
 
 

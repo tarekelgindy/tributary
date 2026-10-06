@@ -79,7 +79,7 @@ The repo is now public; it is the first impression and the "share results" surfa
 
 > **Gate 0 log (2026-06-10): PASSED.**
 > *Path there:* Pages was enabled and built, but every URL 301-redirected to `tarek-elgindy.com` — a custom domain on the *user* site that had gone NXDOMAIN (GitHub serves all project sites under a user site's custom domain). After Tarek confirmed the domain was dead, the stale `CNAME` file and Pages setting were removed from `tarekelgindy.github.io` (restorable by re-adding the CNAME if the domain ever returns).
-> *Evidence:* live, unauthenticated, no instructions: `https://tarekelgindy.github.io/tributary/` → 200 (gallery); the viewer page → 200; the deep-link permalink (`fingerprint_viewer.html?load=examples/event_platner_allegations.json`) serves the viewer with the load bootstrap, and the JSON it fetches → 200 same-origin. The bootstrap itself was unit-tested (happy/404/no-param) and all five examples verified to parse and route.
+> *Evidence:* live, unauthenticated, no instructions: `https://tributary.tools/` → 200 (gallery); the viewer page → 200; the deep-link permalink (`fingerprint_viewer.html?load=examples/event_platner_allegations.json`) serves the viewer with the load bootstrap, and the JSON it fetches → 200 same-origin. The bootstrap itself was unit-tested (happy/404/no-param) and all five examples verified to parse and route.
 > *Decision:* gate passed → Phase 1 (matcher + corpus) is unblocked. Residual Phase 0 item carried forward: one `SourceAnalysis` example for the gallery (needs an API run).
 
 ---
