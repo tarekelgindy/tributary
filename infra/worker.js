@@ -119,11 +119,14 @@ export default {
       if (body.served) rec.served = true;
       rec.finished = new Date().toISOString();
       await env.STATUS.put("req:" + body.id, JSON.stringify(rec), { expirationTtl: 7 * 86400 });
-      // Match-and-serve refund: a request answered from the published corpus
-      // cost ~a judge call, not a generation — give the budget slot back.
-      // (If the UTC day rolled over mid-run, this refunds the new day — a
-      // once-a-day off-by-one we accept for counter simplicity.)
-      if (body.served && body.state === "done") {
+      // Refunds: a request answered from the published corpus (served) or
+      // bounced by the claim-shape gate (rejected) cost ~a judge call, not
+      // a generation — give the GLOBAL budget slot back so junk input and
+      // duplicates can never exhaust the community's day. The per-IP count
+      // stays consumed either way: probing still spends the prober's own
+      // allowance. (If the UTC day rolled over mid-run, this refunds the
+      // new day — a once-a-day off-by-one we accept for counter simplicity.)
+      if ((body.served && body.state === "done") || body.state === "rejected") {
         const dayKey = "count:" + new Date().toISOString().slice(0, 10);
         const n = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
         if (n > 0) await env.STATUS.put(dayKey, String(n - 1), { expirationTtl: 2 * 86400 });
