@@ -856,7 +856,14 @@
                 // Usage beacon: fire-and-forget, geo comes from Cloudflare
                 // server-side (country/city), no IP is ever stored. Disclosed
                 // in the footer.
+                const isBot =
+                    navigator.webdriver === true ||
+                    /bot|crawl|spider|slurp|preview|fetch|scan|headless/i.test(
+                        navigator.userAgent,
+                    );
                 const ping = (payload) => {
+                    if (isBot) return; // self-declared automation never pings;
+                    // the UA is checked in-browser and never stored (privacy posture)
                     try {
                         fetch(WORKER_URL + "/ping", {
                             method: "POST",
@@ -995,6 +1002,12 @@
                                 box.innerHTML = `<strong>Done.</strong> <a href="${esc(st.url)}">Open your ${label} →</a>
             <br><span style="color:#777; font-size:0.85rem;">Sources on every hop — provenance labels
             throughout, corrections welcome.</span>`;
+                            } else if (st.state === "rejected") {
+                                clearInterval(poll);
+                                box.innerHTML =
+                                    "<strong>We couldn't trace that.</strong> " +
+                                    esc(st.reason || "The input didn't look like a traceable claim.") +
+                                    " Try rephrasing it as a full statement and request again.";
                             } else if (st.state === "failed") {
                                 clearInterval(poll);
                                 box.innerHTML =

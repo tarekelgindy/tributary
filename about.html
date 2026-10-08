@@ -115,7 +115,10 @@
 </div>
 <script>
   // Same fire-and-forget view beacon as every page: CDN geo only, never IPs.
+  // Self-declared automation never pings — UA checked here, never stored.
   try {
+    if (!(navigator.webdriver === true ||
+          /bot|crawl|spider|slurp|preview|fetch|scan|headless/i.test(navigator.userAgent)))
     fetch("https://tributary-requests.tarek-elgindy.workers.dev/ping", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

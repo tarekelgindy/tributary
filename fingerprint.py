@@ -3727,6 +3727,28 @@ class FingerprintStore:
 # CLI
 # ---------------------------------------------------------------------------
 
+_GATE_SYSTEM = """You judge whether an input is a TRACEABLE CLAIM for a narrative-provenance tool — a statement (or a question about a statement) asserting something about the world whose origin and spread could be documented.
+traceable: full claims ("all Mexicans like tacos", "vaccines cause autism"), questions about claims ("do vaccines cause autism?", "where did the claim that X come from?"), named quotes and slogans.
+not traceable: bare keywords or topic names ("Iroquois"), ungrammatical fragments ("Mexican love tacos"), gibberish, a URL alone, instructions to the tool, or inputs with no assertable content.
+Be permissive at the margin: if a reasonable reader can state the claim the input intends, it is traceable.
+Output ONLY JSON: {"traceable": true|false, "why": "<= 12 words", "suggestion": "<a full-claim rephrasing if not traceable, else empty>"}"""
+
+
+def _claim_gate(text: str, model: str = "claude-haiku-4-5-20251001") -> dict:
+    """Pre-pipeline input gate — see the call site in _cli for the why."""
+    import anthropic
+    client = anthropic.Anthropic()
+    resp = client.messages.create(
+        model=model, max_tokens=200,
+        system=[{"type": "text", "text": _GATE_SYSTEM}],
+        messages=[{"role": "user", "content": json.dumps({"input": text})}])
+    out = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+    j = _parse_json_safe(out) or {}
+    if "traceable" not in j:
+        raise ValueError("gate returned no verdict")
+    return j
+
+
 async def _cli(args):
     gen = FingerprintGenerator(max_searches=args.max_searches,
                                deep_history=args.deep_history)
@@ -3864,6 +3886,24 @@ async def _cli(args):
         lex = await gen.generate_lexical(args.claim, context=args.context or "")
         print(json.dumps(lex.to_dict(), indent=2))
         return
+
+    # Claim-shape gate (2026-10-08, Decision Log): the second terse public
+    # query ("Mexican love tacos", after the one-word "Iroquois") burned a
+    # full generation on input that was never a claim. One ~$0.001 Haiku
+    # check before ANY pipeline spend; --force bypasses (maintainer lane);
+    # failure of the gate itself never blocks generation.
+    if args.save and not args.force:
+        verdict = None
+        try:
+            verdict = _claim_gate(args.claim)
+        except Exception as e:  # noqa: BLE001 — gate down ≠ request down
+            print(f"[claim gate unavailable ({type(e).__name__}) -> proceeding]",
+                  file=sys.stderr)
+        if verdict is not None and not verdict.get("traceable"):
+            print("GATE=rejected")
+            print(f"[not a traceable claim: {verdict.get('why', '')} — try: "
+                  f"{verdict.get('suggestion') or 'phrase it as a full statement'}]")
+            return
 
     # Generate L1 first; this is cheap (one Haiku call). The lexical signature
     # is the only thing dedup needs, so we can short-circuit before paying for

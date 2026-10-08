@@ -2041,6 +2041,16 @@ def main():
     subjects = collect_subjects(gallery, fpdir, only)
     index, rendered = [], 0
     for fid, subject in sorted(subjects.items()):
+        # Publication threshold (2026-10-08): a weak trace gets no card —
+        # cards are the artifact strangers judge the project by, and the
+        # share headline would dress a failed search as a finding.
+        try:
+            from publish import is_weak_trace
+            if is_weak_trace(subject):
+                print(f"[cards] {fid}: below the publication threshold — no card")
+                continue
+        except ImportError:
+            pass
         cd = card_data(fid, subject, asof)
         if not cd:
             continue

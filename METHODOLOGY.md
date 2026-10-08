@@ -84,6 +84,44 @@ Tributary's outputs are AI-generated, but the record is not AI-owned: readers ca
 
 ---
 
+## Publication threshold (what enters the public corpus)
+
+Not every request produces a publishable trace, and the instrument says so
+rather than dressing a failed search in a confident layout. Two gates, both
+introduced 2026-10-08 after real cases:
+
+- **Input gate.** Before any tracing spends, a cheap check asks whether the
+  input is a *traceable claim* — a statement (or question about one) whose
+  origin and spread could be documented. Bare keywords and fragments bounce
+  immediately with a rephrasing hint instead of producing a noise trace.
+  Claims are judged on shape, never on topic or viewpoint.
+- **Confidence gate.** A completed trace whose own layers report nothing
+  reliable — diffuse/unknown origin at low confidence *and* no idea lineage —
+  stays **reachable at its permalink** (the requester is owed their honest
+  result, which opens under a prominent low-confidence banner) but is **not
+  listed**: no corpus row, no search-index entry, no share card. The
+  threshold is deliberately conservative: an honest `earliest-found` result
+  at middling confidence is the product working, not a failure, and is
+  always listed. The maintainer can promote or demote any trace, with the
+  change visible in the file's history.
+
+This is curation of what we *amplify*, not of what we *answer* — the same
+distinction the rest of the record keeps between serving and endorsing.
+
+## What we refuse to trace
+
+Tributary traces public narratives. It does not accept requests that target
+**private individuals** — claims about people who are neither public figures
+nor voluntary participants in public debate — nor requests whose evident
+purpose is harassment, doxxing, or assembling information about a person
+rather than tracing a narrative. Claims about public figures and
+institutions remain traceable regardless of how uncomfortable they are;
+that is the mission, and discomfort is not a refusal criterion. Refusals of
+this kind are policy decisions, logged like any other decision, and the
+policy itself is public here — see also [INCIDENT_PROTOCOL.md](INCIDENT_PROTOCOL.md).
+
+---
+
 ## Error rate
 
 **Not yet measured.** A precision audit (manually verifying a random sample of ~50 attestations from the public corpus) is a committed roadmap item; the result — including the audit itself — will be published here. Until then, treat every figure above as carrying an unquantified error rate; that is precisely why the viewer shows verification badges per-citation instead of asking you to trust the whole.
