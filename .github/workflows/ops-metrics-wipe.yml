@@ -1,0 +1,26 @@
+# Manual maintenance: wipe the Worker's usage log (log: keys ONLY — rate
+# limits, queue, request statuses, contributions untouched). Introduced
+# 2026-10-08 to restart measurement cleanly after the new-domain crawler
+# wave. Runs only on explicit workflow_dispatch; the Worker route is
+# callback-secret-gated, so this job is the one place the wipe can be
+# triggered without handling the secret by hand.
+name: ops-metrics-wipe
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  wipe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Wipe the usage log
+        env:
+          WORKER_URL: ${{ secrets.WORKER_URL }}
+          CALLBACK_SECRET: ${{ secrets.CALLBACK_SECRET }}
+        run: |
+          set -euo pipefail
+          curl -sS -X POST "$WORKER_URL/metrics-wipe" \
+            -H "X-Callback-Secret: $CALLBACK_SECRET"
