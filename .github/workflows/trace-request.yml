@@ -151,6 +151,26 @@ jobs:
             # phrasing-only traces understate idea-older-than-phrasing
             # stories): ~$0.70/request, DAILY_CAP 10 -> ceiling ~$7/day.
             python fingerprint.py "$SUBJECT" --evidence --conceptual --save --max-searches 4 > out.json
+            # Claim-shape gate (2026-10-08): non-claim input (bare keywords,
+            # fragments) bounces BEFORE the pipeline spends — the requester
+            # gets the reason and a rephrasing hint, not a generic failure.
+            if grep -q '^GATE=rejected' out.json; then
+              REASON=$(grep -o '\[not a traceable claim:[^]]*\]' out.json | head -1 | sed 's/^\[//; s/\]$//' | cut -c1-240)
+              REASON_JSON=$(python -c 'import json,sys; print(json.dumps(sys.argv[1]))' "$REASON")
+              echo "::notice::gate rejected: $REASON"
+              if [ -n "${REQUEST_ID:-}" ]; then
+                curl -sS -X POST "$WORKER_URL/complete" \
+                  -H "Content-Type: application/json" \
+                  -H "X-Callback-Secret: $CALLBACK_SECRET" \
+                  -d "{\"id\":\"$REQUEST_ID\",\"state\":\"rejected\",\"reason\":$REASON_JSON}" || true
+              else
+                gh issue comment "$ISSUE_NUMBER" --body "We couldn't trace that: $REASON
+
+                Phrase the request as a full claim — e.g. \"all Mexicans like tacos\" rather than keywords — and open a new request."
+                gh issue close "$ISSUE_NUMBER" --reason "not planned"
+              fi
+              exit 0
+            fi
             ID=$(grep -o '\[saved fingerprint: [a-f0-9]*\]' out.json | tail -1 | grep -o '[a-f0-9]\{12\}' || true)
             # Match-and-serve outputs (judge-gated, polarity-aware since
             # 2026-09-25): a lexical or semantic hit serves an existing
@@ -192,8 +212,17 @@ jobs:
           # first production serve (2026-10-01) re-rendered it with CI
           # fallback fonts — overwriting the identity-styled published card
           # (stale-source disease #4, CORRECTIONS.md). Serves change nothing.
+          # Publication threshold (2026-10-08): a weak trace stays reachable
+          # at its permalink (the viewer banners it) but gets no card and no
+          # corpus/search listing (publish.py already excluded it above).
+          LISTED=1
+          if [ "$IS_EVENT" != "1" ] && [ -f "$REL" ]; then
+            LISTED=$(python -c "import json,sys; from publish import is_weak_trace; print(0 if is_weak_trace(json.load(open('$REL', encoding='utf-8'))) else 1)" || echo 1)
+          fi
           if [ "${SERVED:-0}" = "1" ]; then
             echo "served from cache - published card untouched"
+          elif [ "${LISTED:-1}" != "1" ]; then
+            echo "::notice::below publication threshold - reachable but unlisted, no card"
           elif [ "$IS_EVENT" != "1" ]; then
             python cards.py --fp "$ID" || echo "::warning::card render failed for $ID"
           else

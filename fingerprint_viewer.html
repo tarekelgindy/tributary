@@ -1029,8 +1029,11 @@ if (loadParam) {
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(data => {
       loadingDiv.hidden = true; errorDiv.textContent = ''; routeData(data);
-      // aggregate usage beacon (country-level via the Worker; no IP stored)
-      try { fetch(WORKER_URL + '/ping', { method: 'POST',
+      // aggregate usage beacon (country-level via the Worker; no IP stored);
+      // self-declared automation never pings — UA checked here, never stored
+      try { if (!(navigator.webdriver === true ||
+            /bot|crawl|spider|slurp|preview|fetch|scan|headless/i.test(navigator.userAgent)))
+        fetch(WORKER_URL + '/ping', { method: 'POST',
         headers: { 'Content-Type': 'application/json' }, keepalive: true,
         body: JSON.stringify({ type: 'view', path: loadParam.slice(0, 180) }) }).catch(() => {}); } catch (e) {}
     })
@@ -1877,6 +1880,36 @@ function render(fp) {
         Want the denial traced as its own narrative?
         <a href="index.html#up" style="color:#2a6fa3;font-weight:600;
         text-decoration:none;">Request a counter-trace →</a></div>`);
+  }
+
+  // Publication threshold (2026-10-08): mirrors publish.py is_weak_trace()
+  // — keep the two in sync. A trace whose own layers report nothing
+  // reliable stays reachable at this permalink but is unlisted from the
+  // corpus/search/cards, and the page must SAY so instead of dressing
+  // noise in the standard confident layout (the 'Mexican love tacos'
+  // lesson: the instrument knew it was lost; the page whispered).
+  document.getElementById('weak-banner')?.remove();
+  {
+    const glex = fp.genealogy?.lexical || {};
+    const gcon = fp.genealogy?.conceptual || {};
+    const lexLost = ['diffuse', 'unknown'].includes(String(glex.status || 'unknown'))
+      && Number(glex.attestation_confidence || 0) < 0.4;
+    const conLost = ['unknown', ''].includes(String(gcon.status || 'unknown'))
+      || !gcon.first_attested_date;
+    if (lexLost && conLost) {
+      document.querySelector('main')?.insertAdjacentHTML('beforebegin',
+        `<div id="weak-banner" style="max-width:1160px;margin:0.9rem auto 0;
+          padding:0.8rem 1.2rem;background:#fbeaea;border:1px solid #d9a0a0;
+          border-radius:10px;font-size:0.92rem;color:#5e2b2b;">
+          <strong>Low-confidence trace — treat as a failed search, not a finding.</strong>
+          The instrument could not establish a reliable origin for this input
+          (status: ${escapeHtml(String(glex.status || 'unknown'))}, confidence
+          ${Number(glex.attestation_confidence || 0).toFixed(2)}; no idea
+          lineage). It often means the input wasn't a traceable claim — try
+          rephrasing it as a full statement, e.g. “all Mexicans like tacos”
+          rather than a few keywords. This page stays reachable at its link
+          but is not listed in the public corpus.</div>`);
+    }
   }
 
   const meta = document.getElementById('meta-bar');

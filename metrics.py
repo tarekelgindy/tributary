@@ -71,6 +71,29 @@ def region_label(r):
     return f'{r["region"]}, {c}' if r.get("region") else f"{c} (no region)"
 
 
+# Paths a scanner fleet hits; deeper paths (corpus, viewer loads) and any
+# search/request/contribution are treated as human signal.
+SHALLOW_PATHS = {"", "/", "/index.html"}
+
+
+def crawler_buckets(records):
+    """Region-day buckets that look like scanner fleets: view events only,
+    shallow paths only. Deliberately coarse — the log stores no UA, IP, or
+    session (privacy posture), so bot classification can only be aggregate.
+    A lone human who views just the homepage from a new region is the
+    accepted cost; --all shows everything. (The new-domain burst of
+    2026-10-06 — certificate-transparency scanners — is the motivating case.)"""
+    buckets = {}
+    for r in records:
+        key = ((r.get("t") or "")[:10], region_label(r))
+        b = buckets.setdefault(key, {"types": set(), "paths": set()})
+        b["types"].add(r.get("type"))
+        if r.get("type") == "view":
+            b["paths"].add(r.get("path") or "/")
+    return {k for k, b in buckets.items()
+            if b["types"] == {"view"} and b["paths"] <= SHALLOW_PATHS}
+
+
 def regions_table(all_records, windowed):
     """Day × region: how usage spreads. first-seen is computed over the FULL
     log (not the window) so (NEW) marks a region's first-ever appearance."""
@@ -89,7 +112,15 @@ def regions_table(all_records, windowed):
         rows = by_day[day]
         tmix = " · ".join(f"{k}: {n}" for k, n in
                           Counter(r["type"] for r in rows).most_common())
-        print(f"{day}  {len(rows):>4} events   ({tmix})")
+        # Depth = the aggregate human-vs-bot signal we can honestly compute
+        # without sessions: distinct paths viewed, plus any deeper activity.
+        paths = {r.get("path") or "/" for r in rows if r["type"] == "view"}
+        depth = f"paths: {len(paths)}"
+        if any(r["type"] == "search" for r in rows):
+            depth += " · searched"
+        if any(r["type"] in ("request", "contribution") for r in rows):
+            depth += " · requested"
+        print(f"{day}  {len(rows):>4} events   ({tmix})   [{depth}]")
         regions = Counter(region_label(r) for r in rows)
         parts = [f"{lbl}: {n}" + (" (NEW)" if first_seen.get(lbl) == day else "")
                  for lbl, n in regions.most_common()]
@@ -104,6 +135,8 @@ def main():
     ap.add_argument("--raw", action="store_true", help="dump raw JSON lines")
     ap.add_argument("--regions", action="store_true",
                     help="day-by-day usage per region, (NEW) on first appearance")
+    ap.add_argument("--all", action="store_true",
+                    help="include likely-crawler region-days (filtered by default)")
     args = ap.parse_args()
 
     all_records = fetch_all(load_secret())
@@ -114,9 +147,19 @@ def main():
         records = [r for r in records if (r.get("t") or "") >= floor]
 
     if args.raw:
-        for r in records:
+        for r in records:                      # raw stays raw — never filtered
             print(json.dumps(r, ensure_ascii=False))
         return
+
+    if not args.all:
+        bots = crawler_buckets(records)
+        if bots:
+            before = len(records)
+            records = [r for r in records
+                       if ((r.get("t") or "")[:10], region_label(r)) not in bots]
+            print(f"[filtered {before - len(records)} likely-crawler events "
+                  f"across {len(bots)} region-days (views-only, homepage-only); "
+                  f"--all to include]\n", file=sys.stderr)
 
     if not records:
         print("No usage records yet (logging starts when the updated Worker "

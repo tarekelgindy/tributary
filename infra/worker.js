@@ -110,7 +110,11 @@ export default {
       if (!body || !body.id) return json({ error: "bad request" }, 400, h);
       const raw = await env.STATUS.get("req:" + body.id);
       const rec = raw ? JSON.parse(raw) : {};
-      rec.state = body.state === "done" ? "done" : "failed";
+      // "rejected" (2026-10-08) = the claim-shape gate bounced the input;
+      // the site shows the reason instead of a misleading generic failure.
+      rec.state = body.state === "done" ? "done"
+                : body.state === "rejected" ? "rejected" : "failed";
+      if (body.reason) rec.reason = String(body.reason).slice(0, 300);
       if (body.url) rec.url = String(body.url).slice(0, 500);
       if (body.served) rec.served = true;
       rec.finished = new Date().toISOString();

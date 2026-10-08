@@ -28,6 +28,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 
 
+def is_weak_trace(fp: dict) -> bool:
+    """Publication threshold (2026-10-08, Decision Log): a trace whose own
+    layers report they found nothing reliable stays REACHABLE at its
+    permalink but is NOT listed — no corpus row, no search-index entry, no
+    share card; the viewer opens it under a low-confidence banner
+    (fingerprint_viewer.html mirrors this predicate client-side — keep in
+    sync). Conservative and conjunctive on purpose: an honest
+    earliest-found trace at middling confidence is the product working,
+    not a failure. Calibrated over every published trace at introduction;
+    exactly one tripped (the 'Mexican love tacos' folk-stereotype query)."""
+    gen = fp.get("genealogy") or {}
+    lex = gen.get("lexical") or {}
+    con = gen.get("conceptual") or {}
+    lex_lost = (str(lex.get("status") or "unknown") in ("diffuse", "unknown")
+                and float(lex.get("attestation_confidence") or 0) < 0.4)
+    con_lost = (str(con.get("status") or "unknown") in ("unknown", "")
+                or not con.get("first_attested_date"))
+    return lex_lost and con_lost
+
+
 def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     out_events = gallery_dir / "events"
     out_events.mkdir(parents=True, exist_ok=True)
@@ -79,10 +99,14 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     # Upstream origin traces get the same treatment (corpus.html lists both
     # directions since 2026-09-25): derived from gallery/traces/, newest first.
     traces = []
+    unlisted = 0
     for p in sorted((gallery_dir / "traces").glob("*.json")):
         try:
             fp = json.loads(p.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
+            continue
+        if is_weak_trace(fp):
+            unlisted += 1
             continue
         gen = fp.get("genealogy") or {}
         lex = gen.get("lexical") or {}
@@ -104,7 +128,7 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     (gallery_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False), encoding="utf-8")
     build_search_index(gallery_dir)
-    return {"published": len(entries), "skipped": skipped}
+    return {"published": len(entries), "skipped": skipped, "unlisted": unlisted}
 
 
 def build_search_index(gallery_dir: Path) -> int:
@@ -142,6 +166,8 @@ def build_search_index(gallery_dir: Path) -> int:
                 doc = json.loads(p.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, OSError):
                 continue
+            if doc.get("fingerprint_id") and is_weak_trace(doc):
+                continue   # below the publication threshold: reachable, unlisted
             if doc.get("fingerprint_id") and doc.get("lexical"):
                 items.append({
                     "kind": "trace",
@@ -172,7 +198,9 @@ def main():
     args = p.parse_args()
     rep = publish(Path(args.events_dir), Path(args.gallery_dir), args.min_framings)
     print(f"[publish] {rep['published']} events -> {args.gallery_dir} "
-          f"({rep['skipped']} skipped: no framings / not event JSON). "
+          f"({rep['skipped']} skipped: no framings / not event JSON; "
+          f"{rep.get('unlisted', 0)} trace(s) below the publication threshold, "
+          f"reachable but unlisted). "
           f"Now: git add gallery/ && git commit && git push", file=sys.stderr)
 
 
