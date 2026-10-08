@@ -368,6 +368,26 @@ export default {
       return json({ ok: true }, 200, h);
     }
 
+    if (url.pathname === "/metrics-wipe" && request.method === "POST") {
+      // Maintainer-only fresh start (2026-10-08, Tarek's call after the
+      // new-domain crawler wave polluted the early log): deletes ONLY the
+      // usage log records (log: prefix) — rate-limit counters, queue
+      // entries, request statuses, and contributions are untouched.
+      if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
+        return json({ error: "forbidden" }, 403, h);
+      let deleted = 0, cursor;
+      while (true) {
+        const list = await env.STATUS.list({ prefix: "log:", limit: 1000, cursor });
+        for (const k of list.keys) {
+          await env.STATUS.delete(k.name);
+          deleted += 1;
+        }
+        if (list.list_complete) break;
+        cursor = list.cursor;
+      }
+      return json({ ok: true, deleted }, 200, h);
+    }
+
     if (url.pathname === "/metrics" && request.method === "GET") {
       if (request.headers.get("X-Callback-Secret") !== env.CALLBACK_SECRET)
         return json({ error: "forbidden" }, 403, h);
