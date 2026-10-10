@@ -2044,9 +2044,13 @@ def main():
         # Publication threshold (2026-10-08): a weak trace gets no card —
         # cards are the artifact strangers judge the project by, and the
         # share headline would dress a failed search as a finding.
+        # NB subject is the {fp, event, row} wrapper — the predicate takes
+        # the fingerprint itself (2026-10-09: passing the wrapper classified
+        # EVERY trace weak and silently stopped all card rendering for a
+        # day; the guard's test had only covered the trip case).
         try:
             from publish import is_weak_trace
-            if is_weak_trace(subject):
+            if is_weak_trace(subject.get("fp") or {}):
                 print(f"[cards] {fid}: below the publication threshold — no card")
                 continue
         except ImportError:
