@@ -231,12 +231,46 @@ jobs:
 
           git config user.name "tributary-trace-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add gallery
-          # a served-from-cache hit changes nothing -> nothing to commit
-          if ! git diff --cached --quiet; then
+          # Push with re-derivation retry (2026-10-09): concurrent runs ALWAYS
+          # conflict in the derived index files (every run rewrites them), and
+          # the old bare `pull --rebase` died on it — a finished $0.70 trace
+          # was lost exactly this way. A conflict here means "derived against
+          # a stale gallery": reset to the remote's truth, restore this run's
+          # own artifacts (still in the gitignored staging dirs), re-derive,
+          # commit again. The trace file itself is additive and never truly
+          # conflicts.
+          PUSHED=0
+          for attempt in 1 2 3; do
+            git add gallery
+            # a served-from-cache hit changes nothing -> nothing to commit
+            if git diff --cached --quiet; then
+              PUSHED=1
+              break
+            fi
             git commit -m "Trace request ${ISSUE_NUMBER:+#$ISSUE_NUMBER }${REQUEST_ID:+[$REQUEST_ID] }: $SUBJECT ($REL)"
-            git pull --rebase origin main
-            git push origin main
+            if git pull --rebase origin main && git push origin main; then
+              PUSHED=1
+              break
+            fi
+            echo "::warning::push attempt $attempt hit a concurrent-publish race - re-deriving against the latest gallery"
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            if [ "$IS_EVENT" != "1" ] && [ -f "fingerprints/$ID.json" ]; then
+              cp "fingerprints/$ID.json" "gallery/traces/$ID.json"
+            fi
+            # events re-enter gallery via publish.py's staging copy
+            python publish.py
+            if [ "${SERVED:-0}" != "1" ] && [ "${LISTED:-1}" = "1" ]; then
+              if [ "$IS_EVENT" != "1" ]; then
+                python cards.py --fp "$ID" || true
+              else
+                python cards.py --event "$ID" || true
+              fi
+            fi
+          done
+          if [ "$PUSHED" != "1" ]; then
+            say "Publishing hit a persistent race - a maintainer will look at the run log."
+            exit 1
           fi
 
           URL="https://tributary.tools/fingerprint_viewer.html?load=$REL"
