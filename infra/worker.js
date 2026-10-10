@@ -211,7 +211,45 @@ export default {
         dispatched += 1;
         await env.STATUS.put(dayKey, String(used), { expirationTtl: 2 * 86400 });
       }
-      return json({ dispatched, left_in_queue: keys.length - dispatched }, 200, h);
+
+      // Stale-request sweeper (2026-10-09): a burst of requests can get a
+      // pending CI run silently CANCELLED (GitHub keeps only ONE pending
+      // run per concurrency group — found live when "Nuclear energy is
+      // safe" vanished), stranding its request in state "running" forever.
+      // Any running request with no callback after 30 minutes re-dispatches
+      // ONCE; no budget double-count (the slot was taken at intake), and
+      // match-and-serve makes the retry cheap if the first run actually
+      // published before dying.
+      let swept = 0;
+      const reqs = await env.STATUS.list({ prefix: "req:", limit: 1000 });
+      for (const k of reqs.keys) {
+        const rraw = await env.STATUS.get(k.name);
+        if (!rraw) continue;
+        const rec = JSON.parse(rraw);
+        if (rec.state !== "running" || rec.retried || !rec.subject) continue;
+        const started = Date.parse(rec.dequeued || rec.created || "");
+        if (!started || Date.now() - started < 30 * 60 * 1000) continue;
+        const rd = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + env.GITHUB_PAT,
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "tributary-request-worker",
+          },
+          body: JSON.stringify({
+            event_type: "trace-request",
+            client_payload: { subject: rec.subject, kind: rec.kind,
+                              request_id: k.name.slice(4) },
+          }),
+        });
+        if (rd.status !== 204) break;
+        rec.retried = true;
+        rec.redispatched = new Date().toISOString();
+        await env.STATUS.put(k.name, JSON.stringify(rec), { expirationTtl: 7 * 86400 });
+        swept += 1;
+      }
+      return json({ dispatched, swept,
+                    left_in_queue: keys.length - dispatched }, 200, h);
     }
 
     if (url.pathname === "/request" && request.method === "POST") {
