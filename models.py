@@ -1303,6 +1303,10 @@ class SharedFoundation:
     verified_facts: list[SharedFact] = field(default_factory=list)
     unverified_shared_claims: list[SharedFact] = field(default_factory=list)
     points_of_disagreement: list[str] = field(default_factory=list)
+    # Additive since 2026-10-11: each disagreement with WHICH framings it is
+    # between ({statement, between: [framing names]}); points_of_disagreement
+    # stays the plain-string list every existing surface renders.
+    disagreements_detail: list[dict] = field(default_factory=list)
     summary: str = ""
 
     def to_dict(self):
@@ -1310,6 +1314,7 @@ class SharedFoundation:
             "verified_facts": [f.to_dict() for f in self.verified_facts],
             "unverified_shared_claims": [f.to_dict() for f in self.unverified_shared_claims],
             "points_of_disagreement": self.points_of_disagreement,
+            "disagreements_detail": self.disagreements_detail,
             "summary": self.summary,
         }
 
@@ -1384,6 +1389,8 @@ class NarrativeFraming:
     fingerprintable (link via fingerprint_id)."""
     framing_id: str = ""
     name: str = ""                   # "Accountability"
+    short_label: str = ""            # 3-6 word headline-safe handle (2026-10-11,
+                                     # the denser-visuals unlock; "" on old JSON)
     question: str = ""               # "Was this lawful? Who is responsible?"
     key_claim: str = ""              # the narrative statement (this is what gets fingerprinted)
     description: str = ""
@@ -1405,6 +1412,7 @@ class NarrativeFraming:
         return {
             "framing_id": self.framing_id,
             "name": self.name,
+            "short_label": self.short_label,
             "question": self.question,
             "key_claim": self.key_claim,
             "description": self.description,
