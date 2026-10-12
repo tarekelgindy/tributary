@@ -152,6 +152,12 @@ DO NOT include:
 - Articles or speeches that "imply" the framing but don't use it lexically
 - Modern commentary that retroactively paraphrases an older text with the
   diagnostic n-grams (the older text didn't use them)
+- Fiction (novels, films, TV episodes, satire) whose PLOT depicts the
+  claim's content: fiction portrays, it does not assert. A story about a
+  faked moon landing is not an attestation of the claim that the landing
+  was faked. If genuinely load-bearing background, report it with
+  claim_relation="related-context" and role "mention" — never as an
+  attestation, never as the earliest entry.
 
 The test: if a reader saw your `exact_quote`, would they directly read one
 of the diagnostic n-grams (or a clear lexical synonym) in it? If not, the
@@ -197,6 +203,25 @@ For each instance you find, report:
                     See role definitions below.
   role_evidence     one-sentence justification for the assigned role
 
+CLAIM POLARITY (read this before assigning any role):
+First decide what the traced claim IS: an affirmation, or itself a
+DENIAL/REBUTTAL of some other claim X ("X does not cause Y", "X is a
+myth", "there is no evidence that X").
+- On an affirmation trace, the role rules below apply as written — and
+  debunking/fact-checking sources are INCLUDED here as critic entries.
+  Never omit them as "belonging to the rebuttal's own trace": the traced
+  claim's log is where its pushback history lives (the "first documented
+  pushback" milestone depends on these entries).
+- On a rebuttal trace they INVERT: a source debunking X is ASSERTING the
+  traced claim — a medical explainer or fact-check page debunking the
+  myth is institutional-adoption (or an amplifier) OF THIS REBUTTAL, not
+  critic. "Critic" on a rebuttal trace means a source disputing the
+  rebuttal itself — i.e., one asserting X. Every role is assigned
+  RELATIVE TO THE TRACED CLAIM, never relative to X.
+  (Recorded failure this rule prevents: on the trace of "vaccines do not
+  cause autism", the Mayo Clinic page asserting that rebuttal verbatim
+  was labeled critic.)
+
 Amplifier role definitions:
   originator              coined or first articulated the framing — assign
                           ONLY when there is evidence of actual coining or
@@ -206,6 +231,12 @@ Amplifier role definitions:
                           knowledge, it is NOT the originator — tag it
                           early-amplifier or mention and say in evidence
                           that the true origin predates the record.
+                          A text that DOCUMENTS a pre-existing tradition
+                          (especially an oral one) is its documenter, not
+                          its originator. But when one instance both
+                          COINED the framing and drove its spread, it is
+                          the originator — origination outranks the
+                          instance's subsequent reach.
   early-amplifier         spread the framing before mainstream uptake
   mass-amplifier          drove broad public adoption (e.g. viral campaign,
                           national TV speech, viral op-ed)
@@ -216,14 +247,20 @@ Amplifier role definitions:
                           and university health explainers, science-desk
                           Q&As, and any "Myth or Fact?" page are critic even
                           when their tone is neutral — examining is not
-                          adopting.
+                          adopting. (All relative to the TRACED claim — on
+                          a rebuttal trace, an institution stating the
+                          rebuttal as its own position IS adoption; see
+                          CLAIM POLARITY.)
   critic                  pushed back, fact-checked, examined, or rebutted
-                          the framing. ANY source whose function is checking
-                          or debunking the claim belongs here — fact-check
-                          sites, mythbuster columns, medical debunkings —
-                          even though such sources repeat the phrasing.
-                          When in doubt between critic and amplifier for a
-                          source that disputes the claim, choose critic.
+                          THE TRACED CLAIM. ANY source whose function is
+                          checking or debunking the traced claim belongs
+                          here — fact-check sites, mythbuster columns,
+                          medical debunkings — even though such sources
+                          repeat the phrasing. When in doubt between critic
+                          and amplifier for a source that disputes the
+                          traced claim, choose critic. (On a rebuttal
+                          trace, debunking X is asserting the claim, not
+                          criticizing it — see CLAIM POLARITY.)
   mention                 used the framing in passing without driving spread
 
 Assign exactly one role per instance. Use evidence-based judgement, not
@@ -264,12 +301,29 @@ Search strategy:
 - Be skeptical: if you find something dated before {proposed_date}, verify the
   date independently before reporting
 
+FICTION IS NOT ATTESTATION: a novel, film, episode, or satire whose plot
+DEPICTS the claim's content does not assert the claim. Never report
+fiction as an earlier instance; if it is genuinely load-bearing
+background, report it with claim_relation="related-context" and role
+"mention" — never as an origin. (Recorded failures this rule prevents: a
+1955 science-fiction story crowned originator of the moon-hoax idea;
+Capricorn One and two mockumentaries admitted as asserting entries.)
+
 For each pre-{proposed_date} instance you find, report the same fields as a
 normal attestation (date, source_url, source_title, author, lexical_form_seen,
 exact_quote, confidence, evidence, amplifier_role, role_evidence) and
-explicitly explain in `evidence` why you trust the date. An earlier-found
-instance almost always gets amplifier_role="originator" (it predates what
-was thought to be the origin) — but use judgement.
+explicitly explain in `evidence` why you trust the date. Role discipline
+for earlier finds: amplifier_role="originator" ONLY with evidence of
+actual coining or first articulation — internal (the text presents the
+claim as its own new assertion) or external (historiography documents it
+as the first articulation, with no earlier articulation documented
+anywhere). Either kind of evidence suffices. If the text instead treats
+the framing as existing belief, or documents a pre-existing (especially
+oral) tradition, it is early-amplifier or mention, with a note that the
+true origin predates the record. Roles are assigned relative to
+the TRACED claim: if the traced claim is itself a rebuttal of some X,
+sources debunking X assert the claim (see the main pass's CLAIM POLARITY
+rule), they are not critics of it.
 
 CRITICAL — STRUCTURED REPORTING:
 If you find an earlier instance, you MUST include it as a structured entry
@@ -376,6 +430,23 @@ religious traditions, or pre-modern texts by default. If genuinely
 foundational older material matters, include at most one or two entries
 tagged claim_relation="related-context" — never as the chain's origin.
 
+INSTANCE vs THESIS (critical): when the traced claim is a SPECIFIC claim
+— a statistic, a dated event, a named-person allegation — "the same
+structural claim" means earlier claims OF THAT FORM: the tradition of
+making this kind of specific claim. It does NOT mean the broad doctrine
+the claim could serve as evidence for. A wealth statistic's ancestors are
+earlier quantitative wealth-measurement claims, not the general theory of
+capital accumulation; a specific scandal allegation's ancestors are
+earlier allegations of that type, not the doctrine that power corrupts.
+The test: does the ancestor make claims OF THE SAME FORM — different
+numbers, years, or subjects still count ("top 1% incomes grew X% from tax
+data" is the same claim-form as a billionaire-earnings statistic, so it
+ASSERTS the tradition). Only a text holding the worldview this claim fits
+WITHOUT making claims of its form is claim_relation="related-context" —
+and such a text is NEVER the chain's origin or earliest entry. (Recorded
+failure this rule prevents: "the poorest California billionaire makes
+$300M a year" traced to Marx's Capital, 1867, as its single-origin.)
+
 Cover the range from the current wave's beginnings through the present.
 Modern contributors (last 20 years) are AS IMPORTANT as earlier ones.
 
@@ -449,9 +520,17 @@ For each direct contributor, report:
                     or first articulation, and to AT MOST ONE instance. If
                     the earliest contributor already treats the idea as
                     established, tag it early-amplifier and note that the
-                    origin predates the record. Do not assign "originator"
-                    to Marx's Capital if an older ancestor (e.g. Smith,
-                    Aristotle, Ibn Khaldun) is also in your chain.
+                    origin predates the record. A text that DOCUMENTS a
+                    pre-existing tradition — especially an oral one — is
+                    the tradition's documenter, not its originator: tag it
+                    early-amplifier or mention and record in evidence that
+                    it documents older material. (Recorded failure: Arthur
+                    Parker's 1916 transcription of the Haudenosaunee
+                    seven-generations principle labeled originator of a
+                    centuries-old oral teaching.) Do not assign
+                    "originator" to Marx's Capital if an older ancestor
+                    (e.g. Smith, Aristotle, Ibn Khaldun) is also in your
+                    chain.
 
                     Role definitions:
                       originator              = evidenced coining; at most one
@@ -482,7 +561,16 @@ Distinctions:
   claim's era, in vocabulary OTHER than the diagnostic n-grams
 - ADJACENT: related but a different claim — skip entirely, or include as
   claim_relation="related-context" ONLY if genuinely load-bearing context
+- DOCTRINE: asserts the broad worldview this claim fits, not a claim of
+  this form — related-context at most (see INSTANCE vs THESIS)
+- FICTION: depicts the claim's content in a story — fiction portrays, it
+  does not assert; related-context with role "mention" at most, never an
+  asserting ancestor, never the earliest entry
 - LEXICAL: uses the diagnostic n-grams — skip (belongs in lexical chain)
+
+Roles are assigned relative to the TRACED claim: if the claim is itself a
+rebuttal of some X, texts arguing against X are asserting this claim's
+tradition, not criticizing it.
 
 Return JSON:
 
@@ -520,12 +608,27 @@ reach into antiquity or pre-modern traditions by default: resemblance
 across centuries is not transmission, and a distant-era text is at most
 claim_relation="related-context", never an origin.
 
+INSTANCE vs THESIS: if the traced claim is a SPECIFIC claim (a statistic,
+a dated event, a named-person allegation), an earlier text asserting the
+broad DOCTRINE the claim fits is NOT an earlier articulation — the same
+structural claim means claims of the same FORM. Doctrine is
+claim_relation="related-context" at most, never an earlier ancestor.
+
+FICTION IS NOT ATTESTATION: a story depicting the claim's content does
+not assert it. Never report fiction as an earlier ancestor; at most
+related-context with role "mention". (Recorded failures: a 1955
+science-fiction story, a Twilight Zone episode, and the film Her all
+admitted as asserting ancestors of claims their plots merely depict.)
+
 For each pre-{proposed_date} direct ancestor you find, report the standard
 fields (date, source_url, source_title, author, lexical_form_seen,
 exact_quote, confidence, evidence, amplifier_role, role_evidence) and
 explain in evidence why this articulates the SAME structural claim, not
-merely a related idea. An earlier-found ancestor almost always gets
-amplifier_role="originator" — but use judgement.
+merely a related idea. Role discipline for earlier finds:
+amplifier_role="originator" ONLY with evidence of actual coining or first
+articulation. A text that already treats the idea as established, or that
+documents a pre-existing (especially oral) tradition, is early-amplifier
+or mention, with a note that the origin predates the record.
 
 CRITICAL — STRUCTURED REPORTING:
 If you find an earlier ancestor, you MUST include it as a structured entry
@@ -3075,6 +3178,7 @@ Output ONLY JSON:
   "framings": [
     {
       "name": "Accountability",
+      "short_label": "3-6 word headline-safe handle for this framing (e.g. \\"Who approved this?\\")",
       "question": "the underlying question this lens asks",
       "key_claim": "the narrative statement this framing asserts (one sentence, fingerprintable)",
       "description": "1-2 sentences on what this framing is",
@@ -3128,8 +3232,14 @@ Output ONLY JSON:
   "verified_facts": [{"statement": "...", "source_url": "...", "note": ""}],
   "unverified_shared_claims": [{"statement": "...", "note": "why unverified"}],
   "points_of_disagreement": ["..."],
+  "disagreements_detail": [{"statement": "same disagreement, restated once", "between": ["Framing name", "Framing name"]}],
   "summary": "1-2 sentences on the shared foundation beneath the disagreement"
 }
+
+disagreements_detail mirrors points_of_disagreement one-to-one and adds
+WHICH framings (by their names) each disagreement is actually between —
+name only the framings genuinely on opposing sides of that point, not
+every framing that mentions the topic.
 """
 
 
@@ -3466,6 +3576,7 @@ class EventAnalyzer:
             headlines = [h for h in (fr.get("sample_headlines") or []) if h]
             framings.append(NarrativeFraming(
                 name=_clean_text_field(fr.get("name")),
+                short_label=_clean_text_field(fr.get("short_label")),
                 question=_clean_text_field(fr.get("question")),
                 key_claim=_clean_text_field(fr.get("key_claim")),
                 description=_clean_text_field(fr.get("description")),
@@ -3510,6 +3621,11 @@ class EventAnalyzer:
             verified_facts=_facts(d.get("verified_facts"), True),
             unverified_shared_claims=_facts(d.get("unverified_shared_claims"), False),
             points_of_disagreement=[str(p).strip() for p in (d.get("points_of_disagreement") or []) if p],
+            disagreements_detail=[
+                {"statement": str(x.get("statement", "")).strip(),
+                 "between": [str(b).strip() for b in (x.get("between") or []) if b]}
+                for x in (d.get("disagreements_detail") or [])
+                if isinstance(x, dict) and str(x.get("statement", "")).strip()],
             summary=_clean_text_field(d.get("summary")),
         )
 
@@ -3727,6 +3843,19 @@ class FingerprintStore:
 # CLI
 # ---------------------------------------------------------------------------
 
+_NEG_TOKENS = {"not", "no", "never", "cannot", "cant", "dont", "doesnt",
+               "didnt", "isnt", "arent", "wasnt", "werent", "wont", "without"}
+
+
+def _negation_parity(text: str) -> int:
+    """Crude negation-count parity, used ONLY to order dedup candidates so
+    same-polarity matches get judged first (the stopword-stripped signature
+    is negation-blind — recorded 2026-07-10 on the vaccines pair). Never a
+    serve decision by itself; the polarity judge rules on every serve."""
+    words = re.findall(r"[a-z]+", text.lower().replace("'", ""))
+    return sum(1 for w in words if w in _NEG_TOKENS) % 2
+
+
 _GATE_SYSTEM = """You judge whether an input is a TRACEABLE CLAIM for a narrative-provenance tool — a statement (or a question about a statement) asserting something about the world whose origin and spread could be documented.
 traceable: full claims ("all Mexicans like tacos", "vaccines cause autism"), questions about claims ("do vaccines cause autism?", "where did the claim that X come from?"), named quotes and slogans.
 not traceable: bare keywords or topic names ("Iroquois"), ungrammatical fragments ("Mexican love tacos"), gibberish, a URL alone, instructions to the tool, or inputs with no assertable content.
@@ -3918,6 +4047,14 @@ async def _cli(args):
         # precision, kept as the first line of dedup.
         candidates = store.find_matching_all(lexical)
         if candidates and not args.force:
+            # Negation-parity ordering (2026-10-11): the signature is
+            # negation-blind, so a claim and its published rebuttal collide.
+            # Judge same-parity candidates first — the same-polarity serve is
+            # found on the first call instead of after a banner detour. The
+            # judge still decides every serve; this only orders the queue.
+            qp = _negation_parity(args.claim)
+            candidates.sort(key=lambda fid: _negation_parity(
+                (store.index.get(fid) or {}).get("canonical_phrase", "")) != qp)
             # Polarity guard (2026-09-25): the stopword-stripped signature is
             # negation-blind — "X does not cause Y" collides with "X causes Y"
             # (recorded 2026-07-10 on the vaccines pair, Decision Log). A
