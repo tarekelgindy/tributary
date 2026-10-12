@@ -1912,6 +1912,31 @@ function render(fp) {
     }
   }
 
+  // No-web-history note (2026-10-11, Tarek's call after a claim born on X
+  // traced to "0 phrasings" with no explanation): an empty phrasing lineage
+  // is ambiguous between "brand new", "born on social media we don't
+  // index", and "too niche" — the page must explain the instrument's
+  // coverage boundary instead of showing a bare zero.
+  document.getElementById('noweb-banner')?.remove();
+  {
+    const lexlog = (fp.genealogy?.lexical?.attestation_log || [])
+      .filter(i => (i.claim_relation || '') !== 'related-context');
+    if (lexlog.length === 0 && !document.getElementById('weak-banner')) {
+      document.querySelector('main')?.insertAdjacentHTML('beforebegin',
+        `<div id="noweb-banner" style="max-width:1160px;margin:0.9rem auto 0;
+          padding:0.8rem 1.2rem;background:#eaf1f7;border:1px solid #a9c4d8;
+          border-radius:10px;font-size:0.92rem;color:#1f4257;">
+          <strong>No prior uses of this phrasing were found on the public web.</strong>
+          Tributary searches the open internet — not social platforms. A claim
+          that began on X, TikTok, Reddit threads, or private groups can show
+          no web history here: it may be very new, socially born, or both.
+          Any idea lineage below traces the <em>tradition</em> this claim
+          draws on, not this specific formulation. If you saw this claim
+          somewhere, add that source via “Add what we missed” below — reader
+          contributions carry the hops the crawler can't reach.</div>`);
+    }
+  }
+
   const meta = document.getElementById('meta-bar');
   meta.innerHTML = '';
   addMetaText(meta, 'narrative trace');
