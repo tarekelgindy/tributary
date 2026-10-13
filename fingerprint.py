@@ -447,6 +447,27 @@ and such a text is NEVER the chain's origin or earliest entry. (Recorded
 failure this rule prevents: "the poorest California billionaire makes
 $300M a year" traced to Marx's Capital, 1867, as its single-origin.)
 
+REFERENT BOUND (the other half of INSTANCE vs THESIS): the same-form rule
+above applies ONLY to claims without a unique referent. A referent is
+PROPER-NAMED: an actual title or name ("Milo and Otis", "the Apollo 11
+landing", "Wakefield's 1998 paper"). A descriptive designation ("the
+poorest billionaire in California", "a nurse in Texas") names a category
+slot, not a referent — such claims are form-general and follow the
+same-form rule above. When the traced claim IS about one proper-named
+referent — a specific film, book, product, event, or a named person's
+specific act — asserting requires the SAME referent, and there is a hard logical bound: nothing that predates the
+referent's existence, or that does not concern the referent, can assert
+a claim about it. Same-form claims about OTHER referents ("animals were
+harmed filming <some other movie>") are the claim's TRADITION — its
+precedents. Include the genuinely load-bearing ones with
+claim_relation="related-context", open their evidence field with
+"Precedent:", and never let one anchor the lineage or carry the earliest
+entry. If no same-referent articulation in other vocabulary exists, an
+empty asserting lineage is the correct result — the idea and the phrasing
+coincide for such claims. (Recorded failure this rule prevents: "animals
+were abused during the filming of Milo and Otis" — a 1986 film — opened
+its idea lineage with a 1903 Edison entry marked as asserting.)
+
 Cover the range from the current wave's beginnings through the present.
 Modern contributors (last 20 years) are AS IMPORTANT as earlier ones.
 
@@ -613,6 +634,14 @@ a dated event, a named-person allegation), an earlier text asserting the
 broad DOCTRINE the claim fits is NOT an earlier articulation — the same
 structural claim means claims of the same FORM. Doctrine is
 claim_relation="related-context" at most, never an earlier ancestor.
+
+REFERENT BOUND: when the traced claim is about ONE NAMED REFERENT (a
+specific film, book, event, or named person's act), nothing predating
+the referent's existence — and nothing not about the referent — can be
+an earlier articulation of it. Same-form claims about other referents
+are precedents: claim_relation="related-context" at most, never an
+earlier ancestor. For such claims a clean negative result is expected
+and correct.
 
 FICTION IS NOT ATTESTATION: a story depicting the claim's content does
 not assert it. Never report fiction as an earlier ancestor; at most

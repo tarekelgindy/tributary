@@ -2903,12 +2903,20 @@ function renderOverview(fp) {
   // Identity: first-party entries are their URL; secondhand-cited entries
   // (cited_via) are their TITLE — five print articles documented via one
   // Snopes page are five documents, not one.
+  // Trace vs context (2026-10-12, Tarek's split): the claim's own genealogy
+  // and the material that merely INFORMS it — precedents about other
+  // referents, doctrine, fiction, deep background — are different products.
+  // Context gets its own section below; it never pads the trace's counts.
+  const lexMain = lexLog.filter(i => !isRelatedContext(i));
+  const conMain = conLog.filter(i => !isRelatedContext(i));
+  const ctxAll = lexLog.concat(conLog).filter(isRelatedContext).slice().sort(byDateAsc);
   const docKey = i => citedViaOf(i)
     ? 't:' + (i.source_title || '') : 'u:' + (i.source_url || i.source_title || '');
-  const distinctDocs = new Set(lexLog.concat(conLog).map(docKey)).size;
-  bits.push(`${lexLog.length} phrasing · ${conLog.length} idea attestations` +
-    (distinctDocs && distinctDocs < lexLog.length + conLog.length
-      ? ` (${distinctDocs} distinct documents)` : ''));
+  const distinctDocs = new Set(lexMain.concat(conMain).map(docKey)).size;
+  bits.push(`${lexMain.length} phrasing · ${conMain.length} idea attestations` +
+    (distinctDocs && distinctDocs < lexMain.length + conMain.length
+      ? ` (${distinctDocs} distinct documents)` : '') +
+    (ctxAll.length ? ` · ${ctxAll.length} context entries` : ''));
   if (stats.active_from) bits.push(`active ${stats.active_from} → ${stats.active_through || 'present'}`);
   if (stats.originator_to_mass_amplifier_days != null) bits.push(`origin → mass amplifier: ${fmtDaysHuman(stats.originator_to_mass_amplifier_days)}`);
   if (stats.originator_to_institutional_adoption_days != null) bits.push(`origin → institutional adoption: ${fmtDaysHuman(stats.originator_to_institutional_adoption_days)}`);
@@ -2932,13 +2940,27 @@ function renderOverview(fp) {
     </div>
 
     <details class="collapse">
-      <summary>Full attestation log (${lexLog.length} phrasing · ${conLog.length} idea)</summary>
+      <summary>Full attestation log (${lexMain.length} phrasing · ${conMain.length} idea)</summary>
       <div class="body normal-text">
-        ${lexLog.length ? `<div class="log-grp">Phrasing — this exact wording</div>${logRowsHtml(lexLog, 'lex')}` : ''}
-        ${conLog.length ? `<div class="log-grp">Idea — the underlying claim</div>${logRowsHtml(conLog, 'con')}` : ''}
-        ${!lexLog.length && !conLog.length ? '<p class="empty">Empty.</p>' : ''}
+        ${lexMain.length ? `<div class="log-grp">Phrasing — this exact wording</div>${logRowsHtml(lexMain, 'lex')}` : ''}
+        ${conMain.length ? `<div class="log-grp">Idea — the underlying claim</div>${logRowsHtml(conMain, 'con')}` : ''}
+        ${!lexMain.length && !conMain.length ? '<p class="empty">Empty.</p>' : ''}
       </div>
     </details>
+
+    ${ctxAll.length ? `
+    <details class="collapse" open>
+      <summary>Tradition &amp; precedents (${ctxAll.length}) — context, not this claim's lineage</summary>
+      <div class="body normal-text">
+        <p style="color:#777; font-size:0.84rem; margin:0.2rem 0 0.6rem;">
+          Material that informs this claim without asserting it: same-form
+          claims about <em>other</em> subjects (precedents), broader doctrine,
+          fiction that depicts it, and deep background. None of it counts
+          toward this claim's origin, timeline, or cast — it is the tradition
+          the claim landed in.</p>
+        ${logRowsHtml(ctxAll, 'ctx')}
+      </div>
+    </details>` : ''}
   `;
 
   // Click a WHO-strip name to light up that source's dots on the timeline.
@@ -2966,7 +2988,8 @@ function renderOverview(fp) {
     row.addEventListener('click', () => {
       const next = row.nextElementSibling;
       if (next && next.classList.contains('log-detail')) { next.remove(); return; }
-      const log = row.dataset.grp === 'lex' ? lexLog : conLog;
+      const log = row.dataset.grp === 'lex' ? lexMain
+                : row.dataset.grp === 'ctx' ? ctxAll : conMain;
       const inst = log[parseInt(row.dataset.i, 10)];
       if (inst) row.insertAdjacentHTML('afterend', `<div class="log-detail">${instanceDetailHtml(inst)}</div>`);
     });
@@ -3005,7 +3028,7 @@ function renderLineages(fp) {
     <div class="timeline-block">
       <div class="timeline-header">
         <h2>Phrasing Lineage <span style="font-weight:400; color:#999; font-size:0.75rem;">— this exact wording</span></h2>
-        <div class="timeline-info" title="pipeline status: ${escapeHtml(lex.status || 'unknown')}">earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.length} instances · ${(lex.mutations || []).length} mutations</div>
+        <div class="timeline-info" title="pipeline status: ${escapeHtml(lex.status || 'unknown')}">earliest: ${escapeHtml(lex.first_attested_date || '—')} · ${lexLog.filter(i => !isRelatedContext(i)).length} instances${lexLog.some(isRelatedContext) ? ` (+${lexLog.filter(isRelatedContext).length} context)` : ''} · ${(lex.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-lexical"></svg>
     </div>
@@ -3015,7 +3038,7 @@ function renderLineages(fp) {
     <div class="timeline-block">
       <div class="timeline-header">
         <h2>Idea Lineage <span style="font-weight:400; color:#999; font-size:0.75rem;">— the underlying claim</span></h2>
-        <div class="timeline-info" title="pipeline status: ${escapeHtml(con.status || 'unknown')}">earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.length} instances · ${(con.mutations || []).length} mutations</div>
+        <div class="timeline-info" title="pipeline status: ${escapeHtml(con.status || 'unknown')}">earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.filter(i => !isRelatedContext(i)).length} instances${conLog.some(isRelatedContext) ? ` (+${conLog.filter(isRelatedContext).length} context — see the overview's Tradition & precedents)` : ''} · ${(con.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-conceptual"></svg>
     </div>
