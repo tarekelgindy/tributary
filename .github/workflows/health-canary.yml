@@ -86,9 +86,14 @@ jobs:
           fi
 
           echo "FAILURES:$FAILS"
+          # Dedup check fails OPEN: an empty/errored duplicate-check must
+          # CREATE the issue, not skip it (2026-10-13: the first real catch
+          # recorded its failure and then silently skipped creation because
+          # the list query returned empty, not "0" — a duplicate issue is
+          # cheap; a silent outage is not).
           OPEN=$(gh issue list --state open --search 'Health canary failing in:title' \
-            --json number --jq 'length')
-          if [ "$OPEN" = "0" ]; then
+            --json number --jq 'length' 2>/dev/null || echo 0)
+          if [ "${OPEN:-0}" = "0" ] || [ -z "$OPEN" ]; then
             gh issue create --title "Health canary failing" --body "The daily health canary found problems:
           $FAILS
 
