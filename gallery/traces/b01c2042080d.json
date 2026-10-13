@@ -285,6 +285,32 @@
           }
         },
         {
+          "instance_id": "338159821c6c",
+          "date": "2026-10-07",
+          "date_precision": "day",
+          "describes_period": "",
+          "source_url": "https://abcnews.com/International/us-issues-formal-complaint-russia-response-suspected-death/story?id=137057058",
+          "cited_via": "",
+          "source_title": "US issues formal complaint to Russia over response to suspected plague death (ABC News)",
+          "author": "Donald Trump (quoted by ABC News)",
+          "lexical_form_seen": "bioweapon",
+          "exact_quote": "Well, we don't think so. We're going to find out soon enough, but we don't think so... And they're saying it's very much under control. So, we hope not.",
+          "confidence": 0.95,
+          "evidence": "The sitting US president was asked directly whether the death involved a bioweapon and denied it — proof the claim had reached presidential-podium prominence by Oct 7; the same report records the US demarche urging Russian transparency. Maintainer-added 2026-10-13; quote verified against the page.",
+          "amplifier_role": "critic",
+          "role_evidence": "Disputes the traced claim at the highest institutional level.",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "quote verified by maintainer via fetch 2026-10-13; pipeline check pending",
+          "archive_url": "",
+          "provenance": {
+            "origin": "human",
+            "status": "human_added",
+            "contributor_name": "maintainer"
+          }
+        },
+        {
           "instance_id": "566ea3af93e8",
           "date": "2026-10-08",
           "source_url": "https://www.euronews.com/2026/10/09/death-in-russian-lab-raises-questions-over-plague-pathogen-bioweapon-research",
@@ -406,12 +432,11 @@
         "years_active": 0,
         "years_with_activity": 1,
         "instances_per_year": {
-          "2026": 5
+          "2026": 6
         },
         "instances_per_year_by_role": {
           "2026": {
-            "critic": 2,
-            "institutional-adoption": 1,
+            "critic": 4,
             "early-amplifier": 1,
             "mass-amplifier": 1
           }
