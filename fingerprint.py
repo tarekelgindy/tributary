@@ -1934,16 +1934,6 @@ class FingerprintGenerator:
         # identity calls live. Default stays the pipeline Sonnet; the Opus
         # A/B (2026-10-12, Decision Log) runs through --judgment-model.
         self.judgment_model = judgment_model or SONNET
-
-    def _judgment_max(self, base: int) -> int:
-        """Output ceiling for a judgment call. Opus 5 thinks by default and
-        its thinking tokens COUNT AGAINST max_tokens — the A/B's first run
-        truncated every JSON at the Sonnet-sized ceilings (stop_reason=
-        max_tokens, 17k thinking-heavy outputs) and saved husk traces.
-        Disabling thinking on Opus 5 is explicitly discouraged (tool-call-
-        as-text failure mode), so non-default judgment models get 2.5x the
-        room instead."""
-        return base if self.judgment_model == SONNET else int(base * 2.5)
         # Cap on web searches per Sonnet+web_search call. The model tends to
         # over-search (15-22 searches in one call observed), and each search
         # carries a fee. Capping trades peripheral depth for lower cost,
@@ -1955,6 +1945,16 @@ class FingerprintGenerator:
         # re-enables pre-modern tracing for the rare trace where antiquity
         # genuinely is the story.
         self.deep_history = deep_history
+
+    def _judgment_max(self, base: int) -> int:
+        """Output ceiling for a judgment call. Opus 5 thinks by default and
+        its thinking tokens COUNT AGAINST max_tokens — the A/B's first run
+        truncated every JSON at the Sonnet-sized ceilings (stop_reason=
+        max_tokens, 17k thinking-heavy outputs) and saved husk traces.
+        Disabling thinking on Opus 5 is explicitly discouraged (tool-call-
+        as-text failure mode), so non-default judgment models get 2.5x the
+        room instead."""
+        return base if self.judgment_model == SONNET else int(base * 2.5)
 
     _DEEP_HISTORY_ADDENDUM = (
         "\n\nDEEP-HISTORY MODE IS ON for this trace: you may additionally "
