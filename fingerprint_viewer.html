@@ -2950,7 +2950,7 @@ function renderOverview(fp) {
 
     ${ctxAll.length ? `
     <details class="collapse" open>
-      <summary>Tradition &amp; precedents (${ctxAll.length}) — context, not this claim's lineage</summary>
+      <summary>Related context (${ctxAll.length}) — informs this claim; not part of its lineage</summary>
       <div class="body normal-text">
         <p style="color:#777; font-size:0.84rem; margin:0.2rem 0 0.6rem;">
           Material that informs this claim without asserting it: same-form
@@ -3038,7 +3038,7 @@ function renderLineages(fp) {
     <div class="timeline-block">
       <div class="timeline-header">
         <h2>Idea Lineage <span style="font-weight:400; color:#999; font-size:0.75rem;">— the underlying claim</span></h2>
-        <div class="timeline-info" title="pipeline status: ${escapeHtml(con.status || 'unknown')}">earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.filter(i => !isRelatedContext(i)).length} instances${conLog.some(isRelatedContext) ? ` (+${conLog.filter(isRelatedContext).length} context — see the overview's Tradition & precedents)` : ''} · ${(con.mutations || []).length} mutations</div>
+        <div class="timeline-info" title="pipeline status: ${escapeHtml(con.status || 'unknown')}">earliest: ${escapeHtml(con.first_attested_date || '—')} · ${conLog.filter(i => !isRelatedContext(i)).length} instances${conLog.some(isRelatedContext) ? ` (+${conLog.filter(isRelatedContext).length} context — see the overview's Related context section)` : ''} · ${(con.mutations || []).length} mutations</div>
       </div>
       <svg class="timeline-svg" id="timeline-conceptual"></svg>
     </div>
