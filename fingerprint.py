@@ -1793,6 +1793,13 @@ async def _create_with_retry(client, max_attempts: int = 5,
     queried twice should produce as similar a fingerprint as the model and
     web_search allow. Callers can still override by passing temperature."""
     kwargs.setdefault("temperature", 0)
+    # The 0.x SDK refuses non-streaming calls whose max_tokens imply a
+    # >10-minute generation (client-side ValueError, before any spend) —
+    # unless an explicit timeout is passed, which it accepts in place of
+    # streaming. Thinking-by-default judgment models need the big ceilings,
+    # so give those calls a generous timeout instead of a refusal.
+    if (kwargs.get("max_tokens") or 0) > 21_000:
+        kwargs.setdefault("timeout", 1800.0)
     status_delays = [30, 60, 90, 120, 150]
     # Newer models (Opus 5+) reject the temperature parameter outright
     # ('temperature is deprecated for this model', 400) — the September
