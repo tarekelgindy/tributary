@@ -1912,6 +1912,35 @@ function render(fp) {
     }
   }
 
+  // Critic-first note (2026-10-13, Tarek's call after the bioweapons trace):
+  // when the earliest documented appearance of a claim is coverage EXAMINING
+  // it, the claim was already circulating before the indexed record begins —
+  // the signature of a social-platform birth (third recorded case: the gum
+  // myth born inside its 1993 rebuttal, the X-born wealth statistic, the
+  // Irkutsk bioweapons claim). The page must say so, or "FIRST ATTESTED —
+  // CRITIC" reads as a contradiction.
+  document.getElementById('criticfirst-banner')?.remove();
+  {
+    const lexA = (fp.genealogy?.lexical?.attestation_log || [])
+      .filter(i => !isRelatedContext(i)).slice().sort(byDateAsc);
+    if (lexA.length && lexA[0].amplifier_role === 'critic') {
+      document.querySelector('main')?.insertAdjacentHTML('beforebegin',
+        `<div id="criticfirst-banner" style="max-width:1160px;margin:0.9rem auto 0;
+          padding:0.8rem 1.2rem;background:#fdf3e0;border:1px solid #e8c98a;
+          border-radius:10px;font-size:0.92rem;color:#5a4a24;">
+          <strong>The record opens with pushback — the origin predates it.</strong>
+          The earliest documented appearance of this claim
+          (${escapeHtml(String(lexA[0].date || ''))}) is coverage
+          <em>examining</em> it, which means the claim was already circulating
+          before the indexed record begins. Claims born on social platforms
+          (X, Telegram, private groups) typically enter the public web through
+          the press reacting to them — treat the first entry as an existence
+          proof, not the source. Saw the original post? Add it via
+          “Add what we missed” below — the reader often holds the receipt the
+          crawler can't reach.</div>`);
+    }
+  }
+
   // No-web-history note (2026-10-11, Tarek's call after a claim born on X
   // traced to "0 phrasings" with no explanation): an empty phrasing lineage
   // is ambiguous between "brand new", "born on social media we don't
