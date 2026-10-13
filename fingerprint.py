@@ -3922,21 +3922,24 @@ def _negation_parity(text: str) -> int:
     return sum(1 for w in words if w in _NEG_TOKENS) % 2
 
 
-_GATE_SYSTEM = """You judge whether an input is a TRACEABLE CLAIM for a narrative-provenance tool — a statement (or a question about a statement) asserting something about the world whose origin and spread could be documented.
-traceable: full claims ("all Mexicans like tacos", "vaccines cause autism"), questions about claims ("do vaccines cause autism?", "where did the claim that X come from?"), named quotes and slogans.
-not traceable: bare keywords or topic names ("Iroquois"), ungrammatical fragments ("Mexican love tacos"), gibberish, a URL alone, instructions to the tool, or inputs with no assertable content.
-Be permissive at the margin: if a reasonable reader can state the claim the input intends, it is traceable.
-Output ONLY JSON: {"traceable": true|false, "why": "<= 12 words", "suggestion": "<a full-claim rephrasing if not traceable, else empty>"}"""
+_GATE_SYSTEM = """You judge whether an input is a TRACEABLE REQUEST for a narrative-provenance tool. The request kind is given with the input.
+kind "claim" — traceable: a statement (or a question about a statement) asserting something about the world whose origin and spread could be documented — full claims ("all Mexicans like tacos", "vaccines cause autism"), questions about claims ("do vaccines cause autism?", "where did the claim that X come from?"), named quotes and slogans. Not traceable: bare keywords or topic names ("Iroquois"), ungrammatical fragments ("Mexican love tacos"), gibberish, a URL alone, instructions to the tool, or inputs with no assertable content.
+kind "event" — traceable: a DESCRIBABLE EVENT phrased as a sentence — something that happened, specific enough to anchor a coverage analysis ("Macklemore was removed from Ed Sheeran's US tour", "US 30-year mortgage rates exceeded 7 percent"). Not traceable: a bare person, organization, or topic name ("James Talerico"), keywords, or an open-ended subject with no stated happening — the tool would have to GUESS which event the user means.
+Be permissive at the margin: if a reasonable reader can state the claim or event the input intends, it is traceable.
+Output ONLY JSON: {"traceable": true|false, "why": "<= 12 words", "suggestion": "<a one-sentence rephrasing of what the user most plausibly meant if not traceable, else empty>"}"""
 
 
-def _claim_gate(text: str, model: str = "claude-haiku-4-5-20251001") -> dict:
-    """Pre-pipeline input gate — see the call site in _cli for the why."""
+def _claim_gate(text: str, kind: str = "claim",
+                model: str = "claude-haiku-4-5-20251001") -> dict:
+    """Pre-pipeline input gate — see the call sites in _cli for the why.
+    kind="event" added 2026-10-13 after a visitor's bare-name event request
+    ("James Talerico") sailed through the then-claims-only gate."""
     import anthropic
     client = anthropic.Anthropic()
     resp = client.messages.create(
         model=model, max_tokens=200,
         system=[{"type": "text", "text": _GATE_SYSTEM}],
-        messages=[{"role": "user", "content": json.dumps({"input": text})}])
+        messages=[{"role": "user", "content": json.dumps({"kind": kind, "input": text})}])
     out = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
     j = _parse_json_safe(out) or {}
     if "traceable" not in j:
@@ -3966,6 +3969,23 @@ async def _cli(args):
     # second direction), instead of tracing one narrative upstream.
     if args.event:
         raw = args.claim
+        # Event-side input gate (2026-10-13): the claims-only gate let a
+        # visitor's bare-name event request ("James Talerico") through —
+        # the analyzer then GUESSES which event the user means. Same
+        # ~$0.001 check, same rejected-state plumbing; text subjects only
+        # (--url/--file supply their own anchor); --force bypasses.
+        if raw and not args.url and not args.file and args.save and not args.force:
+            verdict = None
+            try:
+                verdict = _claim_gate(raw, kind="event")
+            except Exception as e:  # noqa: BLE001 — gate down ≠ request down
+                print(f"[event gate unavailable ({type(e).__name__}) -> proceeding]",
+                      file=sys.stderr)
+            if verdict is not None and not verdict.get("traceable"):
+                print("GATE=rejected")
+                print(f"[not a traceable claim: {verdict.get('why', '')} — try: "
+                      f"{verdict.get('suggestion') or 'describe the event in one sentence'}]")
+                return
         if args.url:
             item = await gen._fetch_content(args.url)
             raw = (item.text if item else "") or args.url
