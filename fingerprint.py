@@ -1794,12 +1794,26 @@ async def _create_with_retry(client, max_attempts: int = 5,
     web_search allow. Callers can still override by passing temperature."""
     kwargs.setdefault("temperature", 0)
     status_delays = [30, 60, 90, 120, 150]
+    # Newer models (Opus 5+) reject the temperature parameter outright
+    # ('temperature is deprecated for this model', 400) — the September
+    # SDK incident's mirror image, from the model side this time. Drop the
+    # parameter and carry on rather than hard-failing the whole step.
+    def _strip_temperature_if_rejected(err) -> bool:
+        if (isinstance(err, anthropic.BadRequestError)
+                and "temperature" in str(err) and "temperature" in kwargs):
+            kwargs.pop("temperature")
+            return True
+        return False
     empty_delays = [5, 10, 15, 20, 30]
     last_response = None
     for attempt in range(max_attempts):
         try:
             response = await client.messages.create(**kwargs)
         except anthropic.APIStatusError as e:
+            if _strip_temperature_if_rejected(e) and attempt < max_attempts - 1:
+                print("[model rejects temperature; retrying without it]",
+                      file=sys.stderr, flush=True)
+                continue
             status = getattr(e, "status_code", None)
             if status not in (429, 529) or attempt == max_attempts - 1:
                 raise
