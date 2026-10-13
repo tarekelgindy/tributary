@@ -1934,6 +1934,16 @@ class FingerprintGenerator:
         # identity calls live. Default stays the pipeline Sonnet; the Opus
         # A/B (2026-10-12, Decision Log) runs through --judgment-model.
         self.judgment_model = judgment_model or SONNET
+
+    def _judgment_max(self, base: int) -> int:
+        """Output ceiling for a judgment call. Opus 5 thinks by default and
+        its thinking tokens COUNT AGAINST max_tokens — the A/B's first run
+        truncated every JSON at the Sonnet-sized ceilings (stop_reason=
+        max_tokens, 17k thinking-heavy outputs) and saved husk traces.
+        Disabling thinking on Opus 5 is explicitly discouraged (tool-call-
+        as-text failure mode), so non-default judgment models get 2.5x the
+        room instead."""
+        return base if self.judgment_model == SONNET else int(base * 2.5)
         # Cap on web searches per Sonnet+web_search call. The model tends to
         # over-search (15-22 searches in one call observed), and each search
         # carries a fee. Capping trades peripheral depth for lower cost,
@@ -2009,7 +2019,7 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=self.judgment_model,
-            max_tokens=8192,
+            max_tokens=self._judgment_max(8192),
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": EARLIEST_USE_SYSTEM,
                      "cache_control": {"type": "ephemeral"}}],
@@ -2059,7 +2069,7 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=self.judgment_model,
-            max_tokens=4096,
+            max_tokens=self._judgment_max(4096),
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
                      "cache_control": {"type": "ephemeral"}}],
@@ -2246,7 +2256,7 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=self.judgment_model,
-            max_tokens=16384,
+            max_tokens=self._judgment_max(16384),
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM
                      + (self._DEEP_HISTORY_ADDENDUM if self.deep_history else ""),
@@ -2301,7 +2311,7 @@ class FingerprintGenerator:
         response = await _create_with_retry(
             self.client,
             model=self.judgment_model,
-            max_tokens=4096,
+            max_tokens=self._judgment_max(4096),
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
                      "cache_control": {"type": "ephemeral"}}],
