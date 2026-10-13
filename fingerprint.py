@@ -1912,8 +1912,14 @@ class FingerprintGenerator:
     """Generates NarrativeFingerprint objects via Claude."""
 
     def __init__(self, client: Optional[anthropic.AsyncAnthropic] = None,
-                 max_searches: int = 10, deep_history: bool = False):
+                 max_searches: int = 10, deep_history: bool = False,
+                 judgment_model: str = ""):
         self.client = client or anthropic.AsyncAnthropic()
+        # Model routing for the four JUDGMENT-heavy steps (earliest-use,
+        # both adversarial passes, conceptual ancestors) — the steps where
+        # identity calls live. Default stays the pipeline Sonnet; the Opus
+        # A/B (2026-10-12, Decision Log) runs through --judgment-model.
+        self.judgment_model = judgment_model or SONNET
         # Cap on web searches per Sonnet+web_search call. The model tends to
         # over-search (15-22 searches in one call observed), and each search
         # carries a fee. Capping trades peripheral depth for lower cost,
@@ -1988,7 +1994,7 @@ class FingerprintGenerator:
 
         response = await _create_with_retry(
             self.client,
-            model=SONNET,
+            model=self.judgment_model,
             max_tokens=8192,
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": EARLIEST_USE_SYSTEM,
@@ -2038,7 +2044,7 @@ class FingerprintGenerator:
 
         response = await _create_with_retry(
             self.client,
-            model=SONNET,
+            model=self.judgment_model,
             max_tokens=4096,
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
@@ -2225,7 +2231,7 @@ class FingerprintGenerator:
 
         response = await _create_with_retry(
             self.client,
-            model=SONNET,
+            model=self.judgment_model,
             max_tokens=16384,
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": CONCEPTUAL_ANCESTORS_SYSTEM
@@ -2280,7 +2286,7 @@ class FingerprintGenerator:
 
         response = await _create_with_retry(
             self.client,
-            model=SONNET,
+            model=self.judgment_model,
             max_tokens=4096,
             tools=[self._web_search_tool()],
             system=[{"type": "text", "text": system_text,
@@ -3909,7 +3915,8 @@ def _claim_gate(text: str, model: str = "claude-haiku-4-5-20251001") -> dict:
 
 async def _cli(args):
     gen = FingerprintGenerator(max_searches=args.max_searches,
-                               deep_history=args.deep_history)
+                               deep_history=args.deep_history,
+                               judgment_model=getattr(args, "judgment_model", "") or "")
     scope = Scope(
         language="en",
         region=args.region,
@@ -4264,6 +4271,11 @@ def main():
                         help="Run the full deep pipeline: conceptual lineage + "
                              "mutations + evidence landscape (~$0.75–1.00/claim). "
                              "Default is LEAN — lexical lineage only (~$0.15–0.25).")
+    parser.add_argument("--judgment-model", default="",
+                        help="Model override for the four judgment-heavy steps "
+                             "(earliest-use, both adversarial passes, conceptual "
+                             "ancestors). Default: the pipeline Sonnet. Used by "
+                             "the Opus A/B (ab_opus.py).")
     parser.add_argument("--deep-history", action="store_true",
                         help="Conceptual lineage may trace pre-modern traditions. "
                              "Default is living cultural memory (~last century): "
