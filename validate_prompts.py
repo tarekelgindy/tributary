@@ -218,10 +218,12 @@ def marx_instance(client):
             {"source_title": "Income Inequality in the United States, 1913-1998",
              "author": "Thomas Piketty and Emmanuel Saez", "date": "2003-01-01",
              "source_url": "https://eml.berkeley.edu/~saez/pikettyqje.pdf",
-             "content_summary": ("Quantitative economics: constructs top income and wealth "
-                                 "shares from tax data, establishing the modern tradition of "
-                                 "specific numeric claims about what the richest earn and "
-                                 "hold per year.")}]})
+             "content_summary": ("Quantitative economics making specific numeric claims of "
+                                 "the same form as the traced statistic — e.g. 'the average "
+                                 "income of the top 0.01% of families reached $3 million in "
+                                 "1998' — from tax data; the founding work of the modern "
+                                 "tradition of stating what the richest earn per year in "
+                                 "dollars.")}]})
     ent = _entries(out)
     marx = next((e for e in ent if "Marx" in str(e.get("author", ""))), None)
     ps = next((e for e in ent if "Piketty" in str(e.get("author", ""))), None)
@@ -231,6 +233,41 @@ def marx_instance(client):
         f"Marx={'excluded' if marx is None else marx.get('claim_relation')!r} "
         f"(needs related-context/excluded) · Piketty-Saez="
         f"{'MISSING' if ps is None else ps.get('claim_relation')!r} (needs asserts)")
+
+
+@fixture
+def milo_referent(client):
+    """REFERENT BOUND: for a claim about one named film, same-form claims
+    about OTHER films are precedents (related-context), while a
+    same-referent articulation in different vocabulary asserts (recorded
+    failure: the Milo and Otis trace opened with Edison 1903 as asserting)."""
+    out = _call(client, CONCEPTUAL_ANCESTORS_SYSTEM, {
+        "claim_being_traced": ("animals were abused during the filming of the 1986 "
+                               "film Milo and Otis"),
+        "diagnostic_ngrams": ["animals were abused", "milo and otis"],
+        "candidates": [
+            {"source_title": "Electrocuting an Elephant (press coverage of the Edison film)",
+             "author": "Thomas Edison / Edison Manufacturing Company", "date": "1903-01-04",
+             "content_summary": ("1903 press coverage asserting that an elephant was "
+                                 "killed on camera for an Edison film — a same-form "
+                                 "claim (animal harmed in a film production) about a "
+                                 "completely different film, 83 years before Milo and "
+                                 "Otis existed.")},
+            {"source_title": "Humane-society statement on the production of Milo and Otis",
+             "author": "Animal-welfare group spokesperson", "date": "1990-03-01",
+             "content_summary": ("A 1990 statement alleging, in its own words and "
+                                 "without the claim's usual phrasing, that cats were "
+                                 "injured and killed during the production of the film "
+                                 "Milo and Otis specifically.")}]})
+    ent = _entries(out)
+    edison = next((e for e in ent if "Edison" in str(e.get("author", ""))), None)
+    milo = next((e for e in ent if "1990" in str(e.get("date", ""))), None)
+    edison_ok = edison is None or edison.get("claim_relation") == "related-context"
+    milo_ok = milo is not None and milo.get("claim_relation") == "asserts"
+    return edison_ok and milo_ok, (
+        f"Edison={'excluded' if edison is None else edison.get('claim_relation')!r} "
+        f"(needs related-context/excluded) · same-referent 1990="
+        f"{'MISSING' if milo is None else milo.get('claim_relation')!r} (needs asserts)")
 
 
 @fixture
