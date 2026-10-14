@@ -359,6 +359,58 @@ Output ONLY the JSON object.
 """
 
 
+RECENT_ORIGIN_SYSTEM = """\
+You are a research assistant hunting the ORIGIN of a claim that emerged
+RECENTLY — its earliest known appearance is {earliest_date}, within the
+last few weeks. The archive-focused search has already run; your job is
+the opposite telescope: find the FIRST carriers in the days before
+{earliest_date}, walking backward day by day.
+
+Strategy, in priority order:
+- REVERSE CHRONOLOGY: search explicitly for the earliest reports — add
+  day-specific and "first reported"/"earliest" qualifiers; prefer small or
+  local first-movers over the big late explainers the default search finds.
+- FOREIGN LANGUAGE: if the claim concerns a specific country or region,
+  search in that language too (e.g. Russian for a Russian incident) — a
+  local-language report typically precedes world coverage by days. Report
+  such instances with the original-language quote in exact_quote followed
+  by a brief English translation in parentheses.
+- PUBLIC SOCIAL SURFACES: site:reddit.com; Telegram public channels —
+  t.me/s/<channel> pages are ordinary fetchable web pages showing post
+  timestamps, and a t.me post is a valid primary receipt (channel name as
+  author, the post's own timestamp as date).
+- CITED SOCIAL ORIGINS: reconstruction journalism ("how this rumor
+  spread") often documents the originating post — "channel X posted this
+  on the 4th". Report that post as its own instance dated by THE POST,
+  with cited_via naming the documenting article and source_url linking the
+  documenting article (the standard cited_via rule). This is the main way
+  X/Twitter origins enter the record.
+- X/TWITTER ARCHIVES (archive.today / web.archive.org snapshots of
+  posts): low expected yield — attempt at most ONE such search and move
+  on; do not spend the budget chasing it.
+
+Discipline carried over from the main pass — all still binding:
+- LEXICAL: every instance must carry a diagnostic n-gram or a close
+  variant, in ANY language — a faithful translation of the framing counts.
+- CLAIM vs EVENT: coverage of the underlying event that does not carry
+  THIS CLAIM is not an instance. Do not include it.
+- Dates are the document's own publication date; date_precision honest.
+- Roles per the standard ladder with CLAIM POLARITY (a source examining
+  or debunking the claim is critic on an affirmation trace); originator
+  ONLY with coining evidence; fiction is not attestation.
+
+Report the same fields as the main pass (date, date_precision,
+describes_period, source_url, cited_via, source_title, author,
+lexical_form_seen, exact_quote, confidence, evidence, amplifier_role,
+role_evidence).
+
+Return JSON:
+{{"instances": [...], "search_notes": "what you searched, in which languages, which social surfaces, and what you ruled out"}}
+
+Sort by date ascending. Output ONLY the JSON object.
+"""
+
+
 CONCEPTUAL_SYSTEM = """\
 You are extracting the conceptual structure of a narrative claim — its
 vocabulary-independent meaning. This will be used to find older texts that
@@ -1453,6 +1505,16 @@ _VERIFY_USER_AGENT = "TributaryFingerprintVerifier/0.1 (+https://github.com/tare
 _VERIFY_TIMEOUT = 12.0
 
 
+def _is_recent_date(datestr, days: int = 45) -> bool:
+    """True when an ISO-ish date falls within the last `days` days — the
+    breaking-claim trigger. Unparseable dates are not recent."""
+    try:
+        d = date.fromisoformat(str(datestr or "")[:10])
+    except ValueError:
+        return False
+    return 0 <= (date.today() - d).days <= days
+
+
 async def _verify_url_exists(http: httpx.AsyncClient, url: str) -> tuple:
     """HEAD-then-GET a URL, return (status_code or None, error_message)."""
     if not url:
@@ -1597,10 +1659,22 @@ async def _verify_attested(http: httpx.AsyncClient, inst, check_quote: bool) -> 
         return
     if status >= 400:
         archive = await _find_wayback_snapshot(http, inst.source_url)
+        inst.archive_url = archive
+        # Wayback content-fallback (2026-10-14): bot-blocked pages (403s —
+        # the CNBC class) often have readable snapshots; a quote verified
+        # against the snapshot is a real verification, not a shrug. Proven
+        # by hand on the Irkutsk trace before being automated here.
+        if archive and check_quote and inst.exact_quote:
+            matched, note = await _verify_quote_at_url(http, archive, inst.exact_quote)
+            if matched:
+                inst.verified = True
+                inst.verification_status = "verified"
+                inst.verification_notes = (
+                    f"quote verified via Wayback snapshot (original URL HTTP {status})")
+                return
         inst.verified = False
         inst.verification_status = "url-error"
         inst.verification_notes = f"HTTP {status}"
-        inst.archive_url = archive
         return
     if check_quote and inst.exact_quote:
         matched, note = await _verify_quote_at_url(http, inst.source_url, inst.exact_quote)
@@ -2054,6 +2128,51 @@ class FingerprintGenerator:
                       f"({len(instances)} candidates)")
         return instances
 
+    async def search_recent_origin(
+        self, lexical: LexicalLayer, scope: Scope, earliest_date: str
+    ) -> list[AttestedInstance]:
+        """Breaking-claim origin hunt (2026-10-14, Decision Log): fires only
+        when the earliest found instance is recent. The default earliest-use
+        strategy is archaeology-tuned (archives, Usenet) — the wrong
+        telescope for a days-old claim, which is born on social surfaces and
+        in local-language coverage the en-scoped pass never sees (the
+        Irkutsk bioweapons case)."""
+        _log_progress("L4 lexical: breaking-claim origin hunt starting (web_search)")
+        t0 = time.monotonic()
+        user_content = (
+            f"NARRATIVE FRAMING TO TRACE:\n"
+            f"  Canonical: {lexical.canonical_phrase}\n"
+            f"  Variants: {', '.join(lexical.phrase_variants)}\n"
+            f"  Diagnostic n-grams: {', '.join(lexical.diagnostic_ngrams)}\n\n"
+            f"SCOPE: {_scope_clause(scope)} (origin hunting may cross languages "
+            f"per your instructions)\n\n"
+            f"Earliest appearance known so far: {earliest_date}. Hunt the days "
+            f"before it."
+        )
+        response = await _create_with_retry(
+            self.client,
+            model=self.judgment_model,
+            max_tokens=self._judgment_max(8192),
+            tools=[self._web_search_tool()],
+            system=[{"type": "text",
+                     "text": RECENT_ORIGIN_SYSTEM.format(earliest_date=earliest_date),
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
+        )
+        raw_text = _response_text(response)
+        data = _parse_json_safe(raw_text)
+        instances = []
+        for raw in data.get("instances", []):
+            inst = _instance_from_dict(raw)
+            if inst is not None:
+                instances.append(inst)
+        if not instances and not data:
+            _save_debug_response("recent_origin", raw_text)
+        _log_progress(f"L4 lexical: origin hunt done in {time.monotonic() - t0:.1f}s "
+                      f"({len(instances)} candidates)")
+        return instances
+
     async def adversarial_verify(
         self, lexical: LexicalLayer, proposed_date: str, scope: Scope
     ) -> tuple[list[AttestedInstance], str]:
@@ -2354,6 +2473,20 @@ class FingerprintGenerator:
             )
 
         earliest = instances[0]
+        # Breaking-claim mode: a recent earliest means the claim is days or
+        # weeks old — run the reverse-chronology / foreign-language / social-
+        # surface hunt before the adversarial pass, so the adversarial pass
+        # stress-tests the TRUE earliest rather than the first explainer.
+        if _is_recent_date(earliest.date, days=45):
+            recent = await self.search_recent_origin(
+                lexical, scope, earliest.date or "")
+            if recent:
+                known = {i.source_url for i in instances if i.source_url}
+                instances += [r for r in recent
+                              if r.source_url and r.source_url not in known]
+                instances.sort(key=lambda a: a.date or "9999")
+                earliest = instances[0]
+
         earlier_instances, adv_notes = await self.adversarial_verify(
             lexical, earliest.date or "9999-12-31", scope
         )
