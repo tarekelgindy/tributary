@@ -28,7 +28,8 @@ import sys
 import anthropic
 
 from fingerprint import (ADVERSARIAL_SYSTEM, CONCEPTUAL_ANCESTORS_SYSTEM,
-                         EARLIEST_USE_SYSTEM, SONNET, _parse_json_safe)
+                         EARLIEST_USE_SYSTEM, RECENT_ORIGIN_SYSTEM, SONNET,
+                         _parse_json_safe)
 
 HARNESS_PREAMBLE = """\
 HARNESS MODE: you have NO web search in this run. Evaluate ONLY the
@@ -268,6 +269,52 @@ def milo_referent(client):
         f"Edison={'excluded' if edison is None else edison.get('claim_relation')!r} "
         f"(needs related-context/excluded) · same-referent 1990="
         f"{'MISSING' if milo is None else milo.get('claim_relation')!r} (needs asserts)")
+
+
+@fixture
+def recent_origin(client):
+    """Breaking-claim origin hunt: a public Telegram post is a primary
+    receipt; a post documented by reconstruction journalism is dated by
+    THE POST with cited_via; event-only coverage carrying no claim is
+    excluded (the Irkutsk case, 2026-10-13)."""
+    out = _call(client, RECENT_ORIGIN_SYSTEM.format(earliest_date="2026-10-07"), {
+        "claim_being_traced": "the plague outbreak in Russia came from a bioweapons lab",
+        "diagnostic_ngrams": ["bioweapons lab", "biological weapon", "биологическое оружие"],
+        "candidates": [
+            {"source_title": "Telegram channel «Сибирский инсайдер», public post",
+             "author": "Сибирский инсайдер (Telegram channel)", "date": "2026-10-04",
+             "source_url": "https://t.me/s/sibinsider/4821",
+             "content_summary": ("A public Telegram post dated 4 October 2026, 19:12, "
+                                 "asserting in Russian: «Смерть в институте — это утечка "
+                                 "биологического оружия» (the death at the institute is a "
+                                 "biological weapons leak).")},
+            {"source_title": "How the Irkutsk death became an information storm",
+             "author": "Reconstruction desk, example.news", "date": "2026-10-10",
+             "source_url": "https://example.news/irkutsk-reconstruction",
+             "content_summary": ("A 10 October reconstruction article documenting the "
+                                 "rumor's spread, including: 'On 4 October the channel "
+                                 "Baza posted that the lab was a bioweapons facility, "
+                                 "and the claim jumped to X within hours.' The Baza post "
+                                 "itself is not directly linkable.")},
+            {"source_title": "Russia plague: what we know about the suspected case",
+             "author": "Wire staff", "date": "2026-10-05",
+             "source_url": "https://example.com/what-we-know",
+             "content_summary": ("A 5 October explainer about the lab worker's death and "
+                                 "the ~200 people under observation. It does not mention "
+                                 "bioweapons or any weapons claim at all.")}]})
+    ent = _entries(out)
+    tme = next((e for e in ent if "t.me" in str(e.get("source_url", ""))), None)
+    baza = next((e for e in ent if "Baza" in str(e.get("author", "")) + str(e.get("source_title", ""))
+                 or "reconstruction" in str(e.get("source_url", ""))), None)
+    event_only = next((e for e in ent if "what-we-know" in str(e.get("source_url", ""))), None)
+    tme_ok = tme is not None and str(tme.get("date", "")).startswith("2026-10-04")
+    baza_ok = (baza is not None and str(baza.get("date", "")).startswith("2026-10-04")
+               and bool(str(baza.get("cited_via", "")).strip()))
+    excl_ok = event_only is None
+    return tme_ok and baza_ok and excl_ok, (
+        f"t.me={'missing' if not tme else tme.get('date')} (needs 10-04) · "
+        f"cited-post={'missing' if not baza else (baza.get('date'), bool(baza.get('cited_via')))} "
+        f"(needs 10-04 + cited_via) · event-only={'excluded' if excl_ok else 'INCLUDED'}")
 
 
 @fixture
