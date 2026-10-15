@@ -16,6 +16,9 @@ don't regress:
   - first-documented != originator (Parker 1916, 2026-09-18)
   - instance != thesis (Marx 1867, 2026-10-11) with Piketty-Saez control
   - originator stays available where coining IS evidenced (Ministry 1940)
+  - implicit-referent resolver (bioweapons 2026-10-13 + Kimura 2026-10-14)
+    with statistic + perennial controls proving it stays silent on
+    form-general claims
 
 Run this after ANY edit to the attestation/ancestor prompts. Exit code 1 on
 any failure.
@@ -28,8 +31,9 @@ import sys
 import anthropic
 
 from fingerprint import (ADVERSARIAL_SYSTEM, CONCEPTUAL_ANCESTORS_SYSTEM,
-                         EARLIEST_USE_SYSTEM, RECENT_ORIGIN_SYSTEM, SONNET,
-                         _parse_json_safe)
+                         EARLIEST_USE_SYSTEM, HAIKU, RECENT_ORIGIN_SYSTEM,
+                         REFERENT_IMPLICIT_SYSTEM, SONNET, _parse_json_safe,
+                         _parse_referent_json)
 
 HARNESS_PREAMBLE = """\
 HARNESS MODE: you have NO web search in this run. Evaluate ONLY the
@@ -340,6 +344,137 @@ def ministry_control(client):
         return False, "Ministry entry missing entirely"
     role = ent[0].get("amplifier_role", "")
     return role == "originator", f"role={role!r} (evidenced coining must stay originator)"
+
+
+def _call_referent(client, claim, instances):
+    """The implicit-referent resolver is closed-world by design (it sees only
+    the digest), so no HARNESS_PREAMBLE — this exercises the exact production
+    prompt on the exact production model."""
+    resp = client.messages.create(
+        model=HAIKU, max_tokens=250, temperature=0,
+        system=[{"type": "text", "text": REFERENT_IMPLICIT_SYSTEM}],
+        messages=[{"role": "user", "content": json.dumps(
+            {"claim": claim, "instances": instances}, ensure_ascii=False)}])
+    text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+    return _parse_referent_json(text, digest_dates={d["date"] for d in instances})
+
+
+@fixture
+def implicit_bioweapons(client):
+    """Implicit referent resolves from a PRECEDENT-POLLUTED log (the recorded
+    2026-10-13 failure: the claim's referent is the Oct 2026 Irkutsk death,
+    but the log led with the Sverdlovsk/Biopreparat canon marked asserting)."""
+    ref = _call_referent(client, "plague outbreak in Russia came from a bioweapons lab", [
+        {"date": "1979-04-02", "title": "The Sverdlovsk anthrax leak of 1979 (Meselson et al., Science)",
+         "phrasing": "anthrax outbreak traced to a Soviet military microbiology facility"},
+        {"date": "1999-01-01", "title": "Biohazard (Ken Alibek memoir)",
+         "phrasing": "the Soviet Union ran an offensive bioweapons program under Biopreparat"},
+        {"date": "2005-11-01", "title": "NBC News: Russia's bioweapons legacy",
+         "phrasing": "Soviet-era plague research raises bioweapons fears"},
+        {"date": "2026-10-07", "title": "Media worldwide abuzz over Russian lab worker's death",
+         "phrasing": "plague outbreak in Russia came from a bioweapons lab"},
+        {"date": "2026-10-09", "title": "Telegram post on the Irkutsk anti-plague institute death",
+         "phrasing": "researcher death at Irkutsk anti-plague institute sparks bioweapon claims"},
+        {"date": "2026-10-12", "title": "Fact-check: no evidence the Irkutsk death involved weapons work",
+         "phrasing": "claims that the plague death came from a bioweapons lab are unproven"}])
+    if not ref:
+        return False, "no referent resolved (the current wave identifies one incident)"
+    d = ref.get("date", "")
+    ok = d.startswith("2026") and d <= "2026-10-07"
+    return ok, (f"ref={ref.get('description','')[:50]!r} @ {d} "
+                "(must be the 2026 incident, dated no later than the first report)")
+
+
+@fixture
+def implicit_kimura(client):
+    """Implicit referent resolves for a descriptively-typed claim whose log
+    carries policy precedents (the Kimura trace, 2026-10-14): the claim
+    names nobody, but the instances identify one person's 2011-2012 act."""
+    ref = _call_referent(client, "In 2012 a japanese sushi chain owner flew to somalia and "
+                                 "taught pirates to catch tuna - and single-handedly ended somali piracy", [
+        {"date": "1991-01-23", "title": "UN Security Council arms embargo on Somalia",
+         "phrasing": "international policy response to Somali state collapse"},
+        {"date": "2008-06-02", "title": "UNSC Resolution 1816 on piracy off the Somali coast",
+         "phrasing": "states may enter Somali waters to repress piracy"},
+        {"date": "2011-04-15", "title": "World Bank note: alternative livelihoods as a piracy exit",
+         "phrasing": "fishing livelihoods as the answer to piracy"},
+        {"date": "2013-04-25", "title": "Japan Times: sushi magnate credits himself with taming pirates",
+         "phrasing": "Kiyoshi Kimura says buying tuna from Somali ex-pirates ended piracy"},
+        {"date": "2013-05-02", "title": "HuffPost: sushi CEO ends Somali piracy with tuna",
+         "phrasing": "a japanese sushi chain owner taught pirates to fish for tuna"},
+        {"date": "2018-07-11", "title": "Reddit TIL thread on the sushi pirate story",
+         "phrasing": "TIL a sushi company owner single-handedly ended Somali piracy"}])
+    if not ref:
+        return False, "no referent resolved (instances identify one person's act)"
+    d = ref.get("date", "")
+    desc = ref.get("description", "").lower()
+    ok = (d.startswith("2011") or d.startswith("2012")) and \
+         ("kimura" in desc or "sushi" in desc or "somalia" in desc)
+    return ok, f"ref={ref.get('description','')[:50]!r} @ {d} (must be the 2011-2012 intervention)"
+
+
+@fixture
+def implicit_control_statistic(client):
+    """Control: a quantitative/category-slot claim stays form-general. A fake
+    referent at the statistic's publication wave would demote its honest
+    measurement tradition (Atkinson 1971 →) — undoing the Marx correction."""
+    ref = _call_referent(client, "the poorest billionaire in California makes $300M a year", [
+        {"date": "1971-01-01", "title": "Atkinson: The Distribution of Wealth and the Individual Life-Cycle",
+         "phrasing": "measurement of top wealth shares over time"},
+        {"date": "2003-02-01", "title": "Piketty & Saez: Income Inequality in the United States, 1913-1998",
+         "phrasing": "top income and wealth shares grew sharply"},
+        {"date": "2024-04-02", "title": "Forbes billionaire list analysis",
+         "phrasing": "California billionaires gained hundreds of millions per year on average"},
+        {"date": "2026-09-28", "title": "X post on California billionaire wealth",
+         "phrasing": "the poorest billionaire in California makes $300M a year"},
+        {"date": "2026-10-03", "title": "Blog repeating the statistic",
+         "phrasing": "even the poorest billionaire in California makes $300M a year"}])
+    return not ref, (f"referent={ref.get('description','')!r} @ {ref.get('date','')} "
+                     "(a category-slot statistic must stay form-general)")
+
+
+@fixture
+def implicit_trump_crypto(client):
+    """The recorded near-miss (2026-10-14): on the Trump-crypto trace the
+    resolver dated the referent 2025-11-25 — a year LATER than genuine 2024
+    phrasing instances it would have demoted. Whether it resolves a referent
+    or stays silent, the date may never postdate the earliest instance that
+    plainly concerns the ongoing venture."""
+    ref = _call_referent(client, "foreign money in Trump crypto creates pay-to-play corruption", [
+        {"date": "1787-09-17", "title": "U.S. Constitution, Foreign Emoluments Clause",
+         "phrasing": "no person holding office shall accept presents or emoluments from foreign states"},
+        {"date": "2014-09-22", "title": "Corruption in America (Zephyr Teachout)",
+         "phrasing": "the framers' anti-corruption principle against foreign influence"},
+        {"date": "2017-01-20", "title": "CREW v. Trump emoluments lawsuit",
+         "phrasing": "foreign payments to Trump hotels violate the emoluments clause"},
+        {"date": "2024-11-25", "title": "Banana Auction Billionaire's $30M investment in Trump crypto",
+         "phrasing": "foreign money in Trump crypto creates pay-to-play concerns"},
+        {"date": "2024-12-03", "title": "Chinese entrepreneur invested $30M in Trump's crypto project",
+         "phrasing": "foreign investment in World Liberty Financial raises pay-to-play questions"},
+        {"date": "2025-05-05", "title": "Senators: Trump-linked crypto deal is 'staggering' corruption",
+         "phrasing": "foreign money flowing into Trump crypto is pay-to-play"}])
+    if not ref:
+        return True, "stayed form-general (acceptable: an ongoing pattern, not one incident)"
+    d = ref.get("date", "")
+    return d <= "2024-11-25", (f"ref={ref.get('description','')[:46]!r} @ {d} "
+                               "(date must not postdate the first 2024 instance it concerns)")
+
+
+@fixture
+def implicit_control_perennial(client):
+    """Control: a perennial claim with instances across eras and subjects
+    has no referent."""
+    ref = _call_referent(client, "the earth is flat", [
+        {"date": "1849-01-01", "title": "Rowbotham: Zetetic Astronomy",
+         "phrasing": "the earth is a flat plane"},
+        {"date": "1956-01-01", "title": "Founding of the Flat Earth Society",
+         "phrasing": "the earth is flat; globe photos are fabrications"},
+        {"date": "2017-01-25", "title": "Rapper B.o.B's flat-earth tweets spark debate",
+         "phrasing": "no curve visible — the earth is flat"},
+        {"date": "2024-06-14", "title": "TikTok flat-earth revival explainer",
+         "phrasing": "flat earth content trends again"}])
+    return not ref, (f"referent={ref.get('description','')!r} @ {ref.get('date','')} "
+                     "(a perennial claim has no referent)")
 
 
 def main():

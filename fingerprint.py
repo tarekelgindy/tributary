@@ -1520,6 +1520,123 @@ REFERENT_BOUND_NOTE = (
     " related-context. Deterministic referent-bound pass, 2026-10-14.]")
 
 
+REFERENT_IMPLICIT_SYSTEM = """\
+You resolve an IMPLICIT referent. A claim was typed descriptively — its
+text names no specific thing — yet it may still be ABOUT one specific
+incident, work, or person's specific act. You get the claim and a sample
+of the attested instances a tracing pipeline found for it (earliest and
+most recent).
+
+CAUTION — the sample may be polluted: pipelines misfile PRECEDENTS (older
+same-form material about OTHER subjects — doctrine, other incidents,
+general scholarship) as if they asserted this claim, and that misfiling
+is the disease this check exists to catch. Do not vote by majority and do
+not anchor on the earliest date. Ask instead: do the claim's own words,
+read against the most recent cluster of instances, point at ONE specific
+identifiable thing or incident? If yes, that is the referent — even if
+older sampled instances concern other subjects. If the claim is genuinely
+general — a stereotype, folk wisdom, a STATISTIC or quantitative claim
+(whose instances are measurements, not an incident), or a perennial
+assertion whose instances concern many subjects across eras — there is no
+referent.
+
+Output ONLY JSON:
+{"description": "<the one specific referent, or empty string>",
+ "date": "<the referent's OWN date (the incident/act/release itself, not
+the earliest report about it) as the EARLIEST plausible ISO date at known
+precision; empty if no referent or unknowable>",
+ "earliest_concerning_date": "<REQUIRED when description is non-empty: the
+date field, copied EXACTLY from the instances list, of the earliest listed
+instance that concerns this referent>",
+ "basis": "<= 12 words: how the instances identify and date it>"}
+DATING: reports postdate incidents. When the claim or the instances SAY
+when the incident happened ("In 2012 a sushi chain owner flew to
+Somalia..."), date the referent by that stated time, never by the earliest
+report's publication date. The date must not be LATER than any instance
+that concerns the referent, and when torn between two plausible dates,
+choose the EARLIER: downstream, anything predating your date is removed
+from the claim's lineage, so a too-late date erases genuine history while
+a too-early one is merely conservative. Leave fields empty rather than
+guessing."""
+
+
+def _norm_ref_date(d: str) -> str:
+    """Year or year-month referent dates are honest precision but invalid
+    for date.fromisoformat — pad to the earliest day they denote."""
+    d = (d or "").strip()
+    if re.fullmatch(r"\d{4}", d):
+        return d + "-01-01"
+    if re.fullmatch(r"\d{4}-\d{2}", d):
+        return d + "-01"
+    return d
+
+
+def _parse_referent_json(raw: str, digest_dates=None) -> dict:
+    """Resolver output → referent dict; empty unless both description and a
+    usable date came back (a referent without a date cannot bound anything).
+
+    Mechanical too-late guard: if an instance concerns the referent, the
+    referent existed by that instance's date — so the date is capped at the
+    model's own earliest_concerning_date (accepted only when copied verbatim
+    from the digest, which defeats hallucinated dates). Recorded near-miss
+    this prevents: the Trump-crypto trace resolved at 2025-11-25, a year
+    LATER than genuine 2024 phrasing instances it would have demoted."""
+    out = _parse_json_safe(raw) or {}
+    ref = {k: str(out.get(k, "")).strip() for k in ("description", "date", "basis")}
+    ref["date"] = _norm_ref_date(ref["date"])
+    if not (ref["description"] and ref["date"]):
+        return {}
+    ecd = str(out.get("earliest_concerning_date", "")).strip()
+    if ecd and (digest_dates is None or ecd in digest_dates):
+        ecd = _norm_ref_date(ecd)
+        if ecd < ref["date"]:
+            ref["date"] = ecd
+            ref["basis"] = (ref["basis"] + " [date capped at earliest concerning "
+                            "instance]").strip()
+    ref["basis"] = ("resolved from the trace's own instances: " + ref["basis"]).strip()
+    return ref
+
+
+def _referent_instance_digest(fp, cap: int = 12) -> list:
+    """Earliest + most recent asserting instances across both lineages. The
+    resolver must see the SPREAD: on a mis-generated trace the earliest
+    entries are exactly the misfiled precedents in question, so an
+    earliest-only sample would hide the current wave that identifies the
+    referent."""
+    digest = []
+    for record in (fp.genealogy.lexical, fp.genealogy.conceptual):
+        for inst in (getattr(record, "attestation_log", None) or []):
+            if getattr(inst, "claim_relation", "") == "related-context":
+                continue
+            d = str(inst.date or "")[:10]
+            if not d:
+                continue
+            digest.append({"date": d,
+                           "title": str(inst.source_title or "")[:80],
+                           "phrasing": str(inst.lexical_form_seen
+                                           or inst.exact_quote or "")[:120]})
+    digest.sort(key=lambda x: x["date"])
+    if len(digest) > cap:
+        half = cap // 2
+        digest = digest[:half] + digest[-half:]
+    return digest
+
+
+async def resolve_implicit_referent(client, claim: str, digest: list) -> dict:
+    """One Haiku call: do these instances resolve a descriptively-typed
+    claim to one specific referent? The in-pipeline half of the corpus
+    sweep's stage 2 (apply_referent_bound.py shares the prompt + parsing)."""
+    if not digest:
+        return {}
+    response = await _create_with_retry(
+        client, model=HAIKU, max_tokens=250,
+        system=[{"type": "text", "text": REFERENT_IMPLICIT_SYSTEM}],
+        messages=[{"role": "user", "content": json.dumps(
+            {"claim": claim, "instances": digest}, ensure_ascii=False)}])
+    return _parse_referent_json(_response_text(response),
+                                digest_dates={d["date"] for d in digest})
+
+
 def _referent_bound_pass(fp) -> int:
     """THE MECHANICAL INVARIANT (2026-10-14, Tarek's spec after five hand-
     corrections of the same disease): no asserting entry may predate the
@@ -3226,6 +3343,25 @@ class FingerprintGenerator:
         # Deterministic referent bound: no asserting entry predates the
         # claim's referent (extracted at L2). Free, judgment-free, and the
         # mechanical end of five hand-corrected noise cases.
+        ref = getattr(fp.conceptual, "referent", None) or {}
+        if not ref.get("date"):
+            # A descriptively-typed claim ("a sushi chain owner...", "plague
+            # outbreak in Russia") names nothing, yet every instance this run
+            # found may concern one incident — resolve the referent from the
+            # run's own finds (~$0.001) so the bound can bite on implicit
+            # referents too (the bioweapons/Kimura shape; sweep-validated on
+            # the corpus 2026-10-14).
+            try:
+                imp = await resolve_implicit_referent(
+                    self.client, fp.lexical.canonical_phrase,
+                    _referent_instance_digest(fp))
+            except Exception as e:  # noqa: BLE001 — resolution must never fail generation
+                imp = {}
+                _log_progress(f"Implicit-referent resolution skipped: {e}")
+            if imp:
+                fp.conceptual.referent = imp
+                _log_progress(f"Implicit referent: {imp['description'][:60]}"
+                              f" @ {imp['date']}")
         n = _referent_bound_pass(fp)
         if n:
             _log_progress(f"Referent bound: {n} pre-referent entries filed as context")
