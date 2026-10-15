@@ -1,0 +1,28 @@
+# Deterministic tests (2026-10-15): the pure-Python halves of the quality
+# machinery — the referent-bound invariant, the resolver's too-late cap, the
+# publication threshold — run free on every push that touches Python. No API
+# key, no model calls; validate_prompts.py (model-judgment fixtures, costs
+# cents) stays maintainer-run by design.
+name: tests
+
+on:
+  push:
+    paths:
+      - "**.py"
+      - ".github/workflows/tests.yml"
+  workflow_dispatch:
+
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Lean on purpose: only what fingerprint.py imports at module level.
+      # The anthropic <1 pin mirrors requirements.txt (0.x->1.x migration
+      # is queued; unpin both together).
+      - run: pip install "anthropic>=0.45.0,<1" httpx pytest
+      - run: python -m pytest tests/ -q
