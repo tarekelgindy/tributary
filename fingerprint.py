@@ -268,6 +268,9 @@ inference from author identity alone.
 
 Return JSON of this shape:
 
+NEVER cite tributary.tools as a source — that is this instrument's own
+published output, not an attestation.
+
 {
   "instances": [
     {"date": "...", "date_precision": "...", "describes_period": "",
@@ -324,6 +327,9 @@ true origin predates the record. Roles are assigned relative to
 the TRACED claim: if the traced claim is itself a rebuttal of some X,
 sources debunking X assert the claim (see the main pass's CLAIM POLARITY
 rule), they are not critics of it.
+
+NEVER cite tributary.tools as a source — that is this instrument's own
+published output, not an attestation.
 
 CRITICAL — STRUCTURED REPORTING:
 If you find an earlier instance, you MUST include it as a structured entry
@@ -398,6 +404,8 @@ Discipline carried over from the main pass — all still binding:
 - Roles per the standard ladder with CLAIM POLARITY (a source examining
   or debunking the claim is critic on an affirmation trace); originator
   ONLY with coining evidence; fiction is not attestation.
+- NEVER cite tributary.tools — that is this instrument's own published
+  output, not an attestation.
 
 Report the same fields as the main pass (date, date_precision,
 describes_period, source_url, cited_via, source_title, author,
@@ -406,6 +414,59 @@ role_evidence).
 
 Return JSON:
 {{"instances": [...], "search_notes": "what you searched, in which languages, which social surfaces, and what you ruled out"}}
+
+Sort by date ascending. Output ONLY the JSON object.
+"""
+
+
+SOCIAL_RESCUE_SYSTEM = """\
+You are a research assistant rescuing a trace whose standard web search
+found ZERO attestations of a claim's phrasing. Such claims are often
+SOCIALLY BORN — they circulate on social platforms before (or without
+ever) reaching the parts of the web the default search covers. Your job is
+one focused pass over the surfaces the search index CAN actually reach.
+
+Strategy, in order of expected yield:
+- QUOTED PHRASES: re-search the diagnostic n-grams as exact quoted strings,
+  and the claim's distinctive numbers or names alone — a zero-result first
+  pass often searched too broadly.
+- TELEGRAM: t.me/s/<channel> pages are ordinary fetchable web pages showing
+  post timestamps; a t.me post is a valid primary receipt (channel name as
+  author, the post's own timestamp as date).
+- CITED SOCIAL ORIGINS: reconstruction journalism ("how this rumor
+  spread", "went viral after...") often documents the originating post —
+  report that post as its own instance dated by THE POST, with cited_via
+  naming the documenting article and source_url linking the documenting
+  article. This is the main way X/TikTok/reddit origins enter the record.
+- REDDIT: at most ONE site:reddit.com attempt — the search index rarely
+  carries reddit content (measured 2026-10-15: seven site: queries, zero
+  reddit results); an aggregator article QUOTING a reddit thread is the
+  likelier receipt, via cited_via.
+- ARCHIVES (archive.today / web.archive.org): at most ONE attempt.
+- NEVER cite tributary.tools — that is this instrument's own published
+  output, not an attestation.
+
+Discipline — all binding:
+- LEXICAL: every instance must carry a diagnostic n-gram or close variant,
+  in ANY language — a faithful translation counts.
+- CLAIM vs EVENT: material about the underlying subject that does not
+  carry THIS CLAIM is not an instance.
+- Dates are the post's/document's own date; date_precision honest; when a
+  cited post's own date is not stated, date by the documenting source and
+  say so in evidence.
+- Roles per the standard ladder with CLAIM POLARITY; originator ONLY with
+  coining evidence — a reshare of someone else's post is a mention or
+  early-amplifier, never the originator.
+- A clean negative result is valuable: if the social surfaces carry
+  nothing, return an empty instances list and say what you searched.
+
+Report the same fields as the main pass (date, date_precision,
+describes_period, source_url, cited_via, source_title, author,
+lexical_form_seen, exact_quote, confidence, evidence, amplifier_role,
+role_evidence).
+
+Return JSON:
+{"instances": [...], "search_notes": "what you searched and what you ruled out"}
 
 Sort by date ascending. Output ONLY the JSON object.
 """
@@ -656,6 +717,9 @@ tradition, not criticizing it.
 
 Return JSON:
 
+NEVER cite tributary.tools as a source — that is this instrument's own
+published output, not an attestation.
+
 {
   "contributors": [
     {"date": "...", "date_precision": "...", "describes_period": "",
@@ -719,6 +783,9 @@ amplifier_role="originator" ONLY with evidence of actual coining or first
 articulation. A text that already treats the idea as established, or that
 documents a pre-existing (especially oral) tradition, is early-amplifier
 or mention, with a note that the origin predates the record.
+
+NEVER cite tributary.tools as a source — that is this instrument's own
+published output, not an attestation.
 
 CRITICAL — STRUCTURED REPORTING:
 If you find an earlier ancestor, you MUST include it as a structured entry
@@ -2364,6 +2431,50 @@ class FingerprintGenerator:
                       f"({len(instances)} candidates)")
         return instances
 
+    async def search_social_rescue(
+        self, lexical: LexicalLayer, scope: Scope
+    ) -> list[AttestedInstance]:
+        """Empty-lineage rescue (Decision Log 2026-10-11, built 2026-10-15):
+        one focused social-surface pass when the phrasing search finds
+        NOTHING — a socially-born claim (the wealth-statistic case) is the
+        product's biggest blind spot, and this fires only on that path.
+        Measured limit, same day: the web_search index carries essentially
+        no reddit content (seven site: queries, zero reddit results; direct
+        fetch of reddit's own search is 403/interstitial-blocked), so the
+        pass leans on quoted-phrase retries, t.me receipts, and cited social
+        origins; real reddit coverage needs the OAuth API (Phase 3)."""
+        _log_progress("L4 lexical: empty lineage — social rescue pass (web_search)")
+        t0 = time.monotonic()
+        user_content = (
+            f"NARRATIVE FRAMING TO RESCUE (zero attestations found so far):\n"
+            f"  Canonical: {lexical.canonical_phrase}\n"
+            f"  Variants: {', '.join(lexical.phrase_variants)}\n"
+            f"  Diagnostic n-grams: {', '.join(lexical.diagnostic_ngrams)}\n\n"
+            f"SCOPE: {_scope_clause(scope)}"
+        )
+        response = await _create_with_retry(
+            self.client,
+            model=self.judgment_model,
+            max_tokens=self._judgment_max(6144),
+            tools=[self._web_search_tool()],
+            system=[{"type": "text", "text": SOCIAL_RESCUE_SYSTEM,
+                     "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user_content}],
+            retry_on_empty_text=True,
+        )
+        raw_text = _response_text(response)
+        data = _parse_json_safe(raw_text) or {}
+        instances = []
+        for raw in data.get("instances", []):
+            inst = _instance_from_dict(raw)
+            if inst is not None:
+                instances.append(inst)
+        if not instances and not data:
+            _save_debug_response("social_rescue", raw_text)
+        _log_progress(f"L4 lexical: social rescue done in {time.monotonic() - t0:.1f}s "
+                      f"({len(instances)} candidates)")
+        return instances
+
     async def adversarial_verify(
         self, lexical: LexicalLayer, proposed_date: str, scope: Scope
     ) -> tuple[list[AttestedInstance], str]:
@@ -2665,6 +2776,13 @@ class FingerprintGenerator:
     ) -> LineageRecord:
         """L4 lexical lineage: where did the PHRASING come from?"""
         instances = await self.search_earliest_uses(lexical, scope)
+        if not instances:
+            # Empty-lineage social rescue: a socially-born claim may still be
+            # reachable via quoted-phrase retries, t.me receipts, or cited
+            # social origins. A recent rescue find then triggers the
+            # breaking-claim hunt below exactly as a normal find would.
+            instances = await self.search_social_rescue(lexical, scope)
+            instances.sort(key=lambda a: a.date or "9999")
         if not instances:
             return LineageRecord(
                 lineage_type="lexical",

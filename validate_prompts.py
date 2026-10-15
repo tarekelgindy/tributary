@@ -32,8 +32,8 @@ import anthropic
 
 from fingerprint import (ADVERSARIAL_SYSTEM, CONCEPTUAL_ANCESTORS_SYSTEM,
                          EARLIEST_USE_SYSTEM, HAIKU, RECENT_ORIGIN_SYSTEM,
-                         REFERENT_IMPLICIT_SYSTEM, SONNET, _parse_json_safe,
-                         _parse_referent_json)
+                         REFERENT_IMPLICIT_SYSTEM, SOCIAL_RESCUE_SYSTEM, SONNET,
+                         _parse_json_safe, _parse_referent_json)
 
 HARNESS_PREAMBLE = """\
 HARNESS MODE: you have NO web search in this run. Evaluate ONLY the
@@ -319,6 +319,45 @@ def recent_origin(client):
         f"t.me={'missing' if not tme else tme.get('date')} (needs 10-04) · "
         f"cited-post={'missing' if not baza else (baza.get('date'), bool(baza.get('cited_via')))} "
         f"(needs 10-04 + cited_via) · event-only={'excluded' if excl_ok else 'INCLUDED'}")
+
+
+@fixture
+def rescue_social(client):
+    """Empty-lineage social rescue (built 2026-10-15): a t.me post carrying
+    the phrasing is accepted as a primary receipt dated by the post;
+    event-only coverage is excluded; and the instrument NEVER cites its own
+    published output (tributary.tools) as an attestation."""
+    out = _call(client, SOCIAL_RESCUE_SYSTEM, {
+        "claim_being_traced": "the plague outbreak in Russia came from a bioweapons lab",
+        "diagnostic_ngrams": ["bioweapons lab", "biological weapon", "биологическое оружие"],
+        "candidates": [
+            {"source_title": "Telegram channel «Сибирский инсайдер», public post",
+             "author": "Сибирский инсайдер (Telegram channel)", "date": "2026-10-04",
+             "source_url": "https://t.me/s/sibinsider/4821",
+             "content_summary": ("A public Telegram post dated 4 October 2026 asserting in "
+                                 "Russian: «Смерть в институте — это утечка биологического "
+                                 "оружия» (the death at the institute is a biological "
+                                 "weapons leak).")},
+            {"source_title": "Russia plague: what we know about the suspected case",
+             "author": "Wire staff", "date": "2026-10-05",
+             "source_url": "https://example.com/what-we-know",
+             "content_summary": ("A 5 October explainer about the lab worker's death. It "
+                                 "does not mention bioweapons or any weapons claim.")},
+            {"source_title": "Tributary trace: plague outbreak in Russia came from a bioweapons lab",
+             "author": "Tributary", "date": "2026-10-13",
+             "source_url": "https://tributary.tools/fingerprint_viewer.html?load=traces/b01c2042080d.json",
+             "content_summary": ("A published Tributary provenance trace of this exact "
+                                 "claim, quoting the phrasing verbatim with a dated "
+                                 "attestation timeline.")}]})
+    ent = _entries(out)
+    tme = next((e for e in ent if "t.me" in str(e.get("source_url", ""))), None)
+    event_only = next((e for e in ent if "what-we-know" in str(e.get("source_url", ""))), None)
+    self_cite = next((e for e in ent if "tributary.tools" in str(e.get("source_url", ""))), None)
+    tme_ok = tme is not None and str(tme.get("date", "")).startswith("2026-10-04")
+    return tme_ok and event_only is None and self_cite is None, (
+        f"t.me={'missing' if not tme else tme.get('date')} (needs 10-04) · "
+        f"event-only={'excluded' if event_only is None else 'INCLUDED'} · "
+        f"self-cite={'excluded' if self_cite is None else 'INCLUDED (the instrument cited itself)'}")
 
 
 @fixture
