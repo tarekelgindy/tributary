@@ -1536,6 +1536,7 @@ def _referent_bound_pass(fp) -> int:
     demoted = 0
     for record in (fp.genealogy.lexical, fp.genealogy.conceptual):
         log = getattr(record, "attestation_log", None) or []
+        hits = 0
         for inst in log:
             if getattr(inst, "claim_relation", "") == "related-context":
                 continue
@@ -1548,11 +1549,12 @@ def _referent_bound_pass(fp) -> int:
                 inst.evidence = (str(inst.evidence or "")).rstrip() + \
                     REFERENT_BOUND_NOTE.format(
                         ref_desc=ref.get("description", ""), ref_date=ref_date)
-                demoted += 1
+                hits += 1
+        demoted += hits
         asserting = [i for i in log
                      if getattr(i, "claim_relation", "") != "related-context"
                      and i.date]
-        if asserting and demoted:
+        if asserting and hits:
             asserting.sort(key=lambda i: i.date)
             earliest = asserting[0]
             if record.first_attested_date and record.first_attested_date < earliest.date:
@@ -1564,6 +1566,16 @@ def _referent_bound_pass(fp) -> int:
                     record.status = (GenealogyStatus.SINGLE_ORIGIN
                                      if earliest.amplifier_role == AmplifierRole.ORIGINATOR
                                      else GenealogyStatus.EARLIEST_FOUND)
+        elif hits and not asserting:
+            # everything the layer held was pre-referent context: it cannot
+            # claim an anchor (the Milo shape — for a referent-specific claim
+            # with no same-referent rearticulation, the lineage is honestly
+            # empty rather than anchored on a precedent)
+            record.first_attested_date = ""
+            record.first_attested_source = ""
+            record.primary_origin_id = ""
+            record.attestation_confidence = 0.0
+            record.status = GenealogyStatus.UNKNOWN
     return demoted
 
 
