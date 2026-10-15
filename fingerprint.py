@@ -430,8 +430,17 @@ Produce JSON ONLY:
     "arena": "the domain or system in which this plays out",
     "instrument": "by what means: rules, markets, policy, biology, technology, etc."
   },
-  "causal_structure": "a single neutral sentence: actor + action + consequence"
+  "causal_structure": "a single neutral sentence: actor + action + consequence",
+  "referent": {
+    "description": "when the claim is about ONE proper-named thing or specific event — a named film, book, incident, or a named person's specific act — name it here (e.g. 'Kiyoshi Kimura's Somalia tuna venture', 'the film Milo and Otis', 'the October 2026 death at Russia's Irkutsk anti-plague institute'). EMPTY STRING when the claim is form-general (a statistic, a generalization, folk wisdom) — a descriptive designation like 'the poorest billionaire' is a category slot, not a referent.",
+    "date": "the referent's own date (when the film released / the event happened / the act occurred), as the EARLIEST plausible ISO date at your known precision: '1986-01-01' for a 1986 film, '2026-10-02' for a dated incident. Empty when no referent or the date is unknowable.",
+    "basis": "one short phrase: how you know the date"
+  }
 }
+
+The referent powers a hard rule downstream: nothing can assert a claim
+about an event before the event exists. Name the referent and date it
+honestly; leave both empty rather than guessing.
 
 Examples:
 
@@ -1505,6 +1514,59 @@ _VERIFY_USER_AGENT = "TributaryFingerprintVerifier/0.1 (+https://github.com/tare
 _VERIFY_TIMEOUT = 12.0
 
 
+REFERENT_BOUND_NOTE = (
+    " [auto: predates this claim's referent ({ref_desc}, {ref_date}) — nothing"
+    " can assert a claim about an event before the event exists; filed as"
+    " related-context. Deterministic referent-bound pass, 2026-10-14.]")
+
+
+def _referent_bound_pass(fp) -> int:
+    """THE MECHANICAL INVARIANT (2026-10-14, Tarek's spec after five hand-
+    corrections of the same disease): no asserting entry may predate the
+    claim's referent. The LLM gates state this rule editorially and drift
+    in live runs; this pass enforces the temporal half deterministically.
+    Demotes violators to related-context and re-anchors each lineage from
+    the remaining asserting entries. Returns the number demoted."""
+    ref = getattr(fp.conceptual, "referent", None) or {}
+    ref_date = str(ref.get("date") or "")[:10]
+    try:
+        bound = date.fromisoformat(ref_date)
+    except ValueError:
+        return 0
+    demoted = 0
+    for record in (fp.genealogy.lexical, fp.genealogy.conceptual):
+        log = getattr(record, "attestation_log", None) or []
+        for inst in log:
+            if getattr(inst, "claim_relation", "") == "related-context":
+                continue
+            try:
+                d = date.fromisoformat(str(inst.date or "")[:10])
+            except ValueError:
+                continue
+            if d < bound:
+                inst.claim_relation = "related-context"
+                inst.evidence = (str(inst.evidence or "")).rstrip() + \
+                    REFERENT_BOUND_NOTE.format(
+                        ref_desc=ref.get("description", ""), ref_date=ref_date)
+                demoted += 1
+        asserting = [i for i in log
+                     if getattr(i, "claim_relation", "") != "related-context"
+                     and i.date]
+        if asserting and demoted:
+            asserting.sort(key=lambda i: i.date)
+            earliest = asserting[0]
+            if record.first_attested_date and record.first_attested_date < earliest.date:
+                record.first_attested_date = earliest.date
+                record.first_attested_source = earliest.source_url or ""
+                record.primary_origin_id = earliest.instance_id
+                record.attestation_confidence = float(earliest.confidence or 0)
+                if record.status not in (GenealogyStatus.UNKNOWN,):
+                    record.status = (GenealogyStatus.SINGLE_ORIGIN
+                                     if earliest.amplifier_role == AmplifierRole.ORIGINATOR
+                                     else GenealogyStatus.EARLIEST_FOUND)
+    return demoted
+
+
 def _is_recent_date(datestr, days: int = 45) -> bool:
     """True when an ISO-ish date falls within the last `days` days — the
     breaking-claim trigger. Unparseable dates are not recent."""
@@ -2241,10 +2303,18 @@ class FingerprintGenerator:
         if not isinstance(entities, dict):
             entities = {}
         _log_progress(f"L2 conceptual done in {time.monotonic() - t0:.1f}s")
+        referent = data.get("referent") or {}
+        if not isinstance(referent, dict):
+            referent = {}
+        referent = {k: str(referent.get(k, "")).strip()
+                    for k in ("description", "date", "basis")}
+        if not referent["description"]:
+            referent = {}
         return ConceptualLayer(
             claim_predicate=str(data.get("claim_predicate", "")).strip(),
             entities={k: str(v).strip() for k, v in entities.items()},
             causal_structure=str(data.get("causal_structure", "")).strip(),
+            referent=referent,
         )
 
     async def generate_rhetorical(
@@ -3140,6 +3210,13 @@ class FingerprintGenerator:
             evidence_landscape=evidence,
             provenance=Provenance.ai(model=SONNET),
         )
+
+        # Deterministic referent bound: no asserting entry predates the
+        # claim's referent (extracted at L2). Free, judgment-free, and the
+        # mechanical end of five hand-corrected noise cases.
+        n = _referent_bound_pass(fp)
+        if n:
+            _log_progress(f"Referent bound: {n} pre-referent entries filed as context")
 
         # Post-pass: URL existence + quote-in-page verification for every
         # cited source. Pure HTTP, no API cost. Parallel-fetches all URLs.
