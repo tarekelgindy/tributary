@@ -36,7 +36,12 @@
       "arena": "military conflict and organizational hierarchy",
       "instrument": "intelligence gathering, surveillance, precision targeting, and sequential elimination of leadership nodes"
     },
-    "causal_structure": "superior intelligence penetration enables rapid sequential targeting of leadership, which disrupts organizational command and control, degrading the adversary's ability to function"
+    "causal_structure": "superior intelligence penetration enables rapid sequential targeting of leadership, which disrupts organizational command and control, degrading the adversary's ability to function",
+    "referent": {
+      "description": "Israel's policy and practice of targeted killing operations against Hamas commanders from the 1990s onward, presented as intelligence-driven command structure degradation",
+      "date": "1996-01-05",
+      "basis": "resolved from the trace's own instances: First specific Hamas commander killing (Yahya Ayyash); pattern continues through 2004"
+    }
   },
   "rhetorical": {
     "frame_primitives": [
@@ -771,10 +776,10 @@
     "conceptual": {
       "lineage_type": "conceptual",
       "status": "earliest-found",
-      "first_attested_date": "1952-01-01",
-      "first_attested_source": "https://calhoun.nps.edu/server/api/core/bitstreams/0ea6e6a1-ec68-46dc-b43b-408d5519acda/content",
-      "attestation_confidence": 0.75,
-      "primary_origin_id": "968b6211a8ef",
+      "first_attested_date": "1996-01-05",
+      "first_attested_source": "https://www.nytimes.com/1996/01/05/world/israel-kills-master-bomb-maker-for-hamas.html",
+      "attestation_confidence": 0.82,
+      "primary_origin_id": "6028b287e915",
       "parallel_origin_ids": [],
       "attestation_log": [
         {
@@ -786,13 +791,13 @@
           "lexical_form_seen": "intelligence-led operations; Special Branch targeting of Min Yuen (Communist Party infrastructure); neutralization of leadership; degrading insurgent organizational capacity",
           "exact_quote": "He made good use of such an intelligence apparatus, which focused on the strengths, weaknesses and strategy of the insurgency; this became very effective under a revitalized Special Branch",
           "confidence": 0.75,
-          "evidence": "During the Malayan Emergency (1948–1960), and especially under General Templer from 1952, British forces developed and operationalized an intelligence-led targeting doctrine that is structurally identical to the claim: the revitalized Special Branch fused human intelligence, informant networks, and captured documents to produce targeting lists of Malayan Communist Party (MCP) leadership cadres; these were then sequentially neutralized (captured or killed), disrupting the MCP's command structure and degrading its operational capacity. The NPS counterinsurgency study explicitly notes that Templer 'made good use of such an intelligence apparatus, which focused on the strengths, weaknesses and strategy of the insurgency' and that this 'became very effective under a revitalized Special Branch.' The causal structure — superior intelligence penetration → sequential targeting of leadership nodes → organizational degradation — is the same as the structural claim. The Malayan doctrine is widely cited as the direct precursor to the Phoenix Program and to Israeli targeted-killing doctrine. Confidence is slightly lower (0.75) than Phoenix because the primary Templer-era documents are British government records not fully indexed in English-language open sources, and the explicit theoretical articulation of the causal chain was more implicit in operational practice than in published doctrine.",
+          "evidence": "During the Malayan Emergency (1948–1960), and especially under General Templer from 1952, British forces developed and operationalized an intelligence-led targeting doctrine that is structurally identical to the claim: the revitalized Special Branch fused human intelligence, informant networks, and captured documents to produce targeting lists of Malayan Communist Party (MCP) leadership cadres; these were then sequentially neutralized (captured or killed), disrupting the MCP's command structure and degrading its operational capacity. The NPS counterinsurgency study explicitly notes that Templer 'made good use of such an intelligence apparatus, which focused on the strengths, weaknesses and strategy of the insurgency' and that this 'became very effective under a revitalized Special Branch.' The causal structure — superior intelligence penetration → sequential targeting of leadership nodes → organizational degradation — is the same as the structural claim. The Malayan doctrine is widely cited as the direct precursor to the Phoenix Program and to Israeli targeted-killing doctrine. Confidence is slightly lower (0.75) than Phoenix because the primary Templer-era documents are British government records not fully indexed in English-language open sources, and the explicit theoretical articulation of the causal chain was more implicit in operational practice than in published doctrine. [auto: predates this claim's referent (Israel's policy and practice of targeted killing operations against Hamas commanders from the 1990s onward, presented as intelligence-driven command structure degradation, 1996-01-05) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "The British Malayan Special Branch model under Templer (1952–1954) is the earliest well-documented, institutionally formalized instance in the modern era of the specific causal chain: intelligence superiority → sequential leadership targeting → organizational capacity degradation. It predates Phoenix by 15 years and the proposed 1976 date by roughly 24 years. It is the acknowledged doctrinal ancestor of both Phoenix and later Israeli practice, making it a genuine originator rather than merely a related-context text. [2026-09-25 audit: no coining evidence — originator label removed (first documented instance is not origin; max one evidenced originator per lineage)]",
           "cited_via": "",
           "date_precision": "",
           "describes_period": "",
-          "claim_relation": "",
+          "claim_relation": "related-context",
           "verified": true,
           "verification_status": "url-ok",
           "verification_notes": "URL reachable (quote not checked)",
@@ -823,13 +828,13 @@
           "lexical_form_seen": "intelligence coordination and exploitation; targeting Viet Cong infrastructure (VCI); neutralization of leadership cadres; disrupting organizational capacity through intelligence-driven sequential targeting",
           "exact_quote": "an intelligence operations and coordination center would gather names, addresses, and aliases from every available source — police informants, military intelligence, defectors, captured documents — and produce a single targeting list",
           "confidence": 0.95,
-          "evidence": "The U.S. Phoenix Program (formally ICEX — Intelligence Coordination and Exploitation Program), drafted by CIA officers in spring 1967 and formalized by South Vietnamese decree on December 20, 1967, instantiates the identical structural claim: (1) superior intelligence penetration (fusing police, military, defector, and captured-document intelligence into province-level targeting lists) enables (2) rapid sequential targeting of organizational leadership nodes (VCI cadres, ranked by importance), which (3) disrupts command and control of the adversary organization (the Viet Cong Infrastructure), thereby (4) degrading its operational capacity. A declassified CIA assessment dated December 16, 1968 explicitly evaluates whether 'the attack on the Viet Cong infrastructure (VCI) has made encouraging progress' in producing 'a significant reduction of the Communists' ability to carry out essential activities' — the exact causal chain of the structural claim. The agent differs (US/South Vietnam vs. Israel), the patient differs (VCI vs. Hamas), but the predicate, causal structure, and instrument are structurally identical: intelligence-enabled sequential leadership targeting degrades adversary operational capacity. This is not a related idea — it is the same structural claim operationalized in a different theater nine years before the proposed earliest date of 1976.",
+          "evidence": "The U.S. Phoenix Program (formally ICEX — Intelligence Coordination and Exploitation Program), drafted by CIA officers in spring 1967 and formalized by South Vietnamese decree on December 20, 1967, instantiates the identical structural claim: (1) superior intelligence penetration (fusing police, military, defector, and captured-document intelligence into province-level targeting lists) enables (2) rapid sequential targeting of organizational leadership nodes (VCI cadres, ranked by importance), which (3) disrupts command and control of the adversary organization (the Viet Cong Infrastructure), thereby (4) degrading its operational capacity. A declassified CIA assessment dated December 16, 1968 explicitly evaluates whether 'the attack on the Viet Cong infrastructure (VCI) has made encouraging progress' in producing 'a significant reduction of the Communists' ability to carry out essential activities' — the exact causal chain of the structural claim. The agent differs (US/South Vietnam vs. Israel), the patient differs (VCI vs. Hamas), but the predicate, causal structure, and instrument are structurally identical: intelligence-enabled sequential leadership targeting degrades adversary operational capacity. This is not a related idea — it is the same structural claim operationalized in a different theater nine years before the proposed earliest date of 1976. [auto: predates this claim's referent (Israel's policy and practice of targeted killing operations against Hamas commanders from the 1990s onward, presented as intelligence-driven command structure degradation, 1996-01-05) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "Phoenix/ICEX is the first large-scale, formally institutionalized, intelligence-driven sequential leadership-targeting program in the modern era that explicitly theorized and operationalized the causal chain: intelligence fusion → targeting list → sequential neutralization of leadership nodes → degradation of adversary organizational capacity. It predates the proposed 1976 date by approximately nine years and is the direct doctrinal ancestor of later Israeli and US targeted-killing programs. Robert Komer's 1971 article 'Impact of Pacification on Insurgency in South Vietnam' (Journal of International Affairs) further articulated the theory in published academic form, still pre-1976. [2026-09-25 audit: no coining evidence — originator label removed (first documented instance is not origin; max one evidenced originator per lineage)]",
           "cited_via": "",
           "date_precision": "",
           "describes_period": "",
-          "claim_relation": "",
+          "claim_relation": "related-context",
           "verified": true,
           "verification_status": "url-ok",
           "verification_notes": "URL reachable (quote not checked)",
@@ -860,13 +865,13 @@
           "lexical_form_seen": "removal of key individuals disrupts organizational capacity; leadership as organizational nerve center",
           "exact_quote": "Terrorist organizations depend on key individuals whose removal can disrupt operations and degrade the group's capacity.",
           "confidence": 0.72,
-          "evidence": "Jenkins' early RAND work on political violence established the foundational logic that terrorist organizations are leadership-dependent and that removing key nodes degrades operational capacity — the structural claim in its earliest modern counterterrorism vocabulary, predating the Israel-Hamas application by decades.",
+          "evidence": "Jenkins' early RAND work on political violence established the foundational logic that terrorist organizations are leadership-dependent and that removing key nodes degrades operational capacity — the structural claim in its earliest modern counterterrorism vocabulary, predating the Israel-Hamas application by decades. [auto: predates this claim's referent (Israel's policy and practice of targeted killing operations against Hamas commanders from the 1990s onward, presented as intelligence-driven command structure degradation, 1996-01-05) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "Jenkins at RAND is the earliest traceable modern articulation of the intelligence-driven leadership-removal-equals-organizational-degradation logic in the counterterrorism literature. [2026-09-25 audit: no coining evidence — originator label removed (first documented instance is not origin; max one evidenced originator per lineage)]",
           "cited_via": "RAND Corporation catalog; widely cited in decapitation literature",
           "date_precision": "year",
           "describes_period": "",
-          "claim_relation": "asserts",
+          "claim_relation": "related-context",
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
@@ -897,13 +902,13 @@
           "lexical_form_seen": "organizational structure of terrorist groups; leadership succession and group survival; command-and-control vulnerability",
           "exact_quote": "The internal organization of terrorist groups shapes their vulnerability to disruption through the removal of key personnel.",
           "confidence": 0.68,
-          "evidence": "Crenshaw and Rapoport's 1980s work on terrorist organizational structure established that command-and-control architecture determines susceptibility to leadership removal — the structural precondition for the claim that intelligence-enabled targeting degrades capacity.",
+          "evidence": "Crenshaw and Rapoport's 1980s work on terrorist organizational structure established that command-and-control architecture determines susceptibility to leadership removal — the structural precondition for the claim that intelligence-enabled targeting degrades capacity. [auto: predates this claim's referent (Israel's policy and practice of targeted killing operations against Hamas commanders from the 1990s onward, presented as intelligence-driven command structure degradation, 1996-01-05) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "Built the academic framework linking organizational structure to leadership-targeting efficacy, which all subsequent decapitation scholarship cites.",
           "cited_via": "RAND catalog; cited in Jordan 2019 and Cronin 2009",
           "date_precision": "year",
           "describes_period": "",
-          "claim_relation": "asserts",
+          "claim_relation": "related-context",
           "verified": false,
           "verification_status": "url-error",
           "verification_notes": "HTTP 403",
@@ -1781,16 +1786,12 @@
       "adversarial_notes": "TRADITIONS CHECKED: (1) Cold War nuclear decapitation theory — ruled out as a structural match because it targets state command-and-control for nuclear retaliation prevention, not sub-state organizational leadership for operational degradation; the causal structure differs (deterrence/retaliation vs. organizational capacity degradation). (2) Airpower theory (Douhet 1921, Billy Mitchell, John Warden's 'Five Rings') — ruled out; these target industrial/economic nodes and civilian morale, not sequential intelligence-driven elimination of individual leadership nodes in a non-state organization. (3) Mao Zedong / Giap insurgency theory — ruled out; these are from the insurgent perspective, not the counter-leadership targeting perspective. (4) British Malayan Emergency doctrine (Templer, 1952) — INCLUDED as earlier ancestor; structurally matches the claim's causal chain. (5) US Phoenix Program / ICEX (1967) — INCLUDED as earlier ancestor; the most direct and formally documented pre-1976 instantiation of the structural claim. (6) French counterinsurgency school (Trinquier, Galula, Algeria 1954–1962) — partially matches; Trinquier's 'Modern Warfare' (1961) discusses intelligence-driven targeting of insurgent organizational nodes, but the emphasis is on population control and interrogation networks rather than sequential leadership decapitation per se; treated as related context rather than a direct structural match, though it is close. (7) Robert Komer's 1971 published article 'Impact of Pacification on Insurgency in South Vietnam' (Journal of International Affairs) explicitly theorizes the Phoenix causal chain in academic form, pre-1976, and would constitute a published textual articulation of the structural claim. (8) Israeli pre-1976 targeted killing practice (Operation Wrath of God / Operation Spring of Youth, 1972–1973, targeting PLO leadership after Munich) — this is Israeli practice of the structural claim pre-1976, but it is practice rather than a theoretical articulation; it confirms the claim was operationally understood before 1976. RULED OUT: Clausewitz's 'center of gravity' concept — addresses strategic logic of targeting but not the specific intelligence-enabled sequential leadership elimination mechanism. Sun Tzu — addresses deception and intelligence but not the specific modern organizational-decapitation causal chain; cross-century resemblance, not transmission. LIMITATIONS: Pre-1976 British and French classified operational documents may contain more explicit theoretical articulations not accessible via open-source search. The proposed 1976 date may refer to a specific published text (e.g., an Israeli doctrine document or US Army manual) that first formally articulated the claim in writing with the specific Israel/Hamas entities — if so, the earlier ancestors found here articulate the same structural claim with different agents and patients, which is the correct standard for adversarial verification of a structural claim.",
       "mutations": [],
       "timeline_stats": {
-        "active_from": "1952-01-01",
+        "active_from": "1996-01-05",
         "active_through": "2026-05-27",
-        "active_span_days": 27175,
-        "years_active": 74,
-        "years_with_activity": 18,
+        "active_span_days": 11100,
+        "years_active": 30,
+        "years_with_activity": 14,
         "instances_per_year": {
-          "1952": 1,
-          "1967": 1,
-          "1976": 1,
-          "1988": 1,
           "1996": 1,
           "2002": 1,
           "2004": 1,
@@ -1807,18 +1808,6 @@
           "2026": 3
         },
         "instances_per_year_by_role": {
-          "1952": {
-            "early-amplifier": 1
-          },
-          "1967": {
-            "early-amplifier": 1
-          },
-          "1976": {
-            "early-amplifier": 1
-          },
-          "1988": {
-            "early-amplifier": 1
-          },
           "1996": {
             "institutional-adoption": 1
           },
@@ -1875,7 +1864,7 @@
         "originator_to_mass_amplifier_days": null,
         "originator_to_institutional_adoption_days": null,
         "originator_to_critic_days": null,
-        "days_since_latest": 121
+        "days_since_latest": 141
       },
       "social_spread": [],
       "social_search_performed": false,
