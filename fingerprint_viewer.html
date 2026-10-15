@@ -1865,6 +1865,25 @@ function render(fp) {
   document.getElementById('claim-phrase').textContent =
     fp.lexical.canonical_phrase || '(no canonical phrase)';
 
+  // Referent line (2026-10-15, Tarek's call): when the claim is about ONE
+  // specific thing, say so up front — it is the reason older same-form
+  // material files under Related context instead of the claim's own lineage
+  // (the referent-bound invariant, 2026-10-14). Quiet metadata, not a
+  // warning banner: this is the instrument explaining its own filing rule.
+  document.getElementById('referent-line')?.remove();
+  {
+    const ref = fp.conceptual?.referent || {};
+    const desc = String(ref.description || '').trim();
+    if (desc) {
+      const d = String(ref.date || '').trim();
+      document.getElementById('claim-phrase')?.insertAdjacentHTML('afterend',
+        `<div id="referent-line" style="color:#777;font-size:0.88rem;margin:0.3rem 0 0;">
+          About one specific thing: <strong style="color:#555;">${escapeHtml(desc)}</strong>${d
+            ? ` — dating from ${escapeHtml(d)}. Nothing older can assert this claim; such material appears under <em>Related context</em>.`
+            : `. Same-form claims about other subjects appear under <em>Related context</em>.`}</div>`);
+    }
+  }
+
   // Polarity note (2026-09-25): a request that NEGATES this claim is served
   // this trace — the claim is where the history is — but never silently.
   // The serving pipeline appends ?polarity=negation to the permalink.
@@ -2986,7 +3005,9 @@ function renderOverview(fp) {
           claims about <em>other</em> subjects (precedents), broader doctrine,
           fiction that depicts it, and deep background. None of it counts
           toward this claim's origin, timeline, or cast — it is the tradition
-          the claim landed in.</p>
+          the claim landed in.${(fp.conceptual?.referent?.description || '').trim()
+            ? ` Much of it predates or stands apart from <em>${escapeHtml(String(fp.conceptual.referent.description).trim())}</em> — nothing can assert a claim about a thing before the thing exists.`
+            : ''}</p>
         ${logRowsHtml(ctxAll, 'ctx')}
       </div>
     </details>` : ''}
