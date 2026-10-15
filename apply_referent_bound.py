@@ -27,7 +27,6 @@ cards for changed traces after --apply.
 import argparse
 import json
 import os
-import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -35,7 +34,8 @@ from types import SimpleNamespace
 
 import anthropic
 
-from fingerprint import (HAIKU, REFERENT_BOUND_NOTE, _parse_json_safe,
+from fingerprint import (HAIKU, REFERENT_BOUND_NOTE, REFERENT_IMPLICIT_SYSTEM,
+                         _norm_ref_date, _parse_json_safe, _parse_referent_json,
                          compute_timeline_stats)
 
 ROOT = Path(__file__).resolve().parent
@@ -69,17 +69,6 @@ empty if no referent or unknowable>",
 Leave fields empty rather than guessing."""
 
 
-def _norm_date(d: str) -> str:
-    """Year or year-month outputs are honest precision but invalid for
-    date.fromisoformat — pad to the earliest day they denote."""
-    d = d.strip()
-    if re.fullmatch(r"\d{4}", d):
-        return d + "-01-01"
-    if re.fullmatch(r"\d{4}-\d{2}", d):
-        return d + "-01"
-    return d
-
-
 def extract_referent(client, claim: str) -> dict:
     resp = client.messages.create(
         model=HAIKU, max_tokens=200,
@@ -88,33 +77,16 @@ def extract_referent(client, claim: str) -> dict:
     out = _parse_json_safe("".join(b.text for b in resp.content
                                    if getattr(b, "type", "") == "text")) or {}
     ref = {k: str(out.get(k, "")).strip() for k in ("description", "date", "basis")}
-    ref["date"] = _norm_date(ref["date"])
+    ref["date"] = _norm_ref_date(ref["date"])
     return ref if ref["description"] else {}
 
 
-REFERENT_IMPLICIT_SYSTEM = """\
-You resolve an IMPLICIT referent. A claim was typed descriptively — its text
-names no specific thing — but the attested instances found for it may all
-concern ONE specific incident, work, or named person's specific act. If so,
-that thing IS the claim's referent, and nothing predating it can assert the
-claim. You get the claim and its earliest found instances (date, title,
-phrasing). Decide: do the instances concern one specific identifiable
-referent, or do they genuinely span different subjects, incidents, or eras
-(a form-general claim — stereotypes, folk wisdom, perennial assertions)?
-Output ONLY JSON:
-{"description": "<the one specific referent the instances concern, or empty
-string if they span subjects or you are unsure>",
- "date": "<the referent's OWN date (the incident/act/release itself, not the
-earliest report about it) as the EARLIEST plausible ISO date at known
-precision; empty if unknowable>",
- "basis": "<= 12 words: how the instances identify and date it>"}
-The referent's date must not be LATER than the earliest instance that
-concerns it. Leave fields empty rather than guessing."""
-
-
-def resolve_implicit_referent(client, claim: str, fp: dict) -> dict:
+def resolve_implicit_referent(client, claim: str, fp: dict, cap: int = 12) -> dict:
     """Stage 2: when the claim text names nothing, ask whether the trace's
-    own asserting instances resolve to one specific referent."""
+    own asserting instances resolve to one specific referent. Prompt and
+    parsing shared with the in-pipeline resolver (fingerprint.py); the
+    digest samples earliest + most recent so a precedent-polluted log still
+    shows the current wave."""
     digest = []
     for layer in ("lexical", "conceptual"):
         log = ((fp.get("genealogy") or {}).get(layer) or {}).get("attestation_log") or []
@@ -128,22 +100,20 @@ def resolve_implicit_referent(client, claim: str, fp: dict) -> dict:
                            "title": str(a.get("source_title") or "")[:80],
                            "phrasing": str(a.get("lexical_form_seen")
                                            or a.get("exact_quote") or "")[:120]})
-    digest = sorted(digest, key=lambda x: x["date"])[:12]
+    digest.sort(key=lambda x: x["date"])
+    if len(digest) > cap:
+        half = cap // 2
+        digest = digest[:half] + digest[-half:]
     if not digest:
         return {}
     resp = client.messages.create(
         model=HAIKU, max_tokens=250,
         system=[{"type": "text", "text": REFERENT_IMPLICIT_SYSTEM}],
         messages=[{"role": "user", "content": json.dumps(
-            {"claim": claim, "instances": digest})}])
-    out = _parse_json_safe("".join(b.text for b in resp.content
-                                   if getattr(b, "type", "") == "text")) or {}
-    ref = {k: str(out.get(k, "")).strip() for k in ("description", "date", "basis")}
-    ref["date"] = _norm_date(ref["date"])
-    if not (ref["description"] and ref["date"]):
-        return {}
-    ref["basis"] = ("resolved from the trace's own instances: " + ref["basis"]).strip()
-    return ref
+            {"claim": claim, "instances": digest}, ensure_ascii=False)}])
+    return _parse_referent_json("".join(b.text for b in resp.content
+                                        if getattr(b, "type", "") == "text"),
+                                digest_dates={d["date"] for d in digest})
 
 
 def _stats_dict(gl: dict) -> dict:
