@@ -684,12 +684,18 @@ class ConceptualLayer:
     claim_predicate: str = ""
     entities: dict = field(default_factory=dict)
     causal_structure: str = ""
+    # Referent (2026-10-14): when the claim is about ONE proper-named thing
+    # or specific event, {description, date (earliest ISO), basis}. Drives
+    # the deterministic referent-bound pass: nothing can assert a claim
+    # about an event before the event exists. Empty for form-general claims.
+    referent: dict = field(default_factory=dict)
 
     def to_dict(self):
         return {
             "claim_predicate": self.claim_predicate,
             "entities": self.entities,
             "causal_structure": self.causal_structure,
+            "referent": self.referent,
         }
 
 
