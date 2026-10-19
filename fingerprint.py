@@ -1430,8 +1430,94 @@ def _distinctive_ngram(ngram: str) -> bool:
 # amplifiers or adopters. Titles are structural evidence (P5); the regex is
 # deliberately conservative so gray cases stay with the judge.
 _EXAMINER_TITLE_RE = re.compile(
-    r"fact.?check|fact or fiction|myth ?bust\w*|debunk|myth or fact|old wives",
+    # deny-forms added 2026-10-18 (Talarico calibration: "Campaign And
+    # Hospital Deny Claim…" sat as mass-amplifier at 0.95 — denial coverage
+    # on an affirmation trace is critic-function). Word-bounded to avoid
+    # loose matches; shares the regex's known, accepted polarity blindness
+    # (rebuttal traces are rare and hand-reviewed).
+    r"fact.?check|fact or fiction|myth ?bust\w*|debunk|myth or fact|old wives"
+    r"|\bden(?:y|ies|ied|ial)\b",
     re.IGNORECASE)
+
+
+_X_STATUS_RE = re.compile(
+    r"(?:^|\.|//)(?:x|twitter)\.com/[^/\s]+/status/([^/?\s#]+)", re.IGNORECASE)
+_X_EPOCH_MS = 1288834974657  # Twitter snowflake epoch (2010-11-04 01:42:54 UTC)
+
+
+def _x_snowflake_date(status_id: str):
+    """The exact UTC creation date embedded in an X/Twitter status id
+    (snowflake: ms-since-epoch in the top bits) — a receipt by arithmetic,
+    no API and no fetch. None when the id does not decode (non-numeric,
+    pre-snowflake, or out of range)."""
+    try:
+        sid = int(status_id)
+    except (TypeError, ValueError):
+        return None
+    if sid < (1 << 22):
+        return None
+    ms = (sid >> 22) + _X_EPOCH_MS
+    try:
+        return datetime.fromtimestamp(ms / 1000, tz=timezone.utc).date()
+    except (OverflowError, OSError, ValueError):
+        return None
+
+
+def _snowflake_sanity_pass(instances: list) -> int:
+    """For any instance whose source_url IS an X status link, the id's
+    embedded timestamp is authoritative over the model-reported date — and a
+    link whose id cannot decode is a placeholder the model invented, not a
+    real post (the Talarico calibration produced exactly one:
+    'x.com/spencerpratt/status/[October-9-2026-post]'). Returns the number
+    of instances corrected or flagged; callers re-sort on a nonzero return
+    since date corrections can reorder the lineage."""
+    touched = 0
+    for inst in instances:
+        m = _X_STATUS_RE.search(inst.source_url or "")
+        if not m:
+            continue
+        d = _x_snowflake_date(m.group(1))
+        if d is None:
+            inst.evidence = (str(inst.evidence or "")).rstrip() + (
+                " [auto: the X status URL's id does not decode to a timestamp"
+                " — a placeholder or malformed link, not a real post; treat"
+                " the link as unverified. Snowflake pass, 2026-10-18.]")
+            inst.confidence = min(float(inst.confidence or 0), 0.4)
+            touched += 1
+            continue
+        iso = d.isoformat()
+        if str(inst.date or "")[:10] != iso:
+            old = inst.date
+            inst.date = iso
+            inst.date_precision = "day"
+            inst.evidence = (str(inst.evidence or "")).rstrip() + (
+                f" [auto: date set from the X post id's embedded timestamp"
+                f" (snowflake) — reported {old or 'none'}, actual {iso}."
+                f" Snowflake pass, 2026-10-18.]")
+            touched += 1
+    return touched
+
+
+def _single_originator_pass(instances: list) -> int:
+    """At most ONE evidenced originator per lineage. The prompts state it;
+    live runs drift (the Talarico calibration crowned three near-simultaneous
+    amplifiers). Deterministic resolution: the earliest-dated crown is the
+    only coherent one — a later coiner cannot coin what already exists; ties
+    break on confidence, then log order. Demoted crowns become
+    early-amplifier with a visible note. Returns the number demoted."""
+    crowns = [i for i in instances
+              if getattr(i, "claim_relation", "") != "related-context"
+              and i.amplifier_role == AmplifierRole.ORIGINATOR]
+    if len(crowns) <= 1:
+        return 0
+    crowns.sort(key=lambda i: (str(i.date or "9999"), -float(i.confidence or 0)))
+    for inst in crowns[1:]:
+        inst.amplifier_role = AmplifierRole.EARLY_AMPLIFIER
+        inst.role_evidence = ((inst.role_evidence or "").rstrip() +
+            f" [auto: a lineage carries at most one evidenced originator and"
+            f" an earlier crown ({crowns[0].date}) stands — demoted to"
+            f" early-amplifier. Single-originator pass, 2026-10-18.]").strip()
+    return len(crowns) - 1
 
 
 def _role_sanity_pass(instances: list) -> None:
@@ -2810,10 +2896,15 @@ class FingerprintGenerator:
         if earlier_instances:
             instances = earlier_instances + instances
 
-        # Deterministic role sanity, then anchor the lineage's origin claims
+        # Deterministic sanity passes, then anchor the lineage's origin claims
         # on entries that actually ASSERT the claim — related-context material
-        # can neither be the first attestation nor drive status.
+        # can neither be the first attestation nor drive status. Order
+        # matters: snowflake fixes dates (so re-sort), the examiner regex may
+        # demote a crowned entry to critic, and the crown dedupe needs both.
+        if _snowflake_sanity_pass(instances):
+            instances.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(instances)
+        _single_originator_pass(instances)
         asserting = [i for i in instances
                      if getattr(i, "claim_relation", "") != "related-context"]
         earliest = (asserting or instances)[0]
@@ -2889,8 +2980,11 @@ class FingerprintGenerator:
         if earlier_ancestors:
             ancestors = earlier_ancestors + ancestors
 
-        # Role sanity + asserts-anchored origin (see generate_lineage_lexical)
+        # Sanity passes + asserts-anchored origin (see generate_lineage_lexical)
+        if _snowflake_sanity_pass(ancestors):
+            ancestors.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(ancestors)
+        _single_originator_pass(ancestors)
         asserting = [i for i in ancestors
                      if getattr(i, "claim_relation", "") != "related-context"]
         earliest = (asserting or ancestors)[0]

@@ -1865,6 +1865,38 @@ function render(fp) {
   document.getElementById('claim-phrase').textContent =
     fp.lexical.canonical_phrase || '(no canonical phrase)';
 
+  // Parallel-emergence line (2026-10-18, the Talarico calibration): when the
+  // pipeline itself found polygenesis (status multiple-independent), say what
+  // that looks like in plain terms — N distinct carriers within D days of the
+  // earliest documented appearance. Descriptive only: simultaneity is an
+  // observable; coordination is an inference this instrument never makes.
+  document.getElementById('burst-line')?.remove();
+  {
+    const glex = fp.genealogy?.lexical || {};
+    if (String(glex.status || '') === 'multiple-independent') {
+      const dated = (glex.attestation_log || [])
+        .filter(i => !isRelatedContext(i) && i.date)
+        .slice().sort((a, b) => String(a.date).localeCompare(String(b.date)));
+      if (dated.length >= 2) {
+        const t0 = new Date(String(dated[0].date));
+        const within = dated.filter(i => (new Date(String(i.date)) - t0) / 864e5 <= 3);
+        const hosts = new Set(within.map(i => {
+          try { return new URL(i.source_url).hostname.replace(/^www\./, ''); }
+          catch { return (i.source_title || '').slice(0, 40); }
+        }));
+        const span = Math.round((new Date(String(within[within.length - 1].date)) - t0) / 864e5);
+        if (hosts.size >= 3) {
+          document.getElementById('claim-phrase')?.insertAdjacentHTML('afterend',
+            `<div id="burst-line" style="color:#777;font-size:0.88rem;margin:0.3rem 0 0;">
+              Parallel emergence: this phrasing appeared from <strong style="color:#555;">${hosts.size} distinct carriers</strong>
+              within ${span === 0 ? 'a single day' : `${span} day${span > 1 ? 's' : ''}`} of its earliest documented appearance —
+              near-simultaneous adoption rather than visible spread from one source.
+              Simultaneity is the observable; this instrument does not infer intent.</div>`);
+        }
+      }
+    }
+  }
+
   // Referent line (2026-10-15, Tarek's call): when the claim is about ONE
   // specific thing, say so up front — it is the reason older same-form
   // material files under Related context instead of the claim's own lineage

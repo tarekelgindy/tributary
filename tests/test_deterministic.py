@@ -28,7 +28,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from apply_referent_bound import bound_pass_dict  # noqa: E402
 from fingerprint import (_is_recent_date, _norm_ref_date,  # noqa: E402
                          _parse_referent_json, _referent_bound_pass,
-                         _referent_instance_digest)
+                         _referent_instance_digest, _role_sanity_pass,
+                         _single_originator_pass, _snowflake_sanity_pass,
+                         _x_snowflake_date)
 from models import AmplifierRole, GenealogyStatus  # noqa: E402
 from publish import is_weak_trace  # noqa: E402
 
@@ -74,7 +76,8 @@ def _inst(date, title="t", rel="", role=AmplifierRole.MENTION, iid="i"):
     return NS(claim_relation=rel, date=date, source_title=title,
               lexical_form_seen="phrasing", exact_quote="", evidence="orig",
               instance_id=iid, source_url=f"https://example.com/{iid}",
-              confidence=0.8, amplifier_role=role)
+              confidence=0.8, amplifier_role=role, role_evidence="",
+              date_precision="")
 
 
 def _record(log, status=GenealogyStatus.EARLIEST_FOUND, anchor=""):
@@ -208,6 +211,84 @@ def test_weak_trace_both_sides():
                             "conceptual": {"status": "unknown"}}}
     assert is_weak_trace(weak)
     assert not is_weak_trace(strong)  # emptied-conceptual traces stay listed
+
+
+# --- X snowflake dating (the Talarico calibration's receipts) ---------------
+
+def test_snowflake_decodes_known_ids():
+    # Ground-truth ids from the 2026-10-18 calibration, decoded and confirmed
+    # against the Guardian's reconstruction timeline.
+    assert str(_x_snowflake_date("2107921836717551858")) == "2026-10-07"
+    assert str(_x_snowflake_date("2108313243382952207")) == "2026-10-08"
+    assert str(_x_snowflake_date("2108553958696399249")) == "2026-10-09"
+    assert _x_snowflake_date("[October-9-2026-post]") is None   # placeholder
+    assert _x_snowflake_date("12345") is None                   # pre-snowflake
+
+
+def test_snowflake_pass_corrects_and_flags():
+    wrong_date = _inst("2026-10-10", iid="a")
+    wrong_date.source_url = "https://x.com/RealAmVoice/status/2108313243382952207"
+    placeholder = _inst("2026-10-09", iid="b")
+    placeholder.source_url = "https://x.com/spencerpratt/status/[October-9-2026-post]"
+    placeholder.confidence = 0.95
+    not_x = _inst("2026-10-09", iid="c")  # non-X URL untouched
+    touched = _snowflake_sanity_pass([wrong_date, placeholder, not_x])
+    assert touched == 2
+    assert wrong_date.date == "2026-10-08" and "snowflake" in wrong_date.evidence.lower()
+    assert placeholder.confidence == 0.4 and "placeholder" in placeholder.evidence
+    assert not_x.date == "2026-10-09" and not_x.evidence == "orig"
+
+
+def test_snowflake_pass_accepts_correct_dates_silently():
+    ok = _inst("2026-10-08", iid="a")
+    ok.source_url = "https://x.com/RealAmVoice/status/2108313243382952207"
+    assert _snowflake_sanity_pass([ok]) == 0
+    assert ok.evidence == "orig"
+
+
+# --- one crown per lineage ----------------------------------------------------
+
+def test_single_originator_earliest_keeps_crown():
+    a = _inst("2026-10-08", role=AmplifierRole.ORIGINATOR, iid="rav")
+    b = _inst("2026-10-09", role=AmplifierRole.ORIGINATOR, iid="pratt")
+    c = _inst("2026-10-08", rel="related-context", role=AmplifierRole.ORIGINATOR, iid="ctx")
+    assert _single_originator_pass([a, b, c]) == 1
+    assert a.amplifier_role == AmplifierRole.ORIGINATOR
+    assert b.amplifier_role == AmplifierRole.EARLY_AMPLIFIER
+    assert "at most one evidenced originator" in b.role_evidence
+    assert c.amplifier_role == AmplifierRole.ORIGINATOR  # context never judged here
+
+
+def test_single_originator_tie_breaks_on_confidence():
+    a = _inst("2026-10-08", role=AmplifierRole.ORIGINATOR, iid="a"); a.confidence = 0.97
+    b = _inst("2026-10-08", role=AmplifierRole.ORIGINATOR, iid="b"); b.confidence = 0.95
+    _single_originator_pass([b, a])
+    assert a.amplifier_role == AmplifierRole.ORIGINATOR
+    assert b.amplifier_role == AmplifierRole.EARLY_AMPLIFIER
+
+
+def test_single_originator_lone_crown_untouched():
+    a = _inst("1940-01-01", role=AmplifierRole.ORIGINATOR, iid="ministry")
+    assert _single_originator_pass([a, _inst("1941-01-01", iid="b")]) == 0
+    assert a.amplifier_role == AmplifierRole.ORIGINATOR
+
+
+# --- examiner-title regex: deny-forms (both sides) ---------------------------
+
+def test_deny_title_forces_critic():
+    inst = _inst("2026-10-11", role=AmplifierRole.MASS_AMPLIFIER, iid="dw")
+    inst.source_title = "Campaign And Hospital Deny Claim That James Talarico Went To Ohio Facility"
+    inst.role_evidence = ""
+    _role_sanity_pass([inst])
+    assert inst.amplifier_role == AmplifierRole.CRITIC
+
+
+def test_deny_regex_stays_word_bounded():
+    inst = _inst("2026-10-11", role=AmplifierRole.MENTION, iid="x")
+    inst.source_title = "Sydney's density debate heats up"  # no \bdeny\b match
+    inst.role_evidence = ""
+    _role_sanity_pass([inst])
+    assert inst.amplifier_role == AmplifierRole.MENTION
 
 
 if __name__ == "__main__":
