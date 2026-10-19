@@ -1963,6 +1963,20 @@ function render(fp) {
     }
   }
 
+  // Redaction notice (2026-10-19, the campaign-form trace convention): a
+  // maintainer-curated trace of a doxxing campaign states up front that the
+  // identity it documents the spread of is deliberately absent — quotes
+  // redacted, payload links withheld, public actors still named. Set only
+  // by hand; the pipeline never produces this field.
+  document.getElementById('redaction-banner')?.remove();
+  if (String(fp.redaction_notice || '').trim()) {
+    document.querySelector('main')?.insertAdjacentHTML('beforebegin',
+      `<div id="redaction-banner" style="max-width:1160px;margin:0.9rem auto 0;
+        padding:0.8rem 1.2rem;background:#fdf3e0;border:1px solid #e8c98a;
+        border-radius:10px;font-size:0.92rem;color:#5a4a24;">
+        <strong>Redacted by policy.</strong> ${escapeHtml(String(fp.redaction_notice))}</div>`);
+  }
+
   // Critic-first note (2026-10-13, Tarek's call after the bioweapons trace):
   // when the earliest documented appearance of a claim is coverage EXAMINING
   // it, the claim was already circulating before the indexed record begins —
