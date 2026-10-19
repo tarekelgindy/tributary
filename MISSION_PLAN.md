@@ -27,6 +27,18 @@
 **Hero question:** *"Where did this come from — and what do the bubbles agree on that your
 feed never showed you?"*
 
+**Where the halves converge (named by Tarek, 2026-10-19):** narratives form around events,
+and the actors who co-carry them form observable bubbles. The far-end product is one
+sentence: *"You just read a diagnostic phrase of narrative N, which is carried
+overwhelmingly by cluster C"* — a mechanical lookup (phrasing → narrative via the matcher →
+carrier cluster via the actor↔narrative graph), delivered in situ by the labeler so no
+reader is ever profiled. Three laws travel with it: bubble membership derives only from
+observed carrying behavior, never identity labels or imported ratings; "who pushes" is
+stated structurally (repeated early-amplifier position, with receipts), never as motive or
+coordination; and the offer is the map with its unshown parts — an exit ramp, never a
+diagnosis, because "you are in a bubble" trips the same identity immune system that dooms
+fact-first correction.
+
 **Theory of change:** Not mass persuasion. Make provenance and overlap so cheap that
 multipliers (journalists, educators, bridging orgs, researchers) can afford to do at scale
 what currently takes hours per claim. Shared *methods*, not shared arbiters.
@@ -48,7 +60,7 @@ always finds heartwarming common ground is harmony propaganda. Conclusion-neutra
 | Everything-digest (weekly panorama) | Digest survives but changes job: vehicle for ONE artifact (Common Ground Report) | Post-Phase 3, if capacity allows |
 | X/Twitter integration | No third-party context mechanism; API hostile | Treat as screenshot marketing channel only |
 | Browser extension | High build cost, brutal distribution | Phase 3 gate passed + demand for personalization |
-| Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings |
+| Beyond-L/R circles (independent / international / endogenous co-carriage clusters) | Code is N-ready by design (CIRCLES table + `basis` field); the blocker is a defensible membership basis — AllSides only rates the US L/R axis — and Gates 1–2 need artifacts on the one attributable basis in hand. Breaking the L/R mould is an explicit goal (Tarek, 2026-07-09), not a nice-to-have | After Gate 2; endogenous circles (outlets clustered by observed co-carriage of framings, `basis` recorded as such) are the preferred mould-breaker over imported ratings. **2026-10-19: Tarek named this the integration north star** (the Spine's "where the halves converge"): endogenous co-carriage clusters ARE the bubbles; densifiers are the tabled weekly downstream loop + framing↔trace joins; validation path in Phase 4 (cluster-assignment audit) |
 | Human contribution layer (reader finds what the automated pass missed — e.g. an earlier attestation — and it enters the record) | Explicit goal (Tarek, 2026-07-10; mission has always been human+AI side by side). The groundwork is DORMANT, not absent: models.py carries Provenance review states (ai_generated → human_confirmed / disputed / consensus), Contribution/Contributor types and settlement rules; the viewer's provenance badges light up human states automatically; earlier-attestation + correction issue templates exist as the v0 intake channel. What's missing is the flow that turns a filed issue into a recorded, credited contribution | **UNPARKED 2026-09-13 → Phase 2c** (see Decision Log): the friends-first 2b cohort satisfies the park condition ("who would actually contribute") in substance, a gate early |
 | Sponsor-a-trace payments (Stripe link, no accounts: past the free budget, "$2 runs it now, publishes publicly, carries your credit"). Tarek's call 2026-10-01: wants this as a future option — it funds the project without ads (a stated fear) and inverts the viral-overload problem into a flywheel (demand funds supply; the corpus grows; match rates rise; every future question gets cheaper). Crediting the requester is native grammar — provenance of the question is just more provenance | Building payment infra before there is a demand pulse is effort the free tier doesn't need yet; the graceful-degradation pieces (queue, meter, serves) protect week one without it | The budget meter pegs / the queue is regularly nonempty, or a funding conversation needs a self-serve support mechanism |
 | Bring-your-own-API-key lane (journalist/researcher pastes their own Anthropic key; traces run on their bill, never stored). Small build, big safety valve; later becomes the institutional tier (a newsroom funds its own lane) | Same sequencing logic: no power-user demand signal yet; key-handling UX deserves care (never stored, never logged — the privacy posture must match the metrics standard) | First org pilot asks for volume, or sponsor-a-trace ships |
@@ -389,6 +401,14 @@ experience is "wait", never "no". Payment tiers are designed but parked.*
 - [ ] Label copy review: structural language only; run banned-vocabulary check on label text.
 - [ ] Publish labeler methodology page + corrections path for label disputes
       (link INCIDENT_PROTOCOL).
+- [ ] **Bubbles extension (the Spine's convergence sentence), gated hard:** label copy may
+      eventually add "this phrasing is diagnostic of narrative N, carried overwhelmingly
+      by [cluster]" — ONLY after endogenous clusters exist (Park List: beyond-L/R circles),
+      pass the Phase 4 cluster-assignment audit, and survive the banned-vocabulary check;
+      membership language stays behavioral ("outlets that co-carried these narratives"),
+      never demographic or motive-based. The labeler is the delivery vehicle precisely
+      because it detects exposure in situ, on the platform — the only version of "show
+      people their bubble" compatible with the no-tracking posture.
 - [ ] Optional if capacity: custom feed ("traced narratives this week") as second surface.
 
 **Gate 3 (outward):** opt-in subscribers I don't personally know, retained past week 2.
@@ -406,6 +426,14 @@ experience is "wait", never "no". Payment tiers are designed but parked.*
       ("is this a fair statement of what your side is saying?"). Borrow raters through
       whichever bridging org replied in Phase 2. Target: ≥70% "fair" from members of the
       summarized circle before overlap claims are marketed as validated.
+- [ ] **Cluster-assignment audit (prerequisite for any reader-facing bubble claim):**
+      false bubble-assignment is the blindspot-claim damage class — an actor placed in a
+      cluster they don't belong to, with the site's credibility attached. Before any
+      cluster surfaces: hand-verify a sample of memberships against the receipts
+      (co-carrying entries, dates, roles); validate the clustering on known ground truth
+      (first case: the 2026-10 Talarico burst — the carriers are documented); publish the
+      method like everything else. Prerequisite build, small: actor canonicalization
+      registry (one outlet, many spellings/domains), without which the graph is confetti.
 - [ ] **Grant applications:** New Pluralists, Hewlett (US democracy program), Knight, RJI,
       Mozilla. By now the evidence pack exists: published report(s), travel data, live
       labeler, error rate. Grants > product path (AllSides CC BY-NC constraint).
