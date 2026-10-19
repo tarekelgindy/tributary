@@ -4499,6 +4499,78 @@ Be permissive at the margin: if a reasonable reader can state the claim or event
 Output ONLY JSON: {"traceable": true|false, "why": "<= 12 words", "suggestion": "<a one-sentence rephrasing of what the user most plausibly meant if not traceable, else empty>"}"""
 
 
+_POLICY_GATE_SYSTEM = """\
+You enforce ONE narrow publication policy for a narrative-provenance tool,
+judging the REQUEST only — never its politics, viewpoint, or taste.
+
+REFUSE only when the request targets a PRIVATE INDIVIDUAL: a person who is
+neither a public figure nor a voluntary participant in public debate. Two
+forms, both refused:
+  (a) identity-revelation — the claim concerns revealing, naming, or
+      identifying such a person (a pseudonymous complainant, a crime
+      victim or witness, a juror, a minor, an ordinary citizen), including
+      claims that the identity "was revealed/leaked online". Tracing such
+      a claim would build a sourced index of the doxxing itself.
+  (b) person-assembly — the evident purpose is assembling information
+      about such a person (harassment, dossier-building) rather than
+      tracing a narrative.
+
+DO NOT refuse:
+  - claims about PUBLIC FIGURES (politicians, candidates, officials,
+    executives, celebrities, prominent journalists or influencers) or
+    institutions — these stay traceable no matter how uncomfortable,
+    including claims about a public figure's own conduct or condition;
+  - general claims (health, science, history, policy, folklore) naming
+    no private person;
+  - claims about anonymous or pseudonymous actors' PUBLIC acts under
+    that handle, when the claim is not about their offline identity;
+  - historical identity questions about the long dead.
+When unsure whether someone is a public figure, lean traceable — refusal
+is for clear private-individual cases only.
+
+Output ONLY JSON:
+{"refuse": true|false,
+ "why": "<= 20 words, neutral, no names beyond those in the request",
+ "would_trace": "<when refusing: one sentence naming what the tool WOULD
+trace about the same event without carrying anyone's identity (e.g. 'the
+campaign to unmask the complainant, via coverage that withholds the
+identity'); empty otherwise>"}"""
+
+
+def _policy_gate(text: str,
+                 model: str = "claude-haiku-4-5-20251001") -> dict:
+    """The refuse-to-trace policy gate (2026-10-18, after the first live
+    policy removal: a visitor request about a sexual-assault complainant's
+    identity produced a published trace that republished the alleged name).
+    Deliberately SEPARATE from the shape gate: shape-blindness to topic is
+    what keeps that gate viewpoint-neutral, and refusals must be legible as
+    named policy, never as hidden topic filtering. ~$0.001; --force
+    bypasses (maintainer lane); gate failure never blocks generation."""
+    import anthropic
+    client = anthropic.Anthropic()
+    resp = client.messages.create(
+        model=model, max_tokens=250,
+        system=[{"type": "text", "text": _POLICY_GATE_SYSTEM}],
+        messages=[{"role": "user", "content": json.dumps({"request": text})}])
+    out = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+    j = _parse_json_safe(out) or {}
+    if "refuse" not in j:
+        raise ValueError("policy gate returned no verdict")
+    return j
+
+
+def _policy_refusal_message(pol: dict) -> str:
+    """One bracketed line in the format the CI workflow extracts and shows
+    to the requester (']' stripped from model text to keep the bracket
+    well-formed)."""
+    why = str(pol.get("why") or "").replace("]", ")")
+    would = str(pol.get("would_trace") or "").replace("]", ")").strip()
+    extra = f" It would trace: {would}" if would else ""
+    return (f"[policy refusal: {why} — Tributary does not trace claims about "
+            f"private individuals' identities.{extra} See the published "
+            f"methodology, 'What we refuse to trace'.]")
+
+
 def _claim_gate(text: str, kind: str = "claim",
                 model: str = "claude-haiku-4-5-20251001") -> dict:
     """Pre-pipeline input gate — see the call sites in _cli for the why.
@@ -4555,6 +4627,16 @@ async def _cli(args):
                 print("GATE=rejected")
                 print(f"[not a traceable claim: {verdict.get('why', '')} — try: "
                       f"{verdict.get('suggestion') or 'describe the event in one sentence'}]")
+                return
+            pol = None
+            try:
+                pol = _policy_gate(raw)
+            except Exception as e:  # noqa: BLE001 — gate down ≠ request down
+                print(f"[policy gate unavailable ({type(e).__name__}) -> proceeding]",
+                      file=sys.stderr)
+            if pol is not None and pol.get("refuse"):
+                print("GATE=rejected")
+                print(_policy_refusal_message(pol))
                 return
         if args.url:
             item = await gen._fetch_content(args.url)
@@ -4689,6 +4771,19 @@ async def _cli(args):
             print("GATE=rejected")
             print(f"[not a traceable claim: {verdict.get('why', '')} — try: "
                   f"{verdict.get('suggestion') or 'phrase it as a full statement'}]")
+            return
+        # Refuse-to-trace policy (2026-10-18): separate from the shape gate
+        # by design — see _policy_gate. Runs only after shape passes, so a
+        # rephrasing hint never competes with a policy refusal.
+        pol = None
+        try:
+            pol = _policy_gate(args.claim)
+        except Exception as e:  # noqa: BLE001 — gate down ≠ request down
+            print(f"[policy gate unavailable ({type(e).__name__}) -> proceeding]",
+                  file=sys.stderr)
+        if pol is not None and pol.get("refuse"):
+            print("GATE=rejected")
+            print(_policy_refusal_message(pol))
             return
 
     # Generate L1 first; this is cheap (one Haiku call). The lexical signature

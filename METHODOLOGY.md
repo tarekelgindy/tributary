@@ -120,6 +120,23 @@ that is the mission, and discomfort is not a refusal criterion. Refusals of
 this kind are policy decisions, logged like any other decision, and the
 policy itself is public here — see also [INCIDENT_PROTOCOL.md](INCIDENT_PROTOCOL.md).
 
+**Identity-revelation claims** (refined 2026-10-18, after the first live
+removal under this policy): when the claim is that a private person's
+identity *was revealed* — a pseudonymous complainant unmasked, a victim or
+witness named — the revelation itself is never traceable, because a trace
+of it is a sourced, credibility-styled **index of the doxxing**: faithful
+quotes reproduce the identity, and receipt links route one click to the
+posts that carry it. For most narratives, receipts are this instrument's
+integrity; for these, the receipts are the harm. The *campaign* around such
+a revelation (who pushed it, who resisted, how the press handled it) may be
+traceable in principle under a strict payload rule — no entry quotes or
+links anything carrying the identity — but that cannot yet be guaranteed
+mechanically, so such requests are refused at intake, with the refusal
+explaining the distinction. An automated policy gate enforces this on every
+public request, separately from the claim-shape gate: shape-blindness to
+topic is what keeps that gate viewpoint-neutral, and refusals must be
+legible as named policy, never as hidden topic filtering.
+
 ---
 
 ## Error rate

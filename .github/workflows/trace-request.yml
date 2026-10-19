@@ -144,7 +144,7 @@ jobs:
             # Event-side gate (2026-10-13): bare names / topic-only subjects
             # bounce with a rephrasing hint instead of an unanchored guess.
             if grep -q '^GATE=rejected' out.json; then
-              REASON=$(grep -o '\[not a traceable claim:[^]]*\]' out.json | head -1 | sed 's/^\[//; s/\]$//' | cut -c1-240)
+              REASON=$(grep -oE '\[(not a traceable claim|policy refusal):[^]]*\]' out.json | head -1 | sed 's/^\[//; s/\]$//' | cut -c1-240)
               REASON_JSON=$(python -c 'import json,sys; print(json.dumps(sys.argv[1]))' "$REASON")
               echo "::notice::gate rejected: $REASON"
               if [ -n "${REQUEST_ID:-}" ]; then
@@ -174,7 +174,7 @@ jobs:
             # fragments) bounces BEFORE the pipeline spends — the requester
             # gets the reason and a rephrasing hint, not a generic failure.
             if grep -q '^GATE=rejected' out.json; then
-              REASON=$(grep -o '\[not a traceable claim:[^]]*\]' out.json | head -1 | sed 's/^\[//; s/\]$//' | cut -c1-240)
+              REASON=$(grep -oE '\[(not a traceable claim|policy refusal):[^]]*\]' out.json | head -1 | sed 's/^\[//; s/\]$//' | cut -c1-240)
               REASON_JSON=$(python -c 'import json,sys; print(json.dumps(sys.argv[1]))' "$REASON")
               echo "::notice::gate rejected: $REASON"
               if [ -n "${REQUEST_ID:-}" ]; then
