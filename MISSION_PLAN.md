@@ -380,6 +380,62 @@ experience is "wait", never "no". Payment tiers are designed but parked.*
       sharing), read the metrics (served rate, queue depth, daily-cap
       pressure) and re-tune cap + drain cadence on evidence.
 
+### 2e. Densification & graph groundwork (agreed 2026-10-19 — see Decision Log; adds NO gate)
+
+*The tabled upstream/downstream queues plus the bubbles prerequisites, sequenced as four
+build batches (target: Oct 26 – Nov 7). Ordering rule: dependency first, compounding value
+first — the join and the weekly loop pay interest from the day they exist. Maintainer
+checkpoints marked ✋; everything else is review-after.*
+
+**Batch A — receipts & rigor (upstream mechanical; ~2 days; ~free)**
+- [ ] Embed-recovery pass: flagged placeholder X URL → fetch cited_via article → extract
+      embedded status links → sole-match recovers, multi-match disambiguates by snowflake
+      date, mismatch refuses and keeps the flag. Built FIRST so the sweep below runs it.
+      Extraction patterns structured for t.me / bsky.app to follow (one regex each).
+- [ ] Guard sweep over the pre-guard corpus (apply-referent-bound pattern: dry-run →
+      ✋ review → apply): snowflake dates, one-crown, deny-as-critic, embed-recovery;
+      CORRECTIONS rows for any published-output changes.
+- [ ] Empty-lineage quoted-n-gram retry (one extra die roll before the social rescue).
+- [ ] Foreign-language license for the archaeology prompts (+ harness fixture).
+- [ ] Date-precision backfill, conservative (mark year-precision only where deterministic).
+- [ ] Contribution-flow audit: verify every path into a published trace is
+      maintainer-gated (30-minute check; closes the post-Cornell payload surface).
+- Validation: deterministic suite extended per pass; full harness; one live known-answer replay.
+
+**Batch B — downstream revival (core; ~2 days; ~$5 one-time)**
+- [ ] event_date from receipts: backfill the 104 empty dates (cheap describe pass) and
+      bound every event_date against its carriers' dates (the Odeh rule as code);
+      "coverage as of" display.
+- [ ] Framing↔trace auto-join: at publish and as a one-time corpus backfill, embed each
+      framing's key claims against the trace store (local, free) and judge-confirm only
+      top candidates (~$0.01 each, bounded). Today 4/112 events link; this is the graph's
+      cross-half edge supply.
+- [ ] Minimal event quality floor (is_weak_trace analog: <2 framings or zero verified
+      carriers → unlisted-but-reachable) — must exist BEFORE the weekly loop can publish
+      unattended.
+
+**Batch C — the compounding loops (~2 days build; ~$3/week + ~$0.25/trace ongoing)**
+- [ ] Weekly downstream loop: agenda top-N (start N=3) → event analyses → quality floor →
+      publish ✋ (first two weeks' outputs reviewed by Tarek before the loop runs unattended).
+- [ ] Trace update pass: maintainer-triggered re-run of the recent window for a chosen
+      trace, appending post-anchor instances only — settled history never regenerates.
+      First candidates: bioweapons, Hormuz (a known Oct-12 earlier-attestation lead is
+      already logged).
+- [ ] Receipt archiving: Wayback SavePageNow on cited URLs at generation (non-fatal), plus
+      a slow background backfill prioritized anchors → crowns → social receipts.
+- [ ] Surface per-event unverified-carrier ratio in the viewer (the honesty badge
+      downstream already has upstream).
+
+**Batch D — graph groundwork (early Nov; free, maintainer-only)**
+- [ ] Actor canonicalization registry (per the Phase 4 item): domains mechanically, ✋
+      alias merges reviewed.
+- [ ] Graph v0 + co-carriage clusters (per the Phase 4 item): ✋ the Talarico entrance
+      exam reviewed together; output is an internal report, nothing published.
+
+**Explicitly deferred within this plan:** framing dedupe + any critic-detection build
+(sized by the blind audit first); lean-source decision (needs the loop's density);
+cluster-facing anything (Phase 4 audit gates it).
+
 **Gate 2 (outward — 8 weeks from first card):**
 - **PASS (either):** (a) any single artifact shared by accounts from more than one cluster,
   OR (b) any unsolicited substantive reply/follow-up from the multiplier list.
@@ -545,6 +601,8 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-10-19 (downstream queue — tabled; the bubbles goal named) | Downstream analysis tabled as TODOs beside the upstream queue (~week of 2026-10-26+): (1) **weekly freshness loop** — agenda layer's daily prominence capture → top-N events → batch analysis (half-price) → publish; feeds a serialized Common Ground Report (corpus today: 105/112 events created in June, zero since September — a museum, fatal for the journalist audience); (2) **framing↔trace auto-join** at publish via the existing matcher (today 4/112 events link any framing to a trace — the two products barely meet); (3) **event_date from receipts** — derive/bound the headline date from carrier dates (the Odeh rule as code; 104/112 events have an empty event_date) + "coverage as of" display; (4) **downstream quality floor** (is_weak_trace analog) + framing dedupe/count honesty (the June batch's uniform 8-framings pattern suggests quota-filling) — preceded by a small blind audit sample of framings/carrier labels (downstream never had its 2.8 moment); (5) **lean for the real audience** — prefer deriving lean from own-carrier cross-trace behavior over US-centric AllSides (55% abstention today); (6) shared debt: receipt archiving + surfacing the 37% unverified-carrier rate. Tarek also named the connecting goal: understand the narratives that form around events and the NARRATIVE BUBBLES — who is in them, who pushes which agendas — and, much later, show people the bubble a phrasing belongs to when they meet it. This is the bipartite actor↔narrative graph + circles work by its real name; recorded as the integration north star with its guardrails (membership from observed carrying behavior only; "pushes" stays a structural observation — repeated early-amplifier position — never a motive claim; reader-facing delivery via the Phase 3 labeler so no user is ever tracked; cluster claims get audit discipline before any reader sees them, false bubble-assignment being the blindspot-claim error class) | Build the graph now (30 traces + 112 stale events is too sparse for honest clusters — densify first via items 1–2); frame bubbles as L/R (the narrative-centric stance is the product's differentiator); diagnose readers ("you are in bubble X" invites identity defense; show the map with the unshown parts instead) | The staged path: actor canonicalization registry → descriptive co-carrying clusters on the densified corpus → per-trace "who carries this" surfaces → labeler delivers "this phrasing belongs to narrative N" in situ. Validation ground truth #1 already exists: the Talarico burst cluster |
 
 | 2026-10-19 (bubbles roadmap dated) | Tarek approved the sequenced path to the Spine's convergence goal, now dated in Phase 4: his audit + outreach follow-ups (now→Oct 22) → the tabled densification queues (week of Oct 26: guard sweep, framing↔trace join, weekly downstream loop first — the join and loop compound weekly) → actor canonicalization registry + graph v0 with the Talarico entrance exam (early Nov, maintainer-only, zero API cost) → Gate 2 verdict (~early Dec) picks the delivery stage (pass → Phase 3 labeler ships claim-age labels first, clusters stay internal until the Phase 4 cluster audit; fail → interviews per plan, graph keeps internal value). Explicitly NOT doing before the gates: cluster-facing UI, published membership claims, labeler work | Skip ahead to clusters on today's corpus (~31 traces + stale events = anecdotes, not clusters; early wrong membership claims are the blindspot damage class in public); treat the share decision as separate from this roadmap (it isn't — visitor traffic is corpus densification) | The fastest route to the goal is not skipping the checkpoints in front of it |
+
+| 2026-10-19 (2e build plan) | The tabled queues + graph prerequisites become section 2e — four dependency-ordered batches, Oct 26–Nov 7: A receipts & rigor (embed-recovery first so the guard sweep runs it; sweep, quoted retry, foreign-language license, precision backfill, contribution-flow audit), B downstream revival (event_date from receipts, framing↔trace join = the graph's edge supply, minimal quality floor BEFORE anything publishes unattended), C the compounding loops (weekly downstream loop N=3 with Tarek reviewing the first two weeks, trace update pass, receipt archiving, carrier-honesty badge), D graph groundwork (registry, graph v0, Talarico exam). Costs: ~$10–15 one-time, ~$3/week ongoing. Maintainer checkpoints at: sweep apply, first loop publishes, alias merges, the entrance exam | One mega-batch (review checkpoints vanish inside it); value-first ordering ignoring dependencies (the loop before the floor publishes junk unattended; the sweep before embed-recovery leaves placeholders it could have fixed) | Lettered-subsection precedent (2c, 2d): a build plan is not a phase and adds no gate; the gates it serves are unchanged |
 
 ## Feedback Log
 
