@@ -268,6 +268,12 @@ inference from author identity alone.
 
 Return JSON of this shape:
 
+LANGUAGES: the earliest attestation is often not in English (food and
+health folklore especially). Search other languages where the claim's
+subject suggests them; a faithful translation of the framing carries the
+diagnostic n-grams. Report such instances with the original-language
+exact_quote followed by a brief English translation in parentheses.
+
 NEVER cite tributary.tools as a source — that is this instrument's own
 published output, not an attestation.
 
@@ -716,6 +722,12 @@ rebuttal of some X, texts arguing against X are asserting this claim's
 tradition, not criticizing it.
 
 Return JSON:
+
+LANGUAGES: idea lineages cross languages constantly — the structural claim
+may have been articulated in German scholarship or a French newspaper long
+before any English text. Search other languages where the claim's subject
+suggests them; report with the original-language exact_quote followed by a
+brief English translation in parentheses.
 
 NEVER cite tributary.tools as a source — that is this instrument's own
 published output, not an attestation.
@@ -1430,13 +1442,15 @@ def _distinctive_ngram(ngram: str) -> bool:
 # amplifiers or adopters. Titles are structural evidence (P5); the regex is
 # deliberately conservative so gray cases stay with the judge.
 _EXAMINER_TITLE_RE = re.compile(
-    # deny-forms added 2026-10-18 (Talarico calibration: "Campaign And
-    # Hospital Deny Claim…" sat as mass-amplifier at 0.95 — denial coverage
-    # on an affirmation trace is critic-function). Word-bounded to avoid
-    # loose matches; shares the regex's known, accepted polarity blindness
-    # (rebuttal traces are rare and hand-reviewed).
-    r"fact.?check|fact or fiction|myth ?bust\w*|debunk|myth or fact|old wives"
-    r"|\bden(?:y|ies|ied|ial)\b",
+    # FUNCTION words only, never STANCE words. deny-forms were added
+    # 2026-10-18 (the Talarico "Campaign And Hospital Deny Claim…"
+    # mass-amplifier error) and REVERTED 2026-10-19 when the corpus sweep
+    # showed the counterexample: on an accusation-claim ("Platner accused of
+    # assault"), "Platner denies allegations" coverage CONFIRMS the
+    # accusation exists — denial's stance depends on the claim's shape,
+    # which a title regex cannot know. Denial-coverage labeling stays with
+    # the CLAIM POLARITY prompt rules; its error rate is audit-sized work.
+    r"fact.?check|fact or fiction|myth ?bust\w*|debunk|myth or fact|old wives",
     re.IGNORECASE)
 
 
@@ -1496,6 +1510,70 @@ def _snowflake_sanity_pass(instances: list) -> int:
                 f" Snowflake pass, 2026-10-18.]")
             touched += 1
     return touched
+
+
+_X_HANDLE_RE = re.compile(r"(?:x|twitter)\.com/([^/\s]+)/status", re.IGNORECASE)
+_X_EMBED_RE = re.compile(r"(?:twitter|x)\.com/(\w+)/status(?:es)?/(\d{15,20})", re.IGNORECASE)
+_EMBED_FETCH_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+
+
+def _default_embed_fetch(url: str):
+    """Fetch a citing article's HTML (browser UA: embed markup renders for
+    browsers; the honest verifier UA stays for verification fetches)."""
+    try:
+        r = httpx.get(url, headers={"User-Agent": _EMBED_FETCH_UA},
+                      timeout=12.0, follow_redirects=True)
+        return r.text if r.status_code == 200 else None
+    except Exception:  # noqa: BLE001 — recovery is best-effort by design
+        return None
+
+
+def _embed_recovery_pass(instances: list, fetch=_default_embed_fetch) -> int:
+    """Recover model-invented placeholder X URLs from the embedded posts in
+    their own citing articles (2026-10-19, the Hormuz case: the model knew
+    the handle but not the URL — which sat in the cited_via article's embed
+    HTML all along). Rules: sole same-handle embed recovers outright;
+    several disambiguate by snowflake date == entry date; anything else
+    REFUSES and keeps the snowflake pass's flag — a confidently wrong URL
+    is worse than an honest placeholder. Runs BEFORE the snowflake pass so
+    recovered entries are dated (not flagged) by it. Returns recoveries."""
+    recovered = 0
+    for inst in instances:
+        u = inst.source_url or ""
+        m = _X_STATUS_RE.search(u)
+        if not m or _x_snowflake_date(m.group(1)) is not None:
+            continue  # real id or not an X status link — nothing to recover
+        hm = _X_HANDLE_RE.search(u)
+        cited = str(getattr(inst, "cited_via", "") or "").strip()
+        if not hm or not cited.lower().startswith("http"):
+            continue
+        html = fetch(cited)
+        if not html:
+            continue
+        handle = hm.group(1).lower()
+        ids = sorted({sid for h, sid in _X_EMBED_RE.findall(html)
+                      if h.lower() == handle})
+        if len(ids) == 1:
+            pick, how = ids[0], "the article's sole embedded post from this handle"
+        else:
+            dated = [sid for sid in ids
+                     if str(_x_snowflake_date(sid)) == str(inst.date or "")[:10]]
+            if len(dated) != 1:
+                continue  # absent or ambiguous: refuse
+            pick, how = dated[0], (f"{len(ids)} same-handle embeds; chosen by "
+                                   f"snowflake date match to this entry")
+        d = _x_snowflake_date(pick)
+        inst.source_url = f"https://x.com/{hm.group(1)}/status/{pick}"
+        if str(inst.date or "")[:10] != d.isoformat():
+            inst.date = d.isoformat()
+            inst.date_precision = "day"
+        inst.evidence = (str(inst.evidence or "")).rstrip() + (
+            f" [auto: placeholder X URL recovered from the embedded post in the"
+            f" cited article ({how}); id timestamp {d.isoformat()}."
+            f" Embed-recovery pass, 2026-10-19.]")
+        recovered += 1
+    return recovered
 
 
 def _single_originator_pass(instances: list) -> int:
@@ -2863,6 +2941,16 @@ class FingerprintGenerator:
         """L4 lexical lineage: where did the PHRASING come from?"""
         instances = await self.search_earliest_uses(lexical, scope)
         if not instances:
+            # Quoted retry (2026-10-19, the recall-luck lesson: a rerun of a
+            # "0 phrasings" claim found ten instances): one more main-pass
+            # roll with the n-grams as exact quoted strings before concluding
+            # the web is empty. Cheapest possible second chance.
+            from dataclasses import replace
+            quoted = replace(lexical, diagnostic_ngrams=[
+                f'"{n.strip(chr(34))}"' for n in lexical.diagnostic_ngrams if n])
+            _log_progress("L4 lexical: zero instances — one quoted-ngram retry")
+            instances = await self.search_earliest_uses(quoted, scope)
+        if not instances:
             # Empty-lineage social rescue: a socially-born claim may still be
             # reachable via quoted-phrase retries, t.me receipts, or cited
             # social origins. A recent rescue find then triggers the
@@ -2899,8 +2987,13 @@ class FingerprintGenerator:
         # Deterministic sanity passes, then anchor the lineage's origin claims
         # on entries that actually ASSERT the claim — related-context material
         # can neither be the first attestation nor drive status. Order
-        # matters: snowflake fixes dates (so re-sort), the examiner regex may
+        # matters: embed-recovery first (a recovered URL gets dated, not
+        # flagged), snowflake fixes dates (so re-sort), the examiner regex may
         # demote a crowned entry to critic, and the crown dedupe needs both.
+        n_rec = await asyncio.to_thread(_embed_recovery_pass, instances)
+        if n_rec:
+            _log_progress(f"Embed recovery: {n_rec} placeholder X URL(s) "
+                          f"recovered from citing articles")
         if _snowflake_sanity_pass(instances):
             instances.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(instances)
@@ -2981,6 +3074,8 @@ class FingerprintGenerator:
             ancestors = earlier_ancestors + ancestors
 
         # Sanity passes + asserts-anchored origin (see generate_lineage_lexical)
+        if await asyncio.to_thread(_embed_recovery_pass, ancestors):
+            _log_progress("Embed recovery: placeholder X URL(s) recovered (conceptual)")
         if _snowflake_sanity_pass(ancestors):
             ancestors.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(ancestors)

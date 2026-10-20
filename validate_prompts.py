@@ -361,6 +361,34 @@ def rescue_social(client):
 
 
 @fixture
+def foreign_candidate(client):
+    """The language license (2026-10-19): a non-English attestation carrying
+    the translated framing is a valid instance — it must be INCLUDED, with
+    the original-language quote, and not crowned (it treats the belief as
+    existing)."""
+    out = _call(client, EARLIEST_USE_SYSTEM, {
+        "claim_being_traced": "swallowed chewing gum stays in your stomach for seven years",
+        "diagnostic_ngrams": ["gum stays in your stomach", "seven years to digest"],
+        "candidates": [{
+            "source_title": "Жевательная резинка: мифы и правда (Московский комсомолец)",
+            "author": "М. Иванова", "date": "1985-03-12",
+            "source_url": "https://example.ru/zhvachka-mify",
+            "content_summary": ("A 1985 Soviet newspaper piece repeating the folk warning "
+                                "as common knowledge: «проглоченная жвачка остаётся в "
+                                "желудке семь лет» (swallowed gum stays in the stomach "
+                                "for seven years), advising parents accordingly.")}]})
+    ent = _entries(out)
+    if not ent:
+        return False, "foreign-language instance excluded (the license failed)"
+    e = ent[0]
+    role = e.get("amplifier_role", "")
+    has_orig = "жвачка" in str(e.get("exact_quote", "")) or "желудке" in str(e.get("exact_quote", ""))
+    return role != "originator" and has_orig, (
+        f"included, role={role!r} (must not be originator), "
+        f"original-language quote={'present' if has_orig else 'MISSING'}")
+
+
+@fixture
 def ministry_control(client):
     """Control: evidenced coining still earns originator on the lexical pass
     (the carrots card's hero must survive the batch)."""

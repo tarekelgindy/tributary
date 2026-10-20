@@ -26,11 +26,11 @@ from types import SimpleNamespace as NS
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from apply_referent_bound import bound_pass_dict  # noqa: E402
-from fingerprint import (_is_recent_date, _norm_ref_date,  # noqa: E402
-                         _parse_referent_json, _referent_bound_pass,
-                         _referent_instance_digest, _role_sanity_pass,
-                         _single_originator_pass, _snowflake_sanity_pass,
-                         _x_snowflake_date)
+from fingerprint import (_embed_recovery_pass, _is_recent_date,  # noqa: E402
+                         _norm_ref_date, _parse_referent_json,
+                         _referent_bound_pass, _referent_instance_digest,
+                         _role_sanity_pass, _single_originator_pass,
+                         _snowflake_sanity_pass, _x_snowflake_date)
 from models import AmplifierRole, GenealogyStatus  # noqa: E402
 from publish import is_weak_trace  # noqa: E402
 
@@ -246,6 +246,55 @@ def test_snowflake_pass_accepts_correct_dates_silently():
     assert ok.evidence == "orig"
 
 
+# --- embed recovery (the Hormuz case, 2026-10-19) ----------------------------
+
+def _ph(date, handle, cited="https://example.news/article", iid="p"):
+    i = _inst(date, iid=iid)
+    i.source_url = f"https://twitter.com/{handle}/status/[embedded-in-downstream-articles]"
+    i.cited_via = cited
+    return i
+
+
+def test_embed_recovery_sole_match():
+    inst = _ph("2026-10-14", "ME_Observer_")
+    html = '<blockquote><a href="https://twitter.com/ME_Observer_/status/2110476968571388238">post</a></blockquote>'
+    assert _embed_recovery_pass([inst], fetch=lambda u: html) == 1
+    assert inst.source_url == "https://x.com/ME_Observer_/status/2110476968571388238"
+    assert "Embed-recovery pass" in inst.evidence
+
+
+def test_embed_recovery_disambiguates_by_date():
+    inst = _ph("2026-10-14", "HormuzLetter")
+    html = ('x.com/HormuzLetter/status/2109708749044887703 '   # 2026-10-12
+            'x.com/HormuzLetter/status/2110380717385318482')   # 2026-10-14
+    assert _embed_recovery_pass([inst], fetch=lambda u: html) == 1
+    assert inst.source_url.endswith("/2110380717385318482")
+
+
+def test_embed_recovery_refuses_ambiguity_and_absence():
+    # two same-handle embeds, NEITHER matching the entry date -> refuse
+    a = _ph("2026-10-01", "HormuzLetter", iid="a")
+    html = ('x.com/HormuzLetter/status/2109708749044887703 '
+            'x.com/HormuzLetter/status/2110380717385318482')
+    assert _embed_recovery_pass([a], fetch=lambda u: html) == 0
+    assert "[embedded-in-downstream-articles]" in a.source_url
+    # handle not embedded at all -> refuse
+    b = _ph("2026-10-14", "SomeoneElse", iid="b")
+    assert _embed_recovery_pass([b], fetch=lambda u: html) == 0
+    # unfetchable article -> refuse
+    c = _ph("2026-10-14", "ME_Observer_", iid="c")
+    assert _embed_recovery_pass([c], fetch=lambda u: None) == 0
+
+
+def test_embed_recovery_ignores_real_urls():
+    inst = _inst("2026-10-14", iid="r")
+    inst.source_url = "https://x.com/RealAmVoice/status/2108313243382952207"
+    inst.cited_via = "https://example.news/a"
+    calls = []
+    assert _embed_recovery_pass([inst], fetch=lambda u: calls.append(u)) == 0
+    assert not calls  # a decoding id is never a placeholder; no fetch happens
+
+
 # --- one crown per lineage ----------------------------------------------------
 
 def test_single_originator_earliest_keeps_crown():
@@ -273,22 +322,23 @@ def test_single_originator_lone_crown_untouched():
     assert a.amplifier_role == AmplifierRole.ORIGINATOR
 
 
-# --- examiner-title regex: deny-forms (both sides) ---------------------------
+# --- examiner-title regex: function words only, never stance words -----------
 
-def test_deny_title_forces_critic():
-    inst = _inst("2026-10-11", role=AmplifierRole.MASS_AMPLIFIER, iid="dw")
-    inst.source_title = "Campaign And Hospital Deny Claim That James Talarico Went To Ohio Facility"
-    inst.role_evidence = ""
+def test_examiner_title_forces_critic():
+    inst = _inst("2026-10-11", role=AmplifierRole.MASS_AMPLIFIER, iid="fc")
+    inst.source_title = "Fact-check: did James Talarico enter an Ohio facility?"
     _role_sanity_pass([inst])
     assert inst.amplifier_role == AmplifierRole.CRITIC
 
 
-def test_deny_regex_stays_word_bounded():
-    inst = _inst("2026-10-11", role=AmplifierRole.MENTION, iid="x")
-    inst.source_title = "Sydney's density debate heats up"  # no \bdeny\b match
-    inst.role_evidence = ""
+def test_deny_titles_are_NOT_auto_flipped():
+    # Deliberate revert (2026-10-19): on an accusation-claim, denial coverage
+    # CONFIRMS the accusation exists — stance depends on claim shape, which a
+    # title regex cannot know. The Platner sweep caught the counterexample.
+    inst = _inst("2026-07-06", role=AmplifierRole.EARLY_AMPLIFIER, iid="pl")
+    inst.source_title = "Graham Platner denies sexual assault allegations published this week"
     _role_sanity_pass([inst])
-    assert inst.amplifier_role == AmplifierRole.MENTION
+    assert inst.amplifier_role == AmplifierRole.EARLY_AMPLIFIER
 
 
 if __name__ == "__main__":

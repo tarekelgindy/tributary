@@ -106,8 +106,8 @@
           "exact_quote": "failed to find support for the suggestion that the vaccination could cause autism",
           "confidence": 0.92,
           "evidence": "A US Patent document (USPTO #6187309) cites this paper directly as 'Peltola, et al. Lancet 351:1327-1328 (1998)' and describes it as reporting work 'in which children who received the MMR vaccination in Finland between 1982 and 1996 were traced but failed to find support for the suggestion that the vaccination could cause autism or bowel disease.' The Lancet volume 351 corresponds to early-to-mid 1998 (the Wakefield paper itself was Lancet 351:637-641, published February 28, 1998; page 1327 would place Peltola's paper approximately April-May 1998). This is a peer-reviewed scientific paper in a prestigious journal explicitly deploying the 'vaccines do not cause autism' framing, well before the proposed earliest date of 1999-06-12. The citation is independently verifiable via PubMed (the paper is a real, indexed Lancet publication from 1998).",
-          "amplifier_role": "originator",
-          "role_evidence": "This is one of the first peer-reviewed scientific papers to explicitly rebut the vaccine-autism claim with empirical data, published in the same journal (The Lancet) and same volume as the Wakefield paper, within weeks of the original claim. It predates the proposed earliest date by over a year.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This is one of the first peer-reviewed scientific papers to explicitly rebut the vaccine-autism claim with empirical data, published in the same journal (The Lancet) and same volume as the Wakefield paper, within weeks of the original claim. It predates the proposed earliest date by over a year. [auto: a lineage carries at most one evidenced originator and an earlier crown (1998-03-01) stands — demoted to early-amplifier. Single-originator pass, 2026-10-18.]",
           "cited_via": "",
           "date_precision": "",
           "describes_period": "",
@@ -143,8 +143,8 @@
           "exact_quote": "Our analyses do not support a causal association between MMR vaccine and autism.",
           "confidence": 0.97,
           "evidence": "Published in The Lancet on June 12, 1999 (vol. 353, p. 2026–2029), this is the first major peer-reviewed study directly rebutting Wakefield's 1998 claim. The title itself contains the diagnostic n-gram 'no epidemiological evidence for a causal association' between MMR vaccine and autism. The abstract conclusion uses 'do not support a causal association between MMR vaccine and autism.' This is the earliest credible primary-source lexical attestation found. The paper is widely cited as the first systematic scientific rebuttal.",
-          "amplifier_role": "originator",
-          "role_evidence": "This is the first published scientific document to use the diagnostic framing ('no causal association between MMR vaccine and autism') in direct response to Wakefield's 1998 paper, establishing the counter-narrative in the peer-reviewed record.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This is the first published scientific document to use the diagnostic framing ('no causal association between MMR vaccine and autism') in direct response to Wakefield's 1998 paper, establishing the counter-narrative in the peer-reviewed record. [auto: a lineage carries at most one evidenced originator and an earlier crown (1998-03-01) stands — demoted to early-amplifier. Single-originator pass, 2026-10-18.]",
           "cited_via": "",
           "date_precision": "day",
           "describes_period": "",
@@ -640,10 +640,11 @@
         },
         "instances_per_year_by_role": {
           "1998": {
-            "originator": 2
+            "originator": 1,
+            "early-amplifier": 1
           },
           "1999": {
-            "originator": 1,
+            "early-amplifier": 1,
             "mention": 1
           },
           "2001": {
@@ -671,10 +672,10 @@
             "early-amplifier": 1
           },
           "2020": {
-            "critic": 1
+            "institutional-adoption": 1
           },
           "2025": {
-            "critic": 1,
+            "mention": 1,
             "institutional-adoption": 1
           }
         },
@@ -682,8 +683,8 @@
         "peak_year_count": 2,
         "originator_to_mass_amplifier_days": 4358,
         "originator_to_institutional_adoption_days": 1037,
-        "originator_to_critic_days": 8281,
-        "days_since_latest": 211
+        "originator_to_critic_days": null,
+        "days_since_latest": 313
       },
       "social_spread": [],
       "social_search_performed": false,

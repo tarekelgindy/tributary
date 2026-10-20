@@ -114,10 +114,10 @@
           "exact_quote": "\"constant elimination of [terrorist] leaders leaves terrorist organizations in a state of confusion and disarray.\"",
           "confidence": 0.97,
           "evidence": "Published in Middle East Quarterly Vol. 10, No. 1 (Winter 2003), confirmed by multiple independent citations in peer-reviewed journals (Studies in Conflict & Terrorism, Journal of Conflict Studies) and by the Middle East Forum's own archive. The article explicitly argues that Israel's sequential targeted killings of Hamas commanders demonstrate deep intelligence penetration and degrade Hamas command structure — the full composite framing. The Winter 2003 date is confirmed by the volume/issue number (10:1) and by multiple academic citation trails. This predates the proposed 2006-01-01 date by approximately three years.",
-          "amplifier_role": "originator",
-          "role_evidence": "This is the earliest identified peer-reviewed/policy-journal articulation of the full composite framing (intelligence-enabled sequential commander killings degrading Hamas command structure), predating the proposed date by ~3 years. It was widely cited in subsequent academic literature as a foundational statement of the framing.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This is the earliest identified peer-reviewed/policy-journal articulation of the full composite framing (intelligence-enabled sequential commander killings degrading Hamas command structure), predating the proposed date by ~3 years. It was widely cited in subsequent academic literature as a foundational statement of the framing. [auto: a lineage carries at most one evidenced originator and an earlier crown (2002-09-01) stands — demoted to early-amplifier. Single-originator pass, 2026-10-18.]",
           "cited_via": "",
-          "date_precision": "",
+          "date_precision": "year",
           "describes_period": "",
           "claim_relation": "",
           "verified": true,
@@ -225,8 +225,8 @@
           "exact_quote": "\"It is our view that decapitation of the terrorist infrastructure is one means among the strategies in the war against terror,\" Yaalon said.",
           "confidence": 0.98,
           "evidence": "This is a direct, on-the-record quote from Israeli Army Chief of Staff Moshe Yaalon at a security conference in Tel Aviv, reported by RFERL on March 23, 2004 — the day after the Yassin assassination. The article is archived and independently dateable to March 2004 by its content (it describes events of March 22–23, 2004). The quote explicitly frames sequential Hamas commander killings as a 'decapitation of the terrorist infrastructure' strategy, directly instantiating the canonical framing. This is an official Israeli government articulation of the framing, not a secondary commentary, and predates the proposed 2006-01-01 date by nearly two years.",
-          "amplifier_role": "originator",
-          "role_evidence": "This is the earliest identified on-the-record official statement by a senior Israeli military official explicitly using the 'decapitation' + 'terrorist infrastructure' framing in the context of Hamas command structure degradation through sequential targeted killings. It predates the proposed earliest date by ~21 months.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "This is the earliest identified on-the-record official statement by a senior Israeli military official explicitly using the 'decapitation' + 'terrorist infrastructure' framing in the context of Hamas command structure degradation through sequential targeted killings. It predates the proposed earliest date by ~21 months. [auto: a lineage carries at most one evidenced originator and an earlier crown (2002-09-01) stands — demoted to early-amplifier. Single-originator pass, 2026-10-18.]",
           "cited_via": "",
           "date_precision": "",
           "describes_period": "",
@@ -725,11 +725,11 @@
             "originator": 1
           },
           "2003": {
-            "originator": 1,
+            "early-amplifier": 1,
             "unknown": 2
           },
           "2004": {
-            "originator": 1
+            "early-amplifier": 1
           },
           "2006": {
             "early-amplifier": 1
@@ -767,7 +767,7 @@
         "originator_to_mass_amplifier_days": 2587,
         "originator_to_institutional_adoption_days": 5130,
         "originator_to_critic_days": 8669,
-        "days_since_latest": 44
+        "days_since_latest": 146
       },
       "social_spread": [],
       "social_search_performed": false,

@@ -388,17 +388,17 @@ first — the join and the weekly loop pay interest from the day they exist. Mai
 checkpoints marked ✋; everything else is review-after.*
 
 **Batch A — receipts & rigor (upstream mechanical; ~2 days; ~free)**
-- [ ] Embed-recovery pass: flagged placeholder X URL → fetch cited_via article → extract
+- [x] Embed-recovery pass: flagged placeholder X URL → fetch cited_via article → extract
       embedded status links → sole-match recovers, multi-match disambiguates by snowflake
       date, mismatch refuses and keeps the flag. Built FIRST so the sweep below runs it.
       Extraction patterns structured for t.me / bsky.app to follow (one regex each).
-- [ ] Guard sweep over the pre-guard corpus (apply-referent-bound pattern: dry-run →
+- [x] Guard sweep over the pre-guard corpus (apply-referent-bound pattern: dry-run →
       ✋ review → apply): snowflake dates, one-crown, deny-as-critic, embed-recovery;
       CORRECTIONS rows for any published-output changes.
-- [ ] Empty-lineage quoted-n-gram retry (one extra die roll before the social rescue).
-- [ ] Foreign-language license for the archaeology prompts (+ harness fixture).
-- [ ] Date-precision backfill, conservative (mark year-precision only where deterministic).
-- [ ] Contribution-flow audit: verify every path into a published trace is
+- [x] Empty-lineage quoted-n-gram retry (one extra die roll before the social rescue).
+- [x] Foreign-language license for the archaeology prompts (+ harness fixture).
+- [x] Date-precision backfill, conservative (mark year-precision only where deterministic).
+- [x] Contribution-flow audit: verify every path into a published trace is
       maintainer-gated (30-minute check; closes the post-Cornell payload surface).
 - Validation: deterministic suite extended per pass; full harness; one live known-answer replay.
 
@@ -603,6 +603,8 @@ researcher data request, bridging-org pilot, or educator classroom use.
 | 2026-10-19 (bubbles roadmap dated) | Tarek approved the sequenced path to the Spine's convergence goal, now dated in Phase 4: his audit + outreach follow-ups (now→Oct 22) → the tabled densification queues (week of Oct 26: guard sweep, framing↔trace join, weekly downstream loop first — the join and loop compound weekly) → actor canonicalization registry + graph v0 with the Talarico entrance exam (early Nov, maintainer-only, zero API cost) → Gate 2 verdict (~early Dec) picks the delivery stage (pass → Phase 3 labeler ships claim-age labels first, clusters stay internal until the Phase 4 cluster audit; fail → interviews per plan, graph keeps internal value). Explicitly NOT doing before the gates: cluster-facing UI, published membership claims, labeler work | Skip ahead to clusters on today's corpus (~31 traces + stale events = anecdotes, not clusters; early wrong membership claims are the blindspot damage class in public); treat the share decision as separate from this roadmap (it isn't — visitor traffic is corpus densification) | The fastest route to the goal is not skipping the checkpoints in front of it |
 
 | 2026-10-19 (2e build plan) | The tabled queues + graph prerequisites become section 2e — four dependency-ordered batches, Oct 26–Nov 7: A receipts & rigor (embed-recovery first so the guard sweep runs it; sweep, quoted retry, foreign-language license, precision backfill, contribution-flow audit), B downstream revival (event_date from receipts, framing↔trace join = the graph's edge supply, minimal quality floor BEFORE anything publishes unattended), C the compounding loops (weekly downstream loop N=3 with Tarek reviewing the first two weeks, trace update pass, receipt archiving, carrier-honesty badge), D graph groundwork (registry, graph v0, Talarico exam). Costs: ~$10–15 one-time, ~$3/week ongoing. Maintainer checkpoints at: sweep apply, first loop publishes, alias merges, the entrance exam | One mega-batch (review checkpoints vanish inside it); value-first ordering ignoring dependencies (the loop before the floor publishes junk unattended; the sweep before embed-recovery leaves placeholders it could have fixed) | Lettered-subsection precedent (2c, 2d): a build plan is not a phase and adds no gate; the gates it serves are unchanged |
+
+| 2026-10-19 (Batch A shipped same-day — Tarek: no reason to wait) | All six receipts-and-rigor items live: (1) embed-recovery pass in-pipeline + in the sweep (sole-embed recovers, multi-embed disambiguates by snowflake date, ambiguity refuses); (2) guard sweep over the corpus — dry-run reviewed, then applied: 9 surplus crowns demoted across 7 traces (every demotion verified against a genuinely earlier crown: moon 1969 NYT keeps over 1970; flat-earth 1819 Anti-Newtonian over Rowbotham 1849; nuclear 1946 over WASH-740; climate-grid 1987; marginal-emissions 1990; Israel 2002; vaccines-rebuttal 1998-era), ~23 year-precision marks, zero placeholders found (corpus was already clean), cards re-rendered (ages unchanged — crowns moved, anchors didn't); (3) quoted-n-gram retry before the social rescue; (4) foreign-language license in both archaeology prompts + a Russian-candidate harness fixture; (5) conservative date-precision backfill; (6) contribution-flow audited: maintainer-gated end-to-end (intake → pending issue → approve label → apply), now with a redaction-lock warning injected into review issues targeting redacted traces. **And one honest revert:** the deny-forms left the examiner-title regex the day after they entered it — the sweep's own dry run produced the counterexample (on "Platner ACCUSED of assault", "Platner denies allegations" coverage confirms the accusation; stance depends on claim shape, which a title regex cannot know); the sweep also gained a rebuttal-polarity skip so the remaining function-word regex never re-breaks the hand-corrected Mayo-class entries. Tests 26/26; harness 19/19 twice | Keep deny-forms with more regex epicycles (stance is not a title property); apply the sweep without per-entry review (the deny counterexample was CAUGHT by that review) | A guard that survives one day but leaves behind a counterexample, a test documenting the revert, and a sweep guard is a cheap education. Denial-coverage labeling now waits on the audit, where it always belonged |
 
 ## Feedback Log
 

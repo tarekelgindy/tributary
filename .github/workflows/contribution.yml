@@ -65,6 +65,12 @@ jobs:
         run: |
           set -euo pipefail
           python contribute.py --intake --out review.md | tee intake.out
+          # Redaction lock (2026-10-19): a contribution to a redacted trace
+          # can re-import the very payload the redaction removed. The gate is
+          # still the maintainer, but the review issue must SAY so.
+          if [ -n "$CONTRIB_FP" ] && grep -q '"redaction_notice"' "gallery/traces/${CONTRIB_FP}.json" 2>/dev/null; then
+            sed -i '1i > **REDACTION-LOCKED TRACE.** Before approving, run tools/redaction_check.py with the private term file over this contribution text and the trace — a quote or link here can re-import the redacted identity.\n' review.md
+          fi
           TITLE=$(grep '^TITLE=' intake.out | head -1 | cut -d= -f2-)
           VALID=$(grep '^VALID=' intake.out | head -1 | cut -d= -f2-)
           LABEL=$([ "$VALID" = "yes" ] && echo contribution-pending || echo contribution-rejected)

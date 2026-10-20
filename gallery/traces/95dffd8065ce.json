@@ -181,8 +181,8 @@
           "exact_quote": "The first book on the subject ('Did man land on the Moon?') was issued in 1970 by the Texas mathematician James J. Cranny.",
           "confidence": 0.45,
           "evidence": "Cited in Metapedia's Moon Hoax article as the first book on the subject, published 1970 in Texas. No digitized primary text found; date and attribution are secondhand. The title itself is the closest lexical attestation available — it directly questions the moon landing's authenticity, predating Kaysing. Confidence is low because no primary text or exact internal quote is available.",
-          "amplifier_role": "originator",
-          "role_evidence": "Described by secondary sources as the first published book questioning whether the moon landing occurred, predating Kaysing's 1976 pamphlet by six years, though no digitized primary text could be confirmed.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Described by secondary sources as the first published book questioning whether the moon landing occurred, predating Kaysing's 1976 pamphlet by six years, though no digitized primary text could be confirmed. [auto: a lineage carries at most one evidenced originator and an earlier crown (1969-12-18) stands — demoted to early-amplifier. Single-originator pass, 2026-10-18.]",
           "cited_via": "Metapedia Moon Hoax article (secondary citation of Cranny 1970 book)",
           "date_precision": "year",
           "describes_period": "",
@@ -567,7 +567,7 @@
             "originator": 1
           },
           "1970": {
-            "originator": 1
+            "early-amplifier": 1
           },
           "1976": {
             "early-amplifier": 1
@@ -598,7 +598,7 @@
         "originator_to_mass_amplifier_days": 3087,
         "originator_to_institutional_adoption_days": 14456,
         "originator_to_critic_days": 11390,
-        "days_since_latest": 6198
+        "days_since_latest": 6304
       },
       "social_spread": [],
       "social_search_performed": false,
