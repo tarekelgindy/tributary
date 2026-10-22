@@ -39,6 +39,14 @@ coordination; and the offer is the map with its unshown parts — an exit ramp, 
 diagnosis, because "you are in a bubble" trips the same identity immune system that dooms
 fact-first correction.
 
+The distant form of the goal, recorded in Tarek's words (2026-10-21): *"provide
+transparency into the bubbles that you're in and see how they compare to the bubbles that
+others are in."* The comparative half is the common-ground layer rejoining the loop —
+seeing another bubble's map, and where it overlaps yours, IS the cross-cutting exposure the
+onramps/offramps vision calls for. Standing constraint: "the bubbles you're in" can only
+ever be computed from what a person volunteers (a pasted link, an opt-in diet source, a
+label met in situ) — never from tracking, which this project does not do.
+
 **Theory of change:** Not mass persuasion. Make provenance and overlap so cheap that
 multipliers (journalists, educators, bridging orgs, researchers) can afford to do at scale
 what currently takes hours per claim. Shared *methods*, not shared arbiters.
