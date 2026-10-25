@@ -1152,6 +1152,9 @@ function renderEventAnalysis(analysis) {
   meta.innerHTML = '';
   addMetaText(meta, 'event analysis');
   if (analysis.event_date) addMeta(meta, 'event date', (analysis.event_date || '').split('T')[0]);
+  // Coverage horizon (2026-10-25, Batch B): an event analysis is a snapshot
+  // of a coverage window, not a live feed — say when its receipts end.
+  if (analysis.coverage_as_of) addMeta(meta, 'coverage as of', (analysis.coverage_as_of || '').split('T')[0]);
   addMeta(meta, 'framings', String((analysis.framings || []).length));
   maybeCardLink(analysis.analysis_id);
 
@@ -1244,7 +1247,9 @@ function renderEventAnalysis(analysis) {
     ).join('');
     let trace;
     if (hasFp) trace = `<div class="fr-trace clickable" data-framing-idx="${idx}">↗ Trace this framing's origin →</div>`;
-    else if (fr.fingerprint_id) trace = `<div class="fr-trace untraced" title="fingerprint ${escapeHtml(fr.fingerprint_id)} exists but is not embedded in this file">(origin trace exists, not included here)</div>`;
+    else if (fr.fingerprint_id) trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
+        href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(fr.fingerprint_id)}.json"
+        title="published origin trace ${escapeHtml(fr.fingerprint_id)}">↗ This framing's claim has an origin trace →</a>`;
     else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
     // Progressive disclosure: the compact card carries what a reader needs to
     // pick a framing (name, question, key claim, WHO is carrying it); the

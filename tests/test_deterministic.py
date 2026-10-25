@@ -201,6 +201,38 @@ def test_is_recent_date():
     assert not _is_recent_date("not a date")
 
 
+def test_weak_event_three_sides():
+    from publish import is_weak_event
+    fr_ok = {"carriers": [{"verified": True, "verification_status": "url-ok"},
+                          {"verified": False, "verification_status": "url-error"}]}
+    fr_unchecked = {"carriers": [{"verified": False, "verification_status": "unchecked"}] * 3}
+    fr_failed = {"carriers": [{"verified": False, "verification_status": "url-error"}] * 3}
+    assert is_weak_event({"framings": [fr_ok]})                      # <2 framings trips
+    assert not is_weak_event({"framings": [fr_ok, fr_ok]})           # verified passes
+    # never-checked is unknown, not bad (the 28-event June lesson):
+    assert not is_weak_event({"framings": [fr_unchecked, fr_unchecked]})
+    # checked-and-all-failed trips:
+    assert is_weak_event({"framings": [fr_failed, fr_failed]})
+
+
+def test_event_date_bound_rule():
+    from apply_event_dates import bound_event_date
+    from datetime import date
+    cov = [date(2026, 6, 1), date(2026, 6, 9)]
+    # retrospective events keep their stated dates (the Iran-strike lesson)
+    d, basis = bound_event_date("2024-04-14", cov)
+    assert d == "2024-04-14" and "within coverage horizon" in basis
+    # a date AFTER latest coverage is impossible -> earliest-coverage bound
+    d, basis = bound_event_date("2026-08-01", cov)
+    assert d == "2026-06-01" and "earliest coverage" in basis
+    # year precision pads to its earliest day and survives
+    d, basis = bound_event_date("2024", cov)
+    assert d == "2024-01-01" and "year precision" in basis
+    # no carriers: stated date passes through; garbage yields empty
+    assert bound_event_date("2025-01-02", [])[0] == "2025-01-02"
+    assert bound_event_date("not a date", [])[0] == ""
+
+
 def test_weak_trace_both_sides():
     # BOTH sides, per the cards-guard lesson: the trip case AND the case that
     # must sail through.

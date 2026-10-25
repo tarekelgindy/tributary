@@ -48,6 +48,24 @@ def is_weak_trace(fp: dict) -> bool:
     return lex_lost and con_lost
 
 
+def is_weak_event(ev: dict) -> bool:
+    """Event-side publication floor (2026-10-25, Batch B — the is_weak_trace
+    analog, prerequisite for the weekly loop publishing unattended): an
+    analysis with fewer than two framings, or whose CHECKED carriers all
+    failed verification, stays REACHABLE at its permalink but is NOT listed.
+    Checked is load-bearing: 28 June-era events carry only
+    verification_status="unchecked" (they predate carrier verification), and
+    never-checked is unknown, not bad — the floor must not punish legacy
+    data for a check that never ran (caught on this floor's first dry run).
+    The unchecked backlog gets verified in the Batch C archiving crawl."""
+    framings = ev.get("framings") or []
+    if len(framings) < 2:
+        return True
+    checked = [c for f in framings for c in (f.get("carriers") or [])
+               if str(c.get("verification_status") or "unchecked") != "unchecked"]
+    return bool(checked) and not any(c.get("verified") for c in checked)
+
+
 def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     out_events = gallery_dir / "events"
     out_events.mkdir(parents=True, exist_ok=True)
@@ -75,6 +93,7 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     # live corpus listing to zero on every request (found 2026-09-25;
     # the same replace-instead-of-merge disease as the cards index wipe).
     entries = []
+    weak_events = 0
     for p in sorted(out_events.glob("*.json")):
         try:
             ev = json.loads(p.read_text(encoding="utf-8"))
@@ -82,6 +101,9 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
             continue
         framings = ev.get("framings") or []
         if not ev.get("is_event_analysis") or len(framings) < min_framings:
+            continue
+        if is_weak_event(ev):
+            weak_events += 1
             continue
         lean = ev.get("coverage_lean") or {}
         coal = ev.get("coalition") or {}
@@ -128,7 +150,8 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
     (gallery_dir / "index.json").write_text(
         json.dumps(index, indent=1, ensure_ascii=False), encoding="utf-8")
     build_search_index(gallery_dir)
-    return {"published": len(entries), "skipped": skipped, "unlisted": unlisted}
+    return {"published": len(entries), "skipped": skipped, "unlisted": unlisted,
+            "weak_events": weak_events}
 
 
 def build_search_index(gallery_dir: Path) -> int:
@@ -199,8 +222,8 @@ def main():
     rep = publish(Path(args.events_dir), Path(args.gallery_dir), args.min_framings)
     print(f"[publish] {rep['published']} events -> {args.gallery_dir} "
           f"({rep['skipped']} skipped: no framings / not event JSON; "
-          f"{rep.get('unlisted', 0)} trace(s) below the publication threshold, "
-          f"reachable but unlisted). "
+          f"{rep.get('unlisted', 0)} trace(s) + {rep.get('weak_events', 0)} event(s) "
+          f"below the publication threshold, reachable but unlisted). "
           f"Now: git add gallery/ && git commit && git push", file=sys.stderr)
 
 
