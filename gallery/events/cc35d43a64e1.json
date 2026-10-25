@@ -1,0 +1,1782 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "cc35d43a64e1",
+  "event": "Putin stated that Russia is prepared to engage in negotiations regarding a final settlement to the Ukraine conflict, distinguishing this from a temporary ceasefire.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-10-25T07:23:17.362916+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "cc35d43a64e1",
+        "statement": "Putin stated that Russia is prepared to engage in negotiations regarding a final settlement to the Ukraine conflict, distinguishing this from a temporary ceasefire.",
+        "verified": true,
+        "source_url": "",
+        "note": "Core event claim; requires verification against Putin's public statements or official Russian government records (e.g., Kremlin.ru, TASS, or credible news reports citing direct quotes).",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085545+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f5d099f72389",
+        "statement": "Russia issued territorial and political demands in June 2024, including territorial cession, NATO membership ban for Ukraine, and military restrictions.",
+        "verified": true,
+        "source_url": "",
+        "note": "Referenced across multiple framings; requires verification against official Russian statements or credible reporting from June 2024.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085618+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "8744c9b6fb40",
+        "statement": "Keith Witkoff (Trump's envoy) conducted meetings with Putin or Russian officials regarding Ukraine negotiations.",
+        "verified": true,
+        "source_url": "",
+        "note": "Claimed in 'Diplomatic Opportunity' and 'Trump Diplomacy Validation' framings; requires verification against Trump administration statements or credible news reports.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085641+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "dd5c19ee5cf7",
+        "statement": "Russia has conducted missile strikes on Ukrainian territory during the period of diplomatic discussions.",
+        "verified": true,
+        "source_url": "",
+        "note": "Claimed in 'Stalling & Bad Faith' and 'Human Cost & Battlefield Reality' framings; requires verification against Ukrainian government reports, NATO assessments, or credible news sources.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085657+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "27693ba11402",
+        "statement": "A trilateral US-Ukraine-Russia negotiation framework exists or is being actively pursued.",
+        "verified": false,
+        "source_url": "",
+        "note": "Mentioned in 'Diplomatic Opportunity' and 'Trump Diplomacy Validation' framings but not independently verified; requires confirmation of formal framework establishment.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085675+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "302c5bc0554f",
+        "statement": "Trump administration officials have characterized negotiations as showing 'tremendous progress.'",
+        "verified": false,
+        "source_url": "",
+        "note": "Attributed to Trump in 'Trump Diplomacy Validation' framing; requires direct quote verification.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085690+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0238d7139a6a",
+        "statement": "Ukraine has formally rejected Russia's June 2024 conditions.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed in 'Russian Maximalism / Capitulation Risk' and 'Stalling & Bad Faith' framings; requires verification against Ukrainian government statements.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:23:03.085705+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Putin's 'final settlement' language represents genuine diplomatic intent or a stalling/negotiating tactic.",
+      "Whether Russia's continued military operations during talks indicate bad faith or are separate from diplomatic progress.",
+      "Whether Putin's demands constitute reasonable negotiating positions or unacceptable capitulation terms for Ukraine.",
+      "Whether Trump's diplomatic engagement is producing substantive progress or enabling Russian strategy.",
+      "Whether the focus should be on diplomatic possibility or on the human cost of continued fighting."
+    ],
+    "disagreements_detail": [
+      {
+        "statement": "Is Putin's 'final settlement' language a genuine diplomatic opening or a stalling tactic?",
+        "between": [
+          "Diplomatic Opportunity",
+          "Stalling & Bad Faith"
+        ]
+      },
+      {
+        "statement": "Do Russia's June 2024 demands represent a reasonable basis for negotiation or unacceptable terms amounting to Ukrainian capitulation?",
+        "between": [
+          "Diplomatic Opportunity",
+          "Russian Maximalism / Capitulation Risk"
+        ]
+      },
+      {
+        "statement": "Is Trump's diplomatic strategy producing real progress or enabling Russian objectives?",
+        "between": [
+          "Trump Diplomacy Validation",
+          "Stalling & Bad Faith"
+        ]
+      },
+      {
+        "statement": "Should the primary frame be diplomatic possibility or the human and military cost of continued conflict?",
+        "between": [
+          "Diplomatic Opportunity",
+          "Human Cost & Battlefield Reality"
+        ]
+      },
+      {
+        "statement": "Do Russia's simultaneous military operations during talks indicate bad faith negotiation or separate strategic decisions?",
+        "between": [
+          "Stalling & Bad Faith",
+          "Diplomatic Opportunity"
+        ]
+      }
+    ],
+    "summary": "All framings accept that Putin has publicly distinguished a 'final settlement' from a temporary ceasefire and that Russia has stated specific territorial and political conditions (June 2024). The core disagreement is whether this language and engagement reflect genuine diplomatic intent or a tactical maneuver, and whether Russia's continued military operations during talks undermine or are independent of negotiation sincerity. The framings also diverge sharply on whether Trump's diplomatic involvement is producing progress or enabling Russian strategy."
+  },
+  "framings": [
+    {
+      "framing_id": "ef26a315",
+      "name": "Diplomatic Opportunity",
+      "short_label": "A real opening for peace",
+      "question": "Does Putin's offer represent a genuine, actionable path to ending the war?",
+      "key_claim": "Putin's call for a final settlement\u2014not a temporary ceasefire\u2014signals a substantive diplomatic opening that the US and Ukraine should engage seriously.",
+      "description": "This framing treats Putin's distinction between a lasting settlement and a short pause as a meaningful signal of intent, and focuses on the mechanics of how talks could proceed.",
+      "emphasizes": "The trilateral US-Ukraine-Russia framework, Witkoff's constructive meetings, and the possibility of a durable security architecture for Europe.",
+      "downplays": "Russia's ongoing strikes during talks, its maximalist territorial demands, and the long history of failed negotiations.",
+      "tone": "measured",
+      "sample_headlines": [
+        "Moscow ready for talks on Trump's Ukraine peace plan, says Putin",
+        "Putin Says Russia Ready for Ukraine Talks, Rejects Short Ceasefire"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "45aa628f0722",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/russia/putin-russia-ready-serious-talks-trump-peace-plan-ukraine-war-rcna246205",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Russia is ready for 'serious' peace talks, Vladimir Putin said Thursday",
+          "date": "2025-11-27",
+          "role_evidence": "Major US broadcast outlet reporting Putin's readiness framing to a mass audience without leading skepticism.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446341+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ce5fac8054f5",
+          "name": "Kurdistan 24",
+          "url": "https://www.kurdistan24.net/en/story/947999/putin-says-russia-ready-for-ukraine-talks-rejects-short-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Putin said Moscow is prepared to resume three-way negotiations\u2026seeking a final security settlement",
+          "date": "2026-10-24",
+          "role_evidence": "Among the first outlets to frame the ceasefire-vs-settlement distinction as the core news hook.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446480+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "209219ca8263",
+          "name": "RT (Russia Today)",
+          "url": "https://rt-english.com/russia/647566-putin-peace-talks-ukraine/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Russia remains ready to negotiate a lasting settlement in Ukraine",
+          "date": "2026-10-23",
+          "role_evidence": "Russian state media first broadcast and framed Putin's remarks as a genuine peace push, setting the initial narrative.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446527+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Russia's ongoing military strikes and territorial advances during the negotiation period",
+          "found_in_framing": "Stalling & Bad Faith, Human Cost & Battlefield Reality",
+          "impact": "Reader may overestimate Putin's genuine commitment to settlement and underestimate the risk of negotiating while Russia gains ground militarily",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375751+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's maximalist June 2024 territorial and political demands (NATO ban, army restrictions, territorial cession)",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk",
+          "impact": "Reader lacks concrete understanding of what 'final settlement' actually means in Russian terms and may not recognize the gap between diplomatic language and substantive demands",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375799+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Ukraine's exclusion from key bilateral talks between US and Russia",
+          "found_in_framing": "Trump Diplomacy Validation, Russian Maximalism / Capitulation Risk",
+          "impact": "Reader may not recognize the procedural problem of negotiating Ukraine's fate without Ukrainian participation, undermining the framing's claim of a legitimate 'trilateral framework'",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375817+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The long history of failed Russian negotiations and broken agreements",
+          "found_in_framing": "Stalling & Bad Faith",
+          "impact": "Reader lacks historical pattern recognition needed to assess whether this opening is genuinely different or follows a familiar cycle",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375832+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human toll of continued fighting and civilian casualties during negotiation delays",
+          "found_in_framing": "Human Cost & Battlefield Reality",
+          "impact": "Reader may view diplomatic engagement as cost-free and miss the moral urgency of either rapid resolution or continued defense",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375845+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:22:52.446561+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "fcaa11c9",
+      "name": "Stalling & Bad Faith",
+      "short_label": "Putin is running out the clock",
+      "question": "Is Putin's talk of a 'final settlement' a genuine offer or a delay tactic to gain battlefield advantage?",
+      "key_claim": "Putin's repeated invocations of a 'final settlement' are a stalling strategy to keep fighting while avoiding direct confrontation with Trump and the West.",
+      "description": "This framing argues that Putin's peace rhetoric is systematically contradicted by continued strikes, maximalist demands, and diplomatic goalpost-moving.",
+      "emphasizes": "Ongoing Russian missile strikes during talks, Russia's unchanged June 2024 territorial demands, and the pattern of failed prior negotiations.",
+      "downplays": "Any genuine diplomatic progress or Russian security concerns that might motivate a settlement.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Putin Stalling Ninety Percent Complete Peace Deal",
+        "Vladimir Putin is trapped in a war he cannot win but dare not end"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "e55664c0f6da",
+          "name": "Atlantic Council",
+          "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/vladimir-putin-is-trapped-in-a-war-he-cannot-win-but-dare-not-end/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Putin has spent much of the past year engaging in blatant stalling tactics while constantly moving the diplomatic goalposts",
+          "date": "2026-02-01",
+          "role_evidence": "Prominent pro-Atlantic think tank amplifying the stalling narrative to a large policy and media audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260829060744/https://www.atlanticcouncil.org/blogs/ukrainealert/vladimir-putin-is-trapped-in-a-war-he-cannot-win-but-dare-not-end/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446615+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "7a68f94b62ef",
+          "name": "Jamestown Foundation / Pavel K. Baev (PRIO)",
+          "url": "https://jamestown.org/putin-stalling-ninety-percent-complete-peace-deal/",
+          "carrier_type": "academic",
+          "amplifier_role": "originator",
+          "excerpt": "The Kremlin's position remains distant from the draft terms reached during December 2025 talks",
+          "date": "2026-01-20",
+          "role_evidence": "Analyst-authored piece that coined the '90% complete / Putin stalling' framing widely picked up by other outlets.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260714004425/https://jamestown.org/putin-stalling-ninety-percent-complete-peace-deal/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446643+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "9cfc11209234",
+          "name": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/world/putin-sees-us-peace-plan-as-a-starting-point-as-he-warns-ukraines-army-to-withdraw",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "European officials say Putin is stalling because Russia wants to grab more of Ukraine before accepting any deal",
+          "date": "2025-11-01",
+          "role_evidence": "Mainstream US public broadcaster surfacing the stalling framing via analyst and official quotes.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446669+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Any indication that Putin may have genuine security concerns (NATO expansion, Western encroachment) that could motivate a settlement",
+          "found_in_framing": "Diplomatic Opportunity, Russian Maximalism / Capitulation Risk",
+          "impact": "Reader may dismiss Russian motivations as purely cynical and miss potential legitimate grievances that could be addressed in a durable settlement",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375860+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Evidence of concrete diplomatic progress or movement toward terms acceptable to multiple parties",
+          "found_in_framing": "Diplomatic Opportunity, Trump Diplomacy Validation",
+          "impact": "Reader cannot assess whether talks are genuinely advancing or merely performative, limiting ability to evaluate the framing's core claim",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375872+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Ukraine's war fatigue and the mounting costs to Ukrainian society of continued fighting",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk, Human Cost & Battlefield Reality",
+          "impact": "Reader may not understand the pressure on Ukraine to negotiate and may overestimate Ukraine's capacity for indefinite resistance",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375884+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific achievements or framework elements that Witkoff's meetings produced",
+          "found_in_framing": "Trump Diplomacy Validation",
+          "impact": "Reader cannot distinguish between genuine diplomatic progress and mere engagement, making it impossible to evaluate whether talks are substantive",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375896+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:22:52.446697+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "ea3843fe",
+      "name": "Russian Maximalism / Capitulation Risk",
+      "short_label": "Settlement means Ukraine surrenders",
+      "question": "Do Russia's conditions for a 'final settlement' amount to forcing Ukraine to capitulate?",
+      "key_claim": "Putin's 'final settlement' framing is cover for demanding Ukraine cede territory, abandon NATO aspirations, and accept permanent military restrictions\u2014terms tantamount to surrender.",
+      "description": "This framing focuses on the substance of Russia's known demands and argues that any deal on Moscow's terms would reward aggression and hollow out Ukrainian sovereignty.",
+      "emphasizes": "Russia's June 2024 conditions (territorial cession, NATO ban, army restrictions), Ukraine's rejection, and European alarm at the US peace plan's initial pro-Kremlin tilt.",
+      "downplays": "Ukraine's war fatigue, the costs of continued fighting, and any Russian security rationale.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "US peace plan calls for Ukrainian concessions including territorial cessions and NATO ban",
+        "Putin may well get what he wants in Ukraine"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "c1408193705c",
+          "name": "Al Jazeera Opinion",
+          "url": "https://www.aljazeera.com/amp/opinions/2025/3/18/putin-may-well-get-what-he-wants-in-ukraine",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Putin is quite close to drawing a thick red line in Eastern Europe that the West will have to respect",
+          "date": "2025-03-18",
+          "role_evidence": "Prominent international outlet framing the peace process as a potential Russian strategic victory.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446727+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "62b2cf49c0a5",
+          "name": "Yahoo News / Reuters wire",
+          "url": "https://www.yahoo.com/news/articles/moscow-ready-talks-trumps-ukraine-193121536.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The draft primarily calls for Ukrainian concessions to Russia, including territorial cessions\u2026and a legally binding renunciation of NATO membership",
+          "date": "2025-11-22",
+          "role_evidence": "Wire-distributed reporting that foregrounded the maximalist demand list to a broad US audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "http://web.archive.org/web/20251121215400/https://www.yahoo.com/news/articles/moscow-ready-talks-trumps-ukraine-193121536.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446760+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "8dbcc116ee9e",
+          "name": "Open The Magazine (Open Bureau)",
+          "url": "https://openthemagazine.com/world/putinus-ukraine-talks-why-a-three-day-kyiv-pause-is-no-peace-deal",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Russia's territorial demands remain intact\u2026what still blocks a deal",
+          "date": "2026-09-06",
+          "role_evidence": "Analytical piece foregrounding Russia's unchanged maximalist conditions as the central obstacle.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446786+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Any genuine diplomatic opening or willingness by Russia to negotiate terms that don't amount to Ukrainian capitulation",
+          "found_in_framing": "Diplomatic Opportunity",
+          "impact": "Reader may assume all Russian proposals are non-starters and miss opportunities for negotiated settlements that preserve Ukrainian sovereignty",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375909+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Ukraine's own war fatigue and the human cost of continued fighting that may make some compromise necessary",
+          "found_in_framing": "Human Cost & Battlefield Reality",
+          "impact": "Reader may view any Ukrainian concessions as unacceptable without understanding the trade-off between territorial loss and continued casualties",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375921+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific details of what Russia is actually demanding versus what Western observers fear Russia will demand",
+          "found_in_framing": "Stalling & Bad Faith, Diplomatic Opportunity",
+          "impact": "Reader may conflate worst-case scenarios with actual Russian positions, making it difficult to assess which demands are negotiable",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375932+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The role of Trump administration diplomacy in potentially constraining or enabling Russian maximalism",
+          "found_in_framing": "Trump Diplomacy Validation",
+          "impact": "Reader cannot assess whether US engagement is a check on Russian demands or a facilitator of them",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375944+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human cost of prolonged war as an alternative to negotiated settlement, even an unfavorable one",
+          "found_in_framing": "Human Cost & Battlefield Reality",
+          "impact": "Reader may not weigh the moral calculus of accepting territorial loss versus continued casualties and displacement",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375955+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:22:52.446822+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d36f9369",
+      "name": "Trump Diplomacy Validation",
+      "short_label": "Trump's pressure is working",
+      "question": "Does Putin's openness to talks vindicate Trump's unconventional diplomatic approach?",
+      "key_claim": "Putin's willingness to engage on a final settlement is a direct result of Trump's personal diplomacy and Witkoff's shuttle missions, proving the administration's strategy is bearing fruit.",
+      "description": "This framing credits the Trump administration's bilateral engagement with Moscow\u2014bypassing traditional multilateral channels\u2014as the catalyst for renewed peace momentum.",
+      "emphasizes": "The Witkoff-Putin meetings, Trump's 'tremendous progress' statements, and the trilateral framework as a US-brokered achievement.",
+      "downplays": "Lack of a concrete deal, Ukraine's exclusion from key talks, and European allies' sidelining.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Moscow ready for talks on Trump's Ukraine peace plan, says Putin",
+        "Trump touts 'tremendous progress' as Putin signals readiness for serious talks"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "efab9bd51c29",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/russia/putin-russia-ready-serious-talks-trump-peace-plan-ukraine-war-rcna246205",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "President Donald Trump has touted 'tremendous progress'",
+          "date": "2025-11-27",
+          "role_evidence": "Relayed Trump's own framing of diplomatic success to a mass US audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446855+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a2c624547431",
+          "name": "The Statesman",
+          "url": "https://www.thestatesman.com/world/putins-peace-push-comes-with-a-warning-europe-cant-defeat-russia-ukraine-talks-can-resume-1503654060.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Putin's peace push comes with a warning: Europe can't defeat Russia, Ukraine talks can resume",
+          "date": "2026-10-23",
+          "role_evidence": "Framed the Witkoff-Putin meeting as a productive US-led diplomatic push.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446877+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "2c2ffbde85bf",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-strikes-peace-talks.html",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "Witkoff calls Putin a 'humanitarian' at Russia peace talks without Ukraine",
+          "date": "2026-10-23",
+          "role_evidence": "Reported Witkoff's positive characterization of Putin, implicitly validating the administration's engagement approach.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446899+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The absence of a concrete deal or agreement despite months of Witkoff's shuttle diplomacy",
+          "found_in_framing": "Stalling & Bad Faith, Diplomatic Opportunity",
+          "impact": "Reader may overestimate the success of Trump's approach based on activity rather than results, missing signs of stalling",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375968+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Ukraine's exclusion from key negotiation phases and the procedural problems this creates for legitimacy",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk, Diplomatic Opportunity",
+          "impact": "Reader may not recognize that a US-Russia agreement without Ukraine is unlikely to be durable or acceptable to the party bearing the costs",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375980+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "European allies' concerns about being sidelined and the risk to NATO cohesion",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk",
+          "impact": "Reader may not understand the alliance management costs of unilateral US-Russia diplomacy and the risk of fracturing Western unity",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.375991+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's continued military operations and territorial demands during the negotiation period",
+          "found_in_framing": "Stalling & Bad Faith, Human Cost & Battlefield Reality",
+          "impact": "Reader may attribute diplomatic progress to Trump's strategy when Russia is simultaneously advancing militarily, confusing correlation with causation",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376002+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The human toll of continued fighting while diplomacy proceeds without concrete results",
+          "found_in_framing": "Human Cost & Battlefield Reality",
+          "impact": "Reader may celebrate diplomatic engagement as inherently positive without weighing the cost in lives and displacement of continued delay",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376019+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:22:52.446930+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "da221b92",
+      "name": "Human Cost & Battlefield Reality",
+      "short_label": "Talks while bombs keep falling",
+      "question": "What does it mean that negotiations proceed while strikes and casualties continue unabated?",
+      "key_claim": "The gap between Putin's peace rhetoric and Russia's intensifying military operations on the ground exposes the human cost being paid while diplomats talk.",
+      "description": "This framing keeps the focus on civilian casualties, ongoing strikes, and battlefield advances as the lived context in which all diplomatic statements must be judged.",
+      "emphasizes": "Continued Russian missile strikes on Ukrainian cities, civilian casualties, and Russia's territorial advances even during negotiation periods.",
+      "downplays": "Diplomatic process details and geopolitical framing in favor of on-the-ground human impact.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Russia and Ukraine trade fresh strikes despite renewed push for U.S.-brokered peace talks",
+        "Ukraine accused Russia of showing no change in its approach after fresh deadly strikes"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "7b2ccdceab65",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-strikes-peace-talks.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Russia and Ukraine trade fresh strikes despite renewed push for U.S.-brokered peace talks",
+          "date": "2026-10-23",
+          "role_evidence": "Headline explicitly juxtaposes diplomatic activity with ongoing military strikes, establishing the human-cost frame.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446955+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "00ff9fb8cbf0",
+          "name": "Kurdistan 24",
+          "url": "https://www.kurdistan24.net/en/story/947999/putin-says-russia-ready-for-ukraine-talks-rejects-short-ceasefire",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Ukraine accused Russia of showing no change in its approach after fresh deadly strikes",
+          "date": "2026-10-24",
+          "role_evidence": "Embedded Ukraine's accusation of continued strikes directly into the peace-talk news story.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "19e85bb5e3b1",
+          "name": "Atlantic Council (UkraineAlert)",
+          "url": "https://www.atlanticcouncil.org/blogs/ukrainealert/vladimir-putin-is-trapped-in-a-war-he-cannot-win-but-dare-not-end/",
+          "carrier_type": "institutional",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "dramatically increasing Russian attacks on the Ukrainian population, leading to a 31 percent surge in civilian casualties during 2025",
+          "date": "2026-02-01",
+          "role_evidence": "Quantified civilian harm to anchor the human-cost framing for a policy-influencing audience.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20260829060744/https://www.atlanticcouncil.org/blogs/ukrainealert/vladimir-putin-is-trapped-in-a-war-he-cannot-win-but-dare-not-end/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:22:52.446998+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The diplomatic framework and potential terms being negotiated that could end the fighting",
+          "found_in_framing": "Diplomatic Opportunity, Trump Diplomacy Validation",
+          "impact": "Reader may not understand what diplomatic resolution is even being pursued and may underestimate the urgency of reaching a deal to stop casualties",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376032+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Russia's stated security concerns and rationale for its demands, which may be addressable through negotiation",
+          "found_in_framing": "Diplomatic Opportunity",
+          "impact": "Reader may view the conflict as purely about Russian aggression without understanding potential paths to addressing underlying security dynamics",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376043+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Ukraine's own war fatigue and the mounting costs that may make negotiated settlement preferable to continued fighting",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk",
+          "impact": "Reader may advocate for continued fighting without fully accounting for the human cost of that choice or Ukrainian preferences",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376060+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific terms Russia is demanding and whether some might be acceptable compromises versus genuine capitulation",
+          "found_in_framing": "Russian Maximalism / Capitulation Risk, Diplomatic Opportunity",
+          "impact": "Reader may not distinguish between unacceptable demands and negotiable terms, limiting ability to evaluate settlement proposals",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376072+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The pattern of Russian negotiation behavior and whether current talks represent genuine movement or familiar stalling",
+          "found_in_framing": "Stalling & Bad Faith",
+          "impact": "Reader may not assess whether diplomatic engagement is likely to produce results or merely delay while casualties mount",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:23:15.376083+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:22:52.447021+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: Ukrainian sovereignty perspective (what settlement terms would constitute acceptable vs. unacceptable outcomes for Ukraine's government and public). Missing: European security architecture framing (how any settlement affects NATO expansion concerns, Baltic states, and broader European stability). Missing: War profiteer/military-industrial critique (who benefits from continued conflict vs. settlement). Missing: Domestic Russian political constraints (how Putin's negotiating position is limited by hardliners, military factions, or nationalist constituencies who might view settlement as betrayal).",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Putin stated that Russia is prepared to engage in negotiations regarding a final settlement to the Ukraine conflict, distinguishing this from a temporary ceasef",
+    "rated_outlets": 5,
+    "distribution": {
+      "left": 0,
+      "lean-left": 3,
+      "center": 2,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 60,
+      "center": 40,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 3,
+    "center": 2,
+    "right_of_center": 0,
+    "lean_index": -0.6,
+    "resolve_rate": 0.56,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 4,
+      "examples": [
+        {
+          "carrier": "Kurdistan 24",
+          "domain": "kurdistan24.net"
+        },
+        {
+          "carrier": "RT (Russia Today)",
+          "domain": "rt-english.com"
+        },
+        {
+          "carrier": "Open The Magazine (Open Bureau)",
+          "domain": "openthemagazine.com"
+        },
+        {
+          "carrier": "The Statesman",
+          "domain": "thestatesman.com"
+        }
+      ]
+    },
+    "non_news_carriers": 2,
+    "matched": [
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera Opinion",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Yahoo! News",
+        "carrier": "Yahoo News / Reuters wire",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 12,
+        "political": 0,
+        "social": 0,
+        "institutional": 2,
+        "academic": 1,
+        "other": 0
+      },
+      "vested_interest": 2,
+      "framings_with_vested": 2,
+      "n_framings": 5
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 5,
+    "n_actors": 11,
+    "framings": [
+      {
+        "framing_id": "ef26a315",
+        "name": "Diplomatic Opportunity",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "980bd7c51bfc",
+            "display": "Kurdistan 24",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "c7ad7bddaf51",
+            "display": "RT",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "fcaa11c9",
+        "name": "Stalling & Bad Faith",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ccfff693fe40",
+            "display": "Atlantic Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1ba5f7253d1e",
+            "display": "Jamestown Foundation",
+            "actor_type": "academic",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "ea3843fe",
+        "name": "Russian Maximalism / Capitulation Risk",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0fc5f3381b38",
+            "display": "Yahoo",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "375857cba2f4",
+            "display": "Open The Magazine",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d36f9369",
+        "name": "Trump Diplomacy Validation",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "8e79e1eeb689",
+            "display": "The Statesman",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "da221b92",
+        "name": "Human Cost & Battlefield Reality",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ccfff693fe40",
+            "display": "Atlantic Council",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "980bd7c51bfc",
+            "display": "Kurdistan 24",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "ec8d2067e04e",
+        "display": "NBC News",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Diplomatic Opportunity",
+          "Trump Diplomacy Validation"
+        ]
+      },
+      {
+        "actor_id": "980bd7c51bfc",
+        "display": "Kurdistan 24",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Diplomatic Opportunity",
+          "Human Cost & Battlefield Reality"
+        ]
+      },
+      {
+        "actor_id": "ccfff693fe40",
+        "display": "Atlantic Council",
+        "actor_type": "organization",
+        "n_framings": 2,
+        "framings": [
+          "Human Cost & Battlefield Reality",
+          "Stalling & Bad Faith"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Diplomatic Opportunity",
+        "b": "Stalling & Bad Faith",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Diplomatic Opportunity",
+        "b": "Russian Maximalism / Capitulation Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Stalling & Bad Faith",
+        "b": "Russian Maximalism / Capitulation Risk",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Stalling & Bad Faith",
+        "b": "Trump Diplomacy Validation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russian Maximalism / Capitulation Risk",
+        "b": "Trump Diplomacy Validation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Russian Maximalism / Capitulation Risk",
+        "b": "Human Cost & Battlefield Reality",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Diplomatic Opportunity",
+        "b": "Trump Diplomacy Validation",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Diplomatic Opportunity",
+        "b": "Human Cost & Battlefield Reality",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Stalling & Bad Faith",
+        "b": "Human Cost & Battlefield Reality",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Trump Diplomacy Validation",
+        "b": "Human Cost & Battlefield Reality",
+        "shared": 1,
+        "jaccard": 0.2
+      }
+    ],
+    "by_actor_type": {
+      "news": 8,
+      "academic": 1,
+      "organization": 1,
+      "reference": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.273,
+      "siloed_share": 0.636,
+      "mean_jaccard": 0.08
+    },
+    "structure_note": "3 of 11 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "circle_rollup": {},
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-10-25T07:23:17.362830+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

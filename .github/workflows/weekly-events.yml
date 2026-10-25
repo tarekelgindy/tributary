@@ -1,0 +1,120 @@
+# Weekly downstream loop (2026-10-25, Batch C): the corpus stops being a
+# museum. Every Monday: the agenda layer's top broadly-carried stories ->
+# the SAME gated event lane visitor requests use (shape gate, policy gate,
+# analysis, quality floor, cards) -> publish -> framing/trace joins -> one
+# digest issue for maintainer review. Picks 5 candidates, publishes at most
+# 3 (the gate may bounce headline-ish labels; a bounce costs ~$0.001 and
+# the loop just tries the next candidate). Cost ceiling ~$3/run.
+#
+# MAINTAINER REVIEW (plan 2e): the first two weeks' outputs are reviewed
+# via the digest issue before the loop is considered trusted-unattended.
+name: weekly-events
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Mondays 05:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: gallery-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        # anthropic pinned <1 (same reason as trace-request.yml); torch is
+        # REQUIRED here (story clustering + joins), unlike the trace lane.
+        run: |
+          pip install --quiet "anthropic<1" httpx pillow feedparser numpy
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet sentence-transformers
+      - name: Select, generate, publish
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          git config user.name "tributary-weekly"
+          git config user.email "weekly@tributary.tools"
+
+          python weekly_events.py --sync --select --n 5 > picks.tsv
+          echo "::group::picks"; cat picks.tsv; echo "::endgroup::"
+
+          PUBLISHED_IDS=""
+          BOUNCED=""
+          COUNT=0
+          while IFS=$'\t' read -r LABEL META1 META2; do
+            [ -z "$LABEL" ] && continue
+            [ "$COUNT" -ge 3 ] && break
+            echo "::notice::analyzing: $LABEL ($META1)"
+            python fingerprint.py "$LABEL" --event --lean-framings --save --max-searches 4 > out.json || true
+            if grep -q '^GATE=rejected' out.json; then
+              REASON=$(grep -oE '\[(not a traceable claim|policy refusal):[^]]*\]' out.json | head -1 | cut -c1-160)
+              echo "::notice::gate bounced: $REASON"
+              BOUNCED="$BOUNCED\n- $LABEL — $REASON"
+              continue
+            fi
+            ID=$(grep -o '"analysis_id": *"[a-f0-9]*"' out.json | head -1 | grep -o '[a-f0-9]\{12\}' || true)
+            if [ -z "$ID" ]; then
+              echo "::warning::no analysis id for: $LABEL"
+              continue
+            fi
+            python publish.py
+            LISTED=$(python -c "import json; from publish import is_weak_event; print(0 if is_weak_event(json.load(open('gallery/events/$ID.json', encoding='utf-8'))) else 1)" || echo 1)
+            if [ "$LISTED" = "1" ]; then
+              python cards.py --event "$ID" || echo "::warning::card render failed for $ID"
+            else
+              echo "::notice::$ID below the quality floor — reachable, unlisted, no card"
+            fi
+            PUBLISHED_IDS="$PUBLISHED_IDS $ID"
+            COUNT=$((COUNT+1))
+          done < picks.tsv
+
+          if [ "$COUNT" = "0" ]; then
+            echo "::warning::nothing published this week (all bounced or no picks)"
+          else
+            # cross-half edges for the new events (judge-confirmed only)
+            python apply_framing_joins.py --apply || echo "::warning::join pass failed"
+            python publish.py
+          fi
+
+          # push with the trace-lane's race-retry: reset to remote truth and
+          # re-derive from the gitignored staging dirs (publish copies a
+          # staging event only when no published copy exists — gallery is
+          # canonical since 2026-10-25)
+          PUSHED=0
+          for attempt in 1 2 3; do
+            git add gallery
+            if git diff --cached --quiet; then PUSHED=1; break; fi
+            git commit -m "Weekly events: $(date -u +%F) —$PUBLISHED_IDS"
+            if git pull --rebase origin main && git push origin main; then PUSHED=1; break; fi
+            echo "::warning::push race (attempt $attempt) — re-deriving"
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            python publish.py
+            for ID in $PUBLISHED_IDS; do python cards.py --event "$ID" || true; done
+          done
+          [ "$PUSHED" = "1" ] || { echo "::error::persistent publish race"; exit 1; }
+
+          BODY="Weekly loop $(date -u +%F): published${PUBLISHED_IDS:- nothing}.\n"
+          BODY="$BODY\nReview each event page (maintainer checkpoint, plan 2e):"
+          for ID in $PUBLISHED_IDS; do
+            BODY="$BODY\n- https://tributary.tools/fingerprint_viewer.html?load=gallery/events/$ID.json"
+          done
+          if [ -n "$BOUNCED" ]; then BODY="$BODY\n\nGate bounces:$BOUNCED"; fi
+          printf "%b" "$BODY" > digest.md
+          gh issue create --title "Weekly events — $(date -u +%F)" \
+            --body-file digest.md --label weekly-loop \
+            || gh issue create --title "Weekly events — $(date -u +%F)" --body-file digest.md \
+            || echo "::warning::digest issue creation failed"

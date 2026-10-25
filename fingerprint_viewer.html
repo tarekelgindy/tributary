@@ -1155,6 +1155,20 @@ function renderEventAnalysis(analysis) {
   // Coverage horizon (2026-10-25, Batch B): an event analysis is a snapshot
   // of a coverage window, not a live feed — say when its receipts end.
   if (analysis.coverage_as_of) addMeta(meta, 'coverage as of', (analysis.coverage_as_of || '').split('T')[0]);
+  // Carrier-honesty badge (2026-10-25, Batch C): the per-citation
+  // transparency traces already have — checked vs unchecked is stated, the
+  // way the June floor lesson demands (never-checked is unknown, not bad).
+  {
+    const cs = (analysis.framings || []).flatMap(f => f.carriers || []);
+    if (cs.length) {
+      const unchecked = cs.filter(c => !c.verification_status || c.verification_status === 'unchecked').length;
+      const ok = cs.filter(c => c.verified).length;
+      const checked = cs.length - unchecked;
+      addMeta(meta, 'receipts', checked
+        ? `${ok} of ${checked} checked links verified${unchecked ? ` · ${unchecked} unchecked` : ''}`
+        : `${cs.length} links, none checked yet`);
+    }
+  }
   addMeta(meta, 'framings', String((analysis.framings || []).length));
   maybeCardLink(analysis.analysis_id);
 

@@ -1,0 +1,1680 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "8c5dad4938b0",
+  "event": "Trump stated that Musk restored Starlink internet access to Ukraine during the ongoing conflict with Russia.",
+  "event_date": "",
+  "source_urls": [],
+  "created_at": "2026-10-25T07:21:12.057746+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "2694bd1e7b45",
+        "statement": "Starlink internet service to Ukraine experienced a disruption or restriction period during the Russia-Ukraine conflict.",
+        "verified": true,
+        "source_url": "https://www.bbc.com/news/world-us-canada-67039975",
+        "note": "Widely reported by major news outlets in late 2023; the fact of service disruption is not disputed across framings.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125690+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "23e2578bf6e6",
+        "statement": "Elon Musk publicly stated that Starlink had imposed restrictions on offensive military use of its service in Ukraine.",
+        "verified": true,
+        "source_url": "https://twitter.com/elonmusk/status/1705863025535746394",
+        "note": "Musk made public statements about throttling; the statement itself is verifiable, though its justification is contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125780+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e18e9e6811f4",
+        "statement": "Trump stated or implied he contacted Musk regarding Starlink service restoration to Ukraine.",
+        "verified": true,
+        "source_url": "https://www.politico.com/news/2023/10/09/trump-musk-starlink-ukraine-187456",
+        "note": "Trump made claims about his role; the claim itself is documented, though its accuracy and significance are disputed.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125813+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f787dee8d0a1",
+        "statement": "Starlink service to Ukraine was subsequently restored.",
+        "verified": true,
+        "source_url": "https://www.reuters.com/technology/musk-says-starlink-service-restored-ukraine-2023-10-09/",
+        "note": "The outcome (restoration) is not disputed; only the causation and timeline are contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125836+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "3106fdf8d26f",
+        "statement": "The service disruption lasted approximately 10 days.",
+        "verified": false,
+        "source_url": "",
+        "note": "Framings reference a '10-day gap,' but precise start and end dates of the restriction are not consistently documented across independent sources; the exact duration remains unclear.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125860+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "e7729d92c669",
+        "statement": "Ukraine used Starlink terminals for offensive drone strikes against Russian targets.",
+        "verified": false,
+        "source_url": "",
+        "note": "Musk and some sources claim this occurred; Ukrainian officials and other sources deny or minimize this. No independent verification of the scale or frequency of such use exists in the public record.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125892+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "2813058f57b2",
+        "statement": "The Starlink restriction directly caused Ukrainian military failures, drone mission losses, or air-defense disruptions during the blackout period.",
+        "verified": false,
+        "source_url": "",
+        "note": "Military & Human Cost framing asserts specific operational impacts; Ukrainian military sources have made claims, but independent verification of direct causation between Starlink outage and specific combat outcomes is not available.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125915+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "162b37037cdf",
+        "statement": "Civilian casualties occurred during the Starlink service disruption period as a direct result of the outage.",
+        "verified": false,
+        "source_url": "",
+        "note": "Military & Human Cost framing implies this; no independent verification of causation between Starlink outage and specific civilian deaths has been published.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-10-25T07:21:04.125933+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the Starlink restriction was a deliberate, punitive throttling or a legitimate contractual enforcement action.",
+      "Whether Trump's intervention was decisive in restoring service, or whether restoration was already planned or inevitable.",
+      "Whether Musk's unilateral control over wartime communications infrastructure poses a systemic democratic risk or is a reasonable exercise of private property rights.",
+      "Whether Ukraine's use of Starlink for offensive military purposes violated the terms of service and justified the restriction.",
+      "Whether the service disruption caused measurable military harm, drone failures, or civilian casualties.",
+      "Whether Trump's actions demonstrate support for Ukraine or are part of a pattern of ambivalence toward Ukrainian interests."
+    ],
+    "disagreements_detail": [
+      {
+        "statement": "Was the Starlink throttling a deliberate punishment or a legitimate contractual enforcement?",
+        "between": [
+          "Accountability & Transparency",
+          "Ukraine's Terms-of-Service Violation"
+        ]
+      },
+      {
+        "statement": "Did Trump's personal intervention restore Starlink service, or was restoration independent of Trump's actions?",
+        "between": [
+          "Trump as Ukraine's Defender",
+          "Accountability & Transparency"
+        ]
+      },
+      {
+        "statement": "Does Musk's control over Starlink in wartime represent an unaccountable systemic risk or a reasonable private-sector role?",
+        "between": [
+          "Private Power Over Public War",
+          "Ukraine's Terms-of-Service Violation"
+        ]
+      },
+      {
+        "statement": "Did the Starlink disruption cause direct military and civilian harm?",
+        "between": [
+          "Military & Human Cost",
+          "Ukraine's Terms-of-Service Violation"
+        ]
+      },
+      {
+        "statement": "Does this episode prove Trump supports Ukraine or that he is ambivalent about Ukrainian interests?",
+        "between": [
+          "Trump as Ukraine's Defender",
+          "Accountability & Transparency"
+        ]
+      }
+    ],
+    "summary": "All framings agree that Starlink service to Ukraine was restricted, Musk stated a reason (terms-of-service violation), and service was later restored\u2014likely following Trump's involvement. The shared factual ground is narrow: a disruption occurred, statements were made, and restoration happened. Everything else\u2014causation, intent, harm, and systemic implications\u2014is contested."
+  },
+  "framings": [
+    {
+      "framing_id": "55da1b3d",
+      "name": "Accountability & Transparency",
+      "short_label": "Who ordered the cutoff?",
+      "question": "Who actually ordered the Starlink restrictions on Ukraine, and why won't Trump or Musk say clearly?",
+      "key_claim": "Trump and Musk are deflecting responsibility for a deliberate throttling of Ukraine's wartime communications, with each pointing at the other.",
+      "description": "This framing focuses on the opacity surrounding who ordered the original restrictions and why Trump declined to confirm or deny calling Musk to reverse them.",
+      "emphasizes": "Trump's evasiveness, Musk's contradictory statements, the 10-day gap in service, and the lack of a clear chain of command.",
+      "downplays": "The fact that service was ultimately restored and that the outcome may have been positive for Ukraine.",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump says Musk restored Ukraine's Starlink access, dodges call question",
+        "Ukraine says satellite access still restricted despite Trump saying otherwise"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "ff2118e2dbe9",
+          "name": "The Wall Street Journal",
+          "url": "https://www.wsj.com/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump called Musk and asked him to lift restrictions on Ukraine's use of Starlink",
+          "date": "2026-10-23",
+          "role_evidence": "WSJ broke the story that Trump personally called Musk to reverse the throttling, setting the accountability frame for all subsequent coverage.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 401",
+          "archive_url": "http://web.archive.org/web/20261025013755/http://www.wsj.com/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.123977+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3435fc6d1dd2",
+          "name": "Washington Post",
+          "url": "https://www.washingtonpost.com/world/2026/10/23/trump-says-starlink-access-restored-ukraine-reports-more-interruptions/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "confusion over who previously ordered access to the network be curtailed",
+          "date": "2026-10-23",
+          "role_evidence": "WaPo amplified the 'who ordered it?' question by highlighting the contradiction between Trump's claim of restoration and Ukrainian soldiers' reports of continued disruption.",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "timeout",
+          "archive_url": "http://web.archive.org/web/20261023185444/https://www.washingtonpost.com/world/2026/10/23/trump-says-starlink-access-restored-ukraine-reports-more-interruptions/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124106+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4bf6a09356e2",
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/europe/trump-says-musk-restored-ukraine-starlink-access-rcna605165",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump has denied being involved in decisions regarding Ukraine's access to Elon Musk's Starlink",
+          "date": "2026-10-23",
+          "role_evidence": "NBC foregrounded Trump's denial of involvement alongside Rubio's claim that decisions were SpaceX's alone, deepening the accountability gap narrative.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124149+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The contractual and legal frameworks governing SpaceX's government contracts, and regulatory oversight mechanisms that may constrain Musk's unilateral power",
+          "found_in_framing": "Private Power Over Public War",
+          "impact": "Reader cannot assess whether the incident represents a genuine governance gap or falls within existing legal/contractual bounds; may overstate the absence of accountability structures",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791579+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The terms-of-service violation claim and Musk's stated principle against weaponizing civilian infrastructure as a potential justification for the throttling",
+          "found_in_framing": "Ukraine's Terms-of-Service Violation",
+          "impact": "Reader sees only evasiveness and contradiction without understanding Musk's stated rationale; cannot evaluate whether deflection is dishonest or a principled position poorly communicated",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791612+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The concrete military and human costs of the 10-day disruption: drone failures, disabled air defenses, soldier communications loss, and civilian casualties",
+          "found_in_framing": "Military & Human Cost",
+          "impact": "Reader focuses on blame-assignment rather than understanding the actual harm; may underestimate the stakes of the incident",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791623+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:20:51.124192+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "d1338a74",
+      "name": "Private Power Over Public War",
+      "short_label": "Billionaire controls wartime internet",
+      "question": "Is it dangerous for a single private citizen to have unilateral on/off control over a warring nation's military communications?",
+      "key_claim": "The Starlink episode proves that a mercurial billionaire now functions as an unaccountable power broker in a live war, posing a systemic risk to allied nations.",
+      "description": "This framing treats the restoration not as good news but as a warning: the fact that Musk could throttle and restore service at will exposes a structural vulnerability in how democracies wage war.",
+      "emphasizes": "Musk's unilateral power, Europe's alarm, the precedent set for other NATO allies, and the absence of democratic oversight.",
+      "downplays": "The contractual and legal frameworks governing SpaceX's government contracts, and the fact that the US government ultimately intervened.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Elon Musk is war's new power broker",
+        "Drone Disruptions in Ukraine Renew Debate Over Musk's Control of Starlink"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "45e2b5491f0a",
+          "name": "Boston Globe (Opinion)",
+          "url": "https://www.bostonglobe.com/2026/10/23/opinion/elon-musk-ukraine-starlink-billionaires/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Crucial wartime technology can't rest with mercurial billionaires",
+          "date": "2026-10-23",
+          "role_evidence": "Published an opinion piece explicitly framing Musk as 'war's new power broker' and calling for structural reform of reliance on private satellite networks.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124239+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "40152dffc60e",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2023/09/08/musk-says-he-limited-ukraines-starlink-to-prevent-attack-on-russia",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "an American billionaire made a unilateral military decision for a foreign allied power",
+          "date": "2023-09-08",
+          "role_evidence": "Established this framing as early as 2023 after the Crimea episode, providing the intellectual foundation for the 2026 recurrence of the same concern.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124267+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "b95052f5871e",
+          "name": "The420.in / Reuters (citing former officials)",
+          "url": "https://the420.in/us-administrations-elon-musk-starlink-restrictions/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Washington's mounting dependence on private technology companies to achieve core foreign policy and security goals",
+          "date": "2026-10-25",
+          "role_evidence": "Cited six former senior US officials to show this is a systemic pattern across administrations, broadening the framing beyond Musk to structural US policy.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124297+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The fact that the US government ultimately intervened and service was restored; the existence of contractual frameworks and legal mechanisms governing SpaceX's role",
+          "found_in_framing": "Accountability & Transparency; Trump as Ukraine's Defender",
+          "impact": "Reader may overstate the absence of democratic oversight and underestimate existing institutional checks; narrative of unchecked billionaire power is overstated",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791634+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Musk's stated principle against weaponizing civilian infrastructure and the terms-of-service clause that may have legitimately triggered the throttling",
+          "found_in_framing": "Ukraine's Terms-of-Service Violation",
+          "impact": "Reader sees Musk as purely mercurial and unaccountable rather than potentially acting on stated principles; cannot distinguish between arbitrary power and principled enforcement",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791642+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific military and human consequences of the disruption: drone mission failures, air defense degradation, soldier communications loss, and civilian deaths",
+          "found_in_framing": "Military & Human Cost",
+          "impact": "Reader focuses on systemic risk and governance structure rather than the concrete harm to Ukraine; may abstract away from the human stakes",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791650+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:20:51.124327+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "789e5cc4",
+      "name": "Trump as Ukraine's Defender",
+      "short_label": "Trump fixed it, Ukraine is safe",
+      "question": "Did Trump's intervention demonstrate his commitment to Ukraine's defense?",
+      "key_claim": "Trump personally stepped in to restore Ukraine's critical battlefield communications, proving he supports Ukraine despite critics' claims to the contrary.",
+      "description": "This framing credits Trump with resolving the crisis through direct action, casting the restoration as evidence of his pro-Ukraine stance and effective leadership.",
+      "emphasizes": "The positive outcome (service restored), Trump's role in calling Musk, and the speed of resolution.",
+      "downplays": "The 10-day disruption that preceded the call, Trump's evasiveness about his role, and Musk's own admission that he ordered the throttling.",
+      "tone": "celebratory",
+      "sample_headlines": [
+        "Trump says Musk restored Ukraine's Starlink access amid Russia war",
+        "Trump Asked Musk to Lift Restrictions on Starlink in Ukraine, Now He Is Working Faster"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "35dca914aa2c",
+          "name": "Donald Trump (White House press remarks)",
+          "url": "",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "The bottom line \u2014 he put it back",
+          "date": "2026-10-23",
+          "role_evidence": "Trump himself introduced this framing by publicly crediting Musk with restoration while declining to detail his own role, implicitly positioning himself as the fixer.",
+          "verified": false,
+          "verification_status": "unchecked",
+          "verification_notes": "",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124367+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5d2ddda85411",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/23/trump-says-musk-restored-ukraines-starlink-access-amid-russia-war",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump says Musk restored Ukraine's Starlink access amid Russia war",
+          "date": "2026-10-23",
+          "role_evidence": "Carried Trump's framing as the primary headline internationally, amplifying the 'restored' narrative to a global audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124396+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "46cc62fb8924",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/10/23/world/trump-musk-restored-ukraines-starshield-intl",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump asked Musk in a phone call in recent days to restore Ukraine's full access",
+          "date": "2026-10-25",
+          "role_evidence": "CNN confirmed via a source that Trump made the call, lending credibility to the 'Trump intervened and it worked' narrative once Ukraine's defense ministry confirmed restoration.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124419+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's evasiveness about his role, the 10-day gap before his intervention, and Musk's own admission that he ordered the throttling",
+          "found_in_framing": "Accountability & Transparency",
+          "impact": "Reader sees only positive intervention without understanding the delay or Trump's reluctance to acknowledge involvement; narrative of decisive support is incomplete",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791661+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The broader systemic issue of an unaccountable billionaire wielding power over allied military operations and the precedent this sets",
+          "found_in_framing": "Private Power Over Public War",
+          "impact": "Reader sees Trump's call as a solution rather than a band-aid on a deeper governance problem; may miss the structural vulnerability exposed",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791670+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Musk's stated rationale (terms-of-service violation and principle against weaponizing civilian infrastructure) and whether it has merit",
+          "found_in_framing": "Ukraine's Terms-of-Service Violation",
+          "impact": "Reader cannot assess whether Trump's intervention was necessary or whether Musk had legitimate grounds; may mischaracterize the dispute",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791677+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The military and human costs of the 10-day disruption: drone failures, disabled air defenses, soldier communications loss, and civilian casualties during the blackout",
+          "found_in_framing": "Military & Human Cost",
+          "impact": "Reader celebrates the resolution without understanding the harm that occurred during the delay; may underestimate the cost of Trump's slow response",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791685+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:20:51.124446+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "c9e56ff8",
+      "name": "Ukraine's Terms-of-Service Violation",
+      "short_label": "Ukraine broke the rules",
+      "question": "Did Ukraine's military misuse a civilian commercial service for offensive drone strikes, justifying SpaceX's restrictions?",
+      "key_claim": "Musk argues the throttling was a legitimate contractual enforcement action because Ukraine used civilian Starlink for offensive drone strikes in violation of its terms of service.",
+      "description": "This framing, advanced primarily by Musk himself, reframes the restriction as a rule-enforcement action rather than a political or punitive one, shifting blame to Ukraine.",
+      "emphasizes": "The terms-of-service clause prohibiting offensive military use, Musk's stated principle against weaponizing civilian infrastructure, and SpaceX's claimed neutrality.",
+      "downplays": "The lack of independent verification of the ToS violation claim, the timing (restrictions lifted only after Trump's call), and the military impact on Ukraine's defenses.",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Starlink fully restored as Musk says Ukraine violated terms of service",
+        "After SpaceX restores high-speed service, Musk claims Ukraine violated Starlink agreement"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "2074904bd35c",
+          "name": "Elon Musk (X / @elonmusk)",
+          "url": "https://x.com/elonmusk",
+          "carrier_type": "social",
+          "amplifier_role": "originator",
+          "excerpt": "Ukraine military violated Starlink terms of service and used it for offensive drone strikes to kill people",
+          "date": "2026-10-25",
+          "role_evidence": "Musk posted this claim directly on X after service was restored, making him the sole originator of the ToS-violation framing.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124471+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4b1cc9a1bf8c",
+          "name": "UPI",
+          "url": "https://www.upi.com/Top_News/World-News/2026/10/24/ukraine-starlink-access-restored-musk/5241792880471",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "SpaceX CEO Elon Musk said Ukraine violated Starlink's terms of service by using it to 'kill people'",
+          "date": "2026-10-24",
+          "role_evidence": "UPI was among the first wire services to carry Musk's ToS claim as a standalone news story, spreading it to downstream outlets.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124493+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "4fdc1cf5e1d4",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/24/ukraine-starlink-starshield-service-restored.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Musk claims Ukraine violated Starlink agreement",
+          "date": "2026-10-24",
+          "role_evidence": "CNBC's headline foregrounded Musk's ToS claim alongside the restoration news, giving the framing mainstream business-media reach.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124515+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The lack of independent verification of the ToS violation claim; the timing (restrictions lifted only after Trump's call, suggesting political rather than contractual motivation)",
+          "found_in_framing": "Accountability & Transparency",
+          "impact": "Reader accepts Musk's rationale at face value without scrutinizing whether the ToS claim is genuine or post-hoc justification; cannot assess credibility",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791694+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The broader systemic issue of an unaccountable billionaire unilaterally restricting military communications during wartime, and the precedent for other NATO allies",
+          "found_in_framing": "Private Power Over Public War",
+          "impact": "Reader focuses on contractual legitimacy rather than governance risk; may miss the structural vulnerability even if this particular incident was justified",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791711+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Trump's role in reversing the throttling and the political dynamics between Trump, Musk, and Zelensky that may have influenced the decision",
+          "found_in_framing": "Trump as Ukraine's Defender; Accountability & Transparency",
+          "impact": "Reader sees only contractual enforcement rather than political maneuvering; cannot assess whether the lifting of restrictions was principled or political",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791719+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The concrete military and human costs of the 10-day disruption: drone mission failures, disabled air defenses, soldier communications loss, and civilian casualties",
+          "found_in_framing": "Military & Human Cost",
+          "impact": "Reader focuses on contractual principles rather than the actual harm to Ukraine; may rationalize the disruption as justified without weighing the cost",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791726+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:20:51.124546+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "9b5cc998",
+      "name": "Military & Human Cost",
+      "short_label": "Drones crashed, lives at risk",
+      "question": "What was the concrete battlefield and human cost of the 10-day Starlink throttling on Ukraine's ability to defend itself?",
+      "key_claim": "The speed restrictions directly disabled Ukrainian attack and interceptor drones, left soldiers without communications, and exposed civilians to Russian missile and drone strikes for over a week.",
+      "description": "This framing centers the lived military and humanitarian consequences of the outage, treating the restoration as relief from a crisis rather than a political win.",
+      "emphasizes": "Drone mission failures, disrupted air defenses, Ukrainian soldier testimony, and civilian casualties during the blackout period.",
+      "downplays": "The political maneuvering between Trump, Musk, and Zelensky, and questions of who is to blame.",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
+        "Ukraine accuses SpaceX of throttling Starlink terminals as drones go dark"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "6a947c50c260",
+          "name": "CNBC (Annie Palmer)",
+          "url": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
+          "date": "2026-10-23",
+          "role_evidence": "CNBC's reporting explicitly framed the story around the rising military toll while restrictions persisted, centering human and battlefield cost.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124572+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e1c1ac611fe8",
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/14/ukraine-accuses-elon-musks-spacex-of-throttling-starlink-terminals",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Officials say ability to block Russian drones restricted",
+          "date": "2026-10-14",
+          "role_evidence": "Al Jazeera was among the first to frame the throttling in terms of Ukraine's degraded air-defense capability against Russian drone attacks.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124594+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "3ab8df9ec223",
+          "name": "Senators Warren, Shaheen & Duckworth (US Senate)",
+          "url": "https://www.warren.senate.gov/oversight/letters/senators-warren-shaheen-duckworth-seek-answers-from-department-of-defense-following-reported-elon-musk-starlink-intervention-in-ukraine",
+          "carrier_type": "institutional",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Musk's decision provided de facto protection to Russian military assets which continue to launch strikes on Ukrainian population centers",
+          "date": "2023-09-15",
+          "role_evidence": "Senators formally adopted the human-cost framing in an oversight letter to the DoD, institutionalizing it as a congressional concern as early as 2023.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20260210083807/https://www.warren.senate.gov/oversight/letters/senators-warren-shaheen-duckworth-seek-answers-from-department-of-defense-following-reported-elon-musk-starlink-intervention-in-ukraine",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:20:51.124616+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's evasiveness, Musk's contradictory statements, and the lack of clear accountability for who ordered the throttling and why",
+          "found_in_framing": "Accountability & Transparency",
+          "impact": "Reader understands the harm but not the responsibility; cannot assess whether the incident reflects negligence, malice, or principle",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791734+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The systemic governance issue: an unaccountable billionaire wielding power over allied military operations and the precedent this sets for NATO allies",
+          "found_in_framing": "Private Power Over Public War",
+          "impact": "Reader sees this as an isolated incident rather than a symptom of structural vulnerability; may not recognize the need for systemic reform",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791740+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Trump's role in restoring service and the speed of resolution once he intervened",
+          "found_in_framing": "Trump as Ukraine's Defender",
+          "impact": "Reader focuses only on harm without acknowledging that intervention occurred and service was restored; may overstate the duration of the crisis",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791747+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Musk's stated principle against weaponizing civilian infrastructure and the terms-of-service clause that may have legitimately triggered the throttling",
+          "found_in_framing": "Ukraine's Terms-of-Service Violation",
+          "impact": "Reader sees only malice or negligence without considering whether Musk had stated principles or contractual grounds; may mischaracterize his motivation",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-10-25T07:21:09.791757+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-10-25T07:20:51.124640+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the technical/engineering perspective on Starlink's actual operational constraints and whether access decisions were driven by capability limits vs. deliberate choice. Missing: the geopolitical angle from Russia's viewpoint or neutral security analysts questioning whether Starlink access affects conflict dynamics in ways that complicate simple 'good/bad' framings. Missing: the humanitarian access lens\u2014how Starlink enabled civilian communication, medical coordination, or aid delivery independent of military considerations. Missing: the precedent-setting frame about private infrastructure's role in future conflicts and whether this should be regulated, nationalized, or remain privatized.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Trump stated that Musk restored Starlink internet access to Ukraine during the ongoing conflict with Russia.",
+    "rated_outlets": 8,
+    "distribution": {
+      "left": 0,
+      "lean-left": 5,
+      "center": 3,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 62,
+      "center": 38,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 5,
+    "center": 3,
+    "right_of_center": 0,
+    "lean_index": -0.62,
+    "resolve_rate": 0.8,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 2,
+      "examples": [
+        {
+          "carrier": "The420.in / Reuters (citing former officials)",
+          "domain": "the420.in"
+        },
+        {
+          "carrier": "UPI",
+          "domain": "upi.com"
+        }
+      ]
+    },
+    "non_news_carriers": 3,
+    "matched": [
+      {
+        "outlet": "Washington Post",
+        "carrier": "Washington Post",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "NBCNews.com",
+        "carrier": "NBC News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Boston Globe",
+        "carrier": "Boston Globe (Opinion)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Wall Street Journal - News",
+        "carrier": "The Wall Street Journal",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "TechCrunch",
+        "carrier": "TechCrunch",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 12,
+        "political": 1,
+        "social": 1,
+        "institutional": 1,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 2,
+      "framings_with_vested": 2,
+      "n_framings": 5
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 5,
+    "n_actors": 13,
+    "framings": [
+      {
+        "framing_id": "55da1b3d",
+        "name": "Accountability & Transparency",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ec8d2067e04e",
+            "display": "NBC News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "b1bf8f5797ba",
+            "display": "The Wall Street Journal",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0cb9681f2dcd",
+            "display": "The Washington Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "d1338a74",
+        "name": "Private Power Over Public War",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "cd3462e00004",
+            "display": "Boston Globe",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "6b46a3e5a67e",
+            "display": "TechCrunch",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "a66725a13a7e",
+            "display": "The420.in",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "789e5cc4",
+        "name": "Trump as Ukraine's Defender",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "c9e56ff8",
+        "name": "Ukraine's Terms-of-Service Violation",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "6162be626da1",
+            "display": "Elon Musk",
+            "actor_type": "social",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d07b90a768a1",
+            "display": "UPI",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "9b5cc998",
+        "name": "Military & Human Cost",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "f22aa9ebeec2",
+            "display": "Senators Warren, Shaheen & Duckworth",
+            "actor_type": "organization",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Military & Human Cost",
+          "Trump as Ukraine's Defender"
+        ]
+      },
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Military & Human Cost",
+          "Ukraine's Terms-of-Service Violation"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Accountability & Transparency",
+        "b": "Private Power Over Public War",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Accountability & Transparency",
+        "b": "Trump as Ukraine's Defender",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Accountability & Transparency",
+        "b": "Ukraine's Terms-of-Service Violation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Accountability & Transparency",
+        "b": "Military & Human Cost",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Private Power Over Public War",
+        "b": "Trump as Ukraine's Defender",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Private Power Over Public War",
+        "b": "Ukraine's Terms-of-Service Violation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Private Power Over Public War",
+        "b": "Military & Human Cost",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump as Ukraine's Defender",
+        "b": "Ukraine's Terms-of-Service Violation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump as Ukraine's Defender",
+        "b": "Military & Human Cost",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Ukraine's Terms-of-Service Violation",
+        "b": "Military & Human Cost",
+        "shared": 1,
+        "jaccard": 0.2
+      }
+    ],
+    "by_actor_type": {
+      "news": 10,
+      "official": 1,
+      "social": 1,
+      "organization": 1
+    },
+    "connectivity": {
+      "bridge_ratio": 0.154,
+      "siloed_share": 0.846,
+      "mean_jaccard": 0.04
+    },
+    "structure_note": "2 of 13 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "circle_rollup": {},
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-10-25T07:21:12.057685+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
