@@ -1836,7 +1836,7 @@
           }
         }
       ],
-      "fingerprint_id": "",
+      "fingerprint_id": "df7fa8c0dad4",
       "provenance": {
         "origin": "ai",
         "status": "ai_generated",
@@ -1851,7 +1851,8 @@
         "revisions": [],
         "confirmation_count": 0,
         "dispute_count": 0,
-        "is_settled": false
+        "is_settled": false,
+        "join": "matcher-confirmed join (judge relation=same), 2026-10-25 backfill"
       }
     },
     {
@@ -4957,5 +4958,7 @@
       "as_of": "2019-10-18",
       "source_note": "Ratings are AllSides' — Tributary only aggregates them."
     }
-  }
+  },
+  "event_date_basis": "stated in description; within coverage horizon",
+  "coverage_as_of": "2026-05-28"
 }

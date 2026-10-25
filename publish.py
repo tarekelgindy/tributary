@@ -84,7 +84,15 @@ def publish(events_dir: Path, gallery_dir: Path, min_framings: int = 2) -> dict:
             skipped += 1
             continue
         aid = ev.get("analysis_id") or p.stem
-        shutil.copyfile(p, out_events / f"{aid}.json")
+        # Gallery is canonical (2026-10-25, the FOURTH stale-source instance:
+        # this unconditional copy clobbered the event-dates and framing-join
+        # sweeps' in-place gallery edits with the builder-local staging
+        # copies, caught the same hour by commit-stat review). Same rule
+        # traces got on 2026-09-30: a staging copy publishes a NEW event;
+        # it never overwrites the published record.
+        dest = out_events / f"{aid}.json"
+        if not dest.exists():
+            shutil.copyfile(p, dest)
 
     # Stage 2: the index is derived from gallery/events/ itself — the
     # published record — NEVER from the staging dir. CI fulfillment runs
