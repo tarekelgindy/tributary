@@ -1,7 +1,7 @@
 {
   "fingerprint_id": "d94607312091",
   "created_at": "2026-10-26T16:46:31.678932+00:00",
-  "last_updated": "2026-10-26T18:56:15.057552+00:00",
+  "last_updated": "2026-10-26T19:38:07.346885+00:00",
   "taxonomy_version": "0.1",
   "scope": {
     "language": "en",
@@ -38,8 +38,8 @@
     "causal_structure": "when a suspect uses a vehicle as a weapon against a law enforcement officer, the officer's lethal response meets the legal threshold for justified self-defense",
     "referent": {
       "description": "ICE agent Jonathan Ross's fatal shooting of Renee Nicole Good during a Minneapolis immigration enforcement operation",
-      "date": "2025-12-24",
-      "basis": "manual: live coverage dates the shooting to 2025-12-24; Jan-2026 reaction wave and Oct-2026 lawsuits follow"
+      "date": "2026-01-07",
+      "basis": "manual: Noem's Jan 7 presser calls it 'Wednesday's episode' (2026-01-07 is a Wednesday); Erickson posted 'the day of the shooting' Jan 7; Star Tribune Jan 8 'almost immediately after'"
     }
   },
   "rhetorical": {
@@ -60,7 +60,7 @@
     "lexical": {
       "lineage_type": "lexical",
       "status": "earliest-found",
-      "first_attested_date": "2025-12-24",
+      "first_attested_date": "2026-01-07",
       "first_attested_source": "https://www.nbcnews.com/news/us-news/live-blog/minnesota-ice-shooting-live-updates-rcna252852",
       "attestation_confidence": 0.78,
       "primary_origin_id": "10cdebe8c35b",
@@ -179,19 +179,19 @@
         },
         {
           "instance_id": "10cdebe8c35b",
-          "date": "2025-12-24",
+          "date": "2026-01-07",
           "source_url": "https://www.nbcnews.com/news/us-news/live-blog/minnesota-ice-shooting-live-updates-rcna252852",
           "source_title": "Immigration agent fatally shoots driver in Minneapolis — Live Updates",
           "author": "",
           "lexical_form_seen": "weaponized his vehicles / defensively fired their service weapons",
           "exact_quote": "The driver refused and attempted to flee, then weaponized his vehicles and began ramming his van into several ICE vehicles... Fearing for their lives and public safety, the officers defensively fired their service weapons.",
           "confidence": 0.78,
-          "evidence": "NBC News live blog from January 7, 2026 quotes DHS spokesperson Tricia McLaughlin's statement from the December 24, 2025 Maryland van shooting, using the exact phrases 'weaponized his vehicles' and 'defensively fired.' This is a secondhand citation of McLaughlin's original statement; the incident and statement date is December 24, 2025. [maintainer correction 2026-10-27: the generation conflated two distinct incidents — the referent of the REQUESTED claim is ICE agent Jonathan Ross's fatal shooting of Renee Nicole Good (Minneapolis, 2025-12-24); the implicit resolver had fused it with a July-2026 Houston shooting into a chimera referent, and the temporal bound then demoted the true incident's coverage.]",
+          "evidence": "NBC News live blog from January 7, 2026 quotes DHS spokesperson Tricia McLaughlin's statement from the December 24, 2025 Maryland van shooting, using the exact phrases 'weaponized his vehicles' and 'defensively fired.' This is a secondhand citation of McLaughlin's original statement; the incident and statement date is December 24, 2025. [maintainer correction 2026-10-27: the generation conflated two distinct incidents — the referent of the REQUESTED claim is ICE agent Jonathan Ross's fatal shooting of Renee Nicole Good (Minneapolis, 2025-12-24); the implicit resolver had fused it with a July-2026 Houston shooting into a chimera referent, and the temporal bound then demoted the true incident's coverage.] [maintainer correction 2026-10-27, caught by the requester: the entry was dated by its QUOTED content — a DHS statement from the 2025-12-24 Maryland van shooting relayed inside this live blog — not by the document itself, which is the Jan 7, 2026 NBC live blog on the Minneapolis shooting. Date set to the document's own publication; the quoted Maryland statement recorded as describes_period. Dates are the document's own — the standing rule since the 2026-07-05 audit.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "DHS spokesperson McLaughlin used the exact 'weaponized vehicle / defensively fired' framing in the Christmas Eve 2025 Maryland shooting, directly prefiguring the language used in the January 2026 Minneapolis case.",
           "cited_via": "NBC News live blog (January 7, 2026) quoting McLaughlin's December 24, 2025 statement",
           "date_precision": "day",
-          "describes_period": "",
+          "describes_period": "2025-12-24",
           "claim_relation": "",
           "verified": true,
           "verification_status": "verified",
@@ -626,29 +626,25 @@
       "adversarial_notes": "The proposed earliest date of 2025-03-15 is the date of the actual incident itself — the fatal shooting of Ruben Ray Martinez by an HSI/ICE agent on South Padre Island, Texas. The narrative framing ('ICE agent justified shooting in self-defense against weaponized vehicle') was first articulated by DHS in internal ICE incident reports and in statements to media, but critically, ICE's involvement was not publicly disclosed at the time of the shooting. According to multiple sources (Newsweek, CBS News, KENS5, Border Report), the ICE/HSI role in the shooting was not publicly confirmed until February 2026, nearly 11 months after the incident, following FOIA requests by the watchdog group American Oversight. This means the specific narrative framing — 'ICE agent fired in self-defense after vehicle was weaponized against agents' — could not have circulated publicly before February 2026, let alone before March 15, 2025. The incident itself occurred on 2025-03-15, making it impossible for any public attestation of this specific framing to predate that date. Searches were conducted for: (1) 'ICE agent self-defense shooting vehicle 2025,' (2) 'officer justified shooting vehicle attack self-defense before 2025,' and (3) 'ICE agent self-defense vehicle shooting March 2025 South Padre Island.' No pre-2025-03-15 instances of this specific narrative framing (ICE agent + self-defense + weaponized vehicle) were found. The general legal concept of 'officer justified in shooting at a vehicle used as a weapon' is well-established in law enforcement policy and case law predating 2025, but that is a legal doctrine, not the specific narrative framing at issue. The Wikipedia list of shootings by U.S. immigration agents in the second Trump administration confirms the March 15, 2025 date as the first such ICE-involved vehicle-weaponization shooting in this political era. No earlier ICE-specific instances of this framing were found in any archive, congressional record, or news database. Limitations: paywalled newspaper archives and undigitized local Texas news from March 2025 could not be fully searched, but given that ICE involvement was concealed until February 2026, no public framing could have predated the incident date.",
       "mutations": [],
       "timeline_stats": {
-        "active_from": "2025-12-24",
+        "active_from": "2026-01-07",
         "active_through": "2026-01-23",
-        "active_span_days": 30,
-        "years_active": 1,
-        "years_with_activity": 2,
+        "active_span_days": 16,
+        "years_active": 0,
+        "years_with_activity": 1,
         "instances_per_year": {
-          "2025": 1,
-          "2026": 10
+          "2026": 11
         },
         "instances_per_year_by_role": {
-          "2025": {
-            "early-amplifier": 1
-          },
           "2026": {
+            "early-amplifier": 3,
             "mass-amplifier": 1,
-            "early-amplifier": 2,
             "institutional-adoption": 1,
             "critic": 5,
             "mention": 1
           }
         },
         "peak_year": "2026",
-        "peak_year_count": 10,
+        "peak_year_count": 11,
         "originator_to_mass_amplifier_days": null,
         "originator_to_institutional_adoption_days": null,
         "originator_to_critic_days": null,

@@ -389,6 +389,32 @@ def foreign_candidate(client):
 
 
 @fixture
+def date_is_documents_own(client):
+    """Dates are the document's own (standing rule since the 2026-07-05 gum
+    audit; recorded live violation 2026-10-27: a Jan-7 NBC live blog was
+    dated 2025-12-24 because it QUOTED a DHS statement from the earlier
+    Maryland van shooting — the mis-date then corrupted a referent)."""
+    out = _call(client, EARLIEST_USE_SYSTEM, {
+        "claim_being_traced": "the agent was justified in shooting in self-defense against a weaponized vehicle",
+        "diagnostic_ngrams": ["self-defense", "weaponized vehicle"],
+        "candidates": [{
+            "source_title": "Immigration agent fatally shoots driver in Minneapolis — Live Updates",
+            "author": "NBC News", "date": "2026-01-07",
+            "source_url": "https://www.nbcnews.com/news/us-news/live-blog/minnesota-ice-shooting-live-updates-rcna252852",
+            "content_summary": ("An NBC News live blog PUBLISHED January 7, 2026 covering that day's "
+                                "Minneapolis ICE shooting. The blog relays an older DHS statement from "
+                                "the December 24, 2025 Maryland van shooting: 'The driver refused and "
+                                "attempted to flee, then weaponized his van... the agent acted in "
+                                "self-defense.'")}]})
+    ent = _entries(out)
+    if not ent:
+        return False, "entry missing entirely"
+    d = str(ent[0].get("date") or "")
+    return d.startswith("2026-01"), (f"date={d!r} (must be the document's own Jan 2026 "
+                                     f"publication, never the quoted Dec 2025 statement)")
+
+
+@fixture
 def lexical_keeps_referent(client):
     """L1 must not genericize a referent-specific claim (2026-10-26: 'ICE
     agent Jonathan Ross ... shooting Renee Nicole Good ... Minneapolis'
