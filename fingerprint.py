@@ -175,8 +175,14 @@ For each instance you find, report:
   date              ISO date of THE DOCUMENT ITSELF (its publication date).
                     NEVER the period a document talks about: a 2024 article
                     describing 1970s folklore is dated 2024, with the 1970s
-                    recorded in describes_period. If only the year is known,
-                    use YYYY-01-01 and set date_precision to "year".
+                    recorded in describes_period. The same rule for QUOTED
+                    STATEMENTS: a live blog published Jan 7 that quotes an
+                    official statement from a Dec 24 incident is dated
+                    Jan 7 — the quoted statement's date goes in
+                    describes_period, never in date (recorded violation
+                    2026-10-27: that exact mis-date corrupted a trace's
+                    referent). If only the year is known, use YYYY-01-01
+                    and set date_precision to "year".
   date_precision    "day", "month", "year", or "circa" — how precisely the
                     date is actually known
   describes_period  "" unless the document is a retrospective account of an
