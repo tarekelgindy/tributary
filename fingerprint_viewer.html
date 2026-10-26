@@ -1088,14 +1088,29 @@ function eventDeltaSvg(analysis) {
   }
   const blkH = 46 + factLines.reduce((a, [t]) => a + (t === 'G' ? 8 : t === 'L' ? 24 : 19), 0);
   const shown = frs.slice(0, 8);
-  const cells = shown.map(fr => ({
-    name: fr.name || '', question: fr.question || '',
-    names: (fr.carriers || []).map(c => c.name).filter(Boolean),
-  }));
+  // Per-box trace affordance (2026-10-26, Tarek's design: the button lives
+  // IN the framing's box — the box already shows the full name and
+  // question, so nothing is repeated below the graph and nothing truncates;
+  // the pill text is a fixed verb). Modes: embedded fp -> in-page render;
+  // published trace -> link; untraced with a traceable claim -> in-page
+  // request form. Rows grow one pill-height to guarantee the space.
+  const embeddedIds = new Set((analysis.fingerprints || []).map(f => f.fingerprint_id));
+  const cells = shown.map((fr, i) => {
+    const tc = ((fr.traceable_claim || fr.key_claim) || '').trim();
+    const pill = embeddedIds.has(fr.fingerprint_id) ? 'embed'
+      : fr.fingerprint_id ? 'link'
+      : tc.length > 20 ? 'req' : '';
+    return {
+      name: fr.name || '', question: fr.question || '',
+      names: (fr.carriers || []).map(c => c.name).filter(Boolean),
+      pill, fid: fr.fingerprint_id || '',
+    };
+  });
   const qW = cells.map(c => wrapc(c.question, 44));
   const nW = cells.map(c => wrapc(c.name, 46, 2));
   const cW = cells.map(c => wrapc(c.names.join(', '), 52, 2));
-  const rowH = cells.map((c, i) => Math.max((nW[i].length + qW[i].length) * 21 + cW[i].length * 17 + 30, 66));
+  const rowH = cells.map((c, i) => Math.max(
+    (nW[i].length + qW[i].length) * 21 + cW[i].length * 17 + 30 + (c.pill ? 36 : 0), 66));
   const totalQ = rowH.reduce((a, b) => a + b + 8, -8);
   const H = Math.max(blkH + 60, totalQ + 60, 440);
   const cy = H / 2, SX1 = 268, QX0 = 600, k = cells.length;
@@ -1131,6 +1146,22 @@ function eventDeltaSvg(analysis) {
       p.push(`<text x="${QX0}" y="${ty.toFixed(0)}" font-size="13" fill="#898781">${escapeHtml(ln)}</text>`);
       ty += 17;
     });
+    if (c.pill) {
+      const label = c.pill === 'req' ? 'trace origin →' : 'view trace ↗';
+      const w = c.pill === 'req' ? 112 : 100;
+      const px = 1048 - w, py = y + bh / 2 - 27;
+      const body = `<rect x="${px}" y="${py.toFixed(0)}" width="${w}" height="21" rx="10.5"
+          fill="${c.pill === 'req' ? '#fcfcfb' : '#1f7a68'}" stroke="#1f7a68" stroke-width="1.4"
+          ${c.pill === 'req' ? 'stroke-dasharray="4 3"' : ''}/>
+        <text x="${(px + w / 2).toFixed(0)}" y="${(py + 14.5).toFixed(0)}" text-anchor="middle"
+          font-size="11.5" font-weight="600" fill="${c.pill === 'req' ? '#1f6f5c' : '#ffffff'}">${label}</text>`;
+      if (c.pill === 'link')
+        p.push(`<a href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(c.fid)}.json">${body}</a>`);
+      else if (c.pill === 'embed')
+        p.push(`<g class="fr-trace clickable" data-framing-idx="${i}" style="cursor:pointer">${body}</g>`);
+      else
+        p.push(`<g class="fr-req" data-req-idx="${i}" style="cursor:pointer">${body}</g>`);
+    }
   });
   if (frs.length > 8) p.push(`<text x="${QX0}" y="${(H - 14).toFixed(0)}" font-size="13" fill="#898781">+ ${frs.length - 8} more framings below</text>`);
   p.push('</svg>');
@@ -1319,23 +1350,7 @@ function renderEventAnalysis(analysis) {
   const main = document.querySelector('main');
   main.innerHTML = `
     ${deltaHtml}
-    ${deltaHtml ? `
-    <div class="fr-chips" style="display:flex;flex-wrap:wrap;gap:0.45rem;margin:0.5rem 0 0.2rem;align-items:center;">
-      <span style="font-size:0.74rem;color:#888;text-transform:uppercase;letter-spacing:0.05em;">Trace a framing's origin:</span>
-      ${(analysis.framings || []).map((fr, idx) => {
-        const label = escapeHtml(truncate(fr.short_label || fr.name || `framing ${idx + 1}`, 28));
-        const chipStyle = 'font-size:0.8rem;padding:0.22rem 0.6rem;border-radius:999px;border:1px solid #cfd8d4;background:#f7f9f8;color:#1f6f5c;text-decoration:none;cursor:pointer;';
-        if (fpById[fr.fingerprint_id])
-          return `<span class="fr-trace clickable" data-framing-idx="${idx}" style="${chipStyle}">${label} ↗</span>`;
-        if (fr.fingerprint_id)
-          return `<a href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(fr.fingerprint_id)}.json" style="${chipStyle}">${label} ↗</a>`;
-        const tc = ((fr.traceable_claim || fr.key_claim) || '').trim();
-        if (tc.length > 20)
-          return `<a class="fr-req" data-req-idx="${idx}" href="index.html?ask=${encodeURIComponent(tc.slice(0, 300))}#up" style="${chipStyle}border-style:dashed;color:#555;">${label} →</a>`;
-        return '';
-      }).join('')}
-    </div>
-    <div id="fr-request-panel" hidden style="margin:0.5rem 0 0.8rem;padding:0.8rem 1rem;border:1px solid #d8e0dc;border-radius:10px;background:#fbfcfb;"></div>` : ''}
+    <div id="fr-request-panel" hidden style="margin:0.5rem 0 0.8rem;padding:0.8rem 1rem;border:1px solid #d8e0dc;border-radius:10px;background:#fbfcfb;"></div>
     ${glanceHtml}
     ${sharedHtml}
     ${renderCoalition(co)}
