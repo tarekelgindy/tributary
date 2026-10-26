@@ -498,13 +498,13 @@ cluster-facing anything (Phase 4 audit gates it).
       (first case: the 2026-10 Talarico burst — the carriers are documented); publish the
       method like everything else. Prerequisite build, small: actor canonicalization
       registry (one outlet, many spellings/domains), without which the graph is confetti.
-- [ ] **Actor canonicalization registry (target: early Nov 2026, after the Oct-26
+- [x] **Actor canonicalization registry (built 2026-10-25, after the Oct-26
       densification queues):** canonical actor id → names / domains / handles, resolved
       ~80% mechanically from the corpus's own carrier source_urls (domain as the cheap
       canonical key for outlets), hand-merged aliases for the rest; persons and
       pseudonymous accounts keyed by handle. Consumed by coalitions, the graph, and every
       later cluster stage.
-- [ ] **Graph v0 — descriptive co-carriage clusters, maintainer-only (target: early Nov
+- [x] **Graph v0 — descriptive co-carriage clusters, maintainer-only (built 2026-10-25
       2026, immediately after the registry):** build the bipartite actor↔narrative graph
       from the live corpus (edge = carried/amplified, with role, date, receipt), compute
       descriptive clusters from co-carriage alone. Pure computation, zero API cost,

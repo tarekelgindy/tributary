@@ -373,6 +373,35 @@ def test_deny_titles_are_NOT_auto_flipped():
     assert inst.amplifier_role == AmplifierRole.EARLY_AMPLIFIER
 
 
+# --- actor canonicalization + graph primitives (Batch D) ---------------------
+
+def test_actor_key_canonicalization():
+    from actors_registry import actor_key
+    assert actor_key("https://www.thegatewaypundit.com/2026/10/x") == ("thegatewaypundit.com", "outlet")
+    assert actor_key("https://english.bombaysamachar.com/a/b") == ("bombaysamachar.com", "outlet")
+    assert actor_key("https://luthmann.substack.com/p/x") == ("luthmann.substack.com", "outlet")
+    assert actor_key("https://x.com/RealAmVoice/status/123") == ("@realamvoice@x", "account")
+    assert actor_key("https://twitter.com/ME_Observer_/status/9") == ("@me_observer_@x", "account")
+    assert actor_key("https://t.me/s/sibinsider/4821") == ("@sibinsider@t", "account")
+    assert actor_key("https://x.com/i/trending/123")[0] is None        # platform page
+    assert actor_key("not a url") == (None, None)
+
+
+def test_co_carriage_clusters_and_critic_exclusion():
+    from graph import clusters_from_pairs, co_carriage
+    edges = [("a", "n1", "mention", "", "trace"), ("a", "n2", "mention", "", "trace"),
+             ("b", "n1", "mass-amplifier", "", "trace"), ("b", "n2", "mention", "", "trace"),
+             ("c", "n1", "critic", "", "trace"), ("c", "n2", "critic", "", "trace"),
+             ("d", "n3", "mention", "", "trace"),
+             ("e", "n1", "mention", "", "trace"), ("e", "n2", "mention", "", "trace")]
+    carried, pair_w = co_carriage(edges)
+    assert "c" not in carried                     # critics never co-carry
+    assert pair_w[("a", "b")] == 2 and pair_w[("a", "e")] == 2
+    cls = clusters_from_pairs(pair_w, min_shared=2)
+    assert any({"a", "b", "e"} <= set(c) for c in cls)
+    assert all("d" not in c for c in cls)         # singletons stay out
+
+
 if __name__ == "__main__":
     import traceback
     fns = [(n, f) for n, f in sorted(globals().items())
