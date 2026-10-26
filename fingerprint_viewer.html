@@ -1264,7 +1264,17 @@ function renderEventAnalysis(analysis) {
     else if (fr.fingerprint_id) trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
         href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(fr.fingerprint_id)}.json"
         title="published origin trace ${escapeHtml(fr.fingerprint_id)}">↗ This framing's claim has an origin trace →</a>`;
-    else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
+    else if ((fr.key_claim || '').trim().length > 20) {
+      // The reader's most natural question — "where did THIS framing's claim
+      // come from?" — routes to the homepage ask box prefilled with the key
+      // claim (2026-10-26, Tarek's call). The request pays and passes gates
+      // like any other; if the claim is already traced, match-and-serve
+      // answers for ~a cent, and the next weekly join sweep links the result
+      // back to this framing for every future reader.
+      trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
+        href="index.html?ask=${encodeURIComponent(fr.key_claim.trim().slice(0, 300))}#up"
+        title="request an origin trace of this framing's key claim">→ Request a trace of this claim</a>`;
+    } else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
     // Progressive disclosure: the compact card carries what a reader needs to
     // pick a framing (name, question, key claim, WHO is carrying it); the
     // rest waits behind the toggle. Names beat counts — who is pushing a

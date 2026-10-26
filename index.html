@@ -594,6 +594,21 @@
                     <div class="qtitle">Trace a claim to its origin</div>
                     <div class="qrow">
                         <input id="ask-up" type="search" placeholder="Paste a claim or phrase…" aria-label="Trace a claim to its origin" />
+                        <script>
+                        // Prefill from ?ask= (2026-10-26): event pages link
+                        // untraced framings here with the framing's key claim
+                        // prefilled — the reader edits or submits; the request
+                        // then flows through the normal budget, gates, and
+                        // match-and-serve exactly like any typed question.
+                        (function () {
+                            const ask = new URLSearchParams(location.search).get("ask");
+                            if (ask) {
+                                const el = document.getElementById("ask-up");
+                                el.value = ask.slice(0, 300);
+                                setTimeout(() => { el.scrollIntoView({ block: "center" }); el.focus(); }, 50);
+                            }
+                        })();
+                        </script>
                         <button id="askbtn-up">Trace origin</button>
                     </div>
                     <p class="qhint">e.g. “carrots improve your eyesight” — finds who said it first and who amplified it, with a dated receipt on every hop. Not traced yet? One click to request (~5–10 min).</p>
