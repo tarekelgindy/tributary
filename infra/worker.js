@@ -120,16 +120,26 @@ export default {
       rec.finished = new Date().toISOString();
       await env.STATUS.put("req:" + body.id, JSON.stringify(rec), { expirationTtl: 7 * 86400 });
       // Refunds: a request answered from the published corpus (served) or
-      // bounced by the claim-shape gate (rejected) cost ~a judge call, not
-      // a generation — give the GLOBAL budget slot back so junk input and
-      // duplicates can never exhaust the community's day. The per-IP count
-      // stays consumed either way: probing still spends the prober's own
-      // allowance. (If the UTC day rolled over mid-run, this refunds the
-      // new day — a once-a-day off-by-one we accept for counter simplicity.)
-      if ((body.served && body.state === "done") || body.state === "rejected") {
+      // bounced by a gate (rejected) cost ~a judge call, not a generation —
+      // give the GLOBAL budget slot back so junk input and duplicates can
+      // never exhaust the community's day. The per-IP count stays consumed
+      // for served/rejected: probing still spends the prober's own
+      // allowance. A FAILED run is different (2026-10-26, after a crashed
+      // deployment charged its requester for our bug): a system fault
+      // refunds BOTH counters — the community keeps its slot and the
+      // visitor keeps the right to retry. (If the UTC day rolled over
+      // mid-run, this refunds the new day — a once-a-day off-by-one we
+      // accept for counter simplicity.)
+      const refundGlobal = (body.served && body.state === "done")
+        || body.state === "rejected" || rec.state === "failed";
+      if (refundGlobal) {
         const dayKey = "count:" + new Date().toISOString().slice(0, 10);
         const n = parseInt((await env.STATUS.get(dayKey)) || "0", 10);
         if (n > 0) await env.STATUS.put(dayKey, String(n - 1), { expirationTtl: 2 * 86400 });
+      }
+      if (rec.state === "failed" && rec.ipKey) {
+        const m = parseInt((await env.STATUS.get(rec.ipKey)) || "0", 10);
+        if (m > 0) await env.STATUS.put(rec.ipKey, String(m - 1), { expirationTtl: 2 * 86400 });
       }
       return json({ ok: true }, 200, h);
     }
@@ -287,7 +297,7 @@ export default {
           id, subject, kind, created,
         }), { expirationTtl: 7 * 86400 });
         await env.STATUS.put("req:" + id, JSON.stringify({
-          state: "queued", subject, kind, created, position,
+          state: "queued", subject, kind, created, position, ipKey,
         }), { expirationTtl: 7 * 86400 });
         await env.STATUS.put(ipKey, String(ipCount + 1), { expirationTtl: 2 * 86400 });
         await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 1, why: "queued" });
@@ -314,6 +324,11 @@ export default {
       await env.STATUS.put(ipKey, String(ipCount + 1), { expirationTtl: 2 * 86400 });
       await env.STATUS.put("req:" + id, JSON.stringify({
         state: "running", subject, kind, created: new Date().toISOString(),
+        // ipKey retained so a SYSTEM failure can refund the visitor's own
+        // allowance too (2026-10-26: a crashed run charged its requester a
+        // per-IP slot for our bug). Day-scoped key, never the raw IP in any
+        // surface the status endpoint returns.
+        ipKey,
       }), { expirationTtl: 7 * 86400 });
       await logEvent(env, request, "request", { kind, q: subject.slice(0, 140), ok: 1 });
 
