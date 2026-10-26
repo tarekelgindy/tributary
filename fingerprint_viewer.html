@@ -1275,7 +1275,10 @@ function renderEventAnalysis(analysis) {
       // weekly join sweep links the result back here for future readers.
       const tc = ((fr.traceable_claim || fr.key_claim) || '').trim();
       if (tc.length > 20) {
-        trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
+        // data-req-idx opens the IN-PAGE requester (2026-10-26, Tarek's
+        // call: the jump to the homepage broke the moment of curiosity);
+        // the href stays as the no-JS / local-file fallback.
+        trace = `<a class="fr-trace clickable fr-req" data-req-idx="${idx}" style="text-decoration:none; display:block;"
           href="index.html?ask=${encodeURIComponent(tc.slice(0, 300))}#up"
           title="request an origin trace of this framing's claim">→ Request a trace of this claim</a>`;
       } else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
@@ -1316,6 +1319,23 @@ function renderEventAnalysis(analysis) {
   const main = document.querySelector('main');
   main.innerHTML = `
     ${deltaHtml}
+    ${deltaHtml ? `
+    <div class="fr-chips" style="display:flex;flex-wrap:wrap;gap:0.45rem;margin:0.5rem 0 0.2rem;align-items:center;">
+      <span style="font-size:0.74rem;color:#888;text-transform:uppercase;letter-spacing:0.05em;">Trace a framing's origin:</span>
+      ${(analysis.framings || []).map((fr, idx) => {
+        const label = escapeHtml(truncate(fr.short_label || fr.name || `framing ${idx + 1}`, 28));
+        const chipStyle = 'font-size:0.8rem;padding:0.22rem 0.6rem;border-radius:999px;border:1px solid #cfd8d4;background:#f7f9f8;color:#1f6f5c;text-decoration:none;cursor:pointer;';
+        if (fpById[fr.fingerprint_id])
+          return `<span class="fr-trace clickable" data-framing-idx="${idx}" style="${chipStyle}">${label} ↗</span>`;
+        if (fr.fingerprint_id)
+          return `<a href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(fr.fingerprint_id)}.json" style="${chipStyle}">${label} ↗</a>`;
+        const tc = ((fr.traceable_claim || fr.key_claim) || '').trim();
+        if (tc.length > 20)
+          return `<a class="fr-req" data-req-idx="${idx}" href="index.html?ask=${encodeURIComponent(tc.slice(0, 300))}#up" style="${chipStyle}border-style:dashed;color:#555;">${label} →</a>`;
+        return '';
+      }).join('')}
+    </div>
+    <div id="fr-request-panel" hidden style="margin:0.5rem 0 0.8rem;padding:0.8rem 1rem;border:1px solid #d8e0dc;border-radius:10px;background:#fbfcfb;"></div>` : ''}
     ${glanceHtml}
     ${sharedHtml}
     ${renderCoalition(co)}
@@ -1352,6 +1372,80 @@ function renderEventAnalysis(analysis) {
       }
     };
   });
+
+  // In-page trace requester (2026-10-26): the framing chips and card links
+  // open an editable, prefilled form right here instead of teleporting the
+  // reader to the homepage. Deliberately MINIMAL states (submitted/queued/
+  // running/done/rejected/error) — the homepage ask box stays the rich
+  // surface, and any fetch failure degrades to it (the links' own href).
+  // Server-side nothing changes: same worker endpoints, gates, budget,
+  // refunds as every other request.
+  {
+    const WORKER_URL = "https://tributary-requests.tarek-elgindy.workers.dev";
+    const panel = document.getElementById('fr-request-panel');
+    let pollTimer = null;
+    const open = (idx) => {
+      const fr = (analysis.framings || [])[idx];
+      if (!fr || !panel) return false;
+      const tc = ((fr.traceable_claim || fr.key_claim) || '').trim().slice(0, 300);
+      if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+      panel.hidden = false;
+      panel.innerHTML = `
+        <div style="font-size:0.78rem;color:#777;margin-bottom:0.3rem;">Request an origin trace of this framing's claim — edit the statement first if you like. Uses one slot of the shared daily budget; past the budget it queues.</div>
+        <textarea id="fr-req-text" rows="2" style="width:100%;box-sizing:border-box;font:inherit;font-size:0.9rem;padding:0.45rem 0.6rem;border:1px solid #ccd5d1;border-radius:8px;">${escapeHtml(tc)}</textarea>
+        <div style="margin-top:0.45rem;display:flex;gap:0.6rem;align-items:center;">
+          <button id="fr-req-go" style="font:inherit;font-size:0.85rem;padding:0.35rem 0.9rem;border-radius:8px;border:1px solid #1f7a68;background:#1f7a68;color:#fff;cursor:pointer;">Trace origin</button>
+          <span id="fr-req-status" style="font-size:0.85rem;color:#666;"></span>
+        </div>`;
+      panel.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      const status = panel.querySelector('#fr-req-status');
+      const fallback = `<a href="index.html?ask=${encodeURIComponent(tc)}#up">request it from the homepage →</a>`;
+      panel.querySelector('#fr-req-go').onclick = async () => {
+        const subject = (panel.querySelector('#fr-req-text').value || '').trim();
+        if (subject.length < 15) { status.textContent = 'Please phrase a full claim.'; return; }
+        panel.querySelector('#fr-req-go').disabled = true;
+        status.textContent = 'Submitting…';
+        let id;
+        try {
+          const r = await fetch(WORKER_URL + '/request', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ subject, kind: 'claim' }) });
+          const d = await r.json();
+          if (!r.ok) { status.innerHTML = `${escapeHtml(d.error || 'Could not start')} — ${fallback}`; return; }
+          id = d.id;
+          status.textContent = d.queued
+            ? `Today's free budget is spent — queued${d.position ? ' #' + d.position : ''}; runs as capacity frees up.`
+            : 'Generating… real web searches are happening (usually 5–10 minutes). Keep this tab open.';
+        } catch (e) {
+          status.innerHTML = `Couldn't reach the request service — ${fallback}`;
+          return;
+        }
+        pollTimer = setInterval(async () => {
+          try {
+            const s = await (await fetch(WORKER_URL + '/status?id=' + id)).json();
+            if (s.state === 'done' || s.state === 'served') {
+              clearInterval(pollTimer);
+              status.innerHTML = `Done — <a href="${escapeHtml(s.url || '#')}">view the trace →</a> (this framing links to it automatically after the next weekly sweep)`;
+            } else if (s.state === 'rejected') {
+              clearInterval(pollTimer);
+              status.textContent = `Not traced — ${s.reason || 'the gate declined this input'}`;
+            } else if (s.state === 'error' || s.state === 'failed') {
+              clearInterval(pollTimer);
+              status.innerHTML = `Generation failed on our side — it's logged. ${fallback}`;
+            } else if (s.state === 'queued') {
+              status.textContent = `Queued${s.position ? ' #' + s.position : ''} — runs as capacity frees up; you can close this tab and search for it later.`;
+            }
+          } catch (e) { /* transient poll failure: keep polling */ }
+        }, 10000);
+      };
+      return true;
+    };
+    main.querySelectorAll('.fr-req[data-req-idx]').forEach(el => {
+      el.addEventListener('click', ev => {
+        if (open(parseInt(el.dataset.reqIdx, 10))) ev.preventDefault();
+      });
+    });
+  }
 
   // Expand/collapse framing cards. The whole compact head is the click
   // target (it contains no links); expanded cards span the grid so the
