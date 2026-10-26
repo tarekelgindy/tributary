@@ -1399,6 +1399,11 @@ class NarrativeFraming:
                                      # the denser-visuals unlock; "" on old JSON)
     question: str = ""               # "Was this lawful? Who is responsible?"
     key_claim: str = ""              # the narrative statement (this is what gets fingerprinted)
+    traceable_claim: str = ""        # the QUESTION restated as a self-contained declarative
+                                     # sentence naming the event (2026-10-26, Tarek's spec:
+                                     # "Is the far-right using this attack to X?" -> "The
+                                     # Israeli far-right is using the <named attack> to X");
+                                     # what the trace-request affordance prefills. "" on old JSON
     description: str = ""
     emphasizes: str = ""
     downplays: str = ""
@@ -1421,6 +1426,7 @@ class NarrativeFraming:
             "short_label": self.short_label,
             "question": self.question,
             "key_claim": self.key_claim,
+            "traceable_claim": self.traceable_claim,
             "description": self.description,
             "emphasizes": self.emphasizes,
             "downplays": self.downplays,

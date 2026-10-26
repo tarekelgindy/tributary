@@ -1264,17 +1264,22 @@ function renderEventAnalysis(analysis) {
     else if (fr.fingerprint_id) trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
         href="fingerprint_viewer.html?load=gallery/traces/${encodeURIComponent(fr.fingerprint_id)}.json"
         title="published origin trace ${escapeHtml(fr.fingerprint_id)}">↗ This framing's claim has an origin trace →</a>`;
-    else if ((fr.key_claim || '').trim().length > 20) {
+    else {
       // The reader's most natural question — "where did THIS framing's claim
-      // come from?" — routes to the homepage ask box prefilled with the key
-      // claim (2026-10-26, Tarek's call). The request pays and passes gates
-      // like any other; if the claim is already traced, match-and-serve
-      // answers for ~a cent, and the next weekly join sweep links the result
-      // back to this framing for every future reader.
-      trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
-        href="index.html?ask=${encodeURIComponent(fr.key_claim.trim().slice(0, 300))}#up"
-        title="request an origin trace of this framing's key claim">→ Request a trace of this claim</a>`;
-    } else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
+      // come from?" — routes to the homepage ask box prefilled (2026-10-26,
+      // Tarek's call). Prefers traceable_claim: the framing's QUESTION
+      // restated as a self-contained declarative naming the event, so the
+      // request makes sense outside this page; legacy framings fall back to
+      // the key claim. The request pays and passes gates like any other;
+      // match-and-serve answers already-traced claims for ~a cent, and the
+      // weekly join sweep links the result back here for future readers.
+      const tc = ((fr.traceable_claim || fr.key_claim) || '').trim();
+      if (tc.length > 20) {
+        trace = `<a class="fr-trace clickable" style="text-decoration:none; display:block;"
+          href="index.html?ask=${encodeURIComponent(tc.slice(0, 300))}#up"
+          title="request an origin trace of this framing's claim">→ Request a trace of this claim</a>`;
+      } else trace = `<div class="fr-trace untraced">(origin not yet traced)</div>`;
+    }
     // Progressive disclosure: the compact card carries what a reader needs to
     // pick a framing (name, question, key claim, WHO is carrying it); the
     // rest waits behind the toggle. Names beat counts — who is pushing a
@@ -1326,7 +1331,11 @@ function renderEventAnalysis(analysis) {
     ['Model', (analysis.provenance || {}).model],
   ]);
 
-  main.querySelectorAll('.fr-trace.clickable').forEach(el => {
+  // Scope to the legacy embedded-fp elements ONLY ([data-framing-idx]):
+  // the request/trace ANCHORS share the class for styling but navigate
+  // natively — binding this handler to them threw on the missing embed
+  // before the browser followed the link (reader-reported, 2026-10-26).
+  main.querySelectorAll('.fr-trace.clickable[data-framing-idx]').forEach(el => {
     el.onclick = () => {
       // A failed trace-open must say so, not die silently in the console —
       // a reader who clicks and sees nothing reasonably concludes the
