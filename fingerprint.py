@@ -4250,11 +4250,37 @@ class EventAnalyzer:
         Best-effort — neither may fail the analysis."""
         return self._attach_coalition(self._attach_coverage_lean(analysis))
 
+    def _stamp_event_dates(self, analysis: EventAnalysis) -> EventAnalysis:
+        """Receipts-anchored dating AT GENERATION (2026-10-26: the first
+        fresh event after Batch B shipped dateless — the derive/bound logic
+        lived only in the backfill sweep). coverage_as_of = latest carrier
+        date; event_date keeps the model's answer only inside the coverage
+        horizon, else falls back to earliest coverage as the on-or-before
+        bound — bound_event_date's rule, shared with the sweep."""
+        from apply_event_dates import bound_event_date
+        cdates = []
+        for f in analysis.framings or []:
+            for c in getattr(f, "carriers", None) or []:
+                d = _parse_iso_date(getattr(c, "date", "") or "")
+                if d:
+                    cdates.append(d)
+        cdates.sort()
+        new, basis = bound_event_date(analysis.event_date or "", cdates)
+        analysis.event_date = new
+        if basis:
+            analysis.event_date_basis = basis
+        if cdates:
+            analysis.coverage_as_of = cdates[-1].isoformat()
+        return analysis
+
     def _attach_coverage_lean(self, analysis: EventAnalysis) -> EventAnalysis:
         """Cross-reference the carriers against the local source-bias DB and
         attach the coverage-lean distribution. Free (no API) and best-effort:
         if the bias data isn't present (gen_bias_data.py not run), it's quietly
-        skipped — the analysis is still complete without it."""
+        skipped — the analysis is still complete without it. Also the choke
+        point every assembled analysis passes through, so receipts-anchored
+        dating happens here first."""
+        analysis = self._stamp_event_dates(analysis)
         if not analysis.framings or self._bias_db is False:
             return analysis
         try:

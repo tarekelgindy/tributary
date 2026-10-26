@@ -1447,6 +1447,10 @@ class EventAnalysis:
     analysis_id: str = ""
     event: str = ""                  # neutral description of the event/statement
     event_date: str = ""
+    event_date_basis: str = ""       # how the date is known (receipts-anchored,
+                                     # 2026-10-26; "" on old JSON)
+    coverage_as_of: str = ""         # latest carrier date — the analysis is a
+                                     # snapshot of a coverage window, not a feed
     source_urls: list[str] = field(default_factory=list)
     created_at: str = ""
     shared_foundation: SharedFoundation = field(default_factory=SharedFoundation)
@@ -1490,6 +1494,8 @@ class EventAnalysis:
             "analysis_id": self.analysis_id,
             "event": self.event,
             "event_date": self.event_date,
+            "event_date_basis": self.event_date_basis,
+            "coverage_as_of": self.coverage_as_of,
             "source_urls": self.source_urls,
             "created_at": self.created_at,
             "shared_foundation": self.shared_foundation.to_dict(),
