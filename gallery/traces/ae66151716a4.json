@@ -923,14 +923,14 @@
         },
         {
           "instance_id": "f2e3312855b8",
-          "date": "2020-01-22",
+          "date": "2021-01-19",
           "source_url": "https://gnet-research.org/2021/01/19/anti-5g-infrastructure-sabotage-and-covid-19/",
           "source_title": "Anonymous online posts: '5G causes immune system to lower; Wuhan was first full 5G city'",
           "author": "@5gcoronavirus19 Twitter account and anonymous forum users",
           "lexical_form_seen": "5G suppresses immune system; Wuhan first 5G city; coronavirus caused by 5G",
           "exact_quote": "'5G causes our immune system to lower and we become more susceptible to viruses. Wuhan was the FIRST FULL 5G city!'",
           "confidence": 0.88,
-          "evidence": "The JMIR social network analysis identified a specific Twitter account (@5gcoronavirus19) as a key early node spreading the claim in its most explicit structural form: 5G suppresses immunity, enabling COVID-19. This account's framing — immune suppression as the causal mechanism — became the dominant version of the claim.",
+          "evidence": "The JMIR social network analysis identified a specific Twitter account (@5gcoronavirus19) as a key early node spreading the claim in its most explicit structural form: 5G suppresses immunity, enabling COVID-19. This account's framing — immune suppression as the causal mechanism — became the dominant version of the claim. [auto: date set from the URL's own date path (/2021/01/19/) — stored 2020-01-22; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "early-amplifier",
           "role_evidence": "Identified by JMIR peer-reviewed study as an influential early Twitter node that articulated the specific causal mechanism (immune suppression via 5G) driving the claim's spread.",
           "cited_via": "",
@@ -997,18 +997,18 @@
         },
         {
           "instance_id": "c0b3d11ad0fc",
-          "date": "2020-03-27",
+          "date": "2020-05-01",
           "source_url": "https://www.jmir.org/2020/5/e19458/",
           "source_title": "COVID-19 and the 5G Conspiracy Theory: Social Network Analysis of Twitter Data",
           "author": "Wasim Ahmed et al., Journal of Medical Internet Research",
           "lexical_form_seen": "5G linked to COVID-19 spread; 5G towers burning; misinformation driving real-world harm",
           "exact_quote": "A popular theory has linked 5G to the spread of COVID-19, leading to misinformation and the burning of 5G towers.",
           "confidence": 0.9,
-          "evidence": "First peer-reviewed academic study to analyze the 5G-COVID claim's spread on Twitter (March 27–April 4, 2020), documenting the claim's structure, network topology, and real-world consequences. Provides the earliest scholarly record of the claim in its fully-formed state.",
+          "evidence": "First peer-reviewed academic study to analyze the 5G-COVID claim's spread on Twitter (March 27–April 4, 2020), documenting the claim's structure, network topology, and real-world consequences. Provides the earliest scholarly record of the claim in its fully-formed state. [auto: date set from the URL's own date path (/2020/5/) — stored 2020-03-27; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "critic",
           "role_evidence": "First peer-reviewed study to document and analyze the 5G-COVID claim, establishing the academic record of its structure and spread.",
           "cited_via": "",
-          "date_precision": "day",
+          "date_precision": "month",
           "describes_period": "",
           "claim_relation": "asserts",
           "verified": true,
@@ -1524,30 +1524,30 @@
         "years_active": 2,
         "years_with_activity": 3,
         "instances_per_year": {
-          "2020": 12,
-          "2021": 4,
+          "2020": 11,
+          "2021": 5,
           "2022": 1
         },
         "instances_per_year_by_role": {
           "2020": {
             "originator": 1,
-            "early-amplifier": 1,
             "mass-amplifier": 2,
             "critic": 8
           },
           "2021": {
-            "critic": 4
+            "critic": 4,
+            "early-amplifier": 1
           },
           "2022": {
             "critic": 1
           }
         },
         "peak_year": "2020",
-        "peak_year_count": 12,
+        "peak_year_count": 11,
         "originator_to_mass_amplifier_days": 56,
         "originator_to_institutional_adoption_days": null,
-        "originator_to_critic_days": 65,
-        "days_since_latest": 1582
+        "originator_to_critic_days": 73,
+        "days_since_latest": 1613
       },
       "social_spread": [],
       "social_search_performed": false,

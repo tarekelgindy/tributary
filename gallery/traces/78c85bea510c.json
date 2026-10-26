@@ -719,8 +719,8 @@
           "exact_quote": "prohibit[ing] any one in office from receiving or holding any emoluments from foreign states",
           "confidence": 0.97,
           "evidence": "Edmund Randolph explicitly articulated the structural claim at the Virginia Ratifying Convention: foreign financial benefits flowing to officeholders create a mechanism for foreign states to corrupt and influence those officials' conduct. Hamilton in Federalist No. 22 warned republics 'afford too easy an inlet to foreign corruption.' The clause was designed as a structural prophylactic against exactly this leverage mechanism. [auto: predates this claim's referent (foreign investment into Trump family crypto ventures (World Liberty Financial, the $TRUMP coin), 2024-09-01) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
-          "amplifier_role": "originator",
-          "role_evidence": "The Framers are the evidenced first formal articulation of this structural claim in the American constitutional tradition, encoding it as supreme law.",
+          "amplifier_role": "mention",
+          "role_evidence": "The Framers are the evidenced first formal articulation of this structural claim in the American constitutional tradition, encoding it as supreme law. [Role adjusted from originator: related-context material cannot originate a claim it does not assert.]",
           "cited_via": "Wikipedia / LII / Constitution Annotated secondary sources",
           "date_precision": "year",
           "describes_period": "",
@@ -1525,18 +1525,18 @@
         },
         {
           "instance_id": "e4b62ee0d6ad",
-          "date": "2025-06-19",
+          "date": "2026-06-19",
           "source_url": "https://political.org/2026/06/19/trumps-financial-entanglements-and-ethics-controversies-a-comprehensive-overview/",
           "source_title": "Trump's Financial Entanglements and Ethics Controversies: A Comprehensive Overview",
           "author": "Political.org",
           "lexical_form_seen": "foreign government patronage at Trump-branded properties; foreign officials routing money to the president; creating potential leverage over American foreign policy; cryptocurrency ventures; unprecedented conflicts of interest",
           "exact_quote": "foreign officials who book rooms at Trump hotels...are effectively routing money to the president himself, creating potential leverage over American foreign policy",
           "confidence": 0.88,
-          "evidence": "This 2025–2026 overview synthesizes the structural claim across its newest vehicles — hotel revenues, cryptocurrency, meme coins — demonstrating the claim's continued vitality and adaptation to new financial instruments while maintaining the same causal structure: foreign capital in a political figure's business creates policy leverage.",
+          "evidence": "This 2025–2026 overview synthesizes the structural claim across its newest vehicles — hotel revenues, cryptocurrency, meme coins — demonstrating the claim's continued vitality and adaptation to new financial instruments while maintaining the same causal structure: foreign capital in a political figure's business creates policy leverage. [auto: date set from the URL's own date path (/2026/06/19/) — stored 2025-06-19; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "mass-amplifier",
           "role_evidence": "Popular political media synthesis of the structural claim across new financial instruments represents the claim's current-wave mass amplification in the second Trump term.",
           "cited_via": "",
-          "date_precision": "month",
+          "date_precision": "day",
           "describes_period": "",
           "claim_relation": "asserts",
           "verified": true,
@@ -1562,20 +1562,20 @@
         },
         {
           "instance_id": "4cf66c0c8125",
-          "date": "2026-02-26",
+          "date": "2017-10-01",
           "source_url": "https://carnegieendowment.org/posts/2017/10/do-trumps-foreign-business-entanglements-threaten-our-democracy?lang=en",
           "source_title": "Carnegie Endowment ongoing coverage: Trump foreign business entanglements and democracy",
           "author": "Carnegie Endowment for International Peace",
           "lexical_form_seen": "Trump Organization operations; foreign entanglement; public officials swayed only by interests of the citizen; financial grip distorting foreign policy",
           "exact_quote": "Public officials should be swayed only by the interests of the citizen",
           "confidence": 0.85,
-          "evidence": "Carnegie Endowment's continued institutional coverage through 2026 demonstrates the structural claim's persistence into the second Trump term, with the same causal logic — foreign financial entanglement in a president's business ventures creates policy leverage — now applied to an expanded set of financial instruments and foreign relationships.",
+          "evidence": "Carnegie Endowment's continued institutional coverage through 2026 demonstrates the structural claim's persistence into the second Trump term, with the same causal logic — foreign financial entanglement in a president's business ventures creates policy leverage — now applied to an expanded set of financial instruments and foreign relationships. [auto: date set from the URL's own date path (/2017/10/) — stored 2026-02-26; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.] [auto: predates this claim's referent (foreign investment into Trump family crypto ventures (World Liberty Financial, the $TRUMP coin), 2024-09-01) — nothing can assert a claim about an event before the event exists; filed as related-context. Deterministic referent-bound pass, 2026-10-14.]",
           "amplifier_role": "institutional-adoption",
           "role_evidence": "Carnegie Endowment's sustained institutional engagement with the structural claim through 2026 represents its consolidation as a mainstream foreign policy and democracy-studies concern.",
           "cited_via": "",
           "date_precision": "month",
           "describes_period": "",
-          "claim_relation": "asserts",
+          "claim_relation": "related-context",
           "verified": true,
           "verification_status": "url-ok",
           "verification_notes": "URL reachable (quote not checked)",
@@ -1603,29 +1603,29 @@
       "mutations": [],
       "timeline_stats": {
         "active_from": "2025-02-21",
-        "active_through": "2026-02-26",
-        "active_span_days": 370,
+        "active_through": "2026-06-19",
+        "active_span_days": 483,
         "years_active": 1,
         "years_with_activity": 2,
         "instances_per_year": {
-          "2025": 3,
+          "2025": 2,
           "2026": 1
         },
         "instances_per_year_by_role": {
           "2025": {
             "institutional-adoption": 1,
-            "mass-amplifier": 2
+            "mass-amplifier": 1
           },
           "2026": {
-            "institutional-adoption": 1
+            "mass-amplifier": 1
           }
         },
         "peak_year": "2025",
-        "peak_year_count": 3,
+        "peak_year_count": 2,
         "originator_to_mass_amplifier_days": null,
         "originator_to_institutional_adoption_days": null,
         "originator_to_critic_days": null,
-        "days_since_latest": 231
+        "days_since_latest": 129
       },
       "social_spread": [],
       "social_search_performed": false,

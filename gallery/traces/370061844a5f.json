@@ -86,8 +86,8 @@
           "exact_quote": "Accumulation of capital is…multiplication of the proletariat.",
           "confidence": 0.92,
           "evidence": "Marx's core argument that capital ownership generates surplus value that is reinvested, compounding the wealth of owners while workers receive only wages, is the structural ancestor of the claim that existing capital generates returns so large that the ultra-rich accumulate wealth exponentially. The mechanism (capital ownership → surplus extraction → reinvestment → further concentration) is identical to the modern claim, in different vocabulary. [Correction 2026-10-11 (maintainer): demoted to related-context - this source asserts the broad doctrine of wealth-concentration critique, not a claim of this quantitative form (specific top-wealth gain figures). An instance of a tradition is not the tradition-founding doctrine; see CORRECTIONS.md.]",
-          "amplifier_role": "originator",
-          "role_evidence": "Marx is the first systematic theorist within living intellectual tradition to argue that capital ownership itself—not labor—drives wealth accumulation for the owning class, compounding over time into extreme concentration.",
+          "amplifier_role": "mention",
+          "role_evidence": "Marx is the first systematic theorist within living intellectual tradition to argue that capital ownership itself—not labor—drives wealth accumulation for the owning class, compounding over time into extreme concentration. [Role adjusted from originator: related-context material cannot originate a claim it does not assert.]",
           "cited_via": "multiple secondary academic sources including Levy Institute WP 729 and Economic Affairs 2025",
           "date_precision": "year",
           "describes_period": "",
@@ -374,18 +374,18 @@
         },
         {
           "instance_id": "124518514870",
-          "date": "2006-01-01",
+          "date": "2006-06-25",
           "source_url": "https://www.nytimes.com/2006/06/25/business/yourmoney/25gilded.html",
           "source_title": "The Gilded Wage Gap (New York Times series on income inequality)",
           "author": "David Cay Johnston",
           "lexical_form_seen": "the rich getting richer, investment income, capital gains, the super-rich pulling away",
           "exact_quote": "The very richest Americans are pulling away from the rest of the country at a pace that has no precedent.",
           "confidence": 0.8,
-          "evidence": "Johnston's Pulitzer-winning journalism at the NYT translated the academic findings of Piketty/Saez into mass-audience language, arguing that investment income and capital gains were the engine of the super-rich's accelerating wealth accumulation—the same structural claim in journalistic vocabulary.",
+          "evidence": "Johnston's Pulitzer-winning journalism at the NYT translated the academic findings of Piketty/Saez into mass-audience language, arguing that investment income and capital gains were the engine of the super-rich's accelerating wealth accumulation—the same structural claim in journalistic vocabulary. [auto: date set from the URL's own date path (/2006/06/25/) — stored 2006-01-01; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "mass-amplifier",
           "role_evidence": "Johnston's widely-read reporting popularized the structural claim about capital-driven billionaire wealth accumulation for a broad US newspaper audience in the mid-2000s.",
           "cited_via": "",
-          "date_precision": "year",
+          "date_precision": "day",
           "describes_period": "",
           "claim_relation": "asserts",
           "verified": false,
@@ -929,14 +929,14 @@
         },
         {
           "instance_id": "648ea0267503",
-          "date": "2022-01-17",
+          "date": "2024-01-15",
           "source_url": "https://www.aljazeera.com/news/2024/1/15/why-the-worlds-five-richest-people-bag-more-wealth-as-poverty-gap-widens",
           "source_title": "Survival of the Richest (Oxfam Davos Report 2023)",
           "author": "Oxfam International",
           "lexical_form_seen": "five richest men doubled wealth, billionaire wealth surge, capital returns, poverty unchanged",
           "exact_quote": "The world's billionaires went from holding a combined $6 trillion in 2012 to about $14 trillion in 2022.",
           "confidence": 0.9,
-          "evidence": "Oxfam's 2023 report documented that the five richest men doubled their wealth since 2020 while the poorest 60% lost wealth, directly quantifying the structural claim that existing capital generates returns so large that the ultra-rich accumulate at an exponential rate.",
+          "evidence": "Oxfam's 2023 report documented that the five richest men doubled their wealth since 2020 while the poorest 60% lost wealth, directly quantifying the structural claim that existing capital generates returns so large that the ultra-rich accumulate at an exponential rate. [auto: date set from the URL's own date path (/2024/1/15/) — stored 2022-01-17; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "mass-amplifier",
           "role_evidence": "Generated global media coverage and became a primary reference for the structural claim in the 2022–2024 period.",
           "cited_via": "",
@@ -1025,7 +1025,7 @@
           "2019": 2,
           "2020": 1,
           "2021": 1,
-          "2022": 1,
+          "2024": 1,
           "2025": 1
         },
         "instances_per_year_by_role": {
@@ -1071,14 +1071,19 @@
           "2021": {
             "early-amplifier": 1
           },
-          "2022": {
+          "2024": {
             "mass-amplifier": 1
           },
           "2025": {
             "mass-amplifier": 1
           }
         },
-        "peak_year": "2015"
+        "peak_year": "2015",
+        "peak_year_count": 3,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
+        "days_since_latest": 644
       },
       "social_spread": [],
       "social_search_performed": false,

@@ -1516,7 +1516,7 @@
       "status": "earliest-found",
       "first_attested_date": "1904",
       "first_attested_source": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/night-vision",
-      "attestation_confidence": 0.88,
+      "attestation_confidence": 0.87,
       "primary_origin_id": "f0d87c2a562f",
       "parallel_origin_ids": [],
       "attestation_log": [
@@ -2410,18 +2410,18 @@
         },
         {
           "instance_id": "9928a5a7b899",
-          "date": "2025",
+          "date": "2025-04-01",
           "source_url": "https://healthcare.utah.edu/healthfeed/2025/04/carrots-eye-health-myth-or-fact",
           "source_title": "Carrots & Eye Health: Myth or Fact? (University of Utah Health)",
           "author": "University of Utah Health (institutional health communication)",
           "lexical_form_seen": "carrots are a super source of beta-carotene; beta-carotene supports eye health; dietary carotenoids from carrots and other vegetables protect vision",
           "exact_quote": "Carrots are a super source of beta-carotene—and that's a start. But it takes a whole lot more to protect your irreplaceable vision.",
           "confidence": 0.85,
-          "evidence": "University of Utah Health's 2025 institutional communication affirms the structural claim—carrots deliver beta-carotene that supports eye health—while contextualizing it within a broader dietary framework, representing current institutional health communication on the topic.",
+          "evidence": "University of Utah Health's 2025 institutional communication affirms the structural claim—carrots deliver beta-carotene that supports eye health—while contextualizing it within a broader dietary framework, representing current institutional health communication on the topic. [auto: date set from the URL's own date path (/2025/04/) — stored 2025; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
           "amplifier_role": "critic",
           "role_evidence": "Represents current academic medical center institutional adoption of the dietary carotenoid–eye health claim in patient-facing health communication. [Role adjusted from institutional-adoption (corpus sweep 2026-07-05): the title announces an examining function.]",
           "cited_via": "",
-          "date_precision": "year",
+          "date_precision": "month",
           "describes_period": "",
           "claim_relation": "asserts",
           "verified": true,
@@ -2595,7 +2595,27 @@
           }
         }
       ],
-      "timeline_stats": {},
+      "timeline_stats": {
+        "active_from": "2025-04-01",
+        "active_through": "2025-04-01",
+        "active_span_days": 0,
+        "years_active": 0,
+        "years_with_activity": 1,
+        "instances_per_year": {
+          "2025": 1
+        },
+        "instances_per_year_by_role": {
+          "2025": {
+            "critic": 1
+          }
+        },
+        "peak_year": "2025",
+        "peak_year_count": 1,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
+        "days_since_latest": 573
+      },
       "social_spread": [],
       "social_search_performed": false,
       "social_search_notes": "",

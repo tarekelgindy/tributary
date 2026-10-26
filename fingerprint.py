@@ -1582,6 +1582,78 @@ def _embed_recovery_pass(instances: list, fetch=_default_embed_fetch) -> int:
     return recovered
 
 
+_URL_DATE_RE = re.compile(r"/((?:19|20)\d{2})/(\d{1,2})(?:/(\d{1,2}))?/")
+# CMS hosting paths date the UPLOAD, not the document (first dry run,
+# 2026-10-27: the 1990 IPCC report lives under ipcc.ch/.../uploads/2018/05/).
+_UPLOAD_PATH_RE = re.compile(r"/(?:wp-content/)?uploads?/|/downloads?/|/site/assets/",
+                             re.IGNORECASE)
+
+
+def _url_date_sanity_pass(instances: list) -> int:
+    """News URLs carry the publisher's own date path (/2026/01/08/) — a
+    receipt by arithmetic, the non-X sibling of the snowflake pass
+    (2026-10-27: a Jan-7 live blog dated by a Dec-24 statement it QUOTED
+    sailed into a trace's anchor; URL-path dates are the cross-check that
+    class can't fool). Corrections are deliberately ASYMMETRIC, from the
+    first dry run's false positives:
+      - stored LATER than the path (+3d slack): always corrected — a page
+        cannot postdate itself (caught a '2026' entry that is a 2017
+        Carnegie piece);
+      - stored EARLIER by up to 2 years: corrected — the typo/refinement
+        class (CNN 2019->2020 same month/day; month fills);
+      - stored EARLIER by MORE than 2 years: LEFT ALONE — that is the
+        documented-via convention at work (an 1818 pamphlet dated 1818
+        while linking the 2017 article documenting it), which this pass
+        must never bulldoze;
+      - upload/download/assets paths: no opinion (hosting date is not the
+        document's date — the 1990 IPCC report lives under uploads/2018/05).
+    Year/month-only paths correct only same-window disagreement (45d)."""
+    fixed = 0
+    for inst in instances:
+        if _UPLOAD_PATH_RE.search(inst.source_url or ""):
+            continue
+        m = _URL_DATE_RE.search(inst.source_url or "")
+        if not m:
+            continue
+        y, mo = int(m.group(1)), int(m.group(2))
+        if not 1 <= mo <= 12:
+            continue
+        ud = None
+        if m.group(3):
+            try:
+                ud = date(y, mo, int(m.group(3)))
+            except ValueError:
+                ud = None
+        try:
+            sd = date.fromisoformat(str(inst.date or "")[:10])
+        except ValueError:
+            sd = None
+        old = inst.date
+        if ud is not None:
+            if sd is not None:
+                delta = (sd - ud).days
+                if -3 <= delta <= 3:
+                    continue                 # within slack
+                if delta < -730:
+                    continue                 # documented-via territory: hands off
+            inst.date = ud.isoformat()
+            inst.date_precision = "day"
+        else:
+            mid = date(y, mo, 15)
+            if sd is not None:
+                delta = (sd - mid).days
+                if abs(delta) <= 45 or delta < -730:
+                    continue
+            inst.date = date(y, mo, 1).isoformat()
+            inst.date_precision = "month"
+        inst.evidence = (str(inst.evidence or "")).rstrip() + (
+            f" [auto: date set from the URL's own date path ({m.group(0)}) —"
+            f" stored {old or 'none'}; the publisher's path outranks a"
+            f" model-reported date. URL-date pass, 2026-10-27.]")
+        fixed += 1
+    return fixed
+
+
 def _single_originator_pass(instances: list) -> int:
     """At most ONE evidenced originator per lineage. The prompts state it;
     live runs drift (the Talarico calibration crowned three near-simultaneous
@@ -3007,6 +3079,10 @@ class FingerprintGenerator:
         if n_rec:
             _log_progress(f"Embed recovery: {n_rec} placeholder X URL(s) "
                           f"recovered from citing articles")
+        n_ud = _url_date_sanity_pass(instances)
+        if n_ud:
+            _log_progress(f"URL-date pass: {n_ud} date(s) set from the publisher's own path")
+            instances.sort(key=lambda x: x.date or "9999")
         if _snowflake_sanity_pass(instances):
             instances.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(instances)
@@ -3089,6 +3165,8 @@ class FingerprintGenerator:
         # Sanity passes + asserts-anchored origin (see generate_lineage_lexical)
         if await asyncio.to_thread(_embed_recovery_pass, ancestors):
             _log_progress("Embed recovery: placeholder X URL(s) recovered (conceptual)")
+        if _url_date_sanity_pass(ancestors):
+            ancestors.sort(key=lambda x: x.date or '9999')
         if _snowflake_sanity_pass(ancestors):
             ancestors.sort(key=lambda a: a.date or "9999")
         _role_sanity_pass(ancestors)

@@ -327,6 +327,58 @@ def test_embed_recovery_ignores_real_urls():
     assert not calls  # a decoding id is never a placeholder; no fetch happens
 
 
+# --- URL-date sanity (the non-X sibling of snowflake, 2026-10-27) ------------
+
+def test_url_date_pass_corrects_and_tolerates():
+    from fingerprint import _url_date_sanity_pass
+    # the live case's shape: stored date far from the URL's own path date
+    wrong = _inst("2025-12-24", iid="a")
+    wrong.source_url = "https://www.ksat.com/news/politics/2026/01/08/minneapolis-shooting-by-ice-agent/"
+    # within tolerance (timezone/update slack): untouched
+    ok = _inst("2026-01-07", iid="b")
+    ok.source_url = "https://www.ksat.com/news/politics/2026/01/08/minneapolis-shooting/"
+    # month-only path, month agrees: untouched
+    mon = _inst("2026-01-20", iid="c")
+    mon.source_url = "https://example.com/2026/01/some-piece/"
+    # no date path: no opinion
+    plain = _inst("1999-01-01", iid="d")
+    plain.source_url = "https://example.com/article/12345"
+    assert _url_date_sanity_pass([wrong, ok, mon, plain]) == 1
+    assert wrong.date == "2026-01-08" and "URL-date pass" in wrong.evidence
+    assert ok.date == "2026-01-07" and ok.evidence == "orig"
+    assert mon.date == "2026-01-20" and plain.date == "1999-01-01"
+
+
+def test_url_date_pass_month_only_disagreement():
+    from fingerprint import _url_date_sanity_pass
+    far = _inst("2026-03-01", iid="a")       # 4 months off a month-only path
+    far.source_url = "https://example.com/2026/07/analysis/"
+    bad = _inst("2026-01-01", iid="b")       # month 13 path is not a date
+    bad.source_url = "https://example.com/2026/13/rubbish/"
+    assert _url_date_sanity_pass([far, bad]) == 1
+    assert far.date == "2026-07-01" and far.date_precision == "month"
+    assert bad.date == "2026-01-01"
+
+
+def test_url_date_pass_asymmetry_and_exclusions():
+    from fingerprint import _url_date_sanity_pass
+    # stored LATER than path: always corrected (a page cannot postdate itself)
+    later = _inst("2026-02-26", iid="a")
+    later.source_url = "https://carnegieendowment.org/posts/2017/10/01/trump-entanglements/"
+    # documented-via convention: stored years EARLIER than the documenting
+    # page's path — hands off (the 1818-pamphlet-in-a-2017-article case)
+    doc_via = _inst("1818-01-01", iid="b")
+    doc_via.source_url = "https://skepticalinquirer.org/2017/09/bigfoot-as-big-myth/"
+    # CMS upload paths are hosting dates, not document dates — no opinion
+    ipcc = _inst("1990-01-01", iid="c")
+    ipcc.source_url = "https://www.ipcc.ch/site/assets/uploads/2018/05/ipcc_far_full_report.pdf/"
+    army = _inst("2021-01-19", iid="d")
+    army.source_url = "https://api.army.mil/e2/c/downloads/2021/03/15/arctic-strategy.pdf/"
+    assert _url_date_sanity_pass([later, doc_via, ipcc, army]) == 1
+    assert later.date == "2017-10-01"
+    assert doc_via.date == "1818-01-01" and ipcc.date == "1990-01-01" and army.date == "2021-01-19"
+
+
 # --- one crown per lineage ----------------------------------------------------
 
 def test_single_originator_earliest_keeps_crown():

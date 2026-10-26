@@ -24,7 +24,8 @@ from types import SimpleNamespace as NS
 
 from apply_referent_bound import _stats_dict
 from fingerprint import (_NEG_TOKENS, _embed_recovery_pass, _role_sanity_pass,
-                         _single_originator_pass, _snowflake_sanity_pass)
+                         _single_originator_pass, _snowflake_sanity_pass,
+                         _url_date_sanity_pass)
 from models import AmplifierRole
 
 ROOT = Path(__file__).resolve().parent
@@ -73,6 +74,7 @@ def sweep_trace(fp: dict, details: list) -> dict:
                       AmplifierRole(a.get("amplifier_role") or "unknown")})
                 for a in log]
         rec = _embed_recovery_pass(objs)
+        udate = _url_date_sanity_pass(objs)
         snow = _snowflake_sanity_pass(objs)
         pre = [o.amplifier_role for o in objs]
         if not is_rebuttal:
@@ -89,7 +91,7 @@ def sweep_trace(fp: dict, details: list) -> dict:
         regex_crit = sum(1 for before, o in zip(pre, objs)
                          if o.amplifier_role == AmplifierRole.CRITIC != before)
         prec = _precision_backfill(log)
-        changed = rec or snow or crowns or regex_crit
+        changed = rec or udate or snow or crowns or regex_crit
         if changed:
             # anchors follow their entries (url/date may have moved)
             asserting = sorted(
@@ -104,7 +106,7 @@ def sweep_trace(fp: dict, details: list) -> dict:
                 g["attestation_confidence"] = float(first.get("confidence") or 0)
             g["timeline_stats"] = _stats_dict(g)
         if changed or prec:
-            out[layer] = {"recovered": rec, "snowflake": snow,
+            out[layer] = {"recovered": rec, "url_date": udate, "snowflake": snow,
                           "crowns_demoted": crowns, "regex_critic": regex_crit,
                           "precision_marked": prec}
     return out
