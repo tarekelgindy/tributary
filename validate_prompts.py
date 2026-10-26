@@ -389,6 +389,32 @@ def foreign_candidate(client):
 
 
 @fixture
+def framing_restatement(client):
+    """traceable_claim spec (2026-10-26, Tarek's design): the framing's
+    question restated as a self-contained declarative naming the event's
+    referent — never a question, no unresolved pronouns."""
+    from apply_traceable_claims import SYSTEM as TC_SYSTEM
+    resp = client.messages.create(
+        model=HAIKU, max_tokens=200, temperature=0,
+        system=[{"type": "text", "text": TC_SYSTEM}],
+        messages=[{"role": "user", "content": json.dumps({
+            "event": "A gunman opened fire at a bus stop in central Israel, "
+                     "killing three people, before being shot by police.",
+            "question": "Is the Israeli far-right using this attack to advance "
+                        "a pre-existing political agenda, including the death penalty law?",
+            "key_claim": "Right-wing ministers immediately renewed demands for the "
+                         "death penalty law after the attack."}, ensure_ascii=False)}])
+    out = _parse_json_safe("".join(b.text for b in resp.content
+                                   if getattr(b, "type", "") == "text")) or {}
+    tc = str(out.get("traceable_claim") or "")
+    ok = (bool(tc) and not tc.rstrip().endswith("?")
+          and "this attack" not in tc.lower()
+          and ("israel" in tc.lower())
+          and ("far-right" in tc.lower() or "far right" in tc.lower()))
+    return ok, f"tc={tc[:90]!r}"
+
+
+@fixture
 def ministry_control(client):
     """Control: evidenced coining still earns originator on the lexical pass
     (the carrots card's hero must survive the batch)."""
@@ -571,6 +597,17 @@ def policy_allows_public_figure(client):
     """Control: an uncomfortable claim about a public figure (a US Senate
     candidate) stays traceable — discomfort is not a refusal criterion."""
     j = _call_policy(client, "James Talarico had a mental health crisis")
+    return not j.get("refuse"), f"refuse={j.get('refuse')} ({j.get('why', '')!r})"
+
+
+@fixture
+def policy_allows_public_incident(client):
+    """The recorded wrong refusal (2026-10-26, caught by Tarek as a live
+    visitor): a named private person fatally shot by a federal agent is a
+    publicly reported incident — the claim's subject is the event and state
+    conduct, not the person's identity. Must NOT refuse."""
+    j = _call_policy(client, "Renee Nicole Good was fatally shot in "
+                             "Minneapolis, Minnesota, by an ICE agent")
     return not j.get("refuse"), f"refuse={j.get('refuse')} ({j.get('why', '')!r})"
 
 

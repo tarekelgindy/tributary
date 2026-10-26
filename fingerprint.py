@@ -3912,6 +3912,7 @@ Output ONLY JSON:
       "short_label": "3-6 word headline-safe handle for this framing (e.g. \\"Who approved this?\\")",
       "question": "the underlying question this lens asks",
       "key_claim": "the narrative statement this framing asserts (one sentence, fingerprintable)",
+      "traceable_claim": "the question restated as ONE self-contained declarative sentence that names the event's specific referent (actors, incident), so it makes sense with no surrounding context and could be traced to its origin on its own. Keep the question's own wording as closely as possible; neutral register; never a question. Example: question 'Is the far-right using this attack to advance a pre-existing agenda?' -> 'The Israeli far-right is using the <named attack> to advance a pre-existing political agenda.'",
       "description": "1-2 sentences on what this framing is",
       "emphasizes": "what this framing foregrounds",
       "downplays": "what this framing minimizes or omits",
@@ -4310,6 +4311,7 @@ class EventAnalyzer:
                 short_label=_clean_text_field(fr.get("short_label")),
                 question=_clean_text_field(fr.get("question")),
                 key_claim=_clean_text_field(fr.get("key_claim")),
+                traceable_claim=_clean_text_field(fr.get("traceable_claim")),
                 description=_clean_text_field(fr.get("description")),
                 emphasizes=_clean_text_field(fr.get("emphasizes")),
                 downplays=_clean_text_field(fr.get("downplays")),
@@ -4601,14 +4603,25 @@ judging the REQUEST only — never its politics, viewpoint, or taste.
 REFUSE only when the request targets a PRIVATE INDIVIDUAL: a person who is
 neither a public figure nor a voluntary participant in public debate. Two
 forms, both refused:
-  (a) identity-revelation — the claim concerns revealing, naming, or
-      identifying such a person (a pseudonymous complainant, a crime
-      victim or witness, a juror, a minor, an ordinary citizen), including
-      claims that the identity "was revealed/leaked online". Tracing such
-      a claim would build a sourced index of the doxxing itself.
+  (a) identity-revelation — the claim's SUBJECT is the revealing, naming,
+      or identifying of such a person whose identity is concealed,
+      pseudonymous, or protected (an anonymous complainant, an unnamed
+      witness, a juror, a minor), including claims that an identity "was
+      revealed/leaked online". Tracing such a claim would build a sourced
+      index of the doxxing itself.
   (b) person-assembly — the evident purpose is assembling information
       about such a person (harassment, dossier-building) rather than
       tracing a narrative.
+
+The line is the claim's SUBJECT, never the mere presence of a name. A
+private person harmed or involved in a PUBLICLY REPORTED INCIDENT — a
+death, a shooting, an arrest, especially where state power or officials
+acted — is traceable AS THE INCIDENT, name and all: the claim's subject is
+the event and the conduct around it, and a victim's name appearing in
+standard news coverage is not an identity revelation. (Recorded miss this
+rule corrects, 2026-10-26: "<named person> was fatally shot by an ICE
+agent" was refused as identity-revelation; it is public-interest incident
+coverage and must be traced.)
 
 DO NOT refuse:
   - claims about PUBLIC FIGURES (politicians, candidates, officials,

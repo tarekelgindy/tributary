@@ -137,6 +137,16 @@ public request, separately from the claim-shape gate: shape-blindness to
 topic is what keeps that gate viewpoint-neutral, and refusals must be
 legible as named policy, never as hidden topic filtering.
 
+The line is the claim's *subject*, never the mere presence of a name
+(clarified 2026-10-26, after the gate wrongly refused a request about a
+person fatally shot by a federal agent): a private person harmed in a
+publicly reported incident — a shooting, a death in custody, an arrest —
+is traceable *as the incident it is*, name and all, especially where state
+power acted; that is public-interest coverage, not identity revelation.
+What is never traceable is the act of unmasking someone whose identity is
+concealed. Wrong refusals are errors like any other and are logged in
+[CORRECTIONS.md](CORRECTIONS.md).
+
 ---
 
 ## Error rate
