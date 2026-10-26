@@ -389,6 +389,46 @@ def foreign_candidate(client):
 
 
 @fixture
+def lexical_keeps_referent(client):
+    """L1 must not genericize a referent-specific claim (2026-10-26: 'ICE
+    agent Jonathan Ross ... shooting Renee Nicole Good ... Minneapolis'
+    canonicalized to 'ICE agent justified shooting in self-defense against
+    weaponized vehicle' — every downstream search then drifted to OTHER
+    incidents of the same form, and the resolver fused two of them)."""
+    from fingerprint import LEXICAL_SYSTEM
+    resp = client.messages.create(
+        model=HAIKU, max_tokens=1024, temperature=0,
+        system=[{"type": "text", "text": LEXICAL_SYSTEM}],
+        messages=[{"role": "user", "content":
+                   "CLAIM:\nICE agent Jonathan Ross was legally justified in shooting "
+                   "Renee Nicole Good in self-defense after she allegedly weaponized her "
+                   "vehicle against him during a Minneapolis immigration enforcement operation"}])
+    out = _parse_json_safe("".join(b.text for b in resp.content
+                                   if getattr(b, "type", "") == "text")) or {}
+    cp = str(out.get("canonical_phrase") or "")
+    ok = ("ross" in cp.lower() or "good" in cp.lower() or "minneapolis" in cp.lower())
+    return ok, f"canonical={cp[:80]!r} (must retain a referent name)"
+
+
+@fixture
+def implicit_never_merges(client):
+    """The chimera guard (2026-10-26): instances spanning TWO distinct named
+    incidents must yield NO referent — fusing them buries the true incident
+    under the bound."""
+    ref = _call_referent(client, "ICE agent justified shooting in self-defense against weaponized vehicle", [
+        {"date": "2025-12-24", "title": "Immigration agent fatally shoots driver in Minneapolis — Live Updates",
+         "phrasing": "the driver weaponized her vehicle; the agent acted in self-defense"},
+        {"date": "2026-01-07", "title": "Minneapolis ICE shooting ignites use-of-force debate",
+         "phrasing": "the ICE officer was clearly justified in shooting Good"},
+        {"date": "2026-07-08", "title": "ICE Shoots and Kills Houston Driver Saying He 'Weaponized His Vehicle'",
+         "phrasing": "he rammed an ICE vehicle and weaponized his car; the shooting was justified"},
+        {"date": "2026-07-15", "title": "Inside ICE's 'weaponized vehicle' defense",
+         "phrasing": "the weaponization of a car is often used to justify deadly force"}])
+    return not ref, (f"referent={ref.get('description','')[:60]!r} "
+                     "(two distinct incidents must never fuse)")
+
+
+@fixture
 def framing_restatement(client):
     """traceable_claim spec (2026-10-26, Tarek's design): the framing's
     question restated as a self-contained declarative naming the event's

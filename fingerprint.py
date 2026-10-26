@@ -104,7 +104,7 @@ A fingerprint captures the FRAMING, not the topic.
 Produce a JSON object with these fields ONLY:
 
 {
-  "canonical_phrase": "5–15 words. The most distilled version of THIS framing. Reflect the actual phrasing as it circulates — do not water it down or neutralize it.",
+  "canonical_phrase": "5–15 words. The most distilled version of THIS framing. Reflect the actual phrasing as it circulates — do not water it down or neutralize it. When the claim is about a PROPER-NAMED referent — a named person's act, a named incident or place — the canonical phrase MUST retain the identifying name(s): generalizing 'agent X was justified in shooting Y in city Z' down to 'agent justified shooting' erases WHICH incident is being traced, and the whole trace then drifts to other incidents of the same form (recorded failure, 2026-10-26).",
   "phrase_variants": ["3 to 8 short reformulations as they actually appear on the internet — the surface forms users would search or read"],
   "diagnostic_ngrams": ["3 to 6 short 2-to-4 word collocations that are SPECIFIC to this framing, not the topic. Test: searching this n-gram should predominantly surface THIS framing, not other framings of the same topic."]
 }
@@ -1770,6 +1770,13 @@ general — a stereotype, folk wisdom, a STATISTIC or quantitative claim
 (whose instances are measurements, not an incident), or a perennial
 assertion whose instances concern many subjects across eras — there is no
 referent.
+
+NEVER MERGE INCIDENTS: if the instances concern two or more DISTINCT named
+incidents (different places, dates, or people — e.g. a Minneapolis
+December shooting and a Houston July shooting), output empty rather than
+fusing them. A chimera referent is the worst possible output: the
+downstream bound will demote the TRUE incident's coverage as "pre-referent
+context" (recorded failure, 2026-10-26, exactly so).
 
 Output ONLY JSON:
 {"description": "<the one specific referent, or empty string>",
