@@ -1,6 +1,6 @@
 {
  "built": "2026-10-25",
- "note": "mechanical pass; merges pending maintainer review",
+ "note": "maintainer merge review completed 2026-11-01 (decisions: Tarek; rejected pairs recorded so rebuilds don't re-ask)",
  "actors": {
   "mit.edu": {
    "kind": "outlet",
@@ -11126,24 +11126,10 @@
   },
   {
    "type": "name-only-carrier",
-   "name": "Al-Monitor",
-   "times_seen": 1,
-   "suggested_actor": "al-monitor.com",
-   "similarity": 1.0
-  },
-  {
-   "type": "name-only-carrier",
    "name": "Sen. Chris Van Hollen (D-MD)",
    "times_seen": 1,
    "suggested_actor": "",
    "similarity": 0.57
-  },
-  {
-   "type": "name-only-carrier",
-   "name": "Tucker Carlson",
-   "times_seen": 1,
-   "suggested_actor": "apnews.com",
-   "similarity": 0.64
   },
   {
    "type": "name-only-carrier",
@@ -11175,13 +11161,6 @@
   },
   {
    "type": "name-only-carrier",
-   "name": "Donald Trump (White House press remarks)",
-   "times_seen": 1,
-   "suggested_actor": "truthsocial.com",
-   "similarity": 0.73
-  },
-  {
-   "type": "name-only-carrier",
    "name": "Lyndsey Fifield via X (on her daughters)",
    "times_seen": 1,
    "suggested_actor": "",
@@ -11193,109 +11172,101 @@
    "times_seen": 1,
    "suggested_actor": "",
    "similarity": 0.51
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "@centcom@x",
-   "b": "centcom.mil",
-   "similarity": 0.97
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "amazon.com",
-   "b": "amazonaws.com",
-   "similarity": 0.87
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "amnesty.org",
-   "b": "amnesty.org.uk",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "amnesty.org",
-   "b": "amnestyusa.org",
-   "similarity": 0.91
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "amnesty.org.uk",
-   "b": "amnestyusa.org",
-   "similarity": 0.91
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "arabnews.com",
-   "b": "arabnews.pk",
-   "similarity": 0.86
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "archaeology.wiki",
-   "b": "artasiapacific.com",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "archaeology.wiki",
-   "b": "unesco.org",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "artasiapacific.com",
-   "b": "unesco.org",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "cbc.ca",
-   "b": "cbsnews.com",
-   "similarity": 0.88
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "cbc.ca",
-   "b": "go.com",
-   "similarity": 0.88
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "cbc.ca",
-   "b": "nbcnews.com",
-   "similarity": 0.88
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "cfr.org",
-   "b": "ecfr.eu",
-   "similarity": 0.87
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "congress.gov",
-   "b": "everycrsreport.com",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "go.com",
-   "b": "nbcnews.com",
-   "similarity": 0.88
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "hrw.org",
-   "b": "humanrightsresearch.org",
-   "similarity": 1.0
-  },
-  {
-   "type": "possible-duplicate-actors",
-   "a": "investing.com",
-   "b": "wtvbam.com",
-   "similarity": 1.0
   }
  ],
- "merges": {}
+ "merges": {
+  "@centcom@x": "centcom.mil",
+  "arabnews.pk": "arabnews.com",
+  "amnesty.org.uk": "amnesty.org",
+  "amnestyusa.org": "amnesty.org"
+ },
+ "name_merges": {
+  "Al-Monitor": "al-monitor.com"
+ },
+ "rejected": [
+  [
+   "amazon.com",
+   "amazonaws.com"
+  ],
+  [
+   "cbc.ca",
+   "cbsnews.com"
+  ],
+  [
+   "cbc.ca",
+   "go.com"
+  ],
+  [
+   "cbc.ca",
+   "nbcnews.com"
+  ],
+  [
+   "go.com",
+   "nbcnews.com"
+  ],
+  [
+   "cfr.org",
+   "ecfr.eu"
+  ],
+  [
+   "congress.gov",
+   "everycrsreport.com"
+  ],
+  [
+   "hrw.org",
+   "humanrightsresearch.org"
+  ],
+  [
+   "archaeology.wiki",
+   "artasiapacific.com"
+  ],
+  [
+   "archaeology.wiki",
+   "unesco.org"
+  ],
+  [
+   "artasiapacific.com",
+   "unesco.org"
+  ],
+  [
+   "investing.com",
+   "wtvbam.com"
+  ],
+  [
+   "aap.org",
+   "apa.org"
+  ],
+  [
+   "acm.org",
+   "acs.org"
+  ],
+  [
+   "acs.org",
+   "ans.org"
+  ],
+  [
+   "acs.org",
+   "nas.org"
+  ],
+  [
+   "ans.org",
+   "nas.org"
+  ],
+  [
+   "arabnews.com",
+   "arabnews.pk"
+  ],
+  [
+   "amnesty.org",
+   "amnesty.org.uk"
+  ],
+  [
+   "amnesty.org",
+   "amnestyusa.org"
+  ],
+  [
+   "amnesty.org.uk",
+   "amnestyusa.org"
+  ]
+ ]
 }
