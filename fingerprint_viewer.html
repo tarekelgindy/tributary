@@ -212,6 +212,7 @@ section { animation: fadein 0.2s; }
 .detail-card .role-tag.critic { background: #e2d2ec; color: #4a275a; }
 .detail-card .role-tag.mention { background: #eaeaea; color: #444; }
 .detail-card .role-tag.unknown { background: #eaeaea; color: #666; }
+.detail-card .role-tag.context { background: #e7ebe3; color: #4d5a4a; }
 .detail-card .title-line { font-weight: 500; margin-bottom: 0.3rem; }
 .detail-card .author { color: #666; font-size: 0.9rem; margin-bottom: 0.6rem; }
 .detail-card .quote {
@@ -697,6 +698,7 @@ details.cov-backdrop .coverage-card { margin: 0.8rem; border-left-width: 4px; }
 .role-tag.critic { background: #e2d2ec; color: #4a275a; }
 .role-tag.mention { background: #eaeaea; color: #444; }
 .role-tag.unknown { background: #eaeaea; color: #666; }
+.role-tag.context { background: #e7ebe3; color: #4d5a4a; }
 .ms-item { border-left: 3px solid #ccc; padding: 0.15rem 0 0.6rem 0.95rem; }
 .ms-item + .ms-item { margin-top: 0.4rem; }
 .ms-item.role-originator { border-left-color: #c0392b; }
@@ -921,10 +923,15 @@ function citedVia(url) {
 
 // An attestation's own cited_via field wins over the host heuristic — an
 // explicit empty string means "this IS the first party" (e.g. Snopes' own
-// article should not read "documented by Snopes").
+// article should not read "documented by Snopes"). Exception: pure reference
+// hosts (Wikipedia-class) are never themselves the attesting source, and the
+// pipeline writes cited_via="" on every entry it parses — so for those hosts
+// an empty field still falls back to the heuristic.
 function citedViaOf(i) {
-  return Object.prototype.hasOwnProperty.call(i, 'cited_via')
-    ? (i.cited_via || '') : citedVia(i.source_url);
+  if (i.cited_via) return i.cited_via;
+  if (!Object.prototype.hasOwnProperty.call(i, 'cited_via')
+      || isReferenceHost(i.source_url)) return citedVia(i.source_url);
+  return '';
 }
 function refHostName(url) {
   try {
@@ -2654,6 +2661,15 @@ function fmtAttDate(i) {
 }
 
 const isRelatedContext = i => (i && i.claim_relation) === 'related-context';
+// Badge semantics: a related-context entry documents adjacent material — an
+// amplifier badge on it reads as "this amplified the narrative", a claim the
+// entry does not make (audit 2026-09-25, items 1 & 12). Critic survives:
+// pushback is a stance, not spread.
+const displayRole = i => {
+  const r = (i && i.amplifier_role) || 'unknown';
+  return (isRelatedContext(i) && r !== 'critic') ? 'context' : r;
+};
+const CONTEXT_TIP = 'related context — adjacent material recorded for completeness; not counted as amplifying this narrative';
 
 function verifyBadge(item) {
   // item is any object with verification fields (InformationSource,
@@ -3040,7 +3056,7 @@ function milestoneHtml(entry) {
     </div>`;
   }
   const i = entry.inst;
-  const role = i.amplifier_role || 'unknown';
+  const role = displayRole(i);
   const via = citedViaOf(i);
   const prov = i.provenance || {};
   return `<div class="ms-item role-${role}">
@@ -3054,11 +3070,13 @@ function milestoneHtml(entry) {
 
 function logRowsHtml(log, grp) {
   return log.map((i, idx) => {
-    const role = i.amplifier_role || 'unknown';
+    const role = displayRole(i);
+    const via = citedViaOf(i);
     return `<div class="log-row" data-grp="${grp}" data-i="${idx}">${
       i.instance_id ? `<button type="button" class="row-edit" data-eid="${escapeHtml(i.instance_id)}" title="something wrong here? suggest a correction — reviewed before it publishes">✎</button>` : ''
-      }<span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}">${escapeHtml(role)}</span>${provenanceBadge(i)}<strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
-      isRelatedContext(i) ? ' <span class="who-year">related context</span>' : ''}${
+      }<span class="date">${escapeHtml(fmtAttDate(i) || '?')}</span><span class="role-tag ${role}"${role === 'context' ? ` title="${CONTEXT_TIP}"` : ''}>${escapeHtml(role)}</span>${provenanceBadge(i)}<strong>${escapeHtml(truncate(i.author, 60))}</strong>${i.source_title ? ' — ' + escapeHtml(truncate(i.source_title, 80)) : ''}${
+      isRelatedContext(i) && role !== 'context' ? ' <span class="who-year">related context</span>' : ''}${
+      via ? ` <span class="who-year" title="the dated source is documented by this page — the link goes there, not to the original">via ${escapeHtml(truncate(via, 26))}</span>` : ''}${
       i.describes_period ? ` <span class="who-year" title="a retrospective: dated by its own publication; describes ${escapeHtml(i.describes_period)}">retrospective</span>` : ''}</div>`;
   }).join('');
 }
@@ -3536,13 +3554,14 @@ function showDetail(inst) {
 }
 
 function instanceDetailHtml(inst) {
-  const role = inst.amplifier_role || 'unknown';
+  const role = displayRole(inst);
   return `
     <div class="detail-card role-${role}">
       <div class="head">
         <span class="date">${escapeHtml(fmtAttDate(inst) || '?')}</span>
-        <span class="role-tag ${role}">${escapeHtml(role)}</span>
+        <span class="role-tag ${role}"${role === 'context' ? ` title="${CONTEXT_TIP}"` : ''}>${escapeHtml(role)}</span>
       </div>
+      ${isRelatedContext(inst) ? `<div class="field"><span class="label">Relation</span>${CONTEXT_TIP}</div>` : ''}
       ${inst.describes_period ? `<div class="field"><span class="label">Describes period</span>${escapeHtml(inst.describes_period)} <span style="color:#999;">(the date shown is the document's own)</span></div>` : ''}
       <div class="title-line">${escapeHtml(inst.source_title || '')}</div>
       <div class="author">${escapeHtml(inst.author || '')}</div>
