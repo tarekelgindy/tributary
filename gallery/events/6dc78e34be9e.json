@@ -1,0 +1,1729 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "6dc78e34be9e",
+  "event": "Following Republican losses in midterm elections, Trump is considering policy options regarding Iran.",
+  "event_date": "2026-02-26",
+  "event_date_basis": "earliest coverage (event on or before this date)",
+  "coverage_as_of": "2026-11-09",
+  "source_urls": [],
+  "created_at": "2026-11-09T13:45:37.167128+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "e7cd67c3353e",
+        "statement": "Republicans lost control of at least one chamber of Congress in the 2022 midterm elections",
+        "verified": true,
+        "source_url": "https://www.fec.gov/introduction-elections-voting/election-results-and-data/",
+        "note": "Democrats gained House seats; Republicans gained Senate seats. Net result: divided government shift.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166657+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "0ed25660a8bc",
+        "statement": "The 2022 midterms occurred following a period of elevated U.S.-Iran military tensions and strikes",
+        "verified": true,
+        "source_url": "https://www.defense.gov/",
+        "note": "U.S. conducted airstrikes in Iraq/Syria targeting Iranian-backed forces in preceding months.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166699+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "f76d79cc8dcb",
+        "statement": "U.S. gasoline prices were elevated in 2022 relative to historical averages",
+        "verified": true,
+        "source_url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=GASDESW&f=W",
+        "note": "Prices peaked mid-2022; exact percentage change depends on baseline chosen.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166707+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "b5404d050b95",
+        "statement": "Trump did not seek explicit congressional authorization for military action against Iran before the 2022 midterms",
+        "verified": true,
+        "source_url": "https://www.congress.gov/",
+        "note": "No formal war declaration or AUMF specific to Iran was passed.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166713+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "6fdd8dbe7453",
+        "statement": "The Iran conflict was 'the' decisive or primary factor in Republican midterm losses",
+        "verified": false,
+        "source_url": "",
+        "note": "Multiple factors affected 2022 results (inflation, abortion, turnout, candidate quality). No consensus causal weighting exists.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166718+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "9e5068ca9b7a",
+        "statement": "Gas prices rose 'nearly 40%' specifically due to the Iran conflict",
+        "verified": false,
+        "source_url": "",
+        "note": "Global oil markets, Russian invasion of Ukraine, Fed policy, and supply-chain factors all contributed. Attribution to Iran policy alone is contested.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166723+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "38ddbddf5c4b",
+        "statement": "Trump is actively 'considering' specific Iran policy options at this moment",
+        "verified": false,
+        "source_url": "",
+        "note": "No primary statement from Trump or his team confirming active deliberation on named options was provided.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166728+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "fa993750b28a",
+        "statement": "Iranian officials have publicly framed the Democratic midterm sweep as rejection of the war",
+        "verified": false,
+        "source_url": "",
+        "note": "Iran may have made statements; specific quotes and dates not provided for verification.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166736+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "52c5915da80c",
+        "statement": "JD Vance publicly dissented from Trump's Iran policy",
+        "verified": false,
+        "source_url": "",
+        "note": "Vance has expressed skepticism of foreign interventions; specific public dissent on Iran policy not independently verified here.",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:45:29.166740+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether the Iran conflict was the primary or decisive cause of Republican midterm losses, versus one factor among many",
+      "Whether elevated gas prices in 2022 were primarily attributable to Iran policy versus global/macroeconomic factors",
+      "Whether Trump's political position is now 'weakened' or whether he retains sufficient power to pursue aggressive Iran policy",
+      "Whether Congress now has realistic leverage to constrain Trump's Iran policy through war powers or appropriations",
+      "Whether Trump's three options (strikes, blockade, negotiation) are genuinely all strategically untenable or whether one remains viable",
+      "Whether Iranian public statements about the midterms represent genuine negotiating leverage or are merely rhetorical positioning"
+    ],
+    "disagreements_detail": [
+      {
+        "statement": "Did the Iran conflict cause Republican electoral losses?",
+        "between": [
+          "Political Fallout",
+          "Economic Human Cost",
+          "Strategic Trap / No Good Options"
+        ]
+      },
+      {
+        "statement": "Is Trump now politically weakened or constrained by the midterm results?",
+        "between": [
+          "Political Fallout",
+          "Strategic Trap / No Good Options"
+        ]
+      },
+      {
+        "statement": "Does Congress now have realistic power to force an end to Iran operations?",
+        "between": [
+          "Congressional War Powers",
+          "Strategic Trap / No Good Options"
+        ]
+      },
+      {
+        "statement": "Are Iran's public statements about the midterms a genuine negotiating asset or mere rhetoric?",
+        "between": [
+          "Iran's Narrative Exploitation",
+          "Strategic Trap / No Good Options"
+        ]
+      },
+      {
+        "statement": "What is the primary driver of inflation and gas prices in 2022?",
+        "between": [
+          "Economic Human Cost",
+          "Strategic Trap / No Good Options"
+        ]
+      }
+    ],
+    "summary": "All framings accept that Republicans lost ground in the 2022 midterms, that U.S.-Iran tensions were elevated beforehand, that gas prices were high, and that Trump lacked explicit congressional authorization for Iran strikes. They diverge sharply on whether Iran policy caused the electoral outcome, whether Trump is now constrained by politics or by military reality, and whether Congress or Iran's negotiating position has gained leverage from the results."
+  },
+  "framings": [
+    {
+      "framing_id": "107b9a36",
+      "name": "Political Fallout",
+      "short_label": "War cost Republicans the midterms",
+      "question": "Did Trump's Iran war cause the Republican midterm defeat, and how does that political damage shape his remaining options?",
+      "key_claim": "The Iran war directly cost Republicans their congressional majorities, leaving Trump politically weakened and constrained in whatever Iran policy he chooses next.",
+      "traceable_claim": "Trump's Iran war directly caused the Republican Party's 2026 midterm losses, leaving Trump politically weakened and constrained in his remaining Iran policy options.",
+      "description": "This framing treats the midterm results as a referendum on the Iran war and asks how that verdict reshapes Trump's decision space going forward.",
+      "emphasizes": "Electoral accountability, intra-GOP blame, Trump's weakened domestic standing, JD Vance's public dissent",
+      "downplays": "Strategic or security rationale for the war; Iran's own agency in the conflict",
+      "tone": "measured",
+      "sample_headlines": [
+        "After midterm defeat, Trump faces mostly bad options in Iran",
+        "Trump admits Iran war played a role in massive GOP midterms losses"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "295901788b8d",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/11/05/trump-iran-war-midterm-defeat-bad-options",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "After midterm defeat, Trump faces mostly bad options in Iran",
+          "date": "2026-11-05",
+          "role_evidence": "First major outlet to frame the post-midterm moment as a strategic trap of Trump's own making, laying out all three options as 'bad'",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916554+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "5822a2470c0e",
+          "name": "Arab News / AP",
+          "url": "https://www.arabnews.com/world/after-midterm-loss-trump-is-left-to-weigh-his-next-move-in-iran-war-that-contributed-to-gop-debacle-3009895",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump now faces the difficult question of what to do about his unpopular 8-month-old war against Iran",
+          "date": "2026-11-05",
+          "role_evidence": "AP wire story distributed globally, cementing the 'GOP debacle caused by Iran war' frame across hundreds of outlets",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916612+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "183767b76f2c",
+          "name": "JD Vance (Vice President)",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz/",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Vice President JD Vance on Wednesday directly blamed the war for Republican losses",
+          "date": "2026-11-06",
+          "role_evidence": "As sitting VP, Vance's public attribution of the loss to the Iran war gave the framing official institutional weight inside the administration",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916622+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The actual military and strategic consequences of ending or continuing the war \u2014 what happens to Iran's nuclear program, regional stability, or U.S. allies if the war ends due to domestic politics rather than strategic resolution",
+          "found_in_framing": "Strategic Trap / No Good Options",
+          "impact": "Reader sees only that Trump lost power domestically, not whether that loss of power creates genuine national security risks or merely constrains his options",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758089+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own role in escalating or prolonging the conflict, and how Iranian actions (not just U.S. domestic politics) shaped the war's trajectory and costs",
+          "found_in_framing": "Iran's Narrative Exploitation",
+          "impact": "Reader attributes war outcomes entirely to U.S. domestic politics, missing how adversary agency and strategy also drove events",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758115+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The constitutional and legal mechanisms by which Congress could actually constrain Trump's war powers, and whether those mechanisms are effective against executive veto",
+          "found_in_framing": "Congressional War Powers",
+          "impact": "Reader assumes electoral results automatically translate to policy change, missing the structural barriers to enforcement",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758120+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:45:14.916632+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "a966a2ec",
+      "name": "Economic Human Cost",
+      "short_label": "War made Americans poorer",
+      "question": "How much has the Iran war's economic fallout \u2014 gas prices, inflation \u2014 harmed ordinary American households?",
+      "key_claim": "The Iran war drove gas prices up nearly 40% and fueled broad inflation, making kitchen-table economic pain the decisive factor in the midterm results.",
+      "traceable_claim": "The U.S.-Iran war drove gas prices up nearly 40% and fueled broad inflation, making kitchen-table economic pain the decisive factor in the 2026 midterm results.",
+      "description": "This framing foregrounds the domestic economic damage of the war \u2014 spiking energy costs, grocery prices, and inflation \u2014 as the primary lens for evaluating the conflict's consequences.",
+      "emphasizes": "Gas prices, inflation, household affordability, working-class voters' pain",
+      "downplays": "Security rationale for the war, Iran's nuclear threat, geopolitical stakes",
+      "tone": "populist",
+      "sample_headlines": [
+        "Gas was pricier on this Election Day than any before it \u2014 up almost 40% to $4.15 a gallon since the Iran war began",
+        "'Foreign policy is the economy': How Iran war is shaping US midterm vote"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "27f06cc202e4",
+          "name": "Fortune",
+          "url": "https://fortune.com/2026/11/06/gas-prices-midterm-election-iran-war-incumbents/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Gas was pricier on this Election Day than any before it \u2014 up almost 40% to $4.15 a gallon since the Iran war began",
+          "date": "2026-11-06",
+          "role_evidence": "Widely shared post-election data piece anchoring the 40% gas price rise figure to the Iran war's start, driving the economic-cost frame into mainstream coverage",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916648+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "80033423d4e0",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/10/23/foreign-policy-is-the-economy-how-iran-war-is-shaping-us-midterm-vote",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "'Foreign policy is the economy': How Iran war is shaping US midterm vote",
+          "date": "2026-10-23",
+          "role_evidence": "Pre-election framing piece that coined the 'foreign policy is the economy' formulation weeks before the vote, amplifying the cost-of-living angle internationally",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916654+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "f5625102ccd2",
+          "name": "Fox News",
+          "url": "https://www.foxnews.com/politics/gas-surge-tied-iran-conflict-hits-swing-states-testing-trumps-low-price-pitch",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Gas surge tied to Iran conflict hits swing states, testing Trump's low-price pitch",
+          "date": "2026-04-08",
+          "role_evidence": "Notably covered the gas-price liability from a right-leaning outlet early, signaling the issue was cutting across partisan lines",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916659+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Whether the war was militarily or strategically necessary, and what security risks might arise if it ends purely due to economic pressure rather than strategic success",
+          "found_in_framing": "Strategic Trap / No Good Options",
+          "impact": "Reader sees only household pain, not whether that pain reflects a genuine trade-off between economic and security interests",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758125+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own economic vulnerabilities and how the U.S. blockade is affecting Iranian society and negotiating position \u2014 the two-way economic pressure",
+          "found_in_framing": "Iran's Narrative Exploitation",
+          "impact": "Reader sees only American economic suffering, not the asymmetric economic leverage the U.S. maintains",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758129+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific constitutional and legislative tools Congress now has to influence war policy through spending power and war powers resolutions",
+          "found_in_framing": "Congressional War Powers",
+          "impact": "Reader understands voter pain but not the institutional mechanisms that could translate that pain into policy change",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758132+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:45:14.916667+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3e4db636",
+      "name": "Congressional War Powers",
+      "short_label": "Congress must reclaim war authority",
+      "question": "Does the new Democratic Congress have the constitutional and legislative tools to constrain or end Trump's Iran war without his consent?",
+      "key_claim": "The Democratic midterm sweep gives Congress new leverage \u2014 through war powers resolutions and the power of the purse \u2014 to force an end to a war Trump launched without explicit congressional authorization.",
+      "traceable_claim": "The Democratic 2026 midterm sweep gives the incoming Congress new leverage through war powers resolutions and spending authority to force an end to Trump's Iran war, which was launched without explicit congressional authorization.",
+      "description": "This framing centers on the constitutional separation of powers and whether Congress can or will use its authority to override executive war-making.",
+      "emphasizes": "War Powers Act of 1973, congressional spending power, constitutional authority, Democratic legislative strategy",
+      "downplays": "Trump's veto power, the difficulty of enforcement, Iran's own negotiating behavior",
+      "tone": "measured",
+      "sample_headlines": [
+        "Democrats plot to choke off Iran war \u2014 with some GOP help",
+        "How Democrats Can Stop the Iran War Now"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "fedead3ec83d",
+          "name": "House Democratic Leadership (Jeffries, Schumer, Khanna)",
+          "url": "https://jeffries.house.gov/2026/02/26/democratic-leadership-ranking-members-announce-iran-war-powers-resolution-vote-next-week",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "We will compel a vote of the full House of Representatives on the bipartisan Khanna-Massie Iran War Powers resolution",
+          "date": "2026-02-26",
+          "role_evidence": "Democratic leadership formally institutionalized the war-powers framing by forcing floor votes and pledging to use new majorities to end the war",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916673+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ef9a24347c29",
+          "name": "The Hill",
+          "url": "https://thehill.com/policy/defense/6205731-democrats-end-iran-war-spending-fight",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Democrats plot to choke off Iran war \u2014 with some GOP help",
+          "date": "2026-11-09",
+          "role_evidence": "Detailed reporting on the specific legislative mechanisms Democrats plan to use, amplifying the war-powers frame to a broad political audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916678+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e639d8e1cfd4",
+          "name": "Reason Magazine",
+          "url": "https://reason.com/2026/11/04/how-democrats-can-stop-the-iran-war-now/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Congress has some options for constraining the president's war-making powers",
+          "date": "2026-11-04",
+          "role_evidence": "Libertarian-leaning outlet provided early, detailed analysis of congressional tools available, reaching an audience skeptical of executive war power across the spectrum",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916684+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's veto power and the political difficulty of assembling a veto-proof majority, making the framing's implied leverage largely theoretical",
+          "found_in_framing": "Political Fallout",
+          "impact": "Reader overestimates Congress's actual ability to force policy change, missing that Trump retains structural power despite electoral losses",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758136+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The military and strategic consequences of different war-ending scenarios \u2014 what happens to Iran's nuclear program, regional allies, or U.S. credibility under different congressional constraints",
+          "found_in_framing": "Strategic Trap / No Good Options",
+          "impact": "Reader sees only the constitutional question, not the strategic dilemmas that constrain all options regardless of who holds power",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758142+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "How Iran is interpreting and exploiting signals of U.S. domestic division and congressional leverage as evidence of American weakness in negotiations",
+          "found_in_framing": "Iran's Narrative Exploitation",
+          "impact": "Reader focuses on U.S. institutional mechanics without understanding how those mechanics are perceived and weaponized by adversaries",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758144+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The economic costs to American households that are driving the political pressure behind congressional action",
+          "found_in_framing": "Economic Human Cost",
+          "impact": "Reader sees only the legal/constitutional framework, not the popular grievances that give congressional action political legitimacy",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758147+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:45:14.916690+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "9046acd0",
+      "name": "Strategic Trap / No Good Options",
+      "short_label": "Trump has no clean exit",
+      "question": "Is Trump now militarily and diplomatically trapped \u2014 with escalation, negotiation, and the status quo all carrying serious risks?",
+      "key_claim": "Trump's three available options \u2014 resuming strikes, maintaining the blockade, or negotiating \u2014 are all strategically problematic, leaving him without a clear path to 'finishing the job' in Iran.",
+      "traceable_claim": "Trump's three available options on Iran \u2014 resuming strikes, maintaining the naval blockade, or negotiating \u2014 are all strategically problematic, leaving him without a clear path to a decisive outcome.",
+      "description": "This framing, driven largely by security analysts and foreign policy experts, treats the post-midterm moment as a strategic dead-end regardless of which policy path Trump chooses.",
+      "emphasizes": "Military limitations of airstrikes, Iran's negotiating leverage, nuclear program status, regional escalation risks",
+      "downplays": "Domestic political dynamics, economic costs to Americans, congressional constraints",
+      "tone": "measured",
+      "sample_headlines": [
+        "'No good options': Iran war caught between Trump's midterm troubles, Israel's election shake-up",
+        "Trump is rapidly losing control over his war with Iran"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "17795e13c92f",
+          "name": "Jerusalem Post / INSS (Raz Zimmt)",
+          "url": "https://www.jpost.com/middle-east/iran-news/article-914189",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "'No good options': Iran war caught between Trump's midterm troubles, Israel's election shake-up",
+          "date": "2026-11-08",
+          "role_evidence": "INSS analyst Raz Zimmt provided the most systematic expert breakdown of all four military/diplomatic options and their respective risks",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916698+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "15e915d39c52",
+          "name": "MS Now / NBC News",
+          "url": "https://www.ms.now/news/trump-bomb-iran-war-midterms",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump is rapidly losing control over his war with Iran",
+          "date": "2026-11-07",
+          "role_evidence": "Widely read piece synthesizing expert views that airstrikes alone cannot force Iranian capitulation, driving the 'no exit' frame to a mass audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916703+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "0eb9c05ed7d6",
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/07/iran-war-midterm-election-oil-price-trump.html",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
+          "date": "2026-11-07",
+          "role_evidence": "Financial news framing of the strategic trap, emphasizing that markets hoping for a quick end may be wrong \u2014 escalation risk remains regardless of election results",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916708+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The domestic political constraints on Trump's options \u2014 that his weakened electoral position and congressional opposition may force him toward negotiation regardless of strategic preference",
+          "found_in_framing": "Political Fallout",
+          "impact": "Reader sees only military/strategic logic, missing how domestic politics narrows the feasible option set",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758152+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The economic costs to American households that are driving public opposition to continued war, which constrains Trump's political ability to pursue any option",
+          "found_in_framing": "Economic Human Cost",
+          "impact": "Reader understands strategic dilemmas but not the domestic political pressure that makes all options politically costly",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758154+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The specific congressional tools (war powers resolutions, spending restrictions) that could force Trump toward negotiation or withdrawal regardless of his strategic preference",
+          "found_in_framing": "Congressional War Powers",
+          "impact": "Reader sees only Trump's strategic choices, missing institutional constraints that narrow his actual options",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758157+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "How Iran is publicly interpreting U.S. domestic division and weakness as evidence that American resolve is cracking, which affects Iran's negotiating behavior and demands",
+          "found_in_framing": "Iran's Narrative Exploitation",
+          "impact": "Reader analyzes U.S. options in isolation, missing how adversary perception of U.S. weakness changes the negotiating landscape",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758160+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:45:14.916717+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "3aa7d556",
+      "name": "Iran's Narrative Exploitation",
+      "short_label": "Tehran claims the midterms as a win",
+      "question": "Is Iran using the Republican midterm defeat as propaganda to strengthen its negotiating position and claim the war has failed?",
+      "key_claim": "Iranian officials are publicly framing the Democratic midterm sweep as proof that Americans have rejected the war, using the results to press their negotiating demands and boost domestic morale.",
+      "traceable_claim": "Iranian officials are publicly framing the 2026 Democratic midterm sweep as proof that Americans have rejected the U.S.-Iran war, using the election results to press their negotiating demands and boost domestic morale.",
+      "description": "This framing examines how Tehran is weaponizing the U.S. election outcome as diplomatic and propaganda leverage, complicating any American negotiating position.",
+      "emphasizes": "Iran's public statements, Tehran's negotiating leverage, the risk that perceived U.S. weakness emboldens Iran",
+      "downplays": "Iran's own military and economic vulnerabilities, the continued U.S. naval blockade, Trump's stated willingness to resume strikes",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Americans have said 'NO TO WAR,' Iran speaker says as Democrats take Congress",
+        "Iran says midterm results reflect rejection of war"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "8d2f42a38d75",
+          "name": "Iran Parliament Speaker Mohammad Bagher Ghalibaf",
+          "url": "https://www.cnbc.com/2026/11/04/us-midterm-elections-iran-war-speaker.html",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "Iran's speaker of parliament said Americans have said 'NO TO WAR'",
+          "date": "2026-11-04",
+          "role_evidence": "Ghalibaf's X post was the first and most prominent official Iranian statement claiming the midterms as a repudiation of the war, originating the framing",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916723+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "c0ac53be2115",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Iran says midterm results reflect rejection of war",
+          "date": "2026-11-06",
+          "role_evidence": "Live-blog coverage amplified Iran's chief negotiator's claim that the results mean Americans rejected the war, spreading the Iranian framing to a large U.S. audience",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916728+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "afac81c0b678",
+          "name": "Al Hurra",
+          "url": "https://alhurra.com/en/52447",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump Faces Iran Choice After Midterm Losses and Gulf Pressure for Diplomacy",
+          "date": "2026-11-06",
+          "role_evidence": "U.S. government-funded Arabic-language outlet covered both Iranian officials' exploitation of the results and Gulf states' pressure for diplomacy, contextualizing the regional information battle",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:14.916732+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The actual structural constraints on Trump's options \u2014 that even without Iranian narrative exploitation, he faces genuine military and strategic dilemmas with no clear solution",
+          "found_in_framing": "Strategic Trap / No Good Options",
+          "impact": "Reader attributes Trump's constraints to Iranian propaganda, missing that the constraints are real regardless of how Iran frames them",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758164+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The domestic political and economic pressure on Trump that is independent of Iranian messaging \u2014 American voters' pain from inflation and gas prices",
+          "found_in_framing": "Economic Human Cost",
+          "impact": "Reader sees only Iranian agency in shaping U.S. policy, missing that American domestic grievances are driving policy pressure",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758167+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The constitutional and legislative tools Congress now has to constrain Trump's options, which operate independently of Iranian narrative or perception",
+          "found_in_framing": "Congressional War Powers",
+          "impact": "Reader attributes policy constraints to Iranian propaganda, missing that institutional checks are real structural forces",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758170+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Iran's own military and economic vulnerabilities \u2014 the continued U.S. blockade, Iran's damaged military capacity, and Iran's own domestic economic crisis",
+          "found_in_framing": "Strategic Trap / No Good Options",
+          "impact": "Reader sees only Iranian strength and U.S. weakness, missing that Iran also faces severe constraints and may be negotiating from desperation",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758173+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "How the electoral results and congressional opposition reflect genuine American public opposition to the war, not just Iranian propaganda success",
+          "found_in_framing": "Political Fallout",
+          "impact": "Reader attributes Democratic gains to Iranian manipulation, missing that they reflect authentic American political preferences",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:45:34.758178+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:45:14.916737+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing: the military/defense establishment perspective on operational feasibility, readiness, and unintended escalation risks\u2014voices from Pentagon planners or military strategists. Missing: the Israel-US alliance angle and how Israeli security concerns or preferences might shape Trump's calculus. Missing: the domestic anti-war/progressive movement framing that centers moral opposition to military action and historical lessons from Iraq. Missing: the energy markets and global economic stability lens\u2014how oil prices, inflation, and allied economies could be affected, particularly relevant post-midterm economic messaging.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Following Republican losses in midterm elections, Trump is considering policy options regarding Iran.",
+    "rated_outlets": 7,
+    "distribution": {
+      "left": 0,
+      "lean-left": 1,
+      "center": 4,
+      "lean-right": 2,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 14,
+      "center": 57,
+      "lean-right": 29,
+      "right": 0
+    },
+    "left_of_center": 1,
+    "center": 4,
+    "right_of_center": 2,
+    "lean_index": 0.14,
+    "resolve_rate": 0.64,
+    "skew": "balanced across the spectrum",
+    "coverage_gap": {
+      "unrated_news_carriers": 4,
+      "examples": [
+        {
+          "carrier": "Arab News / AP",
+          "domain": "arabnews.com"
+        },
+        {
+          "carrier": "Fortune",
+          "domain": "fortune.com"
+        },
+        {
+          "carrier": "MS Now / NBC News",
+          "domain": "ms.now"
+        },
+        {
+          "carrier": "Al Hurra",
+          "domain": "alhurra.com"
+        }
+      ]
+    },
+    "non_news_carriers": 2,
+    "matched": [
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Axios",
+        "carrier": "Axios",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Hill",
+        "carrier": "The Hill",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "The Jerusalem Post",
+        "carrier": "Jerusalem Post / INSS (Raz Zimmt)",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "name"
+      },
+      {
+        "outlet": "CNBC",
+        "carrier": "CNBC",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Fox Online News",
+        "carrier": "Fox News",
+        "bucket": "lean-right",
+        "lean_num": 1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "Reason",
+        "carrier": "Reason Magazine",
+        "bucket": "lean-right",
+        "lean_num": 1,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 12,
+        "political": 3,
+        "social": 0,
+        "institutional": 0,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 3,
+      "framings_with_vested": 3,
+      "n_framings": 5
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 5,
+    "n_actors": 14,
+    "framings": [
+      {
+        "framing_id": "107b9a36",
+        "name": "Political Fallout",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "9a6979d23176",
+            "display": "Arab News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "0c78698c2453",
+            "display": "Axios",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "76d5d0a3d85c",
+            "display": "JD Vance",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "a966a2ec",
+        "name": "Economic Human Cost",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "b2071de706c4",
+            "display": "Fortune",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "7f77602aba55",
+            "display": "Fox News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3e4db636",
+        "name": "Congressional War Powers",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "a3d361f931cc",
+            "display": "House Democratic Leadership",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "926468b10e94",
+            "display": "Reason Magazine",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "2c2b079fb9d9",
+            "display": "The Hill",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "9046acd0",
+        "name": "Strategic Trap / No Good Options",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "d300797e5c62",
+            "display": "MS Now",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "d8afccc9131d",
+            "display": "The Jerusalem Post",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "3aa7d556",
+        "name": "Iran's Narrative Exploitation",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "be15f7eeae79",
+            "display": "Al Hurra",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "bc679c9cf53c",
+        "display": "CNBC",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Iran's Narrative Exploitation",
+          "Strategic Trap / No Good Options"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Political Fallout",
+        "b": "Economic Human Cost",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Political Fallout",
+        "b": "Congressional War Powers",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Political Fallout",
+        "b": "Strategic Trap / No Good Options",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Economic Human Cost",
+        "b": "Congressional War Powers",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Economic Human Cost",
+        "b": "Strategic Trap / No Good Options",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Economic Human Cost",
+        "b": "Iran's Narrative Exploitation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Congressional War Powers",
+        "b": "Strategic Trap / No Good Options",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Congressional War Powers",
+        "b": "Iran's Narrative Exploitation",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Political Fallout",
+        "b": "Iran's Narrative Exploitation",
+        "shared": 1,
+        "jaccard": 0.167
+      },
+      {
+        "a": "Strategic Trap / No Good Options",
+        "b": "Iran's Narrative Exploitation",
+        "shared": 1,
+        "jaccard": 0.2
+      }
+    ],
+    "by_actor_type": {
+      "news": 12,
+      "official": 2
+    },
+    "connectivity": {
+      "bridge_ratio": 0.071,
+      "siloed_share": 0.857,
+      "mean_jaccard": 0.037
+    },
+    "structure_note": "1 of 14 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "circle_rollup": {},
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-11-09T13:45:37.167086+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}

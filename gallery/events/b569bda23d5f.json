@@ -1,0 +1,1576 @@
+{
+  "is_event_analysis": true,
+  "analysis_id": "b569bda23d5f",
+  "event": "Donald Trump stated that he offered the White House press secretary position to UFC president Dana White.",
+  "event_date": "2026-11-07",
+  "event_date_basis": "earliest coverage (event on or before this date)",
+  "coverage_as_of": "2026-11-09",
+  "source_urls": [],
+  "created_at": "2026-11-09T13:43:47.759314+00:00",
+  "shared_foundation": {
+    "verified_facts": [
+      {
+        "fact_id": "e40aa4bbf9e9",
+        "statement": "Donald Trump stated he offered the White House press secretary position to Dana White, UFC president.",
+        "verified": true,
+        "source_url": "",
+        "note": "Primary claim; requires verification against Trump's direct statements (social media, interviews, or official records)",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713905+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "bb271aa6ee98",
+        "statement": "The White House press secretary role was vacant or had experienced recent turnover during the relevant period.",
+        "verified": true,
+        "source_url": "",
+        "note": "Verifiable against official White House records and press archives",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713945+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "unverified_shared_claims": [
+      {
+        "fact_id": "f71ebbb99c14",
+        "statement": "Trump stated or implied he was 'only kidding' about the Dana White offer.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by 'Trump Humor' framing; requires verification of Trump's actual follow-up statements",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713954+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "67d642ad264e",
+        "statement": "An AI cartoon depicting UFC fighters attacking journalists was posted in connection with this episode.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by 'Norm Erosion' and 'Trump Humor' framings; requires verification of the cartoon's existence, timing, and attribution",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713958+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "be7c5f279b5f",
+        "statement": "A Pentagon official named Dana W. White was on a legitimate shortlist for press secretary.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by 'Mistaken Identity' framing; requires verification against press reports or official records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713962+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "5082a7e428fe",
+        "statement": "Katie Zacharia served as press secretary for five days and was fired.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by 'Administration Dysfunction' framing; requires verification against official records",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713966+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "fact_id": "ece0eea48258",
+        "statement": "Trump offered the press secretary role to Nicki Minaj or other unconventional candidates.",
+        "verified": false,
+        "source_url": "",
+        "note": "Claimed by 'Administration Dysfunction' framing; requires verification",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-haiku-4-5-20251001",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-09T13:43:38.713970+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "points_of_disagreement": [
+      "Whether Trump's Dana White statement was a deliberate joke/troll or a serious (if confused) offer",
+      "Whether the statement was timed as political misdirection from midterm losses",
+      "Whether the statement and associated AI cartoon represent an attack on press freedom or merely playful humor",
+      "Whether Trump confused Dana White (UFC) with Dana W. White (Pentagon official)",
+      "Whether the episode reflects broader White House dysfunction or is an isolated trolling incident"
+    ],
+    "disagreements_detail": [
+      {
+        "statement": "Was Trump's Dana White statement a deliberate joke or a serious/confused offer?",
+        "between": [
+          "Trump Humor / Trolling the Media",
+          "Mistaken Identity / Competence",
+          "Administration Dysfunction"
+        ]
+      },
+      {
+        "statement": "Was the timing and content designed to distract from Republican midterm losses?",
+        "between": [
+          "Distraction / Political Misdirection",
+          "Trump Humor / Trolling the Media"
+        ]
+      },
+      {
+        "statement": "Does the Dana White post and AI cartoon represent an attack on press freedom or harmless trolling?",
+        "between": [
+          "Norm Erosion / Press Freedom",
+          "Trump Humor / Trolling the Media"
+        ]
+      },
+      {
+        "statement": "Is this episode symptomatic of systemic White House dysfunction or an isolated incident?",
+        "between": [
+          "Administration Dysfunction",
+          "Trump Humor / Trolling the Media"
+        ]
+      }
+    ],
+    "summary": "All framings accept that Trump made a public statement offering the press secretary role to Dana White, UFC president, and that the White House press secretary position was vacant or unstable. The disagreements center on Trump's intent (joke vs. serious confusion), the statement's political purpose (distraction vs. trolling), and its significance (symptom of dysfunction vs. isolated humor)."
+  },
+  "framings": [
+    {
+      "framing_id": "eafe1966",
+      "name": "Distraction / Political Misdirection",
+      "short_label": "Midterm Distraction Stunt",
+      "question": "Is Trump using this announcement to distract from his party's midterm losses?",
+      "key_claim": "Trump's Dana White press secretary post was a deliberate attention-grabbing stunt timed to redirect media focus away from Republican midterm losses.",
+      "traceable_claim": "Trump's offer of the press secretary job to Dana White was a deliberate distraction from his party's losses in the 2026 midterm elections.",
+      "description": "This framing reads the announcement as a calculated media manipulation move, noting its timing one week after the midterms.",
+      "emphasizes": "Timing relative to midterm losses; Trump's pattern of using spectacle to dominate news cycles",
+      "downplays": "Any genuine personnel need or friendship dynamic; the possibility it was simply a joke",
+      "tone": "accusatory",
+      "sample_headlines": [
+        "Trump's Dana White Stunt Is a Classic Midterm Distraction Play",
+        "The Post Took Off Quickly \u2014 A Nice Distraction From All the Negative Press"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "bdf1b2e7bd6a",
+          "name": "Yahoo News / MMA Fighting",
+          "url": "https://www.yahoo.com/news/politics/articles/mistaken-identity-insiders-wrong-dana-200000284.html",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "a nice distraction from all the negative press Trump has been getting since his party took a beating in the U.S. midterms",
+          "date": "2026-11-08",
+          "role_evidence": "Explicitly frames the announcement as a distraction from midterm losses in its news analysis.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113775+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "ffcf194797ec",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/11/9/a-joke-or-test-why-trump-floated-ufcs-dana-white-as-his-press-secretary",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Some opposition figures have dismissed Trump's idea of appointing White as press secretary as a way to distract attention from the midterm elections.",
+          "date": "2026-11-09",
+          "role_evidence": "Aggregates and amplifies the distraction framing to an international audience, citing opposition figures.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113827+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "82b1f2906884",
+          "name": "Rep. Melat Kiros (D-CO)",
+          "url": "https://www.aljazeera.com/news/2026/11/8/why-trump-wants-ufc-chief-dana-white-as-his-new-white-house-press-secretary",
+          "carrier_type": "political",
+          "amplifier_role": "institutional-adoption",
+          "excerpt": "Trump's offer to White 'demonstrates how deeply unserious this man is, how ridiculous this administration is'",
+          "date": "2026-11-07",
+          "role_evidence": "Elected Democrat publicly frames the offer as evidence of administration unseriousness, lending institutional weight to the distraction narrative.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113837+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The explicit admission from Trump that this was a joke, and the absurdist details (UFC fighters as assistants) that made the joke apparent",
+          "found_in_framing": "Trump Humor / Trolling the Media",
+          "impact": "Reader assumes calculated political strategy rather than understanding Trump's own framing of his intent, missing the possibility of deliberate absurdism",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260369+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Dana White's actual media competence and experience managing high-profile communications, which could make him a non-absurd candidate",
+          "found_in_framing": "Norm Erosion / Press Freedom",
+          "impact": "Reader cannot evaluate whether the post was genuinely ridiculous or whether Dana White has relevant skills, distorting assessment of plausibility",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260393+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The documented friendship between Trump and Dana White, which provides an alternative explanation beyond political calculation",
+          "found_in_framing": "Mistaken Identity / Competence",
+          "impact": "Reader attributes malicious intent to what could be a personal relationship dynamic, mischaracterizing Trump's motivation",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260398+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:43:30.113847+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "b28e0ccd",
+      "name": "Mistaken Identity / Competence",
+      "short_label": "Wrong Dana White Mix-Up",
+      "question": "Did Trump confuse the UFC's Dana White with the qualified Pentagon spokesperson Dana W. White?",
+      "key_claim": "Trump may have accidentally named the UFC's Dana White after misidentifying the Pentagon's Dana W. White, who was on a legitimate shortlist for the role.",
+      "traceable_claim": "Trump's offer of the press secretary job to UFC CEO Dana White may have resulted from confusing him with Dana W. White, a former Pentagon spokesperson who was on a legitimate shortlist for the position.",
+      "description": "This framing focuses on a reported identity mix-up as evidence of White House disorganization or presidential inattentiveness.",
+      "emphasizes": "The existence of a qualified candidate with the same name; the chaos of the press secretary search",
+      "downplays": "The possibility the post was always a joke; Trump's genuine friendship with the UFC's Dana White",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Mistaken Identity? Insiders Say the Wrong Dana White Was Offered U.S. Press Secretary Job",
+        "Dana White Explains Unfortunate Mix-Up Over Trump's Offer of Press Secretary Job"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "312094ee03fc",
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/politics/articles/mistaken-identity-insiders-wrong-dana-200000284.html",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Trump's post came after his former chief of staff Susie Wiles suggested another Dana White as press secretary: Dana W. White, a former chief spokesperson for the Pentagon.",
+          "date": "2026-11-08",
+          "role_evidence": "First outlet to report the insider claim that the wrong Dana White was named, sourcing it to White House reporters.",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 429",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113861+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "cf640c362216",
+          "name": "Irish Star",
+          "url": "https://www.irishstar.com/news/politics/donald-trump-dana-white-confusion-37856295",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Dana W. White, the former assistant to the Secretary of Defense for Public Affairs, has spoken out following a supposed mix-up",
+          "date": "2026-11-09",
+          "role_evidence": "Amplifies the mix-up story by directly quoting Dana W. White's LinkedIn response, giving the framing a named source.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113866+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "a755b6ed7f54",
+          "name": "Yahoo Sports / MMA community (social speculation)",
+          "url": "https://sports.yahoo.com/mma/article/dana-white-flying-to-washington-after-donald-trump-offers-ufc-boss-white-house-press-secretary-job-235902950.html",
+          "carrier_type": "news",
+          "amplifier_role": "mention",
+          "excerpt": "There has also been speculation on social media that a different Dana White was actually suggested to Trump",
+          "date": "2026-11-08",
+          "role_evidence": "Notes the mix-up theory circulating on social media, helping spread it to a sports audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113872+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's explicit statement that it was a joke, and the pattern of using spectacle and absurdism to dominate news cycles",
+          "found_in_framing": "Trump Humor / Trolling the Media",
+          "impact": "Reader assumes genuine confusion rather than intentional trolling, misunderstanding the episode's actual nature",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260402+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The months-long vacancy in the press secretary role and the pattern of unconventional candidates, suggesting systemic dysfunction rather than a single mix-up",
+          "found_in_framing": "Administration Dysfunction",
+          "impact": "Reader sees this as an isolated mistake rather than a symptom of broader organizational failure",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260405+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The AI cartoon depicting journalists being attacked, which suggests a coordinated messaging strategy beyond a simple naming error",
+          "found_in_framing": "Norm Erosion / Press Freedom",
+          "impact": "Reader cannot see the connection between the post and follow-up actions that suggest intentional anti-press messaging",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260408+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:43:30.113878+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "48082c80",
+      "name": "Norm Erosion / Press Freedom",
+      "short_label": "Threat to Press Briefing Norms",
+      "question": "Does this episode \u2014 including the AI cartoon of fighters attacking reporters \u2014 signal hostility toward the press corps?",
+      "key_claim": "Trump's Dana White post and the follow-up AI cartoon depicting UFC fighters attacking journalists reflect a sustained effort to delegitimize and intimidate the White House press corps.",
+      "traceable_claim": "Trump's offer of the press secretary job to Dana White, followed by an AI cartoon depicting UFC fighters attacking reporters, reflects a sustained effort to delegitimize and intimidate the White House press corps.",
+      "description": "This framing treats the announcement and the subsequent AI cartoon as part of a broader pattern of press antagonism, raising press-freedom concerns.",
+      "emphasizes": "The AI cartoon depicting reporters being body-slammed; the revolving door of press secretaries; the vacant role",
+      "downplays": "Trump's claim it was a joke; Dana White's genuine media savvy",
+      "tone": "alarmed",
+      "sample_headlines": [
+        "Trump Shares Wild Dana White UFC Cartoon of Fighters Attacking Reporters",
+        "AI Dana White Video Draws Calls to Invoke the 25th Amendment"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "65ce9f07ae20",
+          "name": "Reality Tea / Mandatory",
+          "url": "https://www.realitytea.com/2026/11/09/donald-trump-25th-amendment-ai-video-dana-white-white-house-press-secretary/",
+          "carrier_type": "news",
+          "amplifier_role": "originator",
+          "excerpt": "Donald Trump's AI Dana White Video Draws Calls to Invoke the 25th Amendment",
+          "date": "2026-11-09",
+          "role_evidence": "Among the first to frame the AI cartoon as a press-freedom alarm, noting calls to invoke the 25th Amendment.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113884+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "141bf9f86a28",
+          "name": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/politics/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "an announcement unconventional even for the norm-busting president",
+          "date": "2026-11-07",
+          "role_evidence": "Frames the offer as norm-breaking in a widely-read AP-sourced report, reaching a broad public audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113889+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e8169ced27b9",
+          "name": "Al Jazeera English",
+          "url": "https://www.aljazeera.com/news/2026/11/8/why-trump-wants-ufc-chief-dana-white-as-his-new-white-house-press-secretary",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "One of them body-slams a reporter who asks, 'Is Trump a threat to democracy?'",
+          "date": "2026-11-08",
+          "role_evidence": "Describes the AI cartoon's content in detail, amplifying the press-hostility framing to an international audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.113897+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's explicit admission that the Dana White post was a joke, and the absurdist details that made it self-evidently humorous",
+          "found_in_framing": "Trump Humor / Trolling the Media",
+          "impact": "Reader interprets the post as a serious threat to press freedom rather than understanding it as intentional absurdism, potentially overstating the danger",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260412+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Dana White's genuine media experience and competence, which could make him a plausible (if unconventional) candidate rather than an obvious insult",
+          "found_in_framing": "Mistaken Identity / Competence",
+          "impact": "Reader cannot assess whether the post was inherently degrading to the role or whether it reflected genuine consideration of an experienced communicator",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260415+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The possibility that the AI cartoon was playful follow-through on a joke rather than a coordinated intimidation campaign",
+          "found_in_framing": "Trump Humor / Trolling the Media",
+          "impact": "Reader attributes malicious intent to what could be consistent comedic messaging, overstating the threat to institutional norms",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260418+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:43:30.113905+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "95a53f93",
+      "name": "Trump Humor / Trolling the Media",
+      "short_label": "Classic Trump Troll Move",
+      "question": "Was this a deliberate, self-aware joke that the media took too seriously?",
+      "key_claim": "Trump's Dana White post was an obvious, good-natured troll \u2014 the inclusion of UFC fighters as 'assistants' made the joke self-evident, and the media's breathless coverage proved his point.",
+      "traceable_claim": "Trump's offer of the press secretary job to Dana White was an obvious, self-aware joke that the media took too seriously, as evidenced by Trump's own admission and the absurdist details in the post.",
+      "description": "This framing, amplified by Trump himself and right-leaning media, treats the episode as a successful piece of political performance art that exposed media humorlessness.",
+      "emphasizes": "Trump's own 'I was only kidding' admission; the absurdist details (listing UFC fighters as assistants); the AI cartoon as playful follow-through",
+      "downplays": "The genuine vacancy of the press secretary role; the press-freedom implications of the cartoon",
+      "tone": "dismissive",
+      "sample_headlines": [
+        "Trump Admits He Was 'Only Kidding' About UFC's Dana White Becoming White House Press Secretary",
+        "Trump Says Dana White Press Secretary Idea Was Only a Joke"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "1959ba934acd",
+          "name": "Donald Trump / Truth Social",
+          "url": "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html",
+          "carrier_type": "political",
+          "amplifier_role": "originator",
+          "excerpt": "I was only kidding",
+          "date": "2026-11-09",
+          "role_evidence": "Trump himself retroactively framed the post as a joke, originating this interpretive lens.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114004+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "6cd2f19c5428",
+          "name": "Deadline",
+          "url": "https://deadline.com/2026/11/dana-white-donald-trump-joke-1237217001/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "Trump admitted today he was 'only kidding'",
+          "date": "2026-11-08",
+          "role_evidence": "Widely-read entertainment/media outlet that centered Trump's 'joke' framing in its headline, spreading it to a large audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114010+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "78b5ba621abe",
+          "name": "Spreely News",
+          "url": "https://news.spreely.com/trump-says-dana-white-press-secretary-idea-was-only-a-joke/",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "Trump shrugged off the buzz around Dana White's surprise mention as a possible White House press secretary, saying the whole thing was never meant to be taken straight.",
+          "date": "2026-11-09",
+          "role_evidence": "Right-leaning platform that amplified the 'it was a joke' framing sympathetically, reinforcing it for a pro-Trump audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114016+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "The months-long vacancy in the press secretary role, the five-day tenure of the previous holder, and the pattern of unconventional candidates",
+          "found_in_framing": "Administration Dysfunction",
+          "impact": "Reader cannot see whether this joke occurs against a backdrop of genuine organizational dysfunction, missing the context that makes it less purely humorous",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260422+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The AI cartoon depicting journalists being attacked and the broader pattern of anti-press rhetoric, which could indicate sustained intimidation rather than isolated trolling",
+          "found_in_framing": "Norm Erosion / Press Freedom",
+          "impact": "Reader sees the post as a one-off joke rather than part of a coordinated strategy to delegitimize the press, missing systemic implications",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260425+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The timing of the post relative to Republican midterm losses and Trump's documented pattern of using spectacle to redirect media attention",
+          "found_in_framing": "Distraction / Political Misdirection",
+          "impact": "Reader cannot evaluate whether the 'joke' served a strategic political purpose, missing the possibility of calculated distraction",
+          "omission_type": "context",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260428+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:43:30.114022+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    },
+    {
+      "framing_id": "afd9e6b6",
+      "name": "Administration Dysfunction",
+      "short_label": "Revolving Door Press Secretary Crisis",
+      "question": "Does this episode reveal a deeper dysfunction in Trump's White House communications operation?",
+      "key_claim": "The Dana White episode is a symptom of a broken White House communications shop \u2014 with the press secretary role vacant for months, one five-day tenure ending in firing, and now a joke offer to a sports executive.",
+      "traceable_claim": "Trump's offer of the press secretary job to Dana White reflects a broader dysfunction in the White House communications operation, which has been without a permanent press secretary since Karoline Leavitt's departure months earlier.",
+      "description": "This framing uses the Dana White episode as a data point in a larger story of White House communications instability and leadership chaos.",
+      "emphasizes": "The months-long vacancy; Katie Zacharia's five-day tenure; the pattern of unconventional candidates including Nicki Minaj",
+      "downplays": "Trump's claim it was a joke; any strategic rationale for the post",
+      "tone": "measured",
+      "sample_headlines": [
+        "Trump Remains Without a Chief Spokesperson",
+        "The Shake-Up Follows the Brief but Tumultuous Week When Trump Tried Out a New Press Secretary"
+      ],
+      "carriers": [
+        {
+          "carrier_id": "075b234231ad",
+          "name": "ESPN",
+          "url": "https://www.espn.com/espn/story/_/id/50412085/report-dana-white-declines-trump-offer-press-secretary",
+          "carrier_type": "news",
+          "amplifier_role": "early-amplifier",
+          "excerpt": "The shake-up at the heart of his administration follows the brief but tumultuous week when Trump tried out a new press secretary in Katie Zacharia",
+          "date": "2026-11-07",
+          "role_evidence": "Contextualizes the Dana White offer within the broader pattern of press secretary instability, establishing the dysfunction framing.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 202)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114030+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "e27101f8b363",
+          "name": "CNN",
+          "url": "https://www.cnn.com/2026/11/07/politics/dana-white-trump-press-secretary",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "While one aide said Trump was joking about the offer, the president's post came as he's continued to search for a new press secretary",
+          "date": "2026-11-07",
+          "role_evidence": "Major outlet that frames the offer in the context of an ongoing, unresolved press secretary search, amplifying the dysfunction narrative.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114035+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "carrier_id": "750014096cf2",
+          "name": "CBS News",
+          "url": "https://www.cbsnews.com/news/trump-offers-white-house-press-secretary-role-dana-white/",
+          "carrier_type": "news",
+          "amplifier_role": "mass-amplifier",
+          "excerpt": "The role of the White House press secretary has been largely vacant since Karoline Leavitt stepped aside in August.",
+          "date": "2026-11-07",
+          "role_evidence": "Leads with the vacancy timeline, anchoring the dysfunction framing for a broad television news audience.",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (HTTP 200)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:30.114039+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "what_is_missing": "Trump's explicit statement that the Dana White post was a joke, and the absurdist details that made it self-evidently humorous",
+          "found_in_framing": "Trump Humor / Trolling the Media",
+          "impact": "Reader interprets the post as evidence of incompetence rather than intentional humor, mischaracterizing the nature of the dysfunction",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260434+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "Dana White's genuine media competence and experience, which could make him a non-absurd candidate despite being unconventional",
+          "found_in_framing": "Mistaken Identity / Competence",
+          "impact": "Reader assumes the post reflects poor judgment rather than considering whether it reflects genuine (if unusual) personnel thinking",
+          "omission_type": "factual",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260437+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "what_is_missing": "The timing of the post relative to midterm losses and Trump's pattern of using spectacle to dominate news cycles, which could indicate strategic distraction rather than mere dysfunction",
+          "found_in_framing": "Distraction / Political Misdirection",
+          "impact": "Reader attributes the post to organizational chaos rather than considering whether it serves a deliberate political purpose",
+          "omission_type": "perspective",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-haiku-4-5-20251001",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-09T13:43:45.260440+00:00",
+            "confidence": 0.0,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "fingerprint_id": "",
+      "provenance": {
+        "origin": "ai",
+        "status": "ai_generated",
+        "model": "claude-sonnet-4-6",
+        "contributor_id": "",
+        "contributor_name": "",
+        "created_at": "2026-11-09T13:43:30.114045+00:00",
+        "confidence": 0.0,
+        "reasoning": "",
+        "confirmations": [],
+        "disputes": [],
+        "revisions": [],
+        "confirmation_count": 0,
+        "dispute_count": 0,
+        "is_settled": false
+      }
+    }
+  ],
+  "gap_analysis": "Missing are framings that examine Dana White's actual qualifications or track record in media relations and communications strategy, which would ground the discussion in operational competence rather than just dysfunction. Also absent is any framing from Dana White's perspective\u2014his response, whether he was genuinely offered the role, or what his priorities are\u2014treating him as a passive subject rather than an agent. The framing lacks any examination of how this statement affects UFC's business interests or Dana White's dual-role complications. Finally, there's no framing exploring whether this reflects Trump's genuine personnel-search process versus standard political theater, which would require examining his actual hiring patterns and decision-making.",
+  "fingerprints": [],
+  "coverage_lean": {
+    "event": "Donald Trump stated that he offered the White House press secretary position to UFC president Dana White.",
+    "rated_outlets": 6,
+    "distribution": {
+      "left": 0,
+      "lean-left": 5,
+      "center": 1,
+      "lean-right": 0,
+      "right": 0
+    },
+    "distribution_pct": {
+      "left": 0,
+      "lean-left": 83,
+      "center": 17,
+      "lean-right": 0,
+      "right": 0
+    },
+    "left_of_center": 5,
+    "center": 1,
+    "right_of_center": 0,
+    "lean_index": -0.83,
+    "resolve_rate": 0.55,
+    "skew": "one-sided: no right-of-center coverage found (possible blindspot)",
+    "coverage_gap": {
+      "unrated_news_carriers": 5,
+      "examples": [
+        {
+          "carrier": "Irish Star",
+          "domain": "irishstar.com"
+        },
+        {
+          "carrier": "Reality Tea / Mandatory",
+          "domain": "realitytea.com"
+        },
+        {
+          "carrier": "Deadline",
+          "domain": "deadline.com"
+        },
+        {
+          "carrier": "Spreely News",
+          "domain": "news.spreely.com"
+        },
+        {
+          "carrier": "ESPN",
+          "domain": "espn.com"
+        }
+      ]
+    },
+    "non_news_carriers": 1,
+    "matched": [
+      {
+        "outlet": "Yahoo! News",
+        "carrier": "Yahoo News / MMA Fighting",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Al Jazeera",
+        "carrier": "Al Jazeera English",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "Yahoo! News",
+        "carrier": "Yahoo Sports / MMA community (social speculation)",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "domain"
+      },
+      {
+        "outlet": "CNN (Web News)",
+        "carrier": "CNN",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "CBS News",
+        "carrier": "CBS News",
+        "bucket": "lean-left",
+        "lean_num": -1,
+        "source": "allsides",
+        "matched_by": "alias"
+      },
+      {
+        "outlet": "PBS NewsHour",
+        "carrier": "PBS NewsHour",
+        "bucket": "center",
+        "lean_num": 0,
+        "source": "allsides",
+        "matched_by": "alias"
+      }
+    ],
+    "ecosystem": {
+      "by_type": {
+        "news": 13,
+        "political": 2,
+        "social": 0,
+        "institutional": 0,
+        "academic": 0,
+        "other": 0
+      },
+      "vested_interest": 2,
+      "framings_with_vested": 2,
+      "n_framings": 5
+    },
+    "source_note": "https://raw.githubusercontent.com/favstats/AllSideR/master/data/allsides_data.csv",
+    "as_of": "2019-10-18"
+  },
+  "coalition": {
+    "n_framings": 5,
+    "n_actors": 13,
+    "framings": [
+      {
+        "framing_id": "eafe1966",
+        "name": "Distraction / Political Misdirection",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "0fc5f3381b38",
+            "display": "Yahoo",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "1620eb87ddb2",
+            "display": "Rep. Melat Kiros",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "b28e0ccd",
+        "name": "Mistaken Identity / Competence",
+        "n_carriers": 2,
+        "primary": 2,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "0fc5f3381b38",
+            "display": "Yahoo",
+            "actor_type": "reference",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "09151e5bb9fd",
+            "display": "Irish Star",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "48082c80",
+        "name": "Norm Erosion / Press Freedom",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "5270705b64ca",
+            "display": "Al Jazeera",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": true
+          },
+          {
+            "actor_id": "9133fdf245a8",
+            "display": "PBS NewsHour",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "4b72d990dd47",
+            "display": "Reality Tea",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "95a53f93",
+        "name": "Trump Humor / Trolling the Media",
+        "n_carriers": 4,
+        "primary": 3,
+        "secondary": 1,
+        "carriers": [
+          {
+            "actor_id": "0df0ad187a9d",
+            "display": "Deadline",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "47ff7c926ed9",
+            "display": "Donald Trump",
+            "actor_type": "official",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "99cac4c70157",
+            "display": "Spreely News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "bc679c9cf53c",
+            "display": "CNBC",
+            "actor_type": "news",
+            "stance": "mention",
+            "tier": "secondary",
+            "bridges": false
+          }
+        ]
+      },
+      {
+        "framing_id": "afd9e6b6",
+        "name": "Administration Dysfunction",
+        "n_carriers": 3,
+        "primary": 3,
+        "secondary": 0,
+        "carriers": [
+          {
+            "actor_id": "ca1dd6e7ff48",
+            "display": "CBS News",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "922a54b2a6d6",
+            "display": "CNN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          },
+          {
+            "actor_id": "afb6efae85b7",
+            "display": "ESPN",
+            "actor_type": "news",
+            "stance": "champion",
+            "tier": "primary",
+            "bridges": false
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "actor_id": "5270705b64ca",
+        "display": "Al Jazeera",
+        "actor_type": "news",
+        "n_framings": 2,
+        "framings": [
+          "Distraction / Political Misdirection",
+          "Norm Erosion / Press Freedom"
+        ]
+      }
+    ],
+    "contested_actors": [],
+    "framing_pairs": [
+      {
+        "a": "Distraction / Political Misdirection",
+        "b": "Trump Humor / Trolling the Media",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Distraction / Political Misdirection",
+        "b": "Administration Dysfunction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Mistaken Identity / Competence",
+        "b": "Norm Erosion / Press Freedom",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Mistaken Identity / Competence",
+        "b": "Trump Humor / Trolling the Media",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Mistaken Identity / Competence",
+        "b": "Administration Dysfunction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Norm Erosion / Press Freedom",
+        "b": "Trump Humor / Trolling the Media",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Norm Erosion / Press Freedom",
+        "b": "Administration Dysfunction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Trump Humor / Trolling the Media",
+        "b": "Administration Dysfunction",
+        "shared": 0,
+        "jaccard": 0.0
+      },
+      {
+        "a": "Distraction / Political Misdirection",
+        "b": "Norm Erosion / Press Freedom",
+        "shared": 1,
+        "jaccard": 0.2
+      },
+      {
+        "a": "Distraction / Political Misdirection",
+        "b": "Mistaken Identity / Competence",
+        "shared": 1,
+        "jaccard": 0.25
+      }
+    ],
+    "by_actor_type": {
+      "news": 10,
+      "reference": 1,
+      "official": 2
+    },
+    "connectivity": {
+      "bridge_ratio": 0.077,
+      "siloed_share": 0.846,
+      "mean_jaccard": 0.045
+    },
+    "structure_note": "1 of 13 actors actively champion more than one framing (real cross-cutting, not just broad coverage); see the bridges and any contested actors for who connects \u2014 or splits \u2014 which lenses."
+  },
+  "circle_rollup": {},
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-11-09T13:43:47.759272+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
