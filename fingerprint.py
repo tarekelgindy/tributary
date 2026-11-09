@@ -197,6 +197,15 @@ For each instance you find, report:
                     (e.g. "Snopes' bibliography") and link the documenting
                     URL in source_url. Never present a secondhand citation
                     as a first-party link.
+                    CONSISTENCY RULE: whenever the source fields
+                    (author/title/date) describe one document and
+                    source_url links a DIFFERENT page — a Wikipedia
+                    article about the book, a news piece embedding the
+                    video, a fact-check citing the column — cited_via
+                    MUST name the linked page; an empty cited_via asserts
+                    the link IS the source. The amplifier role still
+                    describes the ORIGINAL source's function, never the
+                    hosting page's.
   source_title      title of the article/post/book
   author            if known, else ""
   lexical_form_seen the actual wording used at this source
@@ -253,7 +262,13 @@ Amplifier role definitions:
                           and university health explainers, science-desk
                           Q&As, and any "Myth or Fact?" page are critic even
                           when their tone is neutral — examining is not
-                          adopting. (All relative to the TRACED claim — on
+                          adopting. PUBLISHING is not adopting either: an
+                          institute, think tank, or university publishing
+                          analysis or commentary that supports the framing
+                          is a carrier (early-amplifier or mass-amplifier
+                          by reach), not adoption — adoption means the
+                          institution speaks the framing as its own
+                          official position. (All relative to the TRACED claim — on
                           a rebuttal trace, an institution stating the
                           rebuttal as its own position IS adoption; see
                           CLAIM POLARITY.)
@@ -268,6 +283,14 @@ Amplifier role definitions:
                           trace, debunking X is asserting the claim, not
                           criticizing it — see CLAIM POLARITY.)
   mention                 used the framing in passing without driving spread
+
+ROLE × RELATION: amplifier roles (originator, early-amplifier,
+mass-amplifier, institutional-adoption) are reserved for entries that
+ASSERT the traced claim. An entry included only as background
+(claim_relation="related-context") takes "mention" — or "critic" if it
+pushes back — never an amplifier role: a tangential piece cannot amplify
+a claim it does not make. (Recorded failure: a celebrity listicle that
+never makes the traced claim labeled mass-amplifier of it.)
 
 Assign exactly one role per instance. Use evidence-based judgement, not
 inference from author identity alone.
@@ -649,6 +672,11 @@ For each direct contributor, report:
                     offline documents known through a modern secondary
                     source, name that secondary here (e.g. "a 2012 clinical
                     review") and link the secondary's URL in source_url.
+                    CONSISTENCY RULE: whenever author/title/date describe
+                    one document and source_url links a different page (a
+                    Wikipedia article about the book), cited_via MUST name
+                    the linked page — empty asserts the link IS the source.
+                    Roles describe the original, never the hosting page.
   source_title      title of the work / talk / video / book / podcast
   author            who produced it
   lexical_form_seen the vocabulary they actually used (their own period-
@@ -702,7 +730,14 @@ For each direct contributor, report:
                                                 adoption; hospital/university
                                                 explainers and "Myth or
                                                 Fact?" pages are critic even
-                                                in neutral tone
+                                                in neutral tone; an institute
+                                                or think tank publishing
+                                                supportive analysis is an
+                                                amplifier by reach, not
+                                                adoption — adoption is the
+                                                institution speaking the
+                                                claim as its own official
+                                                position
                       critic                  = pushed back, fact-checked,
                                                 examined, or rebutted — any
                                                 source whose function is
@@ -726,6 +761,14 @@ Distinctions:
 Roles are assigned relative to the TRACED claim: if the claim is itself a
 rebuttal of some X, texts arguing against X are asserting this claim's
 tradition, not criticizing it.
+
+ROLE × RELATION: amplifier roles (originator, early-amplifier,
+mass-amplifier, institutional-adoption) are reserved for
+claim_relation="asserts" contributors. A related-context entry takes
+"mention" — or "critic" — never an amplifier role: background cannot
+amplify a claim it does not make. (Recorded failure: George Washington's
+Farewell Address, related-context on a 2025 crypto-corruption claim,
+labeled early-amplifier of it.)
 
 Return JSON:
 
@@ -1676,6 +1719,11 @@ def _single_originator_pass(instances: list) -> int:
     return len(crowns) - 1
 
 
+_AMPLIFIER_ROLES = frozenset({
+    AmplifierRole.ORIGINATOR, AmplifierRole.EARLY_AMPLIFIER,
+    AmplifierRole.MASS_AMPLIFIER, AmplifierRole.INSTITUTIONAL_ADOPTION})
+
+
 def _role_sanity_pass(instances: list) -> None:
     for inst in instances:
         if (_EXAMINER_TITLE_RE.search(inst.source_title or "")
@@ -1685,10 +1733,11 @@ def _role_sanity_pass(instances: list) -> None:
                 "announces an examining function.]").strip()
             inst.amplifier_role = AmplifierRole.CRITIC
         if (getattr(inst, "claim_relation", "") == "related-context"
-                and inst.amplifier_role == AmplifierRole.ORIGINATOR):
+                and inst.amplifier_role in _AMPLIFIER_ROLES):
             inst.role_evidence = ((inst.role_evidence or "") +
-                " [Role adjusted from originator: related-context material "
-                "cannot originate a claim it does not assert.]").strip()
+                f" [Role adjusted from {inst.amplifier_role.value}: "
+                "related-context material documents an adjacent claim — it "
+                "does not amplify this one.]").strip()
             inst.amplifier_role = AmplifierRole.MENTION
 
 

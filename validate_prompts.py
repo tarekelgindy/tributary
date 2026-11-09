@@ -19,6 +19,9 @@ don't regress:
   - implicit-referent resolver (bioweapons 2026-10-13 + Kimura 2026-10-14)
     with statistic + perennial controls proving it stays silent on
     form-general claims
+  - role x relation + the adoption bar (error-audit items 12 and 9,
+    2026-11-09): related-context never wears an amplifier role; a think
+    tank's supportive commentary is not institutional-adoption
 
 Run this after ANY edit to the attestation/ancestor prompts. Exit code 1 on
 any failure.
@@ -682,6 +685,80 @@ def policy_allows_general_claim(client):
     """Control: a general claim naming no private person is untouched."""
     j = _call_policy(client, "vaccines cause autism")
     return not j.get("refuse"), f"refuse={j.get('refuse')} ({j.get('why', '')!r})"
+
+
+@fixture
+def adoption_bar_thinktank(client):
+    """PUBLISHING != ADOPTING (audit 2026-09-25, item 9): a think tank's
+    supportive commentary is a carrier, not institutional-adoption.
+    NOTE: in harness mode the pre-2026-11-09 prompt also passed this — the
+    live failure came from retrieval-context drift. This fixture guards the
+    definition against regression; it cannot reproduce the drift."""
+    out = _call(client, EARLIEST_USE_SYSTEM, {
+        "claim_being_traced": ("Israel's targeted killing of Hamas commanders shows "
+                               "deep intelligence penetration and command structure collapse"),
+        "diagnostic_ngrams": ["targeted killing of Hamas commanders",
+                              "intelligence penetration", "command structure collapse"],
+        "candidates": [
+            {"source_title": "Israel's Leadership Decapitation Strategy",
+             "author": "RSIS commentary staff", "date": "2024-10-22",
+             "source_url": "https://rsis.edu.sg/rsis-publication/rsis/israels-leadership-decapitation-strategy/",
+             "content_summary": ("A commentary published by the S. Rajaratnam School of "
+                                 "International Studies, a Singapore university institute: "
+                                 "'Israel's strategy of targeting the top leaders of Hamas "
+                                 "and Hezbollah offers short-term gains by disrupting "
+                                 "command structures and boosting the morale of the Israeli "
+                                 "public.' A bylined analyst commentary in the institute's "
+                                 "publication series.")}]})
+    ent = _entries(out)
+    if not ent:
+        return False, "RSIS entry missing entirely"
+    role = ent[0].get("amplifier_role", "")
+    return role != "institutional-adoption", (
+        f"role={role!r} (a think-tank commentary must not be institutional-adoption)")
+
+
+@fixture
+def context_never_amplifies(client):
+    """ROLE x RELATION (audit 2026-09-25, item 12): Washington's Farewell
+    Address on a 2025 crypto claim is related-context at most, and a
+    related-context entry never wears an amplifier role.
+    NOTE: in harness mode the pre-2026-11-09 prompt also passed this — the
+    live failure came from retrieval-context drift. The binding guard is the
+    deterministic role x relation demotion in _role_sanity_pass; this fixture
+    guards the prompt rule against regression."""
+    out = _call(client, CONCEPTUAL_ANCESTORS_SYSTEM, {
+        "claim_being_traced": ("foreign money in Trump crypto creates pay-to-play "
+                               "foreign policy influence"),
+        "diagnostic_ngrams": ["pay-to-play", "foreign money", "Trump crypto"],
+        "candidates": [
+            {"source_title": "Farewell Address", "author": "George Washington",
+             "date": "1796-09-19",
+             "source_url": "https://www.history.com/articles/foreign-influence-constitution-founding-fathers",
+             "content_summary": ("Washington's 1796 warning 'against the insidious wiles "
+                                 "of foreign influence' — general civic doctrine about "
+                                 "foreign meddling, 229 years before cryptocurrency; it "
+                                 "makes no claim about payments buying policy from an "
+                                 "officeholder's business ventures.")},
+            {"source_title": "Trump dinner for meme coin buyers prompts senators to demand ethics probe",
+             "author": "CNBC staff", "date": "2025-04-25",
+             "source_url": "https://www.cnbc.com/2025/04/25/trump-dinner-for-meme-coin-prompts-senators-to-demand-ethics-probe.html",
+             "content_summary": ("News report quoting senators: 'severe risk that President "
+                                 "Trump and other officials may be engaging in pay to play "
+                                 "corruption by selling presidential access to individuals "
+                                 "or entities, to include foreign nationals' — the same "
+                                 "structural claim in near-identical vocabulary.")}]})
+    ent = _entries(out)
+    gw = next((e for e in ent if "Washington" in str(e.get("author", ""))), None)
+    cnbc = next((e for e in ent if "2025" in str(e.get("date", ""))), None)
+    amplifier = {"originator", "early-amplifier", "mass-amplifier", "institutional-adoption"}
+    gw_ok = gw is None or (gw.get("claim_relation") == "related-context"
+                           and gw.get("amplifier_role", "") not in amplifier)
+    cnbc_ok = cnbc is not None and cnbc.get("claim_relation") == "asserts"
+    return gw_ok and cnbc_ok, (
+        f"Washington={'excluded' if gw is None else (gw.get('claim_relation'), gw.get('amplifier_role'))!r} "
+        f"(needs related-context + non-amplifier role, or excluded) · CNBC="
+        f"{'MISSING' if cnbc is None else cnbc.get('claim_relation')!r} (needs asserts)")
 
 
 def main():

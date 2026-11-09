@@ -425,6 +425,29 @@ def test_deny_titles_are_NOT_auto_flipped():
     assert inst.amplifier_role == AmplifierRole.EARLY_AMPLIFIER
 
 
+# --- role x relation: related-context never wears an amplifier badge ---------
+
+def test_related_context_amplifier_roles_demote_to_mention():
+    # Audit 2026-09-25, items 1 & 12: a celebrity listicle and Washington's
+    # Farewell Address — both related-context — carried amplifier roles.
+    for role in (AmplifierRole.MASS_AMPLIFIER, AmplifierRole.EARLY_AMPLIFIER,
+                 AmplifierRole.INSTITUTIONAL_ADOPTION, AmplifierRole.ORIGINATOR):
+        inst = _inst("2022-01-11", rel="related-context", role=role, iid="ctx")
+        _role_sanity_pass([inst])
+        assert inst.amplifier_role == AmplifierRole.MENTION, role
+        assert "does not amplify" in inst.role_evidence
+
+
+def test_related_context_critic_and_mention_survive():
+    crit = _inst("2018-07-31", rel="related-context", role=AmplifierRole.CRITIC, iid="c")
+    men = _inst("2018-07-31", rel="related-context", role=AmplifierRole.MENTION, iid="m")
+    asserting = _inst("2026-07-06", role=AmplifierRole.MASS_AMPLIFIER, iid="np")
+    _role_sanity_pass([crit, men, asserting])
+    assert crit.amplifier_role == AmplifierRole.CRITIC
+    assert men.amplifier_role == AmplifierRole.MENTION
+    assert asserting.amplifier_role == AmplifierRole.MASS_AMPLIFIER
+
+
 # --- actor canonicalization + graph primitives (Batch D) ---------------------
 
 def test_actor_key_canonicalization():
