@@ -1,0 +1,2498 @@
+{
+  "fingerprint_id": "b5849cab1ec4",
+  "created_at": "2026-11-16T18:02:01.941613+00:00",
+  "last_updated": "2026-11-16T18:02:01.941613+00:00",
+  "taxonomy_version": "0.1",
+  "scope": {
+    "language": "en",
+    "region": "US",
+    "time_window_start": "",
+    "time_window_end": ""
+  },
+  "lexical": {
+    "canonical_phrase": "people swallow 10 spiders in their sleep",
+    "phrase_variants": [
+      "swallow spiders while sleeping",
+      "10 spiders down your throat at night",
+      "you swallow spiders in your sleep",
+      "average person swallows spiders sleeping",
+      "spiders crawl in your mouth while you sleep"
+    ],
+    "diagnostic_ngrams": [
+      "swallow spiders sleep",
+      "spiders in mouth sleeping",
+      "10 spiders swallow",
+      "spiders down throat"
+    ],
+    "stopword_stripped_signature": "people swallow 10 spiders their sleep"
+  },
+  "conceptual": {
+    "claim_predicate": "humans involuntarily ingest small objects during sleep",
+    "entities": {
+      "agent": "spiders (arachnids)",
+      "patient": "sleeping humans",
+      "arena": "human physiology and sleep behavior",
+      "instrument": "involuntary swallowing reflex during sleep"
+    },
+    "causal_structure": "spiders enter the mouths of sleeping humans and are swallowed due to the involuntary swallowing reflex, resulting in ingestion",
+    "referent": {}
+  },
+  "rhetorical": {
+    "frame_primitives": [
+      "harm-claim",
+      "threat-claim",
+      "revelation"
+    ],
+    "valence": {
+      "villain": "spiders",
+      "victim": "sleeping humans",
+      "hero": ""
+    },
+    "epistemic_stance": "certain",
+    "register": "casual"
+  },
+  "genealogy": {
+    "lexical": {
+      "lineage_type": "lexical",
+      "status": "earliest-found",
+      "first_attested_date": "1997-03-15",
+      "first_attested_source": "https://groups.google.com/g/alt.folklore.urban/c/Qk4D1peFSjw/m/KQsPIcNFzZIJ",
+      "attestation_confidence": 0.72,
+      "primary_origin_id": "572f980f37f0",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "572f980f37f0",
+          "date": "1997-03-15",
+          "source_url": "https://groups.google.com/g/alt.folklore.urban/c/Qk4D1peFSjw/m/KQsPIcNFzZIJ",
+          "source_title": "Eating Spiders? \u2014 alt.folklore.urban Usenet thread",
+          "author": "IceKing (handle: hav...@inreach.com)",
+          "lexical_form_seen": "swallow apx. 30 spiders [crawl in to look for a place to hide, we swallow them whole]",
+          "exact_quote": ">I heard on a radio show this morning, that we, within a year, >swallow apx.30 spiders. The radio guy says when they crawl in to look for a place to hide, we swallow them whole.",
+          "confidence": 0.72,
+          "evidence": "Google Groups archive of alt.folklore.urban. The message-ID domain 'inreach.com' was an ISP active 1995\u20132000; the thread header '3331BC...@inreach.com' is consistent with mid-to-late 1990s Usenet dating. Exact date not recoverable from the snippet; assigned circa 1997. The poster attributes the claim to a radio show, indicating the framing was already circulating orally/broadcast before this post. Multiple respondents in the thread push back, treating it as a known rumor. This is the earliest *online* lexical attestation found.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Repeats the 'swallow spiders in sleep' framing as heard on radio, spreading it to the alt.folklore.urban community before mainstream internet uptake.",
+          "cited_via": "",
+          "date_precision": "circa",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372411+00:00",
+            "confidence": 0.72,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "ead41566b2be",
+          "date": "2001-04-01",
+          "source_url": "https://www.snopes.com/fact-check/swallow-spiders/",
+          "source_title": "Fact Check: Do People Swallow Spiders in Their Sleep?",
+          "author": "Snopes staff (attributed to fabricated 'Lisa Birgit Holst')",
+          "lexical_form_seen": "swallow eight spiders a year while they sleep / swallow spiders in their sleep",
+          "exact_quote": "\"average person swallows eight spiders per year\" \u2014 Snopes page asserting the framing as a known myth, citing a fabricated 1993 PC Professional article as origin.",
+          "confidence": 0.82,
+          "evidence": "Snopes published its spider-swallowing fact-check page in April 2001, per multiple corroborating sources including researchtoolbench.com and the Skeptics Stack Exchange thread. Snopes itself later admitted the 'Lisa Birgit Holst / PC Professional' citation was a planted in-joke ('This Is A Big Troll' anagram), confirming no 1993 article exists. The Snopes page is the earliest *confirmed and datable* online document using the diagnostic framing at scale, and it simultaneously debunks and amplifies the myth.",
+          "amplifier_role": "critic",
+          "role_evidence": "Snopes' page became the canonical reference cited by virtually every subsequent debunking and retelling, driving the framing into mainstream internet consciousness even while labeling it false. [Role adjusted from mass-amplifier: the title announces an examining function.]",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372467+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "e74b3aead677",
+          "date": "2007-11-01",
+          "source_url": "https://skeptics.stackexchange.com/questions/2094/is-a-writer-named-lisa-holst-responsible-for-the-belief-that-everyone-eats-eight",
+          "source_title": "Is a writer named Lisa Holst responsible for the belief that everyone eats eight spiders a year?",
+          "author": "Multiple Stack Exchange contributors",
+          "lexical_form_seen": "eats eight spiders a year / swallow spiders in their sleep",
+          "exact_quote": "\"In a 1993 PC Professional article, columnist Lisa Holst wrote about the ubiquitous lists of 'facts' that were circulating via e-mail and how readily they were accepted as truthful by gullible recipients.\"",
+          "confidence": 0.75,
+          "evidence": "Skeptics Stack Exchange thread investigating the Lisa Holst / PC Professional origin story. Contributors document that no copy of the article has ever been found, the Library of Congress has no record of 'PC Professional,' and 'Lisa Birgit Holst' is an anagram of 'This Is A Big Troll.' Establishes the meta-layer: the origin story is itself a myth. Date is approximate based on Stack Exchange's early activity period for this question.",
+          "amplifier_role": "critic",
+          "role_evidence": "Investigates and casts doubt on the claimed 1993 origin, functioning as a fact-check of the myth's own origin story rather than asserting the spider-swallowing claim.",
+          "cited_via": "wikimho.com mirror of Skeptics Stack Exchange",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "quote verified via Wayback snapshot (original URL HTTP 403)",
+          "archive_url": "http://web.archive.org/web/20251205044816/https://skeptics.stackexchange.com/questions/2094/is-a-writer-named-lisa-holst-responsible-for-the-belief-that-everyone-eats-eight",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372488+00:00",
+            "confidence": 0.75,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "c04285c4e12a",
+          "date": "2012-11-01",
+          "source_url": "https://www.scientificamerican.com/article/fact-or-fiction-people-swallow-8-spiders-a-year-while-they-sleep1/",
+          "source_title": "Fact or Fiction?: People Swallow 8 Spiders a Year While They Sleep",
+          "author": "Scientific American staff",
+          "lexical_form_seen": "People Swallow 8 Spiders a Year While They Sleep",
+          "exact_quote": "\"Fact or Fiction?: People Swallow 8 Spiders a Year While They Sleep\" \u2014 headline using the diagnostic framing verbatim.",
+          "confidence": 0.8,
+          "evidence": "Scientific American published this debunking piece, archived by the Wayback Machine (archive snapshot noted in Wikipedia's 'Spiders Georg' article as of August 7, 2017, confirming the page existed well before that). The article uses the exact '8 spiders a year while they sleep' phrasing in its headline. Date is approximate; the Wayback archive confirms existence by at least 2017 and the article's style and URL structure are consistent with early 2010s SciAm web content.",
+          "amplifier_role": "critic",
+          "role_evidence": "Scientific American examines and debunks the 'swallow 8 spiders' claim, functioning as an institutional critic of the traced framing.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372502+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "23b806686332",
+          "date": "2013-01-09",
+          "source_url": "https://reallyreallyreallytrying.tumblr.com/post/40033025233",
+          "source_title": "'average person eats 3 spiders a year' factoid actualy just statistical error \u2014 Tumblr (Spiders Georg post)",
+          "author": "reallyreallyreallytrying (Tumblr handle)",
+          "lexical_form_seen": "average person eats 3 spiders a year [in their sleep]",
+          "exact_quote": "\"'average person eats 3 spiders a year' factoid actualy just statistical error\" \u2014 the originating Tumblr post of the 'Spiders Georg' meme, riffing on the sleep-swallowing framing.",
+          "confidence": 0.85,
+          "evidence": "Cited in Wikipedia's 'Spiders Georg' article with a Wayback Machine archive URL (archived March 20, 2023, confirming the post's existence). The post date of January 9, 2013 is given in the Wikipedia citation. This is the originating post of the viral 'Spiders Georg' meme, which became one of the most widely shared riffs on the spider-swallowing framing across Tumblr and later the broader internet.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The 'Spiders Georg' Tumblr post went massively viral, driving the spider-swallowing framing to a new generation of internet users and cementing it in popular culture meme format.",
+          "cited_via": "Wikipedia 'Spiders Georg' article (https://en.wikipedia.org/wiki/Spiders_Georg), citing archived Tumblr post",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "fetch-error",
+          "verification_notes": "RemoteProtocolError",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372518+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f27297a06bf0",
+          "date": "2014-09-10",
+          "source_url": "https://www.huffpost.com/entry/spiders-georg-meme_n_5412861",
+          "source_title": "This meme is a reminder that you really can't trust facts you read on the internet",
+          "author": "HuffPost staff",
+          "lexical_form_seen": "spiders a year [swallowed in sleep] / Spiders Georg meme",
+          "exact_quote": "\"This meme is a reminder that you really can't trust facts you read on the internet\" \u2014 HuffPost coverage of the Spiders Georg meme built on the spider-swallowing framing.",
+          "confidence": 0.85,
+          "evidence": "HuffPost article archived by Wayback Machine (archive snapshot December 25, 2022, per Wikipedia citation). Covers the viral Spiders Georg meme and its relationship to the 'average person swallows spiders in sleep' urban legend, bringing the framing to a mainstream news audience.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "HuffPost's mainstream coverage of the Spiders Georg meme amplified the spider-swallowing framing to a broad general audience beyond Tumblr.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "URL + quote verified",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372531+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f28f528d9b81",
+          "date": "2015-11-17",
+          "source_url": "http://www.bbc.com/earth/story/20151117-is-it-true-that-we-accidentally-swallow-spiders-when-we-sleep",
+          "source_title": "Is it true that we accidentally swallow spiders when we sleep?",
+          "author": "BBC Earth staff",
+          "lexical_form_seen": "accidentally swallow spiders when we sleep",
+          "exact_quote": "\"Is it true that we accidentally swallow spiders when we sleep?\" \u2014 BBC Earth headline using the diagnostic framing.",
+          "confidence": 0.8,
+          "evidence": "URL and date cited in FlipScience's reference list (flipscience.ph article dated 2019, referencing the BBC Earth piece at this URL with the November 17, 2015 date embedded in the URL slug). BBC Earth's coverage represents institutional mainstream media adoption of the debunking framing.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "BBC Earth publishing a dedicated explainer under this headline represents a major international broadcaster formally adopting the 'swallow spiders in sleep' framing as a topic worthy of institutional fact-checking coverage.",
+          "cited_via": "flipscience.ph references list",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": false,
+          "verification_status": "quote-not-found",
+          "verification_notes": "no fuzzy chunk of quote found in page",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372543+00:00",
+            "confidence": 0.8,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "29f6d6c89757",
+          "date": "2021-11-10",
+          "source_url": "https://www.mypmp.net/2021/11/10/the-truth-about-swallowing-spiders/",
+          "source_title": "The truth about swallowing spiders",
+          "author": "MyPMP (Pest Management Professional) staff",
+          "lexical_form_seen": "swallow spiders in our sleep / eat eight spiders a year in your sleep",
+          "exact_quote": "\"Do people actually eat eight spiders a year in your sleep? This urban legend isn't true \u2014 spiders are more afraid of you than you are of them.\"",
+          "confidence": 0.9,
+          "evidence": "Pest Management Professional trade publication article, dated November 10, 2021 per URL and page metadata. Notes there is 'no exact origin where this legend came from' and that the Snopes Lisa Holst story is itself disputed. Represents trade/industry institutional engagement with the framing.",
+          "amplifier_role": "critic",
+          "role_evidence": "Industry trade publication debunking the myth for pest management professionals, functioning as a sector-specific critic of the spider-swallowing framing.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "",
+          "verified": true,
+          "verification_status": "verified",
+          "verification_notes": "quote verified via Wayback snapshot (original URL HTTP 403)",
+          "archive_url": "http://web.archive.org/web/20250313153155/https://www.mypmp.net/2021/11/10/the-truth-about-swallowing-spiders/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:00:16.372555+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "SEARCH STRATEGY: Searched for (1) 'swallow spiders sleep myth origin history before 1997'; (2) '\"swallow spiders\" \"in your sleep\" earliest origin'; (3) 'LEMMiNO \"swallow spiders\" usenet 1997 earliest verified origin investigation'; (4) '\"insect fact and folklore\" 1954 spiders sleep swallow Lucy Clausen'. WHAT WAS SEARCHED: The dominant historiography of this myth converges on three candidate pre-1997 sources: (a) a 1990 article in Cornell Engineer by Margot A. S. Vigeant titled 'Things to Stress Over'; (b) a 1993 article in PC Professional attributed to 'Lisa Birgit Holst'; and (c) Lucy W. Clausen's 1954 book Insect Fact and Folklore. WHAT WAS RULED OUT: The 1993 'Lisa Holst / PC Professional' story is itself a fabrication \u2014 Snopes admitted it invented the Holst backstory as a meta-joke about misinformation (index 4-11/4-12), and LEMMiNO's investigation confirmed the relevant page of the German PC Professionell magazine contains nothing about spiders or sleep (index 20-11/20-12). The 1954 Clausen book is real and confirmed to exist, but multiple independent sources \u2014 including the Smithsonian's Floyd Shockley, the Burke Museum's Rod Crawford, and direct examination of the book \u2014 confirm it contains no passage about swallowing spiders in sleep; the spider-swallowing attribution to p. 24 was part of the fabricated Holst story. The 1990 Cornell Engineer article by Vigeant is the most credible pre-1997 candidate, predating the proposed 1997-03-15 date by approximately seven years; however, it is attested only by a single secondary source (theonlinephysicstutor.com) and was flagged as unconfirmed by Research Tool Bench. The LEMMiNO YouTube investigation (referenced across multiple sources) reportedly identified an early 1997 Usenet post as 'the oldest verifiable mention' it could locate \u2014 which would be consistent with the proposed 1997-03-15 date \u2014 but this finding could not be directly verified from available search results. LIMITATIONS: The Cornell Engineer archives from 1990 are not digitized or publicly searchable online; the Usenet archives from pre-1997 are largely inaccessible without Google Groups (discontinued Feb 2024); the original PC Professionell German magazine pages are not publicly indexed. The 1990 Vigeant article, if it exists as described, would constitute a genuine pre-1997 attestation, but independent confirmation was not achievable within this search.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "1997-03-15",
+        "active_through": "2021-11-10",
+        "active_span_days": 9006,
+        "years_active": 24,
+        "years_with_activity": 8,
+        "instances_per_year": {
+          "1997": 1,
+          "2001": 1,
+          "2007": 1,
+          "2012": 1,
+          "2013": 1,
+          "2014": 1,
+          "2015": 1,
+          "2021": 1
+        },
+        "instances_per_year_by_role": {
+          "1997": {
+            "early-amplifier": 1
+          },
+          "2001": {
+            "critic": 1
+          },
+          "2007": {
+            "critic": 1
+          },
+          "2012": {
+            "critic": 1
+          },
+          "2013": {
+            "mass-amplifier": 1
+          },
+          "2014": {
+            "mass-amplifier": 1
+          },
+          "2015": {
+            "institutional-adoption": 1
+          },
+          "2021": {
+            "critic": 1
+          }
+        },
+        "peak_year": "1997",
+        "peak_year_count": 1,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
+        "days_since_latest": 1832
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "conceptual": {
+      "lineage_type": "conceptual",
+      "status": "earliest-found",
+      "first_attested_date": "1992-04-01",
+      "first_attested_source": "https://www.lemmi.no/p/the-eight-spiders",
+      "attestation_confidence": 0.45,
+      "primary_origin_id": "a911b05c562a",
+      "parallel_origin_ids": [],
+      "attestation_log": [
+        {
+          "instance_id": "6a79daf0e4f2",
+          "date": "1954-01-01",
+          "source_url": "https://www.worldcat.org/title/insect-fact-and-folklore/oclc/1299498",
+          "source_title": "Insect Fact and Folklore",
+          "author": "Lucy W. Clausen",
+          "lexical_form_seen": "folk beliefs about insects and arachnids entering the human body",
+          "exact_quote": "",
+          "confidence": 0.35,
+          "evidence": "Snopes' 2001 article (itself later revealed as a troll) claimed the spider-swallowing 'fact' was drawn from this 1954 book. Multiple investigators confirmed the book exists but contains no spider-swallowing claim. Included as the alleged pre-internet print anchor of the myth; confidence is low because the link is fabricated by Snopes.",
+          "amplifier_role": "mention",
+          "role_evidence": "Cited as a supposed upstream source by Snopes, but the book does not actually assert the claim; functions only as a named artifact in the myth's provenance story.",
+          "cited_via": "Snopes fact-check page (snopes.com/fact-check/swallow-spiders/) and multiple secondary debunking sources citing it as the alleged upstream source",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "related-context",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747266+00:00",
+            "confidence": 0.35,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a911b05c562a",
+          "date": "1992-04-01",
+          "source_url": "https://www.lemmi.no/p/the-eight-spiders",
+          "source_title": "Unidentified 1992 print article (antedates PC Professional claim)",
+          "author": "Unknown",
+          "lexical_form_seen": "people swallow spiders while sleeping",
+          "exact_quote": "",
+          "confidence": 0.45,
+          "evidence": "A viewer named Jinkinson Smith found a mention of the spider-swallowing myth in a print article from April 1992, predating the fabricated 1993 PC Professional article by several months. This is the earliest documented print attestation of the claim in its current quantified form, though the source remains unidentified.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Earliest currently documented print instance of the claim in its modern quantified form, predating the Snopes-cited origin story.",
+          "cited_via": "LEMMiNO Substack post by Benjamin B\u00e5ngens (lemmi.no), which documents a viewer's discovery of a 1992 article antedating the Snopes-cited PC Professional piece",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747308+00:00",
+            "confidence": 0.45,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "c6d79d142c57",
+          "date": "1993-01-01",
+          "source_url": "https://www.mentalfloss.com/culture/folklore-mythology/do-we-really-swallow-spiders-while-sleeping",
+          "source_title": "Early internet chain emails and email-forward 'fact lists'",
+          "author": "Unknown (anonymous chain-email authors)",
+          "lexical_form_seen": "the average person swallows eight spiders a year while sleeping",
+          "exact_quote": "",
+          "confidence": 0.7,
+          "evidence": "Multiple sources confirm the claim circulated widely through early-1990s email chains and message boards as a 'fun fact,' with the specific figure of eight spiders per year becoming the canonical form. This is the primary vehicle by which the claim entered mass popular consciousness before the web.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Anonymous chain-email circulation in the early internet era was the primary mechanism by which the claim reached millions of people as an accepted 'fact.'",
+          "cited_via": "Mental Floss article summarizing the myth's early-internet spread",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747337+00:00",
+            "confidence": 0.7,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "c017daf15162",
+          "date": "1993-01-07",
+          "source_url": "https://www.snopes.com/fact-check/swallow-spiders/",
+          "source_title": "\"Reading Is Believing\" \u2014 PC Professional (fabricated; does not exist)",
+          "author": "\"Lisa Birgit Holst\" (fictional; anagram of \"This is a Big Troll\", invented by Snopes)",
+          "lexical_form_seen": "people swallow eight spiders a year in their sleep; intentionally false 'fact' seeded to demonstrate internet credulity",
+          "exact_quote": "",
+          "confidence": 0.2,
+          "evidence": "Snopes' 2001 article attributed the myth's origin to this 1993 PC Professional column by 'Lisa Birgit Holst.' In 2021, Snopes founder David Mikkelson admitted 'Lisa Birgit Holst' is an anagram for 'This is a Big Troll' and the article never existed. The fabricated citation itself became a mass-amplifier of the myth through circular reporting across hundreds of debunking sites.",
+          "amplifier_role": "early-amplifier",
+          "role_evidence": "Though fictional, this fabricated origin story was cited by virtually every subsequent debunking article and thereby paradoxically amplified the claim's cultural footprint.",
+          "cited_via": "Snopes fact-check page, which cites this article as the origin \u2014 later revealed to be a fabrication by Snopes itself",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747325+00:00",
+            "confidence": 0.2,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "100596baeaad",
+          "date": "2001-04-22",
+          "source_url": "https://www.snopes.com/fact-check/swallow-spiders/",
+          "source_title": "Do People Swallow Eight Spiders Per Year?",
+          "author": "David Mikkelson, Snopes.com",
+          "lexical_form_seen": "swallow eight spiders a year while sleeping; 'not only made up out of whole cloth, it was invented as an example of the absurd things people will believe'",
+          "exact_quote": "\"was not only made up out of whole cloth, it was invented as an example of the absurd things people will believe\"",
+          "confidence": 0.95,
+          "evidence": "Snopes published the canonical debunking article in 2001, attributing the myth to the fictional Lisa Birgit Holst. The article became the most-cited source on the myth's origin and, ironically, amplified the claim's reach by giving it a seemingly authoritative origin story. In 2021 Mikkelson admitted the Holst attribution was itself a deliberate troll to demonstrate internet credulity.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The Snopes article became the single most-cited source on the myth, spreading both the debunk and the claim itself to a mass audience; its fabricated origin story was reproduced by hundreds of subsequent sites.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747350+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "bb9340337964",
+          "date": "2003-01-01",
+          "source_url": "https://www.burkemuseum.org/collections-and-research/biology/arachnology-and-entomology/spider-myths/myth-you-swallow-spiders",
+          "source_title": "Spider Myths: Myth \u2014 You swallow spiders in your sleep",
+          "author": "Rod Crawford, Curator of Arachnids, Burke Museum of Natural History and Culture, University of Washington",
+          "lexical_form_seen": "you unknowingly swallow an average of four live spiders in your sleep each year; no such case is on formal record anywhere in scientific or medical literature",
+          "exact_quote": "\"For a sleeping person to swallow even one live spider would involve so many highly unlikely circumstances that for practical purposes we can rule out the possibility.\"",
+          "confidence": 0.97,
+          "evidence": "Rod Crawford's Burke Museum 'Spider Myths' page is the primary institutional scientific rebuttal of the claim, written by the leading US arachnid curator. It documents multiple variant forms of the claim (4/year, 20/lifetime, 1 pound/lifetime) and provides the biological reasoning against it. The page has been continuously maintained since 2003 and is cited by Scientific American, CBS News, and dozens of other outlets.",
+          "amplifier_role": "critic",
+          "role_evidence": "Crawford's page is the authoritative scientific debunking source, cited by virtually every subsequent journalistic and institutional treatment of the myth.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747364+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "19baa8f03d6f",
+          "date": "2003-01-01",
+          "source_url": "https://www.burkemuseum.org/static/spidermyth/myths/whileyousleep.html",
+          "source_title": "Spider Myths: Gulp! (variant myths \u2014 spiders drink from mouths/eyes of sleeping humans)",
+          "author": "Rod Crawford, Burke Museum",
+          "lexical_form_seen": "spiders drink moisture from the mouths or lips of sleeping humans; a spider will drink from your eye while you sleep 3 times in your life",
+          "exact_quote": "\"It is probably just a variation on the 'swallowing live spiders in your sleep' legend; like that one, it has no basis in fact.\"",
+          "confidence": 0.9,
+          "evidence": "Crawford documents a related variant claim \u2014 that spiders drink from the mouths or eyes of sleeping humans \u2014 as a parallel tradition to the swallowing myth, showing the claim exists in a family of related folk beliefs about spider-human contact during sleep.",
+          "amplifier_role": "critic",
+          "role_evidence": "Documents the broader family of sleep-spider ingestion/contact myths, showing the swallowing claim is one node in a cluster of related folk beliefs.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747378+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "befd5975e572",
+          "date": "2007-01-01",
+          "source_url": "https://www.ripleys.com/stories/swallow-eight-spiders",
+          "source_title": "Snapple 'Real Facts' bottle cap #31",
+          "author": "Snapple Beverage Corp.",
+          "lexical_form_seen": "Real Fact: the average person swallows eight spiders a year while sleeping",
+          "exact_quote": "",
+          "confidence": 0.75,
+          "evidence": "The spider-swallowing claim was printed on Snapple bottle caps as 'Real Fact #31,' reaching tens of millions of consumers and cementing the claim as a piece of popular trivia. Ripley's notes Snapple has since removed it from their current 'Real Facts' list.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Snapple's mass-market bottle cap distribution gave the claim physical, branded, consumer-product reach to tens of millions of people, making it one of the most powerful non-digital amplifiers of the myth.",
+          "cited_via": "Ripley's Believe It or Not website, which notes the claim was once a Snapple 'Real Fact' cap",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747389+00:00",
+            "confidence": 0.75,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "989db0444fde",
+          "date": "2013-01-01",
+          "source_url": "https://en.wikipedia.org/wiki/Spiders_Georg",
+          "source_title": "\"Spiders Georg\" Tumblr post",
+          "author": "Max Lavergne (Tumblr user)",
+          "lexical_form_seen": "'average person eats 3 spiders a year' factoid actually just statistical error. average person eats 0 spiders per year. Spiders Georg, who lives in cave & eats 10,000 spiders per day, is an outlier and should not have been counted.",
+          "exact_quote": "\"average person eats 3 spiders a year\" factoid actualy just statistical error.",
+          "confidence": 0.95,
+          "evidence": "The 'Spiders Georg' Tumblr post by Max Lavergne in 2013 became a viral internet meme that both restated the spider-swallowing claim and satirized it using statistical reasoning. It is one of the most widely shared internet artifacts related to the myth and introduced the claim to a new generation of internet users.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "The 'Spiders Georg' meme became one of the most viral restatements of the spider-swallowing claim on the internet, reaching millions through Tumblr and subsequent social media platforms.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747424+00:00",
+            "confidence": 0.95,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "72205a9d992c",
+          "date": "2014-04-15",
+          "source_url": "https://www.scientificamerican.com/article/fact-or-fiction-people-swallow-8-spiders-a-year-while-they-sleep1/",
+          "source_title": "Fact or Fiction? People Swallow 8 Spiders a Year While They Sleep",
+          "author": "Annie Sneed, Scientific American",
+          "lexical_form_seen": "people swallow eight spiders a year while they sleep; the myth flies in the face of both spider and human biology",
+          "exact_quote": "\"Vibrations are a big slice of spiders' sensory universe. A sleeping person is not something a spider would willingly approach.\"",
+          "confidence": 0.97,
+          "evidence": "Scientific American's debunking article by Annie Sneed, quoting Rod Crawford extensively, became the most-cited scientific-press treatment of the myth. It articulates the structural claim in full before debunking it, and is cited by Ripley's, CBS News, and dozens of other outlets as the authoritative scientific source.",
+          "amplifier_role": "critic",
+          "role_evidence": "The Scientific American article is the most-cited scientific-press debunking, giving the myth and its refutation mainstream scientific credibility and wide secondary citation.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747400+00:00",
+            "confidence": 0.97,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "6c0febecac63",
+          "date": "2014-04-16",
+          "source_url": "https://www.realclearscience.com/2014/04/16/do_people_swallow_spiders_while_sleeping_258546.html",
+          "source_title": "Do People Swallow Spiders While Sleeping?",
+          "author": "RealClearScience (syndication of Scientific American piece)",
+          "lexical_form_seen": "do people swallow spiders while sleeping; firsthand accounts of spider-swilling slumberers",
+          "exact_quote": "\"Once or twice a year, someone tells me they once recovered a spider leg in their mouth\"",
+          "confidence": 0.88,
+          "evidence": "RealClearScience syndicated and amplified the Scientific American debunking, noting that Crawford regularly receives firsthand folk accounts of the claim \u2014 demonstrating the claim's ongoing oral circulation even as it is debunked.",
+          "amplifier_role": "critic",
+          "role_evidence": "Syndication amplified the Scientific American debunking to a broader science-news audience.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20140704020934/http://www.realclearscience.com/2014/04/16/do_people_swallow_spiders_while_sleeping_258546.html",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747413+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "5118e8e2614b",
+          "date": "2017-09-23",
+          "source_url": "https://www.aol.com/article/news/2017/09/23/do-sleeping-humans-really-swallow-8-spiders-a-year/23220507",
+          "source_title": "Do sleeping humans really swallow 8 spiders a year?",
+          "author": "AOL News / Newsy",
+          "lexical_form_seen": "you might've heard the urban legend that sleeping people swallow about eight spiders a year; tracking down the myth's origin is tough",
+          "exact_quote": "\"You'd have to be unlucky for that to happen.\"",
+          "confidence": 0.85,
+          "evidence": "This mainstream news article restates the claim in full, quotes expert Maggie Hardy (biochemist, University of Queensland) and Rod Crawford, and documents the ongoing uncertainty about the myth's true origin \u2014 showing the claim's continued circulation in mass-media news cycles as late as 2017.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "Mass-media news syndication of the claim and its debunking to a broad general audience in 2017.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 404",
+          "archive_url": "http://web.archive.org/web/20200808005833/https://www.aol.com/article/news/2017/09/23/do-sleeping-humans-really-swallow-8-spiders-a-year/23220507/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747446+00:00",
+            "confidence": 0.85,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "c55648ed9100",
+          "date": "2018-08-29",
+          "source_url": "https://ahscougarcall.com/showcase/2018/08/29/circular-reporting-the-lisa-holst-problem/",
+          "source_title": "Circular Reporting: The Lisa Holst Problem",
+          "author": "AHS Cougar Call (student publication)",
+          "lexical_form_seen": "circular reporting; the oft-shared factoid about swallowing spiders in one's sleep is a complete fabrication; Snopes simply made it up",
+          "exact_quote": "\"the oft shared factoid about swallowing spiders in one's sleep is a complete fabrication\"",
+          "confidence": 0.78,
+          "evidence": "This student journalism piece documents the circular-reporting dynamic by which the Snopes article's fabricated origin story was reproduced uncritically by hundreds of subsequent debunking sites, demonstrating how the myth's debunking infrastructure itself became a vehicle for spreading the claim. [auto: date set from the URL's own date path (/2018/08/29/) \u2014 stored 2016-09-01; the publisher's path outranks a model-reported date. URL-date pass, 2026-10-27.]",
+          "amplifier_role": "critic",
+          "role_evidence": "Documents the meta-level circular-reporting problem that caused the myth's debunking to paradoxically amplify it.",
+          "cited_via": "AHS Cougar Call student journalism piece documenting the circular-reporting phenomenon",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 526",
+          "archive_url": "http://web.archive.org/web/20251014045740/https://ahscougarcall.com/showcase/2018/08/29/circular-reporting-the-lisa-holst-problem/",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747434+00:00",
+            "confidence": 0.78,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "18cf79e98b0a",
+          "date": "2019-01-01",
+          "source_url": "https://myfox8.com/offbeat/do-you-actually-swallow-8-spiders-a-year-while-you-sleep/",
+          "source_title": "Do you actually swallow 8 spiders a year while you sleep?",
+          "author": "MyFox8 / Gray Television",
+          "lexical_form_seen": "one of the most enduring urban legends claims you swallow eight spiders a year in your sleep; Snopes created the Lisa Birgit Holst article as something silly for their long-time readers",
+          "exact_quote": "\"Lisa Birgit Holst\" is an anagram for \"tHis is a Big troLl\"",
+          "confidence": 0.88,
+          "evidence": "This local TV news article is notable for being among the first mainstream outlets to document the Snopes meta-troll (the Lisa Birgit Holst anagram), and also cites a Psychology of Learning and Motivation study examining why people believe the eight-spiders myth \u2014 connecting the claim to academic cognitive-bias research.",
+          "amplifier_role": "critic",
+          "role_evidence": "One of the first mainstream outlets to expose the Snopes meta-troll and connect the myth to academic cognitive-bias literature.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747459+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "a92c2df4134a",
+          "date": "2019-01-01",
+          "source_url": "https://myfox8.com/offbeat/do-you-actually-swallow-8-spiders-a-year-while-you-sleep/",
+          "source_title": "Psychology of Learning and Motivation, vol. 64 (chapter on the eight-spiders myth and cognitive bias)",
+          "author": "Brashier et al. (academic authors cited in MyFox8 piece)",
+          "lexical_form_seen": "the mental processes we use to support accurate information can also lead to mistakes such as the false belief in swallowing eight spiders in our sleep every year",
+          "exact_quote": "",
+          "confidence": 0.65,
+          "evidence": "An academic chapter in Psychology of Learning and Motivation used the eight-spiders myth as a case study in cognitive bias and false belief formation, giving the myth a foothold in academic psychology literature and connecting it to the broader study of misinformation.",
+          "amplifier_role": "mention",
+          "role_evidence": "Academic psychology literature uses the myth as a case study in false belief, giving it scholarly citation and connecting it to misinformation research.",
+          "cited_via": "MyFox8 article citing Psychology of Learning and Motivation vol. 64",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747469+00:00",
+            "confidence": 0.65,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "0e8a29d8a535",
+          "date": "2021-02-15",
+          "source_url": "https://www.reconnectwithnature.org/news-events/the-buzz/myth-buster-we-don-t-really-swallow-eight-spiders/",
+          "source_title": "Myth buster: We don't really swallow eight spiders a year while sleeping",
+          "author": "Reconnect with Nature",
+          "lexical_form_seen": "the very idea of humans swallowing spiders flies in the face of both human biology and spider science; no scientific record or medical evidence exists",
+          "exact_quote": "\"Swallowing even one spider while sleeping in your lifetime would be noteworthy, so eight a year is about as far-fetched as it gets.\"",
+          "confidence": 0.82,
+          "evidence": "Nature-education outlet debunking article citing the National Sleep Foundation and Scientific American, demonstrating the claim's continued circulation in 2021 and its reach into nature/wildlife education contexts.",
+          "amplifier_role": "critic",
+          "role_evidence": "Institutional nature-education debunking, showing the claim's reach into wildlife and environmental education contexts.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747479+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "eab92935727b",
+          "date": "2021-08-31",
+          "source_url": "https://www.lemmi.no/p/the-eight-spiders",
+          "source_title": "The Eight Spiders (video essay / Substack post)",
+          "author": "Benjamin B\u00e5ngens (LEMMiNO)",
+          "lexical_form_seen": "the PC Professional article from 1993 never existed so the origins of the myth remains a mystery; Lisa Birgit Holst is a deliberate anagram",
+          "exact_quote": "\"the PC Professional article from 1993 never existed so the origins of the myth remains a mystery\"",
+          "confidence": 0.93,
+          "evidence": "LEMMiNO's video essay is the most thorough investigative treatment of the myth's origin, documenting the Snopes meta-troll, the 1992 antedating article, and the complete absence of any verifiable origin. It reached a large YouTube/Substack audience and is the primary source for the current understanding that the myth's true origin is unknown.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "LEMMiNO's video essay is the definitive popular investigative treatment of the myth's origin, reaching a large online audience and establishing the current consensus that the origin is genuinely unknown.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747489+00:00",
+            "confidence": 0.93,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "f375e6d7838a",
+          "date": "2022-01-01",
+          "source_url": "https://www.sleepfoundation.org/sleep-faqs/how-many-spiders-do-you-eat-in-your-sleep",
+          "source_title": "How Many Spiders Do You Eat in Your Sleep?",
+          "author": "Sleep Foundation",
+          "lexical_form_seen": "the idea that people eat a certain number of spiders each year is an internet myth; while humans do swallow sporadically while they sleep, there are long periods of time when no swallowing takes place",
+          "exact_quote": "\"While humans do swallow sporadically while they sleep, there are long periods of time when no swallowing takes place.\"",
+          "confidence": 0.9,
+          "evidence": "The Sleep Foundation's institutional FAQ page addresses the claim directly, invoking the involuntary swallowing reflex during sleep as part of its debunking \u2014 the only major source to explicitly engage with the 'involuntary swallowing reflex' mechanism named in the structural claim. It represents institutional-health-authority adoption of the debunking.",
+          "amplifier_role": "critic",
+          "role_evidence": "The Sleep Foundation is the primary institutional health authority to address the claim, explicitly engaging with the swallowing-reflex mechanism and reaching a large health-information-seeking audience.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747502+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "e6d6a15a1978",
+          "date": "2022-09-01",
+          "source_url": "https://www.iflscience.com/why-does-everyone-think-we-swallow-spiders-in-our-sleep-all-the-time-77572",
+          "source_title": "Why Does Everyone Think We Swallow Spiders In Our Sleep All The Time?",
+          "author": "IFLScience",
+          "lexical_form_seen": "its origin is completely unknown; the effect of repetition and 'truthiness' explain why so many people accept the idea that we're all habitually consuming spiders in our sleep",
+          "exact_quote": "\"Millions of people have some time or other watched another person sleep; so why don't we have one eyewitness account of a spider trying to enter the sleeper's mouth?\"",
+          "confidence": 0.88,
+          "evidence": "IFLScience's popular-science debunking article explicitly invokes the cognitive-science concepts of repetition and 'truthiness' to explain the myth's persistence, connecting the claim to the broader misinformation literature and reaching a large science-enthusiast audience.",
+          "amplifier_role": "critic",
+          "role_evidence": "Popular science outlet connecting the myth's persistence to cognitive-bias and misinformation research for a large science-enthusiast audience.",
+          "cited_via": "",
+          "date_precision": "month",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747517+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "63a4447c9d16",
+          "date": "2023-01-01",
+          "source_url": "https://www.britannica.com/video/Do-we-really-swallow-spiders-in-our-sleep/-306330",
+          "source_title": "Do We Really Swallow Spiders in Our Sleep? (video)",
+          "author": "Encyclopaedia Britannica",
+          "lexical_form_seen": "we humans swallow spiders while we sleep; the most often cited number is a whopping eight per year; this fake fact is actually built on a web of lies",
+          "exact_quote": "\"No one knows where the original myth came from, but it's been around for decades.\"",
+          "confidence": 0.92,
+          "evidence": "Encyclopaedia Britannica produced a video debunking the claim, representing the highest-authority general-reference institutional adoption of the debunking. It also documents the Snopes meta-troll and confirms the myth's origin remains unknown.",
+          "amplifier_role": "institutional-adoption",
+          "role_evidence": "Encyclopaedia Britannica's institutional debunking represents the highest-authority general-reference adoption of the claim's refutation, cementing it as established knowledge.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20261029064713/https://www.britannica.com/video/Do-we-really-swallow-spiders-in-our-sleep/-306330",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747529+00:00",
+            "confidence": 0.92,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "1d6ac1c1084e",
+          "date": "2024-01-01",
+          "source_url": "https://www.discovermagazine.com/humans-don-t-eat-8-spiders-per-year-in-their-sleep-here-s-how-we-d-know-if-we-did-48381",
+          "source_title": "Humans Don't Eat 8 Spiders Per Year in Their Sleep \u2014 Here's How We'd Know If We Did",
+          "author": "Discover Magazine",
+          "lexical_form_seen": "researchers are unsure where the rumor that we eat 8 spiders per year in our sleep came from; its absolute origin is unknown",
+          "exact_quote": "\"I think the myth sticks around because it's just so wonderfully weird.\"",
+          "confidence": 0.9,
+          "evidence": "Discover Magazine's 2024 article quotes multiple named researchers (Heyborne, Tremblay, Fassbender) who all agree there is no evidence people regularly swallow spiders, and documents the ongoing mystery of the myth's true origin \u2014 showing the claim's continued active circulation and debunking in mainstream science journalism.",
+          "amplifier_role": "critic",
+          "role_evidence": "Mainstream science journalism debunking with multiple named expert sources, demonstrating the claim's continued active circulation as recently as 2024.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "http://web.archive.org/web/20261002182416/https://www.discovermagazine.com/humans-don-t-eat-8-spiders-per-year-in-their-sleep-here-s-how-we-d-know-if-we-did-48381",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747541+00:00",
+            "confidence": 0.9,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "4654f6ba6742",
+          "date": "2025-01-01",
+          "source_url": "https://theuselessgenius.substack.com/p/no-you-dont-swallow-spiders-in-your",
+          "source_title": "No, You Don't Swallow Spiders in Your Sleep (And That Myth Was a Setup)",
+          "author": "The Useless Genius (Substack)",
+          "lexical_form_seen": "the claim that people swallow spiders in their sleep originated from a made-up 'fact' in a 1990s article; experts agree it's biologically implausible",
+          "exact_quote": "\"Just one clever fake 'fact' that somehow became immortal.\"",
+          "confidence": 0.82,
+          "evidence": "A 2025 Substack post demonstrates the claim's continued active circulation in new-media commentary, reaching a newsletter audience and perpetuating the standard debunking narrative (including the now-discredited Holst attribution), showing the myth remains culturally alive.",
+          "amplifier_role": "mass-amplifier",
+          "role_evidence": "New-media Substack commentary demonstrating the claim's continued active circulation and debunking in 2025 newsletter culture.",
+          "cited_via": "",
+          "date_precision": "year",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": false,
+          "verification_status": "url-error",
+          "verification_notes": "HTTP 403",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747551+00:00",
+            "confidence": 0.82,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        },
+        {
+          "instance_id": "430e547b4357",
+          "date": "2026-07-10",
+          "source_url": "https://debunked.info/terms/spiders-swallowed-sleep/",
+          "source_title": "You swallow spiders in your sleep",
+          "author": "Debunked.info",
+          "lexical_form_seen": "the swallowing reflex, along with the coughing and gag reflexes, remains active during sleep and would very likely be triggered by a small foreign object such as a spider",
+          "exact_quote": "\"The swallowing reflex...remains active during sleep and would very likely be triggered by a small foreign object such as a spider.\"",
+          "confidence": 0.88,
+          "evidence": "The most recent (2026) institutional debunking entry, notable for being the only source to explicitly and technically engage with the involuntary swallowing reflex mechanism \u2014 the precise causal instrument named in the structural claim \u2014 and explain why it would prevent rather than enable spider ingestion.",
+          "amplifier_role": "critic",
+          "role_evidence": "Most recent debunking source; uniquely engages with the involuntary swallowing reflex mechanism named in the structural claim, providing the most technically precise refutation.",
+          "cited_via": "",
+          "date_precision": "day",
+          "describes_period": "",
+          "claim_relation": "asserts",
+          "verified": true,
+          "verification_status": "url-ok",
+          "verification_notes": "URL reachable (quote not checked)",
+          "archive_url": "",
+          "provenance": {
+            "origin": "ai",
+            "status": "ai_generated",
+            "model": "claude-sonnet-4-6",
+            "contributor_id": "",
+            "contributor_name": "",
+            "created_at": "2026-11-16T18:01:37.747563+00:00",
+            "confidence": 0.88,
+            "reasoning": "",
+            "confirmations": [],
+            "disputes": [],
+            "revisions": [],
+            "confirmation_count": 0,
+            "dispute_count": 0,
+            "is_settled": false
+          }
+        }
+      ],
+      "adversarial_check_performed": true,
+      "adversarial_notes": "A thorough search was conducted across multiple scholarly, journalistic, and fact-checking sources to identify any articulation of the structural claim \u2014 that spiders enter the mouths of sleeping humans and are swallowed via the involuntary swallowing reflex \u2014 predating the proposed 1954 date.\n\n**What was checked:**\n1. The 1954 book 'Insect Fact and Folklore' by Lucy Wilhelmine Clausen is the earliest named candidate in the scholarly and journalistic record. Smithsonian entomologist Floyd Shockley cited it as the first known appearance of the claim. However, multiple independent fact-checkers (Snopes, Tom's Guide, AOL News) confirmed that the spider-swallowing claim does not actually appear in that book \u2014 it has no section on spiders. The 1954 date therefore appears to be a secondary misattribution, not a verified attestation. The proposed 1954-01-01 date is thus already contested as a genuine origin.\n2. The 1993 'PC Professional' article attributed to Lisa Holst is the most widely cited proximate amplifier of the myth, but that magazine is itself reportedly fictional (a fabrication by Snopes in 2001 to demonstrate internet credulity). Multiple sources confirm the myth's 'absolute origin is unknown.'\n3. Pre-1954 folklore and popular science traditions were considered: no pre-1954 print, oral, or scientific record of the specific structural claim (spiders entering sleeping humans' mouths and being swallowed) was found in any source consulted. The Burke Museum's Rod Crawford, the field's leading authority on spider myths, states there are no eyewitness accounts, no specimens, and no scientific or medical records of the event ever occurring, let alone being documented before 1954.\n4. The children's rhyme 'There Was an Old Lady Who Swallowed a Fly' (attested from the 19th century) involves swallowing a spider, but this is a fictional/nonsense narrative about a conscious, awake character deliberately swallowing animals in sequence \u2014 it does not assert the structural claim of involuntary ingestion during sleep and is therefore fiction, not attestation (claim_relation='related-context' at most).\n5. Pre-20th-century folklore collections, entomological literature (Fabre, Emerton, Warburton), and arachnological texts were considered; none contain the specific structural claim.\n6. The search is limited by the fact that the true oral or print origin of this myth may predate any indexed or digitized source, and non-English-language traditions were not searched. However, within the English-language US-focused scope specified, no pre-1954 articulation was found.\n\n**Conclusion:** The clean negative result here is meaningful and consistent with the expert consensus that the myth's origin is genuinely unknown and undocumented prior to the mid-20th century. The proposed 1954 date is itself disputed as a misattribution to a book that does not contain the claim. No earlier ancestor was found.",
+      "mutations": [],
+      "timeline_stats": {
+        "active_from": "1992-04-01",
+        "active_through": "2026-07-10",
+        "active_span_days": 12518,
+        "years_active": 34,
+        "years_with_activity": 16,
+        "instances_per_year": {
+          "1992": 1,
+          "1993": 2,
+          "2001": 1,
+          "2003": 2,
+          "2007": 1,
+          "2013": 1,
+          "2014": 2,
+          "2017": 1,
+          "2018": 1,
+          "2019": 2,
+          "2021": 2,
+          "2022": 2,
+          "2023": 1,
+          "2024": 1,
+          "2025": 1,
+          "2026": 1
+        },
+        "instances_per_year_by_role": {
+          "1992": {
+            "early-amplifier": 1
+          },
+          "1993": {
+            "mass-amplifier": 1,
+            "early-amplifier": 1
+          },
+          "2001": {
+            "mass-amplifier": 1
+          },
+          "2003": {
+            "critic": 2
+          },
+          "2007": {
+            "mass-amplifier": 1
+          },
+          "2013": {
+            "mass-amplifier": 1
+          },
+          "2014": {
+            "critic": 2
+          },
+          "2017": {
+            "mass-amplifier": 1
+          },
+          "2018": {
+            "critic": 1
+          },
+          "2019": {
+            "critic": 1,
+            "mention": 1
+          },
+          "2021": {
+            "critic": 1,
+            "mass-amplifier": 1
+          },
+          "2022": {
+            "critic": 2
+          },
+          "2023": {
+            "institutional-adoption": 1
+          },
+          "2024": {
+            "critic": 1
+          },
+          "2025": {
+            "mass-amplifier": 1
+          },
+          "2026": {
+            "critic": 1
+          }
+        },
+        "peak_year": "1993",
+        "peak_year_count": 2,
+        "originator_to_mass_amplifier_days": null,
+        "originator_to_institutional_adoption_days": null,
+        "originator_to_critic_days": null,
+        "days_since_latest": 129
+      },
+      "social_spread": [],
+      "social_search_performed": false,
+      "social_search_notes": ""
+    },
+    "predecessor_fingerprint_ids": [],
+    "successor_fingerprint_ids": [],
+    "earlier_candidates_rejected": []
+  },
+  "taxonomic": {
+    "domain": "health",
+    "domain_confidence": 0.72,
+    "inductive_cluster_ids": [],
+    "tropes": []
+  },
+  "evidence_landscape": {
+    "sources": [
+      {
+        "source_id": "7453dbd5dadf",
+        "title": "Burke Museum Spider Myths: 'You Swallow Spiders in Your Sleep'",
+        "description": "Rod Crawford, arachnid curator at the Burke Museum of Natural History and Culture in Seattle, maintains a dedicated page cataloguing spider myths. He states there is no evidence \u2014 no specimens, no eyewitness accounts, and no case on record in scientific or medical literature \u2014 of anyone ever swallowing a spider while sleeping.",
+        "direction": "disputes",
+        "strength": "strong",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.burkemuseum.org/collections-and-research/biology/arachnology-and-entomology/spider-myths/myth-you-swallow-spiders",
+        "date": "2000-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Primary expert statement from a named specialist at a major natural history museum; the strongest single institutional voice disputing the claim.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.538994+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "5ced55b8b537",
+        "title": "Scientific American: 'Fact or Fiction? People Swallow 8 Spiders a Year While They Sleep'",
+        "description": "Interviews Rod Crawford and other arachnologists who explain that vibrations from a sleeping human's heartbeat, breathing, and movement register to spiders as a large, dangerous disturbance, making voluntary approach highly unlikely. Experts concede a random swallowing event is theoretically possible but would be strictly accidental.",
+        "direction": "disputes",
+        "strength": "strong",
+        "source_venue": "news-outlet",
+        "source_type": "secondary",
+        "source_url": "https://www.scientificamerican.com/article/fact-or-fiction-people-swallow-8-spiders-a-year-while-they-sleep1/",
+        "date": "2014-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Aggregates expert opinion from multiple named arachnologists; secondary but cites primary expert sources directly.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539047+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "b8b854baf28c",
+        "title": "Discover Magazine: 'Humans Don't Eat 8 Spiders Per Year in Their Sleep'",
+        "description": "Spider expert Michelle Tremblay (Georgia Southern University) explains that sleeping humans are 'noisy, hot, large, and move too much' for a spider's preference, and that an open mouth with airflow and moisture would be 'a very inhospitable environment for a secretive animal like a spider.'",
+        "direction": "disputes",
+        "strength": "strong",
+        "source_venue": "news-outlet",
+        "source_type": "secondary",
+        "source_url": "https://www.discovermagazine.com/humans-don-t-eat-8-spiders-per-year-in-their-sleep-here-s-how-we-d-know-if-we-did-48381",
+        "date": "2025-12-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Cites a named university spider expert; secondary journalism but quotes primary expert directly.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 403",
+        "archive_url": "http://web.archive.org/web/20261002182416/https://www.discovermagazine.com/humans-don-t-eat-8-spiders-per-year-in-their-sleep-here-s-how-we-d-know-if-we-did-48381",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539065+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "5354cb0148a0",
+        "title": "Sleep Foundation: 'How Many Spiders Do You Eat in Your Sleep?'",
+        "description": "Reviews both human sleep physiology and spider behavior. Notes that swallowing occurs only sporadically during sleep with long gaps, that spiders are not hostile to humans, and that spiders can sense vibrations from a sleeping body. Concludes there is no evidence people routinely swallow spiders while sleeping.",
+        "direction": "disputes",
+        "strength": "moderate",
+        "source_venue": "institutional",
+        "source_type": "secondary",
+        "source_url": "https://www.sleepfoundation.org/sleep-faqs/how-many-spiders-do-you-eat-in-your-sleep",
+        "date": "2026-11-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Institutional health organization synthesizing expert consensus; secondary but widely cited and recently updated.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539079+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "ff8ee00dd9e5",
+        "title": "Snopes / 'Lisa Birgit Holst' Origin Story \u2014 and Its Own Retraction",
+        "description": "The most widely cited origin story for the myth attributes it to a 1993 PC Professional magazine article by 'Lisa Birgit Holst,' who allegedly invented the spider statistic to demonstrate internet gullibility. However, Snopes' founder David Mikkelson admitted in 2021 that 'Lisa Birgit Holst' is itself an anagram for 'This Is A Big Troll,' and that the PC Professional article never existed. Independent researchers confirmed the magazine and author cannot be located.",
+        "direction": "shared-context",
+        "strength": "moderate",
+        "source_venue": "aggregator",
+        "source_type": "secondary",
+        "source_url": "https://researchtoolbench.com/research-briefs/eight-spiders-a-year-myth/",
+        "date": "2021-08-31",
+        "status": "correction-issued",
+        "status_notes": "Snopes issued a correction in August 2021 acknowledging the 'Lisa Birgit Holst' attribution was itself a fabrication; the true origin of the myth remains unknown.",
+        "notes": "The origin story of the myth is itself a meta-hoax, making the provenance of the claim doubly uncertain; important shared context for evaluating how the myth spread.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539094+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "76f66f192e68",
+        "title": "PNAS: 'Nocturnal Swallowing Augments Arousal Intensity and Arousal Tachycardia'",
+        "description": "Peer-reviewed study in healthy adults showing that swallowing during sleep is overwhelmingly associated with cortical arousal events and occurs only episodically \u2014 rarely during stable sleep. Swallowing is a protective airway reflex that tends to wake the sleeper.",
+        "direction": "disputes",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.pnas.org/doi/10.1073/pnas.1907393117",
+        "date": "2020-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Primary physiological research showing swallowing during sleep is rare and linked to arousal, undermining the mechanism by which a spider could be passively swallowed without waking the sleeper.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 403",
+        "archive_url": "http://web.archive.org/web/20250827230221/https://www.pnas.org/doi/10.1073/pnas.1907393117",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539110+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "a626f8b42683",
+        "title": "ScienceDirect: 'Reflex Swallowing Elicited by Electrical Stimulation in Obstructive Sleep Apnea Patients'",
+        "description": "Peer-reviewed study finding that the efficiency of eliciting the swallowing reflex drops from 80% when awake to 37.4% during sleep, and is lowest during deep (N3) sleep stages.",
+        "direction": "disputes",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://www.sciencedirect.com/science/article/pii/S1569904819303581",
+        "date": "2019-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Primary data showing the swallowing reflex is substantially suppressed during sleep, making involuntary ingestion of any object significantly less likely than during wakefulness.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 403",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539123+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "2e6fb7a39903",
+        "title": "Oxford Academic (Sleep Journal): 'Swallowing and Aspiration During Sleep in Patients with OSA vs. Controls'",
+        "description": "Peer-reviewed study documenting that even in healthy control subjects, complete swallowing during sleep occurs at a low and irregular rate, with swallowing frequency varying significantly by sleep stage.",
+        "direction": "shared-context",
+        "strength": "strong",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://academic.oup.com/sleep/article/45/4/zsac036/6528989",
+        "date": "2022-04-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Establishes the factual baseline for swallowing physiology during sleep \u2014 uncontested common ground relevant to any claim about involuntary ingestion during sleep.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 403",
+        "archive_url": "http://web.archive.org/web/20220725204659/https://academic.oup.com/sleep/article/45/4/zsac036/6528989",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539136+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "2156b91a9c87",
+        "title": "PubMed: 'Sleep Stage Coordination of Respiration and Swallowing: A Preliminary Study'",
+        "description": "Peer-reviewed preliminary study finding that the coordination between respiration and swallowing as a defense mechanism against aspiration is impaired during sleep, and that healthy adults do aspirate pharyngeal secretions during sleep.",
+        "direction": "redirects",
+        "strength": "moderate",
+        "source_venue": "peer-reviewed",
+        "source_type": "primary",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/27338262/",
+        "date": "2016-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Suggests an alternative framing: humans do involuntarily aspirate material (saliva, secretions) during sleep, but this is a physiological process \u2014 not spider ingestion. Redirects the 'involuntary ingestion during sleep' question toward what actually does get swallowed.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 203)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539149+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "7ce2c3cd4011",
+        "title": "bioRxiv Preprint: 'A State with Increased Arousal Threshold in Araneus diadematus Measured in the Wild: New Evidence for Sleep in Spiders'",
+        "description": "Field study providing new evidence that common garden spiders (Araneus diadematus) exhibit genuine sleep states with increased arousal thresholds in the wild, meaning spiders themselves are less responsive to stimuli during their own sleep periods.",
+        "direction": "shared-context",
+        "strength": "moderate",
+        "source_venue": "preprint-server",
+        "source_type": "primary",
+        "source_url": "https://www.biorxiv.org/content/10.1101/2023.10.19.563109.full.pdf",
+        "date": "2023-10-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Preprint (not yet peer-reviewed at time of indexing); establishes that spiders have their own sleep cycles, providing biological context for when and how spiders move \u2014 relevant shared background.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 429",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539162+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "f2c017db564c",
+        "title": "SciTechDaily / University of Bonn: 'Do Spiders Dream? Scientists Discover a Mysterious Sleep State' (Portia fimbriata REM-like sleep)",
+        "description": "Recent peer-reviewed research finding that jumping spiders (Portia fimbriata) experience two distinct sleep stages, one of which resembles REM sleep in humans, with leg twitching and eye movement. Spiders are largely inactive and in a reduced-arousal state during these periods.",
+        "direction": "shared-context",
+        "strength": "moderate",
+        "source_venue": "news-outlet",
+        "source_type": "secondary",
+        "source_url": "https://scitechdaily.com/do-spiders-dream-scientists-discover-a-mysterious-sleep-state/",
+        "date": "2026-11-03",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Secondary coverage of primary research; establishes that spiders have complex, regulated sleep behavior \u2014 contextually relevant to understanding spider nocturnal activity patterns.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539174+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "defe2fd530c5",
+        "title": "Biology Insights: 'Do Spiders Crawl on You at Night? The Scientific Truth'",
+        "description": "Synthesizes spider sensory biology: sleeping humans generate continuous low-frequency vibrations from heartbeat, pulse, and chest movement that register to spiders as a large, dangerous disturbance. Concludes that while it is technically possible for a spider to crawl across a sleeping human, the chance of one actively approaching is negligible.",
+        "direction": "disputes",
+        "strength": "moderate",
+        "source_venue": "self-published",
+        "source_type": "secondary",
+        "source_url": "https://biologyinsights.com/do-spiders-crawl-on-you-at-night-the-scientific-truth/",
+        "date": "2025-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Self-published synthesis; useful for its mechanistic explanation of spider vibration sensitivity but should be weighted lower than institutional or peer-reviewed sources.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539186+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "ec0c75558eb4",
+        "title": "Smithsonian / CBS8 Verify: Entomologist Floyd Shockley Statement",
+        "description": "Floyd Shockley, entomologist at the Smithsonian National Museum of Natural History, states that people do not swallow spiders in their sleep, and that the idea first appeared in a fictional 1954 book on insect and spider folklore \u2014 though subsequent investigation shows even that attribution is disputed.",
+        "direction": "disputes",
+        "strength": "moderate",
+        "source_venue": "news-outlet",
+        "source_type": "secondary",
+        "source_url": "https://www.cbs8.com/article/news/verify/environment-verify/humans-do-not-swallow-spiders-when-sleep-sleeping-urban-legend-myth-fact-check/536-777fec50-29bd-4194-95d4-23d24f6259bd",
+        "date": "2021-10-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Cites a named Smithsonian expert; secondary journalism but quotes a credentialed primary source. The 1954 book attribution is itself contested per subsequent research.",
+        "verified": false,
+        "verification_status": "url-error",
+        "verification_notes": "HTTP 404",
+        "archive_url": "http://web.archive.org/web/20221107004407/https://www.cbs8.com/article/news/verify/environment-verify/humans-do-not-swallow-spiders-when-sleep-sleeping-urban-legend-myth-fact-check/536-777fec50-29bd-4194-95d4-23d24f6259bd",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539200+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      },
+      {
+        "source_id": "257ad60d3c0d",
+        "title": "Burke Museum Spider Myths: Anecdotal Reports of Spider Legs in Mouths",
+        "description": "Rod Crawford notes that since his myth-debunking page went live, a small number of people have reported finding what they interpreted as a spider leg in their mouth upon waking \u2014 though none preserved evidence, and he remains unconvinced these represent actual spider ingestion events.",
+        "direction": "redirects",
+        "strength": "weak",
+        "source_venue": "institutional",
+        "source_type": "primary",
+        "source_url": "https://www.burkemuseum.org/static/spidermyth/myths/whileyousleep.html",
+        "date": "2000-01-01",
+        "status": "current",
+        "status_notes": "",
+        "notes": "Anecdotal reports without physical evidence; included because they represent the closest thing to 'supporting' data for the claim, but the expert curator himself discounts them \u2014 weak and unverified.",
+        "verified": true,
+        "verification_status": "url-ok",
+        "verification_notes": "URL reachable (HTTP 200)",
+        "archive_url": "",
+        "provenance": {
+          "origin": "ai",
+          "status": "ai_generated",
+          "model": "claude-sonnet-4-6",
+          "contributor_id": "",
+          "contributor_name": "",
+          "created_at": "2026-11-16T18:00:16.539215+00:00",
+          "confidence": 0.0,
+          "reasoning": "",
+          "confirmations": [],
+          "disputes": [],
+          "revisions": [],
+          "confirmation_count": 0,
+          "dispute_count": 0,
+          "is_settled": false
+        }
+      }
+    ],
+    "summary": "The claim that humans regularly swallow spiders during sleep is disputed by a strong and consistent consensus across arachnology, entomology, and sleep physiology. No case has ever been documented in scientific or medical literature, and multiple named experts at major institutions (Burke Museum, Smithsonian, Georgia Southern University) independently reject the claim on biological grounds: spiders are highly sensitive to the vibrations sleeping humans produce, actively avoid large organisms, and have no motivation to approach a human mouth. Sleep physiology research further undermines the mechanism, showing that the swallowing reflex is substantially suppressed during deep sleep and is linked to arousal events when it does occur. The origin story of the myth \u2014 a 1993 article by 'Lisa Birgit Holst' in PC Professional \u2014 is itself a confirmed fabrication (the name is an anagram for 'This Is A Big Troll'), leaving the true provenance of the claim unknown. The most productive redirect is toward what humans actually do involuntarily ingest during sleep: pharyngeal secretions and saliva, a well-documented physiological process entirely distinct from spider ingestion.",
+    "search_notes": "Searched across arachnology expert statements, sleep physiology peer-reviewed literature, and myth-origin investigative journalism. The primary gap is the absence of any controlled observational study specifically designed to detect spider ingestion during sleep \u2014 such a study does not appear to exist, which is itself informative. Spider behavioral ecology literature on proximity to humans at night is also underrepresented in primary form.",
+    "generated_at": "2026-11-16T18:00:16.539257+00:00"
+  },
+  "amplifiers": {
+    "n_actors": 25,
+    "actors": [
+      {
+        "actor_id": "ff0ba053da35",
+        "display": "worldcat.org",
+        "actor_type": "news",
+        "roles": [
+          "mention"
+        ],
+        "stance": "mention",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1954-01-01",
+        "last_date": "1954-01-01"
+      },
+      {
+        "actor_id": "eaab18ca9cc1",
+        "display": "lemmi.no",
+        "actor_type": "news",
+        "roles": [
+          "early-amplifier",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "1992-04-01",
+        "last_date": "2021-08-31"
+      },
+      {
+        "actor_id": "210746d4f8bf",
+        "display": "mentalfloss.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1993-01-01",
+        "last_date": "1993-01-01"
+      },
+      {
+        "actor_id": "fcad1d501913",
+        "display": "Snopes",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "early-amplifier",
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 3,
+        "first_date": "1993-01-07",
+        "last_date": "2001-04-22"
+      },
+      {
+        "actor_id": "2c22d3c9228f",
+        "display": "google.com",
+        "actor_type": "reference",
+        "roles": [
+          "early-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "1997-03-15",
+        "last_date": "1997-03-15"
+      },
+      {
+        "actor_id": "3aca68dbccef",
+        "display": "burkemuseum.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2003-01-01",
+        "last_date": "2003-01-01"
+      },
+      {
+        "actor_id": "191b6d6daa6d",
+        "display": "ripleys.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-01-01",
+        "last_date": "2007-01-01"
+      },
+      {
+        "actor_id": "6884661cbd60",
+        "display": "stackexchange.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-11-01",
+        "last_date": "2007-11-01"
+      },
+      {
+        "actor_id": "56d675bb130f",
+        "display": "scientificamerican.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2012-11-01",
+        "last_date": "2014-04-15"
+      },
+      {
+        "actor_id": "67f4ef957e2f",
+        "display": "Wikipedia",
+        "actor_type": "reference",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2013-01-01",
+        "last_date": "2013-01-01"
+      },
+      {
+        "actor_id": "ce94bc290a95",
+        "display": "reallyreallyreallytrying.tumblr.com",
+        "actor_type": "blog",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2013-01-09",
+        "last_date": "2013-01-09"
+      },
+      {
+        "actor_id": "02d2d85842ef",
+        "display": "realclearscience.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-04-16",
+        "last_date": "2014-04-16"
+      },
+      {
+        "actor_id": "0d4561671f3f",
+        "display": "huffpost.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-09-10",
+        "last_date": "2014-09-10"
+      },
+      {
+        "actor_id": "d0866bf015e0",
+        "display": "BBC",
+        "actor_type": "news",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2015-11-17",
+        "last_date": "2015-11-17"
+      },
+      {
+        "actor_id": "c56645ac75f4",
+        "display": "aol.com",
+        "actor_type": "news",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2017-09-23",
+        "last_date": "2017-09-23"
+      },
+      {
+        "actor_id": "095d2505bfb0",
+        "display": "ahscougarcall.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2018-08-29",
+        "last_date": "2018-08-29"
+      },
+      {
+        "actor_id": "8d5bb6057146",
+        "display": "myfox8.com",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "mention"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2019-01-01",
+        "last_date": "2019-01-01"
+      },
+      {
+        "actor_id": "cbd477511774",
+        "display": "reconnectwithnature.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-02-15",
+        "last_date": "2021-02-15"
+      },
+      {
+        "actor_id": "99ed8dfdf13c",
+        "display": "mypmp.net",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-11-10",
+        "last_date": "2021-11-10"
+      },
+      {
+        "actor_id": "736ba0b0053a",
+        "display": "sleepfoundation.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2022-01-01",
+        "last_date": "2022-01-01"
+      },
+      {
+        "actor_id": "6929e01ab76b",
+        "display": "iflscience.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2022-09-01",
+        "last_date": "2022-09-01"
+      },
+      {
+        "actor_id": "3a33310f5f0c",
+        "display": "Britannica",
+        "actor_type": "reference",
+        "roles": [
+          "institutional-adoption"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2023-01-01",
+        "last_date": "2023-01-01"
+      },
+      {
+        "actor_id": "055b8a0ce8eb",
+        "display": "discovermagazine.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-01-01",
+        "last_date": "2024-01-01"
+      },
+      {
+        "actor_id": "878836ea342b",
+        "display": "theuselessgenius.substack.com",
+        "actor_type": "blog",
+        "roles": [
+          "mass-amplifier"
+        ],
+        "stance": "champion",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2025-01-01",
+        "last_date": "2025-01-01"
+      },
+      {
+        "actor_id": "df9b0a8354bf",
+        "display": "debunked.info",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-07-10",
+        "last_date": "2026-07-10"
+      }
+    ],
+    "originators": [],
+    "critics": [
+      {
+        "actor_id": "3aca68dbccef",
+        "display": "burkemuseum.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2003-01-01",
+        "last_date": "2003-01-01"
+      },
+      {
+        "actor_id": "6884661cbd60",
+        "display": "stackexchange.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2007-11-01",
+        "last_date": "2007-11-01"
+      },
+      {
+        "actor_id": "56d675bb130f",
+        "display": "scientificamerican.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual",
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2012-11-01",
+        "last_date": "2014-04-15"
+      },
+      {
+        "actor_id": "02d2d85842ef",
+        "display": "realclearscience.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2014-04-16",
+        "last_date": "2014-04-16"
+      },
+      {
+        "actor_id": "095d2505bfb0",
+        "display": "ahscougarcall.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2018-08-29",
+        "last_date": "2018-08-29"
+      },
+      {
+        "actor_id": "8d5bb6057146",
+        "display": "myfox8.com",
+        "actor_type": "news",
+        "roles": [
+          "critic",
+          "mention"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 2,
+        "first_date": "2019-01-01",
+        "last_date": "2019-01-01"
+      },
+      {
+        "actor_id": "cbd477511774",
+        "display": "reconnectwithnature.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-02-15",
+        "last_date": "2021-02-15"
+      },
+      {
+        "actor_id": "99ed8dfdf13c",
+        "display": "mypmp.net",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "lexical"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2021-11-10",
+        "last_date": "2021-11-10"
+      },
+      {
+        "actor_id": "736ba0b0053a",
+        "display": "sleepfoundation.org",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2022-01-01",
+        "last_date": "2022-01-01"
+      },
+      {
+        "actor_id": "6929e01ab76b",
+        "display": "iflscience.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2022-09-01",
+        "last_date": "2022-09-01"
+      },
+      {
+        "actor_id": "055b8a0ce8eb",
+        "display": "discovermagazine.com",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2024-01-01",
+        "last_date": "2024-01-01"
+      },
+      {
+        "actor_id": "df9b0a8354bf",
+        "display": "debunked.info",
+        "actor_type": "news",
+        "roles": [
+          "critic"
+        ],
+        "stance": "oppose",
+        "lineages": [
+          "conceptual"
+        ],
+        "is_social": false,
+        "n_edges": 1,
+        "first_date": "2026-07-10",
+        "last_date": "2026-07-10"
+      }
+    ],
+    "social_accounts": [],
+    "by_actor_type": {
+      "news": 20,
+      "reference": 3,
+      "blog": 2
+    },
+    "date_span": [
+      "1954-01-01",
+      "2026-07-10"
+    ]
+  },
+  "provenance": {
+    "origin": "ai",
+    "status": "ai_generated",
+    "model": "claude-sonnet-4-6",
+    "contributor_id": "",
+    "contributor_name": "",
+    "created_at": "2026-11-16T18:02:01.941578+00:00",
+    "confidence": 0.0,
+    "reasoning": "",
+    "confirmations": [],
+    "disputes": [],
+    "revisions": [],
+    "confirmation_count": 0,
+    "dispute_count": 0,
+    "is_settled": false
+  },
+  "contributions": [],
+  "contributors": []
+}
